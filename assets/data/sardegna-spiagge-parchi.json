@@ -1,0 +1,1813 @@
+{
+  "meta": {
+    "generato": "2026-06-23",
+    "fonti": [
+      "sardegnaturismo.it",
+      "sardegnanatura.com",
+      "sardegna.info",
+      "parcoasinara.org",
+      "algheroparks.it",
+      "spiaggialapelosa.it",
+      "turismobaunei.eu",
+      "villasimiusturismo.it",
+      "stintinoinvacanza.it",
+      "sardegnatoujours.com",
+      "tripadvisor.com",
+      "idealista.it",
+      "informati-sardegna.it"
+    ],
+    "note": "Coordinate GPS verificate via ricerche multiple. Prezzi aggiornati a stagione 2025-2026. Verificare sempre i siti ufficiali per aggiornamenti in-stagione."
+  },
+
+  "spiagge": [
+    {
+      "id": "SP001",
+      "nome": "Cala Goloritzé",
+      "nome_alternativo": "Cala Goloritze",
+      "coordinate": {
+        "lat": 40.0160,
+        "lng": 9.6120,
+        "descrizione_posizione": "Golfo di Orosei, costa orientale Sardegna"
+      },
+      "comune": "Baunei",
+      "provincia": "Nuoro / Ogliastra",
+      "zona": "Ogliastra - Costa di Baunei",
+      "tipo_superficie": "ciottoli bianchi e rosa, con sabbia fine verso riva",
+      "lunghezza_m": 150,
+      "larghezza_m": 30,
+      "capienza_massima": 250,
+      "come_arrivare": {
+        "a_piedi": {
+          "partenza": "Parcheggio Su Porteddu, Altopiano del Golgo (8 km da Baunei su strada asfaltata)",
+          "distanza_km": 3.5,
+          "dislivello_m": -470,
+          "durata_discesa_min": 60,
+          "durata_salita_min": 90,
+          "difficolta": "Media-Alta (sentiero E)",
+          "note": "Sentiero obbligatorio con guida autorizzata. Prenotazione obbligatoria anche in bassa stagione."
+        },
+        "via_mare": {
+          "porti_partenza": ["Arbatax", "Cala Gonone", "Santa Maria Navarrese"],
+          "distanza_da_porto_km": 15,
+          "note": "Divieto di avvicinamento entro 300 m dalla riva per imbarcazioni private. Operatori autorizzati presenti."
+        },
+        "distanze_aeroporti": {
+          "Cagliari_Elmas_km": 170,
+          "Olbia_Costa_Smeralda_km": 155,
+          "Alghero_Fertilia_km": 230
+        }
+      },
+      "accesso_regolamentato": true,
+      "prenotazione_obbligatoria": true,
+      "prenotazione_dove": "Heart of Sardinia - heartof sardinia.com / turismobaunei.eu",
+      "servizi": {
+        "parcheggio": "Parcheggio Su Porteddu, incluso nel prezzo del biglietto",
+        "parcheggio_a_pagamento": false,
+        "stabilimento_balneare": false,
+        "docce": false,
+        "bar_ristoro": "Piccolo punto ristoro al parcheggio Su Porteddu",
+        "bagnino": false,
+        "noleggio_attrezzatura": false,
+        "accessibilita_disabili": false,
+        "wifi": false
+      },
+      "costi": {
+        "ingresso_adulti_eur": 7,
+        "ingresso_bambini_eur": 0,
+        "note_bambini": "Gratuito sotto i 6 anni e per residenti comune di Baunei",
+        "parcheggio_incluso": true
+      },
+      "periodo_migliore": {
+        "mesi": ["maggio", "giugno", "settembre"],
+        "note": "Evitare luglio-agosto per affollamento e caldo estremo in discesa. Primavera ideale per colori del mare."
+      },
+      "affollamento": {
+        "livello": "controllato",
+        "max_giornaliero": 250,
+        "note": "Accesso strettamente contingentato. Prenotare con anticipo."
+      },
+      "descrizione": {
+        "acque": "Turchese intenso, trasparenza assoluta alimentata da sorgenti carsiche sottomarine",
+        "fondale": "Ciottoloso verso riva, sabbioso e profondo all'interno della baia",
+        "colori": "Turchese caraibico che vira al blu cobalto in profondità",
+        "particolarita": [
+          "Pinnacolo calcareo di 143 m che si erge sul mare ('la cattedrale')",
+          "Monumento Nazionale protetto dal 1995",
+          "Nominata spiaggia più bella del mondo nel 2025 (The World's 50 Best Beaches)",
+          "Arco naturale in roccia calcarea visibile dalla spiaggia",
+          "Sorgenti carsiche sottomarine che alimentano l'acqua dolce"
+        ],
+        "flora_fauna": "Macchia mediterranea densa sul sentiero, posidonia oceanica sul fondale"
+      },
+      "immagini_libere": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Cala_Goloritze.jpg/1280px-Cala_Goloritze.jpg",
+        "https://commons.wikimedia.org/wiki/File:Cala_goloritze.jpg"
+      ],
+      "url_ufficiale": "https://www.turismobaunei.eu/en/services/cala-goloritze-path"
+    },
+
+    {
+      "id": "SP002",
+      "nome": "La Pelosa",
+      "nome_alternativo": "Spiaggia La Pelosa di Stintino",
+      "coordinate": {
+        "lat": 40.9657,
+        "lng": 8.2087,
+        "descrizione_posizione": "Punta nord-ovest Sardegna, Stintino"
+      },
+      "comune": "Stintino",
+      "provincia": "Sassari",
+      "zona": "Nurra - Costa Nord-Ovest",
+      "tipo_superficie": "sabbia bianca finissima, quasi impalpabile",
+      "lunghezza_m": 600,
+      "larghezza_m": 80,
+      "capienza_massima": 1500,
+      "come_arrivare": {
+        "in_auto": {
+          "da_Sassari_km": 50,
+          "da_Porto_Torres_km": 30,
+          "note": "SS131 da Sassari dir. Porto Torres, poi SP34 per Stintino. Parcheggi a 200-500 m dalla spiaggia."
+        },
+        "a_piedi": "Sentiero pedonale dal parcheggio a 200 m",
+        "distanze_aeroporti": {
+          "Alghero_Fertilia_km": 60,
+          "Sassari_km": 50,
+          "Cagliari_Elmas_km": 330
+        }
+      },
+      "accesso_regolamentato": true,
+      "prenotazione_obbligatoria": true,
+      "prenotazione_dove": "spiaggialapelosa.it (sito ufficiale, unico autorizzato)",
+      "prenotazione_dettagli": {
+        "periodo_regolamentato": "15 maggio - 15 ottobre",
+        "posti_liberi_prenotazione_anticipata": 500,
+        "posti_prenotabili_48h_prima": 1000,
+        "controllo": "QR code ore 08:00-18:00"
+      },
+      "servizi": {
+        "parcheggio": true,
+        "parcheggio_costo_eur_ora": 1.50,
+        "stabilimento_balneare": true,
+        "docce": true,
+        "bar_ristoro": true,
+        "bagnino": true,
+        "noleggio_ombrelloni": true,
+        "noleggio_lettini": true,
+        "accessibilita_disabili": "parziale",
+        "regole_spiaggia": ["stuoia obbligatoria sotto il telo", "divieto di fumo (eccetto aree designate)", "risciacquo piedi e attrezzatura all'uscita", "divieto di asportazione sabbia"]
+      },
+      "costi": {
+        "ingresso_adulti_eur": 3.50,
+        "ingresso_bambini_eur": 0,
+        "note_bambini": "Gratuito sotto i 12 anni",
+        "parcheggio_eur_ora": 1.50
+      },
+      "periodo_migliore": {
+        "mesi": ["maggio", "giugno", "settembre"],
+        "note": "Luglio-agosto: affollamento massimo, prenotare settimane prima. Maggio-giugno: mare già caldo, folla gestibile."
+      },
+      "affollamento": {
+        "livello": "alto in stagione",
+        "max_giornaliero": 1500,
+        "note": "Top 50 spiagge al mondo. Prenotare con ampio anticipo per luglio-agosto."
+      },
+      "descrizione": {
+        "acque": "Cristalline, basse per decine di metri, tinte caraibiche dal verde smeraldo al turchese intenso",
+        "fondale": "Sabbioso, bassissimo, ideale per bambini e non nuotatori",
+        "colori": "Bianco abbagliante della sabbia, turchese e verde dell'acqua, blu cobalto in fondo",
+        "particolarita": [
+          "Torre aragonese del XVI secolo che si erge sul promontorio a destra",
+          "Vista sull'Isola dell'Asinara",
+          "50° posto classifica mondiale The World's 50 Best Beaches 2025",
+          "Più volte eletta miglior spiaggia d'Italia",
+          "Tramonto considerato tra i più spettacolari del Mediterraneo"
+        ]
+      },
+      "immagini_libere": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/La_Pelosa_beach%2C_Stintino%2C_Sardinia.jpg/1280px-La_Pelosa_beach%2C_Stintino%2C_Sardinia.jpg"
+      ],
+      "url_ufficiale": "https://spiaggialapelosa.it"
+    },
+
+    {
+      "id": "SP003",
+      "nome": "Cala Mariolu",
+      "nome_alternativo": null,
+      "coordinate": {
+        "lat": 40.2647,
+        "lng": 9.7714,
+        "descrizione_posizione": "Costa di Baunei, Golfo di Orosei"
+      },
+      "comune": "Baunei",
+      "provincia": "Nuoro / Ogliastra",
+      "zona": "Ogliastra - Costa di Baunei",
+      "tipo_superficie": "ciottoli bianchi e rosa (quarzo e calcite)",
+      "lunghezza_m": 230,
+      "larghezza_m": 10,
+      "capienza_massima": 700,
+      "come_arrivare": {
+        "via_mare": {
+          "porti_partenza": ["Cala Gonone", "Arbatax", "Santa Maria Navarrese"],
+          "operatori": "Consortiums con navi da 100-300 passeggeri, servizio maggio-settembre",
+          "note": "Via preferenziale. Gommoni e barche a noleggio disponibili."
+        },
+        "a_piedi_trekking": {
+          "partenza": "Altopiano del Golgo (Piredda) - Baunei",
+          "distanza_km": 6,
+          "difficolta": "Alta - solo escursionisti esperti",
+          "note": "Percorso impervio, falesie a strapiombo. Guida fortemente consigliata."
+        },
+        "distanze_aeroporti": {
+          "Cagliari_Elmas_km": 190,
+          "Olbia_Costa_Smeralda_km": 160
+        }
+      },
+      "accesso_regolamentato": false,
+      "prenotazione_obbligatoria": false,
+      "servizi": {
+        "parcheggio": false,
+        "stabilimento_balneare": "chiosco estivo (giugno-settembre)",
+        "docce": false,
+        "bar_ristoro": "chiosco con snack e bibite in stagione",
+        "bagnino": false,
+        "noleggio_ombrelloni": true,
+        "noleggio_attrezzatura_snorkeling": true,
+        "accessibilita_disabili": false
+      },
+      "costi": {
+        "ingresso_eur": 0,
+        "note": "Accesso libero. Costo traversata in barca: variabile per operatore (40-80 EUR A/R)"
+      },
+      "periodo_migliore": {
+        "mesi": ["maggio", "giugno", "settembre", "ottobre"],
+        "note": "Agosto: sovraffollata. Giugno e settembre offrono il miglior equilibrio."
+      },
+      "affollamento": {
+        "livello": "alto in luglio-agosto",
+        "note": "Capienza 700 persone, spesso raggiunta in alta stagione via mare."
+      },
+      "descrizione": {
+        "acque": "Trasparenza assoluta, colorazione turchese-verde smeraldo che vira al blu",
+        "fondale": "Ciottoloso con tratti di sabbia bianca, snorkeling eccezionale",
+        "colori": "Verde smeraldo verso riva, turchese, blu intenso",
+        "particolarita": [
+          "Falesie calcaree a 500 m che cadono verticalmente in mare",
+          "Una delle più belle del Golfo di Orosei",
+          "Biodiversità marina eccezionale, snorkeling di livello internazionale",
+          "Adiacente a Cala dei Gabbiani e Cala Sisine"
+        ]
+      },
+      "immagini_libere": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Cala_Mariolu.jpg/1280px-Cala_Mariolu.jpg"
+      ],
+      "url_ufficiale": "https://www.calamariolu.it"
+    },
+
+    {
+      "id": "SP004",
+      "nome": "Cala Luna",
+      "nome_alternativo": null,
+      "coordinate": {
+        "lat": 40.2167,
+        "lng": 9.7167,
+        "descrizione_posizione": "Confine comuni Dorgali-Baunei, Golfo di Orosei"
+      },
+      "comune": "Baunei / Dorgali (confine)",
+      "provincia": "Nuoro",
+      "zona": "Golfo di Orosei",
+      "tipo_superficie": "sabbia chiara fine, ghiaia mista verso grotte",
+      "lunghezza_m": 800,
+      "larghezza_m": 60,
+      "capienza_massima": null,
+      "come_arrivare": {
+        "via_mare": {
+          "porti_partenza": ["Cala Gonone", "Santa Maria Navarrese", "La Caletta", "Arbatax"],
+          "note": "Servizi di traghetto e motonave giornalieri maggio-settembre."
+        },
+        "a_piedi_trekking": {
+          "partenza": "Cala Fuili (raggiungibile in auto da Cala Gonone)",
+          "distanza_km": 6,
+          "durata_ore": "1.5 - 2",
+          "difficolta": "Media",
+          "segnaletica": "Buona, sentiero sicuro",
+          "note": "Percorso panoramico con vista sul Golfo di Orosei"
+        },
+        "distanze_aeroporti": {
+          "Cagliari_Elmas_km": 185,
+          "Olbia_Costa_Smeralda_km": 145
+        }
+      },
+      "accesso_regolamentato": "parziale - prenotazione per barche private",
+      "prenotazione_obbligatoria": "solo per chi arriva con barca privata o noleggio senza skipper",
+      "servizi": {
+        "parcheggio": "a Cala Fuili per il trekking",
+        "stabilimento_balneare": false,
+        "docce": false,
+        "bar_ristoro": "chiosco-bar e ristorante nel bosco retrostante la spiaggia",
+        "bagnino": false,
+        "accessibilita_disabili": false
+      },
+      "costi": {
+        "ingresso_eur": 0,
+        "note": "Traversata in barca a carico del visitatore (operatori da Cala Gonone)"
+      },
+      "periodo_migliore": {
+        "mesi": ["maggio", "giugno", "settembre"],
+        "note": "Evitare agosto per sovraffollamento."
+      },
+      "affollamento": {
+        "livello": "medio-alto in stagione"
+      },
+      "descrizione": {
+        "acque": "Limpide, turchesi, alimentate da sorgenti costiere",
+        "fondale": "Sabbioso, risalita dolce",
+        "colori": "Verde smeraldo, turchese, azzurro intenso",
+        "particolarita": [
+          "5 grotte di grandi dimensioni che incorniciano il lato nord",
+          "Pareti calcaree alte fino a 300 m",
+          "Lago retrostante la spiaggia separato dal mare da una striscia di sabbia",
+          "Macchia mediterranea rigogliosa che giunge fino all'arenile",
+          "Citata nel film 'The Talented Mr. Ripley' (1999)"
+        ]
+      },
+      "url_ufficiale": "https://www.calalunasardegna.com"
+    },
+
+    {
+      "id": "SP005",
+      "nome": "Su Giudeu",
+      "nome_alternativo": "Spiaggia di Su Giudeu",
+      "coordinate": {
+        "lat": 38.8833,
+        "lng": 8.8972,
+        "descrizione_posizione": "Baia di Chia, comune Domus de Maria"
+      },
+      "comune": "Domus de Maria (Chia)",
+      "provincia": "Sud Sardegna",
+      "zona": "Costa Sud - Chia",
+      "tipo_superficie": "sabbia fine color crema, dune retrostanti",
+      "lunghezza_m": 1200,
+      "larghezza_m": 100,
+      "come_arrivare": {
+        "in_auto": {
+          "da_Cagliari_km": 55,
+          "percorso": "SS195 direzione Pula, poi strada panoramica costa del Sud",
+          "nota": "10 km oltre Pula, svoltare sulla SP91 per Capo Spartivento"
+        },
+        "distanze_aeroporti": {
+          "Cagliari_Elmas_km": 55,
+          "Alghero_Fertilia_km": 260
+        }
+      },
+      "accesso_regolamentato": false,
+      "prenotazione_obbligatoria": false,
+      "servizi": {
+        "parcheggio": true,
+        "parcheggio_a_pagamento": "in alta stagione",
+        "area_camper": true,
+        "stabilimento_balneare": true,
+        "docce": true,
+        "bar_ristoro": true,
+        "ristorante": true,
+        "hotel_vicini": true,
+        "camping": true,
+        "bagnino": true,
+        "noleggio_ombrelloni": true,
+        "noleggio_canoe_pedalò": true,
+        "noleggio_moto_acqua": true,
+        "diving_center": true,
+        "accessibilita_disabili": "parziale"
+      },
+      "costi": {
+        "ingresso_eur": 0,
+        "parcheggio_eur": "variabile, ~5-8 EUR/giorno in alta stagione"
+      },
+      "periodo_migliore": {
+        "mesi": ["maggio", "giugno", "settembre", "ottobre"],
+        "note": "Mare già balneabile da maggio. Giugno-settembre ideale. Ottobre ancora bello e vuoto."
+      },
+      "affollamento": {
+        "livello": "medio-alto"
+      },
+      "descrizione": {
+        "acque": "Verde smeraldo e turchese, visibilità eccellente",
+        "fondale": "Sabbioso, basso per decine di metri, sicuro per bambini",
+        "colori": "Dal verde smeraldo al turchese intenso",
+        "particolarita": [
+          "Isolotto raggiungibile a piedi con bassa marea",
+          "Dune di ginepro retrostanti protette",
+          "Vista su Capo Spartivento e faro storico",
+          "Una delle baia più belle del sud Sardegna"
+        ]
+      }
+    },
+
+    {
+      "id": "SP006",
+      "nome": "Spiaggia del Principe",
+      "nome_alternativo": "Le Spiagge del Principe",
+      "coordinate": {
+        "lat": 41.0722,
+        "lng": 9.4472,
+        "descrizione_posizione": "Romazzino, tra Porto Cervo e Porto Rotondo"
+      },
+      "comune": "Arzachena",
+      "provincia": "Sassari (Olbia-Tempio)",
+      "zona": "Costa Smeralda - Gallura",
+      "tipo_superficie": "sabbia finissima bianca-dorata",
+      "come_arrivare": {
+        "in_auto": {
+          "da_Olbia_km": 30,
+          "percorso": "SP59 direzione Porto Cervo, poi deviazione per Romazzino. Parcheggio, poi 300 m a piedi su sentiero in macchia.",
+          "tempo_da_Olbia": "40 min"
+        },
+        "distanze_aeroporti": {
+          "Olbia_Costa_Smeralda_km": 30,
+          "Alghero_Fertilia_km": 120,
+          "Cagliari_Elmas_km": 290
+        }
+      },
+      "accesso_regolamentato": false,
+      "prenotazione_obbligatoria": false,
+      "servizi": {
+        "parcheggio": true,
+        "parcheggio_costo_eur_giorno": 12.50,
+        "stabilimento_balneare": "piccolo, ombrelloni disponibili",
+        "docce": false,
+        "bar_ristoro": "piccolo bar",
+        "bagnino": false,
+        "accessibilita_disabili": false
+      },
+      "costi": {
+        "ingresso_eur": 0,
+        "parcheggio_eur": 12.50
+      },
+      "periodo_migliore": {
+        "mesi": ["giugno", "settembre"],
+        "note": "Luglio-agosto molto affollata dalle 11. Arrivare presto (prima delle 9) o scegliere giugno/settembre."
+      },
+      "affollamento": {
+        "livello": "alto",
+        "note": "Dalle ore 11 la spiaggia si satura. Meta frequentata dalla clientela VIP della Costa Smeralda."
+      },
+      "descrizione": {
+        "acque": "Cristalline, dal verde smeraldo al turchese",
+        "fondale": "Sabbioso, profondo gradualmente",
+        "particolarita": [
+          "Prende il nome dall'Aga Khan IV che la elesse sua spiaggia preferita",
+          "Macchia mediterranea di ginepri e lecci fino all'arenile",
+          "Vista sull'Arcipelago della Maddalena",
+          "Tra le più fotografate della Costa Smeralda"
+        ]
+      }
+    },
+
+    {
+      "id": "SP007",
+      "nome": "Is Arutas",
+      "nome_alternativo": "Spiaggia dei Chicchi di Riso",
+      "coordinate": {
+        "lat": 39.9970,
+        "lng": 8.4330,
+        "descrizione_posizione": "Penisola del Sinis, 13 km da Cabras"
+      },
+      "comune": "Cabras",
+      "provincia": "Oristano",
+      "zona": "Sinis - Costa Ovest",
+      "tipo_superficie": "granuli di quarzo (rosa, verde, bianco) simili a chicchi di riso - UNICA",
+      "lunghezza_m": 1000,
+      "larghezza_m": 50,
+      "come_arrivare": {
+        "in_auto": {
+          "da_Oristano_km": 25,
+          "da_Cabras_km": 14,
+          "percorso": "Da Oristano seguire indicazioni San Giovanni di Sinis, poi Is Arutas. Strada asfaltata.",
+          "tempo_da_Oristano": "25 min"
+        },
+        "distanze_aeroporti": {
+          "Cagliari_Elmas_km": 100,
+          "Alghero_Fertilia_km": 110
+        }
+      },
+      "accesso_regolamentato": false,
+      "prenotazione_obbligatoria": false,
+      "servizi": {
+        "parcheggio": true,
+        "parcheggio_costo_eur_giorno": 7,
+        "stabilimento_balneare": false,
+        "docce": "alle docce all'ingresso",
+        "bagni": true,
+        "bar_ristoro": "chiosco-bar",
+        "bagnino": false,
+        "noleggio_attrezzatura": true,
+        "accessibilita_disabili": false,
+        "nota_importante": "VIETATO asportare i granuli di quarzo - multa fino a 3.000 EUR"
+      },
+      "costi": {
+        "ingresso_eur": 0,
+        "parcheggio_eur_giorno": 7,
+        "nota": "App Cabras Beaches per pagamento parcheggio disponibile"
+      },
+      "periodo_migliore": {
+        "mesi": ["maggio", "giugno", "settembre", "ottobre"],
+        "note": "Estate affollatissima. Primavera e inizio autunno ideali. Il mare è balneabile da maggio."
+      },
+      "affollamento": {
+        "livello": "molto alto in luglio-agosto",
+        "note": "Tra le spiagge più visitate della Sardegna per la sua unicità. Arrivare presto."
+      },
+      "descrizione": {
+        "acque": "Turchese brillante, visibilità eccellente, fondale chiaro",
+        "fondale": "Granuli di quarzo anche sul fondale, scenografico",
+        "colori": "Bianco-rosa della sabbia, turchese-verde dell'acqua",
+        "particolarita": [
+          "Sabbia interamente composta da granuli di quarzo (rosa, bianco, verde) unici in Europa",
+          "Parte della Penisola del Sinis, area protetta SIC",
+          "Vicina alle rovine fenicie di Tharros (3 km)",
+          "Stagno di Mar'e Foghe con fenicotteri vicino"
+        ]
+      }
+    },
+
+    {
+      "id": "SP008",
+      "nome": "Berchida",
+      "nome_alternativo": "Spiaggia di Berchida",
+      "coordinate": {
+        "lat": 40.5300,
+        "lng": 9.8600,
+        "descrizione_posizione": "Costa orientale, tratto settentrionale Golfo di Orosei"
+      },
+      "comune": "Siniscola",
+      "provincia": "Nuoro",
+      "zona": "Baronia - Costa Est",
+      "tipo_superficie": "sabbia bianca con sfumature grigie, fine e compatta",
+      "lunghezza_m": 2000,
+      "larghezza_m": 80,
+      "come_arrivare": {
+        "in_auto": {
+          "da_Siniscola_km": 12,
+          "percorso": "SS125 direzione Orosei, 12 km oltre Capo Comino. Imboccare strada sterrata segnalata, percorrere 4 km fino al parcheggio.",
+          "nota": "Strada sterrata accessibile a tutte le auto"
+        },
+        "distanze_aeroporti": {
+          "Olbia_Costa_Smeralda_km": 70,
+          "Cagliari_Elmas_km": 200
+        }
+      },
+      "accesso_regolamentato": false,
+      "prenotazione_obbligatoria": false,
+      "servizi": {
+        "parcheggio": true,
+        "parcheggio_costo_eur": "6 EUR mezza giornata / 10 EUR giornata intera",
+        "area_camper": true,
+        "stabilimento_balneare": "due piccoli stabilimenti",
+        "docce": false,
+        "bar_ristoro": "chiosco-bar",
+        "bagnino": false,
+        "noleggio_canoe_pedalò": true,
+        "accessibilita_disabili": false
+      },
+      "costi": {
+        "ingresso_eur": 0,
+        "parcheggio_mezza_giornata_eur": 6,
+        "parcheggio_giornata_eur": 10
+      },
+      "periodo_migliore": {
+        "mesi": ["giugno", "luglio", "settembre"],
+        "note": "Meno affollata delle cale famose. Ideale anche in luglio per chi cerca relax."
+      },
+      "affollamento": {
+        "livello": "basso-medio",
+        "note": "Una delle spiagge più selvagge e meno affollate della costa est. Atmosfera rilassante."
+      },
+      "descrizione": {
+        "acque": "Turchese chiaro verso riva, verde e blu verso il largo",
+        "fondale": "Basso e sabbioso, sicuro per famiglie",
+        "particolarita": [
+          "Atmosfera selvaggia e incontaminata",
+          "Dune con ginepri e macchia mediterrea",
+          "Stagno retrostante con avifauna",
+          "2 km di spiaggia senza mai un punto caotico"
+        ]
+      }
+    },
+
+    {
+      "id": "SP009",
+      "nome": "Cala Brandinchi",
+      "nome_alternativo": "Piccola Tahiti",
+      "coordinate": {
+        "lat": 40.7750,
+        "lng": 9.6950,
+        "descrizione_posizione": "Capo Coda Cavallo, nord-est Sardegna"
+      },
+      "comune": "San Teodoro",
+      "provincia": "Nuoro (Olbia-Tempio)",
+      "zona": "Gallura - Costa Nord-Est",
+      "tipo_superficie": "sabbia bianchissima fine e compatta",
+      "lunghezza_m": 700,
+      "larghezza_m": 40,
+      "come_arrivare": {
+        "in_auto": {
+          "da_San_Teodoro_km": 7,
+          "percorso": "SS125 da San Teodoro, deviazione in loc. Lutturai per Capo Coda Cavallo, poi 1.5 km su sterrato.",
+          "nota": "No camper sulla sterrata"
+        },
+        "distanze_aeroporti": {
+          "Olbia_Costa_Smeralda_km": 30,
+          "Cagliari_Elmas_km": 230
+        }
+      },
+      "accesso_regolamentato": true,
+      "prenotazione_obbligatoria": "20 giugno - 20 settembre",
+      "prenotazione_dove": "santeodorospiagge.it o App San Teodoro Spiagge",
+      "servizi": {
+        "parcheggio": true,
+        "parcheggio_costo_eur_ora": "1.50 bassa stagione / 2.50 alta stagione",
+        "stabilimento_balneare": true,
+        "docce": "a gettoni",
+        "bar_ristoro": true,
+        "bagnino": false,
+        "noleggio_ombrelloni": true,
+        "noleggio_pedalò_canoe": true,
+        "noleggio_sup": true,
+        "noleggio_gommoni": true,
+        "accessibilita_disabili": false
+      },
+      "costi": {
+        "ingresso_eur": 0,
+        "parcheggio_eur_ora": 2.50
+      },
+      "periodo_migliore": {
+        "mesi": ["giugno", "settembre"],
+        "note": "Luglio-agosto molto frequentata. Giugno ancora tranquilla con mare caldo."
+      },
+      "affollamento": {
+        "livello": "medio-alto"
+      },
+      "descrizione": {
+        "acque": "Cristalline, basse, dal turchese al verde",
+        "fondale": "Sabbioso bianco, panorama subacqueo da Caraibi",
+        "colori": "Bianco luminoso della sabbia, verde-turchese dell'acqua",
+        "particolarita": [
+          "Soprannominata 'Piccola Tahiti' per la somiglianza con le spiagge polinesiane",
+          "Area Marina Protetta Tavolara-Punta Coda Cavallo di fronte",
+          "Profilo stretto e allungato perfetto per fotografia",
+          "Accanto alla spiaggia di Lu Impostu, simile ma meno nota"
+        ]
+      }
+    },
+
+    {
+      "id": "SP010",
+      "nome": "Poetto",
+      "nome_alternativo": "Spiaggia del Poetto",
+      "coordinate": {
+        "lat": 39.2100,
+        "lng": 9.1500,
+        "descrizione_posizione": "Golfo degli Angeli, tra Cagliari e Quartu Sant'Elena"
+      },
+      "comune": "Cagliari / Quartu Sant'Elena",
+      "provincia": "Cagliari",
+      "zona": "Cagliari - Costa Sud",
+      "tipo_superficie": "sabbia chiara fine (ripristinata dopo erosione)",
+      "lunghezza_m": 8000,
+      "larghezza_m": 60,
+      "come_arrivare": {
+        "in_auto": {
+          "da_centro_Cagliari_km": 9,
+          "percorso": "Viale Cristoforo Colombo, poi viale Poetto",
+          "parcheggio": "Lungo il lungomare, gratuito su strada"
+        },
+        "in_autobus": {
+          "linee": "CTM linee PF e PQ da piazza Matteotti (centro Cagliari)",
+          "nota": "Servizio frequente in estate"
+        },
+        "in_bici": "Pista ciclabile lungo tutto il lungomare",
+        "distanze_aeroporti": {
+          "Cagliari_Elmas_km": 15
+        }
+      },
+      "accesso_regolamentato": false,
+      "prenotazione_obbligatoria": false,
+      "servizi": {
+        "parcheggio": "lungo la strada, gratuito",
+        "stabilimento_balneare": "numerosi (decine lungo gli 8 km)",
+        "docce": true,
+        "bagni": true,
+        "bar_ristoro": "moltissimi lungo tutto il litorale",
+        "ristorante": true,
+        "bagnino": true,
+        "noleggio_ombrelloni": true,
+        "noleggio_attrezzatura_sport": true,
+        "pista_ciclabile": true,
+        "accessibilita_disabili": "buona in molti tratti"
+      },
+      "costi": {
+        "ingresso_eur": 0,
+        "parcheggio_eur": 0,
+        "note": "Spiaggia completamente gratuita e libera. Stabilimenti con servizi a pagamento."
+      },
+      "periodo_migliore": {
+        "mesi": ["giugno", "luglio", "agosto", "settembre"],
+        "note": "Spiaggia urbana accessibile tutto l'anno. Primavera e autunno per passeggiate."
+      },
+      "affollamento": {
+        "livello": "molto alto in estate",
+        "note": "8 km però consentono di trovare sempre spazio. La prima metà (lato Cagliari) è la più animata."
+      },
+      "descrizione": {
+        "acque": "Azzurre, abbastanza trasparenti, mare calmo nel Golfo degli Angeli",
+        "fondale": "Sabbioso, profondità graduale",
+        "particolarita": [
+          "8 km di spiaggia - la più lunga e frequentata dell'isola",
+          "Vista sulla Sella del Diavolo (promontorio)"
+          , "Affiancata dal Parco di Molentargius con fenicotteri",
+          "Vita notturna estiva vivacissima (bar, musica, movida)",
+          "Pista ciclabile per tutta la lunghezza"
+        ]
+      }
+    },
+
+    {
+      "id": "SP011",
+      "nome": "La Cinta",
+      "nome_alternativo": "Spiaggia La Cinta di San Teodoro",
+      "coordinate": {
+        "lat": 40.7900,
+        "lng": 9.6800,
+        "descrizione_posizione": "Nord-est San Teodoro, verso punta Puntaldìa"
+      },
+      "comune": "San Teodoro",
+      "provincia": "Nuoro (Olbia-Tempio)",
+      "zona": "Gallura - Costa Nord-Est",
+      "tipo_superficie": "sabbia bianca finissima",
+      "lunghezza_m": 5000,
+      "larghezza_m": 30,
+      "come_arrivare": {
+        "in_auto": {
+          "da_San_Teodoro_km": 2,
+          "percorso": "Bivio principale ingresso San Teodoro, poi ponte e via del Tirreno per 1.3 km fino al parcheggio.",
+          "da_Olbia_km": 25
+        },
+        "distanze_aeroporti": {
+          "Olbia_Costa_Smeralda_km": 25,
+          "Cagliari_Elmas_km": 230
+        }
+      },
+      "accesso_regolamentato": false,
+      "prenotazione_obbligatoria": false,
+      "servizi": {
+        "parcheggio": "multipli, alcuni gratuiti, alcuni a pagamento",
+        "parcheggio_costo_eur_ora": 1.50,
+        "parcheggio_note": "Parcheggio comunale via del Tirreno a pagamento in stagione",
+        "stabilimento_balneare": true,
+        "docce": true,
+        "bar_ristoro": true,
+        "bagnino": false,
+        "noleggio_ombrelloni": true,
+        "accessibilita_disabili": "parziale"
+      },
+      "costi": {
+        "ingresso_eur": 0,
+        "parcheggio_eur_ora": 1.50
+      },
+      "periodo_migliore": {
+        "mesi": ["giugno", "luglio", "settembre"]
+      },
+      "affollamento": {
+        "livello": "medio - grazie alla lunghezza (5 km) non diventa mai soffocante"
+      },
+      "descrizione": {
+        "acque": "Turchese brillante, acqua limpidissima",
+        "fondale": "Sabbioso, dolce risalita",
+        "particolarita": [
+          "5 km di striscia arcuata - tra le più lunghe del nord-est",
+          "Stagno di San Teodoro retrostante con fenicotteri rosa",
+          "Profumi di ginepro, giglio marino ed elicriso dalle dune",
+          "Vista sull'Area Marina Protetta Tavolara"
+        ]
+      }
+    },
+
+    {
+      "id": "SP012",
+      "nome": "Tuerredda",
+      "nome_alternativo": "Tuaredda",
+      "coordinate": {
+        "lat": 38.9180,
+        "lng": 8.8345,
+        "descrizione_posizione": "Costa sud-ovest, 20 km da Chia, 60 km da Cagliari"
+      },
+      "comune": "Teulada",
+      "provincia": "Sud Sardegna",
+      "zona": "Costa del Sud - Teulada",
+      "tipo_superficie": "sabbia bianchissima finissima",
+      "come_arrivare": {
+        "in_auto": {
+          "da_Cagliari_km": 60,
+          "percorso": "SS195 direzione Pula-Chia-Teulada",
+          "da_Chia_km": 20,
+          "tempo_da_Cagliari": "55 min"
+        },
+        "via_mare": "Barca privata con corridoio di lancio sulla spiaggia",
+        "distanze_aeroporti": {
+          "Cagliari_Elmas_km": 65,
+          "Alghero_Fertilia_km": 265
+        }
+      },
+      "accesso_regolamentato": false,
+      "prenotazione_obbligatoria": false,
+      "servizi": {
+        "parcheggio": "2 parcheggi a pagamento",
+        "parcheggio_auto_eur": "10 (giorno) / 6 (pomeridiano dopo ore 14)",
+        "parcheggio_moto_eur": 5,
+        "parcheggio_camper_eur": 15,
+        "parcheggio_orari": "08:00-20:00",
+        "parcheggio_posti": 729,
+        "stabilimento_balneare": true,
+        "docce": true,
+        "bar_ristoro": true,
+        "bagnino": true,
+        "noleggio_ombrelloni": true,
+        "noleggio_gommoni": true,
+        "noleggio_pedalò": true,
+        "corridoio_lancio_barche": true,
+        "accessibilita_disabili": "parziale"
+      },
+      "costi": {
+        "ingresso_eur": 0,
+        "parcheggio_giorno_eur": 10,
+        "parcheggio_pomeridiano_eur": 6
+      },
+      "periodo_migliore": {
+        "mesi": ["giugno", "settembre"],
+        "note": "Luglio-agosto: parcheggi esauriti entro le 8:30-9:00. Arrivare all'alba o venire in settembre."
+      },
+      "affollamento": {
+        "livello": "molto alto in luglio-agosto",
+        "note": "729 posti esauriti in mattinata in alta stagione. Una delle spiagge più ambite del sud."
+      },
+      "descrizione": {
+        "acque": "Tra le più limpide della Sardegna, colori caraibici",
+        "fondale": "Sabbioso, bassa profondità per molti metri",
+        "colori": "Verde cristallo verso riva, turchese e blu verso il largo",
+        "particolarita": [
+          "Piccolo isolotto raggiungibile a nuoto (Isola di Tuerredda)",
+          "Considerata una delle spiagge più belle del Mediterraneo",
+          "Costa selvaggia a est e ovest ancora incontaminata",
+          "Ottima per snorkeling attorno all'isolotto"
+        ]
+      }
+    },
+
+    {
+      "id": "SP013",
+      "nome": "Porto Giunco",
+      "nome_alternativo": "Spiaggia di Porto Giunco",
+      "coordinate": {
+        "lat": 39.1249,
+        "lng": 9.5227,
+        "descrizione_posizione": "Villasimius, Area Marina Protetta Capo Carbonara"
+      },
+      "comune": "Villasimius",
+      "provincia": "Cagliari (Sud Sardegna)",
+      "zona": "Costa Sud-Est - Villasimius",
+      "tipo_superficie": "sabbia bianca finissima",
+      "lunghezza_m": 1000,
+      "larghezza_m": 90,
+      "come_arrivare": {
+        "in_auto": {
+          "da_Cagliari_km": 50,
+          "percorso": "Quartu Sant'Elena, SP17 Leonardo da Vinci verso Villasimius. Poi via degli Oleandri - via dei Ginepri.",
+          "tempo_da_Cagliari": "45 min",
+          "nota": "Breve sentiero pedonale pianeggiante dal parcheggio (eucalipti)"
+        },
+        "distanze_aeroporti": {
+          "Cagliari_Elmas_km": 55
+        }
+      },
+      "accesso_regolamentato": false,
+      "prenotazione_obbligatoria": false,
+      "servizi": {
+        "parcheggio": true,
+        "parcheggio_costo_eur": "10 (giornaliero)",
+        "stabilimento_balneare": true,
+        "docce": true,
+        "bar_ristoro": true,
+        "bagnino": true,
+        "noleggio_ombrelloni": true,
+        "noleggio_canoe": true,
+        "noleggio_pedalò": true,
+        "accessibilita_disabili": "parziale"
+      },
+      "costi": {
+        "ingresso_eur": 0,
+        "parcheggio_giorno_eur": 10
+      },
+      "periodo_migliore": {
+        "mesi": ["maggio", "giugno", "settembre"],
+        "note": "Inizio giugno per vedere fenicotteri nidificare allo stagno. Maggio per spiaggia semi-deserta."
+      },
+      "affollamento": {
+        "livello": "alto in luglio-agosto, gestibile in altre stagioni"
+      },
+      "descrizione": {
+        "acque": "Tra le più cristalline del Mediterraneo, turchese intenso",
+        "fondale": "Sabbioso, dolce risalita",
+        "colori": "Bianco della sabbia, verde-turchese-blu dell'acqua",
+        "particolarita": [
+          "Lingua sabbiosa tra il mare e lo Stagno di Notteri - 'la spiaggia dei due mari'",
+          "Fenicotteri rosa visibili allo stagno (soprattutto maggio-settembre)",
+          "Torre di Porto Giunco del 1578 sul promontorio (granito locale, 9m)",
+          "Parte dell'Area Marina Protetta Capo Carbonara",
+          "Sentiero tra gli eucalipti per raggiungere la spiaggia"
+        ]
+      }
+    },
+
+    {
+      "id": "SP014",
+      "nome": "Cala Domestica",
+      "nome_alternativo": null,
+      "coordinate": {
+        "lat": 39.3736,
+        "lng": 8.3797,
+        "descrizione_posizione": "2 km a sud di Buggerru, costa sud-ovest"
+      },
+      "comune": "Buggerru",
+      "provincia": "Sud Sardegna (ex Carbonia-Iglesias)",
+      "zona": "Iglesiente - Costa Ovest",
+      "tipo_superficie": "sabbia dorata-ambrata con tratti bianchi",
+      "come_arrivare": {
+        "in_auto": {
+          "da_Buggerru_km": 2,
+          "percorso": "SP83 direzione Buggerru, seguire indicazioni spiaggia. Parcheggio a breve distanza dall'arenile.",
+          "da_Iglesias_km": 40,
+          "da_Cagliari_km": 100
+        },
+        "distanze_aeroporti": {
+          "Cagliari_Elmas_km": 100,
+          "Alghero_Fertilia_km": 155
+        }
+      },
+      "accesso_regolamentato": false,
+      "prenotazione_obbligatoria": false,
+      "servizi": {
+        "parcheggio": true,
+        "parcheggio_a_pagamento": true,
+        "stabilimento_balneare": true,
+        "docce": true,
+        "bagni": true,
+        "bar_ristoro": true,
+        "bagnino": false,
+        "noleggio_ombrelloni": true,
+        "tour_gommone": true,
+        "snorkeling": true,
+        "accessibilita_disabili": false
+      },
+      "costi": {
+        "ingresso_eur": 0
+      },
+      "periodo_migliore": {
+        "mesi": ["maggio", "giugno", "settembre"],
+        "note": "Poco conosciuta dai turisti stranieri, ottima anche in luglio rispetto alle spiagge più famose."
+      },
+      "affollamento": {
+        "livello": "basso-medio"
+      },
+      "descrizione": {
+        "acque": "Cristalline, verde smeraldo e turchese",
+        "fondale": "Sabbioso con tratti rocciosi, buono per snorkeling",
+        "particolarita": [
+          "Falesie bianche altissime che creano un anfiteatro naturale",
+          "Archeologia industriale mineraria: gallerie e depositi dei minatori visibili",
+          "Grotte marine accessibili in gommone",
+          "Molo storico in pietra da esplorare",
+          "Due baie separate dalla stessa struttura (nord e sud)"
+        ]
+      }
+    },
+
+    {
+      "id": "SP015",
+      "nome": "Le Tonnare",
+      "nome_alternativo": "Spiaggia di Tonnara Saline",
+      "coordinate": {
+        "lat": 40.9300,
+        "lng": 8.2100,
+        "descrizione_posizione": "Costa est di Stintino, meno nota di La Pelosa"
+      },
+      "comune": "Stintino",
+      "provincia": "Sassari",
+      "zona": "Nurra - Costa Nord-Ovest",
+      "tipo_superficie": "sabbia bianca a grani medi, compatta",
+      "lunghezza_m": 100,
+      "larghezza_m": 18,
+      "capienza_massima": 225,
+      "come_arrivare": {
+        "in_auto": {
+          "da_Sassari_km": 50,
+          "percorso": "SS131 - Porto Torres - SP34 Stintino. Prima del raccordo per strada panoramica, accesso a destra.",
+          "nota": "Meno segnalata di La Pelosa, meno congestionata"
+        },
+        "distanze_aeroporti": {
+          "Alghero_Fertilia_km": 60
+        }
+      },
+      "accesso_regolamentato": false,
+      "prenotazione_obbligatoria": false,
+      "servizi": {
+        "parcheggio": true,
+        "stabilimento_balneare": "parziale",
+        "docce": false,
+        "bar_ristoro": "punto ristoro",
+        "bagnino": "servizio di salvataggio",
+        "noleggio_ombrelloni": true,
+        "noleggio_natanti": true,
+        "accessibilita_disabili": "parziale",
+        "hotel_adiacenti": true
+      },
+      "costi": {
+        "ingresso_eur": 0
+      },
+      "periodo_migliore": {
+        "mesi": ["giugno", "luglio", "settembre"]
+      },
+      "affollamento": {
+        "livello": "medio - molto meno di La Pelosa",
+        "note": "Alternativa valida a La Pelosa per chi vuole evitare la folla."
+      },
+      "descrizione": {
+        "acque": "Trasparenti, dal turchese all'azzurro smeraldo",
+        "fondale": "Sabbioso con qualche roccia, basso",
+        "particolarita": [
+          "Vista sull'Isola dell'Asinara",
+          "Atmosfera tranquilla rispetto alla vicina La Pelosa",
+          "Presenza di ex struttura tonnara storica"
+        ]
+      }
+    },
+
+    {
+      "id": "SP016",
+      "nome": "Spiaggia Rosa di Budelli",
+      "nome_alternativo": "Cala di Roto",
+      "coordinate": {
+        "lat": 41.2850,
+        "lng": 9.3740,
+        "descrizione_posizione": "Isola di Budelli, Arcipelago de La Maddalena"
+      },
+      "comune": "La Maddalena",
+      "provincia": "Sassari (Olbia-Tempio)",
+      "zona": "Arcipelago La Maddalena - Gallura",
+      "tipo_superficie": "sabbia rosa (gusci calcarei di Miniacina miniacea + posidonia + quarzo)",
+      "accesso_vietato": true,
+      "come_visitare": {
+        "nota": "ACCESSO VIETATO dal 1994 - Zona A tutela integrale Parco Nazionale Arcipelago La Maddalena",
+        "come_ammirare": "Tour in barca con operatori autorizzati da Palau, La Maddalena, Santa Teresa di Gallura, Cannigione. Visione dalla distanza di circa 70 m.",
+        "sentiero_panoramico": "Passerella per ammirare da lontano, predisposta dal Parco",
+        "porti_partenza": ["Palau", "La Maddalena", "Santa Teresa di Gallura", "Cannigione"]
+      },
+      "distanze_aeroporti": {
+        "Olbia_Costa_Smeralda_km": 55
+      },
+      "costi": {
+        "nota": "Costo incluso nel tour organizzato (variabile per operatore)"
+      },
+      "descrizione": {
+        "sabbia": "Rosa per presenza di gusci calcarei di Miniacina miniacea (foraminifero) + frammenti corallini + quarzo rosa",
+        "particolarita": [
+          "Una delle pochissime spiagge rosa al mondo",
+          "Citata nel film Deserto Rosso di Michelangelo Antonioni (1964)",
+          "Patrimonio naturale protetto tra i più rari d'Europa",
+          "Il colore rosa si è notevolmente sbiadito dopo il divieto di accesso"
+        ]
+      }
+    },
+
+    {
+      "id": "SP017",
+      "nome": "Porto Ferro",
+      "nome_alternativo": "Porto Ferru",
+      "coordinate": {
+        "lat": 40.6859,
+        "lng": 8.2058,
+        "descrizione_posizione": "Costa nord-ovest, Nurra di Sassari, vicino lago di Baratz"
+      },
+      "comune": "Sassari",
+      "provincia": "Sassari",
+      "zona": "Nurra - Costa Nord-Ovest",
+      "tipo_superficie": "sabbia giallo-rossastra (trachite), granuli medi",
+      "lunghezza_m": 2000,
+      "larghezza_m": 80,
+      "come_arrivare": {
+        "in_auto": {
+          "da_Alghero_km": 20,
+          "da_aeroporto_Alghero_km": 15,
+          "da_Sassari_km": 35,
+          "percorso": "SS291 Alghero-Santa Maria La Palma, poi dir. Capo Caccia, svoltare per Porto Ferro. Sterrata breve in pineta.",
+          "nota": "Parcheggio gratuito"
+        },
+        "distanze_aeroporti": {
+          "Alghero_Fertilia_km": 15,
+          "Sassari_Porto_Torres_km": 32
+        }
+      },
+      "accesso_regolamentato": false,
+      "prenotazione_obbligatoria": false,
+      "servizi": {
+        "parcheggio": true,
+        "parcheggio_gratuito": true,
+        "stabilimento_balneare": false,
+        "docce": false,
+        "bar_ristoro": "Il Baretto di Porto Ferro (vicino al parcheggio)",
+        "bagnino": false,
+        "accessibilita_disabili": false
+      },
+      "costi": {
+        "ingresso_eur": 0,
+        "parcheggio_eur": 0
+      },
+      "periodo_migliore": {
+        "mesi": ["giugno", "settembre"],
+        "note": "Vento forte frequente - ideale per surf e windsurf in qualsiasi stagione."
+      },
+      "affollamento": {
+        "livello": "basso - poco conosciuta dai turisti"
+      },
+      "descrizione": {
+        "acque": "Verde scuro e blu intenso, mosso con vento",
+        "fondale": "Sabbioso con tratti rocciosi",
+        "particolarita": [
+          "Tre torri di avvistamento spagnole del XVII secolo",
+          "Vicino all'unico lago naturale della Sardegna (Lago di Baratz)",
+          "Spot rinomato per surf e windsurf",
+          "Atmosfera selvaggia e incontaminata",
+          "Pineta retrostante"
+        ]
+      }
+    },
+
+    {
+      "id": "SP018",
+      "nome": "Cala Sisine",
+      "nome_alternativo": null,
+      "coordinate": {
+        "lat": 40.1900,
+        "lng": 9.6600,
+        "descrizione_posizione": "Costa di Baunei, Golfo di Orosei, nord di Cala Mariolu"
+      },
+      "comune": "Baunei",
+      "provincia": "Ogliastra",
+      "zona": "Ogliastra - Costa di Baunei",
+      "tipo_superficie": "ciottoli bianchi medi e piccoli, sabbia calcarea bianca",
+      "lunghezza_m": 500,
+      "larghezza_m": 100,
+      "come_arrivare": {
+        "via_mare": {
+          "porti_partenza": ["Arbatax", "Santa Maria Navarrese", "Cala Gonone"],
+          "nota": "Via principale e consigliata"
+        },
+        "in_fuoristrada": {
+          "partenza": "Altopiano del Golgo, 200 m prima della Chiesa di San Pietro",
+          "distanza_km": 13,
+          "parcheggio_note": "Parcheggio 'Planu e Murta' solo per 4x4. Auto normali al parcheggio 'Ololbissi' + 8 km a piedi."
+        }
+      },
+      "accesso_regolamentato": false,
+      "servizi": {
+        "bar_ristoro": "chioschi metà giugno - metà settembre",
+        "ristorante": "presente in stagione",
+        "bagnino": false,
+        "accessibilita_disabili": false
+      },
+      "costi": {
+        "ingresso_eur": 0,
+        "nota": "Costo traversata in barca a carico del visitatore"
+      },
+      "periodo_migliore": {
+        "mesi": ["giugno", "settembre"]
+      },
+      "affollamento": {
+        "livello": "basso-medio - meno nota di Cala Goloritzé e Cala Mariolu"
+      },
+      "descrizione": {
+        "acque": "Limpide, turchesi, alimentate da un ruscello stagionale",
+        "fondale": "Sabbia bianca calcarea con rocce",
+        "particolarita": [
+          "La più spaziosa delle cale di Baunei (100 m di profondità)",
+          "Torrente stagionale che sfocia in spiaggia",
+          "Sentiero di 4-5 ore verso Cala Luna (trek avanzato)",
+          "Falesie calcaree spettacolari"
+        ]
+      }
+    },
+
+    {
+      "id": "SP019",
+      "nome": "Spiaggia di Bosa Marina",
+      "nome_alternativo": null,
+      "coordinate": {
+        "lat": 40.2950,
+        "lng": 8.4730,
+        "descrizione_posizione": "Foce del fiume Temo, costa ovest Sardegna"
+      },
+      "comune": "Bosa",
+      "provincia": "Oristano",
+      "zona": "Planargia - Costa Ovest",
+      "tipo_superficie": "sabbia dorata-rossastra",
+      "lunghezza_m": 3000,
+      "come_arrivare": {
+        "in_auto": {
+          "da_Alghero_km": 45,
+          "da_Oristano_km": 60,
+          "percorso": "SP49 da Alghero (strada panoramica costiera - una delle più belle dell'isola)"
+        },
+        "distanze_aeroporti": {
+          "Alghero_Fertilia_km": 45,
+          "Cagliari_Elmas_km": 155
+        }
+      },
+      "accesso_regolamentato": false,
+      "servizi": {
+        "parcheggio": true,
+        "parcheggio_a_pagamento": "in stagione",
+        "stabilimento_balneare": true,
+        "docce": true,
+        "bar_ristoro": true,
+        "ristorante": true,
+        "bagnino": true,
+        "accessibilita_disabili": "buona"
+      },
+      "costi": {
+        "ingresso_eur": 0
+      },
+      "periodo_migliore": {
+        "mesi": ["giugno", "luglio", "agosto", "settembre"],
+        "note": "Ottima base per esplorare la città medievale di Bosa con il castello dei Malaspina."
+      },
+      "affollamento": {
+        "livello": "medio"
+      },
+      "descrizione": {
+        "acque": "Azzurre e limpide",
+        "fondale": "Sabbioso",
+        "particolarita": [
+          "Foce del fiume Temo (unico fiume navigabile della Sardegna)",
+          "Vista sul castello di Serravalle (XII sec)",
+          "Borgo medievale di Bosa a 2 km con case colorate",
+          "Produzione locale di vino Malvasia"
+        ]
+      }
+    },
+
+    {
+      "id": "SP020",
+      "nome": "Mari Ermi",
+      "nome_alternativo": null,
+      "coordinate": {
+        "lat": 39.9850,
+        "lng": 8.4250,
+        "descrizione_posizione": "Penisola del Sinis, vicino a Is Arutas"
+      },
+      "comune": "Cabras",
+      "provincia": "Oristano",
+      "zona": "Sinis - Costa Ovest",
+      "tipo_superficie": "granuli di quarzo bianco-verde (simile a Is Arutas ma più piccola)",
+      "lunghezza_m": 400,
+      "larghezza_m": 30,
+      "come_arrivare": {
+        "in_auto": {
+          "da_Is_Arutas_km": 2,
+          "percorso": "Stessa strada di Is Arutas, poi svoltare per Mari Ermi prima del parcheggio principale"
+        },
+        "distanze_aeroporti": {
+          "Cagliari_Elmas_km": 100,
+          "Alghero_Fertilia_km": 110
+        }
+      },
+      "accesso_regolamentato": false,
+      "servizi": {
+        "parcheggio": true,
+        "parcheggio_costo_eur": "incluso nel sistema tariffario Cabras Beaches",
+        "stabilimento_balneare": false,
+        "docce": false,
+        "bar_ristoro": false,
+        "bagnino": false,
+        "accessibilita_disabili": false
+      },
+      "costi": {
+        "ingresso_eur": 0,
+        "parcheggio_eur": "variabile, sistema app Cabras"
+      },
+      "periodo_migliore": {
+        "mesi": ["maggio", "giugno", "settembre", "ottobre"],
+        "note": "Meno conosciuta di Is Arutas, ideale per chi vuole evitare la folla."
+      },
+      "affollamento": {
+        "livello": "basso-medio"
+      },
+      "descrizione": {
+        "acque": "Verde-turchese chiaro, visibilità ottima",
+        "fondale": "Granuli di quarzo, trasparente",
+        "particolarita": [
+          "Sabbia simile a Is Arutas ma meno famosa - alternativa ideale",
+          "Area SIC (Sito di Interesse Comunitario)",
+          "Paesaggio di dune e macchia"
+        ]
+      }
+    }
+  ],
+
+  "parchi_e_natura": [
+    {
+      "id": "PN001",
+      "nome": "Parco Nazionale dell'Asinara",
+      "tipo": "Parco Nazionale + Area Marina Protetta",
+      "anno_istituzione": 2002,
+      "coordinate": {
+        "lat": 41.0500,
+        "lng": 8.2500,
+        "descrizione": "Isola a nord-ovest della Sardegna"
+      },
+      "comune": "Porto Torres",
+      "provincia": "Sassari",
+      "estensione": {
+        "terrestre_ha": 5230,
+        "marina_ha": 10000,
+        "km_costa": 110,
+        "km_strada_principale": 25
+      },
+      "come_arrivare": {
+        "da_Stintino": {
+          "mezzo": "Traghetto o motonave",
+          "durata_traversata_min": "15-30",
+          "imbarco": "Molo Cala Sant'Andrea Tanca Manna"
+        },
+        "da_Porto_Torres": {
+          "mezzo": "Traghetto Delcomar",
+          "durata_traversata_min": 75,
+          "nota": "Servizio regolare"
+        },
+        "tariffe_traghetto_2025": {
+          "adulto_solo_andata_bassa_stagione_eur": 10,
+          "adulto_AR_bassa_stagione_eur": 15,
+          "adulto_solo_andata_alta_stagione_eur": 12,
+          "adulto_AR_alta_stagione_eur": 18,
+          "contributo_sbarco_bassa_stagione_eur": 2.50,
+          "contributo_sbarco_alta_stagione_eur": 5,
+          "supplemento_bici_eur": "4-7"
+        }
+      },
+      "accesso": {
+        "ingresso_parco_eur": 0,
+        "visite_organizzate": "Obbligatorie per i nuovi visitatori. Operatori autorizzati presenti sull'isola.",
+        "visita_autonoma": "Consentita a piedi, in bici, e-bike, veicoli elettrici a noleggio",
+        "escursioni_gommone_da_Stintino_eur": "95 (giugno/settembre) / 100 (luglio) / 110 (agosto)"
+      },
+      "cosa_vedere": [
+        "Cala Reale - ex edifici coloniali e giardino botanico",
+        "Cala d'Oliva - villaggio e porto",
+        "Fornelli - piccolo faro e spiagge",
+        "Cala Sabina - spiaggia bianchissima",
+        "Barchetta e Cala Sant'Andrea",
+        "Resti dell'ex carcere di massima sicurezza (Fornelli)",
+        "Asini albini dell'Asinara (rarità genetica mondiale)"
+      ],
+      "fauna": ["asini albini (unici al mondo)", "mufloni", "capre", "partridge", "falchi", "aquile", "delfini al largo", "posidonia oceanica"],
+      "flora_specie": 678,
+      "specie_endemiche": 29,
+      "durata_visita_consigliata": "1-2 giorni",
+      "periodo_migliore": {
+        "mesi": ["aprile", "maggio", "giugno", "settembre", "ottobre"],
+        "note": "Luglio-agosto molto caldo, ma servizi completi. Primavera ideale per flora in fiore."
+      },
+      "url_ufficiale": "https://www.parcoasinara.org"
+    },
+
+    {
+      "id": "PN002",
+      "nome": "Parco Nazionale del Golfo di Orosei e del Gennargentu",
+      "tipo": "Parco Nazionale",
+      "anno_istituzione": 1998,
+      "coordinate": {
+        "lat": 40.1000,
+        "lng": 9.3500,
+        "descrizione": "Centro-est Sardegna, tra Gennargentu e costa orientale"
+      },
+      "comuni": ["Baunei", "Urzulei", "Dorgali", "Oliena", "Orgosolo", "Desulo", "Arzana", "Talana", "Villagrande Strisaili", "Belvì", "Aritzo", "Fonni", "Tonara"],
+      "province": ["Nuoro", "Ogliastra"],
+      "estensione_ha": 74000,
+      "come_arrivare": {
+        "nota": "Il parco non ha un unico ingresso. Si accede da più punti.",
+        "strada_principale": "SS125 Orientale Sarda (una delle più panoramiche d'Italia), tratto Tortolì-Siniscola",
+        "punti_accesso_principali": [
+          "Cala Gonone (Dorgali) - per il Golfo di Orosei via mare",
+          "Santa Maria Navarrese (Baunei) - per cale e trekking",
+          "Altopiano del Golgo (Baunei) - per Cala Goloritzé e Cala Sisine",
+          "Genna Silana pass (SS125 km 190.5) - per Gola di Gorropu",
+          "Oliena - per Supramonte e Corrasi",
+          "Orgosolo - per Supramonte e Foresta di Montes"
+        ],
+        "distanze_aeroporti": {
+          "Cagliari_Elmas_km": 170,
+          "Olbia_Costa_Smeralda_km": 145
+        }
+      },
+      "cosa_vedere": [
+        "Spiagge del Golfo di Orosei (Cala Goloritzé, Cala Luna, Cala Mariolu, Cala Sisine)",
+        "Gola di Gorropu (canyon più profondo d'Italia)",
+        "Punta La Marmora - vetta più alta della Sardegna (1834 m)",
+        "Supramonte di Oliena e Orgosolo",
+        "Foresta di Montes (Orgosolo)",
+        "Su Gologone - sorgente principale del Supramonte",
+        "Selvaggio Blu trail (6-7 giorni, tra i trekking più duri d'Europa)"
+      ],
+      "trekking_principali": [
+        {"nome": "Selvaggio Blu", "durata_giorni": "6-7", "difficolta": "EE - solo esperti con guide"},
+        {"nome": "Cala Goloritzé dal Golgo", "distanza_km": 7, "durata_ore": "3-4 A/R", "difficolta": "Media"},
+        {"nome": "Gola di Gorropu da Genna Silana", "distanza_km": 8.4, "durata_ore": "4-5 A/R", "difficolta": "Media-Alta"},
+        {"nome": "Monte Corrasi da Oliena", "distanza_km": 8.8, "durata_ore": "5", "difficolta": "Media"}
+      ],
+      "ingresso_eur": 0,
+      "periodo_migliore": {
+        "mesi": ["aprile", "maggio", "giugno", "settembre", "ottobre"],
+        "note": "Trekking sconsigliato in agosto per caldo. Estate ideale per il mare."
+      },
+      "url_ufficiale": "http://www.parcogennargentu.it"
+    },
+
+    {
+      "id": "PN003",
+      "nome": "Parco Naturale Regionale di Porto Conte",
+      "tipo": "Parco Regionale + Area Marina Protetta",
+      "coordinate": {
+        "lat": 40.5900,
+        "lng": 8.1700,
+        "descrizione": "Nord-ovest Sardegna, tra Alghero e Capo Caccia"
+      },
+      "comune": "Alghero",
+      "provincia": "Sassari",
+      "estensione_ha": 5200,
+      "cosa_vedere": [
+        "Grotta di Nettuno (Capo Caccia) - tra le più belle grotte marine al mondo",
+        "Capo Caccia - falesie bianche a picco sul mare",
+        "Escala del Cabirol - 654 gradini scavati nella roccia",
+        "Grotta Verde - arte rupestre preistorica",
+        "Spiaggia di Porto Conte e Le Bombarde",
+        "Necropoli di Anghelu Ruiu (vicina al parco)",
+        "Birdwatching - fenicotteri al Lago Baratz"
+      ],
+      "grotta_nettuno": {
+        "accesso": {
+          "via_terra": "Escala del Cabirol (654 gradini) - 40 min prima della visita",
+          "via_mare": "Barca da porto di Alghero (operatori privati, aprile-novembre)",
+          "via_bus": "ARST da via Catalogna Alghero - 50 min di viaggio"
+        },
+        "orari": "Verificare sito ufficiale grottadinettuno.it (stagionali)",
+        "costi": {
+          "biglietto_traghetto_adulto_eur": 15,
+          "biglietto_traghetto_bambini_eur": 7,
+          "nota": "Biglietto traghetto NON include ingresso grotta"
+        },
+        "operatori_traghetto": [
+          {"nome": "Linea Grotte Navisarda", "tel": "+39 320 741 2400"},
+          {"nome": "Frecce delle Grotte", "tel": "+39 331 722 9999"}
+        ]
+      },
+      "come_arrivare": {
+        "da_Alghero_km": 25,
+        "percorso": "SP55 direzione Capo Caccia da Alghero",
+        "distanze_aeroporti": {
+          "Alghero_Fertilia_km": 18
+        }
+      },
+      "periodo_migliore": {
+        "mesi": ["aprile", "maggio", "giugno", "settembre", "ottobre"],
+        "note": "La grotta è visitabile tutto l'anno (verificare orari invernali). Il parco è spettacolare in primavera."
+      },
+      "ingresso_parco_eur": 0,
+      "url_ufficiale": "https://www.algheroparks.it"
+    },
+
+    {
+      "id": "PN004",
+      "nome": "Parco Naturale Regionale Molentargius-Saline",
+      "tipo": "Parco Naturale Regionale",
+      "coordinate": {
+        "lat": 39.2300,
+        "lng": 9.1500,
+        "descrizione": "Tra Cagliari e Quartu Sant'Elena, retrostante il Poetto"
+      },
+      "comuni": ["Cagliari", "Quartu Sant'Elena", "Quartucciu", "Selargius"],
+      "provincia": "Cagliari",
+      "estensione_ha": 1600,
+      "accesso": {
+        "ingressi_principali": [
+          "Via La Palma (Cagliari)",
+          "Via Don Giordi (Quartu)"
+        ],
+        "ingresso_eur": 0,
+        "gratuito": true
+      },
+      "orari": {
+        "parco": "Alba-tramonto, tutto l'anno",
+        "infopoint": "Lunedì-Venerdì 08:30-19:30 / Sabato-Domenica 08:00-20:00",
+        "tel_infopoint": "+39 070 379191",
+        "indirizzo_infopoint": "Piano terra Edificio Sali Scelti, via La Palma"
+      },
+      "servizi": {
+        "noleggio_biciclette": true,
+        "noleggio_bici_elettriche": true,
+        "noleggio_battelli_elettrici": true,
+        "visite_guidate": "Su prenotazione (a pagamento)",
+        "noleggio_binocoli_eur": 1
+      },
+      "cosa_vedere": [
+        "Fenicotteri rosa (colonia nidificante principale di Cagliari)",
+        "Stagno di Molentargius e Stagno di Santa Gilla",
+        "Saline storiche",
+        "Oltre 200 specie di uccelli migratori",
+        "Canale navigabile"
+      ],
+      "fauna": ["fenicotteri rosa (migliaia)", "aironi", "garzette", "cormorani", "falchi pescatori", "avocette"],
+      "periodo_migliore_fenicotteri": {
+        "mesi": ["aprile", "maggio", "giugno", "luglio", "agosto", "settembre"],
+        "note": "Aprile-settembre per vedere i fenicotteri. Nidificazione principale maggio-giugno (pulli nati)."
+      },
+      "durata_visita_consigliata": "2-4 ore",
+      "come_arrivare": {
+        "da_centro_Cagliari_km": 3,
+        "autobus": "CTM da Cagliari centro",
+        "bici": "Pista ciclabile dal Poetto"
+      },
+      "url_ufficiale": "https://www.parcomolentargius.it"
+    },
+
+    {
+      "id": "PN005",
+      "nome": "Foresta di Montes",
+      "tipo": "Foresta Demaniale - Agenzia Forestas",
+      "coordinate": {
+        "lat": 40.0700,
+        "lng": 9.3200,
+        "descrizione": "Versante nord-est del Gennargentu, comune di Orgosolo"
+      },
+      "comune": "Orgosolo",
+      "provincia": "Nuoro",
+      "estensione_ha": 4500,
+      "altitudine_m": "circa 1000",
+      "come_arrivare": {
+        "da_Orgosolo_km": 15,
+        "percorso": "Corso Repubblica di Orgosolo verso SP48 direzione Gadoni/Fonni. 15 km fino a Funtana Bona.",
+        "nota": "Strada asfaltata ma tortuosa. Indicazioni per Foresta di Montes.",
+        "distanze_aeroporti": {
+          "Cagliari_Elmas_km": 150,
+          "Olbia_Costa_Smeralda_km": 130
+        }
+      },
+      "accesso": {
+        "ingresso_eur": 0,
+        "nota": "Accesso libero. Foresteria prenotabile in anticipo."
+      },
+      "foresteria": {
+        "disponibile": true,
+        "gestore": "Agenzia Forestas",
+        "struttura": "Appartamenti + mansarda, ~20 posti letto",
+        "prenotazione": "Obbligatoria con adeguato anticipo"
+      },
+      "cosa_vedere": [
+        "Bosco secolare di tassi, agrifogli e lecci (tra i più antichi del Mediterraneo)",
+        "Esemplari di tasso (Taxus baccata) di oltre 1000 anni",
+        "Panorami sul Gennargentu",
+        "Flora endemica sarda",
+        "Fauna selvatica: cervi sardi, aquile reali, grifoni"
+      ],
+      "durata_visita_consigliata": "2-3 giorni (pernottamento consigliato)",
+      "periodo_migliore": {
+        "mesi": ["aprile", "maggio", "ottobre", "novembre"],
+        "note": "Primavera per fioriture, autunno per colori. Estate calda ma fresca in quota."
+      },
+      "trekking": "Diversi sentieri segnalati. Escursione singola ~6 ore con soste."
+    },
+
+    {
+      "id": "PN006",
+      "nome": "Supramonte",
+      "tipo": "Area Naturale - Parco Naturale (proposta)",
+      "coordinate": {
+        "lat": 40.2000,
+        "lng": 9.3500,
+        "descrizione": "Massiccio calcareo tra Dorgali, Oliena, Orgosolo, Baunei, Urzulei"
+      },
+      "comuni": ["Dorgali", "Oliena", "Orgosolo", "Baunei", "Urzulei"],
+      "province": ["Nuoro", "Ogliastra"],
+      "estensione_ha": 35000,
+      "punti_accesso_principali": [
+        {"nome": "Funtana Bona (Orgosolo)", "coordinate_approx": "40.07 N, 9.32 E", "descrizione": "Per Foresta Montes e Supramonte di Orgosolo"},
+        {"nome": "Iscala e Pradu (Oliena)", "descrizione": "Per Monte Corrasi e Supramonte di Oliena"},
+        {"nome": "Su Gologone (Oliena)", "descrizione": "Sorgente carsica principale, start di molti trekking"},
+        {"nome": "Genna Silana Pass (SS125 km 190.5)", "descrizione": "Per Gola di Gorropu"},
+        {"nome": "Altopiano del Golgo (Baunei)", "descrizione": "Per cale del Golfo di Orosei"}
+      ],
+      "cosa_vedere": [
+        "Su Gorropu - canyon più profondo d'Italia",
+        "Punta Corrasi - cima principale (1463 m)",
+        "Su Gologone - sorgente carsica spettacolare (risorgenza di oltre 30 l/s)",
+        "Su Suercone - dolina enorme 500 m di diametro, 200 m profonda",
+        "Monte Novo San Giovanni (1316 m) - panorama 360° sul Gennargentu",
+        "Domus de Janas e nuraghi diffusi nel territorio",
+        "Murales di Orgosolo (non nel Supramonte ma vicini)"
+      ],
+      "trekking_principali": [
+        {"nome": "Corrasi da Oliena", "distanza_km": 8.8, "durata_ore": 5, "difficolta": "Media"},
+        {"nome": "Su Gorropu da Genna Silana", "distanza_km": 8.4, "durata_ore": "4-5", "difficolta": "Media-Alta"},
+        {"nome": "Selvaggio Blu", "durata_giorni": "6-7", "difficolta": "Estrema - guide obbligatorie"}
+      ],
+      "guide_locali": [
+        {"nome": "Cooperativa Gorropu", "web": "https://www.gorropu.com"},
+        {"nome": "Excursionatura", "web": "https://www.excursionatura.com"},
+        {"nome": "Supramonte.it", "web": "https://www.supramonte.it"}
+      ],
+      "ingresso_eur": 0,
+      "periodo_migliore": {
+        "mesi": ["marzo", "aprile", "maggio", "giugno", "settembre", "ottobre"],
+        "note": "Evitare agosto per caldo estremo. Inverno pericoloso per piogge e neve in quota."
+      }
+    },
+
+    {
+      "id": "PN007",
+      "nome": "Gola di Gorropu",
+      "tipo": "Canyon - Riserva Naturale",
+      "coordinate": {
+        "lat": 40.1975,
+        "lng": 9.5356,
+        "descrizione": "Campo Base Gorropu: SS125 km 190.5, territorio Urzulei-Orgosolo"
+      },
+      "comuni": ["Urzulei", "Orgosolo"],
+      "provincia": "Nuoro / Ogliastra",
+      "caratteristiche": {
+        "profondita_m": 500,
+        "larghezza_minima_m": "4-5",
+        "lunghezza_km": 1.5,
+        "descrizione": "Canyon più profondo d'Italia e tra i più grandi d'Europa"
+      },
+      "come_arrivare": {
+        "campo_base": {
+          "coordinate": "40° 11′ 51.0″ N - 9° 32′ 8.0″ E",
+          "posizione": "SS125 km 190.500",
+          "gestore": "Chìntula S.n.c. - Urzulei"
+        },
+        "da_Dorgali_km": 25,
+        "da_Nuoro_km": 60
+      },
+      "percorsi": [
+        {
+          "nome": "Percorso Base (da Campo Base)",
+          "distanza_km": 6,
+          "dislivello_m": 50,
+          "durata_ore": "2-3",
+          "difficolta": "Facile-Media",
+          "include": "Transfer in fuoristrada dal Campo Base"
+        },
+        {
+          "nome": "Percorso da Genna Silana",
+          "distanza_km": 8.4,
+          "dislivello_m": 650,
+          "durata_ore": "4-5",
+          "difficolta": "Media-Alta (E)",
+          "note": "Discesa 1.5 ore, salita 2.5-3 ore"
+        },
+        {
+          "nome": "Traversata Integrale",
+          "distanza_km": 6.5,
+          "dislivello_m": 400,
+          "difficolta": "Alta (EE)"
+        }
+      ],
+      "orari": {
+        "apertura": "10:30",
+        "chiusura": "17:00",
+        "ultimo_ingresso": "16:00"
+      },
+      "costi": {
+        "biglietto_adulti_eur": 6,
+        "biglietto_ragazzi_6_17_eur": 4,
+        "escursione_guidata_completa_eur": 70,
+        "incluso_in_guida": "guida escursionistica, ticket ingresso, transfer fuoristrada A/R"
+      },
+      "periodo_migliore": {
+        "mesi": ["aprile", "maggio", "giugno", "settembre"],
+        "note": "Primavera ideale. Estate accettabile (tranne agosto). Inverno pericoloso per piene."
+      },
+      "durata_visita_consigliata": "mezza giornata - giornata intera",
+      "url_riferimento": "https://www.gorropu.com"
+    },
+
+    {
+      "id": "PN008",
+      "nome": "Cascata Sa Stiddiosa",
+      "tipo": "Cascata naturale - Parco fluviale",
+      "coordinate": {
+        "lat": 39.8600,
+        "lng": 9.1500,
+        "descrizione": "Confine comuni Seulo-Gadoni, fiume Flumendosa, Barbagia di Seulo"
+      },
+      "comuni": ["Seulo", "Gadoni"],
+      "provincia": "Nuoro (Sud Sardegna)",
+      "zona": "Barbagia di Seulo - Gennargentu",
+      "come_arrivare": {
+        "percorso": "Entrare a Seulo, seguire indicazioni Gadoni. Dopo 1.5 km dalla chiesetta di Santa Barbara, bivio per la cascata. 2.2 km su sterrata fino all'imbocco del sentiero con parcheggio.",
+        "da_Cagliari_km": 90,
+        "da_Nuoro_km": 65
+      },
+      "sentiero": {
+        "lunghezza_andata_km": 2,
+        "dislivello_m": -350,
+        "durata_discesa_min": 40,
+        "durata_salita_min": 60,
+        "segnaletica": "Buona, sentiero messo in sicurezza",
+        "difficolta": "Media"
+      },
+      "costi": {
+        "ingresso_eur": 7,
+        "note": "Biglietto obbligatorio all'imbocco del sentiero"
+      },
+      "orari": "Verificare in stagione",
+      "cosa_vedere": [
+        "Risorgenza d'acqua lungo parete rocciosa (fenomeno carsico unico)",
+        "Concrezioni calcaree e muschi",
+        "Felci capelvenere (Adiantum capillus-veneris)",
+        "Fiume Flumendosa nella gola sottostante",
+        "Paesaggio di macchia e bosco mediterraneo"
+      ],
+      "descrizione": "Sa Stiddiosa (=gocciolante in sardo) è tecnicamente una risorgenza: l'acqua emerge dalla parete rocciosa della riva destra del fiume Flumendosa, creando un effetto cascata a pioggia. La parete è coperta da muschi, felci e concrezioni calcaree. Atmosfera fiabesca.",
+      "periodo_migliore": {
+        "mesi": ["marzo", "aprile", "maggio", "ottobre", "novembre"],
+        "note": "Primavera e autunno per portata d'acqua massima. Estate: acqua ridotta ma visitabile."
+      },
+      "durata_visita_consigliata": "3-4 ore (andata, visita, ritorno)"
+    },
+
+    {
+      "id": "PN009",
+      "nome": "Lago del Flumendosa",
+      "tipo": "Lago artificiale - Area naturalistica",
+      "bacini": ["Lago Alto", "Lago Medio", "Lago Basso"],
+      "coordinate_lago_alto": {
+        "lat": 40.0000,
+        "lng": 9.2500,
+        "comune": "Villagrande Strisaili",
+        "provincia": "Ogliastra"
+      },
+      "coordinate_lago_medio": {
+        "lat": 39.7500,
+        "lng": 9.0000,
+        "comuni": ["Nurri", "Orroli"],
+        "provincia": "Cagliari (Sarcidano)"
+      },
+      "come_arrivare": {
+        "lago_alto": "SS125 da Nuoro dir. Tortolì, al km 140.5 (cantoniera Pira e Onni) svoltare a destra per cuore del Gennargentu",
+        "lago_medio": "Da Cagliari via SS197, poi per Mandas e Villanovatulo",
+        "distanze_aeroporti": {
+          "lago_medio_da_Cagliari_km": 80,
+          "lago_alto_da_Cagliari_km": 160
+        }
+      },
+      "attivita": [
+        "Escursioni in battello (stile Mississippi con ruota a pala)",
+        "Kayak e canoa",
+        "Wakeboarding",
+        "Pesca sportiva",
+        "Trekking sui sentieri costieri",
+        "Birdwatching",
+        "Nuoto (lago basso)"
+      ],
+      "imbarco_battello": [
+        {"nome": "Centro Nautico Hotel Istellas", "localita": "Nurri"},
+        {"nome": "Ponte di Villanovatulo", "localita": "Villanovatulo", "note": "Collegato al Trenino Verde"}
+      ],
+      "lago_medio_caratteristiche": {
+        "lunghezza_km": 17,
+        "larghezza_m": 500,
+        "colore": "Blu purissimo",
+        "territorio": "Sarcidano e Barbagia di Seulo"
+      },
+      "cosa_vedere": [
+        "Panorami sull'acqua incastonata tra colline e foreste",
+        "Nuraghe di Orroli (vicino)",
+        "Cascata Sa Stiddiosa (vicina al bacino)",
+        "Fauna acquatica e ittica",
+        "Falesie di Isili (arrampicata)"
+      ],
+      "periodo_migliore": {
+        "mesi": ["maggio", "giugno", "settembre", "ottobre"],
+        "note": "Primavera per paesaggio verde e livello acqua alto. Autunno colori spettacolari."
+      },
+      "durata_visita_consigliata": "mezza giornata - giornata intera"
+    }
+  ]
+}

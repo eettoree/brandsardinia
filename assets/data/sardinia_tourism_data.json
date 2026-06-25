@@ -1,0 +1,1349 @@
+{
+  "meta": {
+    "generato_il": "2026-06-24",
+    "versione": "2.0-consolidated",
+    "fonti": [
+      "sardegnaturismo.ai",
+      "iloveolbia.it",
+      "sardegnaeventi24.it",
+      "sardegnaturismo.it/it/eventi",
+      "sardegnaturismo.it/it/itinerari",
+      "paradisola.it",
+      "sardegnatuttolanno.net",
+      "escursi.com",
+      "sardiniapoint.it",
+      "viamichelin.com",
+      "distanzechilometriche.net",
+      "himmera.com",
+      "percorsokm.it"
+    ],
+    "note": "JSON consolidato da scraping parallelo di 7 siti turistici sardi. Dati per alimentare AI di pianificazione itinerari personalizzati. Prezzi, orari e date vanno sempre verificati sui siti ufficiali prima dell'uso."
+  },
+
+  "eventi_2026": [
+    {
+      "id": "ev001",
+      "nome": "Carnevale di Mamoiada - Mamuthones e Issohadores",
+      "data_inizio": "2026-01-17",
+      "data_fine": "2026-02-28",
+      "luogo": "Centro storico",
+      "citta": "Mamoiada",
+      "provincia": "Nuoro",
+      "categoria": "Tradizioni",
+      "descrizione": "Carnevale barbaricino tra i piu' suggestivi d'Europa. Le maschere dei Mamuthones, coperte di campanacci, sfilano scortate dagli Issohadores. Risale a rituali preistorici pastorali. Museo delle Maschere Mediterranee visitabile tutto l'anno.",
+      "link": "https://sardegnaturismo.ai/",
+      "costo": "Gratuito"
+    },
+    {
+      "id": "ev002",
+      "nome": "Sa Sartiglia",
+      "data_inizio": "2026-02-15",
+      "data_fine": "2026-02-17",
+      "luogo": "Corso Umberto I",
+      "citta": "Oristano",
+      "provincia": "Oristano",
+      "categoria": "Tradizioni",
+      "descrizione": "Torneo equestre medievale di origine spagnola. I cavalieri in maschera tentano di infilzare una stella con la spada. Spettacolo di carnevale unico in Sardegna con grande affluenza.",
+      "link": "https://www.sardegnaturismo.it/it/eventi",
+      "costo": "Gratuito (tribune a pagamento)"
+    },
+    {
+      "id": "ev003",
+      "nome": "Monumenti Aperti 2026",
+      "data_inizio": "2026-04-18",
+      "data_fine": "2026-11-08",
+      "luogo": "Varie localita' in tutta la Sardegna",
+      "citta": "Tutta la Sardegna",
+      "provincia": "Multiple",
+      "categoria": "Cultura",
+      "descrizione": "Apertura straordinaria e gratuita di monumenti, chiese, siti storici normalmente chiusi. Visite guidate da volontari e studenti. Weekend selezionati da aprile a novembre in 30+ comuni. Cagliari (18-19 apr), Sassari (2-3 mag), Alghero (16-17 mag), Bosa/Villasimius (23-24 mag), Pula (30-31 mag), poi autunno ottobre-novembre.",
+      "link": "https://sardegnatuttolanno.net/evento/monumenti-aperti-il-calendario-2026/",
+      "costo": "Gratuito"
+    },
+    {
+      "id": "ev004",
+      "nome": "Primavera nel cuore della Sardegna",
+      "data_inizio": "2026-04-25",
+      "data_fine": "2026-06-28",
+      "luogo": "Varie localita' interne",
+      "citta": "Sardegna centro",
+      "provincia": "Multiple",
+      "categoria": "Festival",
+      "descrizione": "Rassegna di eventi culturali, gastronomici e folkloristici nelle zone interne della Sardegna durante la primavera. Sagre, concerti, visite guidate.",
+      "link": "https://www.sardegnaturismo.it/it/eventi/primavera-nel-cuore-della-sardegna-0",
+      "costo": "Variabile"
+    },
+    {
+      "id": "ev005",
+      "nome": "Festa di Sant'Efisio",
+      "data_inizio": "2026-05-01",
+      "data_fine": "2026-05-04",
+      "luogo": "Cagliari centro storico / Pula",
+      "citta": "Cagliari",
+      "provincia": "Cagliari",
+      "categoria": "Tradizioni",
+      "descrizione": "Pellegrinaggio processionale storico dal centro di Cagliari fino a Pula e ritorno. Una delle feste religiose piu' antiche e partecipate della Sardegna con costumi tradizionali sardi da tutta l'isola.",
+      "link": "https://www.sardegnaturismo.it/it/eventi",
+      "costo": "Gratuito"
+    },
+    {
+      "id": "ev006",
+      "nome": "Tutankhamon. La tomba, il tesoro, la scoperta",
+      "data_inizio": "2026-03-22",
+      "data_fine": "2026-07-31",
+      "luogo": "Bastione di Saint Remy",
+      "citta": "Cagliari",
+      "provincia": "Cagliari",
+      "categoria": "Mostre",
+      "descrizione": "Mostra immersiva dedicata alla scoperta della tomba di Tutankhamon con riproduzioni fedeli del tesoro e della tomba. Nel bastione panoramico del quartiere Castello.",
+      "link": "https://www.sardegnaturismo.it/it/eventi/tutankhamon-la-tomba-il-tesoro-la-scoperta",
+      "costo": "A pagamento"
+    },
+    {
+      "id": "ev007",
+      "nome": "Si muove la citta'",
+      "data_inizio": "2026-06-11",
+      "data_fine": "2026-09-10",
+      "luogo": "Vari spazi pubblici",
+      "citta": "Cagliari",
+      "provincia": "Cagliari",
+      "categoria": "Spettacoli",
+      "descrizione": "Rassegna estiva di spettacoli all'aperto a Cagliari: teatro, danza, concerti, performance artistiche negli spazi urbani e storici della citta'.",
+      "link": "https://www.sardegnaturismo.it/it/eventi/si-muove-la-citta-1",
+      "costo": "Gratuito o a pagamento a seconda dell'evento"
+    },
+    {
+      "id": "ev008",
+      "nome": "Festival Licanias",
+      "data_inizio": "2026-06-18",
+      "data_fine": "2026-06-21",
+      "luogo": "Non specificato",
+      "citta": "Neoneli",
+      "provincia": "Oristano",
+      "categoria": "Festival culturale",
+      "descrizione": "Festival con tema 'Destini'. Evento culturale in un piccolo borgo del centro Sardegna.",
+      "link": "https://www.paradisola.it/eventi-sardegna/calendario/details/2026-06-18/4231",
+      "costo": "Variabile"
+    },
+    {
+      "id": "ev009",
+      "nome": "Carmine 2026",
+      "data_inizio": "2026-06-19",
+      "data_fine": "2026-09-12",
+      "luogo": "Quartiere Stampace",
+      "citta": "Cagliari",
+      "provincia": "Cagliari",
+      "categoria": "Festival",
+      "descrizione": "Festival estivo nel quartiere storico di Stampace a Cagliari. Musica, arte, gastronomia e cultura popolare nelle strade del centro storico.",
+      "link": "https://www.sardegnaturismo.it/it/eventi/carmine-2026",
+      "costo": "Variabile"
+    },
+    {
+      "id": "ev010",
+      "nome": "Marina Cafe' Noir",
+      "data_inizio": "2026-06-19",
+      "data_fine": "2026-06-21",
+      "luogo": "Giliaquas",
+      "citta": "Elmas",
+      "provincia": "Cagliari",
+      "categoria": "Arte e cultura",
+      "descrizione": "Festival 'Cambiare rotta' con artisti: Maurizio de Giovanni, Francesca Mannocchi, Willie Peyote, Motta, Ginevra Di Marco, Ferrari, Catalano, Tonino Carotone.",
+      "link": "https://www.paradisola.it/eventi-sardegna/4662-marina-cafe-noir-2026",
+      "costo": "A pagamento"
+    },
+    {
+      "id": "ev011",
+      "nome": "Time in Jazz Preview",
+      "data_inizio": "2026-06-19",
+      "data_fine": "2026-06-21",
+      "luogo": "Non specificato",
+      "citta": "Berchidda",
+      "provincia": "Sassari",
+      "categoria": "Musica",
+      "descrizione": "Concerti, incontri e produzioni originali in anteprima del festival estivo. Tributo a Miles Davis.",
+      "link": "https://www.paradisola.it/eventi-sardegna/calendario/details/2026-06-19/4233",
+      "costo": "Alcuni gratuiti, altri a pagamento"
+    },
+    {
+      "id": "ev012",
+      "nome": "Focs de Sant Joan",
+      "data_inizio": "2026-06-20",
+      "data_fine": "2026-06-24",
+      "luogo": "Centro storico",
+      "citta": "Alghero",
+      "provincia": "Sassari",
+      "categoria": "Tradizioni",
+      "descrizione": "Festa catalana del fuoco di San Giovanni. Falò, musica, balli tradizionali e fuochi d'artificio. Celebrazione dei legami di amicizia attraverso antichi riti catalano-sardi.",
+      "link": "https://www.paradisola.it/eventi-sardegna/3857-focs-de-sant-joan-alghero-2026",
+      "costo": "Gratuito"
+    },
+    {
+      "id": "ev013",
+      "nome": "Mare e Miniere",
+      "data_inizio": "2026-06-23",
+      "data_fine": "2026-06-28",
+      "luogo": "Portoscuso e Sulcis-Iglesiente",
+      "citta": "Portoscuso",
+      "provincia": "Sud Sardegna",
+      "categoria": "Festival",
+      "descrizione": "Festival che unisce musica etnica, tradizioni marinare e patrimonio minerario del Sulcis-Iglesiente. Concerti, visite alle ex miniere, gastronomia locale.",
+      "link": "https://www.sardegnaturismo.it/it/eventi/mare-e-miniere-1",
+      "costo": "Variabile"
+    },
+    {
+      "id": "ev014",
+      "nome": "Anteprima Festival del Cinema di Tavolara",
+      "data_inizio": "2026-06-13",
+      "data_fine": "2026-06-26",
+      "luogo": "Porto Rotondo e Porto San Paolo",
+      "citta": "Olbia",
+      "provincia": "Sassari",
+      "categoria": "Cinema",
+      "descrizione": "Proiezioni cinematografiche all'aperto con l'isola di Tavolara come sfondo. Uno degli scenari naturali piu' iconici per un festival di cinema in Italia.",
+      "link": "https://www.sardegnaturismo.it/it/eventi/anteprima-festival-del-cinema-di-tavolara",
+      "costo": "A pagamento"
+    },
+    {
+      "id": "ev015",
+      "nome": "Festival Internazionale dell'Archeologia",
+      "data_inizio": "2026-06-24",
+      "data_fine": "2026-06-29",
+      "luogo": "Cabras e dintorni",
+      "citta": "Cabras",
+      "provincia": "Oristano",
+      "categoria": "Cultura",
+      "descrizione": "Festival dedicato all'archeologia mediterranea. Conferenze, visite guidate, mostre. Location strategica vicino al sito di Tharros e al Museo del Mediterraneo di Cabras.",
+      "link": "https://www.sardegnaturismo.it/it/eventi/festival-internazionale-dellarcheologia",
+      "costo": "Variabile"
+    },
+    {
+      "id": "ev016",
+      "nome": "Archeo Beer Fest",
+      "data_inizio": "2026-06-19",
+      "data_fine": "2026-06-21",
+      "luogo": "San Salvatore di Cabras",
+      "citta": "Cabras",
+      "provincia": "Oristano",
+      "categoria": "Festival enogastronomico",
+      "descrizione": "Evento che unisce archeologia, degustazione birre artigianali e concerti nel santuario di San Salvatore.",
+      "link": "https://www.paradisola.it/eventi-sardegna/calendario/details/2026-06-19/3616",
+      "costo": "A pagamento per degustazioni"
+    },
+    {
+      "id": "ev017",
+      "nome": "Dall'altra parte del mare",
+      "data_inizio": "2026-06-24",
+      "data_fine": "2026-06-28",
+      "luogo": "Centro storico e lungomare",
+      "citta": "Alghero",
+      "provincia": "Sassari",
+      "categoria": "Festival",
+      "descrizione": "Festival multidisciplinare di musica, teatro e cultura mediterranea ad Alghero.",
+      "link": "https://www.sardegnaturismo.it/it/eventi/dallaltra-parte-del-mare-0",
+      "costo": "Variabile, alcuni eventi gratuiti"
+    },
+    {
+      "id": "ev018",
+      "nome": "Le Notti del Vino",
+      "data_inizio": "2026-06-26",
+      "data_fine": "2026-06-27",
+      "luogo": "Dorgali e Cala Gonone",
+      "citta": "Dorgali",
+      "provincia": "Nuoro",
+      "categoria": "Sagre",
+      "descrizione": "Manifestazione enogastronomica dedicata ai vini della Barbagia, in particolare Cannonau di Dorgali. Degustazioni, cantine aperte, cibo tipico con vista su Cala Gonone.",
+      "link": "https://www.sardegnaturismo.it/it/eventi/le-notti-del-vino-0",
+      "costo": "A pagamento per degustazioni"
+    },
+    {
+      "id": "ev019",
+      "nome": "Concerto Negramaro",
+      "data_inizio": "2026-06-27",
+      "data_fine": "2026-06-27",
+      "luogo": "Piazza principale",
+      "citta": "Golfo Aranci",
+      "provincia": "Sassari",
+      "categoria": "Musica",
+      "descrizione": "Unica tappa sarda del tour dei Negramaro. Ingresso gratuito in piazza.",
+      "link": "https://www.paradisola.it/eventi-sardegna/calendario/details/2026-06-27/4189",
+      "costo": "Gratuito"
+    },
+    {
+      "id": "ev020",
+      "nome": "Concerto Daniele Silvestri - Canzoni a sdraio",
+      "data_inizio": "2026-06-27",
+      "data_fine": "2026-06-27",
+      "luogo": "Piazza Duomo",
+      "citta": "Oristano",
+      "provincia": "Oristano",
+      "categoria": "Musica",
+      "descrizione": "Concerto del tour 'Canzoni a sdraio' in Piazza Duomo a Oristano.",
+      "link": "https://www.paradisola.it/eventi-sardegna/calendario/details/2026-06-27/4235",
+      "costo": "A pagamento"
+    },
+    {
+      "id": "ev021",
+      "nome": "Salone dell'Artigianato Artistico (SAAS)",
+      "data_inizio": "2026-06-26",
+      "data_fine": "2026-09-05",
+      "luogo": "Ex Caffetteria c/o Piazza Si e Boi",
+      "citta": "Selargius",
+      "provincia": "Cagliari",
+      "categoria": "Arte/Artigianato",
+      "descrizione": "Esposizione prolungata di artigianato artistico sardo: ceramiche, tessuti, coltelli, gioielli in argento. Artigiani sardi selezionati presentano le loro opere.",
+      "link": "https://sardegnaeventi24.it/event/saas-salone-artigianato-artistico-sardegna-a-selargius/",
+      "costo": "Gratuito"
+    },
+    {
+      "id": "ev022",
+      "nome": "Vasco Live 2026",
+      "data_inizio": "2026-06-12",
+      "data_fine": "2026-06-13",
+      "luogo": "Olbia Arena",
+      "citta": "Olbia",
+      "provincia": "Sassari",
+      "categoria": "Musica",
+      "descrizione": "Due date del tour di Vasco Rossi all'Olbia Arena. Evento di grande richiamo nazionale.",
+      "link": "https://www.ticketone.it/",
+      "costo": "A pagamento (TicketOne)"
+    },
+    {
+      "id": "ev023",
+      "nome": "Time in Jazz",
+      "data_inizio": "2026-08-08",
+      "data_fine": "2026-08-16",
+      "luogo": "Piazza del Popolo e varie sedi",
+      "citta": "Berchidda",
+      "provincia": "Sassari",
+      "categoria": "Musica",
+      "descrizione": "Festival internazionale di jazz fondato da Paolo Fresu. Concerti in piazza, borghi e paesaggi naturali della Gallura. Atmosfera unica tra musica e territorio.",
+      "link": "https://sardegnaturismo.ai/",
+      "costo": "Alcuni eventi gratuiti, altri a pagamento"
+    },
+    {
+      "id": "ev024",
+      "nome": "Faradda dei Candelieri",
+      "data_inizio": "2026-08-14",
+      "data_fine": "2026-08-14",
+      "luogo": "Via Rosello e centro storico",
+      "citta": "Sassari",
+      "provincia": "Sassari",
+      "categoria": "Tradizioni",
+      "descrizione": "Patrimonio UNESCO. Sfilata di enormi candelieri in legno portati a spalla dai rappresentanti delle gremi (corporazioni storiche) cittadine.",
+      "link": "https://www.sardegnaturismo.it/it/eventi",
+      "costo": "Gratuito"
+    },
+    {
+      "id": "ev025",
+      "nome": "Red Valley Festival",
+      "data_inizio": "2026-08-13",
+      "data_fine": "2026-08-15",
+      "luogo": "Arena Concerti Red Valley",
+      "citta": "Olbia",
+      "provincia": "Sassari",
+      "categoria": "Musica",
+      "descrizione": "Festival musicale estivo con artisti nazionali e internazionali. Uno degli eventi musicali piu' importanti della Sardegna nord-orientale.",
+      "link": "https://sardegnaturismo.ai/",
+      "costo": "A pagamento"
+    },
+    {
+      "id": "ev026",
+      "nome": "Primavera in Ogliastra - Fiera delle Ciliegie",
+      "data_inizio": "2026-06-25",
+      "data_fine": "2026-06-28",
+      "luogo": "Non specificato",
+      "citta": "Lanusei",
+      "provincia": "Nuoro",
+      "categoria": "Cultura e enogastronomia",
+      "descrizione": "Visite culturali, esperienze gastronomiche e artigianato locale nell'Ogliastra.",
+      "link": "https://www.paradisola.it/eventi-sardegna/calendario/details/2026-06-25/3608",
+      "costo": "Variabile"
+    }
+  ],
+
+  "esperienze": [
+    {
+      "id": "exp001",
+      "nome": "Tour in catamarano Golfo di Orosei",
+      "tipo": "Gite in barca",
+      "zona": "Cala Gonone / Golfo di Orosei",
+      "durata": "7 ore",
+      "costo": "130 EUR a persona",
+      "operatore": "Escursi.com",
+      "link": "https://www.escursi.com/cala-gonone-tour-catamarano-golfo-orosei",
+      "descrizione": "Tour in catamarano lungo il Golfo di Orosei con soste alle calette piu' belle: Cala Luna, Cala Mariolu, Cala Biriola. Include snorkeling e pranzo a bordo.",
+      "rating": "4.9/5",
+      "stagione": "Maggio-Ottobre"
+    },
+    {
+      "id": "exp002",
+      "nome": "Escursione in gommone Golfo di Orosei",
+      "tipo": "Gite in barca",
+      "zona": "Cala Gonone / Golfo di Orosei",
+      "durata": "7 ore",
+      "costo": "75 EUR a persona",
+      "operatore": "Escursi.com",
+      "link": "https://www.escursi.com/cala-gonone-escursione-gommone-golfo-orosei",
+      "descrizione": "Tour in gommone con accesso alle calette inaccessibili via terra: Cala Luna, Cala Sisine, Cala Mariolu. Snorkeling incluso.",
+      "rating": "N/D",
+      "stagione": "Maggio-Ottobre"
+    },
+    {
+      "id": "exp003",
+      "nome": "Snorkeling Porto Conte e Capo Caccia",
+      "tipo": "Sport acquatici",
+      "zona": "Alghero - Porto Conte",
+      "durata": "3 ore",
+      "costo": "70 EUR a persona",
+      "operatore": "Escursi.com",
+      "link": "https://www.escursi.com/alghero-tour-gommone-snorkeling-porto-conte-capo-caccia",
+      "descrizione": "Tour in gommone con snorkeling nell'area marina protetta di Capo Caccia e Porto Conte. Acque cristalline, fondali ricchi di fauna marina.",
+      "rating": "4.9/5 (111 recensioni)",
+      "stagione": "Aprile-Ottobre"
+    },
+    {
+      "id": "exp004",
+      "nome": "Tour in barca a vela nel Parco di Porto Conte",
+      "tipo": "Gite in barca",
+      "zona": "Alghero",
+      "durata": "8 ore",
+      "costo": "115 EUR a persona",
+      "operatore": "Escursi.com",
+      "link": "https://www.escursi.com/esperienze/gite-in-barca/alghero-tour-barca-vela-parco-porto-conte",
+      "descrizione": "Giornata in barca a vela nell'area marina protetta del Parco di Porto Conte. Soste per bagni e snorkeling.",
+      "rating": "5.0/5 (20 recensioni)",
+      "stagione": "Aprile-Ottobre"
+    },
+    {
+      "id": "exp005",
+      "nome": "Trekking Canyon di Gorropu",
+      "tipo": "Trekking",
+      "zona": "Dorgali / Supramonte",
+      "durata": "6 ore",
+      "costo": "75 EUR a persona",
+      "operatore": "Escursi.com",
+      "link": "https://www.escursi.com/dorgali-trekking-canyon-gorropu",
+      "descrizione": "Escursione guidata nel canyon piu' profondo d'Europa. Pareti verticali di calcare fino a 500m, flora endemica, ambiente selvaggio. Livello medio-difficile.",
+      "rating": "4.8/5 (3 recensioni)",
+      "stagione": "Marzo-Giugno / Settembre-Novembre"
+    },
+    {
+      "id": "exp006",
+      "nome": "Kayak a Cagliari",
+      "tipo": "Sport acquatici",
+      "zona": "Cagliari",
+      "durata": "3 ore 30 minuti",
+      "costo": "60 EUR a persona",
+      "operatore": "Escursi.com",
+      "link": "https://www.escursi.com/cagliari-escursione-kayak",
+      "descrizione": "Escursione in kayak nelle acque del golfo di Cagliari. Vista sulla citta' dal mare, soste in calette, istruttore incluso.",
+      "rating": "4.9/5 (79 recensioni)",
+      "stagione": "Tutto l'anno"
+    },
+    {
+      "id": "exp007",
+      "nome": "Laboratorio pasta - Antico Villaggio",
+      "tipo": "Enogastronomia",
+      "zona": "Olbia",
+      "durata": "3 ore 30 minuti",
+      "costo": "135 EUR a persona",
+      "operatore": "Escursi.com",
+      "link": "https://www.escursi.com/olbia-laboratorio-pasta-antico-villaggio",
+      "descrizione": "Laboratorio di pasta fatta a mano in un antico villaggio sardo. Si imparano ricette tradizionali: culurgiones, malloreddus, lorighittas. Degustazione finale con vini locali.",
+      "rating": "5.0/5 (45 recensioni)",
+      "stagione": "Tutto l'anno"
+    },
+    {
+      "id": "exp008",
+      "nome": "Vela Arcipelago della Maddalena - giornata intera",
+      "tipo": "Gite in barca",
+      "zona": "Cannigione / La Maddalena",
+      "durata": "7 ore 30 minuti",
+      "costo": "89 EUR a persona",
+      "operatore": "Escursi.com",
+      "link": "https://www.escursi.com/cannigione-giornata-intera-barca-vela-arcipelago-maddalena",
+      "descrizione": "Giornata in barca a vela tra le isole dell'Arcipelago della Maddalena. Soste a Spargi, Budelli (Spiaggia Rosa), Santo Stefano. Pranzo a bordo, snorkeling.",
+      "rating": "N/D",
+      "stagione": "Maggio-Ottobre"
+    },
+    {
+      "id": "exp009",
+      "nome": "Tour costiero in ebike ad Alghero",
+      "tipo": "Escursioni in bici",
+      "zona": "Alghero",
+      "durata": "4 ore",
+      "costo": "80 EUR a persona",
+      "operatore": "Escursi.com",
+      "link": "https://www.escursi.com/esperienze/escursioni-bici-cavallo/alghero-tour-costiero-ebike",
+      "descrizione": "Tour in ebike lungo la costa di Alghero. Panorami sul mare, riserva naturale di Porto Conte.",
+      "rating": "4.9/5 (9 recensioni)",
+      "stagione": "Marzo-Novembre"
+    },
+    {
+      "id": "exp010",
+      "nome": "Laboratorio di cucina tradizionale ad Olmedo",
+      "tipo": "Enogastronomia",
+      "zona": "Alghero / Olmedo",
+      "durata": "3 ore",
+      "costo": "95 EUR a persona",
+      "operatore": "Escursi.com",
+      "link": "https://www.escursi.com/esperienze/enogastronomia/alghero-laboratorio-cucina-tradizionale-olmedo",
+      "descrizione": "Laboratorio di cucina tipica sarda in un'azienda agricola locale. Ricette tradizionali, prodotti a km zero.",
+      "rating": "5.0/5 (12 recensioni)",
+      "stagione": "Tutto l'anno"
+    },
+    {
+      "id": "exp011",
+      "nome": "Passeggiata a cavallo Porto Ferro e Lago di Baratz",
+      "tipo": "Escursioni a cavallo",
+      "zona": "Alghero",
+      "durata": "2 ore",
+      "costo": "75 EUR a persona",
+      "operatore": "Escursi.com",
+      "link": "https://www.escursi.com/esperienze/escursioni-bici-cavallo/alghero-passeggiata-cavallo-porto-ferro-lago-baratz",
+      "descrizione": "Escursione a cavallo verso Porto Ferro e il Lago di Baratz, unico lago naturale della Sardegna.",
+      "rating": "4.9/5 (111 recensioni)",
+      "stagione": "Marzo-Novembre"
+    },
+    {
+      "id": "exp012",
+      "nome": "Tour del centro storico di Alghero e degustazione vini",
+      "tipo": "Tour cittadino / Enogastronomia",
+      "zona": "Alghero",
+      "durata": "2 ore 30 minuti",
+      "costo": "50 EUR a persona",
+      "operatore": "Escursi.com",
+      "link": "https://www.escursi.com/esperienze/enogastronomia/alghero-tour-centro-storico-degustazione-vini",
+      "descrizione": "Tour guidato nel centro storico catalano di Alghero con degustazione di vini locali (Vermentino, Torbato).",
+      "rating": "4.9/5 (19 recensioni)",
+      "stagione": "Tutto l'anno"
+    },
+    {
+      "id": "exp013",
+      "nome": "Tour in quad ad Alghero",
+      "tipo": "Fuoristrada / Quad",
+      "zona": "Alghero",
+      "durata": "4 ore",
+      "costo": "170 EUR a gruppo",
+      "operatore": "Escursi.com",
+      "link": "https://www.escursi.com/esperienze/su-ruote/alghero-tour-4-ore-quad",
+      "descrizione": "Tour in quad nelle campagne e zone costiere attorno ad Alghero.",
+      "rating": "4.9/5 (109 recensioni)",
+      "stagione": "Marzo-Novembre"
+    },
+    {
+      "id": "exp014",
+      "nome": "Tour in gommone Golfo dell'Asinara",
+      "tipo": "Gite in barca",
+      "zona": "Stintino",
+      "durata": "3 ore",
+      "costo": "40 EUR a persona",
+      "operatore": "Escursi.com",
+      "link": "https://www.escursi.com",
+      "descrizione": "Tour in gommone nel Golfo dell'Asinara con soste per bagni e snorkeling.",
+      "rating": "4.8/5 (155 recensioni)",
+      "stagione": "Maggio-Settembre"
+    },
+    {
+      "id": "exp015",
+      "nome": "Tour in kayak a Tuerredda",
+      "tipo": "Sport acquatici",
+      "zona": "Chia",
+      "durata": "4 ore",
+      "costo": "55 EUR a persona",
+      "operatore": "Escursi.com",
+      "link": "https://www.escursi.com/esperienze/sport-acquatici/chia-tour-kayak-tuerredda",
+      "descrizione": "Escursione in kayak verso la spiaggia di Tuerredda, una delle piu' belle del Sud Sardegna.",
+      "rating": "4.9/5 (4 recensioni)",
+      "stagione": "Maggio-Ottobre"
+    },
+    {
+      "id": "exp016",
+      "nome": "Tour in gommone a Villasimius",
+      "tipo": "Gite in barca",
+      "zona": "Villasimius",
+      "durata": "3 ore 30 minuti",
+      "costo": "45 EUR a persona",
+      "operatore": "Escursi.com",
+      "link": "https://www.escursi.com/esperienze/gite-in-barca/villasimius-tour-gommone",
+      "descrizione": "Tour in gommone nell'AMP di Capo Carbonara. Calette protette, acque cristalline.",
+      "rating": "5.0/5 (3 recensioni)",
+      "stagione": "Maggio-Ottobre"
+    },
+    {
+      "id": "exp017",
+      "nome": "Snorkeling costa Capo Carbonara",
+      "tipo": "Sport acquatici",
+      "zona": "Villasimius",
+      "durata": "4 ore",
+      "costo": "55 EUR a persona",
+      "operatore": "Escursi.com",
+      "link": "https://www.escursi.com/esperienze/sport-acquatici/villasimius-snorkeling-costa-capo-carbonara",
+      "descrizione": "Snorkeling nell'Area Marina Protetta di Capo Carbonara. Fondali ricchi di Posidonia e fauna marina.",
+      "rating": "5.0/5 (1 recensione)",
+      "stagione": "Maggio-Ottobre"
+    },
+    {
+      "id": "exp018",
+      "nome": "Tour in jeep a Chia",
+      "tipo": "Fuoristrada",
+      "zona": "Cagliari / Chia",
+      "durata": "8 ore",
+      "costo": "80 EUR a persona",
+      "operatore": "Escursi.com",
+      "link": "https://www.escursi.com/esperienze/su-ruote/cagliari-tour-jeep-chia",
+      "descrizione": "Giornata in jeep 4x4 verso le spiagge di Chia passando per percorsi fuoristrada.",
+      "rating": "4.9/5 (19 recensioni)",
+      "stagione": "Aprile-Ottobre"
+    },
+    {
+      "id": "exp019",
+      "nome": "Trenino Verde",
+      "tipo": "Trasporto panoramico / Esperienza",
+      "zona": "Interno Sardegna (varie linee)",
+      "durata": "Mezza giornata / giornata intera",
+      "costo": "15-30 EUR a persona (circa)",
+      "operatore": "ARST Sardegna",
+      "link": "https://www.paradisola.it/",
+      "descrizione": "Treni storici a vapore o diesel su linee panoramiche nelle zone interne. Linee principali: Mandas-Arbatax (Ogliastra), Isili-Sorgono (Barbagia), Macomer-Bosa. Paesaggi rurali unici. Stagionale.",
+      "rating": "N/D",
+      "stagione": "Giugno-Settembre (stagionale)"
+    },
+    {
+      "id": "exp020",
+      "nome": "Trekking nel Supramonte di Oliena",
+      "tipo": "Trekking",
+      "zona": "Oliena / Supramonte",
+      "durata": "Giornata intera",
+      "costo": "50-80 EUR con guida",
+      "operatore": "Guide locali certificate / Coop Ghivine",
+      "link": "https://www.sardegnaturismo.it/it/itinerari",
+      "descrizione": "Escursione nel massiccio calcareo del Supramonte. Sorgenti di Su Gologone, boschi di lecci e roverella, fauna endemica. Guida obbligatoria per alcune zone.",
+      "rating": "N/D",
+      "stagione": "Marzo-Giugno / Settembre-Novembre"
+    },
+    {
+      "id": "exp021",
+      "nome": "Trekking verso Tiscali",
+      "tipo": "Trekking",
+      "zona": "Supramonte - Valle di Lanaitto / Dorgali-Oliena",
+      "durata": "Giornata intera",
+      "costo": "Gratuito (eventi organizzati) o 40-60 EUR con guida",
+      "operatore": "Sport e Natura ASD / Coop Ghivine",
+      "link": "https://sardegnatuttolanno.net/dai-monti-al-mare-una-giornata-outdoor-nel-supramonte-di-sardegna/",
+      "descrizione": "Trekking verso il villaggio nuragico di Tiscali, nascosto dentro una dolina. Uno dei siti piu' scenografici della Sardegna.",
+      "rating": "N/D",
+      "stagione": "Marzo-Giugno / Settembre-Novembre"
+    },
+    {
+      "id": "exp022",
+      "nome": "Kayak nel Cedrino",
+      "tipo": "Sport acquatico",
+      "zona": "Fiume Cedrino / Dorgali",
+      "durata": "Giornata intera o mezza giornata",
+      "costo": "Variabile (20-50 EUR)",
+      "operatore": "Adventure Guide ASD / Coop Enis",
+      "link": "https://sardegnatuttolanno.net/dai-monti-al-mare-una-giornata-outdoor-nel-supramonte-di-sardegna/",
+      "descrizione": "Discesa in kayak nel fiume Cedrino attraverso canyon e paesaggi selvaggi dell'entroterra sardo.",
+      "rating": "N/D",
+      "stagione": "Marzo-Ottobre"
+    },
+    {
+      "id": "exp023",
+      "nome": "Visita guidata Su Nuraxi di Barumini",
+      "tipo": "Archeologia",
+      "zona": "Marmilla / Barumini",
+      "durata": "2-3 ore",
+      "costo": "10-15 EUR a persona",
+      "operatore": "Fondazione Barumini Sistema Cultura",
+      "link": "https://sardegnaturismo.ai/",
+      "descrizione": "Visita guidata al piu' importante complesso nuragico della Sardegna, Patrimonio UNESCO. Torri nuragiche del 1600 a.C., villaggio di capanne, museo annesso.",
+      "rating": "N/D",
+      "stagione": "Tutto l'anno"
+    },
+    {
+      "id": "exp024",
+      "nome": "Porto Flavia - Miniera di Masua",
+      "tipo": "Archeologia industriale",
+      "zona": "Masua / Sulcis-Iglesiente",
+      "durata": "2 ore",
+      "costo": "10-15 EUR a persona",
+      "operatore": "IGEA / Parco Geominerario",
+      "link": "https://sardegnaturismo.ai/",
+      "descrizione": "Visita guidata a Porto Flavia, porto minerario sotterraneo scavato nella roccia negli anni '20. Vista spettacolare sul Mediterraneo. Vicino a Pan di Zucchero.",
+      "rating": "N/D",
+      "stagione": "Marzo-Ottobre"
+    },
+    {
+      "id": "exp025",
+      "nome": "Visita a Tharros",
+      "tipo": "Archeologia",
+      "zona": "Penisola del Sinis / Oristano",
+      "durata": "2-3 ore",
+      "costo": "8-12 EUR a persona",
+      "operatore": "Parco Archeologico di Tharros",
+      "link": "https://www.sardegna.info/centro/tharros/",
+      "descrizione": "Sito fenicio-punico-romano sulla punta della Penisola del Sinis. Colonne romane, terme, mosaici. Vista diretta sul mare. Combinabile con spiagge del Sinis (Is Arutas, Mari Ermi).",
+      "rating": "N/D",
+      "stagione": "Tutto l'anno"
+    },
+    {
+      "id": "exp026",
+      "nome": "Grotta di Nettuno",
+      "tipo": "Natura / Speleologia",
+      "zona": "Capo Caccia / Alghero",
+      "durata": "1-2 ore",
+      "costo": "13 EUR + traghetto o Escala del Cabirol",
+      "operatore": "Regione Sardegna / Cooperativa",
+      "link": "https://www.paradisola.it/",
+      "descrizione": "Grotta marina tra le piu' belle del Mediterraneo, accessibile via traghetto da Alghero o scendendo i 654 gradini dell'Escala del Cabirol. Laghi interni, stalattiti e stalagmiti.",
+      "rating": "N/D",
+      "stagione": "Tutto l'anno (meteo permettendo)"
+    },
+    {
+      "id": "exp027",
+      "nome": "Tour privato in barca al tramonto - Villasimius",
+      "tipo": "Gite in barca",
+      "zona": "Villasimius",
+      "durata": "3 ore",
+      "costo": "450 EUR a gruppo",
+      "operatore": "Escursi.com",
+      "link": "https://www.escursi.com/esperienze/gite-in-barca/villasimius-tour-privato-barca-tramonto",
+      "descrizione": "Tour privato in barca al tramonto nell'AMP di Capo Carbonara. Aperitivo a bordo.",
+      "rating": "N/D",
+      "stagione": "Maggio-Ottobre"
+    },
+    {
+      "id": "exp028",
+      "nome": "Trekking Via dei Santuari",
+      "tipo": "Cammino / Trekking multi-giorno",
+      "zona": "Sardegna intera (400 km totali)",
+      "durata": "14-21 giorni (intero) / tappe singole da 1 giorno",
+      "costo": "Solo alloggi e cibo (autonomo)",
+      "operatore": "Autonomo / guide locali",
+      "link": "https://sardegnaturismo.ai/",
+      "descrizione": "Cammino tematico tra santuari e chiese campestri. 4 sezioni: Via delle Acque (80km, San Salvatore-Santa Cristina), Via delle Pietre Fitte (120km, Santa Cristina-Fonni), Via di San Paolo (170km, Fonni-San Paolo di Monti), Via delle Gallure (60km, Monti-Bonifacio).",
+      "rating": "N/D",
+      "stagione": "Aprile-Giugno / Settembre-Ottobre"
+    }
+  ],
+
+  "luoghi_interesse": [
+    {
+      "id": "luo001",
+      "nome": "Su Nuraxi di Barumini",
+      "tipo": "Sito Archeologico UNESCO",
+      "zona": "Marmilla",
+      "provincia": "Sud Sardegna",
+      "orari": "09:00-20:00 (estate), 09:00-17:00 (inverno)",
+      "costo": "10-15 EUR",
+      "note": "Prenotazione consigliata in estate"
+    },
+    {
+      "id": "luo002",
+      "nome": "Golfo di Orosei e calette",
+      "tipo": "Area Naturale / Spiagge",
+      "zona": "Costa Orientale / Barbagia di Seulo",
+      "provincia": "Nuoro",
+      "orari": "Libero accesso (solo via mare o a piedi)",
+      "costo": "Gratuito (barca 75-130 EUR)",
+      "note": "Cala Luna, Cala Mariolu, Cala Biriola, Cala Goloritzé (UNESCO). Solo mare o trekking difficile"
+    },
+    {
+      "id": "luo003",
+      "nome": "Spiaggia La Pelosa",
+      "tipo": "Spiaggia",
+      "zona": "Stintino / Nord-Ovest",
+      "provincia": "Sassari",
+      "orari": "Accesso contingentato in estate (prenotazione obbligatoria)",
+      "costo": "3-5 EUR accesso in estate",
+      "note": "Prenotare accesso obbligatoriamente in luglio-agosto. Una delle spiagge piu' belle d'Europa"
+    },
+    {
+      "id": "luo004",
+      "nome": "Tharros",
+      "tipo": "Sito Archeologico",
+      "zona": "Penisola del Sinis",
+      "provincia": "Oristano",
+      "orari": "09:00-20:00 (estate)",
+      "costo": "8-12 EUR",
+      "note": "Combinare con spiagge del Sinis: Is Arutas (quarzo bianco) e Mari Ermi"
+    },
+    {
+      "id": "luo005",
+      "nome": "Arcipelago della Maddalena",
+      "tipo": "Parco Nazionale / Isole",
+      "zona": "Gallura / Nord-Est",
+      "provincia": "Sassari",
+      "orari": "Traghetto da Palau ogni 20 min circa",
+      "costo": "Traghetto circa 5-10 EUR",
+      "note": "Spargi, Budelli (Spiaggia Rosa), Santo Stefano. Tour in barca da 89 EUR"
+    },
+    {
+      "id": "luo006",
+      "nome": "Canyon di Gorropu",
+      "tipo": "Area Naturale",
+      "zona": "Supramonte / Dorgali",
+      "provincia": "Nuoro",
+      "orari": "Accesso tutto il giorno",
+      "costo": "Gratuito (guida 50-80 EUR)",
+      "note": "Canyon piu' profondo d'Europa. Guida consigliata. Escursione 6 ore"
+    },
+    {
+      "id": "luo007",
+      "nome": "Porto Flavia",
+      "tipo": "Patrimonio Industriale",
+      "zona": "Sulcis-Iglesiente / Masua",
+      "provincia": "Sud Sardegna",
+      "orari": "10:00-17:00 (verificare stagionale)",
+      "costo": "10-15 EUR",
+      "note": "Vicino a Pan di Zucchero. Area marina ricca per immersioni"
+    },
+    {
+      "id": "luo008",
+      "nome": "Grotta di Nettuno",
+      "tipo": "Grotta marina",
+      "zona": "Capo Caccia / Alghero",
+      "provincia": "Sassari",
+      "orari": "Visite guidate orarie (verificare stagionale)",
+      "costo": "13 EUR + traghetto/Escala",
+      "note": "Accessibile via mare o scendendo 654 gradini (Escala del Cabirol)"
+    },
+    {
+      "id": "luo009",
+      "nome": "Villasimius e AMP Capo Carbonara",
+      "tipo": "Area Marina Protetta / Spiagge",
+      "zona": "Sarrabus / Sud-Est",
+      "provincia": "Cagliari",
+      "orari": "Libero accesso",
+      "costo": "Gratuito",
+      "note": "Fenicotteri rosa nella laguna di Notteri. Fondali eccellenti per snorkeling"
+    },
+    {
+      "id": "luo010",
+      "nome": "Nuraghe Santu Antine",
+      "tipo": "Sito Archeologico",
+      "zona": "Meilogu / Torralba",
+      "provincia": "Sassari",
+      "orari": "09:00-18:00",
+      "costo": "5-8 EUR",
+      "note": "Torre centrale alta 17m ancora integra. Da combinare con Necropoli Sant'Andrea Priu (Bonorva)"
+    },
+    {
+      "id": "luo011",
+      "nome": "Bosa",
+      "tipo": "Borgo storico",
+      "zona": "Planargia / Nord-Ovest",
+      "provincia": "Oristano",
+      "orari": "Libero accesso",
+      "costo": "Gratuito (Castello Malaspina 3-5 EUR)",
+      "note": "Case colorate sul fiume Temo. Malvasia DOCG. Strada costiera SP49 da Alghero spettacolare"
+    },
+    {
+      "id": "luo012",
+      "nome": "Alghero centro storico",
+      "tipo": "Centro Storico / Citta' Catalana",
+      "zona": "Riviera del Corallo / Nord-Ovest",
+      "provincia": "Sassari",
+      "orari": "Libero accesso",
+      "costo": "Gratuito",
+      "note": "Unica citta' in Italia con tradizione linguistica catalana viva. Bastioni al tramonto imperdibili"
+    },
+    {
+      "id": "luo013",
+      "nome": "Cagliari - Castello e Poetto",
+      "tipo": "Citta' / Spiaggia urbana",
+      "zona": "Sud Sardegna",
+      "provincia": "Cagliari",
+      "orari": "Libero accesso",
+      "costo": "Gratuito",
+      "note": "Quartiere Castello medievale, Bastione San Remy, spiaggia del Poetto (8km). Mercato San Benedetto (piu' grande mercato coperto d'Italia)"
+    },
+    {
+      "id": "luo014",
+      "nome": "Costa Smeralda e Porto Cervo",
+      "tipo": "Area Turistica Premium",
+      "zona": "Gallura / Nord-Est",
+      "provincia": "Sassari",
+      "orari": "Libero accesso",
+      "costo": "Gratuito (servizi a pagamento)",
+      "note": "Spiagge: Capriccioli, Romazzino, Spiaggia del Principe. Marina di Porto Cervo tra le piu' esclusive d'Europa"
+    },
+    {
+      "id": "luo015",
+      "nome": "Tiscali - Villaggio Nuragico",
+      "tipo": "Sito Archeologico",
+      "zona": "Supramonte / Valle di Lanaitto",
+      "provincia": "Nuoro",
+      "orari": "Accesso con guida",
+      "costo": "Variabile (incluso in escursioni guidate)",
+      "note": "Villaggio nuragico nascosto all'interno di una dolina. Uno dei siti piu' suggestivi della Sardegna"
+    },
+    {
+      "id": "luo016",
+      "nome": "Oasi di Biderosa",
+      "tipo": "Area Naturale Protetta",
+      "zona": "Costa Orientale",
+      "provincia": "Nuoro",
+      "orari": "Accesso contingentato con prenotazione",
+      "costo": "Variabile",
+      "note": "860 ettari con 5 calette protette tra Orosei e Siniscola. Una delle aree costiere meglio conservate"
+    },
+    {
+      "id": "luo017",
+      "nome": "Giara di Gesturi",
+      "tipo": "Parco Naturale",
+      "zona": "Marmilla",
+      "provincia": "Sud Sardegna",
+      "orari": "Libero accesso (bici a noleggio all'ingresso)",
+      "costo": "Gratuito (bici a noleggio)",
+      "note": "Altopiano basaltico con cavalli selvatici (I pronzos). Bici consigliata. Prenotare noleggio"
+    },
+    {
+      "id": "luo018",
+      "nome": "Orgosolo",
+      "tipo": "Borgo / Arte urbana",
+      "zona": "Barbagia",
+      "provincia": "Nuoro",
+      "orari": "Libero accesso",
+      "costo": "Gratuito",
+      "note": "400+ murales politici e sociali sulle facciate. Canto a tenore UNESCO. Borghi pastorali autentici"
+    },
+    {
+      "id": "luo019",
+      "nome": "Is Arutas e Mari Ermi",
+      "tipo": "Spiagge di quarzo",
+      "zona": "Penisola del Sinis / Ovest",
+      "provincia": "Oristano",
+      "orari": "Accesso contingentato in estate",
+      "costo": "Gratuito (parcheggio a pagamento)",
+      "note": "Sabbia di quarzo bianco e rosa. Vietato portar via sabbia (multa). Spettacolari al tramonto"
+    },
+    {
+      "id": "luo020",
+      "nome": "Rocce Rosse di Arbatax",
+      "tipo": "Formazione Geologica",
+      "zona": "Costa Orientale / Ogliastra",
+      "provincia": "Nuoro",
+      "orari": "Libero accesso",
+      "costo": "Gratuito",
+      "note": "Porfido rosso-porpora che emerge dal mare. Spettacolari al tramonto. Porto di Arbatax vicino"
+    }
+  ],
+
+  "itinerari_suggeriti": [
+    {
+      "id": "itin001",
+      "nome": "Nord Sardegna in 7 giorni",
+      "tema": "Mare + Cultura + Natura",
+      "durata_giorni": 7,
+      "zona": "Nord Sardegna",
+      "stagione_consigliata": "Maggio-Ottobre",
+      "difficolta": "Facile",
+      "tappe": [
+        { "giorno": 1, "localita": "Olbia", "attivita": "Arrivo, citta' vecchia, Museo Archeologico, Piazza Margherita", "pernottamento": "Olbia" },
+        { "giorno": 2, "localita": "Costa Smeralda", "attivita": "Porto Cervo, Spiaggia del Principe, Capriccioli, Romazzino. Aperitivo al porto", "pernottamento": "Arzachena / Porto Cervo" },
+        { "giorno": 3, "localita": "Arcipelago della Maddalena", "attivita": "Traghetto da Palau, tour in barca (Spargi, Budelli, Santo Stefano), rientro in serata", "pernottamento": "Palau / Cannigione" },
+        { "giorno": 4, "localita": "San Teodoro", "attivita": "La Cinta (spiaggia), laguna con fenicotteri, riserva naturale. Aperitivo al tramonto", "pernottamento": "San Teodoro" },
+        { "giorno": 5, "localita": "Alghero", "attivita": "Sella & Mosca cantina, centro storico catalano, bastioni al tramonto", "pernottamento": "Alghero" },
+        { "giorno": 6, "localita": "Alghero", "attivita": "Grotta di Nettuno (traghetto), Porto Conte, snorkeling, aperitivo sui bastioni", "pernottamento": "Alghero" },
+        { "giorno": 7, "localita": "Stintino", "attivita": "La Pelosa (prenotare accesso!), Stagno di Pilo, rientro a Olbia o partenza", "pernottamento": "Stintino / Partenza" }
+      ]
+    },
+    {
+      "id": "itin002",
+      "nome": "Sud Sardegna in 5 giorni",
+      "tema": "Mare cristallino + Archeologia + Gastronomia",
+      "durata_giorni": 5,
+      "zona": "Sud Sardegna",
+      "stagione_consigliata": "Aprile-Ottobre",
+      "difficolta": "Facile",
+      "tappe": [
+        { "giorno": 1, "localita": "Cagliari", "attivita": "Quartiere Castello, Bastione San Remy, Mercato San Benedetto, Poetto al tramonto", "pernottamento": "Cagliari" },
+        { "giorno": 2, "localita": "Villasimius", "attivita": "AMP Capo Carbonara, Spiaggia di Campus, Spiaggia del Riso, Stagno di Notteri (fenicotteri)", "pernottamento": "Villasimius" },
+        { "giorno": 3, "localita": "Barumini", "attivita": "Su Nuraxi UNESCO, Casa Zapata, Giara di Gesturi (cavalli selvatici in bici)", "pernottamento": "Cagliari / Pula" },
+        { "giorno": 4, "localita": "Pula / Chia", "attivita": "Spiagge di Chia (Su Giudeu, Campana, Marea), dune di Chia, Torre di Chia al tramonto", "pernottamento": "Pula / Chia" },
+        { "giorno": 5, "localita": "Sulcis-Iglesiente", "attivita": "Porto Flavia a Masua, Pan di Zucchero, Porto Pino, rientro a Cagliari", "pernottamento": "Partenza" }
+      ]
+    },
+    {
+      "id": "itin003",
+      "nome": "Gran Tour Sardegna in 10 giorni",
+      "tema": "Tour completo: mare, natura, cultura, borghi",
+      "durata_giorni": 10,
+      "zona": "Tutta la Sardegna",
+      "stagione_consigliata": "Maggio-Giugno / Settembre-Ottobre",
+      "difficolta": "Facile-Medio",
+      "tappe": [
+        { "giorno": 1, "localita": "Cagliari", "attivita": "Arrivo, Castello, Bastione San Remy, Poetto", "pernottamento": "Cagliari" },
+        { "giorno": 2, "localita": "Villasimius + Pula", "attivita": "AMP Capo Carbonara mattina, spiagge Chia pomeriggio", "pernottamento": "Pula / Chia" },
+        { "giorno": 3, "localita": "Oristano + Tharros", "attivita": "Tharros, spiagge Sinis (Is Arutas, Mari Ermi), Sa Sartiglia Museum", "pernottamento": "Oristano" },
+        { "giorno": 4, "localita": "Bosa + Alghero", "attivita": "Castello Malaspina a Bosa, strada costiera SP49 panoramica, arrivo Alghero", "pernottamento": "Alghero" },
+        { "giorno": 5, "localita": "Alghero + Stintino", "attivita": "Grotta di Nettuno mattina, La Pelosa a Stintino pomeriggio", "pernottamento": "Alghero / Sassari" },
+        { "giorno": 6, "localita": "Sassari + Palau + Maddalena", "attivita": "Sassari centro, viaggio verso Palau, traghetto Maddalena", "pernottamento": "Palau / Cannigione" },
+        { "giorno": 7, "localita": "Costa Smeralda", "attivita": "Porto Cervo, spiagge, San Teodoro serata", "pernottamento": "San Teodoro / Olbia" },
+        { "giorno": 8, "localita": "Nuoro + Cala Gonone", "attivita": "MAN museo arte, Orgosolo murales, Cala Gonone", "pernottamento": "Cala Gonone / Dorgali" },
+        { "giorno": 9, "localita": "Golfo di Orosei", "attivita": "Tour in barca Cala Luna/Cala Mariolu, Canyon Gorropu trekking", "pernottamento": "Cala Gonone" },
+        { "giorno": 10, "localita": "Barumini + Cagliari", "attivita": "Su Nuraxi mattina, rientro a Cagliari, partenza", "pernottamento": "Partenza" }
+      ]
+    },
+    {
+      "id": "itin004",
+      "nome": "Ogliastra Est in 4 giorni",
+      "tema": "Natura selvaggia + Trekking + Golfo di Orosei",
+      "durata_giorni": 4,
+      "zona": "Ogliastra / Est Sardegna",
+      "stagione_consigliata": "Aprile-Giugno / Settembre-Ottobre",
+      "difficolta": "Medio",
+      "tappe": [
+        { "giorno": 1, "localita": "Arbatax / Tortoli", "attivita": "Arrivo, Rocce Rosse, Spiaggia di Cea, Laguna di Tortoli", "pernottamento": "Tortoli / Arbatax" },
+        { "giorno": 2, "localita": "Cala Gonone", "attivita": "Tour in gommone Golfo di Orosei (Cala Luna, Cala Mariolu, Cala Biriola)", "pernottamento": "Cala Gonone" },
+        { "giorno": 3, "localita": "Dorgali / Supramonte", "attivita": "Canyon di Gorropu (trekking guidato 6h), Grotta di Ispinigoli, cantine Dorgali", "pernottamento": "Dorgali" },
+        { "giorno": 4, "localita": "Trenino Verde (stagionale)", "attivita": "Trenino Verde Mandas-Arbatax se in stagione. Alternativa: Tiscali trekking", "pernottamento": "Partenza" }
+      ]
+    },
+    {
+      "id": "itin005",
+      "nome": "Percorso Enogastronomico Sardo in 5 giorni",
+      "tema": "Vini, formaggi, pasta e tradizioni culinarie",
+      "durata_giorni": 5,
+      "zona": "Barbagia + Marmilla + Campidano",
+      "stagione_consigliata": "Tutto l'anno (ottobre per vendemmia)",
+      "difficolta": "Facile",
+      "tappe": [
+        { "giorno": 1, "localita": "Cagliari", "attivita": "Mercato San Benedetto, culurgiones e bottarga, ristoranti del Castello, Cannonau in enoteca", "pernottamento": "Cagliari" },
+        { "giorno": 2, "localita": "Barumini + Marmilla", "attivita": "Su Nuraxi, caseifici locali (pecorino sardo DOP), cantina della Marmilla", "pernottamento": "Nuoro" },
+        { "giorno": 3, "localita": "Nuoro + Oliena", "attivita": "Cantina di Oliena (Cannonau), museo del costume, Orgosolo murales", "pernottamento": "Nuoro / Dorgali" },
+        { "giorno": 4, "localita": "Dorgali", "attivita": "Cantine Dorgali (Cannonau DOC), laboratorio malloreddus, cantina Gostolai", "pernottamento": "Dorgali" },
+        { "giorno": 5, "localita": "Bosa", "attivita": "Malvasia di Bosa DOCG, cantine storiche, Castello Malaspina, aperitivo in piazza", "pernottamento": "Partenza" }
+      ]
+    },
+    {
+      "id": "itin006",
+      "nome": "On the Road Nord-Sud in 8 giorni (Olbia-Cagliari)",
+      "tema": "Borghi, entroterra, cultura e paesaggi interni",
+      "durata_giorni": 8,
+      "zona": "Asse centrale Sardegna",
+      "stagione_consigliata": "Primavera e Autunno",
+      "difficolta": "Facile",
+      "fonte": "sardegnatuttolanno.net",
+      "app_consigliata": "TELLINGSTONES",
+      "tappe": [
+        { "giorno": 1, "localita": "Olbia / Golfo Aranci", "attivita": "Arrivo traghetto, scoperta del porto e lungomare", "pernottamento": "Olbia" },
+        { "giorno": 2, "localita": "Monti + Pattada", "attivita": "Architettura in granito del '600, foresta Monte Olia, Vermentino DOCG, coltelli tradizionali resolzas di Pattada", "pernottamento": "Ozieri / Pattada" },
+        { "giorno": 3, "localita": "Ozieri + Rebeccu", "attivita": "Museo archeologico, copulette alle mandorle, villaggio abbandonato di Rebeccu", "pernottamento": "Nuoro" },
+        { "giorno": 4, "localita": "Nuoro + Mamoiada", "attivita": "Casa Museo Deledda, MAN arte contemporanea, Museo Maschere Mediterranee a Mamoiada", "pernottamento": "Nuoro" },
+        { "giorno": 5, "localita": "Orgosolo + Atzara", "attivita": "Murales, canto a tenore, Mandrolisai DOC ad Atzara, tessitura locale", "pernottamento": "Sorgono / Laconi" },
+        { "giorno": 6, "localita": "Laconi + Giara di Gesturi", "attivita": "Museo menhir, Parco Aymerich con cascate, cavalli selvatici della Giara in bici", "pernottamento": "Barumini / Cagliari" },
+        { "giorno": 7, "localita": "Barumini + San Sperate", "attivita": "Su Nuraxi UNESCO, murales di San Sperate, giardino megalitico di Pinuccio Sciola", "pernottamento": "Cagliari" },
+        { "giorno": 8, "localita": "Cagliari", "attivita": "Castello, Poetto, Mercato San Benedetto, burrida, partenza", "pernottamento": "Partenza" }
+      ]
+    },
+    {
+      "id": "itin007",
+      "nome": "Route 66 della Sardegna - Costa Orientale SS125 (5 giorni)",
+      "tema": "Costa orientale: spiagge, borghi marinari, natura",
+      "durata_giorni": 5,
+      "zona": "Costa Est Sardegna (Olbia-Arbatax)",
+      "stagione_consigliata": "Giugno / Settembre (evitare luglio-agosto per caldo e folla)",
+      "difficolta": "Facile",
+      "fonte": "sardegnatuttolanno.net",
+      "tappe": [
+        { "giorno": 1, "localita": "Olbia / Loiri Porto San Paolo", "attivita": "Arrivo, AMP Tavolara, spiagge Porto Taverna, Lu Impostu, Cala Brandinchi", "pernottamento": "Loiri Porto San Paolo" },
+        { "giorno": 2, "localita": "San Teodoro + Posada", "attivita": "Laguna La Cinta con fenicotteri, Cala Ginepro, Castello della Fava a Posada, s'aranzada dolce locale", "pernottamento": "San Teodoro / Posada" },
+        { "giorno": 3, "localita": "Capo Comino + Orosei", "attivita": "Dune sabbia bianca, faro panoramico, Isola Ruja, Oasi di Biderosa (5 calette protette), casadinas di Orosei", "pernottamento": "Orosei / Dorgali" },
+        { "giorno": 4, "localita": "Dorgali + Cala Gonone", "attivita": "Nuraghe Serra Orrios, formaggi locali, tour in barca Golfo di Orosei", "pernottamento": "Cala Gonone" },
+        { "giorno": 5, "localita": "Arbatax", "attivita": "Rocce Rosse al tramonto, Porto Frailis, Cala Moresca, partenza", "pernottamento": "Partenza" }
+      ]
+    },
+    {
+      "id": "itin008",
+      "nome": "Percorso Romanico Oristanese in 2 giorni",
+      "tema": "Architetture romaniche medievali + archeologia",
+      "durata_giorni": 2,
+      "zona": "Oristano / Meilogu",
+      "stagione_consigliata": "Tutto l'anno (evitare agosto)",
+      "difficolta": "Facile",
+      "fonte": "sardegnaturismo.it/itinerari",
+      "tappe": [
+        { "giorno": 1, "localita": "Oristano", "attivita": "Cattedrale Santa Maria Assunta, Museo Antiquarium Arborense, San Francesco, Tharros + spiagge Sinis", "pernottamento": "Oristano" },
+        { "giorno": 2, "localita": "Meilogu", "attivita": "Santa Trinita di Saccargia, Nostra Signora di Tergu, Nuraghe Santu Antine a Torralba, Necropoli Sant'Andrea Priu (Bonorva)", "pernottamento": "Partenza" }
+      ]
+    },
+    {
+      "id": "itin009",
+      "nome": "Nuoro e Barbagia Letteraria in 2 giorni",
+      "tema": "Letteratura, arte e cultura barbaricina",
+      "durata_giorni": 2,
+      "zona": "Nuoro / Barbagia",
+      "stagione_consigliata": "Tutto l'anno",
+      "difficolta": "Facile",
+      "fonte": "sardegnaturismo.it/itinerari",
+      "tappe": [
+        { "giorno": 1, "localita": "Nuoro", "attivita": "Casa Museo Grazia Deledda (Nobel 1926), MAN Museo Arte di Nuoro, Museo del Costume sardo, cena tipica", "pernottamento": "Nuoro" },
+        { "giorno": 2, "localita": "Orgosolo + Oliena", "attivita": "Murales politici anni '70, sorgenti di Su Gologone, pranzo tipico, cantine Oliena (Cannonau)", "pernottamento": "Partenza" }
+      ]
+    },
+    {
+      "id": "itin010",
+      "nome": "Borghi Interni - Torrone e Gennargentu in 3 giorni",
+      "tema": "Dolci tradizionali, montagna, autenticita'",
+      "durata_giorni": 3,
+      "zona": "Barbagia / Gennargentu",
+      "stagione_consigliata": "Settembre-Novembre / Marzo-Maggio",
+      "difficolta": "Facile",
+      "tappe": [
+        { "giorno": 1, "localita": "Tonara", "attivita": "Laboratori di torrone artigianale, museo del torrone, acquisto prodotti tipici", "pernottamento": "Tonara / Sorgono" },
+        { "giorno": 2, "localita": "Aritzo + Desulo", "attivita": "Paese delle castagne, escursione Gennargentu, Desulo e costumi tradizionali", "pernottamento": "Fonni" },
+        { "giorno": 3, "localita": "Mamoiada", "attivita": "Museo Maschere Mediterranee, Mamuthones e Issohadores, cantine locali", "pernottamento": "Partenza" }
+      ]
+    }
+  ],
+
+  "distanze_km_minuti": {
+    "note": "Distanze stradali in auto — tempi indicativi senza traffico. La Sardegna non ha autostrade vere, solo superstrade (SS131 e derivate). In estate i tempi sulle strade costiere possono aumentare del 20-30%. Le strade interne e montane (Barbagia, Ogliastra, Supramonte) sono tortuose: aggiungere 20-30% rispetto ai calcoli lineari.",
+    "strade_principali": {
+      "SS131_Carlo_Felice": "Superstrada principale N-S, Porto Torres - Cagliari via Sassari, Oristano. 4 corsie, nessun pedaggio.",
+      "SS131_DCN": "Diramazione Centrale Nuorese da Abbasanta verso Nuoro.",
+      "SS125_Orientale_Sarda": "Strada costiera E-O, Olbia-Cagliari via Arbatax. Panoramica ma tortuosa.",
+      "SP49_Costiera_Bosa_Alghero": "Strada panoramica costiera, tra le piu' belle della Sardegna. Tortuosa.",
+      "SS291": "Sassari-Alghero, rapida.",
+      "SS597": "Sassari-Olbia."
+    },
+    "matrice_principali_km": {
+      "intestazione": ["", "Alghero", "Cagliari", "Nuoro", "Olbia", "Oristano", "Sassari", "Arbatax"],
+      "dati": [
+        ["Alghero", 0, 257, 159, 137, 190, 37, 269],
+        ["Cagliari", 257, 0, 170, 283, 94, 220, 140],
+        ["Nuoro", 159, 170, 0, 104, 120, 122, 110],
+        ["Olbia", 137, 283, 104, 0, 230, 100, 223],
+        ["Oristano", 190, 94, 120, 230, 0, 130, 220],
+        ["Sassari", 37, 220, 122, 100, 130, 0, 232],
+        ["Arbatax", 269, 140, 110, 223, 220, 251, 0]
+      ]
+    },
+    "percorsi_dettagliati": [
+      {
+        "da": "Cagliari",
+        "a": "Sassari",
+        "km": 215,
+        "minuti": 170,
+        "ore_minuti": "2h 50min",
+        "strada_principale": "SS131 Carlo Felice",
+        "note": "Superstrada a 4 corsie, percorso rapido e diretto"
+      },
+      {
+        "da": "Cagliari",
+        "a": "Nuoro",
+        "km": 170,
+        "minuti": 130,
+        "ore_minuti": "2h 10min",
+        "strada_principale": "SS131 + SS131 DCN (Abbasanta-Nuoro)",
+        "note": "Superstrada fino ad Abbasanta poi DCN verso Nuoro. Paesaggio interno"
+      },
+      {
+        "da": "Cagliari",
+        "a": "Oristano",
+        "km": 95,
+        "minuti": 75,
+        "ore_minuti": "1h 15min",
+        "strada_principale": "SS131 Carlo Felice",
+        "note": "Percorso veloce e pianeggiante, nessun pedaggio"
+      },
+      {
+        "da": "Cagliari",
+        "a": "Olbia",
+        "km": 263,
+        "minuti": 198,
+        "ore_minuti": "3h 18min",
+        "strada_principale": "SS131 + SS131 DCN + SS597 oppure SS125 via Arbatax (piu' panoramica, +45 min)",
+        "note": "Percorso piu' lungo dell'isola. Via est (SS125) aggiunge 45 min ma e' spettacolare"
+      },
+      {
+        "da": "Cagliari",
+        "a": "Alghero",
+        "km": 257,
+        "minuti": 194,
+        "ore_minuti": "3h 14min",
+        "strada_principale": "SS131 + SS291 via Sassari",
+        "note": "Via Sassari poi deviazione per Alghero sulla SS291"
+      },
+      {
+        "da": "Cagliari",
+        "a": "Villasimius",
+        "km": 64,
+        "minuti": 70,
+        "ore_minuti": "1h 10min",
+        "strada_principale": "SS554 poi SP17 / SS125",
+        "note": "Strada costiera panoramica curvilinea. Attenzione: non superare 90 km/h"
+      },
+      {
+        "da": "Cagliari",
+        "a": "Pula",
+        "km": 38,
+        "minuti": 45,
+        "ore_minuti": "0h 45min",
+        "strada_principale": "SS195",
+        "note": "Strada veloce direzione Sud-Ovest"
+      },
+      {
+        "da": "Cagliari",
+        "a": "Chia",
+        "km": 50,
+        "minuti": 54,
+        "ore_minuti": "0h 54min",
+        "strada_principale": "SS195 oltre Pula",
+        "note": "Proseguire oltre Pula verso il capo di Teulada"
+      },
+      {
+        "da": "Olbia",
+        "a": "Alghero",
+        "km": 137,
+        "minuti": 115,
+        "ore_minuti": "1h 55min",
+        "strada_principale": "SS597 + SS291 via Sassari",
+        "note": "Via Sassari. Strada scorrevole"
+      },
+      {
+        "da": "Olbia",
+        "a": "Palau",
+        "km": 40,
+        "minuti": 43,
+        "ore_minuti": "0h 43min",
+        "strada_principale": "SS125 / SS133 direzione Nord",
+        "note": "Da Palau: traghetto per La Maddalena ogni 20 min (10 min traversata)"
+      },
+      {
+        "da": "Olbia",
+        "a": "San Teodoro",
+        "km": 31,
+        "minuti": 28,
+        "ore_minuti": "0h 28min",
+        "strada_principale": "SS125 direzione Sud",
+        "note": "Tratto veloce lungo la costa est"
+      },
+      {
+        "da": "Alghero",
+        "a": "Stintino (La Pelosa)",
+        "km": 54,
+        "minuti": 50,
+        "ore_minuti": "0h 50min",
+        "strada_principale": "SS291 + SS131 + SP34",
+        "note": "Via Sassari e Porto Torres poi deviazione per Stintino"
+      },
+      {
+        "da": "Alghero",
+        "a": "Bosa",
+        "km": 45,
+        "minuti": 50,
+        "ore_minuti": "0h 50min",
+        "strada_principale": "SP49 costiera (panoramica) oppure via Sassari-Macomer (piu' lunga ma piu' veloce)",
+        "note": "SP49 e' una delle strade piu' belle della Sardegna: tortuosa, sconsigliata di notte"
+      },
+      {
+        "da": "Nuoro",
+        "a": "Cala Gonone",
+        "km": 41,
+        "minuti": 43,
+        "ore_minuti": "0h 43min",
+        "strada_principale": "SS131 DCN + SP26 verso Dorgali poi discesa",
+        "note": "Ultimi km: discesa ripida verso il mare su strada tortuosa"
+      },
+      {
+        "da": "Oristano",
+        "a": "Tharros",
+        "km": 21,
+        "minuti": 25,
+        "ore_minuti": "0h 25min",
+        "strada_principale": "SP6 Penisola del Sinis",
+        "note": "Strada attraverso la Penisola del Sinis. Combinare con Is Arutas e Mari Ermi"
+      }
+    ]
+  },
+
+  "consigli_stagionali": {
+    "primavera_apr_giu": {
+      "rating": "Ottima",
+      "pro": [
+        "Temperatura ideale 18-25 gradi C",
+        "Fioritura di asfodeli e macchia mediterranea",
+        "Mare tranquillo, ideale per kayak e snorkeling",
+        "Monumenti Aperti e festival culturali",
+        "Nessuna folla, prezzi bassi",
+        "Trekking con temperature perfette (Supramonte, Gennargentu)"
+      ],
+      "contro": [
+        "Acqua del mare ancora fresca (18-20 gradi C fino a meta' maggio)",
+        "Qualche giornata di tramontana"
+      ],
+      "eventi_in_corso": ["Monumenti Aperti (da aprile)", "Primavera nel cuore della Sardegna", "Festival Licanias (giugno)", "Focs de Sant Joan (giugno, Alghero)", "Anteprima Cinema di Tavolara (giugno)"]
+    },
+    "estate_lug_ago": {
+      "rating": "Alta stagione - molta folla",
+      "pro": [
+        "Mare caldo (26-28 gradi C)",
+        "Spiagge nel pieno splendore",
+        "Red Valley Festival, Time in Jazz, Faradda dei Candelieri",
+        "Movida e vita notturna attiva"
+      ],
+      "contro": [
+        "Folla elevata, prezzi alti (anche +100% su primavera)",
+        "Temperature fino a 40 gradi C nell'interno",
+        "La Pelosa: prenotazione accesso obbligatoria",
+        "Strade costiere congestionate",
+        "Is Arutas: accesso contingentato"
+      ],
+      "eventi_in_corso": ["Red Valley Festival (agosto, Olbia)", "Time in Jazz (agosto, Berchidda)", "Faradda dei Candelieri (14 agosto, Sassari)"]
+    },
+    "autunno_set_ott": {
+      "rating": "Ideale",
+      "pro": [
+        "Stagione ideale: mare ancora caldo fino a ottobre, folla azzerata",
+        "Vendemmia: periodo perfetto per enoturismo (Cannonau, Vermentino, Malvasia)",
+        "Trekking con temperature perfette",
+        "Sagre e feste del bestiame",
+        "Prezzi in forte calo dal 15 settembre"
+      ],
+      "contro": [
+        "Alcuni servizi balneari chiudono dopo il 15 settembre",
+        "Qualche pioggia da ottobre"
+      ],
+      "eventi_in_corso": ["Monumenti Aperti (fino a novembre)", "Festival del Turismo Itinerante (ottobre, Tempio Pausania)"]
+    },
+    "inverno_nov_mar": {
+      "rating": "Buona per cultura e borghi",
+      "pro": [
+        "Prezzi minimi",
+        "Nessuna folla assoluta",
+        "Paesaggi verdi e fioriti dopo le piogge (gennaio-marzo)",
+        "Sa Sartiglia (febbraio, Oristano)",
+        "Carnevale di Mamoiada (gennaio-febbraio)",
+        "Ideale per entroterra, borghi e siti archeologici"
+      ],
+      "contro": [
+        "Mare non balneabile",
+        "Alcuni luoghi e traghetti isole riducono i servizi",
+        "Vento e piogge frequenti (novembre-dicembre)"
+      ],
+      "eventi_in_corso": ["Sa Sartiglia (febbraio)", "Carnevale Mamoiada (gennaio-febbraio)", "Tutankhamon mostra (marzo-luglio 2026)"]
+    }
+  },
+
+  "gastronomia_sarda": {
+    "prodotti_tipici": [
+      { "nome": "Pecorino Sardo DOP", "tipo": "Formaggio", "zona": "Tutta la Sardegna" },
+      { "nome": "Cannonau di Sardegna DOC", "tipo": "Vino rosso", "zona": "Barbagia, Nuoro, Dorgali, Jerzu" },
+      { "nome": "Vermentino di Gallura DOCG", "tipo": "Vino bianco", "zona": "Gallura, Olbia, Monti" },
+      { "nome": "Malvasia di Bosa DOCG", "tipo": "Vino bianco passito", "zona": "Bosa e Planargia" },
+      { "nome": "Culurgiones", "tipo": "Pasta ripiena", "zona": "Ogliastra" },
+      { "nome": "Malloreddus (gnocchetti sardi)", "tipo": "Pasta", "zona": "Tutta la Sardegna" },
+      { "nome": "Lorighittas", "tipo": "Pasta intrecciata", "zona": "Morgongiori (Oristano)" },
+      { "nome": "Bottarga di muggine", "tipo": "Prodotto ittico", "zona": "Cabras, Carloforte" },
+      { "nome": "Torrone di Tonara", "tipo": "Dolce", "zona": "Tonara (Barbagia)" },
+      { "nome": "Copulette di Ozieri", "tipo": "Dolce alle mandorle", "zona": "Ozieri" },
+      { "nome": "Sebadas / Seadas", "tipo": "Dolce fritto con miele", "zona": "Tutta la Sardegna" },
+      { "nome": "S'aranzada", "tipo": "Dolce arancia e mandorle", "zona": "Posada" },
+      { "nome": "Casizolu", "tipo": "Formaggio a pasta filata", "zona": "Planargia / Oristano" }
+    ]
+  }
+}

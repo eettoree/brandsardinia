@@ -1,0 +1,1133 @@
+{
+  "meta": {
+    "generato": "2026-06-23",
+    "note": "Dati raccolti via ricerca web. Prezzi e disponibilità soggetti a variazioni stagionali. Verificare sempre direttamente con gli operatori prima della prenotazione."
+  },
+
+  "esperienze_e_guide": {
+
+    "gite_in_barca": [
+
+      {
+        "id": "barca_001",
+        "nome_esperienza": "Escursioni all'Isola dell'Asinara",
+        "operatore": "Blumare Service / Gite Asinara",
+        "sito": "https://www.giteasinara.it",
+        "tel": null,
+        "email": null,
+        "tipo": "Escursione in barca / veliero / motoscafo",
+        "partenza": "Stintino (SS)",
+        "area_geografica": "Parco Nazionale dell'Asinara, Nord Sardegna",
+        "durata": "Giornata intera",
+        "costo": {
+          "adulto": "95-110 EUR (varia per mese: Giu/Set 95, Lug 100, Ago 110)",
+          "bambino_3_12": "65-80 EUR",
+          "note_costo": "NON include biglietto motonave (20 EUR A/R) e tassa di sbarco comunale"
+        },
+        "cosa_include": "Guida del parco, escursione in barca con pranzo a bordo o in fuoristrada",
+        "opzioni": ["Veliero", "Barca a vela", "Motoscafo", "Tour 4x4 interno parco"],
+        "max_partecipanti": null,
+        "livello": "Per tutti",
+        "periodo": "Stagionale (primavera-autunno)",
+        "lingue": ["IT", "EN"],
+        "operatore_alternativo": {
+          "nome": "Asinara Charter",
+          "sito": "https://asinaracharter.com",
+          "tipo": "Catamarano"
+        }
+      },
+
+      {
+        "id": "barca_002",
+        "nome_esperienza": "Tour Grotte di Nettuno via mare da Alghero",
+        "operatore": "Navisarda / Frecce delle Grotte (operatori portuali multipli)",
+        "sito": "https://www.grottedinettuno.it",
+        "tel": null,
+        "email": "grottadinettuno@fondazionealghero.it",
+        "tipo": "Transfer in barca + visita grotta",
+        "partenza": "Porto di Alghero",
+        "area_geografica": "Capo Caccia, Nord-Ovest Sardegna",
+        "durata": "Circa 2-3 ore (40 min traversata A/R + visita)",
+        "costo": {
+          "barca_adulto": "~15 EUR (solo trasferimento)",
+          "barca_bambino": "~7 EUR",
+          "ingresso_grotta_adulto": "~18 EUR",
+          "note_costo": "Biglietti separati: barca + ingresso grotta. Acquistabili al porto di Alghero."
+        },
+        "cosa_include": "Trasferimento in barca A/R (40 min per lato), visita guidata grotta",
+        "max_partecipanti": null,
+        "livello": "Per tutti (nessuna preparazione fisica richiesta)",
+        "periodo": "Aprile - Novembre",
+        "lingue": ["IT", "EN", "ES", "DE"],
+        "note": "L'accesso dipende dalle condizioni meteo-marine. In alternativa: 656 gradini a piedi dalla Escala del Cabriol."
+      },
+
+      {
+        "id": "barca_003",
+        "nome_esperienza": "Escursioni Bocche di Bonifacio e Arcipelago La Maddalena",
+        "operatore": "Consorzio delle Bocche",
+        "sito": "https://www.consorziobocche.com",
+        "tel": null,
+        "email": null,
+        "tipo": "Escursione giornaliera in gommone / barca",
+        "partenza": "Porto di Santa Teresa Gallura",
+        "area_geografica": "Bocche di Bonifacio, Arcipelago La Maddalena, Nord-Est Sardegna",
+        "durata": "Giornata intera (partenza 9:30, rientro ~17:30)",
+        "costo": {
+          "adulto": "60-65 EUR",
+          "bambino": "40-45 EUR"
+        },
+        "cosa_include": "Navigazione verso Corsica, soste a Lavezzi e Isola Piana, pranzo a bordo",
+        "itinerari": [
+          "Escursione Bonifacio + Lavezzi + Isola Piana",
+          "Arcipelago La Maddalena + calette Costa Smeralda"
+        ],
+        "max_partecipanti": null,
+        "livello": "Per tutti",
+        "periodo": "Stagione estiva",
+        "lingue": ["IT", "EN", "FR"]
+      },
+
+      {
+        "id": "barca_004",
+        "nome_esperienza": "Tour Costa Smeralda e Arcipelago La Maddalena",
+        "operatore": "Smeralda Boats",
+        "sito": "https://www.smeraldaboats.com",
+        "tel": null,
+        "email": null,
+        "tipo": "Escursione giornaliera / charter privato",
+        "partenza": "Porto Cervo / Poltu Quatu / Cannigione / Palau",
+        "area_geografica": "Costa Smeralda, Arcipelago La Maddalena, Nord-Est Sardegna",
+        "durata": "Giornata intera o mezza giornata",
+        "costo": {
+          "condivisa_adulto": "45-89 EUR",
+          "privata_barca_intera": "da 460 EUR (pranzo e carburante esclusi)",
+          "note": "Varia per tipo imbarcazione e periodo"
+        },
+        "cosa_include": "Navigazione calette e isolotti, soste bagno, snorkeling",
+        "operatore_alternativo": {
+          "nome": "La Maddalena Exclusive Boats",
+          "sito": "https://www.lamaddalenaexclusiveboats.com",
+          "tipo": "Tour privati personalizzabili"
+        },
+        "max_partecipanti": null,
+        "livello": "Per tutti",
+        "periodo": "Maggio - Ottobre",
+        "lingue": ["IT", "EN"]
+      },
+
+      {
+        "id": "barca_005",
+        "nome_esperienza": "Escursioni Golfo di Orosei (Cala Luna, Cala Goloritzé, Cala Mariolu) da mare",
+        "operatori": [
+          {
+            "nome": "Cala Gonone Crociere",
+            "sito": "https://calagononecrociere.it",
+            "partenza": "Cala Gonone (Dorgali)"
+          },
+          {
+            "nome": "MareOgliastra Lines",
+            "sito": "https://www.mareogliastra.com",
+            "partenza": "Arbatax / Santa Maria Navarrese (Baunei)"
+          },
+          {
+            "nome": "Escursioni Cala Gonone",
+            "sito": "https://www.escursionicalagonone.it",
+            "partenza": "Cala Gonone"
+          },
+          {
+            "nome": "Glentor Minicruises",
+            "sito": "https://glentor.it",
+            "partenza": "Cala Gonone"
+          }
+        ],
+        "tipo": "Escursione giornaliera in motonave / gommone",
+        "area_geografica": "Golfo di Orosei, Costa Centro-Est Sardegna",
+        "durata": "Giornata intera",
+        "costo": {
+          "adulto_bassa_stagione": "65 EUR (10/05 - 09/08 e 24/08 - 31/10)",
+          "adulto_alta_stagione": "70 EUR (10/08 - 23/08)",
+          "bambino_6_14": "35 EUR",
+          "contributo_ambientale": "3 EUR costa-pass (multi-cale) / 2 EUR singola cala",
+          "grotta_del_fico": "12 EUR extra"
+        },
+        "cosa_include": "Navigazione, soste balneari a Cala Luna, Cala Sisine, Cala Mariolu o Cala Goloritzé",
+        "note_accesso": "Dal 2026 obbligatoria prenotazione/contributo ambientale per accesso alle cale",
+        "max_partecipanti": "100-300 pax per motonave di linea",
+        "livello": "Per tutti",
+        "periodo": "Maggio - Fine Settembre",
+        "lingue": ["IT", "EN"]
+      }
+    ],
+
+    "arrampicata": [
+
+      {
+        "id": "climb_001",
+        "nome_esperienza": "Arrampicata sportiva a Ulassai (Jerzu, Osini)",
+        "operatori": [
+          {
+            "nome": "Nannai Climbing Home",
+            "sito": "https://www.climbingulassai.com",
+            "tel": "+39 366 370 7749 (Sofie) / +39 334 770 9038 (Paolo)",
+            "email": "nannaiclimbinghome@gmail.com",
+            "whatsapp": "Preferito per risposta immediata",
+            "indirizzo": "Via Monsignor Depau 4, Ulassai (NU)",
+            "social": "instagram.com/nannai_climbing_home"
+          },
+          {
+            "nome": "Fellas Outdoors",
+            "sito": "https://fellasoutdoors.com",
+            "note": "Mandy, guida alpina certificata, base a Ulassai"
+          },
+          {
+            "nome": "Mountain Evolution",
+            "sito": "https://www.mountainevolution.com",
+            "note": "Climbing camp con guida alpina"
+          }
+        ],
+        "tipo": "Arrampicata sportiva / multi-pitch / trad",
+        "area_geografica": "Ulassai, Jerzu, Osini - Ogliastra, Centro-Est Sardegna",
+        "caratteristiche_area": "Falesia verticale con pochi gradi facili, molte vie oltre 7a. Considerata la mecca dell'arrampicata sarda.",
+        "costo": {
+          "camp_guidato": "da 500 EUR/persona (Mountain Evolution, Aprile-Maggio e Ottobre 2026)",
+          "guida_alpina_giornata": "da verificare con operatori"
+        },
+        "livello": "Intermedio/Avanzato (pochi gradi easy)",
+        "periodo": "Primavera, Autunno (estati calde)",
+        "lingue": ["IT", "EN", "DE"],
+        "guida_cartacea": "Guidebook Jerzu-Osini-Ulassai (200 pag. colore, 18 EUR) disponibile da Nannai o online"
+      },
+
+      {
+        "id": "climb_002",
+        "nome_esperienza": "Arrampicata Domusnovas",
+        "operatori": [
+          {
+            "nome": "Freedome.it",
+            "sito": "https://freedome.it/en/rock-climbing/domusnovas/",
+            "note": "Piattaforma prenotazione guide locali"
+          }
+        ],
+        "tipo": "Arrampicata sportiva / multi-pitch",
+        "area_geografica": "Domusnovas (SU), Sud-Ovest Sardegna",
+        "caratteristiche_area": "750 vie su 37 falesie in 5 km². Sole tutto l'anno, accessibile anche in inverno. Vie sport e multipitch fino a 120m.",
+        "costo": "Da verificare con guide locali",
+        "livello": "Tutti i livelli",
+        "periodo": "Tutto l'anno (ideale in inverno e primavera)",
+        "lingue": ["IT", "EN"],
+        "guida_cartacea": "'Domusnovas Sportclimbing' di Maurizio Oviglia (2022), 750 vie"
+      },
+
+      {
+        "id": "climb_003",
+        "nome_esperienza": "Arrampicata Supramonte (Cala Gonone, Urzulei, Oliena)",
+        "operatori": [
+          {
+            "nome": "Big Alpine Guide",
+            "sito": "https://bigalpineguide.com/en/attivita/climbing-en/",
+            "note": "Guide alpine certificate, Supramonte e Golfo di Orosei"
+          },
+          {
+            "nome": "Level24",
+            "sito": "https://www.level24.it",
+            "note": "Accompagnamento con guida alpina autorizzata"
+          }
+        ],
+        "tipo": "Arrampicata sportiva, big wall, multi-pitch",
+        "area_geografica": "Supramonte: Cala Gonone, Dorgali, Urzulei, Oliena, Lula - Centro-Est Sardegna",
+        "note": "Include vie iconiche come Pedra Longa. Riferimento 'Pietra di Luna' di Maurizio Oviglia come guida definitiva alla Sardegna.",
+        "costo": "Da verificare con guide locali",
+        "livello": "Intermedio/Avanzato",
+        "periodo": "Primavera, Autunno",
+        "lingue": ["IT", "EN"]
+      }
+    ],
+
+    "kayak_canoa": [
+
+      {
+        "id": "kayak_001",
+        "nome_esperienza": "Kayak nel Golfo di Orosei",
+        "operatori": [
+          {
+            "nome": "Blue Dream (Palmasera Beach, Cala Gonone)",
+            "sito": "https://www.spiaggiapalmasera.com/blue-dream",
+            "note": "Noleggio kayak singoli e doppi + escursioni guidate verso le cale"
+          },
+          {
+            "nome": "Agenzia Prima Sardegna - Cala Gonone",
+            "sito": "https://www.primasardegna.com/servizio/kayak/",
+            "partenza": "Cala Gonone"
+          }
+        ],
+        "tipo": "Kayak da mare / sea kayak",
+        "area_geografica": "Golfo di Orosei, Cala Gonone - Centro-Est Sardegna",
+        "durata": "Mezza giornata / giornata intera",
+        "costo": "Da verificare con operatori",
+        "cosa_include": "Kayak, pagaie, giubbotto salvagente, accompagnatore (versioni guidate)",
+        "note": "Metodo più sostenibile e profondo per esplorare le cale. Dal 2026 contributo ambientale 2-3 EUR per accesso cale.",
+        "livello": "Principianti (con guida) / Intermedio (autonomi)",
+        "periodo": "Maggio - Ottobre",
+        "lingue": ["IT", "EN"]
+      },
+
+      {
+        "id": "kayak_002",
+        "nome_esperienza": "Kayak sul Fiume e Lago Coghinas",
+        "operatori": [
+          {
+            "nome": "New Kayak Sardinia",
+            "sito": "https://www.newkayaksardinia.com",
+            "partenza": "Valledoria / Camping La Foce (estate), su prenotazione (fuori stagione)",
+            "note": "Noleggio canoe singole e doppie, discese organizzate"
+          },
+          {
+            "nome": "Sardinia Trekking",
+            "sito": "https://www.sardiniatrekking.it/it/home-it/kayak/coghinas",
+            "note": "Kayak Lago Coghinas (Oschiri)"
+          },
+          {
+            "nome": "Safiorida",
+            "sito": "https://www.safiorida.it/sardegna-canoa-kayak-escursioni-sul-fiume-coghinas.php",
+            "note": "Escursioni canoa fiume Coghinas"
+          }
+        ],
+        "tipo": "Kayak fluviale / lago",
+        "area_geografica": "Valledoria / Lago Coghinas (Oschiri), Nord Sardegna",
+        "itinerari": [
+          "Mattina/pomeriggio: 2-3h, Ponte Baduboi - laguna (adatto a tutti, tutto l'anno)",
+          "Full day: 4-5h, da sorgenti termali alla laguna",
+          "Lago Coghinas (Oschiri): Nov-Mar, Da Ponte Diana verso Pattada"
+        ],
+        "costo": "Da verificare con operatori",
+        "livello": "Principianti / Per tutti",
+        "periodo": "Tutto l'anno (lago: Nov-Mar; fiume: tutto l'anno)",
+        "lingue": ["IT"]
+      },
+
+      {
+        "id": "kayak_003",
+        "nome_esperienza": "Trekking + Kayak combinato Golfo di Orosei",
+        "operatori": [
+          {
+            "nome": "Escursi.com",
+            "sito": "https://www.escursi.com/esperienze/escursioni-adrenaliniche/trekking-kayak-golfo-orosei-gruppi-6-persone",
+            "note": "Per gruppi minimo 6 persone"
+          }
+        ],
+        "tipo": "Combinata trekking + kayak da mare",
+        "area_geografica": "Golfo di Orosei",
+        "durata": "Giornata intera",
+        "min_partecipanti": 6,
+        "livello": "Intermedio",
+        "periodo": "Primavera - Autunno",
+        "lingue": ["IT", "EN"]
+      }
+    ],
+
+    "diving_snorkeling": [
+
+      {
+        "id": "diving_001",
+        "nome_esperienza": "Diving Area Marina Capo Carbonara - Villasimius",
+        "operatori": [
+          {
+            "nome": "SubAquaDive Service",
+            "sito": "https://www.subaquadive.it",
+            "note": "Attivo dal 1974. Uno dei più storici della zona."
+          },
+          {
+            "nome": "Air Sub Diving Center",
+            "sito": "https://www.airsubdiving.com",
+            "note": "Tour snorkeling e immersioni"
+          },
+          {
+            "nome": "ProDive",
+            "sito": "https://www.prodive.it",
+            "note": "Listino prezzi sul sito"
+          },
+          {
+            "nome": "Ocean Blue Diving",
+            "note": "Operatore AMP Capo Carbonara"
+          }
+        ],
+        "tipo": "Immersioni subacquee / snorkeling",
+        "area_geografica": "Area Marina Protetta Capo Carbonara, Villasimius (SU), Sud-Est Sardegna",
+        "costo": {
+          "snorkeling_tour": "40 EUR",
+          "singola_immersione": "60 EUR",
+          "immersione_Serpentara": "70 EUR",
+          "doppia_immersione": "110 EUR",
+          "cosa_include_singola": "Guida, transfer in barca, bombola aria/nitrox, zavorre, spuntino+bevande, servizio risciacquo, tassa AMP"
+        },
+        "livello": "Tutti i livelli (battesimo per principianti, guided dives per brevettati)",
+        "periodo": "Stagionale (primavera - autunno)",
+        "lingue": ["IT", "EN"],
+        "note": "Area ad alta biodiversità marina all'interno della riserva protetta"
+      },
+
+      {
+        "id": "diving_002",
+        "nome_esperienza": "Diving Arcipelago La Maddalena",
+        "operatori": [
+          {
+            "nome": "Argonauta Diving La Maddalena",
+            "sito": "https://www.divinglamaddalena.com",
+            "note": "Oltre 30 anni di attività, PADI certificato. Doppia sede: La Maddalena e Golfo di Orosei."
+          },
+          {
+            "nome": "AREA11 Diving Center",
+            "sito": "https://www.area11diver.com",
+            "note": "Palau e La Maddalena"
+          },
+          {
+            "nome": "Scuba Point",
+            "sito": "https://www.scubapoint.info"
+          }
+        ],
+        "tipo": "Immersioni subacquee",
+        "area_geografica": "Arcipelago La Maddalena, Nord-Est Sardegna",
+        "costo": {
+          "mezza_giornata_senza_attrezzatura": "80 EUR",
+          "giornata_intera_con_attrezzatura": "150 EUR",
+          "singola_da_Palau": "~75 EUR",
+          "doppia_da_Cannigione": "~120 EUR (attrezzatura esclusa)",
+          "battesimo_con_attrezzatura": "~130 EUR"
+        },
+        "livello": "Tutti i livelli",
+        "periodo": "Stagionale",
+        "lingue": ["IT", "EN"]
+      },
+
+      {
+        "id": "diving_003",
+        "nome_esperienza": "Diving Capo Caccia - Alghero",
+        "operatori": [
+          {
+            "nome": "ArchiMete Diving Capo Caccia",
+            "sito": "https://www.padi.com/it/centro-sub/italia/archimete-diving-capo-caccia/",
+            "indirizzo": "Baia di Tramariglio, Alghero",
+            "note": "PADI Dive Resort. Dentro AMP Capo Caccia-Isola Piana e Parco Regionale Porto Conte."
+          },
+          {
+            "nome": "Nautisub Centro Immersioni",
+            "sito": "https://www.nautisub.com",
+            "note": "Immersioni giornaliere AMP Capo Caccia/Isola Piana. Stagione 2026 aperta."
+          },
+          {
+            "nome": "Capo Galera Diving Center",
+            "sito": "https://www.capogalera.com",
+            "note": "Grotte e coralli, tra i più belli del Mediterraneo"
+          },
+          {
+            "nome": "Alghero Divers",
+            "sito": "https://www.algherodivers.com",
+            "note": "Due uscite giornaliere dal porto di Alghero, corsi PADI"
+          }
+        ],
+        "tipo": "Immersioni subacquee in grotte e coralli",
+        "area_geografica": "Capo Caccia, Area Marina Protetta, Nord-Ovest Sardegna",
+        "note_area": "Fenomeno carsico unico, grotte protette UNESCO. Eccezionale biodiversità.",
+        "livello": "Tutti i livelli",
+        "periodo": "Stagionale",
+        "lingue": ["IT", "EN", "ES"]
+      }
+    ],
+
+    "trekking_hiking": [
+
+      {
+        "id": "trek_001",
+        "nome_esperienza": "Trekking Gola di Gorropu",
+        "operatori": [
+          {
+            "nome": "Wild Sardinia Trekking",
+            "sito": "https://www.wildsardiniatrekking.it/tours/gola-di-gorropu/"
+          },
+          {
+            "nome": "Orosei AdvenTours",
+            "sito": "https://www.oroseiadventours.com",
+            "tel": "+39 344 120 2654",
+            "email": "info@oroseiadventours.com",
+            "indirizzo": "Via La Marmora 13, 08028 Orosei (NU)"
+          },
+          {
+            "nome": "Sardinia Exploring",
+            "sito": "https://www.sardiniaexploring.com/en/hiking-sardinia/hiking-supramonte-gole-di-gorropu/"
+          }
+        ],
+        "tipo": "Trekking / escursione canyon",
+        "area_geografica": "Canyon Gorropu, confine Orgosolo-Urzulei, Supramonte, Centro-Est Sardegna",
+        "durata": "~4 ore (andata e ritorno, di cui 1.5 km dentro la gola)",
+        "distanza": "8 km A/R",
+        "dislivello": "700 m",
+        "costo": "~30 EUR/persona (guida + ingresso)",
+        "accesso": "Parcheggio al Ponte Sa Barva (12.7 km da Dorgali) o da Genna Silana (SS125 tra Dorgali e Baunei)",
+        "min_partecipanti": "4-5 persone per tour guidato",
+        "livello": "Medio (dislivello e terreno impegnativo)",
+        "periodo": "Tutto l'anno con bel tempo",
+        "lingue": ["IT", "EN"]
+      },
+
+      {
+        "id": "trek_002",
+        "nome_esperienza": "Trekking Monte Corrasi (Supramonte di Oliena)",
+        "operatori": [
+          {
+            "nome": "Camineras de Orgosolo",
+            "sito": "https://www.camineras.com/it/escursioni/trekking-sul-monte-corrasi-oliena"
+          },
+          {
+            "nome": "Jebel Sardinia",
+            "sito": "https://jebelsardinia.com/en/trekking-tour-to-mount-corrasi-oliena/"
+          },
+          {
+            "nome": "Escursi.com",
+            "sito": "https://www.escursi.com/esperienze/trekking/oliena-trekking-monte-corrasi"
+          }
+        ],
+        "tipo": "Trekking alpino",
+        "area_geografica": "Monte Corrasi (1463 m slm), Oliena (NU), Supramonte, Centro Sardegna",
+        "durata": "Giornata intera",
+        "note_area": "Cima più alta del Supramonte. Vista su Barbagia e Golfo di Orosei. Parte del Sentiero Italia. Orchidee selvatiche, tasso millenari, calcare lunare.",
+        "accesso": "Partenza dalla loc. Tuones (~1050 m)",
+        "livello": "Medio/Impegnativo",
+        "periodo": "Primavera, Estate, Autunno",
+        "lingue": ["IT", "EN"]
+      },
+
+      {
+        "id": "trek_003",
+        "nome_esperienza": "Selvaggio Blu - Trek & Mare",
+        "operatori": [
+          {
+            "nome": "Orosei AdvenTours",
+            "sito": "https://www.oroseiadventours.com/escursioni/trekking-selvaggio-blu/",
+            "tel": "+39 344 120 2654",
+            "email": "info@oroseiadventours.com",
+            "indirizzo": "Via La Marmora 13, 08028 Orosei (NU)"
+          },
+          {
+            "nome": "Dolomiti Beat",
+            "sito": "https://dolomitibeat.it/tour/sardegna-esplora-selvaggio-blu/",
+            "note": "Assaggi Selvaggio Blu multiday"
+          },
+          {
+            "nome": "Trekking360",
+            "sito": "https://trekking360.it/tour/selvaggio-blu-classico-sardegna/"
+          }
+        ],
+        "tipo": "Trekking costiero avanzato multi-giorno",
+        "area_geografica": "Costa di Baunei, Golfo di Orosei, Centro-Est Sardegna",
+        "durata": "5-8 giorni (versione classica) / versioni brevi disponibili",
+        "note_area": "Uno dei trek più famosi del Mediterraneo: scogliere a picco sul mare cristallino, calette (Cala Goloritzé, Sisine, Luna), boschi di lecci e ginepri secolari.",
+        "livello": "Avanzato (versione classica con tecniche alpinistiche) / Medio (versione light senza arrampicata)",
+        "periodo": "Primavera, Autunno",
+        "lingue": ["IT", "EN"]
+      },
+
+      {
+        "id": "trek_004",
+        "nome_esperienza": "Trenino Verde della Sardegna - Escursioni",
+        "operatore": "ARST S.p.A.",
+        "sito": "https://www.treninoverde.com",
+        "sito_alternativo": "https://www.sardegnatreninoverde.com",
+        "tipo": "Escursione ferroviaria turistica su ferrovia a scartamento ridotto",
+        "area_geografica": "Rete 438 km, vari percorsi in tutta la Sardegna",
+        "percorsi_2026": [
+          "Luras - Tempio Pausania (Gallura, Nord) - da Aprile",
+          "Arbatax - Lanusei - Gairo (Tacchi d'Ogliastra, Centro-Est) - da Aprile",
+          "Macomer - Bosa (Marghine - Planargia, Centro-Nord) - da Aprile",
+          "Cagliari - Mandas (Campidano - Trexenta, Sud) - da Agosto"
+        ],
+        "costo": {
+          "adulto_sola_andata_ex_Mandas_Sadali": "15 EUR",
+          "adulto_AR_ex_Mandas_Sadali": "22 EUR",
+          "under_16_sola_andata": "8 EUR",
+          "under_16_AR": "12 EUR",
+          "note": "Prezzi variano per tratta"
+        },
+        "livello": "Per tutti",
+        "periodo": "Aprile - Ottobre (varia per tratta)",
+        "lingue": ["IT"]
+      }
+    ],
+
+    "equitazione": [
+
+      {
+        "id": "equit_001",
+        "nome_esperienza": "Vacanze a cavallo e trekking equestre",
+        "operatori": [
+          {
+            "nome": "Horse Country Resort",
+            "sito": "https://www.horsecountry.it",
+            "indirizzo": "Arborea (OR), Costa Ovest Sardegna",
+            "note": "Uno dei più grandi centri equestri d'Europa. Passeggiate su spiagge e foreste di pini verso il Golfo di Oristano. Pony per bambini, bagni in mare con i cavalli."
+          },
+          {
+            "nome": "Horse Sharing",
+            "sito": "https://www.horsesharing.it",
+            "note": "Esperienze per amanti dei cavalli, vari pacchetti"
+          },
+          {
+            "nome": "Sardinia Horses - Centro Equestre Li Tauli",
+            "sito": "https://www.sardiniahorses.com",
+            "indirizzo": "Olbia (OT)",
+            "note": "Vacanza a cavallo in natura, Nord Sardegna"
+          },
+          {
+            "nome": "Horse Riding Experience Sardinia",
+            "sito": "https://horsesardinia.it"
+          },
+          {
+            "nome": "ProKite Sardegna",
+            "sito": "https://prokitesardegna.com",
+            "note": "Anche equitazione come attività complementare a Punta Trettu"
+          }
+        ],
+        "tipo": "Passeggiate a cavallo / trekking equestre",
+        "area_geografica": "Varia: Arborea/Oristano, Olbia, Cala Gonone, Punta Trettu",
+        "costo": "Da verificare con operatori",
+        "max_partecipanti": "2-9 pax per gruppo",
+        "livello": "Tutti i livelli (principianti e esperti)",
+        "periodo": "Tutto l'anno (stagioni alte consigliate)",
+        "lingue": ["IT", "EN"]
+      }
+    ],
+
+    "mountain_bike": [
+
+      {
+        "id": "mtb_001",
+        "nome_esperienza": "Mountain Bike e Cicloturismo in Sardegna",
+        "operatori": [
+          {
+            "nome": "Sardinia Cycling",
+            "sito": "https://www.sardiniacycling.com",
+            "note": "Fondato 2008. Noleggio MTB, gravel, e-bike, bici da strada. Sedi a Quartu Sant'Elena (Cagliari) e Costa Smeralda.",
+            "indirizzo_cagliari": "Quartu Sant'Elena (CA)"
+          },
+          {
+            "nome": "Bike4More",
+            "sito": "https://www.bike4more.com",
+            "note": "Tour mono e multi-giorno con guida o GPS in autonomia"
+          },
+          {
+            "nome": "Explora Bike Planet",
+            "sito": "https://www.explorabikeplanet.com",
+            "note": "Escursioni guidate zona Siniscola e Baronia (NU)"
+          },
+          {
+            "nome": "Sardinia Biking",
+            "sito": "https://www.sardiniabiking.com",
+            "note": "Tour, tracce GPS, noleggio"
+          }
+        ],
+        "tipo": "Mountain bike / e-bike / cicloturismo",
+        "area_geografica": "Tutta la Sardegna (Baronia, Siniscola, Supramonte, Costa Smeralda, Cagliari)",
+        "costo": "Da verificare con operatori",
+        "livello": "Tutti i livelli",
+        "periodo": "Tutto l'anno (primavera/autunno ideali)",
+        "lingue": ["IT", "EN"]
+      }
+    ],
+
+    "kitesurf_windsurf": [
+
+      {
+        "id": "kite_001",
+        "nome_esperienza": "Kitesurf e Windsurf a Punta Trettu e Nord Sardegna",
+        "operatori": [
+          {
+            "nome": "ProKite Sardegna",
+            "sito": "https://prokitesardegna.com",
+            "indirizzo": "Punta Trettu, San Giovanni Suergiu (SU)",
+            "note": "Centro IKO certificato. Corsi kitesurf, noleggio. Anche quad, equitazione, SUP, immersioni, trekking, MTB."
+          },
+          {
+            "nome": "Kite House Sardinia",
+            "sito": "https://kitehousesardinia.com",
+            "indirizzo": "Punta Trettu, Sardegna Sud-Ovest",
+            "note": "Resort kitesurf. Organizza anche windsurf, diving, horse riding, bike tours tramite partner."
+          },
+          {
+            "nome": "KiteGeneration",
+            "sito": "https://kitegeneration.com",
+            "indirizzo": "Punta Trettu",
+            "note": "Windsurf, SUP, wake board, bike tours, escursioni"
+          },
+          {
+            "nome": "Kite Village Sardegna",
+            "sito": "https://www.kitevillagesardegna.com",
+            "note": "Sede Italian Big Air Championship 2026 (2a edizione a Punta Trettu)"
+          },
+          {
+            "nome": "Nido Surf Sardegna",
+            "sito": "https://nidosurf.com",
+            "note": "Wing foil, kitesurf, windsurf, E-foil"
+          }
+        ],
+        "tipo": "Kitesurf / Windsurf / Wing Foil / E-foil",
+        "area_geografica": "Punta Trettu (SU) Sud-Ovest Sardegna - principale hub; Nord Sardegna secondario",
+        "costo": {
+          "lezioni_kitesurf": "da 70 EUR/sessione (Freedome.it)",
+          "note": "Varia per numero di lezioni e operatore"
+        },
+        "livello": "Tutti i livelli",
+        "periodo": "Stagione estiva e pre/post stagione",
+        "lingue": ["IT", "EN"]
+      }
+    ]
+  },
+
+  "hotel": {
+
+    "fascia_lusso_5_stelle": [
+
+      {
+        "id": "hotel_lux_001",
+        "nome": "Hotel Cala di Volpe (Luxury Collection)",
+        "stelle": 5,
+        "area": "Costa Smeralda",
+        "indirizzo": "Località Cala di Volpe, Porto Cervo, Arzachena (OT)",
+        "sito": "https://www.marriott.com/en-us/hotels/olblc-hotel-cala-di-volpe-a-luxury-collection-hotel-costa-smeralda/overview/",
+        "tel": "Da verificare sul sito ufficiale",
+        "prezzo_medio_notte": "Da ~500 USD (bassa) a oltre 1500 USD (alta stagione)",
+        "specialita": "Design ispirato al villaggio di pescatori (arch. Jacques Couëlle). 100 camere + 21 suite inclusa Presidential Suite. Spiaggia privata, piscina olimpionica acqua di mare, 3 campi tennis, spa.",
+        "catena": "Marriott Luxury Collection"
+      },
+      {
+        "id": "hotel_lux_002",
+        "nome": "Hotel Pitrizza Costa Smeralda",
+        "stelle": 5,
+        "area": "Costa Smeralda",
+        "indirizzo": "Liscia di Vacca, Porto Cervo, Arzachena (OT)",
+        "sito": "https://www.tripadvisor.com/Hotel_Review-g194856-d202796-Reviews-Hotel_Pitrizza_Costa_Smeralda",
+        "prezzo_medio_notte": "Da ~514 USD",
+        "specialita": "44 camere, 5 suite, 9 suite con piscina privata, 6 ville. Tra le rocce sul mare turchese della Costa Smeralda. Atmosfera esclusiva e intima.",
+        "catena": "The Leading Hotels of the World"
+      },
+      {
+        "id": "hotel_lux_003",
+        "nome": "Hotel Romazzino Costa Smeralda",
+        "stelle": 5,
+        "area": "Costa Smeralda",
+        "indirizzo": "Porto Cervo, Arzachena (OT)",
+        "sito": "https://www.silverstaryachting.com/en/costa-smeralda-cala-di-volpe-romazzino-pitrizza-hotels/",
+        "prezzo_medio_notte": "Da ~987 USD",
+        "specialita": "Terrazza panoramica sulla baia recentemente rinnovata. Ristorante esclusivo, due bar, barbecue restaurant sul mare."
+      },
+      {
+        "id": "hotel_lux_004",
+        "nome": "Cervo Hotel Costa Smeralda Resort",
+        "stelle": 5,
+        "area": "Costa Smeralda / Porto Cervo",
+        "indirizzo": "Porto Cervo, Arzachena (OT)",
+        "sito": "https://www.marriott.com/en-us/hotels/olbsi-cervo-hotel-costa-smeralda-resort/overview/",
+        "prezzo_medio_notte": "Da ~498 USD (media 5 stelle Porto Cervo)",
+        "specialita": "Valutazione 9.0. Accesso diretto alla spiaggia, dining experience di livello, spa. Atmosphere raffinata.",
+        "catena": "Marriott"
+      },
+      {
+        "id": "hotel_lux_005",
+        "nome": "W Sardinia - Poltu Quatu",
+        "stelle": 5,
+        "area": "Costa Smeralda / Poltu Quatu",
+        "indirizzo": "Poltu Quatu, Arzachena (OT)",
+        "sito": "https://www.marriott.com",
+        "prezzo_medio_notte": "Verificare sul sito (rating utenti 10.0)",
+        "specialita": "2 miglia da Porto Cervo. Accesso diretto spiaggia. Kayak, hiking, parasailing organizzati dall'hotel.",
+        "catena": "Marriott W Hotels"
+      },
+      {
+        "id": "hotel_lux_006",
+        "nome": "Palazzo Tirso Cagliari MGallery",
+        "stelle": 5,
+        "area": "Cagliari",
+        "indirizzo": "Cagliari",
+        "sito": "https://www.accorhotels.com",
+        "prezzo_medio_notte": "Da ~214 EUR",
+        "specialita": "Palazzo storico nel cuore di Cagliari. Ospita anche il ristorante Terra (Due Forchette Gambero Rosso 2026).",
+        "catena": "Accor MGallery"
+      },
+      {
+        "id": "hotel_lux_007",
+        "nome": "Palazzo Doglio",
+        "stelle": 5,
+        "area": "Cagliari",
+        "indirizzo": "Cagliari",
+        "sito": "https://www.palazzodoglio.com",
+        "prezzo_medio_notte": "Da ~227 EUR",
+        "specialita": "Palazzo d'epoca restaurato nel centro storico di Cagliari."
+      }
+    ],
+
+    "fascia_alta_4_stelle": [
+
+      {
+        "id": "hotel_4s_001",
+        "nome": "Colonna Resort",
+        "stelle": "4/5",
+        "area": "Costa Smeralda",
+        "indirizzo": "Porto Cervo area, Arzachena (OT)",
+        "sito": "https://www.colonnaresort.com",
+        "prezzo_medio_notte": "Da verificare (rating 8.4)",
+        "specialita": "Accesso diretto alla spiaggia, ideale per beach lovers e golf. Circondato da golf course."
+      },
+      {
+        "id": "hotel_4s_002",
+        "nome": "Villa Las Tronas Hotel & SPA",
+        "stelle": 4,
+        "area": "Alghero",
+        "indirizzo": "Lungomare Valencia 1, Alghero (SS)",
+        "sito": "https://www.hvillas.com",
+        "prezzo_medio_notte": "Da ~69 EUR (media Alghero 159 USD)",
+        "specialita": "Villa storica sul promontorio direttamente sul mare. Spa, posizione unica."
+      },
+      {
+        "id": "hotel_4s_003",
+        "nome": "El Faro Hotel & Spa",
+        "stelle": 4,
+        "area": "Alghero",
+        "indirizzo": "Alghero (SS)",
+        "prezzo_medio_notte": "Da verificare (rating 9.0)",
+        "specialita": "Rifugio di lusso con valutazione eccellente. Spa."
+      },
+      {
+        "id": "hotel_4s_004",
+        "nome": "Jazz Hotel",
+        "stelle": 4,
+        "area": "Olbia",
+        "indirizzo": "Olbia (OT)",
+        "prezzo_medio_notte": "Da verificare (rating 9.2)",
+        "specialita": "Hotel a tema golf, accesso a strutture golfistiche. Sistemazioni moderne."
+      },
+      {
+        "id": "hotel_4s_005",
+        "nome": "UNAHOTELS T Hotel Cagliari",
+        "stelle": 4,
+        "area": "Cagliari",
+        "indirizzo": "Cagliari",
+        "sito": "https://www.unahotels.it",
+        "prezzo_medio_notte": "~183 USD (media 4 stelle Cagliari)",
+        "specialita": "Design contemporaneo nel cuore di Cagliari. Business friendly."
+      },
+      {
+        "id": "hotel_4s_006",
+        "nome": "Hotel Villa Fanny",
+        "stelle": 4,
+        "area": "Cagliari",
+        "indirizzo": "Cagliari",
+        "specialita": "Elegante e ben posizionato a Cagliari."
+      },
+      {
+        "id": "hotel_4s_007",
+        "nome": "Horse Country Resort",
+        "stelle": 4,
+        "area": "Oristano / Arborea",
+        "indirizzo": "Arborea (OR)",
+        "sito": "https://www.horsecountry.it",
+        "specialita": "Uno dei maggiori centri equestri europei. Resort con spiagge del Golfo di Oristano, foreste di pini, piscine, spa. Ideale per famiglie e amanti dei cavalli."
+      }
+    ],
+
+    "fascia_media_e_budget": [
+      {
+        "id": "hotel_bud_001",
+        "note": "Per fasce medie e budget (B&B, agriturismi, case vacanza)",
+        "piattaforme": [
+          "booking.com",
+          "airbnb.com",
+          "agriturismo.it",
+          "casevacanza.it"
+        ],
+        "prezzi_medi": {
+          "bb_sardegna_media": "41-164 EUR/notte",
+          "bb_bb_budget": "Sotto 100 EUR notte nel 96% dei casi",
+          "agriturismo": "Varia molto, da 50 EUR (semplice) a 200 EUR (lusso con piscina)"
+        },
+        "agriturismi_segnalati": [
+          {
+            "nome": "Sa Mandra",
+            "area": "Alghero",
+            "note": "Miglior agriturismo Sardegna secondo Gambero Rosso 2026"
+          }
+        ]
+      }
+    ]
+  },
+
+  "ristoranti": {
+
+    "premiati_gambero_rosso_2026": {
+      "note": "Guida Gambero Rosso 2026: 73 insegne recensite, 15 nuove aperture",
+      "tre_gamberi_miglior_trattoria": [
+        {
+          "nome": "Abbamele Osteria",
+          "citta": "Mamoiada (NU)",
+          "chef": "Mauro Ladu",
+          "specialita": "Cucina di Barbagia, piatti tradizionali sardi dell'entroterra",
+          "area": "Centro Sardegna"
+        },
+        {
+          "nome": "Arieddas - La Cucina della Marmilla",
+          "citta": "Sanluri (SU)",
+          "chef": "Francesco Vitale",
+          "specialita": "Cucina della Marmilla, piatti tipici territorio",
+          "area": "Sud Sardegna"
+        }
+      ],
+      "quasi_tre_forchette": [
+        {
+          "nome": "Il Fuoco Sacro",
+          "struttura": "Petra Segreta Resort",
+          "citta": "San Pantaleo (OT)",
+          "specialita": "Cucina fortemente regionale, estroversa e contemporanea",
+          "area": "Costa Smeralda / Gallura",
+          "fascia_prezzo": "Alta"
+        }
+      ],
+      "due_forchette": [
+        {
+          "nome": "Cucina.eat",
+          "citta": "Cagliari",
+          "nota": "Miglior rapporto qualità-prezzo Sud Sardegna"
+        },
+        {
+          "nome": "Su Carduleu",
+          "citta": "Abbasanta (OR)",
+          "specialita": "Cucina sarda tradizionale",
+          "area": "Oristanese"
+        },
+        {
+          "nome": "Rafel",
+          "citta": "Alghero (SS)",
+          "area": "Nord-Ovest Sardegna"
+        },
+        {
+          "nome": "Amano",
+          "citta": "Cagliari"
+        },
+        {
+          "nome": "Josto",
+          "citta": "Cagliari"
+        },
+        {
+          "nome": "Luigi Pomata",
+          "citta": "Cagliari",
+          "tel": "Da verificare sul sito",
+          "specialita": "Cucina di mare di alta qualità, materie prime eccellenti, tecnica raffinata",
+          "fascia_prezzo": "Media-Alta"
+        },
+        {
+          "nome": "Terra (in Palazzo Tirso)",
+          "citta": "Cagliari"
+        },
+        {
+          "nome": "La Saletta",
+          "citta": "Alghero (SS)",
+          "chef": "Luca Chessa e Adriano Zucca",
+          "specialita": "Menù vegetariano di ricerca"
+        },
+        {
+          "nome": "Da Nicolò",
+          "citta": "Carloforte (SU)",
+          "chef": "Luigi Pomata",
+          "specialita": "Cucina di mare, tonno rosso di Carloforte"
+        },
+        {
+          "nome": "Capogiro",
+          "citta": "Baja Sardinia (OT)",
+          "specialita": "Cucina mediterranea elegante e dinamica",
+          "area": "Costa Smeralda"
+        }
+      ]
+    },
+
+    "per_zona": {
+
+      "cagliari": [
+        {
+          "nome": "Luigi Pomata",
+          "citta": "Cagliari",
+          "specialita": "Cucina di mare alta qualità, materie prime eccellenti",
+          "fascia_prezzo": "Media-Alta (Due Forchette Gambero Rosso 2026)"
+        },
+        {
+          "nome": "Chiaroscuro",
+          "citta": "Cagliari",
+          "chef": "Marina Ravarotto",
+          "specialita": "Cucina del territorio interpretata con ispirazione"
+        },
+        {
+          "nome": "Cucina.eat",
+          "citta": "Cagliari",
+          "specialita": "Miglior rapporto qualità-prezzo (Due Forchette GR 2026)",
+          "fascia_prezzo": "Media"
+        },
+        {
+          "nome": "Bistrot100",
+          "citta": "Cagliari",
+          "indirizzo": "Via Giovanni Battista Tuveri",
+          "specialita": "Pesce eccellente"
+        },
+        {
+          "nome": "Ristorante Basilio",
+          "citta": "Cagliari",
+          "indirizzo": "Via Satta",
+          "specialita": "Cucina tipica sarda terra e mare, grigliate"
+        },
+        {
+          "nome": "Trattoria da Serafino",
+          "citta": "Cagliari",
+          "specialita": "Specialità marinare, cucina di terra e mare sarda"
+        }
+      ],
+
+      "alghero": [
+        {
+          "nome": "La Saletta",
+          "citta": "Alghero (SS)",
+          "specialita": "Cucina vegetariana di ricerca (Due Forchette GR 2026)",
+          "fascia_prezzo": "Media-Alta"
+        },
+        {
+          "nome": "Rafel",
+          "citta": "Alghero (SS)",
+          "specialita": "Cucina sarda contemporanea (Due Forchette GR 2026)"
+        },
+        {
+          "nome": "Sa Mandra (agriturismo)",
+          "citta": "Alghero (SS)",
+          "specialita": "Miglior agriturismo Sardegna (GR 2026). Cucina tipica contadina sarda, prodotti propri.",
+          "fascia_prezzo": "Media"
+        },
+        {
+          "nome": "Isola Forma - Bottega Slow Food",
+          "citta": "Alghero (SS)",
+          "specialita": "Prodotti tipici sardi, Slow Food",
+          "rating_thefork": "9.6"
+        },
+        {
+          "nome": "Ristorante Santa Marì",
+          "citta": "Alghero (SS)",
+          "specialita": "Pesce fresco, influenze catalane-sarde",
+          "rating_thefork": "8.7"
+        },
+        {
+          "nome": "SEASTAR Restaurant Sunset View",
+          "citta": "Alghero (SS)",
+          "specialita": "Cucina di mare con vista panoramica"
+        }
+      ],
+
+      "costa_smeralda_gallura": [
+        {
+          "nome": "Il Fuoco Sacro (Petra Segreta Resort)",
+          "citta": "San Pantaleo (OT)",
+          "specialita": "Cucina regionale contemporanea di altissimo livello (quasi 3 forchette GR 2026)",
+          "fascia_prezzo": "Alta"
+        },
+        {
+          "nome": "Capogiro",
+          "citta": "Baja Sardinia (OT)",
+          "specialita": "Cucina mediterranea elegante (Due Forchette GR 2026)",
+          "fascia_prezzo": "Media-Alta"
+        },
+        {
+          "nome": "Zinnibiri (in Cala Cuncheddi)",
+          "citta": "Costa Smeralda / Olbia area",
+          "specialita": "Cucina regionale sarda, mare e terra, ingredienti del territorio"
+        }
+      ],
+
+      "oristano": [
+        {
+          "nome": "Su Carduleu",
+          "citta": "Abbasanta (OR)",
+          "specialita": "Cucina sarda tradizionale (Due Forchette GR 2026)",
+          "fascia_prezzo": "Media"
+        }
+      ],
+
+      "barbagia_ogliastra": [
+        {
+          "nome": "Abbamele Osteria",
+          "citta": "Mamoiada (NU)",
+          "specialita": "Cucina di Barbagia tradizionale (Tre Gamberi GR 2026 - miglior trattoria)",
+          "fascia_prezzo": "Bassa-Media"
+        },
+        {
+          "nome": "Arieddas - La Cucina della Marmilla",
+          "citta": "Sanluri (SU)",
+          "specialita": "Cucina della Marmilla (Tre Gamberi GR 2026)",
+          "fascia_prezzo": "Bassa-Media"
+        }
+      ],
+
+      "carloforte_isole": [
+        {
+          "nome": "Da Nicolò",
+          "citta": "Carloforte, Isola di San Pietro (SU)",
+          "chef": "Luigi Pomata",
+          "specialita": "Tonno rosso di Carloforte, cucina di mare isolana (Due Forchette GR 2026)",
+          "fascia_prezzo": "Media-Alta"
+        }
+      ]
+    },
+
+    "specialita_tipiche_sarde": [
+      "Malloreddus (gnocchetti sardi) al sugo di salsiccia",
+      "Culurgiones (ravioli ogliastrini ripieni di patate e menta)",
+      "Porceddu (maialetto allo spiedo)",
+      "Agnello alla sarda",
+      "Bottarga di muggine (Cabras)",
+      "Aragosta alla catalana (Alghero)",
+      "Tonno rosso di Carloforte",
+      "Pecorino sardo DOP",
+      "Seadas (dolce fritto con formaggio e miele)",
+      "Pane carasau (carta musica)",
+      "Fregola con arselle",
+      "Cannonau e Vermentino (vini)"
+    ]
+  },
+
+  "fonti": [
+    "https://www.giteasinara.it/escursioni-asinara-prezzi/",
+    "https://asinaracharter.com/",
+    "https://grottadinettuno.it/",
+    "https://www.consorziobocche.com/",
+    "https://www.smeraldaboats.com/",
+    "https://calagononecrociere.it/",
+    "https://www.mareogliastra.com/",
+    "https://www.escursionicalagonone.it/",
+    "https://www.climbingulassai.com/",
+    "https://fellasoutdoors.com/",
+    "https://www.mountainevolution.com/",
+    "https://freedome.it/",
+    "https://www.subaquadive.it/",
+    "https://www.airsubdiving.com/",
+    "https://www.divinglamaddalena.com/",
+    "https://www.area11diver.com/",
+    "https://www.nautisub.com/",
+    "https://www.capogalera.com/",
+    "https://www.algherodivers.com/",
+    "https://www.oroseiadventours.com/",
+    "https://www.wildsardiniatrekking.it/",
+    "https://www.treninoverde.com/",
+    "https://www.horsecountry.it/",
+    "https://www.sardiniahorses.com/",
+    "https://prokitesardegna.com/",
+    "https://kitehousesardinia.com/",
+    "https://kitegeneration.com/",
+    "https://nidosurf.com/",
+    "https://www.sardiniacycling.com/",
+    "https://www.explorabikeplanet.com/",
+    "https://www.newkayaksardinia.com/",
+    "https://www.insardegnacondani.it/notizie/ristoranti-sardegna-gambero-rosso-2026/",
+    "https://www.portocervofficial.it/gambero-rosso-sardegna-2026/",
+    "https://guide.michelin.com/us/en/sardegna/restaurants"
+  ]
+}

@@ -1,0 +1,1143 @@
+{
+  "metadata": {
+    "generato": "2026-06-23",
+    "fonte": "WebSearch multi-source: sardegnaturismo.it, paradisola.it, insardegnacondani.it, eventiinsardegna.it, camperonline.it, campsardegna.altervista.org, arst.sardegna.it, trenitalia.com, gnv.it, grimaldi-lines.com, moby.it",
+    "nota": "Dati aggiornati a giugno 2026. Verificare sempre siti ufficiali per conferma date e prezzi."
+  },
+
+  "eventi_sagre": {
+
+    "carnevale_mamoiada": {
+      "nome": "Carnevale Storico di Mamoiada",
+      "comune": "Mamoiada",
+      "provincia": "NU",
+      "periodo": "Gennaio–Febbraio (periodo carnevalesco)",
+      "date_2026": {
+        "prima_uscita": "16–17 gennaio 2026 (Festa di Sant'Antonio Abate, fuochi e prima sfilata Mamuthones)",
+        "sfilata_principale": "Domenica 15 febbraio 2026 (corteo pomeridiano e replica serale)",
+        "lunedi_grasso": "16 febbraio 2026 (carnevale dei bambini)",
+        "martedi_grasso": "17 febbraio 2026 (sfilata conclusiva)",
+        "pentolaccia": "Sabato 21 febbraio 2026 (chiusura rituale)"
+      },
+      "descrizione": "Uno dei carnevali più antichi e suggestivi d'Europa. I Mamuthones sono maschere zoomorfe coperte da pelli di montone e campanacci, accompagnati dagli Issohadores in abiti rossi. Il rito è di origine pre-nuragica, legato a culti agrari e propiziatori.",
+      "cosa_vedere": "Sfilata notturna dei Mamuthones con campanacci, Issohadores che lanciano le funi, fuochi di Sant'Antonio, Museo delle Maschere Mediterranee",
+      "ingresso": "Gratuito per le sfilate in piazza. Museo delle Maschere Mediterranee: adulti €3, ridotto €1.50",
+      "contatti": {
+        "pro_loco": "+39 0784 56415",
+        "museo_maschere": "+39 0784 569018",
+        "web": "https://www.insardegnacondani.it/eventi/carnevale-mamoiada/"
+      },
+      "note": "Prenotare alloggi con largo anticipo. Il paese ha pochi posti letto; Nuoro è la base più vicina."
+    },
+
+    "sartiglia_oristano": {
+      "nome": "Sartiglia di Oristano",
+      "comune": "Oristano",
+      "provincia": "OR",
+      "periodo": "Carnevale (febbraio)",
+      "date_2026": {
+        "domenica": "15 febbraio 2026 (Gremio dei Contadini)",
+        "lunedi": "16 febbraio 2026 (Sartigliedda dei ragazzi)",
+        "martedi_grasso": "17 febbraio 2026 (Gremio dei Falegnami)"
+      },
+      "programma": "Ore 10: Bando e Annullo Postale. Cerimonia della vestizione di Su Cumponidori (la figura rituale mascherata). Corteo di 120 cavalieri verso via Duomo. Corsa alla stella (giostra equestre). Corsa delle pariglie acrobatiche. Svestizione rituale.",
+      "descrizione": "Giostra equestre medievale in cui i cavalieri al galoppo devono infilzare con la spada una stella appesa a un nastro. Nata nel XV secolo per volere spagnolo, è considerata uno degli spettacoli equestri più spettacolari d'Europa.",
+      "cosa_vedere": "Vestizione di Su Cumponidori, corsa alla stella, pariglie acrobatiche a cavallo, costumi medievali, Scuderia Sartiglia aperta al pubblico",
+      "costi": {
+        "tribune_numerate_via_duomo": "€30–55",
+        "tribune_via_mazzini": "€30–55",
+        "backstage_scuderia": "€10",
+        "sartiglia_experience_tour": "€20 (gratis under 6)"
+      },
+      "prenotazione": "Piattaforma online Tick@ dal 4 febbraio ore 10:00",
+      "contatti": {
+        "web_ufficiale": "https://www.sartiglia.info/",
+        "info": "info@sartiglia.info"
+      }
+    },
+
+    "santefisio_cagliari": {
+      "nome": "Festa di Sant'Efisio",
+      "comune": "Cagliari",
+      "provincia": "CA",
+      "periodo": "1–4 maggio (ogni anno)",
+      "date_2026": "1–4 maggio 2026 (370ª edizione)",
+      "programma": {
+        "1_maggio": "Ore 10: partenza tracas (carri). Corteo in abiti tradizionali sardi, cavalieri, miliziotti, Guardiania. Ore 12: partenza del carro di Sant'Efisio che percorre il centro di Cagliari. Processione verso Nora (luogo del martirio).",
+        "2_3_maggio": "Processione verso Nora e rituale del voto",
+        "4_maggio": "Rientro del Santo a Cagliari entro mezzanotte alla Chiesa di Stampace"
+      },
+      "descrizione": "Dal 1657 ininterrottamente. Voto fatto dalla municipalità di Cagliari per ringraziare Sant'Efisio per la fine della pestilenza. Oltre 3.000 figuranti in abito tradizionale sardo, considerata la più grande sfilata folkloristica d'Italia.",
+      "cosa_vedere": "Abiti tradizionali di ogni paese sardo, carrozze storiche, cavalieri, canti religiosi, il simulacro del Santo sul carro dorato",
+      "ingresso": "Gratuito",
+      "contatti": {
+        "web_ufficiale": "https://www.festadisantefisio.it/",
+        "web_info": "https://santefisiomartire.it/en"
+      },
+      "nota": "Nel 2026 processione confermata ma senza buoi (come da modifica recente al format)"
+    },
+
+    "cavalcata_sarda_sassari": {
+      "nome": "Cavalcata Sarda",
+      "comune": "Sassari",
+      "provincia": "SS",
+      "periodo": "Maggio",
+      "date_2026": {
+        "sfilata_principale": "Domenica 17 maggio 2026 (75ª edizione)",
+        "eventi_collaterali": "9–30 maggio 2026"
+      },
+      "programma": {
+        "17_maggio_mattina": "Ore 9:00: sfilata. Partenza da San Giuseppe, percorso: via Asproni, via Roma, piazza d'Italia, portici Bargone e Crispo, via Cagliari, via Brigata Sassari, emiciclo Garibaldi, viale Italia, viale Mancini. Arrivo in via Manno circa ore 14:00",
+        "17_maggio_pomeriggio": "Ore 15:00: canti tradizionali (associazione Deris, Oe e Crasa). Ore 15:30–18:00: pariglie a cavallo (Società Ippica Sassarese)",
+        "14_maggio": "Ore 17:00: 'Voci e suoni tra miti e riti' all'altare prenuragico di Monte d'Accoddi (ingresso gratuito)",
+        "15_17_maggio": "Villaggio Salude & Trigu in Piazza Castello (degustazioni, laboratori artigianali)"
+      },
+      "descrizione": "3.500 figuranti in abiti tradizionali da tutta la Sardegna, 66 gruppi a piedi e 26 a cavallo. Una delle manifestazioni folkloristiche più imponenti d'Europa.",
+      "cosa_vedere": "Abiti tradizionali regionali, pariglie equestri, altare prenuragico di Monte d'Accoddi",
+      "ingresso": "Gratuito per la sfilata. Mostra 'Identità Svelate' con possibile biglietto.",
+      "contatti": {
+        "comune_sassari": "https://www.comune.sassari.it",
+        "web": "https://www.sassaritoday.it/eventi/cavalcata-sarda-17-maggio-2026-sassari-orari-percorso.html"
+      }
+    },
+
+    "redentore_nuoro": {
+      "nome": "Festa del Redentore",
+      "comune": "Nuoro",
+      "provincia": "NU",
+      "periodo": "Agosto",
+      "date_2026": {
+        "sabato": "22 agosto 2026",
+        "domenica": "23 agosto 2026",
+        "ottava": "29 agosto 2026"
+      },
+      "programma": {
+        "22_agosto": "Processione con fiaccole e sfilata maschere del carnevale sardo",
+        "23_agosto_mattina": "Ore 10:00: Sfilata dei Costumi Tradizionali Sardi (circa 60 gruppi, oltre 2.000 partecipanti in costumi, cavaliere e tenores)",
+        "23_agosto_sera": "Ore 19:00: Festival Regionale del Folklore (sede da confermare per cambio storico venue)",
+        "29_agosto": "All'alba: pellegrinaggio a piedi dalla Cattedrale alla cima del Monte Ortobene. Messa solenne con cori polifonici nuoresi."
+      },
+      "descrizione": "Celebrazione religiosa e folkloristica che unisce devozione, tradizione e cultura. Il pellegrinaggio all'alba al Monte Ortobene (dove si trova il celebre Redentore bronzeo del 1901) è uno dei momenti più suggestivi.",
+      "cosa_vedere": "Sfilata in costume, canti a tenore, pellegrinaggio notturno al Monte Ortobene, statua bronzea del Redentore",
+      "ingresso": "Gratuito",
+      "contatti": {
+        "comune_nuoro": "https://www.comune.nuoro.it",
+        "web_ufficiale": "https://www.festadelredentorenuoro.it/"
+      },
+      "nota": "2026 = 125ª edizione. Venue del Festival Regionale del Folklore spostata rispetto allo Stadio Quadrivio storico."
+    },
+
+    "faradda_candareri_sassari": {
+      "nome": "Faradda di li Candareri (Discesa dei Candelieri)",
+      "comune": "Sassari",
+      "provincia": "SS",
+      "data": "14 agosto (ogni anno, vespro dell'Assunta)",
+      "data_2026": "14 agosto 2026",
+      "descrizione": "Cinque secoli di storia. Tredici grandi candelabri di legno portati a spalla da rappresentanti delle corporazioni artigiane sassaresi, attraverso il centro storico fino alla Chiesa di Santa Maria di Betlem. Patrimonio Immateriale UNESCO dal 2013 (come parte della rete 'Intangible Heritage of big shoulder-borne processional structures').",
+      "cosa_vedere": "Corteo pomeridiano da Piazza Castello, candelabri alti fino a 5 metri portati in equilibrio, abiti tradizionali, balli sardi, fuochi artificiali serali",
+      "partenza": "Piazza Castello, pomeriggio del 14 agosto",
+      "arrivo": "Chiesa di Santa Maria di Betlem",
+      "ingresso": "Gratuito",
+      "afflusso": "Circa 100.000 turisti ogni anno",
+      "contatti": {
+        "web_ufficiale": "https://candelierisassari.it/",
+        "turismo_sassari": "https://turismosassari.it"
+      },
+      "nota": "Nel 2026 si spera nel ripristino della sede storica della Chiesa di Santa Maria di Betlem, in restauro nelle edizioni precedenti."
+    },
+
+    "ardia_sedilo": {
+      "nome": "S'Ardia di Sedilo",
+      "comune": "Sedilo",
+      "provincia": "OR",
+      "periodo": "Luglio (6–7 luglio fissi, con ottava il 19 luglio)",
+      "date_2026": {
+        "preparazione": "27 giugno: carica delle cartucce; 29 giugno: prove a cavallo ore 19 + balli tradizionali ore 21",
+        "5_luglio": "Messe alle 8/9.30/19 al Santuario. Ore 19.30: Ardia de sos pitzinnos (corsa dei bambini su cavallini di canna). Ore 22: concerto Maria Giovanna Cherchi",
+        "6_luglio": "Ore 18.30: consegna de Sas Pandelas in piazza San Giovanni. Ore 19: Prima Ardia (capo corsa Danilo Pes) con fucilieri di Sedilo e banda Luigi Canepa di Sassari",
+        "7_luglio": "Ore 7.30: consegna bandiere. Ore 8: Seconda Ardia con banda di Villanova Monteleone",
+        "19_luglio": "Ottava: Ardia a piedi guidata da Davide Muscau con fucilieri e banda di Calangianus"
+      },
+      "descrizione": "Corsa equestre votiva in onore di San Costantino Imperatore. Il capo corsa (Sa Prima Pandela) guida a galoppo sfrenato centinaia di cavalieri intorno al Santuario di San Costantino, tra spari di fucili e folla esultante. Considerata la corsa a cavallo più pericolosa al mondo.",
+      "cosa_vedere": "Corsa principale al tramonto, spari di fucili, costumi tradizionali, Santuario di San Costantino, paesaggio del lago Omodeo",
+      "ingresso": "Gratuito",
+      "contatti": {
+        "associazione": "https://www.santuantinu.org/",
+        "comune_sedilo": "https://www.comune.sedilo.or.it/"
+      }
+    },
+
+    "autunno_in_barbagia": {
+      "nome": "Autunno in Barbagia – Cortes Apertas",
+      "area": "Barbagia (Nuoro e dintorni)",
+      "periodo": "Settembre–Dicembre (ogni anno)",
+      "date_2026": "Settembre–Dicembre 2026 (programma 2026 non ancora pubblicato al momento della ricerca; basarsi sul pattern 2025: da settembre a metà dicembre, un paese diverso ogni weekend)",
+      "paesi_coinvolti_pattern_2025": [
+        "Bitti (settembre)", "Oliena (settembre)", "Sarule, Austis (settembre)",
+        "Orani, Dorgali, Lollove (settembre/ottobre)", "Desulo, Mamoiada (novembre, 1–3)",
+        "Ovodda, Olzai (novembre)", "Nuoro, Tiana (novembre)", "Atzara, Ollolai, Lodine (novembre)"
+      ],
+      "descrizione": "Ogni weekend autunnale un paese barbagino apre le proprie 'cortes' (cortili tradizionali) ai visitatori: artigianato, cucina locale, musica, balli, tradizioni pastorali. È uno dei format culturali più riusciti della Sardegna.",
+      "cosa_vedere": "Abiti tradizionali, pane carasau e dolci locali, formaggi, coltelli artigianali, launeddas, tenores, cesti intrecciati",
+      "ingresso": "Gratuito",
+      "contatti": {
+        "web_ufficiale": "https://www.cuoredellasardegna.it/autunnoinbarbagia/",
+        "facebook": "https://www.facebook.com/autunnoinbarbagia/"
+      }
+    },
+
+    "sagra_castagne_aritzo": {
+      "nome": "Sagra delle Castagne e delle Nocciole",
+      "comune": "Aritzo",
+      "provincia": "NU",
+      "periodo": "Ultimo weekend di ottobre",
+      "data_2026_stimata": "Fine ottobre 2026 (probabilmente 24–25 ottobre, da confermare)",
+      "edizione_2026": "47ª edizione (stimata)",
+      "descrizione": "Uno degli appuntamenti più amati dell'Autunno in Barbagia. Il borgo montano di Aritzo si trasforma con profumo di caldarroste, vino nuovo, musica folk e laboratori artigianali. Fino a 50.000 visitatori in due giorni.",
+      "cosa_vedere": "Distribuzione gratuita di caldarroste e vino novello, sfilate folk (Tamburinos di Gavoi), passeggiate tra i castagneti, mercato artigianale",
+      "ingresso": "Gratuito",
+      "contatti": {
+        "comune_aritzo": "https://old.comune.aritzo.nu.it",
+        "web": "https://italeasardegna.com/en/eventi/chestnut-and-hazelnut-festival/"
+      }
+    },
+
+    "time_in_jazz_berchidda": {
+      "nome": "Festival Time in Jazz",
+      "comune": "Berchidda (e 15 altri centri del nord Sardegna)",
+      "provincia": "SS",
+      "edizione_2026": "XXXIX edizione",
+      "tema": "'Kind of Blue' – tributo a Miles Davis nel centenario della nascita",
+      "direzione_artistica": "Paolo Fresu",
+      "date_2026": {
+        "prologo": "19–21 giugno 2026",
+        "festival_principale": "8–16 agosto 2026"
+      },
+      "descrizione": "Uno dei festival jazz più importanti d'Europa, immerso nei paesaggi della Sardegna settentrionale. Oltre 70 appuntamenti tra musica, letteratura, arti visive, laboratori e concerti in location naturali e paesi storici.",
+      "localita_secondarie": ["San Teodoro", "Porto Rotondo", "Puntaldia", "Budoni", "Olbia", "Arzachena", "Luras", "Tempio Pausania", "Viddalba"],
+      "cosa_vedere": "Concerti all'alba o al tramonto, masterclass jazz, mostre, iniziative per bambini, presentazioni editoriali",
+      "ingresso": "Variabile per concerto. Molti eventi gratuiti o con biglietto simbolico.",
+      "contatti": {
+        "web_ufficiale": "https://timeinjazz.it/",
+        "web_eu": "https://timeinjazz.eu/edizione/festival-2026/"
+      }
+    },
+
+    "dromos_festival": {
+      "nome": "Dromos Festival",
+      "area": "Oristano e provincia",
+      "edizione_2026": "28ª edizione",
+      "tema": "'Dromos Secrets'",
+      "date_2026": "18 luglio – 16 agosto 2026",
+      "descrizione": "Festival multidisciplinare (musica, cinema, masterclass, cultura) distribuito tra Oristano e comuni limitrofi. Mix di artisti internazionali e locali, con concerti in piazze storiche, siti archeologici, chiese sconsacrate.",
+      "comuni": ["Oristano", "Baratili San Pietro", "Cabras", "Fordongianus", "Masullas", "Milis", "Mogoro", "Neoneli", "Nureci", "Pompu", "Riola Sardo", "Tadasuni"],
+      "artisti_2026": ["Sarah Jane Morris", "Tosca", "Brian Jackson", "Treves Blues Band", "Carmen Consoli", "Stefano Bollani", "Mario Biondi", "Subsonica", "Michael League", "Hamilton de Holanda", "Tigran Hamasyan", "Cory Henry & The Funk Apostles", "Rokia Traoré", "Simona Molinari + Raphael Gualazzi"],
+      "cinema": "Rassegna 'Secrets and Visions' con proiezioni di film internazionali",
+      "contatti": {
+        "web_ufficiale": "https://dromosfestival.it/",
+        "tel": "+39 0783 310490",
+        "whatsapp": "+39 334 8022237",
+        "email": "info@dromosfestival.it"
+      }
+    },
+
+    "sagra_pecorino": {
+      "nome": "Sagra del Pecorino",
+      "comune": "Simaxis",
+      "provincia": "OR",
+      "data_2026": "20 giugno 2026",
+      "descrizione": "Celebrazione del Pecorino Sardo DOP, uno dei prodotti simbolo dell'agropastoralismo isolano. Degustazioni, esposizioni di caseifici locali, laboratori.",
+      "ingresso": "Gratuito (degustazioni incluse o a offerta)",
+      "contatti": {
+        "web": "https://www.insardegnacondani.it/eventi/sagra-pecorino-simaxis/",
+        "pecorino_sardo_dop": "https://www.pecorinosardo.it/"
+      },
+      "nota": "Evento diffuso in altri comuni (es. Macomer – S'Antunna a novembre). Verificare edizioni locali."
+    },
+
+    "estate_musicale_2026": {
+      "concerti_sardegna_2026": [
+        {
+          "nome": "GiroSardegna",
+          "tipo": "Cicloturismo/cycling event (non musicale)",
+          "note": "inserito nella sezione sport"
+        },
+        {
+          "nome": "IRONMAN 70.3 Alghero",
+          "tipo": "Triathlon",
+          "data": "Giugno 2026",
+          "note": "inserito nella sezione sport"
+        }
+      ],
+      "nota": "L'estate musicale 2026 è coperta principalmente da Time in Jazz (Berchidda, agosto) e Dromos Festival (Oristano, luglio-agosto). Per il calendario completo concerti: https://www.cagliaritoday.it/eventi/concerti/concerti-sardegna-estate-2026.html"
+    }
+  },
+
+  "camper_van_life": {
+    "nota_generale": "La Sardegna ha normative restrittive sulla sosta libera nelle aree costiere. In alta stagione molte aree sosta richiedono prenotazione. Piattaforme di riferimento: CamperOnLine.it, Caramaps.com, Camper.it.",
+    "aree_sosta": [
+      {
+        "id": 1,
+        "nome": "Bona Vida",
+        "comune": "Santa Teresa di Gallura",
+        "provincia": "SS",
+        "coordinate_gps": "N 41.21173, E 9.18384",
+        "servizi": {
+          "scarico_acque_nere": true,
+          "acqua_potabile": true,
+          "elettricita": true,
+          "docce": false,
+          "wifi": false,
+          "lavatrice": false,
+          "bar_ristorante": false
+        },
+        "piazzole": "circa 20",
+        "costi": {
+          "bassa_stagione": "€15–18/notte",
+          "alta_stagione": "€22–28/notte"
+        },
+        "apertura": "Aprile–Ottobre",
+        "note": "Terreno non asfaltato, 1.5 km dal mare, vista panoramica. Vicino al porto e al centro di Santa Teresa.",
+        "web": "https://www.camper.it/aree-sosta/Italia/Sardegna/Bona-Vida_24673"
+      },
+      {
+        "id": 2,
+        "nome": "Oasi Gallura (Vignola Mare)",
+        "comune": "Aglientu",
+        "provincia": "SS",
+        "coordinate_gps": "circa N 41.08, E 9.12",
+        "servizi": {
+          "scarico_acque_nere": true,
+          "acqua_potabile": true,
+          "elettricita": true,
+          "docce": true,
+          "wifi": true,
+          "lavatrice": false,
+          "bar_ristorante": false
+        },
+        "piazzole": 80,
+        "costi": {
+          "bassa_stagione": "€18–22/notte",
+          "alta_stagione": "€28–35/notte"
+        },
+        "apertura": "Maggio–Settembre",
+        "note": "50 metri dalla spiaggia di Vignola Mare. Area verde curata, ottima posizione.",
+        "web": "https://www.oasigallura.it/en/"
+      },
+      {
+        "id": 3,
+        "nome": "Agricamping La Tankitta",
+        "comune": "Stintino",
+        "provincia": "SS",
+        "coordinate_gps": "circa N 40.93, E 8.23",
+        "servizi": {
+          "scarico_acque_nere": true,
+          "acqua_potabile": true,
+          "elettricita": true,
+          "docce": true,
+          "wifi": false,
+          "lavatrice": false,
+          "bar_ristorante": false
+        },
+        "piazzole": "circa 15",
+        "costi": {
+          "tutto_incluso": "€25/giorno (camper service + elettricita + docce)"
+        },
+        "apertura": "Aprile–Ottobre",
+        "note": "8 km da Stintino e La Pelosa. Ambiente agricolo autentico. Shuttle non garantito.",
+        "web": "https://www.pleinairclub.it/news/dove-sostare/7-campeggi-e-aree-sosta-camper-in-sardegna-tra-alghero-e-stintino/"
+      },
+      {
+        "id": 4,
+        "nome": "Area Sosta La Pineta",
+        "comune": "Stintino",
+        "provincia": "SS",
+        "coordinate_gps": "circa N 40.92, E 8.22",
+        "servizi": {
+          "scarico_acque_nere": true,
+          "acqua_potabile": true,
+          "elettricita": true,
+          "docce": true,
+          "wifi": false,
+          "lavatrice": false,
+          "bar_ristorante": true
+        },
+        "piazzole": "circa 30",
+        "costi": {
+          "bassa_stagione": "€20/notte",
+          "alta_stagione": "€30/notte"
+        },
+        "apertura": "Marzo–Novembre",
+        "note": "Ombreggiata da pini. Consegna pane mattutina. Shuttle stagionale verso La Pelosa.",
+        "web": "https://www.pleinairclub.it"
+      },
+      {
+        "id": 5,
+        "nome": "Camping Village Laguna Blu",
+        "comune": "Alghero (Fertilia)",
+        "provincia": "SS",
+        "coordinate_gps": "circa N 40.60, E 8.26",
+        "servizi": {
+          "scarico_acque_nere": true,
+          "acqua_potabile": true,
+          "elettricita": true,
+          "docce": true,
+          "wifi": true,
+          "lavatrice": true,
+          "bar_ristorante": true
+        },
+        "piazzole": "oltre 100",
+        "costi": {
+          "bassa_stagione": "€22–28/notte (piazzola + 2 persone)",
+          "alta_stagione": "€35–50/notte"
+        },
+        "apertura": "Aprile–Ottobre",
+        "note": "Sulla laguna del Calik, pini marittimi. Vicinanza aeroporto Alghero (3 km) e spiagge del Lido.",
+        "tel": "+39 079 930111",
+        "web": "https://www.camperonline.it/sosta-camper/aree-di-sosta/alghero/78"
+      },
+      {
+        "id": 6,
+        "nome": "Area Sosta S'Abba Druche",
+        "comune": "Bosa Marina",
+        "provincia": "OR",
+        "coordinate_gps": "N 40° 17′ 55″ E 8° 29′ 53″",
+        "servizi": {
+          "scarico_acque_nere": true,
+          "acqua_potabile": true,
+          "elettricita": true,
+          "docce": true,
+          "wifi": false,
+          "lavatrice": false,
+          "bar_ristorante": false
+        },
+        "piazzole": 100,
+        "costi": {
+          "bassa_stagione": "€18/notte",
+          "alta_stagione": "€28/notte"
+        },
+        "apertura": "Aprile–Ottobre",
+        "note": "Ombreggiata, 4 km dal centro di Bosa. Vicino al mare. Bosa è imperdibile per i colori delle case sul Temo.",
+        "web": "https://www.itineraricamper.it/italia/sardegna/giro-completo/aree_sosta.php"
+      },
+      {
+        "id": 7,
+        "nome": "Area Sosta Arbus",
+        "comune": "Arbus",
+        "provincia": "VS",
+        "coordinate_gps": "N 39° 30′ 22.68″ E 8° 32′ 23.892″",
+        "servizi": {
+          "scarico_acque_nere": true,
+          "acqua_potabile": true,
+          "elettricita": false,
+          "docce": false,
+          "wifi": false,
+          "lavatrice": false,
+          "bar_ristorante": false
+        },
+        "piazzole": "circa 10",
+        "costi": {
+          "bassa_stagione": "€10/notte",
+          "alta_stagione": "€15/notte"
+        },
+        "apertura": "Tutto l'anno",
+        "note": "Accesso alla Costa Verde (spiaggia di Piscinas, dune più alte d'Europa). SS 126 Sud Occidentale Sarda.",
+        "web": "https://campsardegna.altervista.org/aree-sosta-camper-sardegna/"
+      },
+      {
+        "id": 8,
+        "nome": "Camping Calacavallo",
+        "comune": "Oristano area",
+        "provincia": "OR",
+        "coordinate_gps": "da verificare su sito ufficiale",
+        "servizi": {
+          "scarico_acque_nere": true,
+          "acqua_potabile": true,
+          "elettricita": true,
+          "docce": true,
+          "wifi": true,
+          "lavatrice": false,
+          "bar_ristorante": true
+        },
+        "piazzole": "circa 50",
+        "costi": {
+          "apr_mag": "€25 (1 camper + 2 persone)",
+          "giu_set": "€30 (1 camper + 2 persone)"
+        },
+        "apertura": "Aprile–Settembre",
+        "note": "Zona Sinis, vicinanza a Capo Mannu e spiagge del Sinis. Ideale per kitesurf.",
+        "web": "https://www.camperclubitaliano.it/sardegna/"
+      },
+      {
+        "id": 9,
+        "nome": "Camping Car Palmasera",
+        "comune": "Cala Gonone",
+        "provincia": "NU",
+        "coordinate_gps": "circa N 40.29, E 9.60",
+        "indirizzo": "Viale Bue Marino, 08022 Cala Gonone (NU)",
+        "servizi": {
+          "scarico_acque_nere": true,
+          "acqua_potabile": true,
+          "elettricita": true,
+          "docce": true,
+          "wifi": true,
+          "lavatrice": false,
+          "bar_ristorante": false
+        },
+        "piazzole": "circa 40",
+        "costi": {
+          "bassa_stagione_apr_giu": "€25/notte",
+          "luglio": "€35/notte",
+          "ferragosto_settimana": "€43/notte"
+        },
+        "apertura": "Aprile–Novembre",
+        "note": "400 m dalle spiagge del Golfo di Orosei. Centro di Cala Gonone raggiungibile a piedi. Base ottima per gite in barca alle cale.",
+        "tel": "da verificare su sito",
+        "web": "https://www.campingcarpalmasera.com/"
+      },
+      {
+        "id": 10,
+        "nome": "Cala Sa Prama",
+        "comune": "Orosei",
+        "provincia": "NU",
+        "coordinate_gps": "circa N 40.37, E 9.71",
+        "servizi": {
+          "scarico_acque_nere": true,
+          "acqua_potabile": true,
+          "elettricita": false,
+          "docce": true,
+          "wifi": false,
+          "lavatrice": false,
+          "bar_ristorante": false
+        },
+        "piazzole": "circa 20",
+        "costi": {
+          "tutto_incluso": "€20/sosta (acqua calda + tutti i servizi)"
+        },
+        "apertura": "Maggio–Settembre",
+        "note": "Golfo di Orosei. Area attrezzata semplice ma funzionale.",
+        "web": "https://campsardegna.altervista.org/aree-sosta-camper-sardegna/"
+      },
+      {
+        "id": 11,
+        "nome": "Tanca Orri",
+        "comune": "Tortolì",
+        "provincia": "OG",
+        "coordinate_gps": "circa N 39.93, E 9.66",
+        "servizi": {
+          "scarico_acque_nere": true,
+          "acqua_potabile": true,
+          "elettricita": true,
+          "docce": true,
+          "wifi": false,
+          "lavatrice": false,
+          "bar_ristorante": false
+        },
+        "piazzole": 80,
+        "costi": {
+          "bassa_stagione": "€18/notte",
+          "alta_stagione": "€30/notte"
+        },
+        "apertura": "Aprile–Ottobre",
+        "note": "2.5 km da Tortolì, fronte mare. Ombreggiata. Vicino ad Arbatax e Scogli Rossi.",
+        "web": "https://www.camperonline.it/sosta-camper/aree-di-sosta/golfo-di-orosei/57683"
+      },
+      {
+        "id": 12,
+        "nome": "Area Sosta Dolianova",
+        "comune": "Dolianova",
+        "provincia": "CA",
+        "coordinate_gps": "N 39° 22′ 31.8″ E 9° 10′ 37.056″",
+        "indirizzo": "20 Viale Europa, 09041 Dolianova (CA)",
+        "servizi": {
+          "scarico_acque_nere": true,
+          "acqua_potabile": true,
+          "elettricita": true,
+          "docce": false,
+          "wifi": false,
+          "lavatrice": false,
+          "bar_ristorante": false
+        },
+        "piazzole": "circa 15",
+        "costi": {
+          "bassa_stagione": "€12/notte",
+          "alta_stagione": "€18/notte"
+        },
+        "apertura": "Tutto l'anno",
+        "note": "30 km da Cagliari, utile come tappa prima/dopo traghetto a Cagliari-Elmas.",
+        "web": "https://campsardegna.altervista.org/aree-sosta-camper-sardegna/"
+      },
+      {
+        "id": 13,
+        "nome": "CamperSimius",
+        "comune": "Villasimius",
+        "provincia": "CA",
+        "coordinate_gps": "circa N 39.14, E 9.53",
+        "servizi": {
+          "scarico_acque_nere": true,
+          "acqua_potabile": true,
+          "elettricita": true,
+          "docce": true,
+          "wifi": true,
+          "lavatrice": false,
+          "bar_ristorante": false
+        },
+        "piazzole": "circa 30",
+        "costi": {
+          "bassa_stagione": "€20/notte",
+          "alta_stagione": "€35–45/notte"
+        },
+        "apertura": "Aprile–Ottobre",
+        "note": "500 m dalla spiaggia di Simius. 50 km da Cagliari. Area popolarissima in luglio-agosto – prenotare.",
+        "web": "https://campsardegna.altervista.org/aree-sosta-camper-sardegna/"
+      },
+      {
+        "id": 14,
+        "nome": "Area Sosta Chia",
+        "comune": "Domus de Maria (Chia)",
+        "provincia": "CA",
+        "coordinate_gps": "circa N 38.90, E 8.88",
+        "servizi": {
+          "scarico_acque_nere": false,
+          "acqua_potabile": false,
+          "elettricita": false,
+          "docce": true,
+          "wifi": false,
+          "lavatrice": false,
+          "bar_ristorante": true
+        },
+        "piazzole": "circa 20",
+        "costi": {
+          "bassa_stagione": "€15/notte",
+          "alta_stagione": "€25–30/notte"
+        },
+        "apertura": "Giugno–Settembre",
+        "note": "400 m dalla spiaggia di Chia. Di fronte all'Hotel Su Giudeu. Ombreggiata con piazzole.",
+        "web": "https://www.yepsea.com/en/camper-van-area-sardinia/"
+      },
+      {
+        "id": 15,
+        "nome": "Isola dei Gabbiani Camper Area",
+        "comune": "Palau (Porto Pollo)",
+        "provincia": "SS",
+        "coordinate_gps": "circa N 41.13, E 9.34",
+        "servizi": {
+          "scarico_acque_nere": true,
+          "acqua_potabile": true,
+          "elettricita": true,
+          "docce": true,
+          "wifi": true,
+          "lavatrice": false,
+          "bar_ristorante": true
+        },
+        "piazzole": "circa 40",
+        "costi": {
+          "bassa_stagione": "€20/notte",
+          "alta_stagione": "€35–50/notte"
+        },
+        "apertura": "Aprile–Ottobre",
+        "note": "A Porto Pollo, capitale del kitesurf del Mediterraneo. Vicinanza a resort corsi kitesurf FH Academy e Wind Porto Pollo.",
+        "web": "https://www.isoladeigabbiani.it/en/camper-pitches-parking.html"
+      }
+    ]
+  },
+
+  "sport": {
+
+    "surf_kitesurf": {
+      "localita_principali": [
+        {
+          "nome": "Capo Mannu",
+          "comune": "San Vero Milis",
+          "provincia": "OR",
+          "descrizione": "Spot leggendario per surf e windsurf. Venti forti, onde fino a 4 metri. Punto di riferimento europeo per il surf atlantico mediterraneo.",
+          "discipline": ["windsurf", "surf", "kitesurf", "wingfoil", "SUP"],
+          "scuole": [
+            {
+              "nome": "Capo Mannu Kiteschool",
+              "web": "https://www.kitesurfing.it/scuolekite/capo-mannu-kiteschool/",
+              "note": "Corsi base e avanzati, kitecamp"
+            },
+            {
+              "nome": "Capo Mannu Surf Center",
+              "web": "https://www.capomannu.it/attivita/windsurf-kitesurf-sup-surf/",
+              "note": "Windsurf, kitesurf, wingfoil, efoil, SUP, surf"
+            },
+            {
+              "nome": "Kite and Wind Camp (sede Capo Mannu)",
+              "web": "http://kiteandwindcamp.com/italia-destinazioni/sardegna-italia-destinazioni/capo-mannu/",
+              "note": "Corsi windsurf, kitecamp residenziali"
+            }
+          ]
+        },
+        {
+          "nome": "Porto Pollo",
+          "comune": "Palau",
+          "provincia": "SS",
+          "descrizione": "Paradiso del kitesurf e windsurf nel nord Sardegna, tra la Maddalena e Palau. Vento regolare maestrale, acque piatte e bassa intensità turistica fuori agosto.",
+          "discipline": ["kitesurf", "windsurf", "wingfoil", "efoil"],
+          "scuole": [
+            {
+              "nome": "FH Academy",
+              "web": "https://fh.academy/",
+              "note": "Kitesurf, wingfoil, windsurf, efoil a Porto Pollo"
+            },
+            {
+              "nome": "Wind Porto Pollo",
+              "web": "https://windportopollo.com/",
+              "tel": "+39 0789 704016",
+              "email": "info@portopollo.it",
+              "note": "Kite, windsurf, wing foil. Centro attrezzato direttamente sulla spiaggia."
+            },
+            {
+              "nome": "PKS Kitesurf Sardegna",
+              "web": "https://pkskitesurf.it/pks-sardegna/",
+              "note": "Corsi kite, wing, windsurf a Porto Pollo"
+            },
+            {
+              "nome": "La Kite Porto Pollo School (SCS – affiliata FIV)",
+              "tel": "+39 338 2460327",
+              "email": "kiteportopollo@gmail.com",
+              "note": "Federazione Italiana Vela, corsi certificati"
+            }
+          ]
+        },
+        {
+          "nome": "Portobello di Gallura",
+          "comune": "Aglientu",
+          "provincia": "SS",
+          "descrizione": "Spot kitesurf emergente nel nord-est Sardegna, laguna naturale protetta dal vento di ponente.",
+          "discipline": ["kitesurf", "windsurf"],
+          "scuole": [
+            {
+              "nome": "Kite and Wind Camp (sede Portobello)",
+              "web": "http://kiteandwindcamp.com/italia-destinazioni/sardegna-italia-destinazioni/",
+              "note": "Corsi e vacanze kitesurf in laguna"
+            }
+          ]
+        }
+      ]
+    },
+
+    "ciclismo_mtb": {
+      "eventi_2026": [
+        {
+          "nome": "GiroSardegna 2026",
+          "date": "25 aprile – 1 maggio 2026",
+          "luogo": "Muravera (Colostrai) e percorsi regionali",
+          "descrizione": "Evento cicloturistico su strada con 6 tappe. Opzioni GranGiro e MedioGiro. Il 1 maggio: Gravel race UCI World Series.",
+          "web": "https://www.girosardegna.it/"
+        },
+        {
+          "nome": "Belvì Trail (MTB)",
+          "tipo": "Percorso permanente",
+          "distanze": "100, 160 o 200 km",
+          "descrizione": "Dalla Barbagia al mare su sterrati, mulattiere e single track. Uno dei percorsi MTB più selvaggi della Sardegna.",
+          "web": "da verificare su portali MTB locali"
+        },
+        {
+          "nome": "Bikepacking Sardegna",
+          "date": "1–14 maggio 2026",
+          "descrizione": "Il più grande evento bikepacking dell'isola.",
+          "web": "da verificare su portali bikepacking"
+        }
+      ],
+      "noleggio_bici": [
+        {
+          "nome": "SardiniaCycling.com",
+          "sedi": ["Quartu Sant'Elena (vicino Cagliari)", "Costa Smeralda"],
+          "tipologie": ["road bike", "mountain bike", "gravel", "e-bike"],
+          "web": "https://www.sardiniacycling.com/it/"
+        }
+      ]
+    },
+
+    "running_maratone": {
+      "eventi_2026": [
+        {
+          "nome": "Sardinia Trail – Urzulei",
+          "data": "Maggio 2026",
+          "distanza": "98.4 km (trail)",
+          "web": "https://www.ahotu.com/calendar/running/italy/sardinia"
+        },
+        {
+          "nome": "Trail del Fluminese – Fluminimaggiore",
+          "data": "Maggio 2026",
+          "distanze": ["9 km", "30.3 km", "56.7 km"],
+          "web": "https://podistiche.it/gare/sardegna"
+        },
+        {
+          "nome": "XTERRA Sardegna (triathlon)",
+          "data": "Inizio ottobre 2026",
+          "luogo": "Sant'Elmo",
+          "distanze": ["16.5 km", "78 km"],
+          "web": "https://www.ahotu.com/calendar/running/italy/sardinia"
+        },
+        {
+          "nome": "Maratonina Città di Uta (28ª edizione)",
+          "data": "22 novembre 2026",
+          "luogo": "Uta (CA)",
+          "distanza": "21.0975 km (mezza maratona)",
+          "web": "https://podistiche.it/gare/sardegna"
+        },
+        {
+          "nome": "CagliariRespira – Cagliari Half Marathon",
+          "data": "6 dicembre 2026",
+          "luogo": "Cagliari",
+          "distanze": ["6 km", "21.0975 km"],
+          "web": "https://www.ahotu.com/calendar/running/italy/sardinia"
+        }
+      ],
+      "calendari_riferimento": [
+        "https://podistiche.it/gare/sardegna",
+        "https://www.ahotu.com/calendar/running/italy/sardinia",
+        "https://atleticasardegna.altervista.org/calendario-2026/"
+      ]
+    },
+
+    "volo_libero": {
+      "descrizione": "Sardegna ottimale per parapendio e deltaplano da aprile a ottobre. Venti termici affidabili, panorami costieri e montani.",
+      "aree_principali": [
+        {
+          "nome": "Bortigali",
+          "provincia": "NU",
+          "note": "Capitale del volo libero sardo. Corsi certificati, voli biposto, voucher regalo."
+        },
+        {
+          "nome": "Sedini",
+          "provincia": "SS",
+          "note": "Pochi minuti da Castelsardo. Decollo con vista sul mare."
+        },
+        {
+          "nome": "Argentiera",
+          "provincia": "SS",
+          "note": "Vicino a Porto Palmas. Costa panoramica."
+        }
+      ],
+      "operatori": [
+        {
+          "nome": "Volo Libero Sardegna",
+          "web": "https://www.vololiberosardegna.it/",
+          "tandem": "https://www.vololiberosardegna.it/TANDEM/home.html",
+          "note": "Voli tandem, corsi, voucher"
+        },
+        {
+          "nome": "ilparapendio.it",
+          "web": "https://ilparapendio.it/",
+          "note": "Informazioni scuole e spot"
+        }
+      ],
+      "periodo_ottimale": "Aprile–Ottobre",
+      "durata_volo_tandem": "15–30 minuti (esperienza totale ~1 ora)"
+    },
+
+    "pesca_sportiva": {
+      "normativa_2026": {
+        "tesserino": "Obbligatorio per la pesca sportiva in mare. Validità annuale (anno solare). Registrazione obbligatoria secondo DM 6 dicembre 2010.",
+        "novita_2026": "Dal 2026 obbligo di registrare le catture tramite app RecFishing (specie soggette: tonno rosso, pesce spada, lampuga, alalunga). Fase transitoria senza sanzioni fino al 31 dicembre 2026.",
+        "pesca_acque_interne": "Licenza tipo B quinquennale per residenti in Sardegna (portale regionale + tassa di concessione regionale).",
+        "pesca_subacquea": "Autorizzazione separata tramite SUS (Sportello Unico Sardegna)."
+      },
+      "riferimenti": [
+        "https://www.sardegnaambiente.it (Corpo Forestale – Pesca sportiva)",
+        "https://www.agenziasardaentrate.it (Licenza tipo B)",
+        "https://fishpro.it/normativa-pesca-sportiva/",
+        "https://www.pescainsardegna.it",
+        "FIPSAS Sardegna: https://www.fipsas.it"
+      ]
+    },
+
+    "golf": {
+      "campi_principali": [
+        {
+          "nome": "Is Arenas Golf & Country Club",
+          "comune": "Narbolia",
+          "provincia": "OR",
+          "buche": 18,
+          "par": 72,
+          "lunghezza": "6.300 metri",
+          "descrizione": "Immerso in 750 ettari di foresta di pini, con 4 km di spiaggia bianca privata. Eletto miglior nuovo campo italiano nel 2002. Regolarmente nella top 20 italiana ed europea.",
+          "eventi_2026": [
+            "23 maggio 2026: Single Play 18 buche Stableford (4 categorie)",
+            "31 maggio 2026: Single Play 18 buche Stableford",
+            "11 luglio 2026: BRETAGNA TOUR – Stableford 18 buche con qualificazione nazionale"
+          ],
+          "web": "https://www.solendragolf.com/blog/is-arenas-golf-country-club----the-complete-visitor-guide-2026",
+          "gare": "https://www.percorsidigolf.com/dbpercorsi/ricerca_gara.php?nome_circolo=172"
+        },
+        {
+          "nome": "Pevero Golf Club",
+          "comune": "Porto Cervo (Arzachena)",
+          "provincia": "SS",
+          "buche": 18,
+          "descrizione": "Dal 1972 considerato uno dei più bei campi da golf d'Europa. Progettato da Robert Trent Jones Sr., affacciato sulla Costa Smeralda.",
+          "web": "https://www.charmingsardinia.com/sardinia/pevero-golf-club"
+        }
+      ],
+      "altri_campi": "https://www.charmingsardinia.com/sardinia/golf-courses"
+    }
+  },
+
+  "trasporti": {
+
+    "aeroporti": [
+      {
+        "nome": "Aeroporto di Cagliari-Elmas (Mario Mameli)",
+        "codice_IATA": "CAG",
+        "comune": "Cagliari/Elmas",
+        "web": "https://www.cagliari-airport.com",
+        "compagnie_2026": ["Ryanair", "easyJet", "Volotea", "ITA Airways", "Aeroitalia", "Wizzair", "Neos"],
+        "destinazioni_principali": {
+          "domestiche": ["Roma Fiumicino (continuità territoriale)", "Milano Linate (continuità territoriale ITA)", "Bergamo", "Bologna", "Venezia", "Napoli", "Palermo", "Torino", "Verona", "Genova (Aeroitalia)"],
+          "internazionali": ["Londra", "Bruxelles", "Barcellona", "Francoforte", "Monaco", "Amsterdam", "Vienna", "Varsavia", "Malta"]
+        },
+        "voli_interni_sardegna": "Da luglio 2026: Aeroitalia collega Cagliari–Olbia e Cagliari–Alghero. Prezzi da €29.99 a €54.99 per tratta.",
+        "note": "Il più trafficato degli aeroporti sardi. Hub principale per voli low cost."
+      },
+      {
+        "nome": "Aeroporto Olbia Costa Smeralda",
+        "codice_IATA": "OLB",
+        "comune": "Olbia",
+        "web": "https://www.geasar.it",
+        "compagnie_2026": ["Ryanair", "easyJet", "Volotea", "ITA Airways", "Aeroitalia", "Delta Air Lines", "British Airways", "Lufthansa"],
+        "destinazioni_principali": {
+          "domestiche": ["Roma Fiumicino", "Milano Linate", "Bergamo", "Bologna", "Venezia", "Napoli", "Palermo"],
+          "internazionali": ["Londra Gatwick", "Londra Heathrow", "Ginevra", "Monaco", "Parigi CDG", "Barcellona", "Madrid", "Amsterdam", "Zurigo", "Siviglia (novità 2026 – martedì e venerdì)"]
+        },
+        "novita_2026": "Dal 21 maggio 2026: Delta Air Lines inaugura il primo volo diretto Olbia–New York (JFK) con 4 frequenze settimanali.",
+        "note": "Aeroporto stagionale per eccellenza. Picco di traffico luglio-agosto. Maggiore offerta internazionale."
+      },
+      {
+        "nome": "Aeroporto Alghero-Fertilia (Riviera del Corallo)",
+        "codice_IATA": "AHO",
+        "comune": "Alghero",
+        "web": "https://www.aeroportodialghero.it",
+        "compagnie_2026": ["Ryanair", "Volotea", "easyJet", "Aeroitalia"],
+        "destinazioni_principali": {
+          "domestiche": ["Roma Fiumicino", "Milano Malpensa", "Bologna", "Venezia", "Bergamo"],
+          "internazionali": ["Londra Stansted", "Barcellona", "Madrid", "Bruxelles Charleroi", "Torino", "Verona", "Firenze", "Lione (novità 2026 – lunedì e venerdì)"]
+        },
+        "note": "Airport più vicino a Sassari (30 km). Buon collegamento con UK e Spagna. Meno affollato di Olbia."
+      }
+    ],
+
+    "traghetti": {
+      "rotte_principali": [
+        {
+          "rotta": "Genova – Porto Torres",
+          "compagnie": ["Tirrenia", "GNV (Grandi Navi Veloci)"],
+          "durata": "10–12 ore",
+          "frequenza": "Quasi giornaliera (partenze prevalentemente notturne)",
+          "operativita": "Tutto l'anno",
+          "prezzi_indicativi": {
+            "ponte_poltrona_bassa": "€35–55",
+            "ponte_poltrona_alta": "€70–110",
+            "cabina_interna_bassa": "€65–90",
+            "cabina_interna_alta": "€115–180",
+            "cabina_esterna_bassa": "€80–120",
+            "cabina_esterna_alta": "€145–230",
+            "auto_inclusa": "+ €70–150 (stagionale)"
+          },
+          "promozioni_2026": "GNV: sconti fino a -40%, annullamento gratuito entro 14 gg. Offerta fino al 16 giugno 2026: -30%.",
+          "web": ["https://www.gnv.it/en/ferries-destinations/sardinia/genoa-porto-torres", "https://www.tirrenia.it"]
+        },
+        {
+          "rotta": "Genova – Olbia",
+          "compagnie": ["GNV", "Moby Lines"],
+          "durata": "10–12 ore",
+          "frequenza": "Stagionale (maggio–ottobre), quotidiana in alta stagione",
+          "operativita": "Stagionale",
+          "prezzi_indicativi": {
+            "bassa_stagione_da": "€40",
+            "alta_stagione_da": "€80–120 (poltrona)",
+            "auto_inclusa": "+ €80–150"
+          },
+          "web": ["https://www.moby.it/rotte/traghetti-sardegna/genova-porto-torres-genova/", "https://www.gnv.it"]
+        },
+        {
+          "rotta": "Livorno – Olbia",
+          "compagnie": ["Moby Lines", "Sardinia Ferries"],
+          "durata": "6.5–9 ore",
+          "frequenza": "Quotidiana in alta stagione",
+          "operativita": "Stagionale (aprile–ottobre principalmente)",
+          "prezzi_indicativi": {
+            "bassa_stagione_da": "€30–50",
+            "alta_stagione_da": "€60–100"
+          },
+          "web": ["https://www.moby.it", "https://sardinias.it/traghetti/compagnie/sardinia-ferries"]
+        },
+        {
+          "rotta": "Civitavecchia – Olbia",
+          "compagnie": ["Moby Lines", "Tirrenia"],
+          "durata": "5.5–8 ore",
+          "frequenza": "Giornaliera in alta stagione",
+          "operativita": "Tutto l'anno (con riduzioni in bassa stagione)",
+          "prezzi_indicativi": {
+            "bassa_stagione_da": "€25–45",
+            "alta_stagione_da": "€60–90"
+          },
+          "web": ["https://www.moby.it", "https://www.tirrenia.it"]
+        },
+        {
+          "rotta": "Civitavecchia – Porto Torres",
+          "compagnie": ["Tirrenia"],
+          "durata": "circa 7 ore",
+          "frequenza": "Settimanale o bisettimanale",
+          "web": ["https://www.tirrenia.it"]
+        },
+        {
+          "rotta": "Civitavecchia – Cagliari",
+          "compagnie": ["Grimaldi Lines"],
+          "durata": "13–15 ore",
+          "frequenza": "3 partenze notturne a settimana",
+          "operativita": "Tutto l'anno",
+          "prezzi_indicativi": {
+            "passaggio_ponte_da": "€63",
+            "cabina_da": "€85",
+            "prezzo_medio": "circa €229 (auto + 2 persone)",
+            "alta_stagione_famiglia_2_2_cabina": "€300–500"
+          },
+          "promozioni_2026": "Sunny Days 2026: -20% su Sardegna, Sicilia e Grecia",
+          "web": ["https://www.grimaldi-lines.com/en/route/civitavecchia-cagliari/"]
+        },
+        {
+          "rotta": "Napoli – Cagliari",
+          "compagnie": ["Grimaldi Lines", "GNV (stagionale)"],
+          "durata": "circa 17 ore",
+          "frequenza": "Settimanale",
+          "web": ["https://www.grimaldi-lines.com", "https://www.gnv.it"]
+        },
+        {
+          "rotta": "Barcellona – Porto Torres",
+          "compagnie": ["GNV"],
+          "durata": "circa 12 ore",
+          "frequenza": "Stagionale",
+          "web": ["https://www.gnv.it"]
+        }
+      ],
+      "piattaforme_prenotazione": [
+        "https://www.sardegnatraghetti.it/",
+        "https://www.traghetti.com/traghetti-sardegna",
+        "https://www.directferries.it/traghetti_sardegna.htm",
+        "https://www.traghettilines.it/it/traghetti-sardegna.aspx"
+      ]
+    },
+
+    "treni": {
+      "gestori": [
+        {
+          "nome": "Trenitalia (RFI – FS)",
+          "tipo": "Rete a scartamento ordinario",
+          "linee_principali": [
+            "Cagliari – Oristano – Macomer – Sassari – Porto Torres",
+            "Cagliari – Decimomannu – Iglesias",
+            "Cagliari – Muravera (linea del Campidano)",
+            "Olbia – Sassari"
+          ],
+          "web": "https://www.trenitalia.com/it/regionale/sardegna.html",
+          "orari_pdf": "https://www.trenitalia.com/content/dam/trenitalia/allegati/info/orario-digitale/orari-regionali/Regionale_Sardegna.pdf",
+          "orari_vigenti_2026": "Da domenica 14 giugno a sabato 12 dicembre 2026",
+          "portale": "https://www.sardegnamobilita.it/open-data/quadri-orari-trenitalia"
+        },
+        {
+          "nome": "ARST (Azienda Regionale Sarda Trasporti) – Servizi Ferroviari",
+          "tipo": "Rete a scartamento ridotto (metrico)",
+          "linee_principali": [
+            "Sassari – Alghero (Linea Verde)",
+            "Sassari – Sorso",
+            "Macomer – Nuoro",
+            "Isili – Sorgono (Trenino Verde – turistica)"
+          ],
+          "trenino_verde": "Treno turistico storico che attraversa la Barbagia. Stagionale (estate). Prenotazione obbligatoria.",
+          "web": "https://www.arst.sardegna.it/servizi-orari/servizi-ferroviari-tpl/",
+          "web_trenino_verde": "https://www.treninoverde.com"
+        }
+      ],
+      "nota": "La rete ferroviaria sarda è limitata rispetto alla penisola. Per destinazioni costiere e molti borghi interni, il bus (ARST) è il mezzo principale."
+    },
+
+    "bus_arst": {
+      "descrizione": "ARST gestisce oltre 350 linee di trasporto extraurbano, coprendo praticamente tutta la Sardegna. Hub principali: stazione ARST di Cagliari, Sassari, Nuoro, Oristano.",
+      "piano_strategico": "Piano 2026–2028 approvato dalla Regione: nuove linee veloci, bus elettrici, migliori connessioni con porti e aeroporti.",
+      "linee_principali_extraurbane": [
+        {"linea": "747", "percorso": "Cagliari ARST – Bono (Piazza Gramsci)", "km": 149, "fermate": 20, "note": "Linea più lunga della rete ARST"},
+        {"linea": "514", "note": "Popolare"},
+        {"linea": "708", "note": "Popolare"},
+        {"linea": "709", "note": "Popolare"},
+        {"linea": "728", "note": "Popolare"}
+      ],
+      "web": "https://www.arst.sardegna.it/",
+      "orari": "https://www.arst.sardegna.it/servizi-orari/servizi-extraurbani/",
+      "portale_mobilita": "https://www.sardegnamobilita.it/open-data/quadri-orari-arst",
+      "biglietti": "Acquistabili a bordo, nelle tabaccherie convenzionate o tramite app regionale"
+    },
+
+    "noleggio_auto": {
+      "operatori_principali": [
+        {
+          "nome": "Hertz / Thrifty / Dollar",
+          "presenza": "Cagliari, Olbia, Alghero (aeroporti e città)",
+          "web": "https://www.hertz.it"
+        },
+        {
+          "nome": "Europcar",
+          "presenza": "Cagliari, Olbia, Alghero",
+          "web": "https://www.europcar.it"
+        },
+        {
+          "nome": "Sixt",
+          "presenza": "Cagliari, Olbia",
+          "web": "https://www.sixt.it"
+        },
+        {
+          "nome": "Only Sardinia (indipendente)",
+          "presenza": "Olbia aeroporto",
+          "web": "https://www.only-sardinia.com/en/olbia-airport-2/"
+        },
+        {
+          "nome": "Autonoleggio Sardinya",
+          "presenza": "Alghero, Olbia",
+          "web": "https://www.autonoleggiosardinya.com/en/autonoleggio-alghero/"
+        }
+      ],
+      "prezzi_indicativi_estate": "Auto economy: €40–70/giorno. SUV: €80–130/giorno. Consigliato prenotare almeno 2–3 mesi prima per luglio-agosto.",
+      "nota": "Sardegna richiede auto propria per visitare le spiagge più belle e i borghi interni. I mezzi pubblici non coprono le cale principali."
+    },
+
+    "noleggio_moto_scooter": {
+      "operatori_principali": [
+        {
+          "nome": "AM Service (moto e scooter)",
+          "sede": "Olbia aeroporto",
+          "web": "https://www.amserviceonline.it/en/motorcycle-rental/"
+        },
+        {
+          "nome": "Ellepi Autonoleggio",
+          "sede": "Olbia aeroporto",
+          "web": "https://www.ellepirental.com/en/"
+        },
+        {
+          "nome": "Car.Bus.Tec",
+          "sede": "Cagliari (7 min dall'aeroporto)",
+          "web": "https://www.carbustec.com/",
+          "note": "Auto, moto, scooter, biciclette"
+        },
+        {
+          "nome": "Autonoleggio Sardinya (moto)",
+          "sede": "Alghero",
+          "web": "https://www.autonoleggiosardinya.com/en/noleggio-moto/"
+        },
+        {
+          "nome": "RentalMotorbike (aggregatore)",
+          "web": "https://www.rentalmotorbike.com/motorcycle-rental-sardegna"
+        }
+      ],
+      "prezzi_indicativi_estate": {
+        "scooter_50_125cc": "€35–50/giorno",
+        "moto_media_cilindrata": "€60–100/giorno",
+        "moto_avventura_gr": "€90–150/giorno"
+      },
+      "nota": "Prenotazione online consigliata in estate. Deposito cauzionale richiesto (spesso con carta di credito)."
+    }
+  }
+}

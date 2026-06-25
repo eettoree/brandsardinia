@@ -1,0 +1,1172 @@
+{
+  "meta": {
+    "generated": "2026-06-23",
+    "sources": [
+      "fondazionebarumini.it",
+      "musei.sardegna.beniculturali.it",
+      "museinazionalicagliari.cultura.gov.it",
+      "sardegnaturismo.it",
+      "sardegnacultura.it",
+      "donnanuragica.com",
+      "isresardegna.it",
+      "museoman.it",
+      "fondazionepulacultura.it",
+      "coopculture.it",
+      "whc.unesco.org"
+    ],
+    "note": "Orari e prezzi soggetti a variazioni stagionali. Verificare sempre prima della visita."
+  },
+
+  "citta": [
+    {
+      "id": "cagliari",
+      "nome": "Cagliari",
+      "tipo": "città",
+      "coordinate": { "lat": 39.2238, "lng": 9.1217 },
+      "descrizione_storica": "Capitale della Sardegna, abitata da oltre tremila anni. Le sue radici affondano nella civiltà fenicia (IX sec. a.C.), poi cartaginese e romana (Carales). Dominata da pisani, aragonesi e spagnoli, conserva testimonianze stratificate nei quattro quartieri storici: Castello, Marina, Stampace e Villanova. La città sorge su un promontorio calcareo a 100 m s.l.m. affacciato sul Golfo degli Angeli.",
+      "attrazioni_principali": [
+        "Quartiere Castello con la Torre dell'Elefante e la Torre di San Pancrazio (XIV sec.)",
+        "Bastione Saint Remy (1896-1902) - terrazza panoramica",
+        "Cattedrale di Santa Maria (stile pisano-romanico, rifacimenti barocchi)",
+        "Anfiteatro Romano (II sec. d.C.) - scavato nella roccia calcarea",
+        "Necropoli punica di Tuvixeddu - la più grande necropoli fenicio-punica del Mediterraneo",
+        "Orto Botanico (Università degli Studi di Cagliari) - 5000 specie vegetali",
+        "Parco di Molentargius-Saline - fenicotteri rosa",
+        "Castello di San Michele (XI sec.) - vista panoramica",
+        "Anfiteatro Romano"
+      ],
+      "come_raggiungere": {
+        "da_cagliari": "Sede - Aeroporto Mario Mameli (CAG) a 7 km dal centro",
+        "da_olbia": "262 km in auto via SS131 - circa 3h15min",
+        "da_alghero": "230 km in auto via SS131 - circa 2h45min"
+      },
+      "tempo_consigliato": "2-3 giorni",
+      "servizi": {
+        "parcheggio": "Parcheggi a pagamento in tutto il centro; P Cittadella dei Musei, P Bastione",
+        "ristoranti": "Alta densità nel quartiere Marina e Stampace",
+        "tour_guidati": "Disponibili tramite agenzie locali e Cagliari Turismo"
+      },
+      "contatti": {
+        "tel": "+39 070 6776397",
+        "web": "https://cagliariturismo.comune.cagliari.it",
+        "email": "info@cagliariturismo.it"
+      }
+    },
+    {
+      "id": "alghero",
+      "nome": "Alghero",
+      "tipo": "città",
+      "coordinate": { "lat": 40.5594, "lng": 8.3189 },
+      "descrizione_storica": "Fondata dai Doria genovesi nel XII sec., conquistata dagli Aragonesi nel 1353 che la ripopolarono con coloni catalani. L'influenza catalana è ancora viva nella lingua algherese (variante del catalano), nell'architettura gotico-catalana e nei toponimi. Il centro storico è tra i meglio conservati dell'isola, con oltre il 70% delle mura medievali intatte.",
+      "attrazioni_principali": [
+        "Bastioni aragonesi con torri difensive (Bastione della Maddalena, Torre di Sulis, Porta Terra)",
+        "Cattedrale di Santa Maria (1530-1862) - mix gotico-catalano e neoclassico",
+        "Complesso Monumentale di San Francesco - gotico-catalano",
+        "Grotta di Nettuno a Capo Caccia - raggiungibile in barca o via Escala del Cabirol (654 gradini)",
+        "MUSA - Museo Archeologico della Città",
+        "Museo del Corallo (Villa Costantino)",
+        "Museo Diocesano d'Arte Sacra",
+        "Porto storico e lungomare"
+      ],
+      "come_raggiungere": {
+        "da_cagliari": "230 km via SS131 - circa 2h45min; Aeroporto Alghero-Fertilia a 12 km",
+        "da_olbia": "174 km via SS597 - circa 2h",
+        "da_alghero": "Sede - Aeroporto Alghero-Fertilia (AHO) a 12 km"
+      },
+      "tempo_consigliato": "1-2 giorni",
+      "servizi": {
+        "parcheggio": "Parcheggi periferici al centro storico; navette verso bastioni",
+        "ristoranti": "Concentrati nel centro storico, specialità aragoste e pesce",
+        "tour_guidati": "Sistema Museale della Città di Alghero - tel. 079 9735041"
+      },
+      "contatti": {
+        "tel": "+39 079 9975054",
+        "web": "https://www.alghero-turismo.it",
+        "email": ""
+      }
+    },
+    {
+      "id": "sassari",
+      "nome": "Sassari",
+      "tipo": "città",
+      "coordinate": { "lat": 40.7259, "lng": 8.5553 },
+      "descrizione_storica": "Seconda città della Sardegna per popolazione, fondata probabilmente nel XII sec. da popolazioni dell'antica Turris Libisonis (Porto Torres) in fuga dalle incursioni saracene. Città universitaria dal 1562, ha sempre avuto un ruolo intellettuale e politico primario. La Cattedrale di San Nicola è un capolavoro di stile gotico-iberico.",
+      "attrazioni_principali": [
+        "Piazza d'Italia - centro civico con Palazzo della Provincia (XIX sec.)",
+        "Cattedrale di San Nicola (XIV-XVIII sec.) - facciata barocca spagnola",
+        "Fontana di Rosello (1605) - simbolo della città",
+        "Chiesa di Santa Maria di Betlem - romanica",
+        "Museo Nazionale Archeologico ed Etnografico 'G.A. Sanna' (via Roma 64)",
+        "Pinacoteca Nazionale",
+        "Palazzo Ducale"
+      ],
+      "come_raggiungere": {
+        "da_cagliari": "210 km via SS131 - circa 2h30min",
+        "da_olbia": "104 km via SS597 - circa 1h15min",
+        "da_alghero": "35 km via SP42 - circa 35min"
+      },
+      "tempo_consigliato": "1 giorno",
+      "servizi": {
+        "parcheggio": "Parcheggi centro e periferici, ampia disponibilità",
+        "ristoranti": "Vasta offerta nel centro storico",
+        "tour_guidati": "Disponibili tramite Proloco"
+      },
+      "contatti": {
+        "tel": "+39 079 2062301",
+        "web": "https://www.comune.sassari.it",
+        "email": ""
+      }
+    },
+    {
+      "id": "nuoro",
+      "nome": "Nuoro",
+      "tipo": "città",
+      "coordinate": { "lat": 40.3211, "lng": 9.3309 },
+      "descrizione_storica": "Definita la 'Atene sarda' per la concentrazione di artisti, scrittori e intellettuali nati qui o che vi hanno vissuto. Grazia Deledda, Premio Nobel per la Letteratura 1926, è la figlia più celebre. La città si trova ai piedi del Monte Ortobene (955 m), in una posizione panoramica sul cuore della Barbagia. Centro di tradizioni, maschere, costumi e musica sarda autentica.",
+      "attrazioni_principali": [
+        "Museo MAN - Arte contemporanea sarda e italiana (via Satta 27)",
+        "Museo Etnografico Sardo ISRE / Museo del Costume (via Mereu 56)",
+        "Casa natale Grazia Deledda - Museo Deleddiano",
+        "Monte Ortobene con Statua del Redentore (1901) - vista su Barbagia e Supramonte",
+        "Cattedrale di Santa Maria della Neve",
+        "Chiesa della Solitudine - tomba di Grazia Deledda",
+        "Museo delle Maschere Mediterranee",
+        "Museo Ciusa - scultura sarda"
+      ],
+      "come_raggiungere": {
+        "da_cagliari": "182 km via SS131 e SS131DCN - circa 2h15min",
+        "da_olbia": "145 km via SS125 - circa 1h50min",
+        "da_alghero": "185 km - circa 2h20min"
+      },
+      "tempo_consigliato": "1-2 giorni",
+      "servizi": {
+        "parcheggio": "Parcheggi centro disponibili",
+        "ristoranti": "Specialità barbaricine: porceddu, culurgiones, pane carasau",
+        "tour_guidati": "Disponibili tramite ISRE e musei locali"
+      },
+      "contatti": {
+        "tel": "+39 0784 216060",
+        "web": "https://www.comune.nuoro.it",
+        "email": ""
+      }
+    },
+    {
+      "id": "oristano",
+      "nome": "Oristano",
+      "tipo": "città",
+      "coordinate": { "lat": 39.9054, "lng": 8.5883 },
+      "descrizione_storica": "Capitale del Giudicato d'Arborea, l'ultimo regno sardo che resistette all'espansione aragonese fino al 1420 grazie alla leggendaria giudicessa Eleonora d'Arborea, autrice della 'Carta de Logu' (1392), uno dei codici giuridici più avanzati dell'epoca medievale. La città è porta d'accesso alla penisola del Sinis, al sito di Tharros e all'area di Monte Prama.",
+      "attrazioni_principali": [
+        "Antiquarium Arborense - museo principale della provincia",
+        "Torre di Mariano II (XIII sec.) - simbolo della città",
+        "Cattedrale di Santa Maria Assunta (XIII sec., rifatta XVIII sec.)",
+        "Piazza Eleonora d'Arborea - centro storico",
+        "Museo Civico",
+        "Penisola del Sinis - paesaggi unici, fenicotteri",
+        "Sito di Monte Prama (Cabras) - giganti nuragici"
+      ],
+      "come_raggiungere": {
+        "da_cagliari": "95 km via SS131 - circa 1h",
+        "da_olbia": "220 km via SS131 - circa 2h30min",
+        "da_alghero": "105 km via SS292 - circa 1h20min"
+      },
+      "tempo_consigliato": "1 giorno",
+      "servizi": {
+        "parcheggio": "Parcheggi in centro e periferici",
+        "ristoranti": "Specialità pesce del Sinis e bottarga di muggine",
+        "tour_guidati": "Disponibili tramite Antiquarium Arborense"
+      },
+      "contatti": {
+        "tel": "+39 0783 791102",
+        "web": "https://www.comune.oristano.it",
+        "email": ""
+      }
+    },
+    {
+      "id": "iglesias",
+      "nome": "Iglesias",
+      "tipo": "città",
+      "coordinate": { "lat": 39.3108, "lng": 8.5379 },
+      "descrizione_storica": "Chiamata Iglesias dagli Aragonesi (XIV sec.) per la ricchezza di chiese, fu fondata dai Pisani nel XIII sec. come Villa di Chiesa, centro dell'attività mineraria dell'Iglesiente. Per secoli ha estratto piombo, zinco e argento. Il suo patrimonio minerario è oggi parte del Parco Geominerario della Sardegna, riconosciuto dall'UNESCO come Geoparco.",
+      "attrazioni_principali": [
+        "Centro storico con mura pisane (XIII sec.)",
+        "Cattedrale di Santa Chiara (XIII-XIV sec.) - gotico-pisana",
+        "Chiesa di San Francesco - gotico-catalana",
+        "Castello Salvaterra - fortezza medievale",
+        "Miniera di Monteponi - visita guidata",
+        "Parco Geominerario UNESCO - Porto Flavia, Nebida, Masua",
+        "Faraglioni di Masua e Pan di Zucchero (132 m)"
+      ],
+      "come_raggiungere": {
+        "da_cagliari": "65 km via SS130 - circa 55min",
+        "da_olbia": "310 km - circa 3h30min",
+        "da_alghero": "240 km - circa 2h50min"
+      },
+      "tempo_consigliato": "1 giorno + escursioni costiere",
+      "servizi": {
+        "parcheggio": "Parcheggi disponibili in centro",
+        "ristoranti": "Trattorie locali nel centro storico",
+        "tour_guidati": "Gite alle miniere prenotabili tramite Iglesias Turismo"
+      },
+      "contatti": {
+        "tel": "+39 0781 274000",
+        "web": "https://www.iglesiasturismo.it",
+        "email": ""
+      }
+    },
+    {
+      "id": "carbonia",
+      "nome": "Carbonia",
+      "tipo": "città",
+      "coordinate": { "lat": 39.1663, "lng": 8.5207 },
+      "descrizione_storica": "Città di fondazione mussoliniana (1938), costruita in soli due anni per servire il bacino carbonifero del Sulcis. Esempio unico di urbanistica razionalista degli anni '30. Oggi è centro del Sulcis-Iglesiente e porta d'accesso all'archeologia fenicio-punica di Monte Sirai e alle isole di Sant'Antioco e San Pietro.",
+      "attrazioni_principali": [
+        "Grande Miniera di Serbariu - Museo del Carbone (galleria sotterranea visitabile)",
+        "Architettura razionalista del centro storico",
+        "Monte Sirai - colonia fenicio-cartaginese (VIII-II sec. a.C.)",
+        "Necropoli punica di Monte Sirai",
+        "Museo Civico di Carbonia - Villa Sulcis",
+        "Villaggio preistorico di Cannas di Sotto"
+      ],
+      "come_raggiungere": {
+        "da_cagliari": "72 km via SS130 - circa 1h",
+        "da_olbia": "335 km - circa 3h45min",
+        "da_alghero": "270 km - circa 3h15min"
+      },
+      "tempo_consigliato": "1 giorno",
+      "servizi": {
+        "parcheggio": "Parcheggi gratuiti vicino alla miniera",
+        "ristoranti": "Offerta nella piazza centrale",
+        "tour_guidati": "Museo del Carbone - visite guidate incluse"
+      },
+      "contatti": {
+        "tel": "+39 0781 694617",
+        "web": "https://www.museodelcarbone.it",
+        "email": ""
+      }
+    },
+    {
+      "id": "la-maddalena",
+      "nome": "La Maddalena",
+      "tipo": "città",
+      "coordinate": { "lat": 41.2131, "lng": 9.4057 },
+      "descrizione_storica": "Capoluogo dell'arcipelago omonimo, composto da 7 isole principali e decine di isolotti. Luogo storico legato a Garibaldi che vi visse dal 1855 fino alla morte (1882) sull'isola di Caprera. L'arcipelago è Parco Nazionale dal 1994, tutela ambienti marini e terrestri di straordinaria bellezza. Collegata a Palau tramite traghetto (15 min).",
+      "attrazioni_principali": [
+        "Compendio Garibaldino di Caprera - casa, museo, tomba dell'eroe",
+        "Memoriale Giuseppe Garibaldi - museo multimediale interattivo",
+        "Museo Navale 'Nino Lamboglia'",
+        "Museo Archeologico Navale (nave romana I sec.)",
+        "Giro dell'arcipelago in barca",
+        "Spiaggia di Spiaggia Rosa (Budelli) - accesso regolamentato"
+      ],
+      "come_raggiungere": {
+        "da_cagliari": "330 km via SS131 fino a Palau + traghetto 15min - circa 4h",
+        "da_olbia": "70 km fino a Palau + traghetto 15min - circa 1h",
+        "da_alghero": "170 km fino a Palau + traghetto 15min - circa 2h15min"
+      },
+      "tempo_consigliato": "1-2 giorni",
+      "servizi": {
+        "parcheggio": "Parcheggi sull'isola principale",
+        "ristoranti": "Ampia offerta nel porto",
+        "tour_guidati": "Escursioni in barca disponibili nel porto"
+      },
+      "contatti": {
+        "tel": "+39 0789 736321",
+        "web": "https://www.sardegnaturismo.it/it/esplora/la-maddalena",
+        "email": ""
+      }
+    },
+    {
+      "id": "arzachena",
+      "nome": "Arzachena",
+      "tipo": "città",
+      "coordinate": { "lat": 41.0831, "lng": 9.3894 },
+      "descrizione_storica": "Comune della Gallura, porta d'accesso alla Costa Smeralda. Territorio ricchissimo di siti preistorici: nuraghi, tombe dei giganti, circoli megalitici e domus de janas che documentano oltre 6000 anni di presenza umana. La zona fu abitata con continuità dal Neolitico Finale all'età del Bronzo.",
+      "attrazioni_principali": [
+        "Necropoli di Li Muri - circoli megalitici (4200-4000 a.C.)",
+        "Tomba dei Giganti di Coddu Vecchju - stele più alta della Sardegna (4 m)",
+        "Tomba dei Giganti di Li Lolghi",
+        "Nuraghe Albucciu",
+        "Tempietto nuragico di Malchittu",
+        "Costa Smeralda e Porto Cervo"
+      ],
+      "come_raggiungere": {
+        "da_cagliari": "308 km via SS131 - circa 3h30min",
+        "da_olbia": "30 km via SS125 - circa 30min",
+        "da_alghero": "155 km - circa 2h"
+      },
+      "tempo_consigliato": "Mezza giornata per i siti",
+      "servizi": {
+        "parcheggio": "Parcheggi nei siti",
+        "ristoranti": "Porto Cervo per alta ristorazione",
+        "tour_guidati": "GESECO Arzachena gestisce i siti"
+      },
+      "contatti": {
+        "tel": "+39 0789 82628",
+        "web": "https://www.gesecoarzachena.it",
+        "email": ""
+      }
+    },
+    {
+      "id": "dorgali",
+      "nome": "Dorgali",
+      "tipo": "città",
+      "coordinate": { "lat": 40.2933, "lng": 9.5883 },
+      "descrizione_storica": "Comune del Nuorese tra i più ricchi di Sardegna per patrimonio naturale e archeologico. Porta d'accesso al Supramonte, alla Gola di Gorropu (canyon più profondo d'Europa, ~500 m), a Cala Luna e ai siti nuragici di Serra Orrios. Rinomato per la produzione di tappeti, ceramiche e vino Cannonau.",
+      "attrazioni_principali": [
+        "Villaggio Nuragico Serra Orrios - ~100 capanne, 2 templi a megaron",
+        "Museo Archeologico di Dorgali (via La Marmora)",
+        "Gola di Gorropu - escursioni guidate",
+        "Cala Luna - accessibile via mare o trekking",
+        "Grotta del Bue Marino",
+        "Cala Gonone - frazione balneare"
+      ],
+      "come_raggiungere": {
+        "da_cagliari": "230 km via SS131 e SS131DCN - circa 2h45min",
+        "da_olbia": "160 km via SS125 - circa 2h",
+        "da_alghero": "215 km - circa 2h40min"
+      },
+      "tempo_consigliato": "1-2 giorni",
+      "servizi": {
+        "parcheggio": "Parcheggi a Cala Gonone",
+        "ristoranti": "Ristoranti locali specialità Barbagia",
+        "tour_guidati": "Museo Archeologico di Dorgali - tel. 0784 96113"
+      },
+      "contatti": {
+        "tel": "+39 0784 96261",
+        "web": "https://www.museoarcheologicodorgali.com",
+        "email": ""
+      }
+    },
+    {
+      "id": "bosa",
+      "nome": "Bosa",
+      "tipo": "città",
+      "coordinate": { "lat": 40.2989, "lng": 8.5028 },
+      "descrizione_storica": "Una delle città più affascinanti della Sardegna, affacciata sul fiume Temo (unico fiume navigabile dell'isola). Il castello Malaspina domina il centro medievale colorato dalle case arroccate sul colle. Centro di produzione di Malvasia di Bosa (DOCG) e di merletto a tombolo. Fondata probabilmente dai Fenici, conquistata dai Doria nel XII sec.",
+      "attrazioni_principali": [
+        "Castello Malaspina (XII sec.) con Cappella de sos Regnos Altos - affreschi catalani",
+        "Centro storico medievale Sa Costa",
+        "Antica conceria sul fiume Temo",
+        "Cattedrale dell'Immacolata",
+        "Chiesa di San Pietro Extramuros (XI sec.) - romanica",
+        "Navigazione sul fiume Temo",
+        "Museo Casa Deriu"
+      ],
+      "come_raggiungere": {
+        "da_cagliari": "190 km via SS131 - circa 2h20min",
+        "da_olbia": "235 km - circa 2h50min",
+        "da_alghero": "60 km via SP105 (panoramica) - circa 1h"
+      },
+      "tempo_consigliato": "1 giorno",
+      "servizi": {
+        "parcheggio": "Parcheggi al lungofiume",
+        "ristoranti": "Specialità Malvasia e pesce fluviale",
+        "tour_guidati": "Disponibili tramite Pro Loco"
+      },
+      "contatti": {
+        "tel": "+39 0785 377108",
+        "web": "https://www.castellodibosa.com",
+        "email": ""
+      }
+    },
+    {
+      "id": "castelsardo",
+      "nome": "Castelsardo",
+      "tipo": "città",
+      "coordinate": { "lat": 40.9167, "lng": 8.7167 },
+      "descrizione_storica": "Fondata dai Doria genovesi nel 1102 come Castelgenovese, poi rinominata Castellaragonese e infine Castelsardo dai Savoia nel 1767. Il castello medievale svetta su un promontorio a picco sul mare con vista sull'Asinara e Santa Teresa Gallura. Centro artigianale dell'intreccio in palma nana, tradizione secolare.",
+      "attrazioni_principali": [
+        "Castello dei Doria (XIII sec.) - Museo dell'Intreccio Mediterraneo",
+        "Centro storico medievale arroccato",
+        "Cattedrale di Sant'Antonio Abate",
+        "Elefante di Castelsardo - roccia naturale",
+        "Panorami sul Golfo dell'Asinara",
+        "Artigianato intreccio in palma nana"
+      ],
+      "come_raggiungere": {
+        "da_cagliari": "235 km via SS131 - circa 2h45min",
+        "da_olbia": "120 km - circa 1h30min",
+        "da_alghero": "60 km via SP81 - circa 1h"
+      },
+      "tempo_consigliato": "Mezza giornata",
+      "servizi": {
+        "parcheggio": "Parcheggi fuori dalle mura medievali",
+        "ristoranti": "Specialità aragosta e pesce",
+        "tour_guidati": "Museo dell'Intreccio - tel. +39 079 6014769"
+      },
+      "contatti": {
+        "tel": "+39 079 470660",
+        "web": "https://www.mimcastelsardo.it",
+        "email": ""
+      }
+    }
+  ],
+
+  "siti_archeologici": [
+    {
+      "id": "su-nuraxi-barumini",
+      "nome": "Nuraghe Su Nuraxi",
+      "localita": "Barumini (SU)",
+      "tipo": "Sito UNESCO - Complesso nuragico",
+      "coordinate": { "lat": 39.7058, "lng": 8.9906 },
+      "descrizione_storica": "Il complesso nuragico più imponente e studiato della Sardegna, inserito nella Lista del Patrimonio Mondiale UNESCO nel 1997 (sito n.833). Edificato a partire dal 1500 a.C., è composto da una torre centrale (mastio) alta originariamente 18,6 m circondata da quattro torri secondarie, un antemurale con altre torri e un villaggio di 200 capanne. Rappresenta la summa della civiltà nuragica. Lo scavo sistematico fu condotto da Giovanni Lilliu a partire dal 1950.",
+      "attrazioni_principali": [
+        "Mastio centrale - torre madre (XV-XIII sec. a.C.)",
+        "Bastione quadrilobato con 4 torri secondarie",
+        "Antemurale esterno",
+        "Villaggio di capanne nuragiche",
+        "Casa Zapata - palazzo baronale cinquecentesco con nuraghe visibile nel pavimento",
+        "Centro Giovanni Lilliu - museo multimediale"
+      ],
+      "orari": {
+        "note": "Aperto tutti i giorni dell'anno, solo con visita guidata obbligatoria",
+        "visite": "Partenza ogni 30 minuti, durata circa 1 ora",
+        "apertura_generale": "Tutto l'anno"
+      },
+      "prezzi": {
+        "intero": "15,00 €",
+        "ridotto": "12,00 € (13-17 anni, over 65, gruppi >20 persone)",
+        "bambini": "9,00 € (7-12 anni)",
+        "gratuito": "Bambini fino a 6 anni",
+        "incluso": "Guida, Casa Zapata, Centro Giovanni Lilliu"
+      },
+      "come_raggiungere": {
+        "da_cagliari": "60 km via SS131 uscita Sanluri - circa 50min",
+        "da_olbia": "240 km - circa 2h50min",
+        "da_alghero": "185 km - circa 2h15min"
+      },
+      "tempo_consigliato": "2-3 ore con tutto il complesso",
+      "servizi": {
+        "parcheggio": "Parcheggio gratuito ampio",
+        "ristoranti": "Bar/ristorante nel complesso; trattorie a Barumini",
+        "tour_guidati": "Obbligatori - inclusi nel prezzo"
+      },
+      "contatti": {
+        "tel": "+39 070 9368128",
+        "web": "https://www.fondazionebarumini.it",
+        "email": "prenotazioni@fondazionebarumini.it"
+      },
+      "unesco": true
+    },
+    {
+      "id": "nuraghe-losa",
+      "nome": "Nuraghe Losa",
+      "localita": "Abbasanta (OR)",
+      "tipo": "Complesso nuragico",
+      "coordinate": { "lat": 40.1167, "lng": 8.7903 },
+      "descrizione_storica": "Tra i nuraghi più grandi e meglio conservati della Sardegna, situato lungo la SS131. Struttura trilobata del Bronzo Medio (XV-XIII sec. a.C.) circondata da un antemurale con tre torri e resti di villaggio. La torre centrale conserva ancora due piani visitabili. Il sito fu riutilizzato in età punica e romana.",
+      "attrazioni_principali": [
+        "Torre centrale trilobata con due piani visitabili",
+        "Antemurale con tre torri aggiuntive",
+        "Villaggio protostorico",
+        "Resti di età punica e romana",
+        "Museo in loco con pannelli illustrativi"
+      ],
+      "orari": {
+        "estate": "Aprile-ottobre: 9:00 - tramonto",
+        "inverno": "Novembre-marzo: 9:00 - 17:00",
+        "note": "Aperto tutti i giorni"
+      },
+      "prezzi": {
+        "intero": "6,00 €",
+        "gruppi": "4,50 € (gruppi >20 persone)",
+        "bambini": "3,00 € (6-13 anni)",
+        "gratuito": "0-5 anni, diversamente abili, ICOM"
+      },
+      "come_raggiungere": {
+        "da_cagliari": "110 km via SS131 - circa 1h10min",
+        "da_olbia": "195 km via SS131 - circa 2h15min",
+        "da_alghero": "100 km via SS131 - circa 1h10min",
+        "note": "Sulla SS131 Carlo Felice, ben segnalato"
+      },
+      "tempo_consigliato": "1-2 ore",
+      "servizi": {
+        "parcheggio": "Parcheggio gratuito adiacente",
+        "ristoranti": "Ristoranti ad Abbasanta (3 km)",
+        "tour_guidati": "Disponibili su prenotazione"
+      },
+      "contatti": {
+        "tel": "+39 0785 52302 / +39 331 9128790",
+        "web": "https://www.nuraghelosa.net",
+        "email": "info@nuraghelosa.net"
+      }
+    },
+    {
+      "id": "nuraghe-santu-antine",
+      "nome": "Nuraghe Santu Antine",
+      "localita": "Torralba (SS)",
+      "tipo": "Complesso nuragico - Valle dei Nuraghi",
+      "coordinate": { "lat": 40.4867, "lng": 8.7697 },
+      "descrizione_storica": "Chiamato 'Sa Domu de su Re' (la casa del re), è uno dei nuraghi più grandiosi dell'isola. La torre centrale (bastiOne) supera i 17 m di altezza su tre piani. Inserito nel paesaggio della Valle dei Nuraghi, comprende un bastione trilobato e un antemurale complesso. Datato al Bronzo Medio (XV sec. a.C.), fu aggiornato nel Bronzo Recente.",
+      "attrazioni_principali": [
+        "Torre centrale (bastione) - 17 m di altezza, 3 piani",
+        "Bastione trilobato",
+        "Cortile centrale con pozzo",
+        "Museo della Valle dei Nuraghi a Torralba",
+        "Paesaggio della Valle dei Nuraghi"
+      ],
+      "orari": {
+        "estate": "1 aprile - 30 settembre: 9:00 - 20:00",
+        "inverno": "1 ottobre - 31 marzo: 9:00 - 17:00",
+        "visite_guidate_estive": "10:30 / 11:30 / 12:30 / 15:30 / 16:30 / 17:30"
+      },
+      "prezzi": {
+        "intero": "10,00 €",
+        "ridotto": "8,00 €",
+        "incluso": "Guida obbligatoria + Museo della Valle dei Nuraghi"
+      },
+      "come_raggiungere": {
+        "da_cagliari": "172 km via SS131 uscita Thiesi - circa 2h",
+        "da_olbia": "140 km via SS597/SS131 - circa 1h40min",
+        "da_alghero": "70 km via SS131 - circa 50min",
+        "note": "Da SS131 uscita Thiesi, SP21 per 1,5 km seguendo indicazioni"
+      },
+      "tempo_consigliato": "2 ore",
+      "servizi": {
+        "parcheggio": "Parcheggio gratuito",
+        "ristoranti": "Trattorie a Torralba (4 km)",
+        "tour_guidati": "Obbligatori - compresi nel prezzo"
+      },
+      "contatti": {
+        "tel": "+39 079 847298",
+        "web": "https://comune.torralba.ss.it",
+        "email": ""
+      }
+    },
+    {
+      "id": "serra-orrios",
+      "nome": "Villaggio Nuragico Serra Orrios",
+      "localita": "Dorgali (NU)",
+      "tipo": "Villaggio nuragico",
+      "coordinate": { "lat": 40.2589, "lng": 9.5131 },
+      "descrizione_storica": "Uno dei villaggi nuragici più grandi e meglio conservati di tutta la Sardegna. Sull'altopiano basaltico di Gollei a 190 m s.l.m., comprende circa 100 capanne, 49 con vani sussidiari, due templi a megaron (il tipo architettonico più raro dell'isola), due tombe megalitiche e strutture per il ricovero degli animali. Abitato dal Bronzo Medio fino all'età romana.",
+      "attrazioni_principali": [
+        "~100 capanne con strutture comunitarie",
+        "Tempietto A e Tempietto B a megaron - rarissimi",
+        "Tomba di Giganti",
+        "Mura perimetrali",
+        "Pozzi e aree comunitarie"
+      ],
+      "orari": {
+        "inverno": "Gen-Mar, Nov-Dic: 9:00-13:00 / 14:00-17:00",
+        "primavera_autunno": "Apr-Giu, Set-Ott: 9:00-13:00 / 15:00-18:00",
+        "note": "Luglio-Agosto orari estesi, verificare presso Museo Archeologico Dorgali"
+      },
+      "prezzi": {
+        "note": "Verificare prezzi aggiornati presso Museo Archeologico di Dorgali",
+        "contatto": "+39 0784 96113"
+      },
+      "come_raggiungere": {
+        "da_cagliari": "230 km - circa 2h45min",
+        "da_olbia": "160 km via SS125 - circa 2h",
+        "da_alghero": "215 km - circa 2h40min",
+        "note": "A 10 km da Dorgali, strada sterrata finale"
+      },
+      "tempo_consigliato": "1-2 ore",
+      "servizi": {
+        "parcheggio": "Parcheggio gratuito sterrato",
+        "ristoranti": "Ristoranti a Dorgali/Cala Gonone",
+        "tour_guidati": "Disponibili tramite Museo Archeologico Dorgali"
+      },
+      "contatti": {
+        "tel": "+39 0784 96113",
+        "web": "https://www.museoarcheologicodorgali.com",
+        "email": ""
+      }
+    },
+    {
+      "id": "necropoli-anghelu-ruju",
+      "nome": "Necropoli di Anghelu Ruju",
+      "localita": "Alghero (SS)",
+      "tipo": "Necropoli preistorica - Domus de Janas",
+      "coordinate": { "lat": 40.6244, "lng": 8.2878 },
+      "descrizione_storica": "Scoperta nel 1903, è tra i più importanti cimiteri preistorici della Sardegna. Comprende quasi 40 domus de janas (case delle fate) - grotticelle artificiali scavate nell'arenaria - utilizzate da culture diverse dal Neolitico finale (Cultura di Ozieri, 3200-2800 a.C.) fino all'età del Bronzo (1600 a.C.). Numerosi gli elementi simbolici: corna di toro scolpite, rilievi antropomorfi, pigmento rosso. Si trova a 5 km dall'Aeroporto di Fertilia.",
+      "attrazioni_principali": [
+        "~38 domus de janas su bancone di arenaria",
+        "Decorazioni scolpite: protomi bovine, simboli solari",
+        "Tomba n.1 - la più grande e decorata",
+        "Pannelli illustrativi in loco",
+        "Possibilità di visita combinata con Nuraghe Palmavera"
+      ],
+      "orari": {
+        "estate": "Giugno-settembre: 10:00-19:00",
+        "primavera_autunno": "Aprile-maggio e ottobre: 10:00-18:00",
+        "inverno": "Novembre-marzo: 10:00-14:00"
+      },
+      "prezzi": {
+        "intero": "5,00 €",
+        "cumulativo": "8,00 € (Necropoli + Nuraghe Palmavera)"
+      },
+      "come_raggiungere": {
+        "da_cagliari": "240 km via SS131 - circa 2h50min; poi SP42",
+        "da_olbia": "185 km - circa 2h15min",
+        "da_alghero": "6 km via SP42 dir. Sassari/Porto Torres - circa 10min",
+        "note": "SP42 dei Due Mari km 21+390 - parcheggio sterrato sulla sinistra"
+      },
+      "tempo_consigliato": "1-2 ore",
+      "servizi": {
+        "parcheggio": "Parcheggio gratuito sterrato",
+        "ristoranti": "Cantina di Sella e Mosca vicina - degustazioni",
+        "tour_guidati": "Disponibili (sistema museale Alghero)"
+      },
+      "contatti": {
+        "tel": "+39 079 9735041",
+        "web": "https://museialghero.it",
+        "email": ""
+      }
+    },
+    {
+      "id": "tomba-giganti-coddu-vecchju",
+      "nome": "Tomba dei Giganti - Coddu Vecchju",
+      "localita": "Arzachena (SS)",
+      "tipo": "Tomba dei Giganti - Età del Bronzo",
+      "coordinate": { "lat": 41.0617, "lng": 9.3736 },
+      "descrizione_storica": "La tomba di Giganti più nota e meglio conservata della Sardegna settentrionale. Edificata originariamente come tomba a galleria nel Bronzo Antico (XVIII sec. a.C.), fu trasformata in tomba di Giganti nel Bronzo Medio (XVI-XIV sec. a.C.) con l'aggiunta dell'esedra semicircolare e della stele centinata alta 4 metri, la più alta dell'isola. Le tombe di Giganti sono sepolture collettive monumentali, espressione della religiosità e della organizzazione sociale nuragica.",
+      "attrazioni_principali": [
+        "Stele centinata - 4 metri, la più alta della Sardegna",
+        "Esedra semicircolare frontale",
+        "Corridoio funerario",
+        "Nuraghe La Prisgiona a 700 m"
+      ],
+      "orari": {
+        "note": "Tutti i giorni: 9:00-19:00"
+      },
+      "prezzi": {
+        "intero": "4,00 €",
+        "ridotto": "3,00 €",
+        "cumulativo_2": "7,00 € intero / 6,00 € ridotto",
+        "cumulativo_3": "10,00 €"
+      },
+      "come_raggiungere": {
+        "da_cagliari": "310 km - circa 3h30min",
+        "da_olbia": "28 km - circa 30min",
+        "da_alghero": "155 km - circa 2h"
+      },
+      "tempo_consigliato": "30-45 minuti",
+      "servizi": {
+        "parcheggio": "Parcheggio gratuito",
+        "ristoranti": "Ristoranti ad Arzachena",
+        "tour_guidati": "GESECO Arzachena"
+      },
+      "contatti": {
+        "tel": "+39 0789 82628",
+        "web": "https://www.gesecoarzachena.it",
+        "email": ""
+      }
+    },
+    {
+      "id": "nora",
+      "nome": "Area Archeologica di Nora",
+      "localita": "Pula (CA)",
+      "tipo": "Sito punico-romano",
+      "coordinate": { "lat": 38.9942, "lng": 9.0139 },
+      "descrizione_storica": "Una delle città più antiche della Sardegna, fondata dai Fenici nel IX-VIII sec. a.C. sul promontorio del Capo di Pula. Poi cartaginese, poi romana (dal 238 a.C.), divenne una fiorente città portuale con foro, templi, terme, mosaici e teatro. Parzialmente sommersa dal mare per subsidenza del suolo. Conserva le strutture romane più complete dell'isola: le terme, il teatro (unico in Sardegna), le strade lastricate.",
+      "attrazioni_principali": [
+        "Teatro romano - unico teatro romano in Sardegna",
+        "Terme romane con mosaici",
+        "Foro e templi",
+        "Strade lastricate romane",
+        "Tophet fenicio-punico",
+        "Torri puniche",
+        "Torre di Coltellazzo (spagnola, XVI sec.)"
+      ],
+      "orari": {
+        "estate": "Giugno-ottobre: 9:00-20:00",
+        "primavera": "Marzo-maggio: 9:00-19:00",
+        "inverno": "Novembre-febbraio: 9:00-17:00",
+        "visite_guidate": "Partenza ogni 30 minuti (italiano/inglese), obbligatoria",
+        "audioguida": "App 'Norapp' gratuita su Google Play e App Store"
+      },
+      "prezzi": {
+        "adulti": "8,00 €",
+        "under_18": "4,50 €",
+        "scolaresche": "4,00 €",
+        "gruppi_20plus": "6,50 €",
+        "croceristi": "6,00 €"
+      },
+      "come_raggiungere": {
+        "da_cagliari": "40 km via SS195 - circa 40min",
+        "da_olbia": "305 km - circa 3h30min",
+        "da_alghero": "270 km - circa 3h15min"
+      },
+      "tempo_consigliato": "2-3 ore",
+      "servizi": {
+        "parcheggio": "Parcheggio a pagamento (estate)",
+        "ristoranti": "Ristoranti a Pula, hotel sulla spiaggia di Nora",
+        "tour_guidati": "Obbligatori - compresi nel prezzo"
+      },
+      "contatti": {
+        "tel": "+39 329 6715230 / +39 392 0448674",
+        "web": "https://www.fondazionepulacultura.it",
+        "email": "info@fondazionepulacultura.it"
+      }
+    },
+    {
+      "id": "tharros",
+      "nome": "Area Archeologica di Tharros",
+      "localita": "Cabras (OR) - Penisola del Sinis",
+      "tipo": "Sito fenicio-punico-romano",
+      "coordinate": { "lat": 39.8886, "lng": 8.4494 },
+      "descrizione_storica": "Fondata dai Fenici nell'VIII sec. a.C. sulla punta della penisola del Sinis, poi cartaginese, poi romana (dal 238 a.C. ca.). Fiorente città portuale su doppio porto naturale. Abbandonata nell'XI sec. per le incursioni arabe. Conserva colonne romane erette (terme), resti di templi punici e romani, strade lastricate, mosaici, terme. Il sito si affaccia sul mare in posizione spettacolare.",
+      "attrazioni_principali": [
+        "Colonne corinzie romane - simbolo del sito",
+        "Terme romane con mosaici",
+        "Tempio punico-romano",
+        "Tophet fenicio-punico",
+        "Necropoli",
+        "Torre spagnola di San Giovanni (XVI sec.)",
+        "Vista sul Golfo di Oristano"
+      ],
+      "orari": {
+        "estate": "Giugno-agosto: 9:00-20:00",
+        "primavera_autunno": "Aprile-maggio, settembre-ottobre: 9:00-18:00 (tutti i giorni)",
+        "inverno": "Novembre-marzo: martedì-domenica 9:00-17:00"
+      },
+      "prezzi": {
+        "solo_sito": "9,00 €",
+        "sito_torre": "11,00 €",
+        "note": "Sconti per comitive, over 65, studenti"
+      },
+      "come_raggiungere": {
+        "da_cagliari": "108 km via SS131 uscita Oristano Nord + Cabras - circa 1h20min",
+        "da_olbia": "235 km - circa 2h45min",
+        "da_alghero": "115 km via SS292 - circa 1h30min",
+        "note": "Da Oristano: seguire indicazioni Cabras-San Giovanni di Sinis. Parcheggio a 500-800m dall'ingresso"
+      },
+      "tempo_consigliato": "2-3 ore",
+      "servizi": {
+        "parcheggio": "Parcheggio gratuito a San Giovanni di Sinis",
+        "ristoranti": "Ristoranti a San Giovanni di Sinis, specialità bottarga",
+        "tour_guidati": "Disponibili - CoopCulture"
+      },
+      "contatti": {
+        "tel": "+39 0783 370019",
+        "web": "https://www.coopculture.it/it/poi/area-archeologica-di-tharros/",
+        "email": ""
+      }
+    },
+    {
+      "id": "anfiteatro-romano-cagliari",
+      "nome": "Anfiteatro Romano di Cagliari",
+      "localita": "Cagliari",
+      "tipo": "Sito romano",
+      "coordinate": { "lat": 39.2260, "lng": 9.1125 },
+      "descrizione_storica": "Il monumento romano più importante della Sardegna, scavato parzialmente nella roccia calcarea nel II sec. d.C. Poteva ospitare fino a 10.000 spettatori. Utilizzato per combattimenti di gladiatori e cacce agli animali. In parte distrutto nel Medioevo per ricavare materiali da costruzione. Oggi ospita spettacoli estivi. Si trova nel verde tra viale Buoncammino e viale Sant'Ignazio.",
+      "attrazioni_principali": [
+        "Cavea scavata nella roccia",
+        "Arena centrale",
+        "Corridoi sotterranei (carceri e depositi)",
+        "Vomitoria (accessi)",
+        "Veduta panoramica sul colle"
+      ],
+      "orari": {
+        "estate": "28 aprile - 30 settembre: 10:00-13:00 e 15:00-19:00",
+        "inverno": "1 ottobre - 27 aprile: 10:00-17:00"
+      },
+      "prezzi": {
+        "intero": "3,00 €",
+        "ridotto": "2,00 € (under 26, over 65, gruppi ≥15)",
+        "gratuito": "Disabili e accompagnatori",
+        "cumulativo_beni": "6,00 € (Anfiteatro + Cripta Santa Restituta + Villa Tigellio) valido 1 settimana",
+        "cumulativo_totale": "13,00 € (beni culturali + musei civici) valido 2 settimane"
+      },
+      "come_raggiungere": {
+        "da_cagliari": "In città - raggiungibile a piedi dal centro",
+        "note": "Tra viale Buoncammino, viale Sant'Ignazio e viale Anfiteatro"
+      },
+      "tempo_consigliato": "1 ora",
+      "servizi": {
+        "parcheggio": "Strada adiacente, parcheggi in zona",
+        "ristoranti": "Ristoranti nel quartiere Villanova",
+        "tour_guidati": "Disponibili su prenotazione"
+      },
+      "contatti": {
+        "tel": "+39 070 6776397",
+        "web": "https://cagliariturismo.comune.cagliari.it/en/vivicagliari/roman-amphitheatre",
+        "email": ""
+      }
+    }
+  ],
+
+  "musei": [
+    {
+      "id": "museo-archeologico-cagliari",
+      "nome": "Museo Nazionale Archeologico di Cagliari",
+      "localita": "Cagliari",
+      "tipo": "Museo statale - Archeologia",
+      "coordinate": { "lat": 39.2167, "lng": 9.1167 },
+      "indirizzo": "Piazza Arsenale 1, 09124 Cagliari (Cittadella dei Musei, quartiere Castello)",
+      "descrizione": "Il principale museo della Sardegna e uno dei più importanti d'Italia per l'archeologia preistorica e protostorica. La collezione comprende oltre 4000 reperti che coprono 7000 anni di storia, dal Neolitico al Medioevo. Imperdibili: le statuette neolitiche in marmo ('Dee Madri'), i bronzetti nuragici (guerrieri, animali, navicelle votive), la collezione fenicio-punica, i sarcofagi romani e gli avori medievali.",
+      "attrazioni_principali": [
+        "Idoli neolitici - Dee Madri in marmo e pietra",
+        "Bronzetti nuragici - guerrieri, animali, navicelle votive (XII-VIII sec. a.C.)",
+        "Collezione fenicia e punica - gioielli, amuleti, ceramiche",
+        "Stele punica di Nora - una delle più antiche iscrizioni in fenicio d'Occidente",
+        "Sculture romane",
+        "Reperti medievali - acquamanile del XI sec.",
+        "Pinacoteca Nazionale (stessa biglietteria)"
+      ],
+      "orari": {
+        "note": "Lunedì-domenica: 8:30-19:30 (biglietteria chiude 18:45)"
+      },
+      "prezzi": {
+        "intero": "10,00 € (Museo Archeologico + Pinacoteca Nazionale)",
+        "acquisto": "App Musei Italiani o portale museiitaliani.it"
+      },
+      "come_raggiungere": {
+        "da_cagliari": "In città - Cittadella dei Musei, quartiere Castello",
+        "note": "A piedi dal centro o bus linee 1, 5, 9"
+      },
+      "tempo_consigliato": "2-3 ore",
+      "servizi": {
+        "parcheggio": "Parcheggio Castello nelle vicinanze",
+        "ristoranti": "Ristoranti nel quartiere Castello",
+        "tour_guidati": "Disponibili su prenotazione"
+      },
+      "contatti": {
+        "tel": "+39 070 655911",
+        "web": "https://museinazionalicagliari.cultura.gov.it",
+        "email": "man-ca@cultura.gov.it",
+        "prenotazioni": "man-ca.prenotazioni@cultura.gov.it"
+      }
+    },
+    {
+      "id": "museo-man-nuoro",
+      "nome": "MAN - Museo d'Arte Provincia di Nuoro",
+      "localita": "Nuoro",
+      "tipo": "Museo d'arte contemporanea",
+      "coordinate": { "lat": 40.3217, "lng": 9.3331 },
+      "indirizzo": "Via Sebastiano Satta 27, 08100 Nuoro",
+      "descrizione": "Fondato nel 2000, il MAN è il principale museo d'arte contemporanea della Sardegna. Ospita mostre temporanee di livello nazionale e internazionale, con focus su arte sarda moderna (XX-XXI sec.) e italiana. Possiede una collezione permanente di oltre 400 opere tra pittura, scultura e installazioni. Riconosciuto come uno dei musei più vivaci del Sud Italia.",
+      "attrazioni_principali": [
+        "Collezione permanente: arte sarda del '900 - Biasi, Ciusa, Ballero, Delitala",
+        "Mostre temporanee di arte contemporanea nazionale/internazionale",
+        "Archivio fotografico sardo",
+        "Bookshop e caffetteria"
+      ],
+      "orari": {
+        "estate": "Apertura continuata: 10:00-20:00",
+        "inverno": "Apertura continuata: 10:00-19:00",
+        "chiusura": "Lunedì",
+        "note_2026": "Dal 15 giugno al 2 luglio 2026 il museo resterà chiuso"
+      },
+      "prezzi": {
+        "intero": "5,00 € (over 25)",
+        "ridotto": "3,00 € (18-25 anni)",
+        "gratuito": "Under 18; prima domenica del mese"
+      },
+      "come_raggiungere": {
+        "da_cagliari": "182 km via SS131 - circa 2h15min",
+        "da_olbia": "145 km via SS125 - circa 1h50min",
+        "da_alghero": "185 km - circa 2h20min"
+      },
+      "tempo_consigliato": "1-2 ore",
+      "servizi": {
+        "parcheggio": "Parcheggi in zona centro",
+        "ristoranti": "Caffetteria in museo; ristoranti nel centro di Nuoro",
+        "tour_guidati": "Disponibili su prenotazione"
+      },
+      "contatti": {
+        "tel": "+39 0784 252110",
+        "web": "https://www.museoman.it",
+        "email": "info@museoman.it"
+      }
+    },
+    {
+      "id": "museo-del-costume-nuoro",
+      "nome": "Museo della Vita e delle Tradizioni Popolari Sarde (Museo del Costume)",
+      "localita": "Nuoro",
+      "tipo": "Museo etnografico - ISRE",
+      "coordinate": { "lat": 40.3158, "lng": 9.3264 },
+      "indirizzo": "Via Antonio Mereu 56, 08100 Nuoro",
+      "descrizione": "Gestito dall'Istituto Superiore Regionale Etnografico (ISRE), è il più importante museo etnografico sardo. Espone la più completa collezione di costumi tradizionali sardi (oltre 6000 pezzi), gioielli in filigrana d'argento e corallo, maschere del carnevale (Mamuthones, Issohadores), tessuti, strumenti musicali, ceramiche e oggetti della vita quotidiana. Documenta oltre 300 anni di cultura materiale sarda.",
+      "attrazioni_principali": [
+        "Costumi tradizionali sardi - oltre 6000 pezzi da tutte le aree dell'isola",
+        "Gioielli in filigrana d'argento e oro con corallo",
+        "Maschere del carnevale sardo - Mamuthones di Mamoiada",
+        "Tessuti: orbace, bisso marino, merletti",
+        "Strumenti musicali tradizionali: launeddas, organetti",
+        "Ceramiche, coltelli, cesti"
+      ],
+      "orari": {
+        "agosto_settembre": "12 agosto - 30 settembre: tutti i giorni 10:00-20:00",
+        "ottobre": "1-31 ottobre: tutti i giorni 10:00-19:00",
+        "inverno": "1 novembre - 15 marzo: 10:00-13:00 / 15:00-19:00 (chiuso lunedì)",
+        "primavera_estate": "16 marzo - 11 agosto: 10:00-13:00 / 15:00-20:00 (chiuso lunedì)"
+      },
+      "prezzi": {
+        "intero": "5,00 €",
+        "ridotto": "3,00 € (under 18, over 65)",
+        "cumulativo": "10,00 € (Museo del Costume + Museo Deleddiano + Museo della Ceramica)",
+        "gratuito": "Prima domenica del mese, studenti, disabili, ICOM"
+      },
+      "come_raggiungere": {
+        "da_cagliari": "182 km - circa 2h15min",
+        "da_olbia": "145 km - circa 1h50min",
+        "da_alghero": "185 km - circa 2h20min"
+      },
+      "tempo_consigliato": "1-2 ore",
+      "servizi": {
+        "parcheggio": "Parcheggio adiacente",
+        "ristoranti": "Ristoranti nel centro di Nuoro",
+        "tour_guidati": "Disponibili su prenotazione"
+      },
+      "contatti": {
+        "tel": "+39 0784 257035 / +39 0784 242900",
+        "web": "https://www.isresardegna.it",
+        "email": "isresardegna@pec.it"
+      }
+    },
+    {
+      "id": "museo-sanna-sassari",
+      "nome": "Museo Nazionale Archeologico ed Etnografico 'G.A. Sanna'",
+      "localita": "Sassari",
+      "tipo": "Museo statale - Archeologia ed Etnografia",
+      "coordinate": { "lat": 40.7267, "lng": 8.5594 },
+      "indirizzo": "Via Roma 64, 07100 Sassari",
+      "descrizione": "Fondato nel 1878 grazie alla donazione del collezionista Giovanni Antonio Sanna, è il secondo museo più importante della Sardegna. Sezione archeologica con reperti dal Paleolitico all'età medievale provenienti dalla Sardegna settentrionale; sezione etnografica con collezione di costumi, gioielli, tessuti e oggetti quotidiani. Vicinissimo a Piazza d'Italia.",
+      "attrazioni_principali": [
+        "Reperti preistorici - Neolitico, Calcolitico, età del Bronzo",
+        "Bronzetti nuragici",
+        "Collezione fenicio-punica",
+        "Reperti romani da Turris Libisonis (Porto Torres)",
+        "Sezione etnografica - costumi, gioielli, tessuti del Sassarese",
+        "Pinacoteca con opere sarde (XIV-XIX sec.)"
+      ],
+      "orari": {
+        "note": "Martedì-domenica (chiuso lunedì); prima domenica del mese: 9:00-13:45"
+      },
+      "prezzi": {
+        "intero": "6,00 €",
+        "gratuito": "Prima domenica del mese"
+      },
+      "come_raggiungere": {
+        "da_cagliari": "210 km via SS131 - circa 2h30min",
+        "da_olbia": "104 km via SS597 - circa 1h15min",
+        "da_alghero": "35 km - circa 35min",
+        "note": "A pochi passi da Piazza d'Italia; parcheggi in zona"
+      },
+      "tempo_consigliato": "1-2 ore",
+      "servizi": {
+        "parcheggio": "Parcheggi gratuiti e a pagamento nelle vicinanze",
+        "ristoranti": "Ampia offerta nel centro di Sassari",
+        "tour_guidati": "Disponibili"
+      },
+      "contatti": {
+        "tel": "+39 079 272203",
+        "web": "https://museosanna.cultura.gov.it",
+        "email": ""
+      }
+    },
+    {
+      "id": "antiquarium-arborense-oristano",
+      "nome": "Antiquarium Arborense",
+      "localita": "Oristano",
+      "tipo": "Museo civico - Archeologia",
+      "coordinate": { "lat": 39.9069, "lng": 8.5891 },
+      "indirizzo": "Piazza Corrias, 09170 Oristano",
+      "descrizione": "Il museo più importante della provincia di Oristano, fondato nel 1938 e completamente rinnovato nel 2016. Espone reperti archeologi dall'età Neolitica al Medioevo, con focus particolare sulla civiltà fenicia, cartaginese e romana di Tharros. Comprende la collezione dell'avvocato Pischedda e reperti provenienti dalla Penisola del Sinis. Di notevole interesse la ricostruzione del colle di Tharros.",
+      "attrazioni_principali": [
+        "Reperti da Tharros - ceramiche fenicio-puniche, avori, amuleti",
+        "Statuette votive puniche",
+        "Monete puniche e romane",
+        "Sculture romane da Tharros",
+        "Mosaici romani",
+        "Sezione nuragica",
+        "Ricostruzione urbana di Tharros"
+      ],
+      "orari": {
+        "feriali": "Lunedì-venerdì: 9:00-20:00 (orario continuato)",
+        "festivi": "Sabato-domenica: 9:00-14:00 / 15:00-20:00",
+        "chiusure": "Natale, Santo Stefano, Capodanno"
+      },
+      "prezzi": {
+        "intero": "5,00 €",
+        "ridotto": "2,50 € (6-26 anni, gruppi >15 persone, over 65)",
+        "gratuito": "0-6 anni, disabili, 1 accompagnatore ogni 15",
+        "note": "Visite guidate disponibili in italiano, inglese, francese, spagnolo (consigliata prenotazione)"
+      },
+      "come_raggiungere": {
+        "da_cagliari": "95 km via SS131 - circa 1h",
+        "da_olbia": "220 km - circa 2h30min",
+        "da_alghero": "105 km via SS292 - circa 1h20min"
+      },
+      "tempo_consigliato": "1-2 ore",
+      "servizi": {
+        "parcheggio": "Parcheggi in centro Oristano",
+        "ristoranti": "Ristoranti in centro",
+        "tour_guidati": "Incluse nel prezzo, in 4 lingue"
+      },
+      "contatti": {
+        "tel": "+39 0783 791262",
+        "web": "https://www.antiquariumarborense.it",
+        "email": ""
+      }
+    },
+    {
+      "id": "museo-diocesano-alghero",
+      "nome": "Museo Diocesano d'Arte Sacra di Alghero",
+      "localita": "Alghero (SS)",
+      "tipo": "Museo ecclesiastico",
+      "coordinate": { "lat": 40.5578, "lng": 8.3197 },
+      "indirizzo": "Piazza Duomo 1 / Via Maiorca 1, 07041 Alghero",
+      "descrizione": "Ospitato in un palazzo storico adiacente alla Cattedrale di Santa Maria, conserva opere d'arte sacra provenienti dalle chiese della diocesi di Alghero-Bosa. La collezione spazia dal Medioevo al Settecento: argenterie liturgiche, paramenti sacri, sculture lignee, dipinti su tavola e su tela. Di particolare interesse i pezzi di oreficeria sarda e catalana del XV-XVI sec.",
+      "attrazioni_principali": [
+        "Argenterie liturgiche medievali e rinascimentali",
+        "Sculture lignee policrome catalane (XV-XVI sec.)",
+        "Dipinti su tavola e tela (XIV-XVIII sec.)",
+        "Paramenti sacri ricamati",
+        "Reliquiari e ostensori",
+        "Accesso al campanile della Cattedrale (biglietto cumulativo)"
+      ],
+      "orari": {
+        "inverno": "Gennaio-marzo: venerdì-domenica 10:30-13:00 / 16:30-19:00; lunedì-giovedì su prenotazione",
+        "primavera_autunno": "Aprile-giugno, settembre-ottobre: 10:30-13:00 / 17:00-20:00 (chiuso mercoledì)",
+        "estate": "Luglio-agosto: 10:30-13:00 / 18:00-21:00 (chiuso domenica)",
+        "nota": "Verificare apertura prima della visita - può essere temporaneamente chiuso"
+      },
+      "prezzi": {
+        "intero": "3,50 €",
+        "ridotto": "2,50 €",
+        "cumulativo": "5,00 € (Museo + Campanile)"
+      },
+      "come_raggiungere": {
+        "da_cagliari": "230 km via SS131 - circa 2h45min",
+        "da_olbia": "174 km - circa 2h",
+        "da_alghero": "Centro storico - a piedi dalla Porta Terra"
+      },
+      "tempo_consigliato": "45 minuti - 1 ora",
+      "servizi": {
+        "parcheggio": "Parcheggi periferici al centro storico",
+        "ristoranti": "Numerosi nel centro storico",
+        "tour_guidati": "Su prenotazione"
+      },
+      "contatti": {
+        "tel": "+39 079 9733041",
+        "web": "https://www.diocesialghero-bosa.it",
+        "email": "museodiocesanoalghero@gmail.com"
+      }
+    },
+    {
+      "id": "museo-intreccio-castelsardo",
+      "nome": "Museo dell'Intreccio Mediterraneo - Castello dei Doria",
+      "localita": "Castelsardo (SS)",
+      "tipo": "Museo artigianato e storia",
+      "coordinate": { "lat": 40.9178, "lng": 8.7144 },
+      "indirizzo": "Via Guglielmo Marconi 3, 07031 Castelsardo",
+      "descrizione": "Ospitato nel castello medievale dei Doria (XIII sec.), documenta l'arte dell'intreccio in fibra vegetale (palma nana, giunco, asfodelo) attraverso 9 sale su due livelli. Espone manufatti da Sardegna e paesi mediterranei: cesti, canestri, copricapi, oggetti rituali e quotidiani. La posizione nel castello offre panorami mozzafiato sul mare e sulle coste.",
+      "attrazioni_principali": [
+        "9 sale dell'intreccio - tecniche e materiali",
+        "Manufatti da tutto il Mediterraneo",
+        "Camminamenti di guardia del castello",
+        "Panorama su Asinara e Santa Teresa Gallura",
+        "Bastioni e ponte levatoio originale"
+      ],
+      "orari": {
+        "note": "Verificare presso contatto ufficiale - orari stagionali"
+      },
+      "prezzi": {
+        "note": "Verificare prezzi aggiornati"
+      },
+      "come_raggiungere": {
+        "da_cagliari": "235 km via SS131 - circa 2h45min",
+        "da_olbia": "120 km - circa 1h30min",
+        "da_alghero": "60 km via SP81 - circa 1h"
+      },
+      "tempo_consigliato": "1 ora",
+      "servizi": {
+        "parcheggio": "Parcheggi fuori dalle mura",
+        "ristoranti": "Ristoranti specialità aragosta nel paese",
+        "tour_guidati": "Disponibili"
+      },
+      "contatti": {
+        "tel": "+39 079 6014769",
+        "web": "https://www.mimcastelsardo.it",
+        "email": ""
+      }
+    },
+    {
+      "id": "museo-del-carbone-carbonia",
+      "nome": "Grande Miniera di Serbariu - Museo del Carbone",
+      "localita": "Carbonia (SU)",
+      "tipo": "Museo di archeologia industriale",
+      "coordinate": { "lat": 39.1694, "lng": 8.5222 },
+      "indirizzo": "Via Lubiana, 09013 Carbonia",
+      "descrizione": "La più importante miniera di carbone della Sardegna (attiva 1937-1964) trasformata in museo nel 2006. Include la lampisteria con esposizione permanente su storia del carbone, miniera e città di Carbonia; galleria sotterranea visitabile; sala argani; oltre 10.000 pezzi tra lampade, attrezzi, documenti e fotografie d'epoca. Testimonianza unica dell'archeologia industriale del Sud Sardegna.",
+      "attrazioni_principali": [
+        "Galleria sotterranea visitabile",
+        "Lampisteria - collezione lampade da miniera",
+        "Sala argani e macchinari originali",
+        "Mostra permanente storia del carbone",
+        "Videointerviste ai minatori",
+        "Archivio fotografico d'epoca"
+      ],
+      "orari": {
+        "note": "Verificare orari aggiornati - apertura stagionale"
+      },
+      "prezzi": {
+        "note": "Verificare prezzi aggiornati"
+      },
+      "come_raggiungere": {
+        "da_cagliari": "72 km via SS130 - circa 1h",
+        "da_olbia": "335 km - circa 3h45min",
+        "da_alghero": "270 km - circa 3h15min"
+      },
+      "tempo_consigliato": "2 ore",
+      "servizi": {
+        "parcheggio": "Parcheggio gratuito ampio",
+        "ristoranti": "Bar in loco; ristoranti a Carbonia",
+        "tour_guidati": "Inclusi"
+      },
+      "contatti": {
+        "tel": "+39 0781 694617",
+        "web": "https://www.museodelcarbone.it",
+        "email": ""
+      }
+    }
+  ],
+
+  "siti_aggiuntivi": [
+    {
+      "id": "necropoli-li-muri-arzachena",
+      "nome": "Necropoli di Li Muri - Circoli Megalitici",
+      "localita": "Arzachena (SS)",
+      "tipo": "Necropoli neolitica",
+      "coordinate": { "lat": 41.0700, "lng": 9.3214 },
+      "descrizione": "Il sito più antico di Arzachena, risalente a circa 6000 anni fa (4200-4000 a.C.). Quattro circoli megalitici funerari e una tomba a galleria più tarda. Scoperto nel 1939.",
+      "orari": { "note": "Gestito da GESECO Arzachena - verificare" },
+      "prezzi": { "note": "Compreso in pacchetto cumulativo GESECO" },
+      "contatti": { "tel": "+39 0789 82628", "web": "https://www.gesecoarzachena.it" }
+    },
+    {
+      "id": "compendio-garibaldino-caprera",
+      "nome": "Compendio Garibaldino di Caprera",
+      "localita": "Caprera - La Maddalena (SS)",
+      "tipo": "Museo storico - Casa museo",
+      "coordinate": { "lat": 41.2166, "lng": 9.4611 },
+      "descrizione": "Casa, museo e tomba di Giuseppe Garibaldi nell'isola di Caprera. Dal 2012 è Memoriale Giuseppe Garibaldi - primo museo italiano interamente dedicato a un personaggio storico. 4 padiglioni multimediali sulla vita del generale.",
+      "orari": { "note": "Verificare orari stagionali" },
+      "prezzi": { "note": "Verificare prezzi aggiornati" },
+      "contatti": { "tel": "+39 0789 727162", "web": "https://www.sardegnaturismo.it/it/esplora/musei-garibaldini-di-caprera" }
+    },
+    {
+      "id": "castello-malaspina-bosa",
+      "nome": "Castello Malaspina / Cappella de sos Regnos Altos",
+      "localita": "Bosa (OR)",
+      "tipo": "Castello medievale con affreschi",
+      "coordinate": { "lat": 40.2976, "lng": 8.5049 },
+      "descrizione": "Castello fondato nel 1112 dai Malaspina. La cappella interna conserva un ciclo di affreschi catalani del XIV-XV sec. - tra i più belli e rari della Sardegna.",
+      "orari": {
+        "estate": "Aprile-ottobre: 10:00-19:00 (luglio-agosto fino 19:30)",
+        "inverno": "15 novembre - 14 marzo: sabato, domenica e festivi 10:00-16:00"
+      },
+      "prezzi": {
+        "adulti": "6,50 €",
+        "bambini": "5,50 €",
+        "incluso": "Cappella + Chiesa San Pietro Extramuros"
+      },
+      "contatti": { "tel": "+39 0785 377108", "web": "https://www.castellodibosa.com" }
+    }
+  ]
+}

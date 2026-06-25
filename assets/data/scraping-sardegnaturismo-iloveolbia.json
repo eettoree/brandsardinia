@@ -1,0 +1,479 @@
+[
+  {
+    "sito": "sardegnaturismo.ai",
+    "url": "https://sardegnaturismo.ai/",
+    "gestore": "Smarthub360 S.r.l.s. — P.IVA 04168150920 — info@sardegnaturismo.ai",
+    "lingue": ["IT", "EN", "ES", "FR", "DE", "PT", "RU", "ZH"],
+    "note_struttura": "SPA a pagina singola con anchor (#spiagge, #eventi, #campeggi, ecc.). Pagine separate solo per /campeggi e /cammini. Contenuti dinamici caricati via JS — campeggi e spiagge singole non accessibili via scraping statico.",
+    "categorie": [
+      {
+        "nome": "Spiagge",
+        "sottocategorie": ["Tutte le spiagge", "Dog Friendly", "Naturismo", "Per categoria"]
+      },
+      {
+        "nome": "Cosa fare",
+        "sottocategorie": ["Eventi", "Esperienze", "Campeggi", "Cammini"]
+      },
+      {
+        "nome": "Mappa"
+      },
+      {
+        "nome": "Contatti"
+      }
+    ],
+    "tipologie_spiagge": [
+      {
+        "tipo": "Relax e tranquillità",
+        "descrizione": "Acqua calma, sabbia chiara, ritmi lenti"
+      },
+      {
+        "tipo": "Famiglia e bambini",
+        "descrizione": "Spiagge comode, mare basso, accessi facili"
+      },
+      {
+        "tipo": "Spiagge da sogno",
+        "descrizione": "Acque turchesi, panorami iconici"
+      },
+      {
+        "tipo": "Natura selvaggia",
+        "descrizione": "Calette, grotte, scenari autentici"
+      },
+      {
+        "tipo": "Vita e movida",
+        "descrizione": "Beach club, aperitivi, energia"
+      },
+      {
+        "tipo": "Dog Friendly",
+        "descrizione": "Aree accessibili ai cani"
+      },
+      {
+        "tipo": "Naturismo",
+        "descrizione": "Aree autorizzate per il naturismo"
+      }
+    ],
+    "zone_geografiche": [
+      { "zona": "Nord Sardegna", "carattere": "Spiagge iconiche e acque trasparenti" },
+      { "zona": "Sud Sardegna", "carattere": "Baie luminose e grande relax" },
+      { "zona": "Est Sardegna", "carattere": "Calette, natura e scenari selvaggi" },
+      { "zona": "Ovest Sardegna", "carattere": "Vento, carattere e spiagge spettacolari" }
+    ],
+    "eventi": [
+      {
+        "nome": "Faradda dei Candelieri",
+        "data": "14 agosto",
+        "luogo": "Sassari",
+        "citta": "Sassari",
+        "categoria": "Folklore / UNESCO",
+        "descrizione": "Processione con candelabri votivi, patrimonio UNESCO dell'umanità",
+        "link": null
+      },
+      {
+        "nome": "Festa di Sant'Efisio",
+        "data": "1-4 maggio",
+        "luogo": "Cagliari",
+        "citta": "Cagliari",
+        "categoria": "Pellegrinaggio / Religioso",
+        "descrizione": "Una delle processioni in costume tradizionale più lunghe d'Europa",
+        "link": null
+      },
+      {
+        "nome": "Sa Sartiglia",
+        "data": "15-17 febbraio (periodo Carnevale)",
+        "luogo": "Oristano",
+        "citta": "Oristano",
+        "categoria": "Torneo equestre / Folklore",
+        "descrizione": "Giostra equestre medievale con maschere e costumi tradizionali",
+        "link": null
+      },
+      {
+        "nome": "Carnevale di Mamoiada",
+        "data": "Gennaio-Febbraio",
+        "luogo": "Mamoiada",
+        "citta": "Mamoiada",
+        "categoria": "Carnevale / Folklore",
+        "descrizione": "Carnevale con le maschere tradizionali dei Mamuthones e Issohadores",
+        "link": null
+      },
+      {
+        "nome": "Cavalcata Sarda",
+        "data": "17 maggio (circa)",
+        "luogo": "Sassari",
+        "citta": "Sassari",
+        "categoria": "Festa tradizionale / Folklore",
+        "descrizione": "Sfilata di costumi e cavalieri provenienti da tutta la Sardegna",
+        "link": null
+      },
+      {
+        "nome": "Red Valley Festival",
+        "data": "13-15 agosto",
+        "luogo": "Olbia",
+        "citta": "Olbia",
+        "categoria": "Musica / Festival",
+        "descrizione": "Festival musicale estivo tra i più seguiti del nord Sardegna",
+        "link": "https://redvalleyfestival.com/"
+      },
+      {
+        "nome": "Time in Jazz",
+        "data": "8-16 agosto",
+        "luogo": "Berchidda",
+        "citta": "Berchidda",
+        "categoria": "Musica / Jazz",
+        "descrizione": "Festival jazz internazionale fondato dal musicista Paolo Fresu",
+        "link": null
+      },
+      {
+        "nome": "Rocce Rosse Blues",
+        "data": "Luglio-Agosto",
+        "luogo": "Arbatax",
+        "citta": "Tortolì",
+        "categoria": "Musica / Blues",
+        "descrizione": "Festival blues sulle celebri rocce rosse di Arbatax",
+        "link": null
+      },
+      {
+        "nome": "Calici di Stelle",
+        "data": "Luglio-Agosto",
+        "luogo": "Sardegna (varie location)",
+        "citta": "Varie",
+        "categoria": "Enogastronomia",
+        "descrizione": "Degustazioni di vino sardo sotto le stelle, evento diffuso sull'isola",
+        "link": null
+      },
+      {
+        "nome": "La Notte dei Poeti",
+        "data": "Luglio",
+        "luogo": "Nora",
+        "citta": "Pula",
+        "categoria": "Teatro / Cultura",
+        "descrizione": "Spettacoli teatrali nell'area archeologica di Nora",
+        "link": null
+      },
+      {
+        "nome": "Cortes Apertas",
+        "data": "Settembre-Dicembre",
+        "luogo": "Barbagia (borghi vari)",
+        "citta": "Varie (Barbagia)",
+        "categoria": "Artigianato / Cultura / Folklore",
+        "descrizione": "I borghi della Barbagia aprono corti e case private mostrando artigianato locale",
+        "link": null
+      },
+      {
+        "nome": "Festa di San Simplicio",
+        "data": "~15 maggio",
+        "luogo": "Olbia",
+        "citta": "Olbia",
+        "categoria": "Religiosa / Tradizionale",
+        "descrizione": "Festa patronale di Olbia con processioni e festeggiamenti",
+        "link": null
+      },
+      {
+        "nome": "Sant'Antioco e Mariedda",
+        "data": "31 luglio - 6 agosto",
+        "luogo": "Senorbì",
+        "citta": "Senorbì",
+        "categoria": "Religiosa / Tradizionale",
+        "descrizione": "Festa patronale con tradizioni locali e devozione religiosa",
+        "link": null
+      }
+    ],
+    "esperienze": [
+      {
+        "nome": "Campeggio in Sardegna",
+        "tipo": "Campeggio — piazzola",
+        "zona": "Tutta l'isola",
+        "durata": null,
+        "costo": null,
+        "operatore": "Vari (sezione /campeggi del sito)",
+        "descrizione": "Piazzole in natura a pochi passi dalle spiagge più belle",
+        "link": "https://sardegnaturismo.ai/campeggi"
+      },
+      {
+        "nome": "Glamping in Sardegna",
+        "tipo": "Glamping — lusso nella natura",
+        "zona": "Tutta l'isola",
+        "durata": null,
+        "costo": null,
+        "operatore": "Vari (sezione /campeggi del sito)",
+        "descrizione": "Esperienza glamping con comfort immersi nella natura sarda",
+        "link": "https://sardegnaturismo.ai/campeggi"
+      },
+      {
+        "nome": "Villaggi Camping",
+        "tipo": "Villaggio / Resort all'aperto",
+        "zona": "Tutta l'isola",
+        "durata": null,
+        "costo": null,
+        "operatore": "Vari (sezione /campeggi del sito)",
+        "descrizione": "Villaggi camping con servizi completi",
+        "link": "https://sardegnaturismo.ai/campeggi"
+      }
+    ],
+    "luoghi": [
+      {
+        "nome": "Su Nuraxi",
+        "tipo": "Nuraghe / Sito UNESCO",
+        "zona": "Centro Sardegna",
+        "localita": "Barumini",
+        "orari": null,
+        "costo": null,
+        "descrizione": "Complesso nuragico più importante della Sardegna, patrimonio dell'umanità UNESCO"
+      },
+      {
+        "nome": "Nuraghe Santu Antine",
+        "tipo": "Nuraghe",
+        "zona": "Nord-Est Sardegna",
+        "localita": "Torralba",
+        "orari": null,
+        "costo": null,
+        "descrizione": "Torre in basalto alta 17 metri con corridoi e scale visitabili"
+      },
+      {
+        "nome": "Porto Flavia",
+        "tipo": "Opera ingegneristica / Miniera",
+        "zona": "Sud-Ovest Sardegna",
+        "localita": "Masua (Iglesias)",
+        "orari": null,
+        "costo": null,
+        "descrizione": "Galleria mineraria scavata nella roccia a picco sul mare, vicino al Pan di Zucchero"
+      },
+      {
+        "nome": "Miniera di Arenas",
+        "tipo": "Miniera / Museo",
+        "zona": "Sud-Ovest Sardegna",
+        "localita": "Fluminimaggiore (Iglesiente)",
+        "orari": null,
+        "costo": null,
+        "descrizione": "Gallerie sotterranee nella natura selvaggia dell'Iglesiente"
+      },
+      {
+        "nome": "Gairo Vecchio",
+        "tipo": "Borgo fantasma",
+        "zona": "Est Sardegna",
+        "localita": "Gairo (Ogliastra)",
+        "orari": null,
+        "costo": null,
+        "descrizione": "Borgo abbandonato negli anni '50 dopo una frana, visitabile come museo a cielo aperto"
+      },
+      {
+        "nome": "Tombe dei Giganti",
+        "tipo": "Monumenti megalitici nuragici",
+        "zona": "Tutta la Sardegna",
+        "localita": "300+ siti in tutta l'isola",
+        "orari": null,
+        "costo": null,
+        "descrizione": "Sepolcri collettivi della civiltà nuragica, oltre 300 siti censiti"
+      }
+    ],
+    "itinerari": [
+      {
+        "nome": "La Via dei Santuari — La Via delle Acque",
+        "lunghezza_km": 80,
+        "durata": "4-5 giorni",
+        "difficolta": "Facile-Media",
+        "zona": "Sinis — Paulilatino (centro-ovest)",
+        "tappe": ["San Salvatore di Cabras", "Bonarcado", "Ghilarza", "Santa Cristina di Paulilatino"],
+        "santuari": 6,
+        "descrizione": "Un viaggio attraverso l'acqua come elemento sacro: dalle paludi del Sinis al pozzo sacro nuragico",
+        "link": "https://sardegnaturismo.ai/cammini"
+      },
+      {
+        "nome": "La Via dei Santuari — La Via delle Pietre Fitte",
+        "lunghezza_km": 120,
+        "durata": "6-7 giorni",
+        "difficolta": "Media-Alta",
+        "zona": "Santa Cristina — Fonni (cuore della Sardegna)",
+        "tappe": ["Santa Cristina", "San Mauro di Sorgono", "Tiana", "Fonni"],
+        "santuari": 4,
+        "descrizione": "Il tratto più lungo e impegnativo, sulle tracce delle antiche vie di transumanza",
+        "link": "https://sardegnaturismo.ai/cammini"
+      },
+      {
+        "nome": "La Via dei Santuari — La Via di San Paolo di Monti",
+        "lunghezza_km": 170,
+        "durata": "8-9 giorni",
+        "difficolta": "Media",
+        "zona": "Barbagia verso nord (Gavoi, Mamoiada, Nuoro, Bitti, Lula)",
+        "tappe": ["Gavoi", "Mamoiada", "Nuoro", "Bitti", "Lula", "Su Tempiesu"],
+        "santuari": 9,
+        "descrizione": "Ripercorso del pellegrinaggio dei pastori verso il Santuario di San Paolo. Include Su Tempiesu, fonte sacra nuragica",
+        "link": "https://sardegnaturismo.ai/cammini"
+      },
+      {
+        "nome": "La Via dei Santuari — La Via delle Gallure",
+        "lunghezza_km": 60,
+        "durata": "3-4 giorni + traversata marina",
+        "difficolta": "Facile-Media",
+        "zona": "Monti — Luogosanto — Bonifacio (Corsica)",
+        "tappe": ["Monti", "N.S. di Luogosanto", "Bonifacio (Corsica) — Ermitage de la Trinité"],
+        "santuari": 22,
+        "descrizione": "Chiusura del cammino con 22 chiese campestri. Prosecuzione opzionale in Corsica via traversata marina",
+        "link": "https://sardegnaturismo.ai/cammini"
+      }
+    ],
+    "totale_via_dei_santuari": {
+      "km_totali": 400,
+      "percentuale_sterrato": "90%",
+      "santuari_totali": "20+"
+    },
+    "consigli_stagionali": [
+      { "periodo": "Gennaio-Febbraio", "attivita_consigliate": ["Carnevali (Mamoiada, Oristano)", "Folklore invernale"] },
+      { "periodo": "Maggio", "attivita_consigliate": ["Feste patronali (Sant'Efisio, Cavalcata Sarda, San Simplicio)", "Inizio stagione costiera"] },
+      { "periodo": "Luglio-Agosto", "attivita_consigliate": ["Mare e spiagge", "Festival musicali (Red Valley, Time in Jazz, Rocce Rosse Blues)", "Calici di Stelle", "La Notte dei Poeti", "Faradda dei Candelieri (14 ago)"] },
+      { "periodo": "Settembre-Dicembre", "attivita_consigliate": ["Cortes Apertas in Barbagia", "Cammini (temperatura ideale)", "Turismo culturale fuori stagione"] }
+    ],
+    "social": {
+      "facebook": "https://www.facebook.com/share/1QWKjHP1Jt/",
+      "instagram": "https://www.instagram.com/sardegnaturismo.ai",
+      "whatsapp": "https://wa.me/393517459488"
+    }
+  },
+  {
+    "sito": "iloveolbia.it",
+    "url": "https://www.iloveolbia.it/",
+    "gestore": "Easy Seven Digital — P.IVA IT03066810908",
+    "lingue": ["IT", "EN", "DE", "FR", "ES"],
+    "note_struttura": "SPA WordPress con Elementor. Il menu di navigazione usa anchor (#) — non ci sono pagine per categoria. I contenuti reali sono nella pagina /home/ (Elementor). La sitemap ha solo 1 post (post di default WordPress 'Ciao mondo'). Il sito e' in fase early-stage ma ha contenuti in /home/ tramite il builder Elementor.",
+    "categorie": [
+      "Eventi",
+      "Tradizioni",
+      "Spiagge",
+      "Locali",
+      "Food",
+      "Alloggi",
+      "Negozi",
+      "Noleggi",
+      "Cultura",
+      "Bellezza e benessere",
+      "Luoghi",
+      "Trasporti",
+      "Mappa",
+      "Info"
+    ],
+    "eventi": [
+      {
+        "nome": "Vasco Live 2026",
+        "data": "12-13 giugno 2026",
+        "luogo": "Olbia Arena",
+        "citta": "Olbia",
+        "categoria": "Musica / Concerto",
+        "descrizione": "Concerto di Vasco Rossi all'Olbia Arena — vendita biglietti su TicketOne",
+        "link": "https://www.ticketone.it/"
+      },
+      {
+        "nome": "Red Valley Festival",
+        "data": "Estate (agosto)",
+        "luogo": "Olbia",
+        "citta": "Olbia",
+        "categoria": "Musica / Festival",
+        "descrizione": "Festival musicale estivo tra i più seguiti del nord Sardegna",
+        "link": "https://redvalleyfestival.com/"
+      }
+    ],
+    "esperienze": [],
+    "luoghi": [
+      {
+        "nome": "Pittulongu",
+        "tipo": "Spiaggia",
+        "zona": "Nord di Olbia",
+        "orari": null,
+        "costo": null,
+        "descrizione": "Sabbia chiara, mare limpido e servizi comodi vicino alla città",
+        "link_maps": "https://maps.app.goo.gl/XjemuhC7XMfStS1x7",
+        "link_info": "https://www.sardegnaturismo.it/it/node/15080"
+      },
+      {
+        "nome": "Porto Istana",
+        "tipo": "Spiaggia",
+        "zona": "Costa a est di Olbia",
+        "orari": null,
+        "costo": null,
+        "descrizione": "Spiaggia panoramica con vista sull'isola di Tavolara e acqua trasparente",
+        "link_maps": "https://www.google.com/maps/search/Porto+Istana+Olbia",
+        "link_info": "https://www.sardegnaturismo.it/it/esplora/porto-istana"
+      },
+      {
+        "nome": "Bados",
+        "tipo": "Spiaggia",
+        "zona": "Olbia litorale",
+        "orari": null,
+        "costo": null,
+        "descrizione": "Litorale comodo e frequentato, ideale per famiglie e giornate al mare",
+        "link_maps": "https://www.google.com/maps/search/Bados+Olbia",
+        "link_info": null
+      },
+      {
+        "nome": "Le Saline",
+        "tipo": "Spiaggia",
+        "zona": "Olbia periferia",
+        "orari": null,
+        "costo": null,
+        "descrizione": "Spazi ampi, panorama aperto e zona tranquilla fuori dal centro",
+        "link_maps": "https://www.google.com/maps/search/Spiaggia+Le+Saline+Olbia",
+        "link_info": null
+      },
+      {
+        "nome": "Museo Archeologico di Olbia",
+        "tipo": "Museo / Archeologia",
+        "zona": "Centro Olbia",
+        "orari": null,
+        "costo": null,
+        "descrizione": "Il museo civico racconta la storia di Olbia e del suo territorio dalla preistoria all'epoca medievale",
+        "link_maps": "https://www.google.com/maps/search/Museo+Archeologico+Olbia",
+        "link_info": null
+      },
+      {
+        "nome": "Basilica di San Simplicio",
+        "tipo": "Monumento / Chiesa",
+        "zona": "Centro Olbia",
+        "orari": null,
+        "costo": null,
+        "descrizione": "Monumento simbolo della città, una delle chiese romaniche più importanti della Sardegna settentrionale",
+        "link_maps": "https://www.google.com/maps/search/Basilica+San+Simplicio+Olbia",
+        "link_info": null
+      },
+      {
+        "nome": "Corso Umberto",
+        "tipo": "Area urbana / Passeggiata",
+        "zona": "Centro storico Olbia",
+        "orari": null,
+        "costo": null,
+        "descrizione": "Via principale del centro storico — passeggiata serale tra bar, gelaterie e locali storici",
+        "link_maps": "https://www.google.com/maps/search/Corso+Umberto+Olbia",
+        "link_info": null
+      }
+    ],
+    "locali": [
+      {
+        "nome": "Senso Unico",
+        "tipo": "Bar / Locale / Brunch",
+        "zona": "Olbia",
+        "descrizione": "Colazioni, brunch, aperitivi e serate in una delle zone più vive di Olbia",
+        "sito": "https://www.sensounicolbia.it/",
+        "whatsapp": "https://wa.me/393914734901",
+        "link_maps": "https://www.google.com/maps/search/Senso+Unico+Olbia"
+      }
+    ],
+    "alloggi": [
+      {
+        "nome": "Essenza Hotel",
+        "tipo": "Hotel 4 stelle",
+        "zona": "Centro Olbia",
+        "descrizione": "Hotel 4 stelle in centro, comodo per visitare Olbia e il porto",
+        "sito": "https://www.essenzahotelolbia.com/en/",
+        "whatsapp": "https://wa.me/393495177758",
+        "link_maps": "https://www.google.com/maps/search/Hotel+Essenza+Olbia"
+      },
+      {
+        "nome": "Mercure Olbia",
+        "tipo": "Hotel 4 stelle",
+        "zona": "Olbia",
+        "descrizione": "Hotel 4 stelle con spa, piscina e servizi business",
+        "sito": "https://www.mercureolbia.com/",
+        "whatsapp": null,
+        "link_maps": "https://www.google.com/maps/search/Mercure+Olbia"
+      }
+    ],
+    "itinerari": [],
+    "consigli_stagionali": []
+  }
+]

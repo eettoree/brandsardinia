@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "name": "Sartiglia di Oristano",
+    "date": "2026-03-01",
+    "location": "Piazza Eleonora d'Arborea",
+    "city": "Oristano",
+    "category": "sagra",
+    "description": "La giostra equestre più spettacolare della Sardegna. Cavalieri mascherati tentano di infilzare una stella con la spada al galoppo. Risale al XV secolo.",
+    "link": "https://www.sartiglia.info"
+  },
+  {
+    "id": 2,
+    "name": "Cavalcata Sarda",
+    "date": "2026-05-24",
+    "location": "Corso Vittorio Emanuele",
+    "city": "Sassari",
+    "category": "festival",
+    "description": "Sfilata di costumi tradizionali sardi con centinaia di cavalieri e rappresentanti di 100 comuni. Musiche e danze tradizionali.",
+    "link": "https://www.cavalcatasarda.com"
+  },
+  {
+    "id": 3,
+    "name": "Sagra del Pesce",
+    "date": "2026-06-14",
+    "location": "Porto di Cabras",
+    "city": "Cabras",
+    "category": "sagra",
+    "description": "Festa del pescato locale: muggine, anguille, spigole dello stagno di Cabras. Degustazione bottarga, antipasti di mare e vino bianco.",
+    "link": ""
+  },
+  {
+    "id": 4,
+    "name": "Time in Jazz",
+    "date": "2026-08-08",
+    "location": "Piazze del centro storico",
+    "city": "Berchidda",
+    "category": "festival",
+    "description": "Festival jazz internazionale fondato da Paolo Fresu. Concerti in piazze, cantine, chiese e boschi della Gallura. Una settimana di musica.",
+    "link": "https://www.timeinjazz.it"
+  },
+  {
+    "id": 5,
+    "name": "Notte dei Nuraghi",
+    "date": "2026-07-11",
+    "location": "Nuraghe Su Nuraxi",
+    "city": "Barumini",
+    "category": "cultura",
+    "description": "Visita notturna guidata al nuraghe UNESCO con spettacolo di luci e narrazione sulla civiltà nuragica. Prenotazione obbligatoria.",
+    "link": "https://www.fondazionebarumini.it"
+  },
+  {
+    "id": 6,
+    "name": "Sagra delle Fragole",
+    "date": "2026-04-19",
+    "location": "Piazza principale",
+    "city": "Arbus",
+    "category": "sagra",
+    "description": "Celebrazione della fragola sarda con stand gastronomici, marmellate artigianali, dolci tradizionali e musica folk.",
+    "link": ""
+  },
+  {
+    "id": 7,
+    "name": "Carnevale di Mamoiada",
+    "date": "2026-02-15",
+    "location": "Via Roma",
+    "city": "Mamoiada",
+    "category": "sagra",
+    "description": "Il carnevale più antico e suggestivo della Sardegna con i Mamuthones e Issohadores in maschere di legno e campanacci.",
+    "link": "https://www.mamoiada.org"
+  },
+  {
+    "id": 8,
+    "name": "Sardinia Respect Festival",
+    "date": "2026-07-25",
+    "location": "Arena del Lido",
+    "city": "Cagliari",
+    "category": "festival",
+    "description": "Festival reggae, world music e cultura giamaicana. Artisti internazionali, cucina etnica, artigianato. Una settimana di eventi.",
+    "link": "https://www.sardiniarespect.com"
+  },
+  {
+    "id": 9,
+    "name": "Corsa degli Scalzi",
+    "date": "2026-05-01",
+    "location": "Basilica di Nostra Signora di Bonaria",
+    "city": "Cagliari",
+    "category": "tradizione",
+    "description": "Processione religiosa scalza in salita verso la basilica di Bonaria. Migliaia di fedeli da tutta la Sardegna.",
+    "link": ""
+  },
+  {
+    "id": 10,
+    "name": "Festival del Cinema di Cagliari",
+    "date": "2026-10-10",
+    "location": "Cinema Odissea e spazi urbani",
+    "city": "Cagliari",
+    "category": "cultura",
+    "description": "Rassegna di cinema internazionale con focus su produzioni mediterranee, proiezioni all'aperto e masterclass.",
+    "link": "https://www.cinemacagliari.it"
+  },
+  {
+    "id": 11,
+    "name": "Autunno in Barbagia",
+    "date": "2026-09-20",
+    "location": "Borghi della Barbagia",
+    "city": "Nuoro",
+    "category": "sagra",
+    "description": "24 weekend nei paesi del Nuorese: artigianato, gastronomia locale, cantine aperte, case di corte aperte al pubblico.",
+    "link": "https://www.autunnoinbarbagia.it"
+  },
+  {
+    "id": 12,
+    "name": "Regata Vela d'Epoca",
+    "date": "2026-09-05",
+    "location": "Porto di Alghero",
+    "city": "Alghero",
+    "category": "sport",
+    "description": "Regata velica con imbarcazioni d'epoca nel golfo di Alghero. Spettacolo unico di barche storiche con equipaggi in costume.",
+    "link": ""
+  },
+  {
+    "id": 13,
+    "name": "Sagra del Torrone",
+    "date": "2026-11-01",
+    "location": "Centro storico",
+    "city": "Tonara",
+    "category": "sagra",
+    "description": "La capitale sarda del torrone. Produzione artigianale dal vivo, degustazione, contest tra torronai, musiche tradizionali.",
+    "link": ""
+  },
+  {
+    "id": 14,
+    "name": "Electronic Beats Summer",
+    "date": "2026-08-20",
+    "location": "Spiaggia di Chia",
+    "city": "Domus de Maria",
+    "category": "festival",
+    "description": "Festival di musica elettronica sulla spiaggia di Chia. DJ internazionali, stages al tramonto e di notte sul mare.",
+    "link": ""
+  },
+  {
+    "id": 15,
+    "name": "Giornate del Patrimonio",
+    "date": "2026-09-27",
+    "location": "Siti archeologi e musei",
+    "city": "Tutta la Sardegna",
+    "category": "cultura",
+    "description": "Apertura gratuita di musei, siti archeologici, nuraghi e chiese romaniche in tutta l'isola. Visite guidate incluse.",
+    "link": "https://www.sardegnacultura.it"
+  }
+]

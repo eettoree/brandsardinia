@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="BrandSardinia — Il portale definitivo sulla Sardegna. Pianifica il tuo viaggio con AI, esplora la mappa satellite 3D e scopri eventi, spiagge e sport.">
+  <meta name="keywords" content="Sardegna, Sardinia, vacanze, itinerario, spiagge, eventi, turismo, mappa interattiva, 3D">
+  <meta name="author" content="BrandSardinia">
+  <meta name="theme-color" content="#0a0a0a">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="BrandSardinia — Esplora l'Isola">
+  <meta property="og:description" content="Pianifica il tuo viaggio in Sardegna con AI, mappa satellite 3D, eventi live, spiagge e sport.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BrandSardinia">
+  <meta name="twitter:description" content="Il portale definitivo sulla Sardegna.">
+
+  <title>BrandSardinia — Esplora l'Isola</title>
+
+  <!-- MapLibre GL JS — mappa satellite 3D gratuita -->
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css">
+  <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
+
+  <!-- GSAP 3.x per animazioni -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- CSS principale -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════
+       PRELOADER
+  ══════════════════════════════════════════════════════════ -->
+  <div id="preloader">
+    <div class="preloader-logo">
+      <span class="preloader-b">B</span><span class="preloader-s">S</span>
+    </div>
+    <div class="preloader-tagline">Brand Sardinia</div>
+    <div class="preloader-progress-container">
+      <div class="preloader-bar-wrapper">
+        <div id="preloader-bar"></div>
+      </div>
+      <div id="preloader-percent">0%</div>
+    </div>
+    <div class="preloader-dots">
+      <div class="preloader-dot"></div>
+      <div class="preloader-dot"></div>
+      <div class="preloader-dot"></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════════════════════ -->
+  <section id="hero">
+    <!-- Background con gradiente -->
+    <div class="hero-bg"></div>
+
+    <!-- Stelle generate via JS -->
+    <div class="hero-stars" id="hero-stars"></div>
+
+    <!-- Anelli decorativi -->
+    <div class="hero-ring"></div>
+    <div class="hero-ring-2"></div>
+
+    <!-- Language selector -->
+    <div class="lang-selector">
+      <select id="lang-select" class="lang-select-all" aria-label="Seleziona lingua">
+        <option value="IT">IT</option>
+        <option value="EN">EN</option>
+        <option value="ES">ES</option>
+        <option value="FR">FR</option>
+        <option value="DE">DE</option>
+      </select>
+    </div>
+
+    <!-- Contenuto centrale -->
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span>Sardegna</span>
+      </div>
+      <h1 class="hero-title" data-i18n="hero.title">Benvenuti in BrandSardinia</h1>
+      <p class="hero-subtitle" data-i18n="hero.subtitle">L'isola più bella del Mediterraneo, raccontata da chi la vive.</p>
+      <button id="btn-start">
+        <span data-i18n="hero.cta">Inizia Esperienza</span>
+        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero-bottom-deco">
+      <div class="hero-scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       MAIN APP
+  ══════════════════════════════════════════════════════════ -->
+  <div id="main-app">
+
+    <!-- ─── NAVBAR ─────────────────────────────────────── -->
+    <nav class="app-navbar">
+      <div class="app-navbar-left">
+        <div class="app-logo" onclick="goBackToSelector()" title="Home">
+          Brand<span>S</span>ardinia
+        </div>
+        <button class="btn-back" id="btn-back-main" data-back onclick="goBackToSelector()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span data-i18n="nav.back">Torna al menu</span>
+        </button>
+      </div>
+      <div class="app-navbar-right">
+        <select class="glass-select lang-select-all" aria-label="Lingua">
+          <option value="IT">IT</option>
+          <option value="EN">EN</option>
+          <option value="ES">ES</option>
+          <option value="FR">FR</option>
+          <option value="DE">DE</option>
+        </select>
+      </div>
+    </nav>
+
+    <!-- ─── SECTION SELECTOR ───────────────────────────── -->
+    <div id="section-selector">
+
+      <!-- Hero: 3 card + scroll invite -->
+      <div class="selector-hero">
+        <h2 class="selector-title" data-i18n="selector.title">Cosa vuoi esplorare?</h2>
+        <p class="selector-subtitle" data-i18n="selector.subtitle">Scegli la tua esperienza</p>
+
+        <div class="selector-cards">
+
+          <!-- SardinAI -->
+          <div class="selector-card" data-section="sardinai">
+            <div class="card-icon-wrap">
+              <svg class="card-icon-svg" viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="16" r="8" stroke="currentColor" stroke-width="2"/>
+                <path d="M8 40c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="36" cy="14" r="4" fill="currentColor" opacity="0.5"/>
+                <path d="M33 11l6 6M39 11l-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="card-title" data-i18n="selector.sardinai.title">SardinAI</div>
+            <div class="card-desc" data-i18n="selector.sardinai.desc">Pianifica il tuo viaggio con intelligenza artificiale</div>
+            <span class="card-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+
+          <!-- Mappa -->
+          <div class="selector-card" data-section="map">
+            <div class="card-icon-wrap">
+              <svg class="card-icon-svg" viewBox="0 0 48 48" fill="none">
+                <path d="M6 12l12-6 12 6 12-6v30l-12 6-12-6-12 6V12z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M18 6v30M30 12v30" stroke="currentColor" stroke-width="2"/>
+                <circle cx="24" cy="26" r="4" fill="currentColor" opacity="0.6"/>
+              </svg>
+            </div>
+            <div class="card-title" data-i18n="selector.map.title">Mappa Interattiva</div>
+            <div class="card-desc" data-i18n="selector.map.desc">Esplora la Sardegna in 3D satellite con pin e filtri</div>
+            <span class="card-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+
+          <!-- Tools -->
+          <div class="selector-card" data-section="tools">
+            <div class="card-icon-wrap">
+              <svg class="card-icon-svg" viewBox="0 0 48 48" fill="none">
+                <rect x="8" y="8" width="14" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
+                <rect x="26" y="8" width="14" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
+                <rect x="8" y="26" width="14" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
+                <rect x="26" y="26" width="14" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="card-title" data-i18n="selector.tools.title">Tools</div>
+            <div class="card-desc" data-i18n="selector.tools.desc">Spiagge live, eventi, camper e sport</div>
+            <span class="card-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+
+        </div>
+
+        <!-- Scroll invite -->
+        <div class="scroll-invite">
+          <span class="scroll-invite-label">Scopri la Sardegna</span>
+          <div class="scroll-invite-chevrons">
+            <svg class="scroll-invite-chevron" viewBox="0 0 20 10" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M2 2l8 6 8-6"/>
+            </svg>
+            <svg class="scroll-invite-chevron" viewBox="0 0 20 10" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M2 2l8 6 8-6"/>
+            </svg>
+            <svg class="scroll-invite-chevron" viewBox="0 0 20 10" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M2 2l8 6 8-6"/>
+            </svg>
+          </div>
+        </div>
+      </div><!-- /.selector-hero -->
+
+      <!-- Landing sections — popolate da main.js -->
+      <div class="landing-sections" id="landing-sections"></div>
+
+    </div><!-- /#section-selector -->
+
+    <!-- ─── SARDINAI SECTION ────────────────────────────── -->
+    <div id="sardinai-section" class="main-section">
+      <div class="sardinai-wrapper">
+
+        <!-- Header chat -->
+        <div class="sardinai-header">
+          <div class="sardinai-avatar">
+            <svg viewBox="0 0 32 32" fill="none" width="20" height="20">
+              <circle cx="16" cy="11" r="5" stroke="white" stroke-width="1.5"/>
+              <path d="M6 28c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="24" cy="9" r="3" fill="white" opacity="0.5"/>
+              <path d="M22 7l4 4M26 7l-4 4" stroke="white" stroke-width="1" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="sardinai-header-text">
+            <h2>SardinAI</h2>
+            <p>Assistente di viaggio Sardegna</p>
+          </div>
+          <div class="sardinai-status" title="Online"></div>
+        </div>
+
+        <!-- Messaggi chat -->
+        <div id="sardinai-chat"></div>
+
+        <!-- Input area -->
+        <div id="sardinai-input-area">
+          <input
+            type="text"
+            id="sardinai-input"
+            data-i18n-placeholder="sardinai.placeholder"
+            placeholder="Scrivi la tua risposta..."
+            autocomplete="off"
+            spellcheck="false"
+          >
+          <button id="sardinai-send" title="Invia">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+              <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ─── MAP SECTION ─────────────────────────────────── -->
+    <div id="map-section" class="main-section">
+      <div class="map-wrapper">
+
+        <!-- Contenitore mappa MapLibre — fullscreen -->
+        <div id="map-canvas-container"></div>
+
+        <!-- Overlay: barra di ricerca + filtri (top-left) -->
+        <div class="map-overlay-controls">
+          <div class="map-search-wrap">
+            <svg class="map-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+              <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+            </svg>
+            <input type="text" id="map-search-input" placeholder="Cerca luogo, spiaggia, città..." autocomplete="off" oninput="handleMapSearch(this.value)" onfocus="showMapSearchResults()" onblur="hideMapSearchResultsDelayed()">
+            <div id="map-search-results" class="map-search-results"></div>
+          </div>
+          <div class="map-filter-wrap">
+          <button class="map-filter-toggle" id="map-filter-toggle" onclick="toggleMapFilters()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+              <line x1="4" y1="6" x2="20" y2="6"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="11" y1="18" x2="13" y2="18"/>
+            </svg>
+            <span>Filtri</span>
+            <svg class="filter-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="11" height="11">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="map-filter-popup" id="map-filter-popup">
+            <button class="map-filter-chip active" data-cat="all" onclick="setActiveMapFilter('all')">
+              <span class="filter-dot" style="background:#888"></span>
+              <span data-i18n="map.filter.all">Tutti</span>
+            </button>
+            <button class="map-filter-chip" data-cat="spiaggia" onclick="setActiveMapFilter('spiaggia')">
+              <span class="filter-dot" style="background:#00BFFF"></span>
+              <span data-i18n="map.filter.spiagge">Spiagge</span>
+            </button>
+            <button class="map-filter-chip" data-cat="città" onclick="setActiveMapFilter('città')">
+              <span class="filter-dot" style="background:#8899bb"></span>
+              <span data-i18n="map.filter.citta">Città</span>
+            </button>
+            <button class="map-filter-chip" data-cat="hotel" onclick="setActiveMapFilter('hotel')">
+              <span class="filter-dot" style="background:#C8102E"></span>
+              <span data-i18n="map.filter.hotel">Hotel</span>
+            </button>
+            <button class="map-filter-chip" data-cat="ristorante" onclick="setActiveMapFilter('ristorante')">
+              <span class="filter-dot" style="background:#FF8C00"></span>
+              <span data-i18n="map.filter.ristoranti">Ristoranti</span>
+            </button>
+            <button class="map-filter-chip" data-cat="attrazione" onclick="setActiveMapFilter('attrazione')">
+              <span class="filter-dot" style="background:#FFD700"></span>
+              <span data-i18n="map.filter.attrazioni">Attrazioni</span>
+            </button>
+            <button class="map-filter-chip" data-cat="parco" onclick="setActiveMapFilter('parco')">
+              <span class="filter-dot" style="background:#32CD32"></span>
+              <span data-i18n="map.filter.parchi">Parchi</span>
+            </button>
+            <button class="map-filter-chip" data-cat="esperienza" onclick="setActiveMapFilter('esperienza')">
+              <span class="filter-dot" style="background:#B040FF"></span>
+              <span data-i18n="map.filter.esperienze">Esperienze</span>
+            </button>
+          </div>
+          </div><!-- /.map-filter-wrap -->
+        </div>
+
+        <!-- Hover tooltip pin -->
+        <div id="map-hover-tooltip" class="map-hover-tooltip"></div>
+
+        <!-- Quick card (primo click sul pin) -->
+        <div id="map-quick-card" class="map-quick-card">
+          <!-- Popolato dinamicamente da map.js -->
+        </div>
+
+        <!-- Info panel espanso (secondo click / espandi) -->
+        <div id="map-info-panel">
+          <!-- Popolato dinamicamente da map.js -->
+        </div>
+
+        <!-- Bottone reset vista -->
+        <button class="map-reset-btn" onclick="resetMapView()" title="Torna alla vista Sardegna">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+            <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+            <path d="M3 3v5h5"/>
+          </svg>
+          Vista Sardegna
+        </button>
+
+        <!-- Hint interazione -->
+        <div class="map-hint" data-i18n="map.hint">
+          Trascina per ruotare &middot; Zoom con la rotella &middot; Clicca sui pin
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ─── TOOLS SECTION ───────────────────────────────── -->
+    <div id="tools-section" class="main-section">
+
+      <div class="tools-section-title" data-i18n="tools.title">Tools Sardegna</div>
+      <div class="tools-section-subtitle">Strumenti pratici per pianificare la tua avventura sarda</div>
+
+      <!-- Menu card tools -->
+      <div id="tools-menu">
+
+        <div class="tool-card" data-tool="calendar">
+          <div class="tool-icon-wrap">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28">
+              <rect x="3" y="5" width="26" height="24" rx="2"/>
+              <path d="M3 11h26M10 3v4M22 3v4"/>
+              <rect x="8" y="16" width="4" height="4" rx="1" fill="currentColor"/>
+              <rect x="14" y="16" width="4" height="4" rx="1" fill="currentColor" opacity="0.5"/>
+              <rect x="20" y="16" width="4" height="4" rx="1" fill="currentColor" opacity="0.3"/>
+            </svg>
+          </div>
+          <div class="tool-title" data-i18n="tools.calendar">Calendario Eventi</div>
+          <div class="tool-desc">Sagre, festival, concerti e manifestazioni in Sardegna</div>
+        </div>
+
+        <div class="tool-card" data-tool="beaches">
+          <div class="tool-icon-wrap">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28">
+              <path d="M2 20c4-4 8-4 12 0s8 4 12 0"/>
+              <path d="M2 26c4-4 8-4 12 0s8 4 12 0"/>
+              <circle cx="20" cy="8" r="5" fill="currentColor" opacity="0.3" stroke="currentColor"/>
+              <path d="M4 14l8-8"/>
+            </svg>
+          </div>
+          <div class="tool-title" data-i18n="tools.beaches">Spiagge Live</div>
+          <div class="tool-desc">Vento e condizioni aggiornate per scegliere dove andare oggi</div>
+        </div>
+
+        <div class="tool-card" data-tool="camper">
+          <div class="tool-icon-wrap">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28">
+              <rect x="2" y="10" width="24" height="14" rx="2"/>
+              <path d="M26 14h2a2 2 0 012 2v6h-4"/>
+              <circle cx="8" cy="26" r="3"/>
+              <circle cx="22" cy="26" r="3"/>
+              <path d="M8 10V7a2 2 0 012-2h8a2 2 0 012 2v3"/>
+              <rect x="6" y="13" width="8" height="6" rx="1" fill="currentColor" opacity="0.2"/>
+            </svg>
+          </div>
+          <div class="tool-title" data-i18n="tools.camper">Camper & Van</div>
+          <div class="tool-desc">Aree sosta con servizi, coordinate e informazioni pratiche</div>
+        </div>
+
+        <div class="tool-card" data-tool="sports">
+          <div class="tool-icon-wrap">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28">
+              <path d="M4 26l6-8 5 4 4-10 6 6"/>
+              <circle cx="26" cy="8" r="4" stroke="currentColor"/>
+              <path d="M2 28h28"/>
+            </svg>
+          </div>
+          <div class="tool-title" data-i18n="tools.sports">Sport & Avventura</div>
+          <div class="tool-desc">Kayak, arrampicata, kitesurf, diving e molto altro</div>
+        </div>
+
+        <div class="tool-card" data-tool="transport">
+          <div class="tool-icon-wrap">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28">
+              <path d="M4 16h24M16 4v24"/>
+              <circle cx="16" cy="16" r="12"/>
+              <ellipse cx="16" cy="16" rx="6" ry="12"/>
+            </svg>
+          </div>
+          <div class="tool-title">Come Arrivare</div>
+          <div class="tool-desc">Aeroporti, traghetti, bus, treni e noleggi 2026</div>
+        </div>
+
+        <div class="tool-card" data-tool="itinerari">
+          <div class="tool-icon-wrap">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28">
+              <path d="M6 8h20M6 14h14M6 20h18M6 26h10"/>
+              <circle cx="26" cy="24" r="4" fill="currentColor" opacity="0.3"/>
+              <path d="M24 24l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="tool-title">Itinerari Pronti</div>
+          <div class="tool-desc">10 percorsi verificati da 2 a 10 giorni, con tappe giorno per giorno</div>
+        </div>
+
+        <div class="tool-card" data-tool="social">
+          <div class="tool-icon-wrap">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28">
+              <rect x="3" y="3" width="11" height="11" rx="2"/>
+              <rect x="18" y="3" width="11" height="11" rx="2"/>
+              <rect x="3" y="18" width="11" height="11" rx="2"/>
+              <circle cx="23.5" cy="23.5" r="5.5" fill="currentColor" opacity="0.2"/>
+              <path d="M21 23.5h5M23.5 21v5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="tool-title">Sardegna Live</div>
+          <div class="tool-desc">Post curati da Instagram — paesaggi, sport, food, eventi, ogni stagione</div>
+        </div>
+
+        <div class="tool-card" data-tool="nord">
+          <div class="tool-icon-wrap">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28">
+              <circle cx="16" cy="16" r="13"/>
+              <path d="M16 3v26M3 16h26"/>
+              <path d="M16 3C16 3 10 10 10 16s6 13 6 13" stroke-width="1.2"/>
+              <path d="M16 3C16 3 22 10 22 16s-6 13-6 13" stroke-width="1.2"/>
+              <path d="M5 9h22M5 23h22" stroke-width="1" opacity="0.5"/>
+              <path d="M3 12h26" stroke-width="1" opacity="0.8"/>
+            </svg>
+          </div>
+          <div class="tool-title">Nord Sardegna</div>
+          <div class="tool-desc">Gallura, Alghero, Sassari — guida completa con focus su inverno e bassa stagione</div>
+        </div>
+
+      </div>
+
+      <!-- Contenuto dinamico tools -->
+      <div id="tools-content">
+        <button class="tools-back-btn" onclick="closeToolSection()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Tools
+        </button>
+        <div id="tools-content-area"></div>
+      </div>
+
+    </div>
+
+  </div><!-- /#main-app -->
+
+  <!-- ═══════════════════════════════════════════════════════
+       SCRIPT: Stelle hero
+  ══════════════════════════════════════════════════════════ -->
+  <script>
+    (function generateHeroStars() {
+      const container = document.getElementById('hero-stars');
+      if (!container) return;
+      for (let i = 0; i < 130; i++) {
+        const star = document.createElement('div');
+        star.className = 'hero-star';
+        const size = Math.random() * 2.5 + 0.5;
+        star.style.cssText = `
+          width:${size}px;height:${size}px;
+          left:${Math.random() * 100}%;
+          top:${Math.random() * 100}%;
+          animation-delay:${Math.random() * 4}s;
+          animation-duration:${1.5 + Math.random() * 3}s;
+          opacity:${0.1 + Math.random() * 0.7};
+        `;
+        container.appendChild(star);
+      }
+    })();
+  </script>
+
+  <!-- ═══════════════════════════════════════════════════════
+       MODULI APPLICAZIONE
+  ══════════════════════════════════════════════════════════ -->
+  <script src="js/i18n.js"></script>
+  <script src="js/preloader.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/sardinai.js"></script>
+  <script src="js/tools.js"></script>
+
+</body>
+</html>
