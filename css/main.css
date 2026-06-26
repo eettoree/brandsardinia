@@ -486,10 +486,9 @@ img { max-width: 100%; display: block; }
 }
 
 .app-logo-svg {
-  width: 130px;
+  width: 28px;
   height: auto;
   display: block;
-  filter: brightness(0) invert(1);
   transition: opacity 0.2s ease;
 }
 
