@@ -480,13 +480,20 @@ img { max-width: 100%; display: block; }
 }
 
 .app-logo {
-  font-size: 1.4rem;
-  font-weight: 900;
-  letter-spacing: -1px;
-  color: var(--text);
   cursor: pointer;
+  display: flex;
+  align-items: center;
 }
-.app-logo span { color: var(--red); }
+
+.app-logo-svg {
+  width: 130px;
+  height: auto;
+  display: block;
+  filter: brightness(0) invert(1);
+  transition: opacity 0.2s ease;
+}
+
+.app-logo:hover .app-logo-svg { opacity: 0.75; }
 
 .btn-back {
   background: transparent;
