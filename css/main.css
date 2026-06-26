@@ -410,9 +410,7 @@ img { max-width: 100%; display: block; }
 }
 
 #btn-start::after {
-  content: '→';
-  font-size: 1.1rem;
-  transition: transform 0.3s ease;
+  content: none;
 }
 
 #btn-start:hover {
@@ -650,6 +648,15 @@ img { max-width: 100%; display: block; }
   font-weight: 700;
   color: var(--text);
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.card-sardinai-svg {
+  width: 110px;
+  height: auto;
+  display: block;
+  /* SVG è rosso — lo rendiamo bianco su dark o lasciamo rosso se già corretto */
 }
 
 .card-desc {
