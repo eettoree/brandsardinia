@@ -86,8 +86,8 @@
       <p class="hero-subtitle" data-i18n="hero.subtitle">L'isola più bella del Mediterraneo, raccontata da chi la vive.</p>
       <button id="btn-start">
         <span data-i18n="hero.cta">Inizia Esperienza</span>
-        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
-          <path d="M5 12h14M12 5l7 7-7 7"/>
+        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16">
+          <path d="M9 6l6 6-6 6"/>
         </svg>
       </button>
     </div>
@@ -329,6 +329,74 @@
         <!-- Info panel espanso (secondo click / espandi) -->
         <div id="map-info-panel">
           <!-- Popolato dinamicamente da map.js -->
+        </div>
+
+        <!-- Bottone Crea Percorso -->
+        <button id="btn-route-planner" onclick="toggleRoutePlanner()" title="Crea percorso personalizzato">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15">
+            <path d="M3 17l4-8 4 4 4-6 4 3"/>
+            <circle cx="3" cy="17" r="1.5" fill="currentColor" stroke="none"/>
+            <circle cx="21" cy="10" r="1.5" fill="currentColor" stroke="none"/>
+          </svg>
+          Crea Percorso
+        </button>
+
+        <!-- Pannello Route Planner -->
+        <div id="route-planner-panel">
+          <div class="rp-header">
+            <div>
+              <div class="rp-header-title">Percorso Personalizzato</div>
+              <div class="rp-header-sub">Aggiungi tappe nell'ordine del viaggio</div>
+            </div>
+            <button id="rp-close" onclick="toggleRoutePlanner()">✕</button>
+          </div>
+          <div class="rp-body">
+            <div id="rp-stops-container">
+              <!-- Partenza -->
+              <div class="rp-stop" data-index="0">
+                <div class="rp-stop-num">A</div>
+                <input class="rp-stop-input" type="text" placeholder="Punto di partenza..." data-stop="0" oninput="rpHandleInput(this)" onfocus="rpShowSuggestions(this)" onblur="rpHideSuggestions(this)">
+                <div class="rp-suggestions"></div>
+              </div>
+              <div class="rp-connector"><div class="rp-connector-line"></div></div>
+              <!-- Arrivo -->
+              <div class="rp-stop rp-stop-end" data-index="1">
+                <div class="rp-stop-num rp-end-num">B</div>
+                <input class="rp-stop-input" type="text" placeholder="Destinazione finale..." data-stop="1" oninput="rpHandleInput(this)" onfocus="rpShowSuggestions(this)" onblur="rpHideSuggestions(this)">
+                <div class="rp-suggestions"></div>
+              </div>
+            </div>
+
+            <button class="rp-add-btn" onclick="rpAddStop()">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><path d="M12 5v14M5 12h14"/></svg>
+              Aggiungi tappa
+            </button>
+
+            <div class="rp-transport">
+              <button class="rp-transport-btn active" data-mode="driving" onclick="rpSetTransport(this)">
+                <span class="rp-transport-icon">🚗</span>Auto
+              </button>
+              <button class="rp-transport-btn" data-mode="walking" onclick="rpSetTransport(this)">
+                <span class="rp-transport-icon">🚶</span>A piedi
+              </button>
+              <button class="rp-transport-btn" data-mode="cycling" onclick="rpSetTransport(this)">
+                <span class="rp-transport-icon">🚴</span>Bici
+              </button>
+            </div>
+
+            <button class="rp-calc-btn" onclick="rpCalculateRoute()" id="rp-calc-btn">
+              Calcola Percorso
+            </button>
+          </div>
+
+          <div id="rp-results" class="rp-results">
+            <div class="rp-summary" id="rp-summary"></div>
+            <div class="rp-legs" id="rp-legs"></div>
+            <a id="rp-gmaps-link" class="rp-gmaps-btn" href="#" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Apri in Google Maps
+            </a>
+          </div>
         </div>
 
         <!-- Bottone reset vista -->

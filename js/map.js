@@ -1207,7 +1207,7 @@ function showQuickCard(poi) {
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
           Espandi scheda
         </button>
-        <a class="qc-gmaps" href="https://www.google.com/maps/search/?api=1&query=${poi.lat},${poi.lng}" target="_blank" rel="noopener">
+        <a class="qc-gmaps" href="https://www.google.com/maps/place/${encodeURIComponent(poi.name + ', Sardegna, Italy')}/@${poi.lat},${poi.lng},17z" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12" height="12"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
         </a>
       </div>
@@ -1394,7 +1394,7 @@ function showMapInfoPanel(poi) {
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
           Centra mappa
         </button>
-        <a href="https://www.google.com/maps/search/?api=1&query=${poi.lat},${poi.lng}" target="_blank" rel="noopener" class="panel-gmaps-btn">
+        <a href="https://www.google.com/maps/place/${encodeURIComponent(poi.name + ', Sardegna, Italy')}/@${poi.lat},${poi.lng},17z" target="_blank" rel="noopener" class="panel-gmaps-btn">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
           Google Maps
         </a>
@@ -1462,5 +1462,300 @@ window.closeQuickCard     = closeQuickCard;
 window.expandToFullPanel  = expandToFullPanel;
 window.handleMapSearch    = handleMapSearch;
 window.selectSearchResult = selectSearchResult;
-window.showMapSearchResults      = showMapSearchResults;
+window.showMapSearchResults        = showMapSearchResults;
 window.hideMapSearchResultsDelayed = hideMapSearchResultsDelayed;
+
+// ============================================================
+// ROUTE PLANNER
+// ============================================================
+
+const RP_OSRM = {
+  driving: 'https://router.project-osrm.org/route/v1/driving/',
+  walking: 'https://router.project-osrm.org/route/v1/foot/',
+  cycling: 'https://router.project-osrm.org/route/v1/bike/'
+};
+
+let rpTransportMode = 'driving';
+let rpStopCount = 2; // A + B di default
+let rpRouteLayer = null;
+
+function toggleRoutePlanner() {
+  const panel = document.getElementById('route-planner-panel');
+  const btn   = document.getElementById('btn-route-planner');
+  const open  = panel.classList.toggle('open');
+  btn.classList.toggle('active', open);
+  if (!open) rpClearRouteOnMap();
+}
+
+function rpSetTransport(el) {
+  document.querySelectorAll('.rp-transport-btn').forEach(b => b.classList.remove('active'));
+  el.classList.add('active');
+  rpTransportMode = el.dataset.mode;
+}
+
+function rpAddStop() {
+  const container = document.getElementById('rp-stops-container');
+  const endStop   = container.querySelector('.rp-stop-end');
+  const idx       = rpStopCount++;
+
+  // Inserisce connettore + tappa prima dell'arrivo
+  const connector = document.createElement('div');
+  connector.className = 'rp-connector';
+  connector.innerHTML = '<div class="rp-connector-line"></div>';
+
+  const stopDiv = document.createElement('div');
+  stopDiv.className = 'rp-stop';
+  stopDiv.dataset.index = idx;
+  stopDiv.innerHTML = `
+    <div class="rp-stop-num">${idx}</div>
+    <input class="rp-stop-input" type="text" placeholder="Tappa ${idx}..."
+      data-stop="${idx}" oninput="rpHandleInput(this)"
+      onfocus="rpShowSuggestions(this)" onblur="rpHideSuggestions(this)">
+    <button class="rp-stop-remove" onclick="rpRemoveStop(this)" title="Rimuovi">✕</button>
+    <div class="rp-suggestions"></div>`;
+
+  container.insertBefore(connector, endStop);
+  container.insertBefore(stopDiv, endStop);
+  stopDiv.querySelector('input').focus();
+}
+
+function rpRemoveStop(btn) {
+  const stop = btn.closest('.rp-stop');
+  const prev = stop.previousElementSibling; // connector
+  if (prev && prev.classList.contains('rp-connector')) prev.remove();
+  stop.remove();
+  rpClearRouteOnMap();
+}
+
+// Autocomplete da MAP_POI
+const rpPoiCache = {};
+
+function rpHandleInput(input) {
+  const q = input.value.trim().toLowerCase();
+  const sugBox = input.parentElement.querySelector('.rp-suggestions');
+  if (!sugBox) return;
+  if (q.length < 2) { sugBox.innerHTML = ''; sugBox.style.display = 'none'; return; }
+
+  const matches = MAP_POI.filter(p =>
+    p.name.toLowerCase().includes(q) ||
+    (p.description && p.description.toLowerCase().includes(q))
+  ).slice(0, 6);
+
+  if (!matches.length) { sugBox.innerHTML = ''; sugBox.style.display = 'none'; return; }
+
+  sugBox.style.cssText = `
+    display:block; position:absolute; left:30px; right:28px; top:100%;
+    background:rgba(8,8,18,0.97); border:1px solid rgba(255,255,255,0.12);
+    border-radius:8px; z-index:999; margin-top:4px; overflow:hidden;
+    box-shadow:0 8px 24px rgba(0,0,0,0.6);`;
+
+  sugBox.innerHTML = matches.map(p => `
+    <div class="rp-sug-item" style="padding:9px 12px;cursor:pointer;font-size:0.78rem;
+      color:rgba(255,255,255,0.85);border-bottom:1px solid rgba(255,255,255,0.06);
+      transition:background 0.1s;"
+      onmousedown="rpSelectPoi(this,'${p.id}')"
+      onmouseover="this.style.background='rgba(200,16,46,0.15)'"
+      onmouseout="this.style.background=''"
+    >${p.name}</div>`).join('');
+}
+
+function rpShowSuggestions(input) { rpHandleInput(input); }
+function rpHideSuggestions(input) {
+  setTimeout(() => {
+    const sugBox = input.parentElement.querySelector('.rp-suggestions');
+    if (sugBox) { sugBox.innerHTML = ''; sugBox.style.display = 'none'; }
+  }, 200);
+}
+
+function rpSelectPoi(el, poiId) {
+  const poi = MAP_POI.find(p => p.id === poiId);
+  if (!poi) return;
+  const stopDiv = el.closest('.rp-stop');
+  const input   = stopDiv.querySelector('.rp-stop-input');
+  input.value   = poi.name;
+  input.dataset.lat = poi.lat;
+  input.dataset.lng = poi.lng;
+  const sugBox  = stopDiv.querySelector('.rp-suggestions');
+  if (sugBox) { sugBox.innerHTML = ''; sugBox.style.display = 'none'; }
+}
+
+async function rpCalculateRoute() {
+  const btn = document.getElementById('rp-calc-btn');
+  btn.disabled = true;
+  btn.textContent = 'Calcolo in corso...';
+
+  const stops = rpGetStops();
+  if (stops.length < 2) {
+    alert('Inserisci almeno partenza e arrivo.');
+    btn.disabled = false;
+    btn.textContent = 'Calcola Percorso';
+    return;
+  }
+
+  try {
+    const coordStr = stops.map(s => `${s.lng},${s.lat}`).join(';');
+    const url = `${RP_OSRM[rpTransportMode]}${coordStr}?overview=full&geometries=geojson&steps=false`;
+    const res  = await fetch(url);
+    const data = await res.json();
+
+    if (!data.routes || !data.routes.length) throw new Error('Nessun percorso trovato');
+
+    const route = data.routes[0];
+    rpDrawRouteOnMap(route.geometry);
+    rpShowResults(stops, route);
+  } catch (e) {
+    // Fallback: linee rette tra le tappe
+    rpDrawStraightLines(stops);
+    rpShowResultsFallback(stops);
+  }
+
+  btn.disabled = false;
+  btn.textContent = 'Calcola Percorso';
+}
+
+function rpGetStops() {
+  const inputs = document.querySelectorAll('#rp-stops-container .rp-stop-input');
+  const stops  = [];
+  inputs.forEach(inp => {
+    const name = inp.value.trim();
+    if (!name) return;
+    let lat = parseFloat(inp.dataset.lat);
+    let lng = parseFloat(inp.dataset.lng);
+    // Cerca in MAP_POI se non ha coordinate
+    if (!lat || !lng) {
+      const poi = MAP_POI.find(p => p.name.toLowerCase() === name.toLowerCase());
+      if (poi) { lat = poi.lat; lng = poi.lng; }
+    }
+    if (lat && lng) stops.push({ name, lat, lng });
+  });
+  return stops;
+}
+
+function rpDrawRouteOnMap(geometry) {
+  rpClearRouteOnMap();
+  if (!sardMap) return;
+  sardMap.addSource('rp-route', { type: 'geojson', data: { type: 'Feature', geometry } });
+  sardMap.addLayer({
+    id: 'rp-route-line',
+    type: 'line',
+    source: 'rp-route',
+    layout: { 'line-join': 'round', 'line-cap': 'round' },
+    paint: {
+      'line-color': '#C8102E',
+      'line-width': 4,
+      'line-opacity': 0.85,
+      'line-dasharray': [1, 0]
+    }
+  });
+  rpRouteLayer = 'rp-route-line';
+
+  // Fit mappa al percorso
+  const coords = geometry.coordinates;
+  const lngs   = coords.map(c => c[0]);
+  const lats   = coords.map(c => c[1]);
+  sardMap.fitBounds(
+    [[Math.min(...lngs), Math.min(...lats)], [Math.max(...lngs), Math.max(...lats)]],
+    { padding: 60, duration: 800 }
+  );
+}
+
+function rpDrawStraightLines(stops) {
+  rpClearRouteOnMap();
+  if (!sardMap || stops.length < 2) return;
+  const coords = stops.map(s => [s.lng, s.lat]);
+  sardMap.addSource('rp-route', {
+    type: 'geojson',
+    data: { type: 'Feature', geometry: { type: 'LineString', coordinates: coords } }
+  });
+  sardMap.addLayer({
+    id: 'rp-route-line',
+    type: 'line',
+    source: 'rp-route',
+    layout: { 'line-join': 'round', 'line-cap': 'round' },
+    paint: { 'line-color': '#C8102E', 'line-width': 4, 'line-opacity': 0.75, 'line-dasharray': [2, 3] }
+  });
+  rpRouteLayer = 'rp-route-line';
+  const lngs = stops.map(s => s.lng);
+  const lats = stops.map(s => s.lat);
+  sardMap.fitBounds(
+    [[Math.min(...lngs), Math.min(...lats)], [Math.max(...lngs), Math.max(...lats)]],
+    { padding: 80, duration: 800 }
+  );
+}
+
+function rpClearRouteOnMap() {
+  if (!sardMap) return;
+  if (sardMap.getLayer('rp-route-line')) sardMap.removeLayer('rp-route-line');
+  if (sardMap.getSource('rp-route'))     sardMap.removeSource('rp-route');
+  rpRouteLayer = null;
+}
+
+function rpShowResults(stops, route) {
+  const distKm  = (route.distance / 1000).toFixed(1);
+  const minutes = Math.round(route.duration / 60);
+  const hours   = Math.floor(minutes / 60);
+  const mins    = minutes % 60;
+  const durText = hours > 0 ? `${hours}h ${mins}min` : `${minutes} min`;
+
+  const resultsEl = document.getElementById('rp-results');
+  document.getElementById('rp-summary').innerHTML = `
+    <div class="rp-stat"><div class="rp-stat-value">${distKm} km</div><div class="rp-stat-label">Distanza</div></div>
+    <div class="rp-stat"><div class="rp-stat-value">${durText}</div><div class="rp-stat-label">Durata</div></div>
+    <div class="rp-stat"><div class="rp-stat-value">${stops.length}</div><div class="rp-stat-label">Tappe</div></div>`;
+
+  document.getElementById('rp-legs').innerHTML = stops.map((s, i) => `
+    <div class="rp-leg">
+      <div class="rp-leg-dot" style="background:${i === 0 ? '#32CD32' : i === stops.length - 1 ? '#C8102E' : '#FF8C00'}"></div>
+      <div class="rp-leg-info">
+        <div class="rp-leg-name">${s.name}</div>
+        <div class="rp-leg-detail">${i === 0 ? 'Partenza' : i === stops.length - 1 ? 'Arrivo' : `Tappa ${i}`}</div>
+      </div>
+    </div>`).join('');
+
+  // Link Google Maps con waypoints
+  const gmapsUrl = rpBuildGMapsUrl(stops);
+  document.getElementById('rp-gmaps-link').href = gmapsUrl;
+
+  resultsEl.classList.add('open');
+}
+
+function rpShowResultsFallback(stops) {
+  const resultsEl = document.getElementById('rp-results');
+  document.getElementById('rp-summary').innerHTML = `
+    <div class="rp-stat"><div class="rp-stat-value">${stops.length}</div><div class="rp-stat-label">Tappe</div></div>
+    <div class="rp-stat"><div class="rp-stat-value">—</div><div class="rp-stat-label">Distanza</div></div>
+    <div class="rp-stat"><div class="rp-stat-value">—</div><div class="rp-stat-label">Durata</div></div>`;
+
+  document.getElementById('rp-legs').innerHTML = stops.map((s, i) => `
+    <div class="rp-leg">
+      <div class="rp-leg-dot"></div>
+      <div class="rp-leg-info">
+        <div class="rp-leg-name">${s.name}</div>
+        <div class="rp-leg-detail">${i === 0 ? 'Partenza' : i === stops.length - 1 ? 'Arrivo' : `Tappa ${i}`}</div>
+      </div>
+    </div>`).join('');
+
+  document.getElementById('rp-gmaps-link').href = rpBuildGMapsUrl(stops);
+  resultsEl.classList.add('open');
+}
+
+function rpBuildGMapsUrl(stops) {
+  if (stops.length < 2) return '#';
+  const origin      = encodeURIComponent(stops[0].name + ', Sardegna');
+  const destination = encodeURIComponent(stops[stops.length - 1].name + ', Sardegna');
+  const waypoints   = stops.slice(1, -1).map(s => encodeURIComponent(s.name + ', Sardegna')).join('|');
+  const mode        = rpTransportMode === 'driving' ? 'driving' : rpTransportMode === 'walking' ? 'walking' : 'bicycling';
+  let url = `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}&travelmode=${mode}`;
+  if (waypoints) url += `&waypoints=${waypoints}`;
+  return url;
+}
+
+window.toggleRoutePlanner = toggleRoutePlanner;
+window.rpSetTransport     = rpSetTransport;
+window.rpAddStop          = rpAddStop;
+window.rpRemoveStop       = rpRemoveStop;
+window.rpHandleInput      = rpHandleInput;
+window.rpShowSuggestions  = rpShowSuggestions;
+window.rpHideSuggestions  = rpHideSuggestions;
+window.rpSelectPoi        = rpSelectPoi;
+window.rpCalculateRoute   = rpCalculateRoute;
