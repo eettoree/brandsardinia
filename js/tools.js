@@ -351,47 +351,30 @@ function closeToolSection() {
 
 // ─── CALENDARIO EVENTI ───────────────────────────────────────
 function renderCalendar(container) {
-  let currentFilter = 0; // 0 = tutti
+  const CAT_COLORS = {
+    sagra: '#C8102E', festival: '#FF8C00', cultura: '#00BFFF',
+    sport: '#32CD32', tradizione: '#B040FF', concerto: '#FFD700',
+    cinema: '#FF6B6B', mostre: '#4ECDC4'
+  };
+  const DAY_NAMES = ['Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab', 'Dom'];
 
-  function render(filter) {
+  let currentView   = 'list';
+  let currentFilter = 0;
+  let calYear       = 2026;
+  let calMonth      = new Date().getMonth() + 1;
+
+  function buildListHTML(filter) {
     const events = filter === 0 ? EVENTS_DATA : EVENTS_DATA.filter(e => e.month === filter);
-
-    const categoryColors = {
-      sagra: '#C8102E',
-      festival: '#FF8C00',
-      cultura: '#00BFFF',
-      sport: '#32CD32',
-      tradizione: '#B040FF',
-      concerto: '#FFD700',
-      cinema: '#FF6B6B',
-      mostre: '#4ECDC4'
-    };
-
-    const monthOptions = MONTH_NAMES.map((m, i) => i === 0
-      ? `<option value="0">Tutti i mesi</option>`
-      : `<option value="${i}" ${filter === i ? 'selected' : ''}>${m}</option>`
-    ).join('');
-
-    container.innerHTML = `
-      <div class="tools-section-header">
-        <h2>Calendario Eventi Sardegna</h2>
-        <div class="tools-filter">
-          <select id="month-filter" class="glass-select">
-            ${monthOptions}
-          </select>
-        </div>
-      </div>
+    return `
       <div class="events-grid">
         ${events.map(ev => {
-          const date = new Date(ev.date);
-          const day = date.getDate();
-          const month = MONTH_NAMES[date.getMonth() + 1];
-          const catColor = categoryColors[ev.category] || '#fff';
+          const date     = new Date(ev.date);
+          const catColor = CAT_COLORS[ev.category] || '#fff';
           return `
           <div class="event-card glass-card">
             <div class="event-date-box" style="border-color:${catColor}">
-              <span class="event-day">${day}</span>
-              <span class="event-month">${month}</span>
+              <span class="event-day">${date.getDate()}</span>
+              <span class="event-month">${MONTH_NAMES[date.getMonth() + 1].substring(0,3).toUpperCase()}</span>
             </div>
             <div class="event-body">
               <div class="event-category" style="color:${catColor}">${ev.category.toUpperCase()}</div>
@@ -403,21 +386,123 @@ function renderCalendar(container) {
           </div>`;
         }).join('')}
         ${events.length === 0 ? '<div class="no-events">Nessun evento in questo mese.</div>' : ''}
-      </div>
-    `;
-
-    // Animazione card
-    gsap.fromTo('.event-card',
-      { opacity: 0, y: 20 },
-      { opacity: 1, y: 0, stagger: 0.07, duration: 0.35, ease: 'power2.out' }
-    );
-
-    // Filter listener
-    const sel = document.getElementById('month-filter');
-    if (sel) sel.addEventListener('change', () => render(parseInt(sel.value)));
+      </div>`;
   }
 
-  render(0);
+  function buildCalendarHTML(year, month) {
+    const monthEvents = EVENTS_DATA.filter(e => {
+      const d = new Date(e.date);
+      return d.getFullYear() === year && d.getMonth() + 1 === month;
+    });
+    const dayMap = {};
+    monthEvents.forEach(ev => {
+      const d = new Date(ev.date).getDate();
+      if (!dayMap[d]) dayMap[d] = [];
+      dayMap[d].push(ev);
+    });
+
+    const firstDay    = new Date(year, month - 1, 1).getDay();
+    const offset      = firstDay === 0 ? 6 : firstDay - 1;
+    const daysInMonth = new Date(year, month, 0).getDate();
+
+    let cells = '';
+    for (let i = 0; i < offset; i++) cells += `<div class="cal-day-cell cal-day-empty"></div>`;
+    for (let d = 1; d <= daysInMonth; d++) {
+      const evs = dayMap[d] || [];
+      cells += `
+        <div class="cal-day-cell${evs.length ? ' has-events' : ''}">
+          <div class="cal-day-num">${d}</div>
+          ${evs.map(ev => {
+            const color = CAT_COLORS[ev.category] || '#fff';
+            return `<div class="cal-event-chip" style="border-left:3px solid ${color};background:${color}1a" title="${ev.name} — ${ev.city}">
+              <span class="cal-chip-cat" style="color:${color}">${ev.category}</span>
+              <span class="cal-chip-name">${ev.name}</span>
+            </div>`;
+          }).join('')}
+        </div>`;
+    }
+
+    return `
+      <div class="cal-grid-container">
+        <div class="cal-nav">
+          <button class="cal-nav-btn" id="cal-prev">&#8592;</button>
+          <h3 class="cal-month-title">${MONTH_NAMES[month]} ${year}</h3>
+          <button class="cal-nav-btn" id="cal-next">&#8594;</button>
+        </div>
+        <div class="cal-grid">
+          ${DAY_NAMES.map(d => `<div class="cal-day-header">${d}</div>`).join('')}
+          ${cells}
+        </div>
+        ${monthEvents.length === 0 ? '<div class="no-events" style="margin-top:20px">Nessun evento in questo mese.</div>' : ''}
+      </div>`;
+  }
+
+  function buildMonthOptions(filter) {
+    return MONTH_NAMES.map((m, i) => i === 0
+      ? `<option value="0">Tutti i mesi</option>`
+      : `<option value="${i}" ${filter === i ? 'selected' : ''}>${m}</option>`
+    ).join('');
+  }
+
+  function render() {
+    const isCal = currentView === 'calendar';
+    container.innerHTML = `
+      <div class="tools-section-header">
+        <h2>Calendario Eventi Sardegna</h2>
+        <div class="tools-filter">
+          <div class="view-toggle">
+            <div class="view-toggle-indicator ${isCal ? 'right' : ''}"></div>
+            <button class="view-toggle-btn ${!isCal ? 'active' : ''}" data-view="list">Elenco</button>
+            <button class="view-toggle-btn ${isCal ? 'active' : ''}" data-view="calendar">Calendario</button>
+          </div>
+          ${!isCal ? `<select id="month-filter" class="glass-select">${buildMonthOptions(currentFilter)}</select>` : ''}
+        </div>
+      </div>
+      ${isCal ? buildCalendarHTML(calYear, calMonth) : buildListHTML(currentFilter)}
+    `;
+
+    // Toggle listener
+    container.querySelectorAll('.view-toggle-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        currentView = btn.dataset.view;
+        if (currentView === 'calendar' && currentFilter > 0) calMonth = currentFilter;
+        render();
+        gsap.fromTo('.cal-grid-container, .events-grid',
+          { opacity: 0, y: 15 },
+          { opacity: 1, y: 0, duration: 0.3, ease: 'power2.out' }
+        );
+      });
+    });
+
+    // Month dropdown (list view only)
+    const sel = document.getElementById('month-filter');
+    if (sel) sel.addEventListener('change', () => {
+      currentFilter = parseInt(sel.value);
+      render();
+    });
+
+    // Calendar prev/next
+    const prevBtn = document.getElementById('cal-prev');
+    const nextBtn = document.getElementById('cal-next');
+    if (prevBtn) prevBtn.addEventListener('click', () => {
+      calMonth--; if (calMonth < 1) { calMonth = 12; calYear--; }
+      render();
+    });
+    if (nextBtn) nextBtn.addEventListener('click', () => {
+      calMonth++; if (calMonth > 12) { calMonth = 1; calYear++; }
+      render();
+    });
+
+    // Animazione card lista
+    if (currentView === 'list') {
+      gsap.fromTo('.event-card',
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, stagger: 0.07, duration: 0.35, ease: 'power2.out' }
+      );
+    }
+  }
+
+  render();
 }
 
 // ─── SPIAGGE LIVE ─────────────────────────────────────────────
