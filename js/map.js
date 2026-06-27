@@ -936,7 +936,7 @@ function initMap() {
     container: 'map-canvas-container',
     style: MAP_STYLE,
     center: [9.07, 40.12],
-    zoom: 7.5,
+    zoom: 8.5,
     minZoom: 6.2,
     maxZoom: 18,
     maxBounds: [[6.8, 37.8], [11.2, 42.2]],
@@ -1119,7 +1119,7 @@ function showHoverTooltip(poi, el) {
   const rect = el.getBoundingClientRect();
   const mapRect = mapEl.getBoundingClientRect();
   const color = CAT_COLORS[poi.cat] || '#fff';
-  tooltip.innerHTML = `<span class="tooltip-dot" style="background:${color}"></span><span class="tooltip-cat">${CAT_LABELS[poi.cat] || poi.cat}</span><strong>${poi.name}</strong>`;
+  tooltip.innerHTML = `<span class="tooltip-dot" style="background:${color}"></span><span class="tooltip-cat">${CAT_LABELS[poi.cat] || poi.cat}</span><span class="tooltip-name">${poi.name}</span>`;
   tooltip.style.left = (rect.left - mapRect.left + rect.width / 2) + 'px';
   tooltip.style.top  = (rect.top  - mapRect.top) + 'px';
   tooltip.classList.add('active');
