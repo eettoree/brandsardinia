@@ -315,6 +315,54 @@ const MUSEI_DATA = [
   { id:12, name:'Museo Speleo Paleontologico di Carbonia', city:'Carbonia', tipo:'natura', orari:'Lun–Sab 9:00–13:00 / 16:00–19:00', biglietto:'2 €', desc:'Dedicato alla paleontologia e alla speleologia del Sulcis. Espone reperti fossili di fauna pleistocenica e reperti dalle grotte della zona, inclusi resti di cervo sardo e capra selvatica preistorici.', web:'https://www.comune.carbonia.su.it', indirizzo:'Via Costituente, Carbonia (SU)' }
 ];
 
+// ─── SENTIERI DATA ────────────────────────────────────────────
+const SENTIERI_DATA = [
+  { id:1,  name:'Selvaggio Blu', zona:'Ogliastra / Golfo di Orosei', difficolta:'esperta',  lunghezza:45, dislivello:'+6800 m', durata:'6–8 giorni', tipo:'costa',    desc:'Il trekking più famoso e selvaggio di Sardegna — traversata costiera da Pedra Longa a Cala Sisine tra falesie a picco sul mare, calette inaccessibili e boschi primordiali. Richiede esperienza alpinistica e corde.',                                                                  partenza:'Pedra Longa (Baunei)', web:'https://www.selvaggioblu.it' },
+  { id:2,  name:'Gola di Gorropu', zona:'Supramonte', difficolta:'media', lunghezza:12, dislivello:'+400 m', durata:'4–5 ore', tipo:'montagna', desc:'La gola più profonda d\'Europa (500 m di pareti verticali) scavata dal Rio Flumineddu nel Supramonte. Un\'esperienza mozzafiato tra rocce calcaree gigantesche. Con guida obbligatoria per l\'interno della gola.',                        partenza:'Ponte Sa Barva, Urzulei', web:'https://www.gorropu.com' },
+  { id:3,  name:'Tiscali — Villaggio Nuragico in Grotta', zona:'Supramonte di Oliena', difficolta:'media', lunghezza:8, dislivello:'+480 m', durata:'3–4 ore', tipo:'nuragico', desc:'Villaggio nuragico nascosto all\'interno di una dolina carsica nel Supramonte. Dimenticato per secoli, riemerso nel XIX secolo. Atmosfera straordinaria tra stalattiti e resti di abitazioni dell\'età del ferro.',                           partenza:'Valle di Lanaitto, Oliena', web:'https://www.sardegnaturismo.it' },
+  { id:4,  name:'Cala Luna via Cala Fuili', zona:'Golfo di Orosei', difficolta:'media', lunghezza:7, dislivello:'+320 m', durata:'3 ore', tipo:'costa', desc:'Da Cala Gonone si raggiunge la spiaggia più bella di Sardegna via sentiero costiero. Viste sul Golfo di Orosei, ginepri millenari, mare turchese. Si torna in barca (prenotazione consigliata).',                                                      partenza:'Cala Fuili, Cala Gonone', web:'https://www.dorgaliturismo.it' },
+  { id:5,  name:'Punta La Marmora', zona:'Gennargentu', difficolta:'difficile', lunghezza:14, dislivello:'+900 m', durata:'5–6 ore', tipo:'montagna', desc:'La vetta più alta della Sardegna (1834 m). Dal rifugio si sale attraverso boschi di lecci e pascoli altomontani. Panorama a 360° su tutta l\'isola. In inverno ramponi necessari.',                                                               partenza:'Fonni o Desulo', web:'https://www.gennargentu.it' },
+  { id:6,  name:'Codula di Luna', zona:'Golfo di Orosei', difficolta:'difficile', lunghezza:24, dislivello:'+600 m', durata:'8–10 ore A/R', tipo:'costa', desc:'La "Valle della Luna" scende dal Supramonte fino a Cala Luna attraversando boschi di tasso e lecci, sorgenti d\'acqua dolce e grotte preistoriche. Una delle escursioni più belle e impegnative di Sardegna.',                                          partenza:'Santa Mama, Urzulei', web:'https://www.sardegnaturismo.it' },
+  { id:7,  name:'Monte Limbara — Punta Balistreri', zona:'Gallura', difficolta:'facile', lunghezza:6, dislivello:'+380 m', durata:'2–3 ore', tipo:'montagna', desc:'Il massiccio granitico della Gallura con panorami fino alla Corsica. Sentiero ben segnato tra boschi di querce e affioramenti rocciosi. Meta ideale per famiglie con bambini grandi.',                                                               partenza:'Tempio Pausania', web:'https://www.sardegnaturismo.it' },
+  { id:8,  name:'Capo Caccia — Escala del Cabirol', zona:'Alghero', difficolta:'facile', lunghezza:4, dislivello:'+172 m', durata:'1–2 ore', tipo:'costa', desc:'654 gradini scavati nella falesia scendono verso Grotta di Nettuno, la più spettacolare grotta marina di Sardegna. Vista sul Golfo di Alghero e sul mare turchese del promontorio. Imperdibile.',                                                              partenza:'Capo Caccia, Alghero', web:'https://www.grottadinettuno.it' },
+  { id:9,  name:'Su Suercone — Foresta di Montarbu', zona:'Barbagia di Seui', difficolta:'media', lunghezza:10, dislivello:'+550 m', durata:'3–4 ore', tipo:'foresta', desc:'Attraverso la foresta demaniale di Montarbu tra roverelle, tassi plurisecolari e lecci. Fauna ricca: cervi sardi, cinghiali, volpi. In primavera il sottobosco è tappezzato di fiori selvatici.',                                                   partenza:'Seui (NU)', web:'https://www.sardegnaturismo.it' },
+  { id:10, name:'Nuraghe Arrubiu — Giro Didattico', zona:'Orroli', difficolta:'facile', lunghezza:3, dislivello:'+80 m', durata:'1–2 ore', tipo:'nuragico', desc:'Il più grande nuraghe polilobato di Sardegna (5 torri, 7000 mq) in un contesto paesaggistico di macchia mediterranea. Visita guidata disponibile. Museo annesso con reperti dell\'età del bronzo.',                                                          partenza:'Orroli (SU)', web:'https://www.sardegnaturismo.it' },
+  { id:11, name:'Supramonte di Orgosolo — Valle Lanaittu', zona:'Nuoro', difficolta:'media', lunghezza:12, dislivello:'+450 m', durata:'4–5 ore', tipo:'foresta', desc:'Nel cuore del Supramonte di Orgosolo, attraverso la Valle di Sa Oche e Lanaittu. Sorgenti, grotte e foresta primordiale di lecci. Probabile avvistamento di cervi sardi e mufloni.',                                                                  partenza:'Orgosolo (NU)', web:'https://www.sardegnaturismo.it' },
+  { id:12, name:'Spiaggia del Principe — Punta Capaccia', zona:'Costa Smeralda', difficolta:'facile', lunghezza:5, dislivello:'+150 m', durata:'1–2 ore', tipo:'costa', desc:'Sentiero costiero tra i promontori granitici della Costa Smeralda fino alla "Spiaggia del Principe". Macchia mediterranea profumata, mare cristallino e calette deserte tra le rocce.',                                                             partenza:'Romazzino, Porto Cervo', web:'https://www.gallura.com' }
+];
+
+// ─── RISTORANTI DATA ──────────────────────────────────────────
+const RISTORANTI_DATA = [
+  { id:1,  name:'Dal Corsaro', city:'Cagliari', tipo:'tipico', fascia:'alto', michelin:true,  desc:'Uno dei ristoranti più eleganti di Cagliari, con stella Michelin. Cucina sarda contemporanea che reinterpreta i classici dell\'isola con tecnica e creatività. Carta vini eccezionale.',                                                                                                         indirizzo:'Viale Regina Margherita 28, Cagliari', tel:'+39 070 664318', web:'https://www.ristorantecorsaro.it', specialita:['Malloreddus al ragù','Aragosta sarda','Burrida'] },
+  { id:2,  name:'Su Gologone', city:'Oliena (NU)', tipo:'tipico', fascia:'medio', michelin:false, desc:'Agriturismo-ristorante nell\'oasi naturale del Supramonte. Cucina nuorese autentica: porcetto allo spiedo, malloreddus, culurgiones. Meta di chef internazionali. Ambiente rustico-elegante tra oliveti e ginepri.',                                                                         indirizzo:'Loc. Su Gologone, Oliena (NU)', tel:'+39 0784 287512', web:'https://www.sugologone.it', specialita:['Porcetto allo spiedo','Culurgiones','Malloreddus'] },
+  { id:3,  name:'Sa Cardiga e su Schironi', city:'Capoterra (CA)', tipo:'pesce', fascia:'alto', michelin:false, desc:'Istituzione gastronomica da oltre 50 anni. Pesce freschissimo dello stagno di Santa Gilla — muggine, anguilla, bivalvi. Bottarga di muggine propria, la migliore della Sardegna.',                                                                                            indirizzo:'Loc. Santa Gilla, Capoterra (CA)', tel:'+39 070 71652', web:'https://www.sacardiga.it', specialita:['Bottarga di muggine','Anguilla arrosto','Muggine al sale'] },
+  { id:4,  name:'Il Ristorante di Alghero', city:'Alghero (SS)', tipo:'pesce', fascia:'alto', michelin:false, desc:'Cucina di mare eccellente ad Alghero — aragosta alla catalana, spaghetti alle arselle, frittura di paranza. Vista sul porto storico. Prenotazione indispensabile in estate.',                                                                                                   indirizzo:'Via Cavour 39, Alghero (SS)', tel:'+39 079 973353', web:'https://www.ristorantecaladinettuno.it', specialita:['Aragosta alla catalana','Spaghetti alle arselle','Orata arrosto'] },
+  { id:5,  name:'Agriturismo Sa Mandra', city:'Alghero (SS)', tipo:'tipico', fascia:'economico', michelin:false, desc:'L\'agriturismo più famoso del nord Sardegna. Pranzo e cena fissi con formaggi, salumi, pasta fresca, agnello e maiale tutto dalla fattoria. Esperienza autentica a prezzi giusti.',                                                                                         indirizzo:'Loc. Mamuntanas, Alghero (SS)', tel:'+39 079 999150', web:'https://www.agriturismosamandraalghero.com', specialita:['Agnello allo spiedo','Formaggi artigianali','Pane carasau'] },
+  { id:6,  name:"L'Agnata di De André", city:'Tempio Pausania (SS)', tipo:'tipico', fascia:'medio', michelin:false, desc:'L\'agriturismo dove Fabrizio De André visse dieci anni in Gallura. Cucina gallurese tradizionale: suppa cuata, porcetto, dolci sardi. Atmosfera unica tra i graniti e i ginepri.',                                                                                        indirizzo:'Loc. L\'Agnata, Tempio Pausania (SS)', tel:'+39 079 671384', web:'https://www.agnata.it', specialita:['Suppa cuata','Porcetto gallurese','Seadas al miele'] },
+  { id:7,  name:'Ristorante Gallura', city:'Olbia (SS)', tipo:'pesce', fascia:'medio', michelin:false, desc:'Un classico di Olbia dal 1963. Cucina gallurese con influenze marine — pesce del giorno, aragosta, sa minestra gallurese. Ambiente familiare, servizio attento. Ottima selezione di Vermentino di Gallura.',                                                                         indirizzo:'Corso Umberto I 145, Olbia (SS)', tel:'+39 0789 24648', web:'https://www.ristorantegallura.it', specialita:['Sa minestra gallurese','Aragosta','Pesce del giorno'] },
+  { id:8,  name:'Sa Pischera', city:'Oristano (OR)', tipo:'pesce', fascia:'medio', michelin:false, desc:'Cucina di stagno e di mare a Oristano — specialità della laguna: muggine in carpione, bottarga fresca, arselle. Il ristorante lavora con i pescatori locali di Cabras ogni mattina.',                                                                                                   indirizzo:'Via Cagliari 34, Oristano (OR)', tel:'+39 0783 74596', web:'https://www.sapischera.it', specialita:['Bottarga fresca di Cabras','Muggine in carpione','Gnocchetti alle arselle'] },
+  { id:9,  name:'Agriturismo Deriu', city:'Bultei (SS)', tipo:'tipico', fascia:'economico', michelin:false, desc:'Nel cuore della Sardegna rurale — pasta fresca, porcetto, seadas con miele. Tutto viene dall\'orto e dall\'allevamento proprio. Un\'esperienza di vita contadina vera a prezzi accessibili.',                                                                                    indirizzo:'Loc. Badu Piscina, Bultei (SS)', tel:'+39 079 795009', web:'https://www.agriturismoderiu.it', specialita:['Seadas al miele','Porcetto','Pasta fresca'] },
+  { id:10, name:'Josto by Pierluigi Fais', city:'Cagliari', tipo:'tipico', fascia:'medio', michelin:false, desc:'La cantina gastronomica più interessante di Cagliari — cicchetti sardi, piatti condivisi, vini naturali. Pierluigi Fais ha reinventato la cucina locale con leggerezza e ironia. Sempre pieno, prenotare.',                                                                      indirizzo:'Via Baylle 48, Cagliari', tel:'+39 070 7346857', web:'https://www.jostoristorante.it', specialita:['Cicchetti sardi','Crudi di pesce','Vini naturali'] },
+  { id:11, name:'Il Pescatore', city:'Villasimius (CA)', tipo:'pesce', fascia:'medio', michelin:false, desc:'Affacciato sul porto di Villasimius, cucina di mare semplice e buona. Aragosta, spaghetti allo scoglio, fritto misto. Qualità garantita dai pescatori locali. Terrazza sul porto imperdibile.',                                                                                       indirizzo:'Via del Porto, Villasimius (CA)', tel:'+39 070 791148', web:'#', specialita:['Spaghetti allo scoglio','Aragosta','Fritto misto'] },
+  { id:12, name:'Agriturismo Pirastru', city:'Nuoro (NU)', tipo:'carne', fascia:'economico', michelin:false, desc:'Nella campagna del Nuorese, tavola con prodotti propri — maiale, agnello, formaggi, pane carasau fatto al mattino. Prezzi popolari, porzioni generose, atmosfera familiare.',                                                                                                  indirizzo:'SS 389 km 5, Nuoro (NU)', tel:'+39 0784 256712', web:'#', specialita:['Agnello al forno','Formaggi freschi','Pane carasau'] }
+];
+
+// ─── HOTEL DATA ───────────────────────────────────────────────
+const HOTEL_DATA = [
+  { id:1,  name:'Forte Village Resort', city:'Santa Margherita di Pula (CA)', stelle:5, tipo:'resort', fascia:'lusso', desc:'Uno dei migliori resort d\'Europa — 50 ettari sul mare con spiagge private, 20 ristoranti, spa, campi da tennis e suite con butler. Meta dei VIP di mezzo mondo da 30 anni.',                                                                             indirizzo:'S.S. 195 km 39.600, Pula (CA)', tel:'+39 070 921 9000', web:'https://www.fortevillage.com', servizi:['spa','spiaggia privata','piscine','20 ristoranti','tennis','golf'] },
+  { id:2,  name:'Hotel Cala di Volpe', city:'Porto Cervo (SS)', stelle:5, tipo:'hotel', fascia:'lusso', desc:'Icona della Costa Smeralda disegnata da Jacques Couelle nel 1963. Architettura che imita un villaggio di pescatori sardo, immersa in una baia privata. Punto d\'incontro dell\'élite internazionale.',                                                            indirizzo:'Loc. Cala di Volpe, Porto Cervo (SS)', tel:'+39 0789 976111', web:'https://www.hotelcaladivolpe.com', servizi:['spiaggia privata','piscina','ristorante','spa','porto privato','tennis'] },
+  { id:3,  name:'Su Gologone Experience Hotel', city:'Oliena (NU)', stelle:4, tipo:'boutique', fascia:'alto', desc:'Il boutique hotel più caratteristico di Sardegna, nato da un agriturismo nel Supramonte. Camere decorate da artisti sardi, cucina nuorese stellata, spa con pietre locali. Natura autentica.',                                                                    indirizzo:'Loc. Su Gologone, Oliena (NU)', tel:'+39 0784 287512', web:'https://www.sugologone.it', servizi:['spa','ristorante','piscina','trekking guidato','arte sarda'] },
+  { id:4,  name:'T Hotel', city:'Cagliari', stelle:4, tipo:'hotel', fascia:'alto', desc:'Il design hotel di riferimento di Cagliari — 207 camere nel cuore della città con terrazza panoramica sul golfo. Cucina sarda contemporanea, centro congressi, posizione strategica.',                                                                                               indirizzo:'Via dei Giudicati 66, Cagliari', tel:'+39 070 47400', web:'https://www.thotel.it', servizi:['piscina','ristorante','palestra','spa','parcheggio','centro congressi'] },
+  { id:5,  name:'Pullman Timi Ama Sardegna', city:'Villasimius (CA)', stelle:5, tipo:'resort', fascia:'lusso', desc:'Resort sul mare di Villasimius con accesso diretto a spiaggia di sabbia bianca finissima. Piscine, ristorante di pesce fresco, thalasso. Ideale per famiglie e coppie.',                                                                                       indirizzo:'Loc. Timi Ama, Villasimius (CA)', tel:'+39 070 79711', web:'https://www.timiama.it', servizi:['spiaggia privata','piscine','spa thalasso','ristorante','animazione'] },
+  { id:6,  name:'Arbatax Park Resort', city:'Arbatax (NU)', stelle:4, tipo:'resort', fascia:'alto', desc:'Bungalow e ville nella pineta tra le rocce rosse porfiriche di Arbatax. Spiagge di quarzo rosa, piscine, centro benessere, watersport e mountain bike. Direttamente sul mare dell\'Ogliastra.',                                                                          indirizzo:'Loc. Porto Frailis, Arbatax (NU)', tel:'+39 0782 667890', web:'https://www.arbataxpark.com', servizi:['spiaggia privata','piscine','spa','mountain bike','ristoranti'] },
+  { id:7,  name:'Hotel Calabona', city:'Alghero (SS)', stelle:4, tipo:'hotel', fascia:'medio', desc:'Hotel elegante ad Alghero con accesso diretto alla spiaggia di Calabona. Camere luminose, piscina olimpionica sul mare, ristorante con cucina locale. A 5 minuti dal centro storico catalano.',                                                                              indirizzo:'Loc. Calabona, Alghero (SS)', tel:'+39 079 975728', web:'https://www.hotelcalabona.it', servizi:['spiaggia privata','piscina olimpionica','ristorante','bar','parcheggio'] },
+  { id:8,  name:'Agriturismo Sa Mandra', city:'Alghero (SS)', stelle:0, tipo:'agriturismo', fascia:'economico', desc:'Il più famoso agriturismo del nord Sardegna — camere in una vera fattoria con cavalli, maiali, pecore. Colazione con formaggi e marmellate fatte in casa. Autentico e accessibile.',                                                                          indirizzo:'Loc. Mamuntanas, Alghero (SS)', tel:'+39 079 999150', web:'https://www.agriturismosamandraalghero.com', servizi:['colazione inclusa','piscina','equitazione','ristorante','fattoria didattica'] },
+  { id:9,  name:'Capo d\'Orso Thalasso & SPA', city:'Palau (SS)', stelle:4, tipo:'resort', fascia:'alto', desc:'Resort panoramico tra i graniti del nord Sardegna, vista arcipelago della Maddalena. Centro thalasso rinomato, ristorante di pesce, spiaggia privata nella baia di Palau.',                                                                                         indirizzo:'Loc. Capo d\'Orso, Palau (SS)', tel:'+39 0789 702000', web:'https://www.hotelcapodorso.com', servizi:['thalasso','spiaggia privata','piscina','ristorante','vela'] },
+  { id:10, name:'Hotel Nautilus', city:'Villasimius (CA)', stelle:3, tipo:'hotel', fascia:'medio', desc:'A 100 metri dalla spiaggia di Campus, hotel a gestione familiare con camere luminose e accoglienti. Posizione eccellente per esplorare Capo Carbonara. Ottima colazione con dolci sardi.',                                                                               indirizzo:'Via Gardenia, Villasimius (CA)', tel:'+39 070 7918188', web:'https://www.hotelnautilusvillasimius.it', servizi:['piscina','bar','colazione','parcheggio','wifi'] },
+  { id:11, name:"L'Agnata di De André", city:'Tempio Pausania (SS)', stelle:0, tipo:'agriturismo', fascia:'medio', desc:'L\'agriturismo dove Fabrizio De André visse dieci anni. Camere nelle vecchie stalle restaurate tra i graniti della Gallura. Cucina gallurese, vigneto proprio, atmosfera unica.',                                                                           indirizzo:'Loc. L\'Agnata, Tempio Pausania (SS)', tel:'+39 079 671384', web:'https://www.agnata.it', servizi:['colazione inclusa','ristorante','piscina','trekking','vigneto'] },
+  { id:12, name:'B&B Sa Domu Antiga', city:'Cagliari', stelle:0, tipo:'boutique', fascia:'medio', desc:'B&B di charme nel centro storico di Cagliari (quartiere Castello). Camere con arredi antichi e dettagli sardi originali. Terrazza panoramica sul golfo, una delle viste più belle della città.',                                                                           indirizzo:'Via Lamarmora 14, Cagliari', tel:'+39 070 651231', web:'#', servizi:['colazione inclusa','terrazza panoramica','wifi','aria condizionata','posizione centrale'] }
+];
+
 // ─── STATO TOOLS ─────────────────────────────────────────────
 let activeToolSection = null;
 
@@ -358,15 +406,15 @@ function openToolSection(name) {
       else if (name === 'prenotazioni') renderPrenotazioni(contentArea);
       else if (name === 'biglietti')    renderBiglietti(contentArea);
       else if (name === 'meteo')        renderComingSoon(contentArea, 'Meteo Sardegna', 'Previsioni aggiornate per le zone principali — mare, vento e temperature costa per costa.');
-      else if (name === 'sentieri')     renderComingSoon(contentArea, 'Sentieri & Trekking', 'Percorsi CAI e naturalistici con difficoltà, dislivello, durata e collegamento alla mappa interattiva.');
+      else if (name === 'sentieri')     renderSentieri(contentArea);
       else if (name === 'cantine')      renderCantine(contentArea);
       else if (name === 'prodotti')     renderComingSoon(contentArea, 'Prodotti Tipici', 'Catalogo prodotti sardi — cibo, tessuti, ceramiche e artigianato locale con link acquisto diretto.');
       else if (name === 'artigiani')    renderComingSoon(contentArea, 'Artigiani', 'Maestri artigiani locali con bottega, specialità e contatti — scopri chi produce cosa e dove.');
       else if (name === 'comuni')       renderComingSoon(contentArea, 'Comuni della Sardegna', 'Schede per ogni comune: servizi, uffici, spiagge vicine, eventi e punti d\'interesse.');
       else if (name === 'guide')        renderComingSoon(contentArea, 'Guide Turistiche', 'Guide certificate per zona, lingua e specialità — prenota la tua esperienza personalizzata.');
       else if (name === 'musei')        renderMusei(contentArea);
-      else if (name === 'ristoranti')   renderComingSoon(contentArea, 'Ristoranti', 'Ristoranti, trattorie e locali selezionati per qualità e cucina tradizionale sarda.');
-      else if (name === 'hotel')        renderComingSoon(contentArea, 'Hotel & Alloggi', 'Hotel, B&B, agriturismo e ville — confronta disponibilità e prenota al miglior prezzo.');
+      else if (name === 'ristoranti')   renderRistoranti(contentArea);
+      else if (name === 'hotel')        renderHotel(contentArea);
       else if (name === 'pacchetti')    renderComingSoon(contentArea, 'Pacchetti Viaggio', 'Pacchetti completi con volo, hotel e esperienze — tutto organizzato, tutto in un click.');
 
       gsap.fromTo(content,
@@ -697,6 +745,167 @@ function renderBiglietti(container) {
     { opacity: 0, y: 18 },
     { opacity: 1, y: 0, stagger: 0.08, duration: 0.35, ease: 'power2.out' }
   );
+}
+
+// ─── SENTIERI ─────────────────────────────────────────────────
+function renderSentieri(container) {
+  const DIFF = [
+    { key:'tutti',    label:'Tutti' },
+    { key:'facile',   label:'Facile' },
+    { key:'media',    label:'Media' },
+    { key:'difficile',label:'Difficile' },
+    { key:'esperta',  label:'Esperta' }
+  ];
+  const DIFF_COLORS = { facile:'#32CD32', media:'#FF8C00', difficile:'#C8102E', esperta:'#8B0000' };
+
+  function render(diff) {
+    const list = diff === 'tutti' ? SENTIERI_DATA : SENTIERI_DATA.filter(s => s.difficolta === diff);
+    container.innerHTML = `
+      <div class="tools-section-header">
+        <h2>Sentieri & Trekking</h2>
+        <p class="prenot-subtitle">Percorsi CAI e naturalistici in Sardegna — difficoltà, dislivello e punti di partenza.</p>
+      </div>
+      <div class="tool-filter-pills">
+        ${DIFF.map(d => `<button class="filter-pill${d.key===diff?' active':''}" data-diff="${d.key}">${d.label}</button>`).join('')}
+      </div>
+      <div class="sentieri-grid">
+        ${list.map(s => {
+          const color = DIFF_COLORS[s.difficolta] || '#fff';
+          return `
+          <div class="sentiero-card glass-card">
+            <div class="sentiero-head">
+              <span class="sentiero-badge" style="color:${color};border-color:${color}40;background:${color}14">${s.difficolta}</span>
+              <div class="sentiero-name">${s.name}</div>
+              <div class="sentiero-zona">📍 ${s.zona}</div>
+            </div>
+            <p class="sentiero-desc">${s.desc}</p>
+            <div class="sentiero-stats">
+              <div class="sentiero-stat"><span class="stat-val">${s.lunghezza} km</span><span class="stat-lbl">Lunghezza</span></div>
+              <div class="sentiero-stat"><span class="stat-val">${s.dislivello}</span><span class="stat-lbl">Dislivello</span></div>
+              <div class="sentiero-stat"><span class="stat-val">${s.durata}</span><span class="stat-lbl">Durata</span></div>
+            </div>
+            <div class="cantina-footer">
+              <span class="sentiero-partenza">🚗 ${s.partenza}</span>
+              ${s.web && s.web!=='#' ? `<a href="${s.web}" target="_blank" rel="noopener" class="cantina-link">Info →</a>` : ''}
+            </div>
+          </div>`;
+        }).join('')}
+        ${list.length===0 ? '<div class="no-events">Nessun sentiero trovato.</div>' : ''}
+      </div>`;
+    container.querySelectorAll('.filter-pill[data-diff]').forEach(btn =>
+      btn.addEventListener('click', () => render(btn.dataset.diff))
+    );
+    gsap.fromTo('.sentiero-card', { opacity:0, y:18 }, { opacity:1, y:0, stagger:0.07, duration:0.35, ease:'power2.out' });
+  }
+  render('tutti');
+}
+
+// ─── RISTORANTI ───────────────────────────────────────────────
+function renderRistoranti(container) {
+  const TIPI = [
+    { key:'tutti', label:'Tutti' },
+    { key:'pesce', label:'Pesce & Mare' },
+    { key:'tipico',label:'Tipico Sardo' },
+    { key:'carne', label:'Carne & Griglie' }
+  ];
+  const FASCIA_SYM = { economico:'€', medio:'€€', alto:'€€€', lusso:'€€€€' };
+  const TIPO_COLORS = { pesce:'#00BFFF', tipico:'#FFD700', carne:'#C8102E', pizza:'#FF8C00' };
+
+  function render(tipo) {
+    const list = tipo === 'tutti' ? RISTORANTI_DATA : RISTORANTI_DATA.filter(r => r.tipo === tipo);
+    container.innerHTML = `
+      <div class="tools-section-header">
+        <h2>Ristoranti</h2>
+        <p class="prenot-subtitle">Ristoranti, trattorie e agriturismi selezionati per qualità e cucina tipica sarda.</p>
+      </div>
+      <div class="tool-filter-pills">
+        ${TIPI.map(t => `<button class="filter-pill${t.key===tipo?' active':''}" data-tipo="${t.key}">${t.label}</button>`).join('')}
+      </div>
+      <div class="ristoranti-grid">
+        ${list.map(r => {
+          const color = TIPO_COLORS[r.tipo] || '#fff';
+          return `
+          <div class="ristorante-card glass-card">
+            <div class="risto-badges">
+              <span class="risto-tipo-badge" style="color:${color};border-color:${color}40;background:${color}14">${r.tipo}</span>
+              <span class="risto-fascia">${FASCIA_SYM[r.fascia]||'€'}</span>
+              ${r.michelin ? '<span class="michelin-star">⭐ Michelin</span>' : ''}
+            </div>
+            <div class="ristorante-name">${r.name}</div>
+            <div class="ristorante-city">📍 ${r.city}</div>
+            <p class="ristorante-desc">${r.desc}</p>
+            <div class="risto-specialita">
+              ${r.specialita.map(sp => `<span class="spec-tag">${sp}</span>`).join('')}
+            </div>
+            <div class="cantina-footer">
+              ${r.tel ? `<span class="cantina-tel">📞 ${r.tel}</span>` : ''}
+              ${r.web && r.web!=='#' ? `<a href="${r.web}" target="_blank" rel="noopener" class="cantina-link">Prenota →</a>` : ''}
+            </div>
+          </div>`;
+        }).join('')}
+        ${list.length===0 ? '<div class="no-events">Nessun ristorante trovato.</div>' : ''}
+      </div>`;
+    container.querySelectorAll('.filter-pill[data-tipo]').forEach(btn =>
+      btn.addEventListener('click', () => render(btn.dataset.tipo))
+    );
+    gsap.fromTo('.ristorante-card', { opacity:0, y:18 }, { opacity:1, y:0, stagger:0.07, duration:0.35, ease:'power2.out' });
+  }
+  render('tutti');
+}
+
+// ─── HOTEL ────────────────────────────────────────────────────
+function renderHotel(container) {
+  const TIPI = [
+    { key:'tutti',       label:'Tutti' },
+    { key:'resort',      label:'Resort' },
+    { key:'hotel',       label:'Hotel' },
+    { key:'boutique',    label:'Boutique' },
+    { key:'agriturismo', label:'Agriturismo' }
+  ];
+  const FASCIA_LABELS  = { economico:'€  Budget', medio:'€€  Medio', alto:'€€€  Premium', lusso:'€€€€  Lusso' };
+  const FASCIA_COLORS  = { economico:'#32CD32', medio:'#FF8C00', alto:'#00BFFF', lusso:'#FFD700' };
+
+  function render(tipo) {
+    const list = tipo === 'tutti' ? HOTEL_DATA : HOTEL_DATA.filter(h => h.tipo === tipo);
+    container.innerHTML = `
+      <div class="tools-section-header">
+        <h2>Hotel & Alloggi</h2>
+        <p class="prenot-subtitle">Hotel, resort, B&B e agriturismo — selezione curata per ogni budget e stile di viaggio.</p>
+      </div>
+      <div class="tool-filter-pills">
+        ${TIPI.map(t => `<button class="filter-pill${t.key===tipo?' active':''}" data-tipo="${t.key}">${t.label}</button>`).join('')}
+      </div>
+      <div class="hotel-grid">
+        ${list.map(h => {
+          const fascColor = FASCIA_COLORS[h.fascia] || '#fff';
+          const stars = h.stelle > 0 ? '★'.repeat(h.stelle) : '';
+          return `
+          <div class="hotel-card glass-card">
+            <div class="hotel-badges">
+              <span class="hotel-tipo-badge">${h.tipo}</span>
+              ${stars ? `<span class="hotel-stelle">${stars}</span>` : ''}
+              <span class="hotel-fascia" style="color:${fascColor}">${FASCIA_LABELS[h.fascia]||h.fascia}</span>
+            </div>
+            <div class="hotel-name">${h.name}</div>
+            <div class="hotel-city">📍 ${h.city}</div>
+            <p class="hotel-desc">${h.desc}</p>
+            <div class="hotel-servizi">
+              ${h.servizi.map(s => `<span class="servizio-tag">${s}</span>`).join('')}
+            </div>
+            <div class="cantina-footer">
+              ${h.tel ? `<span class="cantina-tel">📞 ${h.tel}</span>` : ''}
+              ${h.web && h.web!=='#' ? `<a href="${h.web}" target="_blank" rel="noopener" class="cantina-link">Sito web →</a>` : ''}
+            </div>
+          </div>`;
+        }).join('')}
+        ${list.length===0 ? '<div class="no-events">Nessun alloggio trovato.</div>' : ''}
+      </div>`;
+    container.querySelectorAll('.filter-pill[data-tipo]').forEach(btn =>
+      btn.addEventListener('click', () => render(btn.dataset.tipo))
+    );
+    gsap.fromTo('.hotel-card', { opacity:0, y:18 }, { opacity:1, y:0, stagger:0.07, duration:0.35, ease:'power2.out' });
+  }
+  render('tutti');
 }
 
 // ─── CANTINE ──────────────────────────────────────────────────

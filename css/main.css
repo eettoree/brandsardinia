@@ -2033,6 +2033,96 @@ img { max-width: 100%; display: block; }
 .filter-pill:hover { border-color: var(--border2); color: var(--text); }
 .filter-pill.active { background: var(--red); border-color: var(--red); color: #fff; }
 
+/* ── SENTIERI ────────────────────────────────────────────────── */
+.sentieri-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.sentiero-card {
+  padding: 22px; border-radius: 16px;
+  display: flex; flex-direction: column; gap: 12px;
+}
+.sentiero-head { display: flex; flex-direction: column; gap: 4px; }
+.sentiero-badge {
+  display: inline-block; font-size: 0.62rem; font-weight: 700;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  border: 1px solid; border-radius: 12px;
+  padding: 2px 10px; width: fit-content; margin-bottom: 2px;
+}
+.sentiero-name { font-size: 1.02rem; font-weight: 700; color: var(--text); }
+.sentiero-zona { font-size: 0.78rem; color: var(--text-muted); }
+.sentiero-desc { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; }
+.sentiero-stats {
+  display: flex; gap: 0;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border); border-radius: 10px;
+  overflow: hidden;
+}
+.sentiero-stat {
+  display: flex; flex-direction: column; gap: 2px;
+  flex: 1; padding: 10px 12px;
+  border-right: 1px solid var(--border);
+}
+.sentiero-stat:last-child { border-right: none; }
+.stat-val { font-size: 0.88rem; font-weight: 700; color: var(--text); }
+.stat-lbl { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); }
+.sentiero-partenza { font-size: 0.76rem; color: var(--text-muted); }
+
+/* ── RISTORANTI ───────────────────────────────────────────────── */
+.ristoranti-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.ristorante-card {
+  padding: 22px; border-radius: 16px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.risto-badges { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.risto-tipo-badge {
+  font-size: 0.62rem; font-weight: 700; letter-spacing: 1.5px;
+  text-transform: uppercase; border: 1px solid; border-radius: 12px; padding: 2px 10px;
+}
+.risto-fascia { font-size: 0.85rem; font-weight: 700; color: var(--text-muted); letter-spacing: 1px; }
+.michelin-star {
+  font-size: 0.7rem; font-weight: 700; color: #FFD700;
+  background: rgba(255,215,0,0.12); border: 1px solid rgba(255,215,0,0.3);
+  border-radius: 12px; padding: 2px 8px;
+}
+.ristorante-name { font-size: 1.02rem; font-weight: 700; color: var(--text); }
+.ristorante-city { font-size: 0.78rem; color: var(--text-muted); }
+.ristorante-desc { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; }
+.risto-specialita { display: flex; flex-wrap: wrap; gap: 6px; }
+.spec-tag {
+  font-size: 0.7rem; font-weight: 500; color: #FFD700;
+  background: rgba(255,215,0,0.1); border: 1px solid rgba(255,215,0,0.22);
+  border-radius: 12px; padding: 3px 10px;
+}
+
+/* ── HOTEL ───────────────────────────────────────────────────── */
+.hotel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.hotel-card {
+  padding: 22px; border-radius: 16px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.hotel-badges { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.hotel-tipo-badge {
+  font-size: 0.62rem; font-weight: 700; letter-spacing: 1.5px;
+  text-transform: uppercase; color: var(--text-muted);
+  border: 1px solid var(--border); border-radius: 12px; padding: 2px 10px;
+}
+.hotel-stelle { font-size: 0.8rem; color: #FFD700; letter-spacing: 2px; }
+.hotel-fascia  { font-size: 0.72rem; font-weight: 600; }
+.hotel-name  { font-size: 1.02rem; font-weight: 700; color: var(--text); }
+.hotel-city  { font-size: 0.78rem; color: var(--text-muted); }
+.hotel-desc  { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; }
+.hotel-servizi { display: flex; flex-wrap: wrap; gap: 6px; }
+
 /* ── CANTINE ─────────────────────────────────────────────────── */
 .cantine-grid {
   display: grid;
