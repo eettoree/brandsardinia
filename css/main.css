@@ -1681,9 +1681,9 @@ img { max-width: 100%; display: block; }
 /* Grid card tools */
 #tools-menu {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 20px;
-  max-width: 1000px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 18px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -2008,6 +2008,202 @@ img { max-width: 100%; display: block; }
   .cal-chip-cat { display: none; }
   .cal-chip-name { font-size: 0.6rem; }
   .cal-month-title { font-size: 0.95rem; }
+}
+
+/* ── COMING SOON ────────────────────────────────────────────── */
+.coming-soon-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--red);
+  background: rgba(200,16,46,0.08);
+  border: 1px solid rgba(200,16,46,0.2);
+  border-radius: 20px;
+  padding: 4px 12px;
+  white-space: nowrap;
+}
+
+.coming-soon-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 56px 24px 32px;
+  max-width: 480px;
+  margin: 0 auto;
+  gap: 14px;
+}
+
+.coming-soon-illus { color: var(--text-muted); }
+
+.coming-soon-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+.coming-soon-note {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 7px 16px;
+  margin-top: 4px;
+}
+
+.coming-soon-skeleton {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 14px;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.skeleton-card {
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sk-line {
+  background: var(--border2);
+  border-radius: 4px;
+  height: 11px;
+  animation: sk-pulse 1.8s ease-in-out infinite;
+}
+.sk-title { width: 55%; height: 15px; }
+.sk-mid   { width: 80%; }
+.sk-short { width: 35%; }
+
+@keyframes sk-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+
+/* ── PRENOTAZIONI HUB ────────────────────────────────────────── */
+.prenot-subtitle {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  width: 100%;
+  margin-top: -4px;
+}
+
+.prenotazioni-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.prenot-card {
+  padding: 22px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.prenot-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.prenot-icon-wrap {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(200,16,46,0.07);
+  border: 1px solid rgba(200,16,46,0.18);
+  border-radius: 10px;
+  color: var(--red);
+  flex-shrink: 0;
+}
+
+.prenot-title {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.prenot-desc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.prenot-links {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.prenot-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: var(--text);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 12px;
+  text-decoration: none;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+.prenot-link:hover {
+  border-color: rgba(200,16,46,0.35);
+  color: var(--red);
+  background: rgba(200,16,46,0.04);
+}
+
+/* ── BIGLIETTI GRID ──────────────────────────────────────────── */
+.biglietti-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.biglietto-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 20px;
+  border-radius: 14px;
+  text-decoration: none;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.biglietto-card:hover {
+  border-color: rgba(200,16,46,0.35);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+.biglietto-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.biglietto-desc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  flex: 1;
+}
+
+.biglietto-cta {
+  font-size: 0.8rem;
+  color: var(--red);
+  font-weight: 600;
+  margin-top: 8px;
 }
 
 /* ── BEACHES ───────────────────────────────────────────────── */

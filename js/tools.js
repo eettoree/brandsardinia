@@ -315,14 +315,27 @@ function openToolSection(name) {
 
       // Render del contenuto
       const contentArea = document.getElementById('tools-content-area');
-      if (name === 'calendar') renderCalendar(contentArea);
-      else if (name === 'beaches') renderBeaches(contentArea);
-      else if (name === 'camper') renderCamper(contentArea);
-      else if (name === 'sports') renderSports(contentArea);
-      else if (name === 'transport') renderTransport(contentArea);
-      else if (name === 'itinerari') renderItinerari(contentArea);
-      else if (name === 'social') renderSocialWall(contentArea);
-      else if (name === 'nord') renderNordSardegna(contentArea);
+      if      (name === 'calendar')     renderCalendar(contentArea);
+      else if (name === 'beaches')      renderBeaches(contentArea);
+      else if (name === 'camper')       renderCamper(contentArea);
+      else if (name === 'sports')       renderSports(contentArea);
+      else if (name === 'transport')    renderTransport(contentArea);
+      else if (name === 'itinerari')    renderItinerari(contentArea);
+      else if (name === 'social')       renderSocialWall(contentArea);
+      else if (name === 'nord')         renderNordSardegna(contentArea);
+      else if (name === 'prenotazioni') renderPrenotazioni(contentArea);
+      else if (name === 'biglietti')    renderBiglietti(contentArea);
+      else if (name === 'meteo')        renderComingSoon(contentArea, 'Meteo Sardegna', 'Previsioni aggiornate per le zone principali — mare, vento e temperature costa per costa.');
+      else if (name === 'sentieri')     renderComingSoon(contentArea, 'Sentieri & Trekking', 'Percorsi CAI e naturalistici con difficoltà, dislivello, durata e collegamento alla mappa interattiva.');
+      else if (name === 'cantine')      renderComingSoon(contentArea, 'Cantine & Vino', 'Cantine sarde aperte al pubblico — degustazioni, visite guidate e acquisto diretto in cantina.');
+      else if (name === 'prodotti')     renderComingSoon(contentArea, 'Prodotti Tipici', 'Catalogo prodotti sardi — cibo, tessuti, ceramiche e artigianato locale con link acquisto diretto.');
+      else if (name === 'artigiani')    renderComingSoon(contentArea, 'Artigiani', 'Maestri artigiani locali con bottega, specialità e contatti — scopri chi produce cosa e dove.');
+      else if (name === 'comuni')       renderComingSoon(contentArea, 'Comuni della Sardegna', 'Schede per ogni comune: servizi, uffici, spiagge vicine, eventi e punti d\'interesse.');
+      else if (name === 'guide')        renderComingSoon(contentArea, 'Guide Turistiche', 'Guide certificate per zona, lingua e specialità — prenota la tua esperienza personalizzata.');
+      else if (name === 'musei')        renderComingSoon(contentArea, 'Musei & Cultura', 'Musei, siti nuragici e collezioni permanenti — orari, biglietti e percorsi tematici.');
+      else if (name === 'ristoranti')   renderComingSoon(contentArea, 'Ristoranti', 'Ristoranti, trattorie e locali selezionati per qualità e cucina tradizionale sarda.');
+      else if (name === 'hotel')        renderComingSoon(contentArea, 'Hotel & Alloggi', 'Hotel, B&B, agriturismo e ville — confronta disponibilità e prenota al miglior prezzo.');
+      else if (name === 'pacchetti')    renderComingSoon(contentArea, 'Pacchetti Viaggio', 'Pacchetti completi con volo, hotel e esperienze — tutto organizzato, tutto in un click.');
 
       gsap.fromTo(content,
         { opacity: 0, y: 30 },
@@ -503,6 +516,154 @@ function renderCalendar(container) {
   }
 
   render();
+}
+
+// ─── COMING SOON PLACEHOLDER ──────────────────────────────────
+function renderComingSoon(container, title, desc) {
+  const skeletons = Array(4).fill(0).map(() => `
+    <div class="skeleton-card">
+      <div class="sk-line sk-title"></div>
+      <div class="sk-line sk-mid"></div>
+      <div class="sk-line sk-short"></div>
+    </div>`).join('');
+
+  container.innerHTML = `
+    <div class="tools-section-header">
+      <h2>${title}</h2>
+      <span class="coming-soon-badge">In arrivo</span>
+    </div>
+    <div class="coming-soon-wrap">
+      <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="1" width="64" height="64" class="coming-soon-illus">
+        <circle cx="40" cy="40" r="34" stroke-dasharray="6 3"/>
+        <path d="M40 22v20l12 8" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <p class="coming-soon-desc">${desc}</p>
+      <span class="coming-soon-note">In costruzione — disponibile a breve</span>
+    </div>
+    <div class="coming-soon-skeleton">${skeletons}</div>
+  `;
+  gsap.fromTo('.coming-soon-wrap',
+    { opacity: 0, y: 20 },
+    { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }
+  );
+  gsap.fromTo('.skeleton-card',
+    { opacity: 0, y: 16 },
+    { opacity: 1, y: 0, stagger: 0.07, duration: 0.35, delay: 0.1, ease: 'power2.out' }
+  );
+}
+
+// ─── PRENOTAZIONI HUB ─────────────────────────────────────────
+function renderPrenotazioni(container) {
+  const hubs = [
+    {
+      label: 'Alloggi',
+      desc: 'Hotel, B&B, agriturismo e ville — le migliori tariffe disponibili online',
+      links: [
+        { text: 'Booking.com — Sardegna', url: 'https://www.booking.com/region/it/sardinia.it.html' },
+        { text: 'Airbnb — Sardegna', url: 'https://www.airbnb.it/sardinia-italy/stays' },
+        { text: 'Agriturist — Agriturismo Sardegna', url: 'https://www.agriturist.it/regioni/sardegna' }
+      ]
+    },
+    {
+      label: 'Esperienze & Tour',
+      desc: 'Escursioni, attività guidate e tour con prenotazione immediata',
+      links: [
+        { text: 'Viator — Sardinia Tours', url: 'https://www.viator.com/Sardinia/d23207-ttd' },
+        { text: 'GetYourGuide — Sardinia', url: 'https://www.getyourguide.it/sardinia-l946/' },
+        { text: 'Airbnb Esperienze — Sardegna', url: 'https://www.airbnb.it/experiences' }
+      ]
+    },
+    {
+      label: 'Traghetti & Trasporti',
+      desc: 'Traghetti, voli, noleggio auto e bus per raggiungere e muoversi in Sardegna',
+      links: [
+        { text: 'Traghetti.com — Sardegna', url: 'https://www.traghetti.com/sardegna/' },
+        { text: 'Rentalcars — Noleggio Sardegna', url: 'https://www.rentalcars.com/it/search/?dropOffCountry=IT&country=Italy' },
+        { text: 'Skyscanner — Voli per Sardegna', url: 'https://www.skyscanner.it/voli-per/sar/sardegna.html' }
+      ]
+    },
+    {
+      label: 'Biglietti & Attrazioni',
+      desc: 'Musei, concerti, parchi e attrazioni — acquisto online senza code',
+      links: [
+        { text: 'TicketOne — Sardegna', url: 'https://www.ticketone.it/search/?q=sardegna' },
+        { text: 'VivaTicket — Sardegna', url: 'https://www.vivaticket.com/?srch=sardegna' },
+        { text: 'Eventbrite — Sardegna Events', url: 'https://www.eventbrite.it/d/italy--sardinia/events/' }
+      ]
+    }
+  ];
+
+  const iconsSvg = [
+    '<path d="M2 28V14M2 20h28M30 28V18a2 2 0 00-2-2H16a2 2 0 00-2 2v2"/><path d="M2 14V7a2 2 0 012-2h7a2 2 0 012 2v7"/><rect x="14" y="16" width="16" height="6" rx="2" fill="currentColor" opacity="0.15"/><rect x="14" y="16" width="16" height="6" rx="2"/>',
+    '<path d="M6 8h20l-2 18H8L6 8zM3 8h26"/><path d="M12 8a4 4 0 018 0"/>',
+    '<path d="M16 4v24M4 10l12-6 12 6M6 28h20"/><circle cx="16" cy="16" r="3" fill="currentColor" opacity="0.3"/>',
+    '<path d="M2 11a2 2 0 012-2h24a2 2 0 012 2v3a3 3 0 000 4v3a2 2 0 01-2 2H4a2 2 0 01-2-2v-3a3 3 0 000-4v-3z" fill="currentColor" opacity="0.1"/><path d="M2 11a2 2 0 012-2h24a2 2 0 012 2v3a3 3 0 000 4v3a2 2 0 01-2 2H4a2 2 0 01-2-2v-3a3 3 0 000-4v-3z"/><path d="M20 9v14" stroke-dasharray="3 2"/><path d="M7 15h8M7 19h5"/>'
+  ];
+
+  container.innerHTML = `
+    <div class="tools-section-header">
+      <h2>Prenotazioni</h2>
+      <p class="prenot-subtitle">Hub di prenotazione — accedi alle migliori piattaforme per organizzare il tuo soggiorno.</p>
+    </div>
+    <div class="prenotazioni-grid">
+      ${hubs.map((h, i) => `
+        <div class="prenot-card glass-card">
+          <div class="prenot-head">
+            <div class="prenot-icon-wrap">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22">${iconsSvg[i]}</svg>
+            </div>
+            <div>
+              <div class="prenot-title">${h.label}</div>
+              <div class="prenot-desc">${h.desc}</div>
+            </div>
+          </div>
+          <div class="prenot-links">
+            ${h.links.map(l => `
+              <a href="${l.url}" target="_blank" rel="noopener" class="prenot-link">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" width="11" height="11" style="flex-shrink:0"><path d="M3 8h9M8 4l5 4-5 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                ${l.text}
+              </a>`).join('')}
+          </div>
+        </div>`).join('')}
+    </div>
+  `;
+
+  gsap.fromTo('.prenot-card',
+    { opacity: 0, y: 20 },
+    { opacity: 1, y: 0, stagger: 0.1, duration: 0.35, ease: 'power2.out' }
+  );
+}
+
+// ─── BIGLIETTI HUB ────────────────────────────────────────────
+function renderBiglietti(container) {
+  const platforms = [
+    { name: 'TicketOne', desc: 'Concerti, spettacoli ed eventi in Sardegna', url: 'https://www.ticketone.it/search/?q=sardegna', label: 'Cerca eventi' },
+    { name: 'VivaTicket', desc: 'Biglietti per sagre, festival e manifestazioni locali', url: 'https://www.vivaticket.com/?srch=sardegna', label: 'Cerca eventi' },
+    { name: 'Eventbrite', desc: 'Conferenze, workshop ed eventi culturali', url: 'https://www.eventbrite.it/d/italy--sardinia/events/', label: 'Esplora' },
+    { name: 'Musei.it', desc: 'Biglietti musei statali e siti archeologici', url: 'https://www.musei.it/sardegna', label: 'Prenota visita' },
+    { name: 'Skytix', desc: 'Parchi, attrazioni e esperienze outdoor', url: 'https://www.skytix.it', label: 'Scopri' },
+    { name: 'CiaoTickets', desc: 'Teatro, cinema e spettacoli dal vivo', url: 'https://www.ciaotickets.com/biglietti/sardegna', label: 'Acquista' }
+  ];
+
+  container.innerHTML = `
+    <div class="tools-section-header">
+      <h2>Biglietti & Attrazioni</h2>
+      <p class="prenot-subtitle">Acquista online — salta le code e accedi direttamente alle piattaforme ufficiali.</p>
+    </div>
+    <div class="biglietti-grid">
+      ${platforms.map(p => `
+        <a href="${p.url}" target="_blank" rel="noopener" class="biglietto-card glass-card">
+          <div class="biglietto-name">${p.name}</div>
+          <div class="biglietto-desc">${p.desc}</div>
+          <span class="biglietto-cta">${p.label} →</span>
+        </a>`).join('')}
+    </div>
+  `;
+
+  gsap.fromTo('.biglietto-card',
+    { opacity: 0, y: 18 },
+    { opacity: 1, y: 0, stagger: 0.08, duration: 0.35, ease: 'power2.out' }
+  );
 }
 
 // ─── SPIAGGE LIVE ─────────────────────────────────────────────
