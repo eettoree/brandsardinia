@@ -283,6 +283,38 @@ const SERVICE_ICONS = {
 
 const MONTH_NAMES = ['', 'Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'];
 
+// ─── CANTINE DATA ─────────────────────────────────────────────
+const CANTINE_DATA = [
+  { id:1, name:'Argiolas', city:'Serdiana', zona:'sud', vitigni:['Cannonau','Vermentino','Monica','Nasco'], servizi:['visita','degustazione','acquisto','ristorante'], desc:'Una delle cantine più celebrate di Sardegna, produce il Turriga — vino-icona dell\'isola. Fondata nel 1918, oggi è sinonimo di qualità internazionale con presenze nelle migliori wine list mondiali.', web:'https://www.argiolas.it', tel:'+39 070 740606', indirizzo:'Via Roma 56/58, Serdiana (CA)' },
+  { id:2, name:'Cantina di Santadi', city:'Santadi', zona:'sulcis', vitigni:['Carignano del Sulcis','Vermentino','Monica'], servizi:['visita','degustazione','acquisto'], desc:'Cooperativa del Sulcis fondata nel 1960. Il Terre Brune Carignano del Sulcis è tra i rossi più premiati di Sardegna. Vitigni centenari ad alberello nella macchia mediterranea.', web:'https://www.cantinasantadi.it', tel:'+39 0781 950127', indirizzo:'Via Su Pranu 12, Santadi (SU)' },
+  { id:3, name:'Sella & Mosca', city:'Alghero', zona:'nord', vitigni:['Vermentino','Cannonau','Torbato','Cagnulari'], servizi:['visita','degustazione','acquisto','museo'], desc:'Storica tenuta fondata nel 1899 ad Alghero — oltre 500 ettari vitati, una delle più grandi d\'Italia. Celebre per il Torbato, vitigno rarissimo di origini catalane coltivato solo qui.', web:'https://www.sellaemosca.com', tel:'+39 079 997700', indirizzo:'Loc. I Piani, Alghero (SS)' },
+  { id:4, name:'Cantina Sociale di Jerzu', city:'Jerzu', zona:'centro', vitigni:['Cannonau','Vermentino'], servizi:['visita','degustazione','acquisto'], desc:'Nel cuore dell\'Ogliastra, patria del Cannonau più antico e robusto. La cooperativa raccoglie le uve di una delle zone a più lunga tradizione vinicola sarda. Vini potenti e longevi.', web:'https://www.antichicantinedijerzu.it', tel:'+39 0782 70028', indirizzo:'Via Umberto I 1, Jerzu (NU)' },
+  { id:5, name:'Tenute Dettori', city:'Sennori', zona:'nord', vitigni:['Cannonau','Monica','Vermentino','Moscato'], servizi:['visita','degustazione','acquisto'], desc:'Produzione biologica e biodinamica nel Romangia, a nord di Sassari. Alessandro Dettori è tra i vignaioli più originali d\'Italia — vini non filtrati, rifermentati in bottiglia, di grande personalità.', web:'https://www.tenutedetteri.com', tel:'+39 079 514711', indirizzo:'Loc. Badde Nigolosu, Sennori (SS)' },
+  { id:6, name:'Mesa', city:'Sant\'Anna Arresi', zona:'sulcis', vitigni:['Carignano del Sulcis','Vermentino','Buio'], servizi:['visita','degustazione','acquisto'], desc:'Design contemporaneo nel Sulcis, fondata nel 2004. Il Buio Buio Carignano è il vino più iconico. Architettura moderna immersa nei vigneti del sud-ovest, scenografica al tramonto.', web:'https://www.cantinamesa.com', tel:'+39 0781 965777', indirizzo:'S.P. 75 km 1.5, Sant\'Anna Arresi (SU)' },
+  { id:7, name:'Contini', city:'Cabras', zona:'centro', vitigni:['Vernaccia di Oristano','Vermentino','Nieddera'], servizi:['visita','degustazione','acquisto'], desc:'Dal 1898, custodi della Vernaccia di Oristano — il vino ambrato dell\'isola stagionato in botti di castagno. Un\'esperienza unica tra i vini ossidativi più particolari del Mediterraneo.', web:'https://www.vinicontini.com', tel:'+39 0783 290806', indirizzo:'Via Genova 48/50, Cabras (OR)' },
+  { id:8, name:'Santa Maria La Palma', city:'Sassari', zona:'nord', vitigni:['Vermentino','Cannonau','Cagnulari'], servizi:['visita','degustazione','acquisto'], desc:'Cooperativa vicino ad Alghero celebre per il Vermentino di Sardegna DOC. Immersa nei vigneti della piana algherese, produce vini freschi, minerali e di grande profilo aromatico.', web:'https://www.santamariapalma.it', tel:'+39 079 999008', indirizzo:'Loc. Santa Maria La Palma, Sassari (SS)' },
+  { id:9, name:'Pala', city:'Serdiana', zona:'sud', vitigni:['Cannonau','Vermentino','Nuragus','Monica'], servizi:['visita','degustazione','acquisto'], desc:'Tenuta familiare fondata nel 1950, tra le più rispettate del Campidano. Il Stellato Cannonau e il Vermentino di Sardegna sono i vini di punta — eleganti, identitari, longevi.', web:'https://www.pala.it', tel:'+39 070 740284', indirizzo:'Via Verdi 7, Serdiana (CA)' },
+  { id:10, name:'Cantina Olianas', city:'Gergei', zona:'centro', vitigni:['Cannonau','Sangiovese','Vermentino'], servizi:['visita','degustazione','acquisto'], desc:'In Marmilla a 500 metri sul livello del mare. Vigneti ad alta quota con escursione termica marcata — Cannonau eleganti e freschi con tannini setosi. Cantina biodinamica certificata.', web:'https://www.cantinaolianas.com', tel:'+39 0782 808066', indirizzo:'Loc. Su Narboni, Gergei (SU)' },
+  { id:11, name:'Ferruccio Deiana', city:'Settimo San Pietro', zona:'sud', vitigni:['Cannonau','Vermentino','Monica','Cagnulari'], servizi:['visita','degustazione','acquisto'], desc:'Azienda familiare a pochi chilometri da Cagliari. Vini artigianali da vitigni autoctoni con metodi tradizionali. Il Sileno Cannonau è il vino di punta — strutturato e speziato.', web:'https://www.ferrucciodeiana.it', tel:'+39 070 749117', indirizzo:'Via Umberto I 29, Settimo San Pietro (CA)' },
+  { id:12, name:'Cantina di Dorgali', city:'Dorgali', zona:'centro', vitigni:['Cannonau','Vermentino','Malvasia'], servizi:['visita','degustazione','acquisto'], desc:'Affacciata sul Supramonte, produce Cannonau da uve raccolte a 700 metri. Vini potenti e longevi — la cooperativa è punto di riferimento per il Cannonau di Sardegna DOC Nepente di Oliena.', web:'https://www.cantinedorgali.com', tel:'+39 0784 96143', indirizzo:'Via Piave 11, Dorgali (NU)' }
+];
+
+// ─── MUSEI DATA ───────────────────────────────────────────────
+const MUSEI_DATA = [
+  { id:1, name:'Museo Archeologico Nazionale', city:'Cagliari', tipo:'archeologia', orari:'Mar–Dom 9:00–20:00', biglietto:'5 €', desc:'La più importante collezione di antichità sarde: bronzetti nuragici, ceramiche fenicie, gioielli romani. Imprescindibile per capire la civiltà nuragica e le culture che si sono succedute nell\'isola.', web:'https://museoarcheologicocagliari.cultura.gov.it', indirizzo:'Piazza Arsenale 1, Cagliari' },
+  { id:2, name:'Museo delle Maschere Mediterranee', city:'Mamoiada', tipo:'etnografia', orari:'Mar–Dom 9:00–13:00 / 15:00–19:00', biglietto:'5 €', desc:'Raccolta straordinaria di maschere rituali sarde e mediterranee. Sede dei Mamuthones — le maschere nere di Mamoiada, protagoniste del carnevale più antico e suggestivo della Sardegna.', web:'https://www.museodellemaschere.it', indirizzo:'Piazza Europa 15, Mamoiada (NU)' },
+  { id:3, name:'MAN – Museo d\'Arte Provincia di Nuoro', city:'Nuoro', tipo:'arte', orari:'Mar–Dom 10:00–13:00 / 16:00–20:00', biglietto:'5 €', desc:'Il museo d\'arte contemporanea di riferimento per la Sardegna. Ospita opere di grandi artisti sardi e mostre temporanee internazionali di rilievo con nomi dell\'arte contemporanea globale.', web:'https://www.museoman.it', indirizzo:'Via Satta 15, Nuoro (NU)' },
+  { id:4, name:'Museo Civico G.A. Sanna', city:'Sassari', tipo:'archeologia', orari:'Mar–Dom 9:00–20:00', biglietto:'3 €', desc:'Il principale museo del nord Sardegna. Sezione archeologica con reperti dalla preistoria al periodo romano e sezione etnografica con costumi tradizionali e oggetti di vita quotidiana.', web:'https://www.musei.sassari.it', indirizzo:'Via Roma 64, Sassari (SS)' },
+  { id:5, name:'Museo del Bisso', city:'Sant\'Antioco', tipo:'storia', orari:'Lun–Sab 10:00–12:00 / 16:00–18:00', biglietto:'Gratuito', desc:'Chiara Vigo è l\'ultima tessitrice di bisso marino al mondo — la fibra prodotta dal mollusco Pinna nobilis. Un\'esperienza unica candidata all\'UNESCO come patrimonio immateriale dell\'umanità.', web:'https://www.santantioco.net', indirizzo:'Via Regina Margherita 69, Sant\'Antioco (SU)' },
+  { id:6, name:'Museo del Carbone', city:'Carbonia', tipo:'storia', orari:'Mar–Dom 9:00–19:00', biglietto:'7 €', desc:'Nel sito minerario di Serbariu racconta la storia delle miniere di carbone del Sulcis e degli operai che le hanno vissute. Include visita vera alla galleria sotterranea — emozionante.', web:'https://www.museodelcarbone.it', indirizzo:'Via Liguria, Carbonia (SU)' },
+  { id:7, name:'Museo Etnografico Sardo', city:'Nuoro', tipo:'etnografia', orari:'Mar–Dom 9:00–20:00', biglietto:'3 €', desc:'La più grande collezione di costumi tradizionali sardi — gioielli, tessuti, abiti festivi delle 377 comunità dell\'isola. Un viaggio nell\'identità sarda profonda e nella sua straordinaria varietà locale.', web:'https://www.isre.it', indirizzo:'Via Antonio Mereu 56, Nuoro (NU)' },
+  { id:8, name:'Museo d\'Arte Siamese', city:'Cagliari', tipo:'arte', orari:'Mar–Dom 9:00–20:00', biglietto:'4 €', desc:'Straordinaria collezione di arte asiatica donata dal diplomatico Stefano Cardu nel 1914. Oltre 1.500 opere tra sculture, ceramiche, lacche e avori dal Siam (Thailandia) e dal Giappone.', web:'https://musei.cagliari.it', indirizzo:'Piazza Indipendenza, Cagliari' },
+  { id:9, name:'Galleria Comunale d\'Arte', city:'Cagliari', tipo:'arte', orari:'Mar–Dom 9:00–21:00', biglietto:'4 €', desc:'La pinacoteca di Cagliari ospita la Collezione Ingrao con oltre 400 opere di arte moderna — da Boldini a De Chirico. Sede di grandi mostre temporanee. Vista panoramica dai Bastioni.', web:'https://www.galleriacomunalecagliari.it', indirizzo:'Largo Giuseppe Dessì, Cagliari' },
+  { id:10, name:'Museo di Ozieri', city:'Ozieri', tipo:'archeologia', orari:'Mar–Dom 9:00–13:00 / 15:00–18:00', biglietto:'3 €', desc:'Custodisce i reperti della Cultura di Ozieri (3500–2700 a.C.) — una delle più antiche civiltà preistoriche del Mediterraneo. Ceramiche decorate e statuine votive di rara bellezza.', web:'https://www.comune.ozieri.ss.it', indirizzo:'Ex Convento delle Clarisse, Ozieri (SS)' },
+  { id:11, name:'Museo Regionale di Scienze Naturali', city:'Cagliari', tipo:'natura', orari:'Mar–Dom 9:00–19:00', biglietto:'3 €', desc:'Fauna, flora e geologia della Sardegna — dagli ambienti costieri alle foreste interne. Sezione dedicata alla fauna endemica: cervo sardo, muflone, aquila di Bonelli e grifone.', web:'https://www.musei.cagliari.it', indirizzo:'Cittadella dei Musei, Cagliari' },
+  { id:12, name:'Museo Speleo Paleontologico di Carbonia', city:'Carbonia', tipo:'natura', orari:'Lun–Sab 9:00–13:00 / 16:00–19:00', biglietto:'2 €', desc:'Dedicato alla paleontologia e alla speleologia del Sulcis. Espone reperti fossili di fauna pleistocenica e reperti dalle grotte della zona, inclusi resti di cervo sardo e capra selvatica preistorici.', web:'https://www.comune.carbonia.su.it', indirizzo:'Via Costituente, Carbonia (SU)' }
+];
+
 // ─── STATO TOOLS ─────────────────────────────────────────────
 let activeToolSection = null;
 
@@ -327,12 +359,12 @@ function openToolSection(name) {
       else if (name === 'biglietti')    renderBiglietti(contentArea);
       else if (name === 'meteo')        renderComingSoon(contentArea, 'Meteo Sardegna', 'Previsioni aggiornate per le zone principali — mare, vento e temperature costa per costa.');
       else if (name === 'sentieri')     renderComingSoon(contentArea, 'Sentieri & Trekking', 'Percorsi CAI e naturalistici con difficoltà, dislivello, durata e collegamento alla mappa interattiva.');
-      else if (name === 'cantine')      renderComingSoon(contentArea, 'Cantine & Vino', 'Cantine sarde aperte al pubblico — degustazioni, visite guidate e acquisto diretto in cantina.');
+      else if (name === 'cantine')      renderCantine(contentArea);
       else if (name === 'prodotti')     renderComingSoon(contentArea, 'Prodotti Tipici', 'Catalogo prodotti sardi — cibo, tessuti, ceramiche e artigianato locale con link acquisto diretto.');
       else if (name === 'artigiani')    renderComingSoon(contentArea, 'Artigiani', 'Maestri artigiani locali con bottega, specialità e contatti — scopri chi produce cosa e dove.');
       else if (name === 'comuni')       renderComingSoon(contentArea, 'Comuni della Sardegna', 'Schede per ogni comune: servizi, uffici, spiagge vicine, eventi e punti d\'interesse.');
       else if (name === 'guide')        renderComingSoon(contentArea, 'Guide Turistiche', 'Guide certificate per zona, lingua e specialità — prenota la tua esperienza personalizzata.');
-      else if (name === 'musei')        renderComingSoon(contentArea, 'Musei & Cultura', 'Musei, siti nuragici e collezioni permanenti — orari, biglietti e percorsi tematici.');
+      else if (name === 'musei')        renderMusei(contentArea);
       else if (name === 'ristoranti')   renderComingSoon(contentArea, 'Ristoranti', 'Ristoranti, trattorie e locali selezionati per qualità e cucina tradizionale sarda.');
       else if (name === 'hotel')        renderComingSoon(contentArea, 'Hotel & Alloggi', 'Hotel, B&B, agriturismo e ville — confronta disponibilità e prenota al miglior prezzo.');
       else if (name === 'pacchetti')    renderComingSoon(contentArea, 'Pacchetti Viaggio', 'Pacchetti completi con volo, hotel e esperienze — tutto organizzato, tutto in un click.');
@@ -568,6 +600,7 @@ function renderPrenotazioni(container) {
       label: 'Esperienze & Tour',
       desc: 'Escursioni, attività guidate e tour con prenotazione immediata',
       links: [
+        { text: 'Escursì — Tour & Esperienze Sarde', url: 'https://www.escursi.it' },
         { text: 'Viator — Sardinia Tours', url: 'https://www.viator.com/Sardinia/d23207-ttd' },
         { text: 'GetYourGuide — Sardinia', url: 'https://www.getyourguide.it/sardinia-l946/' },
         { text: 'Airbnb Esperienze — Sardegna', url: 'https://www.airbnb.it/experiences' }
@@ -637,11 +670,11 @@ function renderPrenotazioni(container) {
 // ─── BIGLIETTI HUB ────────────────────────────────────────────
 function renderBiglietti(container) {
   const platforms = [
+    { name: 'Escursì', desc: 'Tour, escursioni e attività in Sardegna — prenotazione immediata online', url: 'https://www.escursi.it', label: 'Esplora attività' },
     { name: 'TicketOne', desc: 'Concerti, spettacoli ed eventi in Sardegna', url: 'https://www.ticketone.it/search/?q=sardegna', label: 'Cerca eventi' },
     { name: 'VivaTicket', desc: 'Biglietti per sagre, festival e manifestazioni locali', url: 'https://www.vivaticket.com/?srch=sardegna', label: 'Cerca eventi' },
     { name: 'Eventbrite', desc: 'Conferenze, workshop ed eventi culturali', url: 'https://www.eventbrite.it/d/italy--sardinia/events/', label: 'Esplora' },
     { name: 'Musei.it', desc: 'Biglietti musei statali e siti archeologici', url: 'https://www.musei.it/sardegna', label: 'Prenota visita' },
-    { name: 'Skytix', desc: 'Parchi, attrazioni e esperienze outdoor', url: 'https://www.skytix.it', label: 'Scopri' },
     { name: 'CiaoTickets', desc: 'Teatro, cinema e spettacoli dal vivo', url: 'https://www.ciaotickets.com/biglietti/sardegna', label: 'Acquista' }
   ];
 
@@ -664,6 +697,109 @@ function renderBiglietti(container) {
     { opacity: 0, y: 18 },
     { opacity: 1, y: 0, stagger: 0.08, duration: 0.35, ease: 'power2.out' }
   );
+}
+
+// ─── CANTINE ──────────────────────────────────────────────────
+function renderCantine(container) {
+  const ZONE = [
+    { key:'tutte', label:'Tutte le zone' },
+    { key:'nord',  label:'Nord Sardegna' },
+    { key:'centro',label:'Centro' },
+    { key:'sud',   label:'Sud' },
+    { key:'sulcis',label:'Sulcis' }
+  ];
+  const SERV_LABELS = { visita:'Visita guidata', degustazione:'Degustazione', acquisto:'Acquisto diretto', ristorante:'Ristorante', museo:'Museo interno' };
+
+  function render(zona) {
+    const list = zona === 'tutte' ? CANTINE_DATA : CANTINE_DATA.filter(c => c.zona === zona);
+    container.innerHTML = `
+      <div class="tools-section-header">
+        <h2>Cantine & Vino</h2>
+        <p class="prenot-subtitle">Cantine sarde aperte al pubblico — degustazioni, visite guidate e acquisto diretto.</p>
+      </div>
+      <div class="tool-filter-pills">
+        ${ZONE.map(z => `<button class="filter-pill${z.key===zona?' active':''}" data-zona="${z.key}">${z.label}</button>`).join('')}
+      </div>
+      <div class="cantine-grid">
+        ${list.map(c => `
+          <div class="cantina-card glass-card">
+            <div>
+              <div class="cantina-name">${c.name}</div>
+              <div class="cantina-city">📍 ${c.city}</div>
+            </div>
+            <p class="cantina-desc">${c.desc}</p>
+            <div class="cantina-vitigni">
+              ${c.vitigni.map(v => `<span class="vitigno-tag">${v}</span>`).join('')}
+            </div>
+            <div class="cantina-servizi">
+              ${c.servizi.map(s => `<span class="servizio-tag">${SERV_LABELS[s]||s}</span>`).join('')}
+            </div>
+            <div class="cantina-footer">
+              ${c.tel ? `<span class="cantina-tel">📞 ${c.tel}</span>` : ''}
+              <a href="${c.web}" target="_blank" rel="noopener" class="cantina-link">Sito web →</a>
+            </div>
+          </div>`).join('')}
+        ${list.length===0 ? '<div class="no-events">Nessuna cantina trovata.</div>' : ''}
+      </div>`;
+
+    container.querySelectorAll('.filter-pill[data-zona]').forEach(btn =>
+      btn.addEventListener('click', () => render(btn.dataset.zona))
+    );
+    gsap.fromTo('.cantina-card', { opacity:0, y:18 }, { opacity:1, y:0, stagger:0.07, duration:0.35, ease:'power2.out' });
+  }
+  render('tutte');
+}
+
+// ─── MUSEI ────────────────────────────────────────────────────
+function renderMusei(container) {
+  const TIPI = [
+    { key:'tutti',      label:'Tutti' },
+    { key:'archeologia',label:'Archeologia' },
+    { key:'arte',       label:'Arte' },
+    { key:'etnografia', label:'Etnografia' },
+    { key:'storia',     label:'Storia' },
+    { key:'natura',     label:'Natura' }
+  ];
+  const TIPO_COLORS = { archeologia:'#FFD700', arte:'#B040FF', etnografia:'#FF8C00', storia:'#C8102E', natura:'#32CD32' };
+
+  function render(tipo) {
+    const list = tipo === 'tutti' ? MUSEI_DATA : MUSEI_DATA.filter(m => m.tipo === tipo);
+    container.innerHTML = `
+      <div class="tools-section-header">
+        <h2>Musei & Cultura</h2>
+        <p class="prenot-subtitle">Musei, siti nuragici e collezioni permanenti — orari, biglietti e percorsi tematici in Sardegna.</p>
+      </div>
+      <div class="tool-filter-pills">
+        ${TIPI.map(t => `<button class="filter-pill${t.key===tipo?' active':''}" data-tipo="${t.key}">${t.label}</button>`).join('')}
+      </div>
+      <div class="musei-grid">
+        ${list.map(m => {
+          const color = TIPO_COLORS[m.tipo] || '#fff';
+          return `
+          <div class="museo-card glass-card">
+            <div class="museo-head">
+              <span class="museo-tipo-badge" style="color:${color};border-color:${color}40;background:${color}14">${m.tipo}</span>
+              <div class="museo-name">${m.name}</div>
+              <div class="museo-city">📍 ${m.city}</div>
+            </div>
+            <p class="museo-desc">${m.desc}</p>
+            <div class="museo-info">
+              <span class="museo-info-item">🕐 ${m.orari}</span>
+              <span class="museo-info-item">🎫 ${m.biglietto}</span>
+              <span class="museo-info-item">📌 ${m.indirizzo}</span>
+            </div>
+            ${m.web && m.web!=='#' ? `<a href="${m.web}" target="_blank" rel="noopener" class="cantina-link" style="margin-top:10px;display:inline-block">Sito ufficiale →</a>` : ''}
+          </div>`;
+        }).join('')}
+        ${list.length===0 ? '<div class="no-events">Nessun museo trovato.</div>' : ''}
+      </div>`;
+
+    container.querySelectorAll('.filter-pill[data-tipo]').forEach(btn =>
+      btn.addEventListener('click', () => render(btn.dataset.tipo))
+    );
+    gsap.fromTo('.museo-card', { opacity:0, y:18 }, { opacity:1, y:0, stagger:0.07, duration:0.35, ease:'power2.out' });
+  }
+  render('tutti');
 }
 
 // ─── SPIAGGE LIVE ─────────────────────────────────────────────

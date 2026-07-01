@@ -2010,6 +2010,121 @@ img { max-width: 100%; display: block; }
   .cal-month-title { font-size: 0.95rem; }
 }
 
+/* ── FILTER PILLS ────────────────────────────────────────────── */
+.tool-filter-pills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.filter-pill {
+  background: var(--glass);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.filter-pill:hover { border-color: var(--border2); color: var(--text); }
+.filter-pill.active { background: var(--red); border-color: var(--red); color: #fff; }
+
+/* ── CANTINE ─────────────────────────────────────────────────── */
+.cantine-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.cantina-card {
+  padding: 22px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cantina-name { font-size: 1.05rem; font-weight: 700; color: var(--text); }
+.cantina-city { font-size: 0.78rem; color: var(--text-muted); margin-top: 2px; }
+.cantina-desc { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; }
+
+.cantina-vitigni, .cantina-servizi { display: flex; flex-wrap: wrap; gap: 6px; }
+
+.vitigno-tag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #B040FF;
+  background: rgba(176,64,255,0.1);
+  border: 1px solid rgba(176,64,255,0.22);
+  border-radius: 12px;
+  padding: 3px 10px;
+}
+
+.servizio-tag {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 3px 10px;
+}
+
+.cantina-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+  gap: 8px;
+}
+
+.cantina-tel { font-size: 0.76rem; color: var(--text-muted); }
+.cantina-link { font-size: 0.8rem; color: var(--red); font-weight: 600; text-decoration: none; white-space: nowrap; }
+.cantina-link:hover { color: var(--red-dark); }
+
+/* ── MUSEI ───────────────────────────────────────────────────── */
+.musei-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.museo-card {
+  padding: 22px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.museo-head { display: flex; flex-direction: column; gap: 4px; }
+
+.museo-tipo-badge {
+  display: inline-block;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border: 1px solid;
+  border-radius: 12px;
+  padding: 2px 10px;
+  width: fit-content;
+  margin-bottom: 2px;
+}
+
+.museo-name { font-size: 1.02rem; font-weight: 700; color: var(--text); }
+.museo-city { font-size: 0.78rem; color: var(--text-muted); }
+.museo-desc { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; }
+
+.museo-info { display: flex; flex-direction: column; gap: 5px; margin-top: 4px; border-top: 1px solid var(--border); padding-top: 10px; }
+.museo-info-item { font-size: 0.78rem; color: var(--text-muted); }
+
 /* ── COMING SOON ────────────────────────────────────────────── */
 .coming-soon-badge {
   font-size: 0.7rem;
