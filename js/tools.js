@@ -477,7 +477,6 @@ function openToolSection(name) {
       else if (name === 'nord')         renderNordSardegna(contentArea);
       else if (name === 'prenotazioni') renderPrenotazioni(contentArea);
       else if (name === 'biglietti')    renderBiglietti(contentArea);
-      else if (name === 'meteo')        renderComingSoon(contentArea, 'Meteo Sardegna', 'Previsioni aggiornate per le zone principali — mare, vento e temperature costa per costa.');
       else if (name === 'sentieri')     renderSentieri(contentArea);
       else if (name === 'cantine')      renderCantine(contentArea);
       else if (name === 'prodotti')     renderProdotti(contentArea);
