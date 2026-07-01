@@ -392,7 +392,7 @@ const GUIDE_DATA = [
   { id:9,  name:'Cagliari Walking Tour', city:'Cagliari', zona:'sud', tipo:'culturale', lingue:['IT','EN','ES','FR','DE'], desc:'Tour a piedi del centro storico di Cagliari — dal quartiere Castello alle chiese romaniche, dal Mercato San Benedetto ai bastioni panoramici. Guide storiche specializzate in arte punica, romana e medievale.', web:'https://www.cagliariwalkingtour.it', tel:'+39 070 674393' },
   { id:10, name:'Tour Gastronomici Sardegna', city:'Oristano', zona:'centro', tipo:'gastronomico', lingue:['IT','EN'], desc:'Tour gastronomici ai prodotti sardi — visite a caseifici, cantine Vermentino e Cannonau, aziende di bottarga, mercati locali. Degustazioni guidate con abbinamenti vini. Itinerari da mezza giornata a tre giorni.', web:'https://www.sardegnafoodtour.it', tel:'+39 0783 356012' },
   { id:11, name:'Nuraghi & Archeologia Tour', city:'Sassari', zona:'nord', tipo:'culturale', lingue:['IT','EN','DE'], desc:'Guide archeologhe nei siti nuragici — Su Nuraxi (UNESCO), Mont\'e Prama, tombe dei giganti. Spiegazioni approfondite sulla civiltà nuragica e le culture prenuragiche. Anche tour in lingua straniera.', web:'https://www.sardiniaarchaeology.it', tel:'+39 079 231456' },
-  { id:12, name:'Escursì Sardegna', city:'Cagliari', zona:'sud', tipo:'esperienze', lingue:['IT','EN','DE','ES','FR'], desc:'La principale piattaforma sarda per tour ed esperienze — oltre 200 attività prenotabili online. Dalle immersioni al trekking, dalla degustazione di vini ai tour culturali. Guide locali selezionate e recensite dai clienti.', web:'https://www.escursi.it', tel:'+39 070 600400' }
+  { id:12, name:'Escursì Sardegna', city:'Cagliari', zona:'sud', tipo:'esperienze', lingue:['IT','EN','DE','ES','FR'], desc:'La principale piattaforma sarda per tour ed esperienze — oltre 200 attività prenotabili online. Dalle immersioni al trekking, dalla degustazione di vini ai tour culturali. Guide locali selezionate e recensite dai clienti.', web:'https://www.escursi.com/', tel:'+39 070 600400' }
 ];
 
 // ─── COMUNI DATA ──────────────────────────────────────────────
@@ -719,8 +719,8 @@ function renderPrenotazioni(container) {
       label: 'Esperienze & Tour',
       desc: 'Escursioni, attività guidate e tour con prenotazione immediata',
       links: [
-        { text: 'Escursì — Tour & Esperienze Sarde', url: 'https://www.escursi.it' },
-        { text: 'Viator — Sardinia Tours', url: 'https://www.viator.com/Sardinia/d23207-ttd' },
+        { text: 'Escursì — Tour & Esperienze Sarde', url: 'https://www.escursi.com/' },
+        { text: 'Viator — Sardinia Tours', url: 'https://www.viator.com/' },
         { text: 'GetYourGuide — Sardinia', url: 'https://www.getyourguide.it/sardinia-l946/' },
         { text: 'Airbnb Esperienze — Sardegna', url: 'https://www.airbnb.it/experiences' }
       ]
@@ -729,8 +729,8 @@ function renderPrenotazioni(container) {
       label: 'Traghetti & Trasporti',
       desc: 'Traghetti, voli, noleggio auto e bus per raggiungere e muoversi in Sardegna',
       links: [
-        { text: 'Traghetti.com — Sardegna', url: 'https://www.traghetti.com/sardegna/' },
-        { text: 'Rentalcars — Noleggio Sardegna', url: 'https://www.rentalcars.com/it/search/?dropOffCountry=IT&country=Italy' },
+        { text: 'Traghetti.com — Sardegna', url: 'https://www.traghetti.com/' },
+        { text: 'Rentalcars — Noleggio Sardegna', url: 'https://www.rentalcars.com/' },
         { text: 'Skyscanner — Voli per Sardegna', url: 'https://www.skyscanner.it/voli-per/sar/sardegna.html' }
       ]
     },
@@ -789,7 +789,7 @@ function renderPrenotazioni(container) {
 // ─── BIGLIETTI HUB ────────────────────────────────────────────
 function renderBiglietti(container) {
   const platforms = [
-    { name: 'Escursì', desc: 'Tour, escursioni e attività in Sardegna — prenotazione immediata online', url: 'https://www.escursi.it', label: 'Esplora attività' },
+    { name: 'Escursì', desc: 'Tour, escursioni e attività in Sardegna — prenotazione immediata online', url: 'https://www.escursi.com/', label: 'Esplora attività' },
     { name: 'TicketOne', desc: 'Concerti, spettacoli ed eventi in Sardegna', url: 'https://www.ticketone.it/search/?q=sardegna', label: 'Cerca eventi' },
     { name: 'VivaTicket', desc: 'Biglietti per sagre, festival e manifestazioni locali', url: 'https://www.vivaticket.com/?srch=sardegna', label: 'Cerca eventi' },
     { name: 'Eventbrite', desc: 'Conferenze, workshop ed eventi culturali', url: 'https://www.eventbrite.it/d/italy--sardinia/events/', label: 'Esplora' },
