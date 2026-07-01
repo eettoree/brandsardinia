@@ -2215,6 +2215,90 @@ img { max-width: 100%; display: block; }
 .museo-info { display: flex; flex-direction: column; gap: 5px; margin-top: 4px; border-top: 1px solid var(--border); padding-top: 10px; }
 .museo-info-item { font-size: 0.78rem; color: var(--text-muted); }
 
+/* ── ARTIGIANI ──────────────────────────────────────────────── */
+.artigiani-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1.2rem; margin-top:1rem; }
+.artigiano-card { padding:1.4rem; display:flex; flex-direction:column; gap:0.55rem; }
+.artg-head { display:flex; align-items:center; justify-content:space-between; }
+.artg-spec-badge { font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.07em; padding:0.2rem 0.55rem; border-radius:20px; }
+.artg-spec-tessuti    { background:rgba(155,89,182,0.25); color:#c39bd3; }
+.artg-spec-gioielli   { background:rgba(241,196,15,0.25); color:#f7dc6f; }
+.artg-spec-ceramica   { background:rgba(230,126,34,0.25); color:#f0a15a; }
+.artg-spec-coltelli   { background:rgba(200,16,46,0.25);  color:#e74c3c; }
+.artg-spec-legno      { background:rgba(39,174,96,0.25);  color:#82e0aa; }
+.artg-spec-sughero    { background:rgba(149,165,166,0.25);color:#bdc3c7; }
+.artg-spec-cestineria { background:rgba(26,188,156,0.25); color:#76d7c4; }
+.artg-spec-merletti   { background:rgba(52,152,219,0.25); color:#7fb3d3; }
+.artg-zona { font-size:0.72rem; color:var(--text-muted); }
+.artg-name { font-size:1rem; font-weight:700; color:var(--text); }
+.artg-city { font-size:0.8rem; color:var(--text-muted); }
+.artg-desc { font-size:0.82rem; color:var(--text-secondary); line-height:1.55; flex:1; }
+.artg-prodotti { display:flex; flex-wrap:wrap; gap:0.35rem; }
+.artg-prod-tag { font-size:0.68rem; padding:0.18rem 0.5rem; border-radius:12px; background:rgba(255,255,255,0.07); border:1px solid var(--border); color:var(--text-muted); }
+.artg-footer { display:flex; align-items:center; justify-content:space-between; margin-top:auto; padding-top:0.6rem; border-top:1px solid var(--border); }
+.artg-tel { font-size:0.75rem; color:var(--text-muted); }
+.artg-link { font-size:0.75rem; color:var(--red); text-decoration:none; font-weight:600; }
+.artg-link:hover { text-decoration:underline; }
+
+/* ── GUIDE ──────────────────────────────────────────────────── */
+.guide-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1.2rem; margin-top:1rem; }
+.guida-card { padding:1.4rem; display:flex; flex-direction:column; gap:0.55rem; }
+.guida-head { display:flex; align-items:center; justify-content:space-between; }
+.guida-tipo-badge { font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.07em; padding:0.2rem 0.55rem; border-radius:20px; }
+.guida-tipo-trekking    { background:rgba(39,174,96,0.25);  color:#82e0aa; }
+.guida-tipo-culturale   { background:rgba(155,89,182,0.25); color:#c39bd3; }
+.guida-tipo-mare        { background:rgba(52,152,219,0.25); color:#7fb3d3; }
+.guida-tipo-gastronomico{ background:rgba(241,196,15,0.25); color:#f7dc6f; }
+.guida-tipo-esperienze  { background:rgba(200,16,46,0.25);  color:#e74c3c; }
+.guida-zona { font-size:0.72rem; color:var(--text-muted); }
+.guida-name { font-size:1rem; font-weight:700; color:var(--text); }
+.guida-city { font-size:0.8rem; color:var(--text-muted); }
+.guida-desc { font-size:0.82rem; color:var(--text-secondary); line-height:1.55; flex:1; }
+.guida-lingue { display:flex; flex-wrap:wrap; gap:0.3rem; }
+.guida-lang-tag { font-size:0.68rem; padding:0.18rem 0.45rem; border-radius:10px; background:rgba(255,255,255,0.1); border:1px solid var(--border); color:var(--text); font-weight:700; }
+.guida-footer { display:flex; align-items:center; justify-content:space-between; margin-top:auto; padding-top:0.6rem; border-top:1px solid var(--border); }
+.guida-tel { font-size:0.75rem; color:var(--text-muted); }
+.guida-link { font-size:0.75rem; color:var(--red); text-decoration:none; font-weight:600; }
+.guida-link:hover { text-decoration:underline; }
+
+/* ── COMUNI ─────────────────────────────────────────────────── */
+.comuni-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:1.2rem; margin-top:1rem; }
+.comune-card { padding:1.4rem; display:flex; flex-direction:column; gap:0.55rem; }
+.comune-head { display:flex; align-items:center; justify-content:space-between; }
+.comune-prov-badge { font-size:0.7rem; font-weight:700; letter-spacing:0.08em; padding:0.2rem 0.55rem; border-radius:20px; background:rgba(200,16,46,0.2); color:#e74c3c; }
+.comune-pop { font-size:0.72rem; color:var(--text-muted); }
+.comune-name { font-size:1.15rem; font-weight:800; color:var(--text); letter-spacing:-0.02em; }
+.comune-alt { font-size:0.72rem; color:var(--text-muted); margin-top:-0.3rem; }
+.comune-desc { font-size:0.82rem; color:var(--text-secondary); line-height:1.55; flex:1; }
+.comune-attrazioni { background:rgba(255,255,255,0.04); border-radius:8px; padding:0.7rem 0.9rem; }
+.comune-attr-label { font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.07em; color:var(--text-muted); margin-bottom:0.4rem; }
+.comune-attr-list { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:0.25rem; }
+.comune-attr-list li { font-size:0.8rem; color:var(--text-secondary); padding-left:0.8rem; position:relative; }
+.comune-attr-list li::before { content:'→'; position:absolute; left:0; color:var(--red); font-size:0.7rem; top:0.05rem; }
+.comune-footer { margin-top:auto; padding-top:0.6rem; border-top:1px solid var(--border); }
+.comune-link { font-size:0.75rem; color:var(--red); text-decoration:none; font-weight:600; }
+.comune-link:hover { text-decoration:underline; }
+
+/* ── PRODOTTI ───────────────────────────────────────────────── */
+.prodotti-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1.2rem; margin-top:1rem; }
+.prodotto-card { padding:1.4rem; display:flex; flex-direction:column; gap:0.55rem; }
+.prodotto-head { display:flex; align-items:center; gap:0.5rem; }
+.prodotto-cat-badge { font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.07em; padding:0.2rem 0.55rem; border-radius:20px; }
+.prodotto-cat-gastronomia { background:rgba(39,174,96,0.2);  color:#82e0aa; }
+.prodotto-cat-vini        { background:rgba(155,89,182,0.2); color:#c39bd3; }
+.prodotto-cat-liquori     { background:rgba(241,196,15,0.2); color:#f7dc6f; }
+.prodotto-cat-artigianato { background:rgba(230,126,34,0.2); color:#f0a15a; }
+.prodotto-cert { font-size:0.65rem; font-weight:800; padding:0.2rem 0.45rem; border-radius:10px; color:#fff; letter-spacing:0.05em; }
+.prodotto-name { font-size:1rem; font-weight:700; color:var(--text); }
+.prodotto-zona { font-size:0.76rem; color:var(--text-muted); }
+.prodotto-desc { font-size:0.82rem; color:var(--text-secondary); line-height:1.55; flex:1; }
+.prodotto-dove { font-size:0.78rem; color:var(--text-secondary); background:rgba(255,255,255,0.04); border-radius:6px; padding:0.5rem 0.7rem; }
+.prodotto-dove-label { font-weight:600; color:var(--text-muted); }
+.prodotto-footer { margin-top:auto; padding-top:0.6rem; border-top:1px solid var(--border); }
+.prodotto-link { font-size:0.75rem; color:var(--red); text-decoration:none; font-weight:600; }
+.prodotto-link:hover { text-decoration:underline; }
+.prodotti-artigiani-note { font-size:0.8rem; color:var(--text-muted); margin-bottom:0.2rem; }
+.prodotti-artig-link { background:none; border:none; color:var(--red); font-size:0.8rem; font-weight:700; cursor:pointer; text-decoration:underline; padding:0; }
+
 /* ── COMING SOON ────────────────────────────────────────────── */
 .coming-soon-badge {
   font-size: 0.7rem;

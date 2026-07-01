@@ -363,6 +363,78 @@ const HOTEL_DATA = [
   { id:12, name:'B&B Sa Domu Antiga', city:'Cagliari', stelle:0, tipo:'boutique', fascia:'medio', desc:'B&B di charme nel centro storico di Cagliari (quartiere Castello). Camere con arredi antichi e dettagli sardi originali. Terrazza panoramica sul golfo, una delle viste più belle della città.',                                                                           indirizzo:'Via Lamarmora 14, Cagliari', tel:'+39 070 651231', web:'#', servizi:['colazione inclusa','terrazza panoramica','wifi','aria condizionata','posizione centrale'] }
 ];
 
+// ─── ARTIGIANI DATA ───────────────────────────────────────────
+const ARTIGIANI_DATA = [
+  { id:1,  name:'Laboratorio Tessitura Deroma', city:'Nule', zona:'nord', specialita:'tessuti', prodotti:['Tappeti a pibiones','Tovaglie ricamate','Coperte in lana'], desc:'Nule è la capitale del tappeto sardo a "pibiones" — chicchi di riso in rilievo su fondo geometrico. Il laboratorio conserva i telai tradizionali verticali producendo secondo i pattern tramandati da secoli.', web:'https://www.comunenule.it', tel:'+39 079 725028', indirizzo:'Via Roma, Nule (SS)' },
+  { id:2,  name:'Filigrana Milia', city:'Dorgali', zona:'centro', specialita:'gioielli', prodotti:['Filigrana in argento','Sa spilla','Bottoni sardi','Anelli tradizionali'], desc:'La filigrana sarda in argento è riconoscibile per le torsioni a spirale. Il laboratorio Milia produce gioielli nuoresi tradizionali — sa spilla cerimoniale, bottoni a filigrana e parure complete per il costume sardo.', web:'https://www.dorgaliturismo.it', tel:'+39 0784 96025', indirizzo:'Via Lamarmora 12, Dorgali (NU)' },
+  { id:3,  name:'Coltelleria Pattada', city:'Pattada', zona:'nord', specialita:'coltelli', prodotti:['Resolza tradizionale','Coltelli da caccia','Pezzi personalizzati'], desc:'Pattada è la capitale mondiale del coltello sardo — la "resolza" con lama a foglia di mirto e manico in corno di muflone. Ogni mastro ha il proprio stile. Bottega visitabile con dimostrazione di lavorazione.', web:'https://www.pattada.net', tel:'+39 079 755049', indirizzo:'Piazza del Popolo, Pattada (SS)' },
+  { id:4,  name:'Ceramiche Pozzo Giagu', city:'Sassari', zona:'nord', specialita:'ceramica', prodotti:['Ceramica decorata','Piatti e brocche','Azulejos sardi'], desc:'La ceramica sassarese con influenze catalane — decorazioni geometriche in blu, giallo e verde su fondo bianco. Il laboratorio produce oggetti d\'uso e decorativi mantenendo la tradizione medievale nata sotto la dominazione aragonese.', web:'https://www.ceramicasassari.it', tel:'+39 079 232178', indirizzo:'Via Rosello 18, Sassari (SS)' },
+  { id:5,  name:'Intreccio Castelsardo', city:'Castelsardo', zona:'nord', specialita:'cestineria', prodotti:['Ceste in giunco','Portafrutta','Copricapo sardi'], desc:'Il cestino intrecciato con giunco sardo è un\'arte tramandata di madre in figlia. Pattern geometrici in nero e naturale unici al mondo — ogni cesta richiede giorni di lavoro manuale. Patrimonio immateriale riconosciuto.', web:'https://www.castellodoria.it', tel:'+39 079 479125', indirizzo:'Vicolo Marina, Castelsardo (SS)' },
+  { id:6,  name:'Intaglio Legno Murru', city:'Desulo', zona:'centro', specialita:'legno', prodotti:['Maschere lignee','Statue religiose','Oggetti decorativi'], desc:'Desulo è il centro dell\'intaglio del legno sardo — pero selvatico e castagno. Il laboratorio Murru produce maschere tradizionali del carnevale, sculture di santi e oggetti decorativi intagliati a mano con strumenti tramandati.', web:'https://www.comune.desulo.nu.it', tel:'+39 0784 619012', indirizzo:'Via Funtana, Desulo (NU)' },
+  { id:7,  name:'Sughero Design Calangianus', city:'Calangianus', zona:'nord', specialita:'sughero', prodotti:['Borse in sughero','Portafogli','Oggettistica design'], desc:'Calangianus è la capitale mondiale del sughero — il 70% della produzione italiana viene da qui. Dalla tradizionale industria dei tappi si è passati al design contemporaneo: borse, scarpe, accessori moda e oggettistica.', web:'https://www.calangianus.it', tel:'+39 079 661103', indirizzo:'Via Porto Torres, Calangianus (SS)' },
+  { id:8,  name:'Arazzi Sarule', city:'Sarule', zona:'centro', specialita:'tessuti', prodotti:['Arazzi figurativi','Tappeti narrativi','Cuscini ricamati'], desc:'Sarule è famosa per gli arazzi figurativi — scene di vita contadina, pastori, cerimonie tessute a telaio con lane multicolori. Ogni arazzo è un racconto visivo unico, collezionati da musei e gallerie d\'arte internazionali.', web:'https://www.comune.sarule.nu.it', tel:'+39 0784 281009', indirizzo:'Via Garibaldi, Sarule (NU)' },
+  { id:9,  name:'Ceramiche di Assemini', city:'Assemini', zona:'sud', specialita:'ceramica', prodotti:['Terracotta tradizionale','Maioliche decorate','Presepi sardi'], desc:'Assemini è il principale centro della ceramica cagliaritana — terracotta rossa decorata con motivi floreali e geometrici, maioliche con smalti brillanti. Tradizione risalente al periodo punico, forni artigianali ancora attivi.', web:'https://www.comune.assemini.ca.it', tel:'+39 070 945001', indirizzo:'Via Vittorio Emanuele, Assemini (CA)' },
+  { id:10, name:'Merletti a Tombolo Bosa', city:'Bosa', zona:'centro', specialita:'merletti', prodotti:['Tombolo a fuselli','Pizzi decorativi','Tovaglie e corredi'], desc:'Il merletto di Bosa a tombolo con fuselli è tra i più raffinati della Sardegna. Le "bosane" lavorano il filo di lino con tecniche spagnole del XVI secolo — pizzi delicatissimi per corredi nuziali e abiti da cerimonia.', web:'https://www.visitbosa.it', tel:'+39 0785 373107', indirizzo:'Corso Vittorio Emanuele, Bosa (OR)' },
+  { id:11, name:'Oreficeria Sarda Contu', city:'Oristano', zona:'centro', specialita:'gioielli', prodotti:['Corallo rosso','Gioielli in filigrana d\'oro','Parure per costume sardo'], desc:'Il corallo rosso del Golfo di Alghero lavorato in oro è uno dei gioielli più preziosi della Sardegna. Il laboratorio Contu produce collane, orecchini e spille secondo le tecniche orafe tradizionali per i costumi cerimoniali.', web:'https://www.oristanodoc.it', tel:'+39 0783 71329', indirizzo:'Piazza Roma, Oristano (OR)' },
+  { id:12, name:'Orbace Desulo', city:'Desulo', zona:'centro', specialita:'tessuti', prodotti:['Orbace (panno di lana)','Cappotti tradizionali','Bisacce del pastore'], desc:'L\'orbace è il robusto panno di lana impermeabile dei pastori sardi — grigio scuro, tessuto a telaio con lana di pecora sarda. Il laboratorio di Desulo è uno dei pochi a mantenere questa tradizione millenaria ora rivalutata dal design contemporaneo.', web:'https://www.sardegnadesign.it', tel:'+39 0784 619098', indirizzo:'Via Montagna, Desulo (NU)' }
+];
+
+// ─── GUIDE DATA ───────────────────────────────────────────────
+const GUIDE_DATA = [
+  { id:1,  name:'Cooperativa Gorropu', city:'Urzulei', zona:'centro', tipo:'trekking', lingue:['IT','EN','DE','FR'], desc:'La guida ufficiale della Gola di Gorropu — obbligatoria per l\'ingresso nella gola interna. Escursioni nel Supramonte di Urzulei, trekking multi-giorno, noleggio attrezzatura. Soci tutti guide alpine certificate.', web:'https://www.gorropu.com', tel:'+39 0782 649282' },
+  { id:2,  name:'Ghivine', city:'Dorgali', zona:'centro', tipo:'mare', lingue:['IT','EN','DE'], desc:'Escursioni in barca e kayak nel Golfo di Orosei — la costa più selvaggia del Mediterraneo. Tour alle calette inaccessibili via terra: Cala Mariolu, Cala Sisine, Cala Biriola. Barche veloci, guide esperte.', web:'https://www.ghivine.com', tel:'+39 0784 96721' },
+  { id:3,  name:'Cooperativa Barbagia Cortes', city:'Orgosolo', zona:'centro', tipo:'culturale', lingue:['IT','EN'], desc:'Guide locali per le tradizioni barbaricine — tour murales di Orgosolo, visita ai pastori transumanti, degustazione formaggi nel caseificio, feste tradizionali. Un\'immersione nell\'identità sarda più profonda.', web:'https://www.orgosolo.com', tel:'+39 0784 402572' },
+  { id:4,  name:'Argonauta Sub', city:'Villasimius', zona:'sud', tipo:'mare', lingue:['IT','EN','DE'], desc:'Diving center nell\'Area Marina Protetta di Capo Carbonara. Corsi PADI, noleggio attrezzatura, tour snorkeling. Acque cristalline, pesci napoleone, gorgonie e relitti storici. Uno dei siti sub più belli del Mediterraneo.', web:'https://www.argonauta.it', tel:'+39 070 791355' },
+  { id:5,  name:'Vivereilmare Alghero', city:'Alghero', zona:'nord', tipo:'mare', lingue:['IT','EN','ES'], desc:'Escursioni in kayak e a piedi nel nord Sardegna — dalla Grotta di Nettuno via barca al kayak sul Golfo di Alghero, fino al trekking di Capo Caccia. Guide certificate con specializzazione mare e speleologia.', web:'https://www.vivereilmare.net', tel:'+39 079 977000' },
+  { id:6,  name:'Sardinia Walking & Trekking', city:'Cagliari', zona:'sud', tipo:'trekking', lingue:['IT','EN','DE','NL'], desc:'L\'agenzia più completa per cammini e trekking in Sardegna — dal Cammino di Santa Barbara al Selvaggio Blu. Pacchetti multi-giorno con trasporti, alloggi e portatori. La migliore offerta walking dell\'isola.', web:'https://www.sardiniawalking.com', tel:'+39 070 670345' },
+  { id:7,  name:'Trekking Selvaggio Blu', city:'Baunei', zona:'centro', tipo:'trekking', lingue:['IT','EN','FR'], desc:'Gli specialisti del Selvaggio Blu — il trekking costiero più famoso d\'Italia. Guide alpine con anni di esperienza sulla costa ogliastrina. Traversata completa in 6-8 giorni e versioni ridotte per tutti i livelli.', web:'https://www.selvaggioblu.it', tel:'+39 0782 610034' },
+  { id:8,  name:'Gennargentu Guide Alpine', city:'Fonni', zona:'centro', tipo:'trekking', lingue:['IT','EN','DE'], desc:'Guide alpine per le ascensioni al Gennargentu — Punta La Marmora (1834 m), Bruncu Spina, Arcu Correboi. Escursioni in ogni stagione, invernali con ramponi e ciaspole. Massima sicurezza in alta quota.', web:'https://www.gennargentu.it', tel:'+39 0784 57048' },
+  { id:9,  name:'Cagliari Walking Tour', city:'Cagliari', zona:'sud', tipo:'culturale', lingue:['IT','EN','ES','FR','DE'], desc:'Tour a piedi del centro storico di Cagliari — dal quartiere Castello alle chiese romaniche, dal Mercato San Benedetto ai bastioni panoramici. Guide storiche specializzate in arte punica, romana e medievale.', web:'https://www.cagliariwalkingtour.it', tel:'+39 070 674393' },
+  { id:10, name:'Tour Gastronomici Sardegna', city:'Oristano', zona:'centro', tipo:'gastronomico', lingue:['IT','EN'], desc:'Tour gastronomici ai prodotti sardi — visite a caseifici, cantine Vermentino e Cannonau, aziende di bottarga, mercati locali. Degustazioni guidate con abbinamenti vini. Itinerari da mezza giornata a tre giorni.', web:'https://www.sardegnafoodtour.it', tel:'+39 0783 356012' },
+  { id:11, name:'Nuraghi & Archeologia Tour', city:'Sassari', zona:'nord', tipo:'culturale', lingue:['IT','EN','DE'], desc:'Guide archeologhe nei siti nuragici — Su Nuraxi (UNESCO), Mont\'e Prama, tombe dei giganti. Spiegazioni approfondite sulla civiltà nuragica e le culture prenuragiche. Anche tour in lingua straniera.', web:'https://www.sardiniaarchaeology.it', tel:'+39 079 231456' },
+  { id:12, name:'Escursì Sardegna', city:'Cagliari', zona:'sud', tipo:'esperienze', lingue:['IT','EN','DE','ES','FR'], desc:'La principale piattaforma sarda per tour ed esperienze — oltre 200 attività prenotabili online. Dalle immersioni al trekking, dalla degustazione di vini ai tour culturali. Guide locali selezionate e recensite dai clienti.', web:'https://www.escursi.it', tel:'+39 070 600400' }
+];
+
+// ─── COMUNI DATA ──────────────────────────────────────────────
+const COMUNI_DATA = [
+  { id:1,  name:'Alghero',             prov:'SS', zona:'nord', pop:'44.000', alt:'7 m',   desc:'La "Barceloneta sarda" — 300 anni di dominazione aragonese hanno lasciato un centro medievale unico con torri, bastioni e la lingua catalana (algherese) ancora viva. La città più animata e bella del nord.',    cosa_vedere:['Centro storico con torri','Grotta di Nettuno','Capo Caccia','Spiagge del Lido'], web:'https://www.comune.alghero.ss.it' },
+  { id:2,  name:'Cagliari',            prov:'CA', zona:'sud',  pop:'154.000',alt:'6 m',   desc:'La capitale — quartiere Castello sulle rocce, il Poetto lungo 8 km, fenicotteri in città e spiagge a 5 minuti dal centro. Vivace, cosmopolita, con scena gastronomica e culturale in forte ascesa.',              cosa_vedere:['Quartiere Castello','Bastioni Saint Remy','Anfiteatro romano','Stagno Molentargius','Poetto'], web:'https://www.comune.cagliari.it' },
+  { id:3,  name:'Dorgali',             prov:'NU', zona:'centro',pop:'8.500', alt:'387 m', desc:'Il gateway per il Golfo di Orosei e il Supramonte. Partenza per Cala Gonone, Gorropu, Tiscali e le calette più belle del Mediterraneo. Artigianato in filigrana e Cannonau di primissimo livello.',            cosa_vedere:['Cala Gonone (7 km)','Gola di Gorropu','Tiscali','Grotta del Bue Marino'], web:'https://www.dorgaliturismo.it' },
+  { id:4,  name:'Baunei',              prov:'NU', zona:'centro',pop:'3.700', alt:'614 m', desc:'Include la costa ogliastrina più spettacolare — Pedra Longa, Cala Biriola, Cala Mariolu. Base di partenza del Selvaggio Blu. Il Supramontese è uno dei paesaggi più selvaggi d\'Italia.',                         cosa_vedere:['Pedra Longa','Selvaggio Blu','Santa Maria Navarrese','Cala Mariolu'], web:'https://www.comune.baunei.og.it' },
+  { id:5,  name:'Bosa',                prov:'OR', zona:'centro',pop:'7.900', alt:'9 m',   desc:'La città dipinta di colori — casette multicolori lungo il Temo, il fiume navigabile più lungo della Sardegna. Castello Malaspina dall\'alto, palmeti lungo le rive. Borgo medievale di straordinaria bellezza.',       cosa_vedere:['Castello Malaspina','Centro storico colorato','Fiume Temo','Spiagge del Serro'], web:'https://www.visitbosa.it' },
+  { id:6,  name:'Castelsardo',         prov:'SS', zona:'nord', pop:'5.600', alt:'61 m',  desc:'Borgo medievale su promontorio basaltico nel Golfo dell\'Asinara — castello dei Doria, case a cascata verso il porto. Centro mondiale dell\'intreccio del giunco sardo.',                                             cosa_vedere:['Castello dei Doria','Museo dell\'Intreccio','Porto storico','Lu Bagnu'], web:'https://www.comune.castelsardo.ss.it' },
+  { id:7,  name:'Villasimius',         prov:'CA', zona:'sud',  pop:'3.400', alt:'45 m',  desc:'La perla del Capo Carbonara — spiagge turchesi di livello caraibico, Area Marina Protetta, fondi marini straordinari. Meta preferita dei turisti in costa sud-est. Vivacissima in estate.',                            cosa_vedere:['Spiaggia del Riso','Campus','Capo Carbonara','Stagno di Notteri (fenicotteri)'], web:'https://www.comune.villasimius.ca.it' },
+  { id:8,  name:'Mamoiada',            prov:'NU', zona:'centro',pop:'2.500', alt:'637 m', desc:'La patria dei Mamuthones — maschere nere tra le più antiche della Sardegna, carnevale preistorico unico in Europa. Museo delle Maschere di livello europeo, Cannonau eccellente.',                                    cosa_vedere:['Museo Maschere Mediterranee','Carnevale (Febbraio)','Cantine Cannonau'], web:'https://www.comune.mamoiada.nu.it' },
+  { id:9,  name:'Orgosolo',            prov:'NU', zona:'centro',pop:'4.200', alt:'620 m', desc:'La città dei murales — oltre 200 dipinti murali politici e sociali, il più grande museo a cielo aperto della Sardegna. Paesaggio del Supramonte e identità pastorale barbagia fortissima.',                           cosa_vedere:['Murales','Supramonte','Valle Lanaittu','Trekking guidato'], web:'https://www.comune.orgosolo.nu.it' },
+  { id:10, name:'Oliena',              prov:'NU', zona:'centro',pop:'6.800', alt:'379 m', desc:'Ai piedi del Supramonte — sorgente di Su Gologone (una delle più grandi d\'Europa), cantina e ristorante Su Gologone, Nepente d\'Oliena citato da D\'Annunzio. Cucina nuorese di altissimo livello.',               cosa_vedere:['Sorgente Su Gologone','Tiscali','Supramonte','Cantina Su Gologone'], web:'https://www.comune.oliena.nu.it' },
+  { id:11, name:'Santa Teresa Gallura',prov:'SS', zona:'nord', pop:'5.300', alt:'14 m',  desc:'L\'estremo nord di fronte alla Corsica. Spiagge di Rena Bianca e Capo Testa tra le rocce granitiche più spettacolari dell\'isola. In estate meta degli amanti del windsurf per il forte vento di tramontana.',         cosa_vedere:['Capo Testa','Rena Bianca','Valle della Luna','Traghetti per Corsica'], web:'https://www.comune.santateresagallura.ot.it' },
+  { id:12, name:'Pula',                prov:'CA', zona:'sud',  pop:'7.400', alt:'29 m',  desc:'A mezz\'ora da Cagliari — sito fenicio-punico di Nora (il più antico della Sardegna), spiagge di sabbia bianca, pineta. Il Forte Village è qui. Base ideale per il sud-ovest.',                                      cosa_vedere:['Sito di Nora','Spiaggia di Nora','Forte Village Resort','Stagno di Nora'], web:'https://www.comune.pula.ca.it' },
+  { id:13, name:'Carbonia',            prov:'SU', zona:'sud',  pop:'26.000',alt:'111 m', desc:'Città di fondazione fascista (1938) per le miniere di carbone del Sulcis — architettura razionalista unica in Italia, Museo del Carbone con visita alle gallerie sotterranee. Pezzo di storia spesso trascurato.',   cosa_vedere:['Museo del Carbone','Miniera di Serbariu','Piazza Roma razionalista','Monte Sirai'], web:'https://www.comune.carbonia.su.it' },
+  { id:14, name:'Tempio Pausania',     prov:'SS', zona:'nord', pop:'13.800',alt:'567 m', desc:'La capitale della Gallura — graniti rosa, sughere monumentali, il carnevale più famoso del nord Sardegna. A 30 km dal mare di Palau, vicino all\'agriturismo L\'Agnata di De André.',                                 cosa_vedere:['Centro storico in granito','Carnevale','Lago del Limbara','L\'Agnata'], web:'https://www.comune.tempiopausania.ot.it' },
+  { id:15, name:'Oristano',            prov:'OR', zona:'centro',pop:'31.000',alt:'9 m',  desc:'La capitale del Campidano — Sa Sartiglia (il più spettacolare corteo equestre sardo, a Carnevale), stagni con fenicotteri, bottarga di Cabras, Vernaccia. Centro di una Sardegna spesso ignorata.',                  cosa_vedere:['Sa Sartiglia (Carnevale)','Stagno di Cabras','Terme di Fordongianus','Tharros'], web:'https://www.comune.oristano.or.it' },
+  { id:16, name:'Sassari',             prov:'SS', zona:'nord', pop:'120.000',alt:'225 m',desc:'La seconda città — università millenaria, centro medievale, Faradda di li Canderieri (Ferragosto) candidata UNESCO, Museo Sanna. Vivace e universitaria con forte identità culturale propria.',                       cosa_vedere:['Faradda di li Canderieri','Museo Sanna','Piazza d\'Italia','Fontana di Rosello'], web:'https://www.comune.sassari.it' }
+];
+
+// ─── PRODOTTI DATA ────────────────────────────────────────────
+const PRODOTTI_DATA = [
+  { id:1,  name:'Pane Carasau',                  categoria:'gastronomia', zona:'Barbagia / tutta la Sardegna', cert:'PAT',   desc:'Il "pane della carta" o "carta da musica" — sfoglia croccante di semola di grano duro cotta due volte. Conserva settimane: era il pane dei pastori transumanti. Con olio e sale diventa pane guttiau.',                                          dove:'Forni artigianali, mercati locali, botteghe alimentari', link:'https://www.sardegnaenogastronomia.it' },
+  { id:2,  name:'Bottarga di Muggine di Cabras', categoria:'gastronomia', zona:'Cabras (OR)',                  cert:'DOP',   desc:'Le uova di muggine essiccate e pressate — il "caviale del Mediterraneo". La bottarga di Cabras è la più pregiata: colore ambrato, profumo intenso. Si grattugia sulla pasta o si affetta sulle bruschette.',                                   dove:'Produttori a Cabras, pescherie Oristano, online', link:'https://www.bottargacabras.com' },
+  { id:3,  name:'Pecorino Sardo',                categoria:'gastronomia', zona:'Sardegna intera',              cert:'DOP',   desc:'Il formaggio simbolo della Sardegna — "dolce" (20-60 gg) morbido e lattico, "maturo" (oltre 2 mesi) asciutto e piccante. Solo latte di pecora sarda. Fondamentale in ogni tavola isolana.',                                                       dove:'Caseifici, mercati, botteghe alimentari', link:'https://www.pecorinosardodop.it' },
+  { id:4,  name:'Cannonau di Sardegna',          categoria:'vini',        zona:'Ogliastra / Barbagia',         cert:'DOC',   desc:'Il re dei vini sardi — Grenache con oltre 3.000 anni di storia. Rosso potente (min. 12.5%), ricco di polifenoli. Studiato come segreto della longevità degli ogliastrini. Tre sottotipi: Classico, Oliena, Capo Ferrato.',           dove:'Cantine, enoteche, online', link:'https://www.consorziocannonau.it' },
+  { id:5,  name:'Vermentino di Gallura',         categoria:'vini',        zona:'Gallura (SS)',                 cert:'DOCG',  desc:'L\'unica DOCG della Sardegna — bianco secco, profumo floreale, sapore fresco con leggera nota amaricante finale. Perfetto con aragosta e pesce. Prodotto solo in Gallura, nel nord-est dell\'isola.',                                    dove:'Cantine di Gallura, enoteche', link:'https://www.vermentinogallura.com' },
+  { id:6,  name:'Vernaccia di Oristano',         categoria:'vini',        zona:'Oristano / Cabras',            cert:'DOC',   desc:'Il vino ambrato — ossidato in botti di castagno come i grandi Sherry spagnoli. Secco, complesso, sentori di mandorla e fiori d\'arancio. Custodito dalle Cantine Contini dal 1898. Da meditazione.',                                   dove:'Cantine Contini, enoteche sarde', link:'https://www.vinicontini.com' },
+  { id:7,  name:'Mirto Sardo',                   categoria:'liquori',     zona:'Sardegna intera',              cert:'PAT',   desc:'Il liquore delle bacche di mirto selvatico raccolte a mano da novembre a dicembre. Versione rossa (bacche mature) intensa e speziata, versione bianca (fiori) più delicata. Il digestivo dell\'isola.',                                  dove:'Distillerie artigianali, botteghe, aeroporto', link:'https://www.sardegnaenogastronomia.it' },
+  { id:8,  name:'Zafferano di Sardegna',         categoria:'gastronomia', zona:'San Gavino Monreale (VS)',     cert:'DOP',   desc:'Coltivato nel Medio Campidano — tra i più pregiati al mondo per colore intenso e aroma potente. San Gavino è la capitale italiana dello zafferano con sagra a ottobre.',                                                                     dove:'Produttori locali, botteghe, online', link:'https://www.zafferanosardodop.it' },
+  { id:9,  name:'Miele di Corbezzolo',           categoria:'gastronomia', zona:'Sardegna intera',              cert:'PAT',   desc:'Unico al mondo — amaro in entrata con retrogusto dolce e balsamico. Prodotto solo in Sardegna e Corsica dalle fioriture autunnali (ott-nov). Il miele di asfodelo (primavera) è invece delicato e quasi bianco.',                         dove:'Apicoltori, mercati, botteghe artigianali', link:'https://www.sardegnaenogastronomia.it' },
+  { id:10, name:'Culurgiones dell\'Ogliastra',   categoria:'gastronomia', zona:'Ogliastra (NU)',               cert:'IGP',   desc:'I ravioli sardi — chiusura a "spiga di grano" fatta a mano, ripieno di patate, pecorino e menta. Ogni paese ha la propria variante. IGP riconosciuto. Si condiscono con sugo di pomodoro fresco.',                                          dove:'Ristoranti locali, produttori artigianali, mercati', link:'https://www.sardegnaturismo.it' },
+  { id:11, name:'Coltello Pattada (Resolza)',    categoria:'artigianato', zona:'Pattada (SS)',                 cert:'PAT',   desc:'Il coltello più famoso della Sardegna — lama a "foglia di mirto" in acciaio, manico in corno di muflone. Ogni maestro pattadese firma il proprio pezzo. Collezionato in tutto il mondo.',                                              dove:'Laboratori a Pattada, fiere artigianato', link:'https://www.pattada.net' },
+  { id:12, name:'Corallo Rosso di Alghero',      categoria:'artigianato', zona:'Alghero (SS)',                 cert:'IGP',   desc:'Il Corallium rubrum del Golfo di Alghero — il più pregiato del Mediterraneo. Lavorato da secoli dai maestri gioiellieri algheresi in collane, orecchini e spille. Certificato per autenticità.',                                  dove:'Gioiellerie di Alghero, artigiani del porto', link:'https://www.algherotourism.it' },
+  { id:13, name:'Sughero di Calangianus',        categoria:'artigianato', zona:'Calangianus (SS)',             cert:'IGP',   desc:'Il 70% del sughero italiano viene da qui. Tappi, oggettistica e design contemporaneo: borse, scarpe, portafogli. Visita alle sugherete e ai laboratori artigianali della Gallura.',                                               dove:'Laboratori a Calangianus, boutique design', link:'https://www.calangianus.it' },
+  { id:14, name:'Fregola Sarda',                 categoria:'gastronomia', zona:'Cagliari / Campidano',         cert:'PAT',   desc:'Pasta sferica sarda tostata — simile al cous cous ma più grande. Condita con arselle è il primo piatto più tipico di Cagliari. Con frutti di mare o ragù di cinghiale nelle versioni montanare.',                                       dove:'Pastifici artigianali, botteghe, supermercati', link:'https://www.sardegnaenogastronomia.it' },
+  { id:15, name:'Acquavite di Filu e Ferru',     categoria:'liquori',     zona:'Sardegna intera',              cert:'PAT',   desc:'Il grappa sarda — "filo di ferro" perché veniva nascosta nel terreno con un filo di ferro metallico per sfuggire al fisco. Bianca, potente (40-50%), aromatica. Servita ghiacciata come digestivo dopo il pasto.',                   dove:'Distillerie artigianali, enoteche, botteghe', link:'https://www.sardegnaenogastronomia.it' },
+  { id:16, name:'Sale di Cagliari (Saline)',     categoria:'gastronomia', zona:'Cagliari / Molentargius',      cert:'PAT',   desc:'Sale integrale raccolto a mano nelle vasche dello Stagno di Molentargius — dove vivono i fenicotteri. Sale grosso, fino, affumicato e alle erbe. Prodotto storico del Campidano di Cagliari.',                                   dove:'Saline di Molentargius, botteghe alimentari', link:'https://www.salinedicagliari.it' }
+];
+
 // ─── STATO TOOLS ─────────────────────────────────────────────
 let activeToolSection = null;
 
@@ -408,10 +480,10 @@ function openToolSection(name) {
       else if (name === 'meteo')        renderComingSoon(contentArea, 'Meteo Sardegna', 'Previsioni aggiornate per le zone principali — mare, vento e temperature costa per costa.');
       else if (name === 'sentieri')     renderSentieri(contentArea);
       else if (name === 'cantine')      renderCantine(contentArea);
-      else if (name === 'prodotti')     renderComingSoon(contentArea, 'Prodotti Tipici', 'Catalogo prodotti sardi — cibo, tessuti, ceramiche e artigianato locale con link acquisto diretto.');
-      else if (name === 'artigiani')    renderComingSoon(contentArea, 'Artigiani', 'Maestri artigiani locali con bottega, specialità e contatti — scopri chi produce cosa e dove.');
-      else if (name === 'comuni')       renderComingSoon(contentArea, 'Comuni della Sardegna', 'Schede per ogni comune: servizi, uffici, spiagge vicine, eventi e punti d\'interesse.');
-      else if (name === 'guide')        renderComingSoon(contentArea, 'Guide Turistiche', 'Guide certificate per zona, lingua e specialità — prenota la tua esperienza personalizzata.');
+      else if (name === 'prodotti')     renderProdotti(contentArea);
+      else if (name === 'artigiani')    renderArtigiani(contentArea);
+      else if (name === 'comuni')       renderComuni(contentArea);
+      else if (name === 'guide')        renderGuide(contentArea);
       else if (name === 'musei')        renderMusei(contentArea);
       else if (name === 'ristoranti')   renderRistoranti(contentArea);
       else if (name === 'hotel')        renderHotel(contentArea);
@@ -745,6 +817,193 @@ function renderBiglietti(container) {
     { opacity: 0, y: 18 },
     { opacity: 1, y: 0, stagger: 0.08, duration: 0.35, ease: 'power2.out' }
   );
+}
+
+// ─── ARTIGIANI ───────────────────────────────────────────────
+function renderArtigiani(container) {
+  const filters = [
+    { key:'tutti',     label:'Tutti' },
+    { key:'tessuti',   label:'Tessuti' },
+    { key:'gioielli',  label:'Gioielli & Filigrana' },
+    { key:'ceramica',  label:'Ceramica' },
+    { key:'coltelli',  label:'Coltelli' },
+    { key:'legno',     label:'Legno & Sughero' },
+    { key:'cestineria',label:'Cestineria' },
+    { key:'merletti',  label:'Merletti' }
+  ];
+  const groupMap = {
+    tessuti:   ['tessuti','merletti'],
+    gioielli:  ['gioielli'],
+    ceramica:  ['ceramica'],
+    coltelli:  ['coltelli'],
+    legno:     ['legno','sughero'],
+    cestineria:['cestineria'],
+    merletti:  ['merletti']
+  };
+
+  function draw(active) {
+    const list = active === 'tutti'
+      ? ARTIGIANI_DATA
+      : ARTIGIANI_DATA.filter(a => (groupMap[active] || [active]).includes(a.specialita));
+    container.innerHTML = `
+      <h2 class="tool-section-title">Artigiani Sardi</h2>
+      <p class="tool-section-sub">Maestri artigiani dell'isola — ceramica, filigrana, tessuti, coltelli e molto altro</p>
+      <div class="tool-filter-pills">
+        ${filters.map(f => `<button class="filter-pill${f.key===active?' active':''}" data-key="${f.key}">${f.label}</button>`).join('')}
+      </div>
+      <div class="artigiani-grid">
+        ${list.map(a => `
+          <div class="artigiano-card glass-card">
+            <div class="artg-head">
+              <span class="artg-spec-badge artg-spec-${a.specialita}">${a.specialita}</span>
+              <span class="artg-zona">${a.zona.charAt(0).toUpperCase()+a.zona.slice(1)} Sardegna</span>
+            </div>
+            <div class="artg-name">${a.name}</div>
+            <div class="artg-city">${a.city}</div>
+            <p class="artg-desc">${a.desc}</p>
+            <div class="artg-prodotti">${a.prodotti.map(p=>`<span class="artg-prod-tag">${p}</span>`).join('')}</div>
+            <div class="artg-footer">
+              ${a.tel ? `<span class="artg-tel">${a.tel}</span>` : ''}
+              ${a.web ? `<a href="${a.web}" target="_blank" class="artg-link">Sito web</a>` : ''}
+            </div>
+          </div>`).join('')}
+      </div>`;
+    container.querySelectorAll('.filter-pill').forEach(btn =>
+      btn.addEventListener('click', () => draw(btn.dataset.key)));
+    if (window.gsap) gsap.fromTo('.artigiano-card',{opacity:0,y:18},{opacity:1,y:0,duration:0.4,stagger:0.06});
+  }
+  draw('tutti');
+}
+
+// ─── GUIDE ───────────────────────────────────────────────────
+function renderGuide(container) {
+  const filters = [
+    { key:'tutti',       label:'Tutte' },
+    { key:'trekking',    label:'Trekking' },
+    { key:'culturale',   label:'Culturali' },
+    { key:'mare',        label:'Mare & Sub' },
+    { key:'gastronomico',label:'Gastronomiche' },
+    { key:'esperienze',  label:'Esperienze' }
+  ];
+
+  function draw(active) {
+    const list = active === 'tutti' ? GUIDE_DATA : GUIDE_DATA.filter(g => g.tipo === active);
+    container.innerHTML = `
+      <h2 class="tool-section-title">Guide Turistiche</h2>
+      <p class="tool-section-sub">Cooperative e agenzie di guide certificate — per scoprire la Sardegna con chi la conosce davvero</p>
+      <div class="tool-filter-pills">
+        ${filters.map(f => `<button class="filter-pill${f.key===active?' active':''}" data-key="${f.key}">${f.label}</button>`).join('')}
+      </div>
+      <div class="guide-grid">
+        ${list.map(g => `
+          <div class="guida-card glass-card">
+            <div class="guida-head">
+              <span class="guida-tipo-badge guida-tipo-${g.tipo}">${g.tipo}</span>
+              <span class="guida-zona">${g.zona.charAt(0).toUpperCase()+g.zona.slice(1)} Sardegna</span>
+            </div>
+            <div class="guida-name">${g.name}</div>
+            <div class="guida-city">${g.city}</div>
+            <p class="guida-desc">${g.desc}</p>
+            <div class="guida-lingue">${g.lingue.map(l=>`<span class="guida-lang-tag">${l}</span>`).join('')}</div>
+            <div class="guida-footer">
+              <span class="guida-tel">${g.tel}</span>
+              <a href="${g.web}" target="_blank" class="guida-link">Sito web</a>
+            </div>
+          </div>`).join('')}
+      </div>`;
+    container.querySelectorAll('.filter-pill').forEach(btn =>
+      btn.addEventListener('click', () => draw(btn.dataset.key)));
+    if (window.gsap) gsap.fromTo('.guida-card',{opacity:0,y:18},{opacity:1,y:0,duration:0.4,stagger:0.06});
+  }
+  draw('tutti');
+}
+
+// ─── COMUNI ───────────────────────────────────────────────────
+function renderComuni(container) {
+  const filters = [
+    { key:'tutti',  label:'Tutti' },
+    { key:'nord',   label:'Nord Sardegna' },
+    { key:'centro', label:'Centro' },
+    { key:'sud',    label:'Sud Sardegna' }
+  ];
+
+  function draw(active) {
+    const list = active === 'tutti' ? COMUNI_DATA : COMUNI_DATA.filter(c => c.zona === active);
+    container.innerHTML = `
+      <h2 class="tool-section-title">Comuni della Sardegna</h2>
+      <p class="tool-section-sub">Una selezione dei borghi e città più significativi dell'isola — storia, arte, natura e identità</p>
+      <div class="tool-filter-pills">
+        ${filters.map(f => `<button class="filter-pill${f.key===active?' active':''}" data-key="${f.key}">${f.label}</button>`).join('')}
+      </div>
+      <div class="comuni-grid">
+        ${list.map(c => `
+          <div class="comune-card glass-card">
+            <div class="comune-head">
+              <span class="comune-prov-badge">Prov. ${c.prov}</span>
+              <span class="comune-pop">${c.pop} ab.</span>
+            </div>
+            <div class="comune-name">${c.name}</div>
+            <div class="comune-alt">${c.alt} s.l.m.</div>
+            <p class="comune-desc">${c.desc}</p>
+            <div class="comune-attrazioni">
+              <div class="comune-attr-label">Cosa vedere</div>
+              <ul class="comune-attr-list">
+                ${c.cosa_vedere.map(a=>`<li>${a}</li>`).join('')}
+              </ul>
+            </div>
+            <div class="comune-footer">
+              <a href="${c.web}" target="_blank" class="comune-link">Sito del Comune</a>
+            </div>
+          </div>`).join('')}
+      </div>`;
+    container.querySelectorAll('.filter-pill').forEach(btn =>
+      btn.addEventListener('click', () => draw(btn.dataset.key)));
+    if (window.gsap) gsap.fromTo('.comune-card',{opacity:0,y:18},{opacity:1,y:0,duration:0.4,stagger:0.06});
+  }
+  draw('tutti');
+}
+
+// ─── PRODOTTI ─────────────────────────────────────────────────
+function renderProdotti(container) {
+  const filters = [
+    { key:'tutti',       label:'Tutti' },
+    { key:'gastronomia', label:'Gastronomia' },
+    { key:'vini',        label:'Vini' },
+    { key:'liquori',     label:'Liquori' },
+    { key:'artigianato', label:'Artigianato' }
+  ];
+  const CERT_COLOR = { DOP:'#27ae60', IGP:'#2980b9', DOCG:'#8e44ad', DOC:'#16a085', PAT:'#e67e22' };
+
+  function draw(active) {
+    const list = active === 'tutti' ? PRODOTTI_DATA : PRODOTTI_DATA.filter(p => p.categoria === active);
+    container.innerHTML = `
+      <h2 class="tool-section-title">Prodotti Tipici Sardi</h2>
+      <p class="tool-section-sub">Eccellenze enogastronomiche e artigianali dell'isola — con indicazioni su dove acquistarle</p>
+      <div class="tool-filter-pills">
+        ${filters.map(f => `<button class="filter-pill${f.key===active?' active':''}" data-key="${f.key}">${f.label}</button>`).join('')}
+      </div>
+      <p class="prodotti-artigiani-note">Per acquistare direttamente dai produttori artigianali → <button class="prodotti-artig-link" onclick="openToolSection('artigiani')">Artigiani Sardi</button></p>
+      <div class="prodotti-grid">
+        ${list.map(p => `
+          <div class="prodotto-card glass-card">
+            <div class="prodotto-head">
+              <span class="prodotto-cat-badge prodotto-cat-${p.categoria}">${p.categoria}</span>
+              ${p.cert ? `<span class="prodotto-cert" style="background:${CERT_COLOR[p.cert]||'#555'}">${p.cert}</span>` : ''}
+            </div>
+            <div class="prodotto-name">${p.name}</div>
+            <div class="prodotto-zona">${p.zona}</div>
+            <p class="prodotto-desc">${p.desc}</p>
+            <div class="prodotto-dove"><span class="prodotto-dove-label">Dove acquistare:</span> ${p.dove}</div>
+            <div class="prodotto-footer">
+              <a href="${p.link}" target="_blank" class="prodotto-link">Scopri di più</a>
+            </div>
+          </div>`).join('')}
+      </div>`;
+    container.querySelectorAll('.filter-pill').forEach(btn =>
+      btn.addEventListener('click', () => draw(btn.dataset.key)));
+    if (window.gsap) gsap.fromTo('.prodotto-card',{opacity:0,y:18},{opacity:1,y:0,duration:0.4,stagger:0.06});
+  }
+  draw('tutti');
 }
 
 // ─── SENTIERI ─────────────────────────────────────────────────
