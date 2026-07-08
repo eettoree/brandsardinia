@@ -385,7 +385,7 @@ body.world-active .scroll-invite-chevron { stroke: #333; }
   display: block;
   width: clamp(280px, 52vw, 640px);
   height: auto;
-  filter: brightness(0); /* nero — leggibile su bianco e su rosso */
+  filter: none;
 }
 
 .hero-title span {
