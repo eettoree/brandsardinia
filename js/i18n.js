@@ -21,7 +21,7 @@ const TRANSLATIONS = {
     'selector.map.title': 'Mappa Interattiva',
     'selector.map.desc': 'Esplora la Sardegna in 3D con pin e filtri',
     'selector.tools.title': 'Tools',
-    'selector.tools.desc': 'Spiagge live, eventi, camper e sport',
+    'selector.tools.desc': 'Meteo live, eventi e sport',
 
     'sardinai.welcome': "Ciao, sono SardinAI, l'assistente intelligente dedicato alla Sardegna. Posso aiutarti a scoprire territori, eventi, esperienze, imprese locali e opportunità legate all'isola: che tu voglia organizzare un viaggio, conoscere un Comune, valutare un investimento, trasferirti, lavorare da remoto o immaginare una nuova vita in Sardegna.",
     'sardinai.questions': [
@@ -63,7 +63,7 @@ const TRANSLATIONS = {
 
     'tools.title': 'Tools Sardegna',
     'tools.calendar': 'Calendario Eventi',
-    'tools.beaches': 'Spiagge Live',
+    'tools.beaches': 'Meteo Live',
     'tools.camper': 'Camper & Van',
     'tools.sports': 'Sport & Avventura',
     'tools.back': '← Tools',
@@ -107,7 +107,7 @@ const TRANSLATIONS = {
     'selector.map.title': 'Interactive Map',
     'selector.map.desc': 'Explore Sardinia in 3D with pins and filters',
     'selector.tools.title': 'Tools',
-    'selector.tools.desc': 'Live beaches, events, camper spots and sports',
+    'selector.tools.desc': 'Live weather, events and sports',
 
     'sardinai.welcome': "Hi! I'm SardinAI, your travel assistant for Sardinia. I'll ask you a few questions to create the perfect itinerary for you.",
     'sardinai.questions': [
@@ -149,7 +149,7 @@ const TRANSLATIONS = {
 
     'tools.title': 'Sardinia Tools',
     'tools.calendar': 'Events Calendar',
-    'tools.beaches': 'Live Beaches',
+    'tools.beaches': 'Live Weather',
     'tools.camper': 'Camper & Van',
     'tools.sports': 'Sport & Adventure',
     'tools.back': '← Tools',
@@ -193,7 +193,7 @@ const TRANSLATIONS = {
     'selector.map.title': 'Mapa Interactivo',
     'selector.map.desc': 'Explora Cerdeña en 3D con pins y filtros',
     'selector.tools.title': 'Herramientas',
-    'selector.tools.desc': 'Playas en vivo, eventos, autocaravanas y deportes',
+    'selector.tools.desc': 'Clima en vivo, eventos y deportes',
 
     'sardinai.welcome': "¡Hola! Soy SardinAI, tu asistente de viaje para Cerdeña. Te haré algunas preguntas para crear el itinerario perfecto.",
     'sardinai.questions': [
@@ -235,7 +235,7 @@ const TRANSLATIONS = {
 
     'tools.title': 'Herramientas Cerdeña',
     'tools.calendar': 'Calendario de Eventos',
-    'tools.beaches': 'Playas en Vivo',
+    'tools.beaches': 'Clima en Vivo',
     'tools.camper': 'Autocaravana & Furgoneta',
     'tools.sports': 'Deporte y Aventura',
     'tools.back': '← Herramientas',
@@ -279,7 +279,7 @@ const TRANSLATIONS = {
     'selector.map.title': 'Carte Interactive',
     'selector.map.desc': 'Explorez la Sardaigne en 3D avec des épingles et filtres',
     'selector.tools.title': 'Outils',
-    'selector.tools.desc': 'Plages en direct, événements, camping-cars et sports',
+    'selector.tools.desc': 'Météo en direct, événements et sports',
 
     'sardinai.welcome': "Bonjour! Je suis SardinAI, votre assistant de voyage pour la Sardaigne. Je vais vous poser quelques questions pour créer l'itinéraire parfait.",
     'sardinai.questions': [
@@ -321,7 +321,7 @@ const TRANSLATIONS = {
 
     'tools.title': 'Outils Sardaigne',
     'tools.calendar': 'Calendrier des Événements',
-    'tools.beaches': 'Plages en Direct',
+    'tools.beaches': 'Météo en Direct',
     'tools.camper': 'Camping-Car & Van',
     'tools.sports': 'Sport & Aventure',
     'tools.back': '← Outils',
@@ -365,7 +365,7 @@ const TRANSLATIONS = {
     'selector.map.title': 'Interaktive Karte',
     'selector.map.desc': 'Erkunden Sie Sardinien in 3D mit Pins und Filtern',
     'selector.tools.title': 'Tools',
-    'selector.tools.desc': 'Live-Strände, Events, Wohnmobil und Sport',
+    'selector.tools.desc': 'Live-Wetter, Events und Sport',
 
     'sardinai.welcome': 'Hallo! Ich bin SardinAI, Ihr Reiseassistent für Sardinien. Ich stelle Ihnen einige Fragen, um die perfekte Reiseroute zu erstellen.',
     'sardinai.questions': [
@@ -407,7 +407,7 @@ const TRANSLATIONS = {
 
     'tools.title': 'Sardinien Tools',
     'tools.calendar': 'Veranstaltungskalender',
-    'tools.beaches': 'Live-Strände',
+    'tools.beaches': 'Live-Wetter',
     'tools.camper': 'Wohnmobil & Van',
     'tools.sports': 'Sport & Abenteuer',
     'tools.back': '← Tools',
