@@ -17,13 +17,13 @@ const TRANSLATIONS = {
     'selector.title': 'Cosa vuoi esplorare?',
     'selector.subtitle': 'Scegli la tua esperienza',
     'selector.sardinai.title': 'SardinAI',
-    'selector.sardinai.desc': 'Pianifica il tuo viaggio con intelligenza artificiale',
+    'selector.sardinai.desc': 'Il tuo assistente intelligente per scoprire, vivere, conoscere e investire in Sardegna.',
     'selector.map.title': 'Mappa Interattiva',
     'selector.map.desc': 'Esplora la Sardegna in 3D con pin e filtri',
     'selector.tools.title': 'Tools',
     'selector.tools.desc': 'Spiagge live, eventi, camper e sport',
 
-    'sardinai.welcome': "Ciao! Sono SardinAI, il tuo assistente di viaggio per la Sardegna. Ti farò alcune domande per creare l'itinerario perfetto per te.",
+    'sardinai.welcome': "Ciao, sono SardinAI, l'assistente intelligente dedicato alla Sardegna. Posso aiutarti a scoprire territori, eventi, esperienze, imprese locali e opportunità legate all'isola: che tu voglia organizzare un viaggio, conoscere un Comune, valutare un investimento, trasferirti, lavorare da remoto o immaginare una nuova vita in Sardegna.",
     'sardinai.questions': [
       'Da quale aeroporto atterri o da dove parti?',
       'Quanti giorni hai a disposizione?',

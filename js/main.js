@@ -17,6 +17,7 @@ function initHero() {
   const hero = document.getElementById('hero');
   if (!hero) return;
 
+  document.body.classList.add('world-active');
   hero.style.display = 'flex';
 
   // Applica traduzioni iniziali
@@ -157,6 +158,25 @@ function bindLangSelectors() {
 // ─── NAVIGAZIONE SEZIONI ─────────────────────────────────────
 function showSection(name) {
   AppState.currentSection = name;
+  document.body.classList.remove('world-active');
+
+  // Dissolvi il mondo sardegna
+  const world = document.getElementById('sardinia-world');
+  if (world && world.style.display !== 'none') {
+    if (name === 'map') {
+      world.classList.add('dissolving');
+      setTimeout(() => {
+        world.style.display = 'none';
+        world.style.opacity = '';
+        world.classList.remove('dissolving');
+      }, 1100);
+    } else {
+      gsap.to(world, { opacity: 0, duration: 0.4, ease: 'power2.in', onComplete: () => {
+        world.style.display = 'none';
+        world.style.opacity = '';
+      }});
+    }
+  }
 
   const selector = document.getElementById('section-selector');
   const allSections = document.querySelectorAll('.main-section');
@@ -219,27 +239,25 @@ function goBackToSelector() {
     }
   });
 
-  // Mostra selector
+  // Dopo il fade della sezione: riporta world-active e sardinia-world
   setTimeout(() => {
+    document.body.classList.add('world-active');
+    const world = document.getElementById('sardinia-world');
+    if (world) {
+      world.style.display = 'flex';
+      world.style.opacity = '0';
+      gsap.to(world, { opacity: 1, duration: 0.5, ease: 'power2.out' });
+    }
+
     selector.style.display = 'flex';
     selector.style.opacity = '0';
-    gsap.to(selector, {
-      opacity: 1,
-      y: 0,
-      duration: 0.4,
-      ease: 'power2.out'
-    });
+    gsap.to(selector, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' });
 
     gsap.fromTo('.selector-card',
       { opacity: 0, y: 30, scale: 0.95 },
-      {
-        opacity: 1, y: 0, scale: 1,
-        duration: 0.4,
-        stagger: 0.1,
-        ease: 'back.out(1.4)'
-      }
+      { opacity: 1, y: 0, scale: 1, duration: 0.4, stagger: 0.1, ease: 'back.out(1.4)' }
     );
-  }, 250);
+  }, 350);
 
   AppState.currentSection = null;
 }
