@@ -4537,8 +4537,8 @@ strong { font-weight: 600; color: var(--text); }
 
 /* ── DESKTOP LAYOUT ADJUSTMENTS (non tocca mobile) ─────────── */
 @media (min-width: 769px) {
-  /* Selector: titolo "Cosa vuoi esplorare?" ancorato in alto,
-     sopra la sagoma della Sardegna */
+
+  /* ─ SELECTOR ─────────────────────────────────────────────── */
   .selector-title {
     position: absolute;
     top: 36px;
@@ -4546,15 +4546,31 @@ strong { font-weight: 600; color: var(--text); }
     right: 24px;
     margin: 0;
   }
-  /* Con il titolo fuori dal flusso, i cards si centrano autonomamente */
   .selector-hero {
     padding: 56px 24px 100px;
   }
 
-  /* Hero: tagline "Branding an Island" sale in cima al viewport */
+  /* ─ HERO ─────────────────────────────────────────────────── */
+  /*
+   * Layout su desktop:
+   *   [Branding an Island]  ← fixed in cima al viewport, sopra la sagoma
+   *   [BrandSardinia SVG ]  ← centrato nel viewport (sulla sagoma)
+   *   [La piattaforma... ]  ← 10px sotto il SVG
+   *   [  Esplora CTA     ]  ← absolute in fondo al viewport, sotto la sagoma
+   *
+   * La sagoma occupa ~19vh–81vh. Tagline e CTA stanno fuori da quella zona.
+   * SVG + subtitle sono nel flusso flex e si centrano automaticamente.
+   */
+
+  /* Rimuovi padding asimmetrico: SVG+subtitle si centrano da soli */
+  #hero {
+    padding: 0 20px;
+  }
+
+  /* Tagline: esce dal flusso flex, si ancora in cima sopra la sagoma */
   .hero-tagline {
     position: fixed;
-    top: 52px;
+    top: clamp(40px, 7vh, 72px);
     left: 0;
     right: 0;
     justify-content: center;
@@ -4562,20 +4578,20 @@ strong { font-weight: 600; color: var(--text); }
     z-index: 101;
   }
 
-  /* Hero: rimuovi padding asimmetrico — subtitle+logo si centrano autonomamente */
-  #hero {
-    padding: 0 20px;
+  /* SVG → Subtitle: 10px */
+  #hero .hero-title {
+    margin-bottom: 10px;
   }
 
-  /* Sottotitolo ora sopra il logo SVG — meno spazio in basso */
+  /* Subtitle → niente (il CTA è absolute, il margin non serve) */
   #hero .hero-subtitle {
-    margin-bottom: 16px;
+    margin-bottom: 0;
   }
 
-  /* Bottone CTA ancorato in basso, sotto la sagoma della Sardegna (62vh centrata → bottom ~19vh) */
+  /* CTA: esce dal flusso flex, si ancora in fondo sotto la sagoma */
   #hero #btn-start {
     position: absolute;
-    bottom: 72px;
+    bottom: clamp(56px, 10vh, 100px);
     left: 0;
     right: 0;
     margin: 0 auto;
