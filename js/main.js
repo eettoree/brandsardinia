@@ -26,16 +26,14 @@ function initHero() {
   const title    = hero.querySelector('.hero-title');
   const subtitle = hero.querySelector('.hero-subtitle');
   const btnStart = document.getElementById('btn-start');
-  const deco     = hero.querySelector('.hero-bottom-deco');
   const langSel  = hero.querySelector('.lang-selector');
 
   // Stato iniziale: tutti gli elementi hero nascosti
-  gsap.set([tagline, title, subtitle, btnStart, deco, langSel], { opacity: 0 });
+  gsap.set([tagline, title, subtitle, btnStart, langSel], { opacity: 0 });
   gsap.set(title,    { x: -28 });
   gsap.set(subtitle, { y: 28 });
   gsap.set(tagline,  { y: -28 });
   gsap.set(btnStart, { y: 18 });
-  gsap.set(deco,     { y: 10 });
 
   // Sardinia inizia a piena opacità (default CSS)
   if (sardSil) gsap.set(sardSil, { opacity: 1 });
@@ -57,11 +55,8 @@ function initHero() {
   // Bottone CTA
   tl.to(btnStart, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, '-=0.2');
 
-  // Scritta e freccetta animata
-  tl.to(deco, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, '-=0.1');
-
   // Lang selector
-  tl.to(langSel, { opacity: 1, duration: 0.4, ease: 'power2.out' }, '<');
+  tl.to(langSel, { opacity: 1, duration: 0.4, ease: 'power2.out' }, '-=0.4');
 
   // Listener bottone start
   if (btnStart) btnStart.addEventListener('click', transitionToMainApp);

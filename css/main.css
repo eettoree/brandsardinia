@@ -507,32 +507,7 @@ body.world-active .scroll-invite-chevron { stroke: #333; }
 #btn-start span { position: relative; z-index: 1; }
 #btn-start::after { position: relative; z-index: 1; }
 
-/* Scroll indicator hero bottom */
-.hero-bottom-deco {
-  position: absolute;
-  bottom: 36px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 5;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 7px;
-  animation: float 3s ease-in-out infinite;
-}
-
-.scroll-hint-text {
-  font-size: 0.62rem;
-  letter-spacing: 3.5px;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  font-family: var(--font-sans);
-}
-
-.scroll-hint-arrow {
-  color: var(--text-muted);
-  opacity: 0.55;
-}
+.hero-bottom-deco { display: none; }
 
 /* ── MAIN APP ──────────────────────────────────────────────── */
 #main-app {
@@ -625,7 +600,7 @@ body.world-active .scroll-invite-chevron { stroke: #333; }
   align-items: center;
   justify-content: center;
   min-height: calc(100vh - 65px);
-  padding: 68px 24px 56px;
+  padding: 56px 24px 160px;
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -3671,18 +3646,21 @@ strong { font-weight: 600; color: var(--text); }
 
 /* ── SCROLL INVITE ──────────────────────────────────────────── */
 .scroll-invite {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  padding: 8px 0 52px;
-  margin-top: 8px;
   color: var(--text-muted);
   font-size: 0.72rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   cursor: default;
   user-select: none;
+  white-space: nowrap;
 }
 
 .scroll-invite-label {
