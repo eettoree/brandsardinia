@@ -320,6 +320,13 @@ body.world-active .scroll-invite-chevron { stroke: #333; }
   z-index: 10;
 }
 
+/* Nel navbar il dropdown è in flusso normale, non assoluto */
+.app-navbar .lang-selector {
+  position: relative;
+  top: auto;
+  right: auto;
+}
+
 .lang-btn {
   display: flex;
   align-items: center;
