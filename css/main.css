@@ -225,6 +225,7 @@ body.world-active .selector-card {
   -webkit-backdrop-filter: blur(12px);
 }
 body.world-active .card-title { color: #111; }
+body.world-active .card-title.card-title-display { color: var(--red); }
 body.world-active .card-desc  { color: #444; }
 body.world-active .card-icon-wrap svg { color: #1a1a1a; }
 body.world-active .scroll-invite-label { color: #333; }
@@ -4595,25 +4596,8 @@ strong { font-weight: 600; color: var(--text); }
     margin-bottom: 10px;
   }
 
-  /* Subtitle → niente (il CTA è absolute, il margin non serve) */
+  /* Subtitle → CTA: 24px di spazio */
   #hero .hero-subtitle {
-    margin-bottom: 0;
-  }
-
-  /* hero-content: rimuovi position:relative così #btn-start absolute
-     si posiziona rispetto a #hero (il viewport), non a hero-content */
-  #hero .hero-content {
-    position: static;
-  }
-
-  /* CTA: absolute rispetto a #hero (fixed fullscreen) — bottom ~18vh
-     = circa a metà tra la posizione attuale (~65vh) e il fondo (100vh) */
-  #hero #btn-start {
-    position: absolute;
-    bottom: 18vh;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    width: max-content;
+    margin-bottom: 24px;
   }
 }
