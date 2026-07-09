@@ -547,6 +547,16 @@ body.world-active .scroll-invite-chevron { stroke: #333; }
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
   box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+  transition: background 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+/* Navbar trasparente con blur sulla mappa */
+body.section-map .app-navbar {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom-color: rgba(255, 255, 255, 0.15);
+  box-shadow: none;
 }
 
 .app-navbar-left {

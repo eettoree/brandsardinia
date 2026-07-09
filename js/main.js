@@ -223,6 +223,7 @@ function bindLangSelectors() {
 function showSection(name) {
   AppState.currentSection = name;
   document.body.classList.remove('world-active');
+  document.body.classList.toggle('section-map', name === 'map');
 
   // Dissolvi il mondo sardegna
   const world = document.getElementById('sardinia-world');
@@ -287,6 +288,7 @@ function showSection(name) {
 }
 
 function goBackToSelector() {
+  document.body.classList.remove('section-map');
   const selector = document.getElementById('section-selector');
   const allSections = document.querySelectorAll('.main-section');
 
