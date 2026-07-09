@@ -19,48 +19,110 @@ function initHero() {
 
   document.body.classList.add('world-active');
   hero.style.display = 'flex';
-
-  // Applica traduzioni iniziali
   applyTranslations();
 
-  // Fade in hero con GSAP
-  gsap.fromTo(hero,
-    { opacity: 0, y: 30 },
-    { opacity: 1, y: 0, duration: 0.9, ease: 'power2.out' }
-  );
+  const sardSil  = document.getElementById('sardinia-silhouette');
+  const tagline  = hero.querySelector('.hero-tagline');
+  const title    = hero.querySelector('.hero-title');
+  const subtitle = hero.querySelector('.hero-subtitle');
+  const btnStart = document.getElementById('btn-start');
+  const deco     = hero.querySelector('.hero-bottom-deco');
+  const langSel  = hero.querySelector('.lang-selector');
 
-  // Anima il titolo hero con stagger
-  gsap.fromTo('.hero-title',
-    { opacity: 0, y: 40 },
-    { opacity: 1, y: 0, duration: 1, ease: 'power3.out', delay: 0.2 }
-  );
-  gsap.fromTo('.hero-subtitle',
-    { opacity: 0, y: 25 },
-    { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out', delay: 0.5 }
-  );
-  gsap.fromTo('#btn-start',
-    { opacity: 0, y: 20, scale: 0.95 },
-    { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: 'back.out(1.5)', delay: 0.8 }
-  );
-  gsap.fromTo('.lang-selector',
-    { opacity: 0, x: 20 },
-    { opacity: 1, x: 0, duration: 0.6, ease: 'power2.out', delay: 0.4 }
-  );
+  // Stato iniziale: tutti gli elementi hero nascosti
+  gsap.set([tagline, title, subtitle, btnStart, deco, langSel], { opacity: 0 });
+  gsap.set(title,    { x: -28 });
+  gsap.set(subtitle, { y: 28 });
+  gsap.set(tagline,  { y: -28 });
+  gsap.set(btnStart, { y: 18 });
+  gsap.set(deco,     { y: 10 });
+
+  // Sardinia inizia a piena opacità (default CSS)
+  if (sardSil) gsap.set(sardSil, { opacity: 1 });
+
+  const tl = gsap.timeline();
+
+  // Dopo 1 secondo: sardinia passa da 100% a 41% ease-out
+  tl.to(sardSil, { opacity: 0.41, duration: 0.8, ease: 'power2.out' }, 1.0);
+
+  // Logo SVG: ingresso da sinistra verso destra
+  tl.to(title, { opacity: 1, x: 0, duration: 0.7, ease: 'power2.out' }, '-=0.1');
+
+  // Sottotitolo: dal basso verso l'alto
+  tl.to(subtitle, { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }, '-=0.3');
+
+  // Tagline: dall'alto verso il basso (opposto al sottotitolo)
+  tl.to(tagline, { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }, '-=0.5');
+
+  // Bottone CTA
+  tl.to(btnStart, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, '-=0.2');
+
+  // Scritta e freccetta animata
+  tl.to(deco, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, '-=0.1');
+
+  // Lang selector
+  tl.to(langSel, { opacity: 1, duration: 0.4, ease: 'power2.out' }, '<');
 
   // Listener bottone start
-  const btnStart = document.getElementById('btn-start');
-  if (btnStart) {
-    btnStart.addEventListener('click', transitionToMainApp);
-  }
+  if (btnStart) btnStart.addEventListener('click', transitionToMainApp);
 
-  // Language selector
-  const langSelect = document.getElementById('lang-select');
-  if (langSelect) {
-    langSelect.addEventListener('change', (e) => {
-      setLanguage(e.target.value);
-      applyTranslations();
+  // Init custom language dropdown
+  initLangDropdown();
+}
+
+// ─── CUSTOM LANG DROPDOWN ────────────────────────────────────
+const LANG_FLAGS = { IT: '🇮🇹', EN: '🇬🇧', ES: '🇪🇸', FR: '🇫🇷', DE: '🇩🇪' };
+
+function initLangDropdown() {
+  document.querySelectorAll('.lang-selector').forEach(container => {
+    const btn  = container.querySelector('.lang-btn');
+    const menu = container.querySelector('.lang-menu');
+    if (!btn || !menu) return;
+
+    btn.addEventListener('click', e => {
+      e.stopPropagation();
+      const isOpen = menu.classList.contains('open');
+      closeAllLangMenus();
+      if (!isOpen) {
+        menu.classList.add('open');
+        btn.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
     });
-  }
+
+    menu.querySelectorAll('.lang-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const lang = item.dataset.lang;
+        setLangDropdownValue(lang);
+        setLanguage(lang);
+        applyTranslations();
+        document.querySelectorAll('.lang-select-all').forEach(s => s.value = lang);
+        closeAllLangMenus();
+      });
+    });
+  });
+
+  document.addEventListener('click', closeAllLangMenus);
+}
+
+function closeAllLangMenus() {
+  document.querySelectorAll('.lang-menu.open').forEach(menu => {
+    menu.classList.remove('open');
+    const btn = menu.previousElementSibling;
+    if (btn) { btn.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); }
+  });
+}
+
+function setLangDropdownValue(lang) {
+  document.querySelectorAll('.lang-selector').forEach(container => {
+    const flagEl = container.querySelector('.lang-btn .lang-flag');
+    const codeEl = container.querySelector('.lang-btn .lang-code');
+    if (flagEl) flagEl.textContent = LANG_FLAGS[lang] || lang;
+    if (codeEl) codeEl.textContent = lang;
+    container.querySelectorAll('.lang-item').forEach(item => {
+      item.classList.toggle('active', item.dataset.lang === lang);
+    });
+  });
 }
 
 // ─── TRANSIZIONE HERO → MAIN APP ─────────────────────────────
@@ -147,9 +209,10 @@ function bindBackButtons() {
 function bindLangSelectors() {
   document.querySelectorAll('.lang-select-all').forEach(sel => {
     sel.addEventListener('change', (e) => {
-      setLanguage(e.target.value);
-      // Sincronizza tutti i select
-      document.querySelectorAll('.lang-select-all').forEach(s => s.value = e.target.value);
+      const lang = e.target.value;
+      setLanguage(lang);
+      document.querySelectorAll('.lang-select-all').forEach(s => s.value = lang);
+      setLangDropdownValue(lang);
       applyTranslations();
     });
   });
@@ -242,7 +305,9 @@ function goBackToSelector() {
   // Dopo il fade della sezione: riporta world-active e sardinia-world
   setTimeout(() => {
     document.body.classList.add('world-active');
-    const world = document.getElementById('sardinia-world');
+    const world   = document.getElementById('sardinia-world');
+    const sardSil = document.getElementById('sardinia-silhouette');
+    if (sardSil) gsap.set(sardSil, { opacity: 1 });
     if (world) {
       world.style.display = 'flex';
       world.style.opacity = '0';
