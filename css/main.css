@@ -225,7 +225,7 @@ body.world-active .selector-card {
   -webkit-backdrop-filter: blur(12px);
 }
 body.world-active .card-title { color: #111; }
-body.world-active .card-title.card-title-display { color: var(--red); }
+body.world-active .card-title.card-title-display { color: #F93448; }
 body.world-active .card-desc  { color: #444; }
 body.world-active .card-icon-wrap svg { color: #1a1a1a; }
 body.world-active .scroll-invite-label { color: #333; }
@@ -738,8 +738,8 @@ body.world-active .scroll-invite-chevron { stroke: #333; }
   font-family: 'Bebas Neue', sans-serif;
   font-size: 2rem;
   font-weight: 400;
-  color: var(--red);
-  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.8);
+  color: #F93448;
+  -webkit-text-stroke: 0.1px rgba(0, 0, 0, 0.8);
   opacity: 0.8;
   letter-spacing: 1px;
   line-height: 1;
