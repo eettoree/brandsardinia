@@ -4528,3 +4528,26 @@ strong { font-weight: 600; color: var(--text); }
 @media (max-width: 420px) {
   .sw-grid { grid-template-columns: 1fr; }
 }
+
+/* ── DESKTOP LAYOUT ADJUSTMENTS (non tocca mobile) ─────────── */
+@media (min-width: 769px) {
+  /* Selector: titolo "Cosa vuoi esplorare?" ancorato in alto,
+     sopra la sagoma della Sardegna */
+  .selector-title {
+    position: absolute;
+    top: 36px;
+    left: 24px;
+    right: 24px;
+    margin: 0;
+  }
+  /* Con il titolo fuori dal flusso, i cards si centrano autonomamente */
+  .selector-hero {
+    padding: 56px 24px 100px;
+  }
+
+  /* Hero: logo SVG + sottotitolo + CTA scendono più in basso,
+     la tagline "Branding an Island" rimane nella posizione attuale */
+  .hero-title {
+    margin-top: 80px;
+  }
+}
