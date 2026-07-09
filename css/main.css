@@ -4588,13 +4588,9 @@ strong { font-weight: 600; color: var(--text); }
     margin-bottom: 0;
   }
 
-  /* CTA: esce dal flusso flex, si ancora in fondo sotto la sagoma */
+  /* CTA: torna nel flusso sotto il sottotitolo, con margine superiore */
   #hero #btn-start {
-    position: absolute;
-    bottom: 4px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    width: max-content;
+    position: static;
+    margin-top: 24px;
   }
 }
