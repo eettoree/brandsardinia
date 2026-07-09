@@ -66,7 +66,13 @@ function initHero() {
 }
 
 // ─── CUSTOM LANG DROPDOWN ────────────────────────────────────
-const LANG_FLAGS = { IT: '🇮🇹', EN: '🇬🇧', ES: '🇪🇸', FR: '🇫🇷', DE: '🇩🇪' };
+const LANG_FLAGS = {
+  IT: 'https://flagcdn.com/w20/it.png',
+  EN: 'https://flagcdn.com/w20/gb.png',
+  ES: 'https://flagcdn.com/w20/es.png',
+  FR: 'https://flagcdn.com/w20/fr.png',
+  DE: 'https://flagcdn.com/w20/de.png'
+};
 
 function initLangDropdown() {
   document.querySelectorAll('.lang-selector').forEach(container => {
@@ -112,7 +118,7 @@ function setLangDropdownValue(lang) {
   document.querySelectorAll('.lang-selector').forEach(container => {
     const flagEl = container.querySelector('.lang-btn .lang-flag');
     const codeEl = container.querySelector('.lang-btn .lang-code');
-    if (flagEl) flagEl.textContent = LANG_FLAGS[lang] || lang;
+    if (flagEl) flagEl.src = LANG_FLAGS[lang] || '';
     if (codeEl) codeEl.textContent = lang;
     container.querySelectorAll('.lang-item').forEach(item => {
       item.classList.toggle('active', item.dataset.lang === lang);

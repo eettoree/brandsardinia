@@ -340,7 +340,6 @@ body.world-active .scroll-invite-chevron { stroke: #333; }
 .lang-btn:hover, .lang-btn.open {
   background: rgba(200,16,46,0.07);
 }
-.lang-btn .lang-flag { font-size: 1.05rem; line-height: 1; }
 .lang-btn .lang-code { min-width: 18px; }
 .lang-chevron {
   stroke: var(--red);
@@ -381,7 +380,14 @@ body.world-active .scroll-invite-chevron { stroke: #333; }
 }
 .lang-item:hover { background: rgba(200,16,46,0.07); color: var(--red); }
 .lang-item.active { color: var(--red); }
-.lang-item .lang-flag { font-size: 1.05rem; }
+.lang-flag {
+  width: 20px;
+  height: 14px;
+  border-radius: 2px;
+  object-fit: cover;
+  display: block;
+  flex-shrink: 0;
+}
 
 /* Contenuto hero */
 .hero-content {
@@ -4545,9 +4551,16 @@ strong { font-weight: 600; color: var(--text); }
     padding: 56px 24px 100px;
   }
 
-  /* Hero: logo SVG + sottotitolo + CTA scendono più in basso,
-     la tagline "Branding an Island" rimane nella posizione attuale */
-  .hero-title {
-    margin-top: 80px;
+  /* Hero: tagline "Branding an Island" sale in cima al viewport
+     (position:fixed dentro #hero che è già fixed → stesso effetto di absolute
+     rispetto alla viewport), il resto si centra autonomamente */
+  .hero-tagline {
+    position: fixed;
+    top: 52px;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    margin: 0;
+    z-index: 101;
   }
 }
