@@ -702,5 +702,424 @@
   <script src="js/sardinai.js"></script>
   <script src="js/tools.js"></script>
 
+  <!-- ═══════════════════════════════════════════════════════
+       HERO CONTROL PANEL — TEMPORANEO, RIMUOVERE DOPO L'USO
+  ══════════════════════════════════════════════════════════ -->
+  <style>
+  #hero-cp {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    width: 278px;
+    max-height: calc(100vh - 32px);
+    overflow-y: auto;
+    background: #fff;
+    border: 2px solid #C8102E;
+    border-radius: 12px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.22);
+    z-index: 99999;
+    font: 11px/1.4 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+  }
+  #hero-cp-head {
+    background: #C8102E;
+    color: #fff;
+    padding: 10px 12px;
+    border-radius: 10px 10px 0 0;
+    cursor: move;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 10.5px;
+    user-select: none;
+    position: sticky;
+    top: 0;
+  }
+  #hero-cp-head button {
+    background: rgba(255,255,255,0.22);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 2px 9px;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  #hero-cp-head button:hover { background: rgba(255,255,255,0.42); }
+  #hero-cp-body { padding: 10px 12px; }
+  .cp-sec {
+    border: 1px solid #ebebeb;
+    border-radius: 7px;
+    margin-bottom: 7px;
+    overflow: hidden;
+  }
+  .cp-sec > summary {
+    padding: 7px 10px;
+    background: #f7f7f7;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #666;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .cp-sec > summary::-webkit-details-marker { display: none; }
+  .cp-sec > summary::before { content: '▶'; font-size: 7px; transition: transform 0.15s; }
+  .cp-sec[open] > summary::before { transform: rotate(90deg); }
+  .cp-sec[open] > summary { color: #C8102E; background: #fff5f5; }
+  .cp-inner { padding: 8px 10px; }
+  .cp-r { display: flex; align-items: center; gap: 6px; margin-bottom: 6px; }
+  .cp-r label { flex: 1; color: #666; font-size: 10px; white-space: nowrap; }
+  .cp-r input[type=range] { flex: 1.6; accent-color: #C8102E; }
+  .cp-r input[type=color] { width: 34px; height: 22px; border: 1px solid #ddd; border-radius: 4px; cursor: pointer; padding: 1px 2px; }
+  .cp-r input[type=text] { flex: 1.6; border: 1px solid #ddd; border-radius: 4px; padding: 3px 6px; font-size: 10px; }
+  .cp-r textarea { flex: 1.6; border: 1px solid #ddd; border-radius: 4px; padding: 4px 6px; font-size: 10px; resize: vertical; min-height: 44px; }
+  .cp-r select { flex: 1.6; border: 1px solid #ddd; border-radius: 4px; padding: 3px 4px; font-size: 10px; }
+  .cp-v { min-width: 36px; text-align: right; color: #C8102E; font-weight: 700; font-size: 10px; }
+  .cp-ck { display: flex; align-items: center; gap: 7px; margin-bottom: 6px; font-size: 10px; color: #666; cursor: pointer; }
+  #cp-export-btn {
+    width: 100%;
+    margin-top: 6px;
+    padding: 9px;
+    background: #C8102E;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
+  #cp-export-btn:hover { background: #a50f26; }
+  #cp-export-out {
+    display: none;
+    margin-top: 8px;
+    background: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 9px;
+    line-height: 1.55;
+    white-space: pre-wrap;
+    word-break: break-all;
+    color: #333;
+  }
+  </style>
+
+  <div id="hero-cp">
+    <div id="hero-cp-head">
+      <span>HERO CONTROL PANEL</span>
+      <div style="display:flex;gap:5px">
+        <button id="cp-min" title="Minimizza">—</button>
+        <button onclick="document.getElementById('hero-cp').remove()" title="Chiudi">✕</button>
+      </div>
+    </div>
+    <div id="hero-cp-body">
+
+      <details class="cp-sec" open>
+        <summary>Sfondo</summary>
+        <div class="cp-inner">
+          <div class="cp-r"><label>Colore sfondo</label><input type="color" id="cp-bg" value="#ffffff"></div>
+        </div>
+      </details>
+
+      <details class="cp-sec">
+        <summary>Lang Selector (IT)</summary>
+        <div class="cp-inner">
+          <div class="cp-r"><label>Colore bordo</label><input type="color" id="cp-lb-c" value="#C8102E"></div>
+          <div class="cp-r"><label>Spessore bordo</label><input type="range" id="cp-lb-w" min="0" max="5" step="0.5" value="1.5"><span class="cp-v" id="v-lb-w">1.5px</span></div>
+          <div class="cp-r"><label>Colore testo</label><input type="color" id="cp-lt-c" value="#C8102E"></div>
+          <div class="cp-r"><label>Sfondo</label><input type="color" id="cp-lb-bg" value="#ffffff"></div>
+          <div class="cp-r"><label>Border radius</label><input type="range" id="cp-lb-r" min="0" max="30" value="8"><span class="cp-v" id="v-lb-r">8px</span></div>
+          <div class="cp-r"><label>Padding H</label><input type="range" id="cp-lb-ph" min="6" max="30" value="14"><span class="cp-v" id="v-lb-ph">14px</span></div>
+        </div>
+      </details>
+
+      <details class="cp-sec">
+        <summary>Tagline (Branding an Island)</summary>
+        <div class="cp-inner">
+          <label class="cp-ck"><input type="checkbox" id="cp-tg-on" checked> Visibile</label>
+          <div class="cp-r"><label>Testo</label><input type="text" id="cp-tg-txt" value="Branding an Island"></div>
+          <div class="cp-r"><label>Colore</label><input type="color" id="cp-tg-c" value="#C8102E"></div>
+          <div class="cp-r"><label>Font size</label><input type="range" id="cp-tg-fs" min="8" max="22" value="11"><span class="cp-v" id="v-tg-fs">11px</span></div>
+          <div class="cp-r"><label>Letter spacing</label><input type="range" id="cp-tg-ls" min="0" max="14" value="5"><span class="cp-v" id="v-tg-ls">5px</span></div>
+          <div class="cp-r"><label>Margin bottom</label><input type="range" id="cp-tg-mb" min="0" max="60" value="20"><span class="cp-v" id="v-tg-mb">20px</span></div>
+          <div class="cp-r"><label>Linee larghezza</label><input type="range" id="cp-tg-lw" min="0" max="60" value="24"><span class="cp-v" id="v-tg-lw">24px</span></div>
+        </div>
+      </details>
+
+      <details class="cp-sec">
+        <summary>Logo BrandSardinia (SVG)</summary>
+        <div class="cp-inner">
+          <div class="cp-r"><label>Larghezza max</label><input type="range" id="cp-lg-w" min="160" max="780" value="450"><span class="cp-v" id="v-lg-w">450px</span></div>
+          <div class="cp-r"><label>Margin bottom</label><input type="range" id="cp-lg-mb" min="0" max="60" value="20"><span class="cp-v" id="v-lg-mb">20px</span></div>
+        </div>
+      </details>
+
+      <details class="cp-sec">
+        <summary>Sottotitolo</summary>
+        <div class="cp-inner">
+          <div class="cp-r"><label>Testo</label><textarea id="cp-st-txt">La piattaforma intelligente per scoprire, organizzare e vivere la Sardegna</textarea></div>
+          <div class="cp-r"><label>Colore</label><input type="color" id="cp-st-c" value="#444444"></div>
+          <div class="cp-r"><label>Font size</label><input type="range" id="cp-st-fs" min="12" max="28" value="18"><span class="cp-v" id="v-st-fs">18px</span></div>
+          <div class="cp-r"><label>Font weight</label><input type="range" id="cp-st-fw" min="300" max="700" step="100" value="300"><span class="cp-v" id="v-st-fw">300</span></div>
+          <div class="cp-r"><label>Max width</label><input type="range" id="cp-st-mw" min="240" max="780" value="560"><span class="cp-v" id="v-st-mw">560px</span></div>
+          <div class="cp-r"><label>Margin bottom</label><input type="range" id="cp-st-mb" min="0" max="80" value="44"><span class="cp-v" id="v-st-mb">44px</span></div>
+          <div class="cp-r"><label>Line height</label><input type="range" id="cp-st-lh" min="10" max="26" step="1" value="16"><span class="cp-v" id="v-st-lh">1.6</span></div>
+        </div>
+      </details>
+
+      <details class="cp-sec">
+        <summary>Bottone CTA</summary>
+        <div class="cp-inner">
+          <div class="cp-r"><label>Testo</label><input type="text" id="cp-bt-txt" value="Esplora la Sardegna"></div>
+          <div class="cp-r"><label>Sfondo</label><input type="color" id="cp-bt-bg" value="#C8102E"></div>
+          <div class="cp-r"><label>Colore testo</label><input type="color" id="cp-bt-c" value="#ffffff"></div>
+          <div class="cp-r"><label>Colore bordo</label><input type="color" id="cp-bt-bc" value="#C8102E"></div>
+          <div class="cp-r"><label>Border radius</label><input type="range" id="cp-bt-br" min="0" max="60" value="50"><span class="cp-v" id="v-bt-br">50px</span></div>
+          <div class="cp-r"><label>Padding V</label><input type="range" id="cp-bt-pv" min="6" max="36" value="18"><span class="cp-v" id="v-bt-pv">18px</span></div>
+          <div class="cp-r"><label>Padding H</label><input type="range" id="cp-bt-ph" min="16" max="80" value="48"><span class="cp-v" id="v-bt-ph">48px</span></div>
+          <div class="cp-r"><label>Font size</label><input type="range" id="cp-bt-fs" min="11" max="22" value="16"><span class="cp-v" id="v-bt-fs">16px</span></div>
+          <div class="cp-r"><label>Letter spacing</label><input type="range" id="cp-bt-ls" min="0" max="5" step="0.5" value="1"><span class="cp-v" id="v-bt-ls">1px</span></div>
+        </div>
+      </details>
+
+      <details class="cp-sec">
+        <summary>Layout</summary>
+        <div class="cp-inner">
+          <div class="cp-r">
+            <label>Text align</label>
+            <select id="cp-ly-ta">
+              <option value="center" selected>Center</option>
+              <option value="left">Left</option>
+              <option value="right">Right</option>
+            </select>
+          </div>
+          <div class="cp-r"><label>Hero padding</label><input type="range" id="cp-ly-p" min="0" max="80" value="20"><span class="cp-v" id="v-ly-p">20px</span></div>
+        </div>
+      </details>
+
+      <button id="cp-export-btn">Copia valori →</button>
+      <div id="cp-export-out"></div>
+
+    </div>
+  </div>
+
+  <script>
+  (function() {
+    const $ = id => document.getElementById(id);
+    const panel = $('hero-cp');
+    const cpBody = $('hero-cp-body');
+
+    // Drag
+    let dragging = false, ox = 0, oy = 0;
+    $('hero-cp-head').addEventListener('mousedown', e => {
+      if (e.target.tagName === 'BUTTON') return;
+      dragging = true;
+      ox = e.clientX - panel.offsetLeft;
+      oy = e.clientY - panel.offsetTop;
+    });
+    document.addEventListener('mousemove', e => {
+      if (!dragging) return;
+      panel.style.left = Math.max(0, e.clientX - ox) + 'px';
+      panel.style.top  = Math.max(0, e.clientY - oy) + 'px';
+    });
+    document.addEventListener('mouseup', () => dragging = false);
+    $('cp-min').addEventListener('click', () => {
+      cpBody.style.display = cpBody.style.display === 'none' ? '' : 'none';
+    });
+
+    // Dynamic style sheet for tagline pseudo-elements
+    const dynStyle = document.createElement('style');
+    document.head.appendChild(dynStyle);
+
+    function apply() {
+      const hero    = document.getElementById('hero');
+      if (!hero) return;
+      const tagline = hero.querySelector('.hero-tagline');
+      const h1      = hero.querySelector('.hero-title');
+      const logo    = hero.querySelector('.hero-title-svg');
+      const sub     = hero.querySelector('.hero-subtitle');
+      const btn     = document.getElementById('btn-start');
+      const langSel = hero.querySelector('.lang-selector select');
+      const content = hero.querySelector('.hero-content');
+
+      // Sfondo
+      hero.style.backgroundColor = $('cp-bg').value;
+
+      // Lang selector
+      if (langSel) {
+        langSel.style.border       = `${$('cp-lb-w').value}px solid ${$('cp-lb-c').value}`;
+        langSel.style.color        = $('cp-lt-c').value;
+        langSel.style.background   = $('cp-lb-bg').value;
+        langSel.style.borderRadius = $('cp-lb-r').value + 'px';
+        langSel.style.paddingLeft  = $('cp-lb-ph').value + 'px';
+        langSel.style.paddingRight = (parseInt($('cp-lb-ph').value) + 18) + 'px';
+      }
+
+      // Tagline
+      if (tagline) {
+        tagline.style.display       = $('cp-tg-on').checked ? '' : 'none';
+        tagline.textContent         = $('cp-tg-txt').value;
+        tagline.style.color         = $('cp-tg-c').value;
+        tagline.style.fontSize      = $('cp-tg-fs').value + 'px';
+        tagline.style.letterSpacing = $('cp-tg-ls').value + 'px';
+        tagline.style.marginBottom  = $('cp-tg-mb').value + 'px';
+        dynStyle.textContent = `.hero-tagline::before,.hero-tagline::after{width:${$('cp-tg-lw').value}px!important;background:${$('cp-tg-c').value}!important}`;
+      }
+
+      // Logo
+      if (logo)  { logo.style.maxWidth = $('cp-lg-w').value + 'px'; logo.style.width = '100%'; }
+      if (h1)    h1.style.marginBottom  = $('cp-lg-mb').value + 'px';
+
+      // Sottotitolo
+      if (sub) {
+        sub.textContent        = $('cp-st-txt').value;
+        sub.style.color        = $('cp-st-c').value;
+        sub.style.fontSize     = $('cp-st-fs').value + 'px';
+        sub.style.fontWeight   = $('cp-st-fw').value;
+        sub.style.maxWidth     = $('cp-st-mw').value + 'px';
+        sub.style.marginBottom = $('cp-st-mb').value + 'px';
+        sub.style.lineHeight   = (parseInt($('cp-st-lh').value) / 10).toFixed(1);
+      }
+
+      // CTA
+      if (btn) {
+        const span = btn.querySelector('span');
+        if (span) span.textContent  = $('cp-bt-txt').value;
+        btn.style.background        = $('cp-bt-bg').value;
+        btn.style.color             = $('cp-bt-c').value;
+        btn.style.borderColor       = $('cp-bt-bc').value;
+        btn.style.borderRadius      = $('cp-bt-br').value + 'px';
+        btn.style.padding           = `${$('cp-bt-pv').value}px ${$('cp-bt-ph').value}px`;
+        btn.style.fontSize          = $('cp-bt-fs').value + 'px';
+        btn.style.letterSpacing     = $('cp-bt-ls').value + 'px';
+      }
+
+      // Layout
+      if (content) content.style.textAlign = $('cp-ly-ta').value;
+      hero.style.padding = $('cp-ly-p').value + 'px';
+    }
+
+    // Wire sliders
+    [
+      ['cp-lb-w','v-lb-w','px'], ['cp-lb-r','v-lb-r','px'], ['cp-lb-ph','v-lb-ph','px'],
+      ['cp-tg-fs','v-tg-fs','px'], ['cp-tg-ls','v-tg-ls','px'], ['cp-tg-mb','v-tg-mb','px'], ['cp-tg-lw','v-tg-lw','px'],
+      ['cp-lg-w','v-lg-w','px'],   ['cp-lg-mb','v-lg-mb','px'],
+      ['cp-st-fs','v-st-fs','px'], ['cp-st-fw','v-st-fw',''],  ['cp-st-mw','v-st-mw','px'],
+      ['cp-st-mb','v-st-mb','px'],
+      ['cp-bt-br','v-bt-br','px'], ['cp-bt-pv','v-bt-pv','px'], ['cp-bt-ph','v-bt-ph','px'],
+      ['cp-bt-fs','v-bt-fs','px'], ['cp-bt-ls','v-bt-ls','px'],
+      ['cp-ly-p','v-ly-p','px']
+    ].forEach(([id, vid, suf]) => {
+      const inp = $(id), out = $(vid);
+      if (!inp) return;
+      inp.addEventListener('input', () => {
+        if (out) out.textContent = inp.value + suf;
+        apply();
+      });
+    });
+
+    // Line height (×0.1)
+    $('cp-st-lh').addEventListener('input', function() {
+      $('v-st-lh').textContent = (parseInt(this.value)/10).toFixed(1);
+      apply();
+    });
+
+    // Colors
+    ['cp-bg','cp-lb-c','cp-lt-c','cp-lb-bg','cp-tg-c','cp-st-c','cp-bt-bg','cp-bt-c','cp-bt-bc']
+      .forEach(id => { const i = $(id); if (i) i.addEventListener('input', apply); });
+
+    // Checkbox
+    $('cp-tg-on').addEventListener('change', apply);
+
+    // Text inputs
+    ['cp-tg-txt','cp-bt-txt','cp-st-txt']
+      .forEach(id => { const i = $(id); if (i) i.addEventListener('input', apply); });
+
+    // Select
+    $('cp-ly-ta').addEventListener('change', apply);
+
+    // Export
+    $('cp-export-btn').addEventListener('click', () => {
+      const lh  = (parseInt($('cp-st-lh').value)/10).toFixed(1);
+      const out = [
+        'HERO CONTROL PANEL — VALORI',
+        '════════════════════════════════',
+        '',
+        'SFONDO',
+        `  background: ${$('cp-bg').value}`,
+        '',
+        'LANG SELECTOR',
+        `  border: ${$('cp-lb-w').value}px solid ${$('cp-lb-c').value}`,
+        `  color: ${$('cp-lt-c').value}`,
+        `  background: ${$('cp-lb-bg').value}`,
+        `  border-radius: ${$('cp-lb-r').value}px`,
+        `  padding-H: ${$('cp-lb-ph').value}px`,
+        '',
+        'TAGLINE',
+        `  visibile: ${$('cp-tg-on').checked ? 'si' : 'no'}`,
+        `  testo: "${$('cp-tg-txt').value}"`,
+        `  color: ${$('cp-tg-c').value}`,
+        `  font-size: ${$('cp-tg-fs').value}px`,
+        `  letter-spacing: ${$('cp-tg-ls').value}px`,
+        `  margin-bottom: ${$('cp-tg-mb').value}px`,
+        `  line-width: ${$('cp-tg-lw').value}px`,
+        '',
+        'LOGO SVG',
+        `  max-width: ${$('cp-lg-w').value}px`,
+        `  h1 margin-bottom: ${$('cp-lg-mb').value}px`,
+        '',
+        'SOTTOTITOLO',
+        `  testo: "${$('cp-st-txt').value}"`,
+        `  color: ${$('cp-st-c').value}`,
+        `  font-size: ${$('cp-st-fs').value}px`,
+        `  font-weight: ${$('cp-st-fw').value}`,
+        `  max-width: ${$('cp-st-mw').value}px`,
+        `  margin-bottom: ${$('cp-st-mb').value}px`,
+        `  line-height: ${lh}`,
+        '',
+        'BOTTONE CTA',
+        `  testo: "${$('cp-bt-txt').value}"`,
+        `  background: ${$('cp-bt-bg').value}`,
+        `  color: ${$('cp-bt-c').value}`,
+        `  border-color: ${$('cp-bt-bc').value}`,
+        `  border-radius: ${$('cp-bt-br').value}px`,
+        `  padding: ${$('cp-bt-pv').value}px ${$('cp-bt-ph').value}px`,
+        `  font-size: ${$('cp-bt-fs').value}px`,
+        `  letter-spacing: ${$('cp-bt-ls').value}px`,
+        '',
+        'LAYOUT',
+        `  text-align: ${$('cp-ly-ta').value}`,
+        `  hero padding: ${$('cp-ly-p').value}px`
+      ].join('\n');
+
+      const outDiv = $('cp-export-out');
+      outDiv.textContent = out;
+      outDiv.style.display = 'block';
+      navigator.clipboard.writeText(out).then(() => {
+        const btn = $('cp-export-btn');
+        btn.textContent = 'Copiato negli appunti!';
+        setTimeout(() => { btn.textContent = 'Copia valori →'; }, 2000);
+      }).catch(() => {});
+    });
+
+    // Re-apply whenever hero becomes visible
+    const heroEl = document.getElementById('hero');
+    if (heroEl) {
+      new MutationObserver(() => {
+        if (heroEl.style.display && heroEl.style.display !== 'none') apply();
+      }).observe(heroEl, { attributes: true, attributeFilter: ['style'] });
+    }
+  })();
+  </script>
+  <!-- ════════════════════════════════════════════════════════ -->
+
 </body>
 </html>
