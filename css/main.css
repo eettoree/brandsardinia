@@ -4551,9 +4551,7 @@ strong { font-weight: 600; color: var(--text); }
     padding: 56px 24px 100px;
   }
 
-  /* Hero: tagline "Branding an Island" sale in cima al viewport
-     (position:fixed dentro #hero che è già fixed → stesso effetto di absolute
-     rispetto alla viewport), il resto si centra autonomamente */
+  /* Hero: tagline "Branding an Island" sale in cima al viewport */
   .hero-tagline {
     position: fixed;
     top: 52px;
@@ -4562,5 +4560,25 @@ strong { font-weight: 600; color: var(--text); }
     justify-content: center;
     margin: 0;
     z-index: 101;
+  }
+
+  /* Hero: rimuovi padding asimmetrico — subtitle+logo si centrano autonomamente */
+  #hero {
+    padding: 0 20px;
+  }
+
+  /* Sottotitolo ora sopra il logo SVG — meno spazio in basso */
+  #hero .hero-subtitle {
+    margin-bottom: 16px;
+  }
+
+  /* Bottone CTA ancorato in basso, sotto la sagoma della Sardegna (62vh centrata → bottom ~19vh) */
+  #hero #btn-start {
+    position: absolute;
+    bottom: 72px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: max-content;
   }
 }
