@@ -738,7 +738,7 @@ body.world-active .scroll-invite-chevron { stroke: #333; }
   font-family: 'Bebas Neue', sans-serif;
   font-size: 2rem;
   font-weight: 400;
-  color: #F93448;
+  color: #F93448 !important;
   -webkit-text-stroke: 0.1px rgba(0, 0, 0, 0.8);
   opacity: 1;
   letter-spacing: 1px;
