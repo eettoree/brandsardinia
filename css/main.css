@@ -740,7 +740,7 @@ body.world-active .scroll-invite-chevron { stroke: #333; }
   font-weight: 400;
   color: #F93448;
   -webkit-text-stroke: 0.1px rgba(0, 0, 0, 0.8);
-  opacity: 0.8;
+  opacity: 1;
   letter-spacing: 1px;
   line-height: 1;
   margin-bottom: 10px;
