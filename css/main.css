@@ -730,7 +730,19 @@ body.world-active .scroll-invite-chevron { stroke: #333; }
   width: 110px;
   height: auto;
   display: block;
-  /* SVG è rosso — lo rendiamo bianco su dark o lasciamo rosso se già corretto */
+}
+
+/* Titoli Mappa e Tools — font display tipo SardinAI SVG */
+.card-title-display {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--red);
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.8);
+  opacity: 0.8;
+  letter-spacing: 1px;
+  line-height: 1;
+  margin-bottom: 10px;
 }
 
 .card-desc {
