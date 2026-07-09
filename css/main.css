@@ -320,12 +320,13 @@ body.world-active .scroll-invite-chevron { stroke: #333; }
 }
 
 .lang-selector select {
-  background: rgba(0,0,0,0.05);
-  border: 1px solid rgba(0,0,0,0.18);
-  color: #222;
+  background: rgba(255,255,255,0.9);
+  border: 1.5px solid var(--red);
+  color: var(--red);
   padding: 8px 32px 8px 14px;
   border-radius: 8px;
   font-size: 0.82rem;
+  font-weight: 600;
   letter-spacing: 1px;
   outline: none;
   cursor: pointer;
@@ -333,14 +334,13 @@ body.world-active .scroll-invite-chevron { stroke: #333; }
   -webkit-backdrop-filter: blur(8px);
   appearance: none;
   -webkit-appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23222' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23C8102E' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 10px center;
   transition: all var(--transition);
 }
 .lang-selector select:hover, .lang-selector select:focus {
-  border-color: var(--red);
-  background-color: rgba(0,0,0,0.08);
+  background-color: rgba(200,16,46,0.06);
 }
 .lang-selector select option { background: #fff; color: #111; }
 
@@ -373,6 +373,26 @@ body.world-active .scroll-invite-chevron { stroke: #333; }
   height: 1px;
   background: var(--red);
   opacity: 0.6;
+}
+
+.hero-tagline {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.72rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--red);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.hero-tagline::before, .hero-tagline::after {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: var(--red);
+  opacity: 0.7;
 }
 
 .hero-title {
@@ -1998,9 +2018,11 @@ body.world-active .scroll-invite-chevron { stroke: #333; }
 .cal-event-chip {
   border-radius: 4px;
   padding: 3px 5px;
-  cursor: default;
+  cursor: pointer;
   overflow: hidden;
+  transition: opacity 0.15s;
 }
+.cal-event-chip:hover { opacity: 0.78; }
 
 .cal-chip-cat {
   display: block;
@@ -2032,6 +2054,63 @@ body.world-active .scroll-invite-chevron { stroke: #333; }
   .cal-chip-cat { display: none; }
   .cal-chip-name { font-size: 0.6rem; }
   .cal-month-title { font-size: 0.95rem; }
+}
+
+/* ── CALENDAR FILTERS ROW ───────────────────────────────────── */
+.cal-filters-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.cal-filters-row .glass-select {
+  flex: 1;
+  min-width: 140px;
+}
+
+/* ── EVENT DETAIL MODAL ─────────────────────────────────────── */
+.event-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 20px;
+}
+.event-modal-box {
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+  padding: 28px 28px 24px;
+  border-radius: 16px;
+}
+.event-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--text-muted, #888);
+  transition: color 0.15s;
+}
+.event-modal-close:hover { color: var(--red); }
+
+/* ── EVENTS MONTH GROUPS (list default view) ────────────────── */
+.events-month-group { margin-bottom: 36px; }
+.events-month-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--red);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(200,16,46,0.2);
 }
 
 /* ── FILTER PILLS ────────────────────────────────────────────── */

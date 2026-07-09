@@ -520,44 +520,102 @@ function renderCalendar(container) {
     sport: '#32CD32', tradizione: '#B040FF', concerto: '#FFD700',
     cinema: '#FF6B6B', mostre: '#4ECDC4'
   };
+  const CAT_LABELS = {
+    sagra: 'Sagre', festival: 'Festival', cultura: 'Cultura',
+    sport: 'Sport', tradizione: 'Tradizioni', concerto: 'Concerti',
+    cinema: 'Cinema', mostre: 'Mostre'
+  };
   const DAY_NAMES = ['Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab', 'Dom'];
 
-  let currentView   = 'list';
-  let currentFilter = 0;
-  let calYear       = 2026;
-  let calMonth      = new Date().getMonth() + 1;
+  let currentView    = 'list';
+  let currentFilters = { month: 0, province: 'ALL', category: 'ALL' };
+  let calYear        = 2026;
+  let calMonth       = new Date().getMonth() + 1;
 
-  function buildListHTML(filter) {
-    const events = filter === 0 ? EVENTS_DATA : EVENTS_DATA.filter(e => e.month === filter);
+  // Derive province code from city string
+  function getProvince(city) {
+    const m = city.match(/\(([A-Z]{2})\)/);
+    if (m) {
+      const c = m[1];
+      if (c === 'CA') return 'CA';
+      if (c === 'NU') return 'NU';
+      if (c === 'OR') return 'OR';
+      if (c === 'SS') return 'SS';
+      if (c === 'OT') return 'OT';
+      if (['SU', 'VS', 'CI'].includes(c)) return 'SU';
+    }
+    if (city === 'Cagliari') return 'CA';
+    if (city === 'Nuoro') return 'NU';
+    if (city.startsWith('Oristano')) return 'OR';
+    if (city === 'Sassari' || city === 'Alghero') return 'SS';
+    if (city.includes('Berchidda')) return 'SS';
+    if (city.includes('Barbagia')) return 'NU';
+    if (city.includes('Olbia')) return 'OT';
+    return 'ALL'; // Tutta la Sardegna
+  }
+
+  // Filter + always sort chronologically
+  function filterEvents(filters) {
+    return EVENTS_DATA
+      .filter(e => {
+        if (filters.month !== 0 && e.month !== filters.month) return false;
+        if (filters.province !== 'ALL') {
+          const ep = getProvince(e.city);
+          if (ep !== 'ALL' && ep !== filters.province) return false;
+        }
+        if (filters.category !== 'ALL' && e.category !== filters.category) return false;
+        return true;
+      })
+      .sort((a, b) => new Date(a.date) - new Date(b.date));
+  }
+
+  function buildEventCardHTML(ev) {
+    const date     = new Date(ev.date);
+    const catColor = CAT_COLORS[ev.category] || '#fff';
     return `
-      <div class="events-grid">
-        ${events.map(ev => {
-          const date     = new Date(ev.date);
-          const catColor = CAT_COLORS[ev.category] || '#fff';
-          return `
-          <div class="event-card glass-card">
-            <div class="event-date-box" style="border-color:${catColor}">
-              <span class="event-day">${date.getDate()}</span>
-              <span class="event-month">${MONTH_NAMES[date.getMonth() + 1].substring(0,3).toUpperCase()}</span>
-            </div>
-            <div class="event-body">
-              <div class="event-category" style="color:${catColor}">${ev.category.toUpperCase()}</div>
-              <h3 class="event-name">${ev.name}</h3>
-              <div class="event-location">📍 ${ev.city}</div>
-              <p class="event-desc">${ev.description}</p>
-              ${ev.link ? `<a href="${ev.link}" target="_blank" class="event-link">Scopri di più →</a>` : ''}
-            </div>
-          </div>`;
-        }).join('')}
-        ${events.length === 0 ? '<div class="no-events">Nessun evento in questo mese.</div>' : ''}
+      <div class="event-card glass-card">
+        <div class="event-date-box" style="border-color:${catColor}">
+          <span class="event-day">${date.getDate()}</span>
+          <span class="event-month">${MONTH_NAMES[date.getMonth() + 1].substring(0,3).toUpperCase()}</span>
+        </div>
+        <div class="event-body">
+          <div class="event-category" style="color:${catColor}">${(CAT_LABELS[ev.category] || ev.category).toUpperCase()}</div>
+          <h3 class="event-name">${ev.name}</h3>
+          <div class="event-location">📍 ${ev.city}</div>
+          <p class="event-desc">${ev.description}</p>
+          ${ev.link ? `<a href="${ev.link}" target="_blank" class="event-link">Scopri di più →</a>` : ''}
+        </div>
       </div>`;
+  }
+
+  function buildListHTML(filters) {
+    const events = filterEvents(filters);
+    if (events.length === 0) {
+      return '<div class="events-grid"><div class="no-events" style="grid-column:1/-1">Nessun evento trovato con questi filtri.</div></div>';
+    }
+    // Group by month when no month filter active
+    if (filters.month === 0) {
+      const grouped = {};
+      events.forEach(ev => {
+        if (!grouped[ev.month]) grouped[ev.month] = [];
+        grouped[ev.month].push(ev);
+      });
+      const months = Object.keys(grouped).map(Number).sort((a, b) => a - b);
+      return months.map(m => `
+        <div class="events-month-group">
+          <h4 class="events-month-label">${MONTH_NAMES[m]}</h4>
+          <div class="events-grid">${grouped[m].map(ev => buildEventCardHTML(ev)).join('')}</div>
+        </div>`).join('');
+    }
+    return `<div class="events-grid">${events.map(ev => buildEventCardHTML(ev)).join('')}</div>`;
   }
 
   function buildCalendarHTML(year, month) {
     const monthEvents = EVENTS_DATA.filter(e => {
       const d = new Date(e.date);
       return d.getFullYear() === year && d.getMonth() + 1 === month;
-    });
+    }).sort((a, b) => new Date(a.date) - new Date(b.date));
+
     const dayMap = {};
     monthEvents.forEach(ev => {
       const d = new Date(ev.date).getDate();
@@ -578,7 +636,7 @@ function renderCalendar(container) {
           <div class="cal-day-num">${d}</div>
           ${evs.map(ev => {
             const color = CAT_COLORS[ev.category] || '#fff';
-            return `<div class="cal-event-chip" style="border-left:3px solid ${color};background:${color}1a" title="${ev.name} — ${ev.city}">
+            return `<div class="cal-event-chip" data-ev-id="${ev.id}" style="border-left:3px solid ${color};background:${color}1a" title="${ev.name} — ${ev.city}">
               <span class="cal-chip-cat" style="color:${color}">${ev.category}</span>
               <span class="cal-chip-name">${ev.name}</span>
             </div>`;
@@ -601,16 +659,67 @@ function renderCalendar(container) {
       </div>`;
   }
 
-  function buildMonthOptions(filter) {
+  function buildMonthOptions(v) {
     return MONTH_NAMES.map((m, i) => i === 0
-      ? `<option value="0">Tutti i mesi</option>`
-      : `<option value="${i}" ${filter === i ? 'selected' : ''}>${m}</option>`
+      ? `<option value="0" ${v === 0 ? 'selected' : ''}>Tutti i mesi</option>`
+      : `<option value="${i}" ${v === i ? 'selected' : ''}>${m}</option>`
     ).join('');
+  }
+
+  function buildProvinceOptions(v) {
+    const opts = [
+      ['ALL', 'Tutte le province'], ['CA', 'Cagliari'], ['NU', 'Nuoro'],
+      ['OR', 'Oristano'], ['SS', 'Sassari'], ['OT', 'Olbia-Tempio'], ['SU', 'Sud Sardegna']
+    ];
+    return opts.map(([val, label]) => `<option value="${val}" ${v === val ? 'selected' : ''}>${label}</option>`).join('');
+  }
+
+  function buildCategoryOptions(v) {
+    const opts = [
+      ['ALL', 'Tutte le categorie'], ['tradizione', 'Tradizioni'], ['sagra', 'Sagre'],
+      ['festival', 'Festival'], ['cultura', 'Cultura'], ['sport', 'Sport'],
+      ['concerto', 'Concerti'], ['cinema', 'Cinema'], ['mostre', 'Mostre']
+    ];
+    return opts.map(([val, label]) => `<option value="${val}" ${v === val ? 'selected' : ''}>${label}</option>`).join('');
+  }
+
+  function openEventModal(ev) {
+    const catColor = CAT_COLORS[ev.category] || '#ccc';
+    const date     = new Date(ev.date);
+    const overlay  = container.querySelector('.event-modal-overlay');
+    container.querySelector('.event-modal-content').innerHTML = `
+      <div style="display:flex;align-items:flex-start;gap:16px;margin-bottom:16px">
+        <div class="event-date-box" style="border-color:${catColor};flex-shrink:0">
+          <span class="event-day">${date.getDate()}</span>
+          <span class="event-month">${MONTH_NAMES[date.getMonth() + 1].substring(0,3).toUpperCase()}</span>
+        </div>
+        <div>
+          <div class="event-category" style="color:${catColor};margin-bottom:4px">${(CAT_LABELS[ev.category] || ev.category).toUpperCase()}</div>
+          <h3 class="event-name" style="margin:0 0 4px">${ev.name}</h3>
+          <div class="event-location">📍 ${ev.city}</div>
+        </div>
+      </div>
+      <p class="event-desc" style="margin-bottom:16px">${ev.description}</p>
+      ${ev.link ? `<a href="${ev.link}" target="_blank" class="event-link">Scopri di più →</a>` : ''}
+    `;
+    overlay.style.display = 'flex';
+    if (typeof gsap !== 'undefined') {
+      gsap.fromTo(overlay.querySelector('.event-modal-box'),
+        { opacity: 0, y: 20, scale: 0.96 },
+        { opacity: 1, y: 0, scale: 1, duration: 0.22, ease: 'power2.out' }
+      );
+    }
   }
 
   function render() {
     const isCal = currentView === 'calendar';
     container.innerHTML = `
+      <div class="event-modal-overlay" style="display:none">
+        <div class="event-modal-box glass-card">
+          <button class="event-modal-close">✕</button>
+          <div class="event-modal-content"></div>
+        </div>
+      </div>
       <div class="tools-section-header">
         <h2>Calendario Eventi Sardegna</h2>
         <div class="tools-filter">
@@ -619,49 +728,62 @@ function renderCalendar(container) {
             <button class="view-toggle-btn ${!isCal ? 'active' : ''}" data-view="list">Elenco</button>
             <button class="view-toggle-btn ${isCal ? 'active' : ''}" data-view="calendar">Calendario</button>
           </div>
-          ${!isCal ? `<select id="month-filter" class="glass-select">${buildMonthOptions(currentFilter)}</select>` : ''}
         </div>
       </div>
-      ${isCal ? buildCalendarHTML(calYear, calMonth) : buildListHTML(currentFilter)}
+      ${!isCal ? `
+        <div class="cal-filters-row">
+          <select id="month-filter" class="glass-select">${buildMonthOptions(currentFilters.month)}</select>
+          <select id="province-filter" class="glass-select">${buildProvinceOptions(currentFilters.province)}</select>
+          <select id="category-filter" class="glass-select">${buildCategoryOptions(currentFilters.category)}</select>
+        </div>` : ''}
+      ${isCal ? buildCalendarHTML(calYear, calMonth) : buildListHTML(currentFilters)}
     `;
 
-    // Toggle listener
+    // Modal close
+    const overlay = container.querySelector('.event-modal-overlay');
+    container.querySelector('.event-modal-close').addEventListener('click', () => { overlay.style.display = 'none'; });
+    overlay.addEventListener('click', e => { if (e.target === overlay) overlay.style.display = 'none'; });
+
+    // View toggle
     container.querySelectorAll('.view-toggle-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         currentView = btn.dataset.view;
-        if (currentView === 'calendar' && currentFilter > 0) calMonth = currentFilter;
+        if (currentView === 'calendar' && currentFilters.month > 0) calMonth = currentFilters.month;
         render();
-        gsap.fromTo('.cal-grid-container, .events-grid',
-          { opacity: 0, y: 15 },
-          { opacity: 1, y: 0, duration: 0.3, ease: 'power2.out' }
-        );
+        const target = container.querySelector('.cal-grid-container, .events-grid, .events-month-group');
+        if (target && typeof gsap !== 'undefined') {
+          gsap.fromTo(target, { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 0.3, ease: 'power2.out' });
+        }
       });
     });
 
-    // Month dropdown (list view only)
-    const sel = document.getElementById('month-filter');
-    if (sel) sel.addEventListener('change', () => {
-      currentFilter = parseInt(sel.value);
-      render();
-    });
+    // Filters (list view only)
+    const monthSel = document.getElementById('month-filter');
+    if (monthSel) monthSel.addEventListener('change', () => { currentFilters.month = parseInt(monthSel.value); render(); });
+    const provSel = document.getElementById('province-filter');
+    if (provSel) provSel.addEventListener('change', () => { currentFilters.province = provSel.value; render(); });
+    const catSel = document.getElementById('category-filter');
+    if (catSel) catSel.addEventListener('change', () => { currentFilters.category = catSel.value; render(); });
 
     // Calendar prev/next
     const prevBtn = document.getElementById('cal-prev');
     const nextBtn = document.getElementById('cal-next');
-    if (prevBtn) prevBtn.addEventListener('click', () => {
-      calMonth--; if (calMonth < 1) { calMonth = 12; calYear--; }
-      render();
-    });
-    if (nextBtn) nextBtn.addEventListener('click', () => {
-      calMonth++; if (calMonth > 12) { calMonth = 1; calYear++; }
-      render();
+    if (prevBtn) prevBtn.addEventListener('click', () => { calMonth--; if (calMonth < 1) { calMonth = 12; calYear--; } render(); });
+    if (nextBtn) nextBtn.addEventListener('click', () => { calMonth++; if (calMonth > 12) { calMonth = 1; calYear++; } render(); });
+
+    // Calendar chips — click to open modal
+    container.querySelectorAll('.cal-event-chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        const ev = EVENTS_DATA.find(e => e.id === parseInt(chip.dataset.evId));
+        if (ev) openEventModal(ev);
+      });
     });
 
-    // Animazione card lista
-    if (currentView === 'list') {
-      gsap.fromTo('.event-card',
+    // Animate list cards
+    if (!isCal && typeof gsap !== 'undefined') {
+      gsap.fromTo(container.querySelectorAll('.event-card'),
         { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, stagger: 0.07, duration: 0.35, ease: 'power2.out' }
+        { opacity: 1, y: 0, stagger: 0.06, duration: 0.32, ease: 'power2.out' }
       );
     }
   }

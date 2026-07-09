@@ -6,8 +6,9 @@
 const TRANSLATIONS = {
   IT: {
     'hero.title': 'Benvenuti in BrandSardinia',
-    'hero.subtitle': "L'isola più bella del Mediterraneo, raccontata da chi la vive.",
-    'hero.cta': 'Inizia Esperienza',
+    'hero.tagline': 'Branding an Island',
+    'hero.subtitle': 'La piattaforma intelligente per scoprire, organizzare e vivere la Sardegna',
+    'hero.cta': 'Esplora la Sardegna',
 
     'nav.sardinai': 'SardinAI',
     'nav.map': 'Mappa Interattiva',
@@ -92,8 +93,9 @@ const TRANSLATIONS = {
 
   EN: {
     'hero.title': 'Welcome to BrandSardinia',
-    'hero.subtitle': 'The most beautiful island in the Mediterranean, told by those who live it.',
-    'hero.cta': 'Start Experience',
+    'hero.tagline': 'Branding an Island',
+    'hero.subtitle': 'The smart platform to discover, plan and experience Sardinia',
+    'hero.cta': 'Explore Sardinia',
 
     'nav.sardinai': 'SardinAI',
     'nav.map': 'Interactive Map',
@@ -178,8 +180,9 @@ const TRANSLATIONS = {
 
   ES: {
     'hero.title': 'Bienvenidos a BrandSardinia',
-    'hero.subtitle': 'La isla más bella del Mediterráneo, contada por quienes la viven.',
-    'hero.cta': 'Iniciar Experiencia',
+    'hero.tagline': 'Branding an Island',
+    'hero.subtitle': 'La plataforma inteligente para descubrir, organizar y vivir Cerdeña',
+    'hero.cta': 'Explorar Cerdeña',
 
     'nav.sardinai': 'SardinAI',
     'nav.map': 'Mapa Interactivo',
@@ -264,8 +267,9 @@ const TRANSLATIONS = {
 
   FR: {
     'hero.title': 'Bienvenue sur BrandSardinia',
-    'hero.subtitle': "La plus belle île de la Méditerranée, racontée par ceux qui la vivent.",
-    'hero.cta': "Commencer l'Expérience",
+    'hero.tagline': 'Branding an Island',
+    'hero.subtitle': 'La plateforme intelligente pour découvrir, organiser et vivre la Sardaigne',
+    'hero.cta': 'Explorer la Sardaigne',
 
     'nav.sardinai': 'SardinAI',
     'nav.map': 'Carte Interactive',
@@ -350,8 +354,9 @@ const TRANSLATIONS = {
 
   DE: {
     'hero.title': 'Willkommen bei BrandSardinia',
-    'hero.subtitle': 'Die schönste Insel des Mittelmeers, erzählt von denen, die sie leben.',
-    'hero.cta': 'Erlebnis starten',
+    'hero.tagline': 'Branding an Island',
+    'hero.subtitle': 'Die intelligente Plattform, um Sardinien zu entdecken, zu planen und zu erleben',
+    'hero.cta': 'Sardinien entdecken',
 
     'nav.sardinai': 'SardinAI',
     'nav.map': 'Interaktive Karte',
