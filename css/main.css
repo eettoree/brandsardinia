@@ -4591,7 +4591,7 @@ strong { font-weight: 600; color: var(--text); }
   /* CTA: esce dal flusso flex, si ancora in fondo sotto la sagoma */
   #hero #btn-start {
     position: absolute;
-    bottom: 10px;
+    bottom: 4px;
     left: 0;
     right: 0;
     margin: 0 auto;
