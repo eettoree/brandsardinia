@@ -710,7 +710,7 @@
     position: fixed;
     top: 16px;
     left: 16px;
-    width: 278px;
+    width: 284px;
     max-height: calc(100vh - 32px);
     overflow-y: auto;
     background: #fff;
@@ -720,6 +720,7 @@
     z-index: 99999;
     font: 11px/1.4 'Helvetica Neue', Arial, sans-serif;
     color: #333;
+    touch-action: none;
   }
   #hero-cp-head {
     background: #C8102E;
@@ -736,6 +737,7 @@
     user-select: none;
     position: sticky;
     top: 0;
+    z-index: 1;
   }
   #hero-cp-head button {
     background: rgba(255,255,255,0.22);
@@ -743,18 +745,14 @@
     color: #fff;
     cursor: pointer;
     border-radius: 4px;
-    padding: 2px 9px;
+    padding: 3px 10px;
     font-size: 13px;
     line-height: 1.4;
+    touch-action: manipulation;
   }
-  #hero-cp-head button:hover { background: rgba(255,255,255,0.42); }
+  #hero-cp-head button:hover, #hero-cp-head button:active { background: rgba(255,255,255,0.42); }
   #hero-cp-body { padding: 10px 12px; }
-  .cp-sec {
-    border: 1px solid #ebebeb;
-    border-radius: 7px;
-    margin-bottom: 7px;
-    overflow: hidden;
-  }
+  .cp-sec { border: 1px solid #ebebeb; border-radius: 7px; margin-bottom: 7px; overflow: hidden; }
   .cp-sec > summary {
     padding: 7px 10px;
     background: #f7f7f7;
@@ -776,17 +774,18 @@
   .cp-inner { padding: 8px 10px; }
   .cp-r { display: flex; align-items: center; gap: 6px; margin-bottom: 6px; }
   .cp-r label { flex: 1; color: #666; font-size: 10px; white-space: nowrap; }
-  .cp-r input[type=range] { flex: 1.6; accent-color: #C8102E; }
-  .cp-r input[type=color] { width: 34px; height: 22px; border: 1px solid #ddd; border-radius: 4px; cursor: pointer; padding: 1px 2px; }
-  .cp-r input[type=text] { flex: 1.6; border: 1px solid #ddd; border-radius: 4px; padding: 3px 6px; font-size: 10px; }
-  .cp-r textarea { flex: 1.6; border: 1px solid #ddd; border-radius: 4px; padding: 4px 6px; font-size: 10px; resize: vertical; min-height: 44px; }
-  .cp-r select { flex: 1.6; border: 1px solid #ddd; border-radius: 4px; padding: 3px 4px; font-size: 10px; }
-  .cp-v { min-width: 36px; text-align: right; color: #C8102E; font-weight: 700; font-size: 10px; }
+  .cp-r input[type=range] { flex: 1.6; accent-color: #C8102E; min-width: 0; }
+  .cp-r input[type=color] { width: 34px; height: 24px; border: 1px solid #ddd; border-radius: 4px; cursor: pointer; padding: 1px 2px; }
+  .cp-r input[type=text] { flex: 1.6; border: 1px solid #ddd; border-radius: 4px; padding: 3px 6px; font-size: 10px; min-width: 0; }
+  .cp-r textarea { flex: 1.6; border: 1px solid #ddd; border-radius: 4px; padding: 4px 6px; font-size: 10px; resize: vertical; min-height: 44px; min-width: 0; }
+  .cp-r select { flex: 1.6; border: 1px solid #ddd; border-radius: 4px; padding: 3px 4px; font-size: 10px; min-width: 0; }
+  .cp-v { min-width: 38px; text-align: right; color: #C8102E; font-weight: 700; font-size: 10px; }
   .cp-ck { display: flex; align-items: center; gap: 7px; margin-bottom: 6px; font-size: 10px; color: #666; cursor: pointer; }
+  .cp-sep { height: 1px; background: #eee; margin: 4px 0 8px; }
   #cp-export-btn {
     width: 100%;
     margin-top: 6px;
-    padding: 9px;
+    padding: 10px;
     background: #C8102E;
     color: #fff;
     border: none;
@@ -795,8 +794,9 @@
     font-weight: 700;
     font-size: 11px;
     letter-spacing: 0.5px;
+    touch-action: manipulation;
   }
-  #cp-export-btn:hover { background: #a50f26; }
+  #cp-export-btn:hover, #cp-export-btn:active { background: #a50f26; }
   #cp-export-out {
     display: none;
     margin-top: 8px;
@@ -822,6 +822,7 @@
     </div>
     <div id="hero-cp-body">
 
+      <!-- SFONDO (sardinia-world, non l'hero) -->
       <details class="cp-sec" open>
         <summary>Sfondo</summary>
         <div class="cp-inner">
@@ -829,6 +830,19 @@
         </div>
       </details>
 
+      <!-- SAGOMA SARDEGNA -->
+      <details class="cp-sec" open>
+        <summary>Sagoma Sardegna</summary>
+        <div class="cp-inner">
+          <label class="cp-ck"><input type="checkbox" id="cp-ss-on" checked> Visibile</label>
+          <div class="cp-r"><label>Posizione X</label><input type="range" id="cp-ss-x" min="-600" max="600" value="0"><span class="cp-v" id="v-ss-x">0px</span></div>
+          <div class="cp-r"><label>Posizione Y</label><input type="range" id="cp-ss-y" min="-400" max="400" value="0"><span class="cp-v" id="v-ss-y">0px</span></div>
+          <div class="cp-r"><label>Dimensione</label><input type="range" id="cp-ss-h" min="20" max="120" value="62"><span class="cp-v" id="v-ss-h">62vh</span></div>
+          <div class="cp-r"><label>Opacità</label><input type="range" id="cp-ss-op" min="0" max="100" value="100"><span class="cp-v" id="v-ss-op">100%</span></div>
+        </div>
+      </details>
+
+      <!-- LANG SELECTOR -->
       <details class="cp-sec">
         <summary>Lang Selector (IT)</summary>
         <div class="cp-inner">
@@ -841,6 +855,25 @@
         </div>
       </details>
 
+      <!-- BLOCCO HERO-CONTENT: posizione globale -->
+      <details class="cp-sec">
+        <summary>Posizione Contenuto Hero</summary>
+        <div class="cp-inner">
+          <div class="cp-r"><label>X (sinistra/destra)</label><input type="range" id="cp-hc-x" min="-500" max="500" value="0"><span class="cp-v" id="v-hc-x">0px</span></div>
+          <div class="cp-r"><label>Y (su/giù)</label><input type="range" id="cp-hc-y" min="-300" max="300" value="0"><span class="cp-v" id="v-hc-y">0px</span></div>
+          <div class="cp-r">
+            <label>Allineam. testo</label>
+            <select id="cp-ly-ta">
+              <option value="center" selected>Center</option>
+              <option value="left">Left</option>
+              <option value="right">Right</option>
+            </select>
+          </div>
+          <div class="cp-r"><label>Hero padding</label><input type="range" id="cp-ly-p" min="0" max="80" value="20"><span class="cp-v" id="v-ly-p">20px</span></div>
+        </div>
+      </details>
+
+      <!-- TAGLINE -->
       <details class="cp-sec">
         <summary>Tagline (Branding an Island)</summary>
         <div class="cp-inner">
@@ -854,6 +887,7 @@
         </div>
       </details>
 
+      <!-- LOGO SVG -->
       <details class="cp-sec">
         <summary>Logo BrandSardinia (SVG)</summary>
         <div class="cp-inner">
@@ -862,6 +896,7 @@
         </div>
       </details>
 
+      <!-- SOTTOTITOLO -->
       <details class="cp-sec">
         <summary>Sottotitolo</summary>
         <div class="cp-inner">
@@ -875,6 +910,7 @@
         </div>
       </details>
 
+      <!-- BOTTONE CTA -->
       <details class="cp-sec">
         <summary>Bottone CTA</summary>
         <div class="cp-inner">
@@ -890,21 +926,6 @@
         </div>
       </details>
 
-      <details class="cp-sec">
-        <summary>Layout</summary>
-        <div class="cp-inner">
-          <div class="cp-r">
-            <label>Text align</label>
-            <select id="cp-ly-ta">
-              <option value="center" selected>Center</option>
-              <option value="left">Left</option>
-              <option value="right">Right</option>
-            </select>
-          </div>
-          <div class="cp-r"><label>Hero padding</label><input type="range" id="cp-ly-p" min="0" max="80" value="20"><span class="cp-v" id="v-ly-p">20px</span></div>
-        </div>
-      </details>
-
       <button id="cp-export-btn">Copia valori →</button>
       <div id="cp-export-out"></div>
 
@@ -914,34 +935,56 @@
   <script>
   (function() {
     const $ = id => document.getElementById(id);
-    const panel = $('hero-cp');
+    const panel  = $('hero-cp');
     const cpBody = $('hero-cp-body');
 
-    // Drag
+    // ── Drag (mouse + touch) ──────────────────────────────────
     let dragging = false, ox = 0, oy = 0;
-    $('hero-cp-head').addEventListener('mousedown', e => {
-      if (e.target.tagName === 'BUTTON') return;
+
+    function dragStart(cx, cy) {
       dragging = true;
-      ox = e.clientX - panel.offsetLeft;
-      oy = e.clientY - panel.offsetTop;
-    });
-    document.addEventListener('mousemove', e => {
+      ox = cx - panel.offsetLeft;
+      oy = cy - panel.offsetTop;
+    }
+    function dragMove(cx, cy) {
       if (!dragging) return;
-      panel.style.left = Math.max(0, e.clientX - ox) + 'px';
-      panel.style.top  = Math.max(0, e.clientY - oy) + 'px';
-    });
-    document.addEventListener('mouseup', () => dragging = false);
+      panel.style.left = Math.max(0, Math.min(window.innerWidth  - panel.offsetWidth,  cx - ox)) + 'px';
+      panel.style.top  = Math.max(0, Math.min(window.innerHeight - panel.offsetHeight, cy - oy)) + 'px';
+    }
+
+    const head = $('hero-cp-head');
+    head.addEventListener('mousedown',  e => { if (e.target.tagName !== 'BUTTON') dragStart(e.clientX, e.clientY); });
+    document.addEventListener('mousemove', e => dragMove(e.clientX, e.clientY));
+    document.addEventListener('mouseup',   () => dragging = false);
+
+    head.addEventListener('touchstart', e => {
+      if (e.target.tagName === 'BUTTON') return;
+      const t = e.touches[0];
+      dragStart(t.clientX, t.clientY);
+      e.preventDefault();
+    }, { passive: false });
+    document.addEventListener('touchmove', e => {
+      if (!dragging) return;
+      const t = e.touches[0];
+      dragMove(t.clientX, t.clientY);
+      e.preventDefault();
+    }, { passive: false });
+    document.addEventListener('touchend', () => dragging = false);
+
     $('cp-min').addEventListener('click', () => {
       cpBody.style.display = cpBody.style.display === 'none' ? '' : 'none';
     });
 
-    // Dynamic style sheet for tagline pseudo-elements
+    // ── Dynamic style (tagline pseudo-elements) ───────────────
     const dynStyle = document.createElement('style');
     document.head.appendChild(dynStyle);
 
+    // ── Apply ─────────────────────────────────────────────────
     function apply() {
       const hero    = document.getElementById('hero');
       if (!hero) return;
+      const world   = document.getElementById('sardinia-world');
+      const sardSil = document.getElementById('sardinia-silhouette');
       const tagline = hero.querySelector('.hero-tagline');
       const h1      = hero.querySelector('.hero-title');
       const logo    = hero.querySelector('.hero-title-svg');
@@ -950,8 +993,25 @@
       const langSel = hero.querySelector('.lang-selector select');
       const content = hero.querySelector('.hero-content');
 
-      // Sfondo
-      hero.style.backgroundColor = $('cp-bg').value;
+      // Sfondo: modifica sardinia-world, NON l'hero (l'hero resta trasparente)
+      if (world) world.style.backgroundColor = $('cp-bg').value;
+
+      // Sagoma Sardegna
+      if (sardSil) {
+        sardSil.style.display   = $('cp-ss-on').checked ? '' : 'none';
+        sardSil.style.height    = $('cp-ss-h').value + 'vh';
+        sardSil.style.opacity   = ($('cp-ss-op').value / 100).toFixed(2);
+        sardSil.style.transform = `translateX(${$('cp-ss-x').value}px) translateY(${$('cp-ss-y').value}px)`;
+      }
+
+      // Posizione blocco hero-content
+      if (content) {
+        const tx = $('cp-hc-x').value;
+        const ty = $('cp-hc-y').value;
+        content.style.transform = `translateX(${tx}px) translateY(${ty}px)`;
+        content.style.textAlign = $('cp-ly-ta').value;
+      }
+      hero.style.padding = $('cp-ly-p').value + 'px';
 
       // Lang selector
       if (langSel) {
@@ -975,8 +1035,8 @@
       }
 
       // Logo
-      if (logo)  { logo.style.maxWidth = $('cp-lg-w').value + 'px'; logo.style.width = '100%'; }
-      if (h1)    h1.style.marginBottom  = $('cp-lg-mb').value + 'px';
+      if (logo) { logo.style.maxWidth = $('cp-lg-w').value + 'px'; logo.style.width = '100%'; }
+      if (h1)   h1.style.marginBottom = $('cp-lg-mb').value + 'px';
 
       // Sottotitolo
       if (sub) {
@@ -992,31 +1052,30 @@
       // CTA
       if (btn) {
         const span = btn.querySelector('span');
-        if (span) span.textContent  = $('cp-bt-txt').value;
-        btn.style.background        = $('cp-bt-bg').value;
-        btn.style.color             = $('cp-bt-c').value;
-        btn.style.borderColor       = $('cp-bt-bc').value;
-        btn.style.borderRadius      = $('cp-bt-br').value + 'px';
-        btn.style.padding           = `${$('cp-bt-pv').value}px ${$('cp-bt-ph').value}px`;
-        btn.style.fontSize          = $('cp-bt-fs').value + 'px';
-        btn.style.letterSpacing     = $('cp-bt-ls').value + 'px';
+        if (span) span.textContent = $('cp-bt-txt').value;
+        btn.style.background    = $('cp-bt-bg').value;
+        btn.style.color         = $('cp-bt-c').value;
+        btn.style.borderColor   = $('cp-bt-bc').value;
+        btn.style.borderRadius  = $('cp-bt-br').value + 'px';
+        btn.style.padding       = `${$('cp-bt-pv').value}px ${$('cp-bt-ph').value}px`;
+        btn.style.fontSize      = $('cp-bt-fs').value + 'px';
+        btn.style.letterSpacing = $('cp-bt-ls').value + 'px';
       }
-
-      // Layout
-      if (content) content.style.textAlign = $('cp-ly-ta').value;
-      hero.style.padding = $('cp-ly-p').value + 'px';
     }
 
-    // Wire sliders
+    // ── Wire sliders ──────────────────────────────────────────
     [
+      ['cp-ss-x','v-ss-x','px'], ['cp-ss-y','v-ss-y','px'],
+      ['cp-ss-h','v-ss-h','vh'], ['cp-ss-op','v-ss-op','%'],
+      ['cp-hc-x','v-hc-x','px'], ['cp-hc-y','v-hc-y','px'], ['cp-ly-p','v-ly-p','px'],
       ['cp-lb-w','v-lb-w','px'], ['cp-lb-r','v-lb-r','px'], ['cp-lb-ph','v-lb-ph','px'],
-      ['cp-tg-fs','v-tg-fs','px'], ['cp-tg-ls','v-tg-ls','px'], ['cp-tg-mb','v-tg-mb','px'], ['cp-tg-lw','v-tg-lw','px'],
-      ['cp-lg-w','v-lg-w','px'],   ['cp-lg-mb','v-lg-mb','px'],
-      ['cp-st-fs','v-st-fs','px'], ['cp-st-fw','v-st-fw',''],  ['cp-st-mw','v-st-mw','px'],
-      ['cp-st-mb','v-st-mb','px'],
-      ['cp-bt-br','v-bt-br','px'], ['cp-bt-pv','v-bt-pv','px'], ['cp-bt-ph','v-bt-ph','px'],
-      ['cp-bt-fs','v-bt-fs','px'], ['cp-bt-ls','v-bt-ls','px'],
-      ['cp-ly-p','v-ly-p','px']
+      ['cp-tg-fs','v-tg-fs','px'], ['cp-tg-ls','v-tg-ls','px'],
+      ['cp-tg-mb','v-tg-mb','px'], ['cp-tg-lw','v-tg-lw','px'],
+      ['cp-lg-w','v-lg-w','px'], ['cp-lg-mb','v-lg-mb','px'],
+      ['cp-st-fs','v-st-fs','px'], ['cp-st-fw','v-st-fw',''],
+      ['cp-st-mw','v-st-mw','px'], ['cp-st-mb','v-st-mb','px'],
+      ['cp-bt-br','v-bt-br','px'], ['cp-bt-pv','v-bt-pv','px'],
+      ['cp-bt-ph','v-bt-ph','px'], ['cp-bt-fs','v-bt-fs','px'], ['cp-bt-ls','v-bt-ls','px']
     ].forEach(([id, vid, suf]) => {
       const inp = $(id), out = $(vid);
       if (!inp) return;
@@ -1026,35 +1085,41 @@
       });
     });
 
-    // Line height (×0.1)
     $('cp-st-lh').addEventListener('input', function() {
       $('v-st-lh').textContent = (parseInt(this.value)/10).toFixed(1);
       apply();
     });
 
-    // Colors
     ['cp-bg','cp-lb-c','cp-lt-c','cp-lb-bg','cp-tg-c','cp-st-c','cp-bt-bg','cp-bt-c','cp-bt-bc']
-      .forEach(id => { const i = $(id); if (i) i.addEventListener('input', apply); });
-
-    // Checkbox
-    $('cp-tg-on').addEventListener('change', apply);
-
-    // Text inputs
+      .forEach(id => { const i=$(id); if(i) i.addEventListener('input', apply); });
+    ['cp-ss-on','cp-tg-on']
+      .forEach(id => { const i=$(id); if(i) i.addEventListener('change', apply); });
     ['cp-tg-txt','cp-bt-txt','cp-st-txt']
-      .forEach(id => { const i = $(id); if (i) i.addEventListener('input', apply); });
-
-    // Select
+      .forEach(id => { const i=$(id); if(i) i.addEventListener('input', apply); });
     $('cp-ly-ta').addEventListener('change', apply);
 
-    // Export
+    // ── Export ────────────────────────────────────────────────
     $('cp-export-btn').addEventListener('click', () => {
-      const lh  = (parseInt($('cp-st-lh').value)/10).toFixed(1);
+      const lh = (parseInt($('cp-st-lh').value)/10).toFixed(1);
       const out = [
         'HERO CONTROL PANEL — VALORI',
         '════════════════════════════════',
         '',
-        'SFONDO',
+        'SFONDO (sardinia-world)',
         `  background: ${$('cp-bg').value}`,
+        '',
+        'SAGOMA SARDEGNA',
+        `  visibile: ${$('cp-ss-on').checked?'si':'no'}`,
+        `  posizione X: ${$('cp-ss-x').value}px`,
+        `  posizione Y: ${$('cp-ss-y').value}px`,
+        `  dimensione: ${$('cp-ss-h').value}vh`,
+        `  opacita: ${$('cp-ss-op').value}%`,
+        '',
+        'POSIZIONE CONTENUTO HERO',
+        `  translateX: ${$('cp-hc-x').value}px`,
+        `  translateY: ${$('cp-hc-y').value}px`,
+        `  text-align: ${$('cp-ly-ta').value}`,
+        `  hero padding: ${$('cp-ly-p').value}px`,
         '',
         'LANG SELECTOR',
         `  border: ${$('cp-lb-w').value}px solid ${$('cp-lb-c').value}`,
@@ -1064,7 +1129,7 @@
         `  padding-H: ${$('cp-lb-ph').value}px`,
         '',
         'TAGLINE',
-        `  visibile: ${$('cp-tg-on').checked ? 'si' : 'no'}`,
+        `  visibile: ${$('cp-tg-on').checked?'si':'no'}`,
         `  testo: "${$('cp-tg-txt').value}"`,
         `  color: ${$('cp-tg-c').value}`,
         `  font-size: ${$('cp-tg-fs').value}px`,
@@ -1093,24 +1158,19 @@
         `  border-radius: ${$('cp-bt-br').value}px`,
         `  padding: ${$('cp-bt-pv').value}px ${$('cp-bt-ph').value}px`,
         `  font-size: ${$('cp-bt-fs').value}px`,
-        `  letter-spacing: ${$('cp-bt-ls').value}px`,
-        '',
-        'LAYOUT',
-        `  text-align: ${$('cp-ly-ta').value}`,
-        `  hero padding: ${$('cp-ly-p').value}px`
+        `  letter-spacing: ${$('cp-bt-ls').value}px`
       ].join('\n');
 
-      const outDiv = $('cp-export-out');
-      outDiv.textContent = out;
-      outDiv.style.display = 'block';
+      $('cp-export-out').textContent = out;
+      $('cp-export-out').style.display = 'block';
       navigator.clipboard.writeText(out).then(() => {
-        const btn = $('cp-export-btn');
-        btn.textContent = 'Copiato negli appunti!';
-        setTimeout(() => { btn.textContent = 'Copia valori →'; }, 2000);
-      }).catch(() => {});
+        const b = $('cp-export-btn');
+        b.textContent = 'Copiato!';
+        setTimeout(() => { b.textContent = 'Copia valori →'; }, 2000);
+      }).catch(()=>{});
     });
 
-    // Re-apply whenever hero becomes visible
+    // ── Re-apply on hero visibility change ───────────────────
     const heroEl = document.getElementById('hero');
     if (heroEl) {
       new MutationObserver(() => {
