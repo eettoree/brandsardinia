@@ -397,6 +397,15 @@ body.world-active .scroll-invite-chevron { stroke: #333; }
   flex-shrink: 0;
 }
 
+/* Pre-hide elementi hero — GSAP li rivela al momento giusto, evita flash */
+#hero .hero-tagline,
+#hero .hero-title,
+#hero .hero-subtitle,
+#btn-start,
+#lang-selector-hero {
+  opacity: 0;
+}
+
 /* Contenuto hero */
 .hero-content {
   position: relative;

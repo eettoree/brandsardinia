@@ -877,7 +877,7 @@ const POI_PHOTOS = {
 // ─── COLORI CATEGORIA ─────────────────────────────────────────
 const CAT_COLORS = {
   spiaggia:    '#00BFFF',
-  città:       '#FFFFFF',
+  città:       '#8899bb',
   hotel:       '#C8102E',
   ristorante:  '#FF8C00',
   attrazione:  '#FFD700',
@@ -885,23 +885,37 @@ const CAT_COLORS = {
   esperienza:  '#B040FF'
 };
 
-// ─── ICONE SVG INLINE PER I MARKER ───────────────────────────
-function getMarkerSVG(color) {
-  return `
-    <div style="
-      width:14px;height:14px;
-      border-radius:50%;
-      background:${color};
-      border:2px solid rgba(255,255,255,0.8);
-      box-shadow:0 0 8px ${color},0 0 16px ${color}40;
-      cursor:pointer;
-      transition:transform 0.2s ease;
-    "></div>
-  `;
+// ─── MAPPING CATEGORIA → FILE ICONA ──────────────────────────
+const CAT_ICONS = {
+  spiaggia:   'spiagge',
+  'città':    'citta',
+  hotel:      'hotel',
+  ristorante: 'ristoranti',
+  attrazione: 'attrazioni',
+  parco:      'parchi',
+  esperienza: 'esperienze'
+};
+
+// ─── MARKER CON ICONA CATEGORIA ──────────────────────────────
+function getMarkerSVG(color, cat) {
+  const icon = cat ? CAT_ICONS[cat] : null;
+  const img = icon
+    ? `<img src="assets/images/map/filters/${icon}.svg" style="width:18px;height:18px;filter:brightness(0) invert(1);display:block;flex-shrink:0;" alt="">`
+    : '';
+  return `<div style="
+    width:32px;height:32px;
+    border-radius:50%;
+    background:${color};
+    border:2px solid rgba(255,255,255,0.9);
+    box-shadow:0 0 8px ${color},0 0 16px ${color}40;
+    cursor:pointer;
+    display:flex;align-items:center;justify-content:center;
+    transition:transform 0.2s ease;
+  ">${img}</div>`;
 }
 
 // ─── INIT MAPPA ───────────────────────────────────────────────
-function initMap() {
+function initMap(onReady) {
   const container = document.getElementById('map-canvas-container');
   if (!container || typeof maplibregl === 'undefined') {
     console.error('MapLibre GL JS non caricato.');
@@ -969,12 +983,12 @@ function initMap() {
     container: 'map-canvas-container',
     style: MAP_STYLE,
     center: [9.07, 40.12],
-    zoom: 8.5,
+    zoom: onReady ? 6 : 8.5,
     minZoom: 6.2,
     maxZoom: 18,
     maxBounds: [[6.8, 37.8], [11.2, 42.2]],
-    pitch: 55,
-    bearing: 15,
+    pitch: onReady ? 0 : 55,
+    bearing: onReady ? 0 : 15,
     antialias: true,
     attributionControl: false
   });
@@ -1001,15 +1015,27 @@ function initMap() {
       exaggeration: 2.5
     }), 'top-right');
 
-    // Animazione intro: vola sulla Sardegna
-    sardMap.flyTo({
-      center: [9.07, 40.12],
-      zoom: 8,
-      pitch: 60,
-      bearing: 0,
-      duration: 3000,
-      easing: (t) => t < 0.5 ? 4*t*t*t : 1-Math.pow(-2*t+2,3)/2
-    });
+    if (onReady) {
+      // Transizione cinematica: fitBounds sulla Sardegna per matchare la sagoma rossa
+      const vPad = Math.max(60, Math.round((window.innerHeight - Math.min(window.innerHeight * 0.62, 520)) / 2));
+      sardMap.fitBounds([[8.13, 38.85], [9.83, 41.25]], {
+        padding: { top: vPad, bottom: vPad, left: Math.round(vPad * 0.45), right: Math.round(vPad * 0.45) },
+        pitch: 0,
+        bearing: 0,
+        animate: false
+      });
+      onReady();
+    } else {
+      // Entrata diretta (legacy): vola sulla Sardegna con animazione 3D
+      sardMap.flyTo({
+        center: [9.07, 40.12],
+        zoom: 8,
+        pitch: 60,
+        bearing: 0,
+        duration: 3000,
+        easing: (t) => t < 0.5 ? 4*t*t*t : 1-Math.pow(-2*t+2,3)/2
+      });
+    }
   });
 
   sardMap.on('error', (e) => {
@@ -1175,10 +1201,10 @@ function addAllMarkers() {
     el.className = 'map-marker';
     el.setAttribute('data-cat', poi.cat);
     el.setAttribute('data-id', poi.id);
-    el.innerHTML = getMarkerSVG(CAT_COLORS[poi.cat] || '#ffffff');
+    el.innerHTML = getMarkerSVG(CAT_COLORS[poi.cat] || '#ffffff', poi.cat);
 
     el.addEventListener('mouseenter', () => {
-      el.firstElementChild.style.transform = 'scale(1.6)';
+      el.firstElementChild.style.transform = 'scale(1.3)';
       showHoverTooltip(poi, el);
     });
     el.addEventListener('mouseleave', () => {

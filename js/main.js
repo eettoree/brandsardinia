@@ -194,9 +194,82 @@ function bindSelectorCards() {
   cards.forEach(card => {
     card.addEventListener('click', () => {
       const section = card.getAttribute('data-section');
-      if (section) showSection(section);
+      if (section === 'map') transitionToMap();
+      else if (section) showSection(section);
     });
   });
+}
+
+// ─── TRANSIZIONE CINEMATICA → MAPPA ──────────────────────────
+function transitionToMap() {
+  AppState.currentSection = 'map';
+
+  // Fase 1: spariscono le card e il titolo selettore
+  gsap.to('.selector-card', { opacity: 0, y: -22, duration: 0.3, stagger: 0.055, ease: 'power2.in' });
+  gsap.to('.selector-title, .scroll-invite', { opacity: 0, duration: 0.25, ease: 'power2.in' });
+
+  // Fase 2 (0.28s): la sagoma rossa e lo sfondo bianco sfumano
+  setTimeout(() => {
+    document.body.classList.remove('world-active');
+    document.body.classList.add('section-map');
+
+    gsap.to('#sardinia-world', {
+      opacity: 0, duration: 0.55, ease: 'power2.in',
+      onComplete: () => {
+        const w = document.getElementById('sardinia-world');
+        w.style.display = 'none';
+        w.style.opacity = '';
+      }
+    });
+    gsap.to('#section-selector', {
+      opacity: 0, duration: 0.4, ease: 'power2.in',
+      onComplete: () => { document.getElementById('section-selector').style.display = 'none'; }
+    });
+
+    // Prepara il map-section: visibile ma trasparente
+    const mapSection = document.getElementById('map-section');
+    document.querySelectorAll('.main-section').forEach(s => { s.style.display = 'none'; s.style.opacity = '0'; });
+    mapSection.style.display = 'block';
+    mapSection.style.opacity = '0';
+
+    if (!AppState.mapInitialized) {
+      AppState.mapInitialized = true;
+
+      // Fase 3: init mappa con callback — parte da vista aerea sulla sagoma
+      initMap(function onMapReady() {
+        // Fase 4: il map-section appare (la sagoma rossa sta già scomparendo)
+        gsap.to(mapSection, {
+          opacity: 1, duration: 0.55, ease: 'power2.out',
+          onComplete: () => {
+            // Fase 5: zoom cinematico dal bird's-eye alla vista 3D
+            sardMap.flyTo({
+              center: [9.07, 40.12],
+              zoom: 8,
+              pitch: 60,
+              bearing: 0,
+              duration: 2600,
+              easing: t => t < 0.5 ? 4*t*t*t : 1 - Math.pow(-2*t+2, 3) / 2
+            });
+          }
+        });
+      });
+      initMapFilters();
+
+    } else {
+      // Mappa già inizializzata — rimetti in posizione aerea e rientra
+      sardMap.jumpTo({ center: [9.07, 40.12], zoom: 6.5, pitch: 0, bearing: 0 });
+      gsap.to(mapSection, {
+        opacity: 1, duration: 0.55, ease: 'power2.out',
+        onComplete: () => {
+          sardMap.flyTo({
+            center: [9.07, 40.12], zoom: 8, pitch: 60, bearing: 0,
+            duration: 2600,
+            easing: t => t < 0.5 ? 4*t*t*t : 1 - Math.pow(-2*t+2, 3) / 2
+          });
+        }
+      });
+    }
+  }, 280);
 }
 
 function bindBackButtons() {
