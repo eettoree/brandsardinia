@@ -487,6 +487,7 @@ function openToolSection(name) {
       else if (name === 'ristoranti')   renderRistoranti(contentArea);
       else if (name === 'hotel')        renderHotel(contentArea);
       else if (name === 'pacchetti')    renderComingSoon(contentArea, 'Pacchetti Viaggio', 'Pacchetti completi con volo, hotel e esperienze — tutto organizzato, tutto in un click.');
+      else if (name === 'navigazione') renderNavigazione(contentArea);
 
       gsap.fromTo(content,
         { opacity: 0, y: 30 },
@@ -2679,4 +2680,193 @@ function renderNordSardegna(container) {
   }
 
   render();
+}
+
+// ─── NAVIGAZIONE ──────────────────────────────────────────────
+function renderNavigazione(container) {
+  const PORTI = [
+    { name: 'Porto Cervo Marina', zona: 'Costa Smeralda', posti: 700, pescaggio: '10m', tel: '+39 0789 905602', web: 'marinadiportocervo.com', vhf: '9/16/11', servizi: ['Carburante', 'Officina', 'WiFi', 'Ristorante', 'Electricity'] },
+    { name: 'Marina Portus Karalis', zona: 'Cagliari', posti: 140, pescaggio: '10m', tel: '+39 070 653535', web: 'portuskaralis.com', vhf: '9', servizi: ['Carburante', 'Acqua', 'Electricity'] },
+    { name: 'Marina di Porto Rotondo', zona: 'Costa Smeralda', posti: 350, pescaggio: '8m', tel: '+39 0789 34203', web: 'marinadiportorotondo.it', vhf: '09', servizi: ['Carburante', 'Officina', 'Docce', 'WiFi', 'Charter'] },
+    { name: 'Porto Turistico Torre Grande', zona: 'Oristano', posti: 180, pescaggio: '5m', tel: '+39 0783 22189', web: 'marineoristanesi.it', vhf: '', servizi: ['Electricity', 'Acqua', 'Scarico acque'] },
+    { name: 'Cala dei Sardi Marina', zona: 'Porto Rotondo', posti: 300, pescaggio: '8m', tel: '+39 0789 1980403', web: 'caladeisardi.it', vhf: '', servizi: ['Electricity', 'Acqua', 'WiFi', 'Charter'] },
+    { name: 'Marina del Ponte La Maddalena', zona: 'Arcipelago Maddalena', posti: 200, pescaggio: '5m', tel: '', web: 'marinadelponte.com', vhf: '', servizi: ['Electricity', 'Acqua'] },
+    { name: 'Marina di Porto Conte', zona: 'Alghero', posti: null, pescaggio: '3m', tel: '', web: '', vhf: '', servizi: ['Baia protetta', 'AMP Capo Caccia'] },
+    { name: 'Marina di Villasimius', zona: 'Cagliari Sud', posti: 250, pescaggio: '6m', tel: '', web: '', vhf: '', servizi: ['Electricity', 'Noleggio gommoni', 'Tour in barca'] },
+    { name: 'Porto di Cala Gonone', zona: 'Golfo di Orosei', posti: 100, pescaggio: '4m', tel: '', web: '', vhf: '', servizi: ['Escursioni', 'Noleggio gommoni', 'Traghetti cale'] },
+    { name: 'Porto di Arbatax', zona: 'Ogliastra', posti: 150, pescaggio: '6m', tel: '', web: '', vhf: '', servizi: ['Traghetti Tirrenia', 'Porto commerciale'] },
+  ];
+
+  const ZONE_PROTETTE = [
+    { nome: 'AMP Capo Caccia - Isola Piana', tipo: 'Area Marina Protetta', accesso: 'Accesso parzialmente limitato. Zona A: divieto assoluto. Zona B: snorkeling e immersioni autorizzate. Zona C: navigazione lenta.', tel: '+39 079 945045' },
+    { nome: 'AMP Tavolara - Punta Coda Cavallo', tipo: 'Area Marina Protetta', accesso: 'Tre zone: Zona A (divieto totale), Zona B (solo attivita autorizzate), Zona C (pesca sportiva consentita). Velocita max 5 nodi.', tel: '+39 0789 32797' },
+    { nome: 'AMP Capo Carbonara (Villasimius)', tipo: 'Area Marina Protetta', accesso: 'Zona A riservata a ricerca scientifica. Zona B: snorkeling e diving con autorizzazione. Zona C: navigazione consentita a velocita ridotta.', tel: '+39 070 791202' },
+    { nome: 'Parco Nazionale Arcipelago Maddalena', tipo: 'Parco Marino Nazionale', accesso: 'Navigazione consentita ma con limitazioni stagionali. Alcune cale accessibili solo a piedi o a nuoto. Ancoraggio vietato in zone sensibili (praterie Posidonia).', tel: '+39 0789 790211' },
+    { nome: 'Parco Nazionale Asinara', tipo: 'Parco Marino Nazionale', accesso: "Accesso all'isola solo con gite organizzate da Stintino. Navigazione nelle acque del parco consentita ma senza ancoraggio libero nel perimetro.", tel: '+39 079 503388' },
+    { nome: 'Riserva Marina Isola di Mal di Ventre', tipo: 'Riserva Naturale', accesso: 'Area riservata a ricerca. Avvicinamento a meno di 200m vietato. Ancoraggio non consentito.', tel: '' },
+  ];
+
+  const ZONE_CONSIGLIATE = [
+    { nome: 'Golfo di Orosei', desc: 'Uno dei tratti di costa piu belli del Mediterraneo: cale accessibili solo dal mare, acque cristalline, fondali fino a 40m. Base ideale da Cala Gonone o Santa Maria Navarrese.' },
+    { nome: 'Arcipelago della Maddalena', desc: '7 isole e oltre 50 isolotti, acque smeraldo, venti costanti ideali per la vela. Base: Palau o marina La Maddalena. Uscite giornaliere anche per imbarcazioni piccole.' },
+    { nome: 'Costa Smeralda', desc: 'Tra Baja Sardinia e Olbia: calette riparate, fondali sabbiosi, strutture nautiche di primo livello. Ideale luglio-agosto con vento da nord.' },
+    { nome: 'Golfo di Cagliari', desc: 'Base di partenza da Portus Karalis. Rotte verso Villasimius e Capo Carbonara, fondali misti con praterie di Posidonia. Adatto anche a chi e alle prime armi.' },
+    { nome: 'Costa del Sulcis', desc: "Da Portoscuso verso le isole di San Pietro e Sant'Antioco: paesaggi unici, porti tranquilli, acque poco frequentate rispetto al nord." },
+    { nome: "Golfo dell'Asinara", desc: 'Da Porto Torres a Stintino, con rotte verso isola Asinara. Acque trasparenti e poco trafficate. Attenzione al Maestrale nel canalino di Sardegna.' },
+  ];
+
+  container.innerHTML = `
+    <div class="tools-section-header">
+      <h2>Navigazione in Sardegna</h2>
+      <p class="section-subtitle">Porti, zone protette, aree di navigazione e info pratiche per chi esplora la Sardegna via mare.</p>
+    </div>
+
+    <div class="nav-tabs-wrap">
+      <button class="nav-tab active" data-tab="porti">Porti e Marina</button>
+      <button class="nav-tab" data-tab="protette">Zone Protette</button>
+      <button class="nav-tab" data-tab="consigliate">Rotte Consigliate</button>
+      <button class="nav-tab" data-tab="pratiche">Info Pratiche</button>
+    </div>
+
+    <div class="nav-tab-content" data-content="porti">
+      <div class="porto-grid">
+        ${PORTI.map(p => `
+          <div class="porto-card glass-card">
+            <div class="porto-header">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#0066CC" stroke-width="1.8" width="20" height="20">
+                <circle cx="12" cy="4" r="2"/><line x1="12" y1="6" x2="12" y2="20"/>
+                <line x1="7" y1="9" x2="17" y2="9"/>
+                <path d="M12 20 Q6 20 6 15.5" stroke-linecap="round"/>
+                <path d="M12 20 Q18 20 18 15.5" stroke-linecap="round"/>
+                <circle cx="6" cy="15.5" r="1.3" fill="#0066CC"/>
+                <circle cx="18" cy="15.5" r="1.3" fill="#0066CC"/>
+              </svg>
+              <div>
+                <div class="porto-name">${p.name}</div>
+                <div class="porto-zona">${p.zona}</div>
+              </div>
+            </div>
+            <div class="porto-info-row">
+              ${p.posti ? `<span class="porto-badge">${p.posti} posti</span>` : ''}
+              <span class="porto-badge">${p.pescaggio}</span>
+              ${p.vhf ? `<span class="porto-badge">VHF ${p.vhf}</span>` : ''}
+            </div>
+            <div class="porto-servizi">${p.servizi.map(s => `<span class="servizio-tag">${s}</span>`).join('')}</div>
+            <div class="porto-contacts">
+              ${p.tel ? `<a href="tel:${p.tel}" class="porto-contact-link">${p.tel}</a>` : ''}
+              ${p.web ? `<a href="https://${p.web}" target="_blank" rel="noopener" class="porto-contact-link">${p.web}</a>` : ''}
+            </div>
+          </div>
+        `).join('')}
+      </div>
+      <p class="nav-note">Verifica sempre aggiornamenti su <strong>ORMEGGI.com</strong> e il portale <strong>Autorita di Sistema Portuale del Mar di Sardegna</strong> prima di salpare.</p>
+    </div>
+
+    <div class="nav-tab-content hidden" data-content="protette">
+      <div class="zone-protette-list">
+        ${ZONE_PROTETTE.map(z => `
+          <div class="zona-card glass-card">
+            <div class="zona-header">
+              <span class="zona-tipo-badge">${z.tipo}</span>
+              <h3 class="zona-nome">${z.nome}</h3>
+            </div>
+            <p class="zona-accesso">${z.accesso}</p>
+            ${z.tel ? `<div class="zona-tel">${z.tel}</div>` : ''}
+          </div>
+        `).join('')}
+      </div>
+      <div class="nav-alert">
+        <strong>Attenzione:</strong> L'ancoraggio su praterie di Posidonia e vietato in tutta Italia (art. 185 del Codice della Navigazione). La Sardegna ha estese praterie protette: usa gavitelli dove disponibili.
+      </div>
+    </div>
+
+    <div class="nav-tab-content hidden" data-content="consigliate">
+      <div class="rotte-list">
+        ${ZONE_CONSIGLIATE.map(z => `
+          <div class="rotta-card glass-card">
+            <div class="rotta-dot" style="background:#0066CC"></div>
+            <div>
+              <div class="rotta-nome">${z.nome}</div>
+              <p class="rotta-desc">${z.desc}</p>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+
+    <div class="nav-tab-content hidden" data-content="pratiche">
+      <div class="info-pratiche-grid">
+        <div class="info-card glass-card">
+          <h3>Documenti obbligatori</h3>
+          <ul>
+            <li>Patente nautica (obbligatoria oltre 6 miglia dalla costa o oltre 40 cv senza limite)</li>
+            <li>Certificato di abilitazione dell'imbarcazione (CIN)</li>
+            <li>Assicurazione RCT obbligatoria per imbarcazioni da diporto</li>
+            <li>Lista equipaggio per navigazione oltre 12 miglia</li>
+            <li>Dotazioni di sicurezza obbligatorie (giubbotti, razzi, estintore)</li>
+          </ul>
+        </div>
+        <div class="info-card glass-card">
+          <h3>Canali VHF utili</h3>
+          <ul>
+            <li><strong>Canal 16</strong> — Emergenza e chiamata internazionale (sempre in ascolto)</li>
+            <li><strong>Canal 9</strong> — Marina e porto turistico</li>
+            <li><strong>Canal 12</strong> — Porto commerciale e traffico marittimo</li>
+            <li><strong>Canal 70</strong> — DSC (Digital Selective Calling)</li>
+            <li><strong>Canal 67</strong> — Guardia Costiera italiana</li>
+          </ul>
+        </div>
+        <div class="info-card glass-card">
+          <h3>Numeri di emergenza</h3>
+          <ul>
+            <li><strong>1530</strong> — Guardia Costiera (emergenze in mare, gratuito)</li>
+            <li><strong>118</strong> — Emergenza medica</li>
+            <li><strong>112</strong> — Carabinieri</li>
+            <li><strong>117</strong> — Guardia di Finanza</li>
+            <li><strong>+39 070 60081</strong> — MRCC Roma (Maritime Rescue Coordination Centre)</li>
+          </ul>
+        </div>
+        <div class="info-card glass-card">
+          <h3>Venti e meteo</h3>
+          <ul>
+            <li><strong>Maestrale (NW):</strong> vento dominante, puo alzarsi improvvisamente nel canale di Sardegna</li>
+            <li><strong>Libeccio (SW):</strong> pericoloso sulla costa ovest, evitare uscite con previsioni &gt;4 Beaufort</li>
+            <li><strong>Tramontana (N):</strong> frequente nel nord, crea moto ondoso nella Costa Smeralda</li>
+            <li>Fonti: <a href="https://www.windy.com" target="_blank" rel="noopener">Windy.com</a> | <a href="https://www.meteomar.it" target="_blank" rel="noopener">Meteomar.it</a></li>
+          </ul>
+        </div>
+        <div class="info-card glass-card">
+          <h3>Normative e permessi</h3>
+          <ul>
+            <li>Navigazione nelle AMP: richiedere autorizzazione preventiva all'ente gestore</li>
+            <li>Pesca sportiva: limiti di specie e quantita, vietata nelle zone A delle AMP</li>
+            <li>Immersioni subacquee: bandiera A obbligatoria, autorizzazione nelle AMP</li>
+            <li>Ancoraggio notturno: verificare con la Capitaneria di porto locale</li>
+          </ul>
+        </div>
+        <div class="info-card glass-card">
+          <h3>Noleggio e charter</h3>
+          <ul>
+            <li>Noleggio senza patente entro 6 miglia: gommoni fino a 40 cv in quasi tutti i porti turistici</li>
+            <li>Charter con skipper: disponibile da Porto Cervo, Olbia, Cagliari, Alghero</li>
+            <li>Barche a vela e catamarani: Click&amp;Boat, Samboat, Navigare.it</li>
+            <li>Tour guidati: Cala Gonone, Villasimius, La Maddalena</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  `;
+
+  const tabs = container.querySelectorAll('.nav-tab');
+  const contents = container.querySelectorAll('.nav-tab-content');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const target = tab.dataset.tab;
+      contents.forEach(c => {
+        c.classList.toggle('hidden', c.dataset.content !== target);
+      });
+    });
+  });
 }

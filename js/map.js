@@ -359,23 +359,25 @@ const POI_PHOTOS = {
 // â”€â”€â”€ COLORI CATEGORIA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const CAT_COLORS = {
   spiaggia:    '#00BFFF',
-  cittÃ :       '#8899bb',
+  città:       '#8899bb',
   hotel:       '#C8102E',
   ristorante:  '#FF8C00',
   attrazione:  '#FFD700',
   parco:       '#32CD32',
-  esperienza:  '#B040FF'
+  esperienza:  '#B040FF',
+  porto:       '#0066CC'
 };
 
 // â”€â”€â”€ MAPPING CATEGORIA â†’ FILE ICONA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const CAT_ICONS = {
   spiaggia:   'spiagge',
-  'cittÃ ':    'citta',
+  'città':    'citta',
   hotel:      'hotel',
   ristorante: 'ristoranti',
   attrazione: 'attrazioni',
   parco:      'parchi',
-  esperienza: 'esperienze'
+  esperienza: 'esperienze',
+  porto:      'porti'
 };
 
 // â”€â”€â”€ MARKER CON ICONA CATEGORIA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
@@ -658,7 +660,7 @@ function syncMarkersToZoom() {
 const CAT_LABELS = {
   spiaggia: 'Spiaggia', cittÃ : 'CittÃ ', hotel: 'Hotel',
   ristorante: 'Ristorante', attrazione: 'Attrazione',
-  parco: 'Parco Naturale', esperienza: 'Esperienza'
+  parco: 'Parco Naturale', esperienza: 'Esperienza', porto: 'Porto'
 };
 
 function showHoverTooltip(poi, el) {
