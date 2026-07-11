@@ -585,7 +585,7 @@ function addClusterLayer() {
     type: 'geojson',
     data: { type: 'FeatureCollection', features: [] },
     cluster: true,
-    clusterMaxZoom: 13,
+    clusterMaxZoom: 12,
     clusterRadius: 52
   });
 
@@ -641,10 +641,10 @@ function addClusterLayer() {
         'porto',      '#0066CC',
         '#aaaaaa'
       ],
-      'circle-radius': ['interpolate', ['linear'], ['zoom'], 9, 5, 12, 7, 13, 0],
+      'circle-radius': ['interpolate', ['linear'], ['zoom'], 8, 5, 11, 7, 12, 0],
       'circle-stroke-width': 1.5,
       'circle-stroke-color': 'rgba(255,255,255,0.9)',
-      'circle-opacity': ['interpolate', ['linear'], ['zoom'], 12.5, 1, 13, 0]
+      'circle-opacity': ['interpolate', ['linear'], ['zoom'], 11.5, 1, 12, 0]
     }
   });
 
@@ -661,7 +661,7 @@ function addClusterLayer() {
 
   sardMap.on('click', 'unclustered-dots', (e) => {
     e.stopPropagation();
-    if (sardMap.getZoom() >= 13) return;
+    if (sardMap.getZoom() >= 12) return;
     const props = e.features && e.features[0] && e.features[0].properties;
     if (!props) return;
     const poi = MAP_POI.find(p => p.id === props.id);
@@ -671,6 +671,19 @@ function addClusterLayer() {
   sardMap.on('mouseenter', 'cluster-circles',  () => { sardMap.getCanvas().style.cursor = 'pointer'; });
   sardMap.on('mouseleave', 'cluster-circles',  () => { sardMap.getCanvas().style.cursor = ''; });
   sardMap.on('mouseenter', 'unclustered-dots', () => { sardMap.getCanvas().style.cursor = 'pointer'; });
+  let _dotPopup = null;
+  sardMap.on('mousemove', 'unclustered-dots', (e) => {
+    if (!e.features || !e.features.length) return;
+    const props = e.features[0].properties;
+    if (!_dotPopup) {
+      _dotPopup = new maplibregl.Popup({ closeButton: false, closeOnClick: false, offset: 14, className: 'dot-hover-popup' });
+    }
+    _dotPopup.setLngLat(e.lngLat).setHTML('<span style="font:600 12px/1.4 system-ui;color:#111;white-space:nowrap">' + props.name + '</span>').addTo(sardMap);
+  });
+  sardMap.on('mouseleave', 'unclustered-dots', () => {
+    if (_dotPopup) { _dotPopup.remove(); _dotPopup = null; }
+  });
+
   sardMap.on('mouseleave', 'unclustered-dots', () => { sardMap.getCanvas().style.cursor = ''; });
 
   sardMap.on('zoom', syncMarkersToZoom);
@@ -678,7 +691,7 @@ function addClusterLayer() {
 
 function syncMarkersToZoom() {
   const z = sardMap.getZoom();
-  const showDom = z >= 13;
+  const showDom = z >= 12;
   allMarkers.forEach(m => {
     const el = m.getElement();
     el.style.opacity = showDom ? '1' : '0';
