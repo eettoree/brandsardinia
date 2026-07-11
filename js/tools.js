@@ -1535,13 +1535,16 @@ function renderBeaches(container) {
       </div>`;
   }
 
-  // Search among all POI beaches (from map data)
+  // POI cache locale — popolazione da MAP_POI o direttamente da pois.json
+  let _poisCache = [];
+
+  // Search among all POI beaches
   function buildSearchResults(query) {
     if (!query || query.length < 2) return '';
     const q = query.toLowerCase();
-    const allBeaches = (typeof MAP_POI !== 'undefined' ? MAP_POI : [])
+    const allBeaches = _poisCache
       .filter(p => p.cat === 'spiaggia' && p.name.toLowerCase().includes(q))
-      .slice(0, 8);
+      .slice(0, 10);
     if (!allBeaches.length) return '<p class="beach-search-empty">Nessuna spiaggia trovata.</p>';
     return `<div class="beach-search-results">
       ${allBeaches.map(p => `
@@ -1582,6 +1585,16 @@ function renderBeaches(container) {
   }
 
   async function loadAllWeatherAndRender() {
+    // Carica POI per la ricerca — se MAP_POI non è ancora disponibile (mappa non aperta), fetch diretto
+    if (typeof MAP_POI !== 'undefined' && MAP_POI.length > 0) {
+      _poisCache = MAP_POI;
+    } else {
+      try {
+        const r = await fetch('assets/data/pois.json');
+        _poisCache = await r.json();
+      } catch { _poisCache = []; }
+    }
+
     const now = new Date();
     const timeStr = `${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}`;
 
@@ -1596,7 +1609,7 @@ function renderBeaches(container) {
       <p class="section-subtitle">Dati vento e mare in tempo reale via Open-Meteo. Aggiornati ogni ora dai modelli meteorologici GFS/ECMWF.</p>
 
       <div class="beach-search-wrap">
-        <input type="text" id="beach-search-input" class="beach-search-input" placeholder="Cerca spiaggia tra le 107 in mappa...">
+        <input type="text" id="beach-search-input" class="beach-search-input" placeholder="Cerca tra ${_poisCache.filter(p=>p.cat==='spiaggia').length || 107} spiagge in mappa...">
         <div id="beach-search-dropdown" class="beach-search-dropdown"></div>
       </div>
       <div id="beach-search-result-area"></div>

@@ -1,4 +1,4 @@
-﻿// ============================================================
+// ============================================================
 // map.js â€” MapLibre GL JS â€” Mappa Satellite 3D Sardegna
 // Tiles: ESRI World Imagery (gratuito) + AWS Terrain (gratuito)
 // ============================================================
@@ -585,8 +585,8 @@ function addClusterLayer() {
     type: 'geojson',
     data: { type: 'FeatureCollection', features: [] },
     cluster: true,
-    clusterMaxZoom: 9,
-    clusterRadius: 60
+    clusterMaxZoom: 13,
+    clusterRadius: 52
   });
 
   sardMap.addLayer({
@@ -597,17 +597,17 @@ function addClusterLayer() {
     paint: {
       'circle-color': [
         'step', ['get', 'point_count'],
-        'rgba(0,180,216,0.82)', 8,
-        'rgba(0,140,170,0.87)', 20,
-        'rgba(2,95,125,0.90)'
+        'rgba(0,180,216,0.88)', 15,
+        'rgba(0,130,180,0.90)', 50,
+        'rgba(2,90,140,0.93)'
       ],
       'circle-radius': [
         'step', ['get', 'point_count'],
-        20, 8, 28, 20, 36
+        22, 15, 32, 50, 42
       ],
-      'circle-stroke-width': 2,
-      'circle-stroke-color': 'rgba(255,255,255,0.30)',
-      'circle-blur': 0.08
+      'circle-stroke-width': 2.5,
+      'circle-stroke-color': 'rgba(255,255,255,0.45)',
+      'circle-blur': 0.05
     }
   });
 
@@ -619,12 +619,35 @@ function addClusterLayer() {
     layout: {
       'text-field': '{point_count_abbreviated}',
       'text-font': ['Open Sans Bold', 'Arial Unicode MS Bold'],
-      'text-size': 13
+      'text-size': ['step', ['get', 'point_count'], 12, 15, 14, 50, 16]
     },
     paint: { 'text-color': '#ffffff' }
   });
 
-  // Click su cluster â†’ zoom in
+  sardMap.addLayer({
+    id: 'unclustered-dots',
+    type: 'circle',
+    source: 'poi-cluster',
+    filter: ['!', ['has', 'point_count']],
+    paint: {
+      'circle-color': ['match', ['get', 'cat'],
+        'spiaggia',   '#00BFFF',
+        'citt\u00e0', '#8899bb',
+        'hotel',      '#C8102E',
+        'ristorante', '#FF8C00',
+        'attrazione', '#FFD700',
+        'parco',      '#32CD32',
+        'esperienza', '#B040FF',
+        'porto',      '#0066CC',
+        '#aaaaaa'
+      ],
+      'circle-radius': ['interpolate', ['linear'], ['zoom'], 9, 5, 12, 7, 13, 0],
+      'circle-stroke-width': 1.5,
+      'circle-stroke-color': 'rgba(255,255,255,0.9)',
+      'circle-opacity': ['interpolate', ['linear'], ['zoom'], 12.5, 1, 13, 0]
+    }
+  });
+
   sardMap.on('click', 'cluster-circles', (e) => {
     e.stopPropagation();
     const features = sardMap.queryRenderedFeatures(e.point, { layers: ['cluster-circles'] });
@@ -636,90 +659,56 @@ function addClusterLayer() {
     });
   });
 
-  sardMap.on('mouseenter', 'cluster-circles', () => { sardMap.getCanvas().style.cursor = 'pointer'; });
-  sardMap.on('mouseleave', 'cluster-circles', () => { sardMap.getCanvas().style.cursor = ''; });
+  sardMap.on('click', 'unclustered-dots', (e) => {
+    e.stopPropagation();
+    if (sardMap.getZoom() >= 13) return;
+    const props = e.features && e.features[0] && e.features[0].properties;
+    if (!props) return;
+    const poi = MAP_POI.find(p => p.id === props.id);
+    if (poi) showQuickCard(poi);
+  });
 
-  // Sincronizza visibilitÃ  marker DOM con lo zoom
+  sardMap.on('mouseenter', 'cluster-circles',  () => { sardMap.getCanvas().style.cursor = 'pointer'; });
+  sardMap.on('mouseleave', 'cluster-circles',  () => { sardMap.getCanvas().style.cursor = ''; });
+  sardMap.on('mouseenter', 'unclustered-dots', () => { sardMap.getCanvas().style.cursor = 'pointer'; });
+  sardMap.on('mouseleave', 'unclustered-dots', () => { sardMap.getCanvas().style.cursor = ''; });
+
   sardMap.on('zoom', syncMarkersToZoom);
 }
 
 function syncMarkersToZoom() {
   const z = sardMap.getZoom();
-  const showMarkers = z >= 9;
+  const showDom = z >= 13;
   allMarkers.forEach(m => {
     const el = m.getElement();
-    el.style.opacity = showMarkers ? '1' : '0';
-    el.style.pointerEvents = showMarkers ? 'auto' : 'none';
+    el.style.opacity = showDom ? '1' : '0';
+    el.style.pointerEvents = showDom ? 'auto' : 'none';
   });
-  const clusterVis = showMarkers ? 'none' : 'visible';
-  if (sardMap.getLayer('cluster-circles')) sardMap.setLayoutProperty('cluster-circles', 'visibility', clusterVis);
-  if (sardMap.getLayer('cluster-count')) sardMap.setLayoutProperty('cluster-count', 'visibility', clusterVis);
+  const mgl = showDom ? 'none' : 'visible';
+  if (sardMap.getLayer('cluster-circles'))  sardMap.setLayoutProperty('cluster-circles',  'visibility', mgl);
+  if (sardMap.getLayer('cluster-count'))    sardMap.setLayoutProperty('cluster-count',    'visibility', mgl);
+  if (sardMap.getLayer('unclustered-dots')) sardMap.setLayoutProperty('unclustered-dots', 'visibility', mgl);
 }
 
-// â”€â”€â”€ HOVER TOOLTIP â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-const CAT_LABELS = {
-  spiaggia: 'Spiaggia', cittÃ : 'CittÃ ', hotel: 'Hotel',
-  ristorante: 'Ristorante', attrazione: 'Attrazione',
-  parco: 'Parco Naturale', esperienza: 'Esperienza', porto: 'Porto'
-};
-
-function showHoverTooltip(poi, el) {
-  const tooltip = document.getElementById('map-hover-tooltip');
-  if (!tooltip) return;
-  const mapEl = document.getElementById('map-canvas-container');
-  const rect = el.getBoundingClientRect();
-  const mapRect = mapEl.getBoundingClientRect();
-  const color = CAT_COLORS[poi.cat] || '#fff';
-  tooltip.innerHTML = `<span class="tooltip-dot" style="background:${color}"></span><span class="tooltip-cat">${CAT_LABELS[poi.cat] || poi.cat}</span><span class="tooltip-name">${poi.name}</span>`;
-  tooltip.style.left = (rect.left - mapRect.left + rect.width / 2) + 'px';
-  tooltip.style.top  = (rect.top  - mapRect.top) + 'px';
-  tooltip.classList.add('active');
-}
-
-function hideHoverTooltip() {
-  const t = document.getElementById('map-hover-tooltip');
-  if (t) t.classList.remove('active');
-}
-
-// â”€â”€â”€ AGGIUNGI TUTTI I MARKER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function addAllMarkers() {
   allMarkers.forEach(m => m.remove());
   allMarkers = [];
-
   MAP_POI.forEach(poi => {
     if (activeMapFilter !== 'all' && poi.cat !== activeMapFilter) return;
-
     const el = document.createElement('div');
     el.className = 'map-marker';
     el.setAttribute('data-cat', poi.cat);
     el.setAttribute('data-id', poi.id);
     el.innerHTML = getMarkerSVG(CAT_COLORS[poi.cat] || '#ffffff', poi.cat);
-
-    el.addEventListener('mouseenter', () => {
-      el.firstElementChild.style.transform = 'scale(1.3)';
-      showHoverTooltip(poi, el);
-    });
-    el.addEventListener('mouseleave', () => {
-      el.firstElementChild.style.transform = 'scale(1)';
-      hideHoverTooltip();
-    });
-    el.addEventListener('click', (e) => {
-      e.stopPropagation();
-      hideHoverTooltip();
-      showQuickCard(poi);
-    });
-
+    el.addEventListener('mouseenter', () => { el.firstElementChild.style.transform = 'scale(1.3)'; showHoverTooltip(poi, el); });
+    el.addEventListener('mouseleave', () => { el.firstElementChild.style.transform = 'scale(1)'; hideHoverTooltip(); });
+    el.addEventListener('click', (e) => { e.stopPropagation(); hideHoverTooltip(); showQuickCard(poi); });
     const marker = new maplibregl.Marker({ element: el, anchor: 'center' })
       .setLngLat([poi.lng, poi.lat])
       .addTo(sardMap);
-
     allMarkers.push(marker);
   });
-
-  // Aggiorna sorgente cluster con i POI filtrati
-  const filtered = activeMapFilter === 'all'
-    ? MAP_POI
-    : MAP_POI.filter(p => p.cat === activeMapFilter);
+  const filtered = activeMapFilter === 'all' ? MAP_POI : MAP_POI.filter(p => p.cat === activeMapFilter);
   const clusterSource = sardMap.getSource('poi-cluster');
   if (clusterSource) {
     clusterSource.setData({
