@@ -631,6 +631,23 @@ function renderClusters() {
   });
 }
 
+function showHoverTooltip(poi, el) {
+  const tooltip = document.getElementById('map-hover-tooltip');
+  if (!tooltip) return;
+  const rect = el.getBoundingClientRect();
+  const mapRect = (document.getElementById('map-canvas-container') || document.body).getBoundingClientRect();
+  const color = CAT_COLORS[poi.cat] || '#ffffff';
+  tooltip.innerHTML = '<span class="tooltip-dot" style="background:' + color + '"></span>' + poi.name;
+  tooltip.style.left = (rect.left + rect.width / 2 - mapRect.left) + 'px';
+  tooltip.style.top  = (rect.top - mapRect.top) + 'px';
+  tooltip.classList.add('active');
+}
+
+function hideHoverTooltip() {
+  const t = document.getElementById('map-hover-tooltip');
+  if (t) t.classList.remove('active');
+}
+
 function addAllMarkers() {
   allMarkers.forEach(m => m.remove());
   allMarkers = [];
@@ -649,7 +666,7 @@ function addAllMarkers() {
       .addTo(sardMap);
     allMarkers.push(marker);
   });
-  if (!scIndex) scIndex = new Supercluster({ radius: 60, maxZoom: 15, minPoints: 2 });
+  if (!scIndex) scIndex = new Supercluster({ radius: 90, maxZoom: 16, minPoints: 2 });
   scIndex.load(filtered.map(p => ({
     type: 'Feature',
     properties: { id: p.id, cat: p.cat, name: p.name },
