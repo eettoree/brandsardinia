@@ -46,7 +46,9 @@ const BEACHES_DATA = [
     capienza: '250 posti/giorno',
     periodo: 'Maggio–ottobre · luglio-agosto molto affollata',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/7/76/Cala_Goloritz%C3%A9_3.JPG',
-    photoCredit: 'Mentnafunangann / CC BY-SA 3.0'
+    photoCredit: 'Mentnafunangann / CC BY-SA 3.0',
+    lat: 40.0117, lng: 9.6228,
+    badFrom: [0, 180]
   },
   {
     name: 'La Pelosa',
@@ -58,7 +60,9 @@ const BEACHES_DATA = [
     capienza: '1.500 posti/giorno',
     periodo: 'Giugno–settembre · prenotare con anticipo in luglio-agosto',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/7/7d/Beach_Della_Pelosa_%28527708116%29.jpg',
-    photoCredit: 'David Blaikie / CC BY 2.0'
+    photoCredit: 'David Blaikie / CC BY 2.0',
+    lat: 40.9961, lng: 8.2051,
+    badFrom: [270, 360]
   },
   {
     name: 'Cala Luna',
@@ -70,7 +74,9 @@ const BEACHES_DATA = [
     capienza: 'Non regolamentata',
     periodo: 'Maggio–ottobre · estate molto frequentata',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/c/c9/Cala_Luna_%28Golfo_di_Orosei%29.jpg',
-    photoCredit: 'Alessandro Mangione / CC BY-SA 4.0'
+    photoCredit: 'Alessandro Mangione / CC BY-SA 4.0',
+    lat: 40.2219, lng: 9.6548,
+    badFrom: [0, 180]
   },
   {
     name: 'Spiaggia del Principe',
@@ -82,7 +88,9 @@ const BEACHES_DATA = [
     capienza: 'Non regolamentata',
     periodo: 'Giugno–settembre · luglio-agosto affollata',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/f/fe/Spiaggia_del_Principe.jpg',
-    photoCredit: 'Ökologix / CC0 Public Domain'
+    photoCredit: 'Ökologix / CC0 Public Domain',
+    lat: 41.0942, lng: 9.4673,
+    badFrom: [270, 360]
   },
   {
     name: 'Su Giudeu',
@@ -94,7 +102,9 @@ const BEACHES_DATA = [
     capienza: 'Non regolamentata',
     periodo: 'Maggio–settembre · frequentata ma mai sovraffollata',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/9/99/Spiaggia_Su_Giudeu_2.jpg',
-    photoCredit: 'Vid Pogacnik / CC BY-SA 4.0'
+    photoCredit: 'Vid Pogacnik / CC BY-SA 4.0',
+    lat: 38.8872, lng: 8.8726,
+    badFrom: [180, 270]
   },
   {
     name: 'Poetto',
@@ -106,7 +116,9 @@ const BEACHES_DATA = [
     capienza: 'Ampia',
     periodo: 'Anno intero · estate molto frequentata dagli abitanti',
     photo: 'https://commons.wikimedia.org/wiki/Special:FilePath/Spiaggia_del_Poetto_Cagliari.jpg?width=800',
-    photoCredit: 'Wikimedia / CC BY-SA'
+    photoCredit: 'Wikimedia / CC BY-SA',
+    lat: 39.2062, lng: 9.1398,
+    badFrom: [90, 200]
   },
   {
     name: 'Is Arutas',
@@ -118,7 +130,9 @@ const BEACHES_DATA = [
     capienza: 'Non regolamentata (navetta limita l\'afflusso)',
     periodo: 'Maggio–ottobre · migliore maggio-giugno e settembre',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/e/ef/Is_arutas.jpg',
-    photoCredit: 'ManuelM / Public Domain'
+    photoCredit: 'ManuelM / Public Domain',
+    lat: 40.0172, lng: 8.4372,
+    badFrom: [240, 360]
   },
   {
     name: 'Cala Mariolu',
@@ -130,7 +144,9 @@ const BEACHES_DATA = [
     capienza: 'Non regolamentata',
     periodo: 'Giugno–settembre',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/3/39/Cala_Mariolu.jpg',
-    photoCredit: 'Marrabbio2 / CC BY-SA 3.0'
+    photoCredit: 'Marrabbio2 / CC BY-SA 3.0',
+    lat: 40.1481, lng: 9.6386,
+    badFrom: [0, 180]
   },
   {
     name: 'Tuerredda',
@@ -142,7 +158,9 @@ const BEACHES_DATA = [
     capienza: 'Non regolamentata',
     periodo: 'Maggio–ottobre · migliore maggio e settembre',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/f/f1/Tuaredda.jpg',
-    photoCredit: 'ilaria / CC BY 2.0'
+    photoCredit: 'ilaria / CC BY 2.0',
+    lat: 38.8731, lng: 8.8511,
+    badFrom: [180, 270]
   },
   {
     name: 'Cala Brandinchi',
@@ -154,7 +172,9 @@ const BEACHES_DATA = [
     capienza: 'Non regolamentata',
     periodo: 'Giugno–settembre · anche in bassa stagione spettacolare',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/5/53/Cala_Brandinchi_-_Cerde%C3%B1a_-_panoramio.jpg',
-    photoCredit: 'Ramon Espiña Fernandez / CC BY-SA 3.0'
+    photoCredit: 'Ramon Espiña Fernandez / CC BY-SA 3.0',
+    lat: 40.7819, lng: 9.6561,
+    badFrom: [0, 135]
   },
   {
     name: 'Porto Giunco',
@@ -166,7 +186,9 @@ const BEACHES_DATA = [
     capienza: 'Non regolamentata',
     periodo: 'Maggio–ottobre',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/c/ce/Porto_Giunco_beach_-_2.jpg',
-    photoCredit: 'Muzzudan / CC BY-SA 4.0'
+    photoCredit: 'Muzzudan / CC BY-SA 4.0',
+    lat: 39.1027, lng: 9.5281,
+    badFrom: [90, 200]
   },
   {
     name: 'La Cinta',
@@ -178,7 +200,9 @@ const BEACHES_DATA = [
     capienza: 'Ampia',
     periodo: 'Anno intero · estate molto frequentata',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/1/10/La_Cinta_-_panoramio.jpg',
-    photoCredit: 'Tom Rolvag / CC BY-SA 3.0'
+    photoCredit: 'Tom Rolvag / CC BY-SA 3.0',
+    lat: 40.7694, lng: 9.6625,
+    badFrom: [0, 135]
   }
 ];
 
@@ -1394,28 +1418,170 @@ function renderMusei(container) {
 
 // ─── SPIAGGE LIVE ─────────────────────────────────────────────
 function renderBeaches(container) {
-  function generateBeachData() {
-    return BEACHES_DATA.map(beach => {
-      const wind = Math.floor(Math.random() * 40 + 3);
-      const wavH = (Math.random() * 1.5).toFixed(1);
-      const temp = Math.floor(Math.random() * 8 + 22);
-      let status, statusClass;
-      if (wind < 15) {
-        status = 'Ottima';
-        statusClass = 'status-great';
-      } else if (wind < 25) {
-        status = 'Buona';
-        statusClass = 'status-good';
-      } else {
-        status = 'Sconsigliata';
-        statusClass = 'status-bad';
-      }
-      return { ...beach, wind, wavH, temp, status, statusClass };
-    });
+  // Fetch wind + wave + sea temp from Open-Meteo (free, no API key, CORS ok)
+  async function fetchBeachWeather(lat, lng) {
+    const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lng}` +
+      `&current=wind_speed_10m,wind_direction_10m,wind_gusts_10m,wave_height,sea_surface_temperature` +
+      `&wind_speed_unit=kmh&hourly=wave_height&forecast_days=1`;
+    try {
+      const r = await fetch(url);
+      const d = await r.json();
+      const c = d.current || {};
+      return {
+        wind:  Math.round(c.wind_speed_10m   || 0),
+        gusts: Math.round(c.wind_gusts_10m   || 0),
+        dir:   Math.round(c.wind_direction_10m || 0),
+        wavH:  c.wave_height != null ? parseFloat(c.wave_height).toFixed(1) : null,
+        seaT:  c.sea_surface_temperature != null ? Math.round(c.sea_surface_temperature) : null
+      };
+    } catch {
+      return null;
+    }
   }
 
-  function render() {
-    const data = generateBeachData();
+  // True if wind direction falls inside bad range [from, to]
+  function isBadDirection(dir, range) {
+    const [from, to] = range;
+    if (from <= to) return dir >= from && dir <= to;
+    return dir >= from || dir <= to; // wraps 360→0
+  }
+
+  // Evaluate beach condition based on speed + gusts + direction relative to exposure
+  function evaluateCondition(wind, gusts, dir, badFrom) {
+    const onshore = badFrom ? isBadDirection(dir, badFrom) : true;
+    const effective = onshore ? Math.max(wind, gusts * 0.7) : wind * 0.6;
+    if (effective < 10)  return { status: 'Perfetta',    statusClass: 'status-great',  label: 'Mare piatto, ideale per famiglie e bambini.' };
+    if (effective < 18)  return { status: 'Ottima',      statusClass: 'status-great',  label: onshore ? 'Vento leggero, qualche piccola onda.' : 'Vento al largo, mare calmo sotto costa.' };
+    if (effective < 28)  return { status: 'Buona',       statusClass: 'status-good',   label: onshore ? 'Vento moderato, onde 0.5-1m. Va bene per nuotatori esperti.' : 'Brezza costante, mare mosso al largo ma gestibile.' };
+    if (effective < 40)  return { status: 'Difficile',   statusClass: 'status-warn',   label: onshore ? 'Vento forte, onde significative. Sconsigliato ai bambini.' : 'Mare formato al largo, attenzione alle correnti.' };
+    return              { status: 'Sconsigliata', statusClass: 'status-bad',    label: 'Condizioni avverse. Evitare il bagno.' };
+  }
+
+  // Wind direction label
+  function windDirLabel(deg) {
+    const dirs = ['N','NE','E','SE','S','SO','O','NO'];
+    return dirs[Math.round(deg / 45) % 8];
+  }
+
+  // Render a single beach card
+  function beachCardHTML(b, w) {
+    const cond = w
+      ? evaluateCondition(w.wind, w.gusts, w.dir, b.badFrom)
+      : { status: '—', statusClass: 'status-unknown', label: 'Dati non disponibili.' };
+    const windTxt = w ? `${w.wind} km/h <span class="wind-dir">${windDirLabel(w.dir)}</span>` : '—';
+    const gustTxt = w && w.gusts > w.wind + 3 ? `raffiche ${w.gusts} km/h` : '';
+    const wavTxt  = w && w.wavH !== null  ? `${w.wavH} m` : '—';
+    const seaTxt  = w && w.seaT !== null  ? `${w.seaT}°C` : '—';
+    const barPct  = w ? Math.min(100, w.wind / 50 * 100) : 0;
+
+    return `
+      <div class="beach-card glass-card" data-beach-id="${b.name}">
+        <div class="beach-photo-wrap">
+          ${b.photo ? `<img src="${b.photo}" alt="${b.name}" class="beach-photo" loading="lazy" onerror="this.parentElement.classList.add('beach-photo-fallback');this.style.display='none';">` : ''}
+          <div class="beach-photo-gradient"></div>
+          <span class="beach-status ${cond.statusClass} beach-status-overlay">${cond.status}</span>
+          ${b.photoCredit ? `<span class="beach-photo-credit">${b.photoCredit}</span>` : ''}
+        </div>
+        <div class="beach-body">
+          <div class="beach-header">
+            <h3 class="beach-name">${b.name}</h3>
+          </div>
+          <div class="beach-location">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="12" height="12"><circle cx="8" cy="6" r="3"/><path d="M8 2C5.79 2 4 3.79 4 6c0 3.5 4 8 4 8s4-4.5 4-8c0-2.21-1.79-4-4-4z"/></svg>
+            ${b.location}
+          </div>
+          <div class="beach-type">${b.type}</div>
+          <div class="beach-condition-label">${cond.label}</div>
+          <div class="beach-stats">
+            <div class="beach-stat">
+              <div class="stat-label-top">Vento</div>
+              <div class="stat-value">${windTxt}${gustTxt ? `<div class="stat-gusts">${gustTxt}</div>` : ''}</div>
+            </div>
+            <div class="beach-stat">
+              <div class="stat-label-top">Onde</div>
+              <div class="stat-value">${wavTxt}</div>
+            </div>
+            <div class="beach-stat">
+              <div class="stat-label-top">Mare</div>
+              <div class="stat-value">${seaTxt}</div>
+            </div>
+          </div>
+          <div class="wind-bar">
+            <div class="wind-bar-fill ${cond.statusClass}" style="width:${barPct}%"></div>
+          </div>
+          <div class="beach-info">
+            <div class="beach-info-row"><span class="info-label">Accesso</span><span class="info-val">${b.access}</span></div>
+            <div class="beach-info-row"><span class="info-label">Costo</span><span class="info-val">${b.cost}</span></div>
+            ${b.prenotazione ? `<div class="beach-info-row"><span class="info-label">Prenotaz.</span><span class="info-val">${b.prenotazione}</span></div>` : ''}
+          </div>
+        </div>
+      </div>`;
+  }
+
+  // Placeholder card while loading
+  function beachCardLoading(b) {
+    return `
+      <div class="beach-card beach-card-loading glass-card" data-beach-id="${b.name}">
+        <div class="beach-photo-wrap">
+          ${b.photo ? `<img src="${b.photo}" alt="${b.name}" class="beach-photo" loading="lazy">` : ''}
+          <div class="beach-photo-gradient"></div>
+          <span class="beach-status status-loading beach-status-overlay">Caricamento...</span>
+        </div>
+        <div class="beach-body">
+          <h3 class="beach-name">${b.name}</h3>
+          <div class="beach-location">${b.location}</div>
+          <div class="beach-skeleton"></div>
+        </div>
+      </div>`;
+  }
+
+  // Search among all POI beaches (from map data)
+  function buildSearchResults(query) {
+    if (!query || query.length < 2) return '';
+    const q = query.toLowerCase();
+    const allBeaches = (typeof MAP_POI !== 'undefined' ? MAP_POI : [])
+      .filter(p => p.cat === 'spiaggia' && p.name.toLowerCase().includes(q))
+      .slice(0, 8);
+    if (!allBeaches.length) return '<p class="beach-search-empty">Nessuna spiaggia trovata.</p>';
+    return `<div class="beach-search-results">
+      ${allBeaches.map(p => `
+        <div class="beach-search-item" data-lat="${p.lat}" data-lng="${p.lng}" data-name="${p.name}" data-desc="${p.description || ''}">
+          <div class="bsi-name">${p.name}</div>
+          <div class="bsi-desc">${(p.description || '').split('.')[0]}</div>
+        </div>
+      `).join('')}
+    </div>`;
+  }
+
+  async function showSearchBeach(name, lat, lng, desc) {
+    const searchResult = document.getElementById('beach-search-result-area');
+    if (!searchResult) return;
+    searchResult.innerHTML = `<div class="beach-search-detail-loading">Recupero dati meteo per ${name}...</div>`;
+    const w = await fetchBeachWeather(lat, lng);
+    const cond = w
+      ? evaluateCondition(w.wind, w.gusts, w.dir, null)
+      : { status: '—', statusClass: 'status-unknown', label: 'Dati non disponibili.' };
+    const windTxt = w ? `${w.wind} km/h ${windDirLabel(w.dir)}` : '—';
+    const gustTxt = w && w.gusts > w.wind + 3 ? ` (raffiche ${w.gusts} km/h)` : '';
+    searchResult.innerHTML = `
+      <div class="beach-search-detail glass-card">
+        <div class="bsd-header">
+          <div class="bsd-name">${name}</div>
+          <span class="beach-status ${cond.statusClass}">${cond.status}</span>
+        </div>
+        <p class="bsd-desc">${desc || ''}</p>
+        <div class="beach-condition-label">${cond.label}</div>
+        <div class="beach-stats">
+          <div class="beach-stat"><div class="stat-label-top">Vento</div><div class="stat-value">${windTxt}${gustTxt}</div></div>
+          <div class="beach-stat"><div class="stat-label-top">Onde</div><div class="stat-value">${w && w.wavH !== null ? w.wavH + ' m' : '—'}</div></div>
+          <div class="beach-stat"><div class="stat-label-top">Mare</div><div class="stat-value">${w && w.seaT !== null ? w.seaT + '°C' : '—'}</div></div>
+        </div>
+        <div class="wind-bar"><div class="wind-bar-fill ${cond.statusClass}" style="width:${w ? Math.min(100, w.wind/50*100) : 0}%"></div></div>
+        <div class="bsd-coords">Lat ${lat.toFixed(4)}, Lng ${lng.toFixed(4)} · <a href="https://www.windy.com/?${lat},${lng},11" target="_blank" rel="noopener">Apri su Windy</a></div>
+      </div>`;
+  }
+
+  async function loadAllWeatherAndRender() {
     const now = new Date();
     const timeStr = `${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}`;
 
@@ -1423,75 +1589,86 @@ function renderBeaches(container) {
       <div class="tools-section-header">
         <h2>Spiagge Live</h2>
         <div class="beaches-meta">
-          <span class="update-time">Aggiornato: ${timeStr}</span>
+          <span class="update-time" id="beaches-update-time">Aggiornato: ${timeStr}</span>
           <button id="update-beaches-btn" class="btn-glass">Aggiorna</button>
         </div>
       </div>
-      <p class="section-subtitle">Dati simulati in tempo reale. Vento: &lt;15 km/h ottima · 15-25 buona · &gt;25 sconsigliata.</p>
-      <div class="beaches-grid">
-        ${data.map(b => `
-          <div class="beach-card glass-card">
-            <div class="beach-photo-wrap">
-              ${b.photo
-                ? `<img src="${b.photo}" alt="${b.name}" class="beach-photo" loading="lazy" onerror="this.parentElement.classList.add('beach-photo-fallback');this.style.display='none';">`
-                : ''}
-              <div class="beach-photo-gradient"></div>
-              <span class="beach-status ${b.statusClass} beach-status-overlay">${b.status}</span>
-              ${b.photoCredit ? `<span class="beach-photo-credit">${b.photoCredit}</span>` : ''}
-            </div>
-            <div class="beach-body">
-              <div class="beach-header">
-                <h3 class="beach-name">${b.name}</h3>
-              </div>
-              <div class="beach-location">
-                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="12" height="12"><circle cx="8" cy="6" r="3"/><path d="M8 2C5.79 2 4 3.79 4 6c0 3.5 4 8 4 8s4-4.5 4-8c0-2.21-1.79-4-4-4z"/></svg>
-                ${b.location}
-              </div>
-              <div class="beach-type">${b.type}</div>
-              <div class="beach-stats">
-                <div class="beach-stat">
-                  <div class="stat-label-top">Vento</div>
-                  <div class="stat-value">${b.wind} km/h</div>
-                </div>
-                <div class="beach-stat">
-                  <div class="stat-label-top">Onde</div>
-                  <div class="stat-value">${b.wavH} m</div>
-                </div>
-                <div class="beach-stat">
-                  <div class="stat-label-top">Acqua</div>
-                  <div class="stat-value">${b.temp}°C</div>
-                </div>
-              </div>
-              <div class="wind-bar">
-                <div class="wind-bar-fill ${b.statusClass}" style="width:${Math.min(100, b.wind / 40 * 100)}%"></div>
-              </div>
-              <div class="beach-info">
-                <div class="beach-info-row"><span class="info-label">Accesso</span><span class="info-val">${b.access}</span></div>
-                <div class="beach-info-row"><span class="info-label">Costo</span><span class="info-val">${b.cost}</span></div>
-                ${b.prenotazione ? `<div class="beach-info-row"><span class="info-label">Prenotaz.</span><span class="info-val">${b.prenotazione}</span></div>` : ''}
-              </div>
-            </div>
-          </div>
-        `).join('')}
+      <p class="section-subtitle">Dati vento e mare in tempo reale via Open-Meteo. Aggiornati ogni ora dai modelli meteorologici GFS/ECMWF.</p>
+
+      <div class="beach-search-wrap">
+        <input type="text" id="beach-search-input" class="beach-search-input" placeholder="Cerca spiaggia tra le 107 in mappa...">
+        <div id="beach-search-dropdown" class="beach-search-dropdown"></div>
+      </div>
+      <div id="beach-search-result-area"></div>
+
+      <div class="beaches-grid" id="beaches-main-grid">
+        ${BEACHES_DATA.map(b => beachCardLoading(b)).join('')}
       </div>
     `;
 
+    // Search input logic
+    const searchInput = document.getElementById('beach-search-input');
+    const searchDropdown = document.getElementById('beach-search-dropdown');
+    if (searchInput) {
+      searchInput.addEventListener('input', () => {
+        const q = searchInput.value.trim();
+        searchDropdown.innerHTML = buildSearchResults(q);
+        searchDropdown.style.display = q.length >= 2 ? 'block' : 'none';
+        searchDropdown.querySelectorAll('.beach-search-item').forEach(item => {
+          item.addEventListener('click', () => {
+            const name = item.dataset.name;
+            const lat  = parseFloat(item.dataset.lat);
+            const lng  = parseFloat(item.dataset.lng);
+            const desc = item.dataset.desc;
+            searchInput.value = name;
+            searchDropdown.style.display = 'none';
+            showSearchBeach(name, lat, lng, desc);
+          });
+        });
+      });
+      document.addEventListener('click', e => {
+        if (!searchInput.contains(e.target) && !searchDropdown.contains(e.target)) {
+          searchDropdown.style.display = 'none';
+        }
+      }, { once: false });
+    }
+
+    // Fetch weather for all 12 curated beaches in parallel
+    const weatherResults = await Promise.all(BEACHES_DATA.map(b => fetchBeachWeather(b.lat, b.lng)));
+    const grid = document.getElementById('beaches-main-grid');
+    if (!grid) return;
+
+    grid.innerHTML = BEACHES_DATA.map((b, i) => beachCardHTML(b, weatherResults[i])).join('');
+
     gsap.fromTo('.beach-card',
       { opacity: 0, y: 20, scale: 0.97 },
-      { opacity: 1, y: 0, scale: 1, stagger: 0.08, duration: 0.35, ease: 'power2.out' }
+      { opacity: 1, y: 0, scale: 1, stagger: 0.06, duration: 0.3, ease: 'power2.out' }
     );
 
     const updateBtn = document.getElementById('update-beaches-btn');
     if (updateBtn) {
       updateBtn.addEventListener('click', () => {
-        gsap.to('.beach-card', { opacity: 0, y: -10, stagger: 0.05, duration: 0.2,
-          onComplete: render
+        const timeEl = document.getElementById('beaches-update-time');
+        if (timeEl) {
+          const n = new Date();
+          timeEl.textContent = `Aggiornamento in corso...`;
+        }
+        gsap.to('.beach-card', { opacity: 0, y: -10, stagger: 0.04, duration: 0.18,
+          onComplete: () => {
+            const n = new Date();
+            if (timeEl) timeEl.textContent = `Aggiornato: ${n.getHours().toString().padStart(2,'0')}:${n.getMinutes().toString().padStart(2,'0')}`;
+            Promise.all(BEACHES_DATA.map(b => fetchBeachWeather(b.lat, b.lng))).then(results => {
+              const g = document.getElementById('beaches-main-grid');
+              if (g) g.innerHTML = BEACHES_DATA.map((b, i) => beachCardHTML(b, results[i])).join('');
+              gsap.fromTo('.beach-card', { opacity: 0, y: 20 }, { opacity: 1, y: 0, stagger: 0.06, duration: 0.3 });
+            });
+          }
         });
       });
     }
   }
 
-  render();
+  loadAllWeatherAndRender();
 }
 
 // ─── CAMPER & VAN ────────────────────────────────────────────
