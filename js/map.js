@@ -8,6 +8,8 @@
 let sardMap = null;
 let activeMapFilter = 'all';
 let allMarkers = [];
+let clusterDivMarkers = [];
+let scIndex = null;
 let currentQuickPoi = null;
 let searchBlurTimer = null;
 
@@ -581,133 +583,59 @@ function addCityLabels() {
 
 // â”€â”€â”€ CLUSTER LAYER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function addClusterLayer() {
-  sardMap.addSource('poi-cluster', {
-    type: 'geojson',
-    data: { type: 'FeatureCollection', features: [] },
-    cluster: true,
-    clusterMaxZoom: 12,
-    clusterRadius: 52
-  });
-
-  sardMap.addLayer({
-    id: 'cluster-circles',
-    type: 'circle',
-    source: 'poi-cluster',
-    filter: ['has', 'point_count'],
-    paint: {
-      'circle-color': [
-        'step', ['get', 'point_count'],
-        'rgba(0,180,216,0.88)', 15,
-        'rgba(0,130,180,0.90)', 50,
-        'rgba(2,90,140,0.93)'
-      ],
-      'circle-radius': [
-        'step', ['get', 'point_count'],
-        22, 15, 32, 50, 42
-      ],
-      'circle-stroke-width': 2.5,
-      'circle-stroke-color': 'rgba(255,255,255,0.45)',
-      'circle-blur': 0.05
-    }
-  });
-
-  sardMap.addLayer({
-    id: 'cluster-count',
-    type: 'symbol',
-    source: 'poi-cluster',
-    filter: ['has', 'point_count'],
-    layout: {
-      'text-field': '{point_count_abbreviated}',
-      'text-font': ['Open Sans Bold', 'Arial Unicode MS Bold'],
-      'text-size': ['step', ['get', 'point_count'], 12, 15, 14, 50, 16]
-    },
-    paint: { 'text-color': '#ffffff' }
-  });
-
-  sardMap.addLayer({
-    id: 'unclustered-dots',
-    type: 'circle',
-    source: 'poi-cluster',
-    filter: ['!', ['has', 'point_count']],
-    paint: {
-      'circle-color': ['match', ['get', 'cat'],
-        'spiaggia',   '#00BFFF',
-        'citt\u00e0', '#8899bb',
-        'hotel',      '#C8102E',
-        'ristorante', '#FF8C00',
-        'attrazione', '#FFD700',
-        'parco',      '#32CD32',
-        'esperienza', '#B040FF',
-        'porto',      '#0066CC',
-        '#aaaaaa'
-      ],
-      'circle-radius': ['interpolate', ['linear'], ['zoom'], 8, 5, 11, 7, 12, 0],
-      'circle-stroke-width': 1.5,
-      'circle-stroke-color': 'rgba(255,255,255,0.9)',
-      'circle-opacity': ['interpolate', ['linear'], ['zoom'], 11.5, 1, 12, 0]
-    }
-  });
-
-  sardMap.on('click', 'cluster-circles', (e) => {
-    e.stopPropagation();
-    const features = sardMap.queryRenderedFeatures(e.point, { layers: ['cluster-circles'] });
-    if (!features.length) return;
-    const clusterId = features[0].properties.cluster_id;
-    sardMap.getSource('poi-cluster').getClusterExpansionZoom(clusterId, (err, zoom) => {
-      if (err) return;
-      sardMap.easeTo({ center: features[0].geometry.coordinates, zoom: zoom + 0.5, duration: 500 });
-    });
-  });
-
-  sardMap.on('click', 'unclustered-dots', (e) => {
-    e.stopPropagation();
-    if (sardMap.getZoom() >= 12) return;
-    const props = e.features && e.features[0] && e.features[0].properties;
-    if (!props) return;
-    const poi = MAP_POI.find(p => p.id === props.id);
-    if (poi) showQuickCard(poi);
-  });
-
-  sardMap.on('mouseenter', 'cluster-circles',  () => { sardMap.getCanvas().style.cursor = 'pointer'; });
-  sardMap.on('mouseleave', 'cluster-circles',  () => { sardMap.getCanvas().style.cursor = ''; });
-  sardMap.on('mouseenter', 'unclustered-dots', () => { sardMap.getCanvas().style.cursor = 'pointer'; });
-  let _dotPopup = null;
-  sardMap.on('mousemove', 'unclustered-dots', (e) => {
-    if (!e.features || !e.features.length) return;
-    const props = e.features[0].properties;
-    if (!_dotPopup) {
-      _dotPopup = new maplibregl.Popup({ closeButton: false, closeOnClick: false, offset: 14, className: 'dot-hover-popup' });
-    }
-    _dotPopup.setLngLat(e.lngLat).setHTML('<span style="font:600 12px/1.4 system-ui;color:#111;white-space:nowrap">' + props.name + '</span>').addTo(sardMap);
-  });
-  sardMap.on('mouseleave', 'unclustered-dots', () => {
-    if (_dotPopup) { _dotPopup.remove(); _dotPopup = null; }
-  });
-
-  sardMap.on('mouseleave', 'unclustered-dots', () => { sardMap.getCanvas().style.cursor = ''; });
-
-  sardMap.on('zoom', syncMarkersToZoom);
+  sardMap.on('moveend', renderClusters);
+  sardMap.on('zoomend', renderClusters);
 }
 
-function syncMarkersToZoom() {
-  const z = sardMap.getZoom();
-  const showDom = z >= 12;
+function renderClusters() {
+  if (!scIndex || !sardMap) return;
+
+  clusterDivMarkers.forEach(m => m.remove());
+  clusterDivMarkers = [];
+
+  const zoom = Math.round(sardMap.getZoom());
+  const b = sardMap.getBounds();
+  const bbox = [b.getWest(), b.getSouth(), b.getEast(), b.getNorth()];
+  const clusters = scIndex.getClusters(bbox, zoom);
+
+  const individualIds = new Set();
+
+  clusters.forEach(feature => {
+    const [lng, lat] = feature.geometry.coordinates;
+    if (feature.properties.cluster) {
+      const count = feature.properties.point_count;
+      const size = count < 10 ? 40 : count < 50 ? 50 : 62;
+      const fs = count < 10 ? 15 : count < 50 ? 13 : 12;
+      const el = document.createElement('div');
+      el.className = 'sc-cluster';
+      el.innerHTML = '<span>' + count + '</span>';
+      el.style.cssText = 'width:' + size + 'px;height:' + size + 'px;background:rgba(0,180,216,0.88);border:2.5px solid rgba(255,255,255,0.50);border-radius:50%;display:flex;align-items:center;justify-content:center;font:700 ' + fs + 'px/1 system-ui;color:#fff;cursor:pointer;box-shadow:0 2px 16px rgba(0,0,0,0.45);user-select:none;';
+      el.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const expZoom = scIndex.getClusterExpansionZoom(feature.properties.cluster_id);
+        sardMap.easeTo({ center: [lng, lat], zoom: Math.min(expZoom + 0.5, 18), duration: 500 });
+      });
+      const m = new maplibregl.Marker({ element: el, anchor: 'center' }).setLngLat([lng, lat]).addTo(sardMap);
+      clusterDivMarkers.push(m);
+    } else {
+      individualIds.add(feature.properties.id);
+    }
+  });
+
   allMarkers.forEach(m => {
     const el = m.getElement();
-    el.style.opacity = showDom ? '1' : '0';
-    el.style.pointerEvents = showDom ? 'auto' : 'none';
+    const id = el.getAttribute('data-id');
+    const show = individualIds.has(id);
+    el.style.opacity = show ? '1' : '0';
+    el.style.pointerEvents = show ? 'auto' : 'none';
   });
-  const mgl = showDom ? 'none' : 'visible';
-  if (sardMap.getLayer('cluster-circles'))  sardMap.setLayoutProperty('cluster-circles',  'visibility', mgl);
-  if (sardMap.getLayer('cluster-count'))    sardMap.setLayoutProperty('cluster-count',    'visibility', mgl);
-  if (sardMap.getLayer('unclustered-dots')) sardMap.setLayoutProperty('unclustered-dots', 'visibility', mgl);
 }
 
 function addAllMarkers() {
   allMarkers.forEach(m => m.remove());
   allMarkers = [];
-  MAP_POI.forEach(poi => {
-    if (activeMapFilter !== 'all' && poi.cat !== activeMapFilter) return;
+  const filtered = activeMapFilter === 'all' ? MAP_POI : MAP_POI.filter(p => p.cat === activeMapFilter);
+  filtered.forEach(poi => {
     const el = document.createElement('div');
     el.className = 'map-marker';
     el.setAttribute('data-cat', poi.cat);
@@ -721,21 +649,13 @@ function addAllMarkers() {
       .addTo(sardMap);
     allMarkers.push(marker);
   });
-  const filtered = activeMapFilter === 'all' ? MAP_POI : MAP_POI.filter(p => p.cat === activeMapFilter);
-  const clusterSource = sardMap.getSource('poi-cluster');
-  if (clusterSource) {
-    clusterSource.setData({
-      type: 'FeatureCollection',
-      features: filtered.map(p => ({
-        type: 'Feature',
-        properties: { id: p.id, name: p.name, cat: p.cat },
-        geometry: { type: 'Point', coordinates: [p.lng, p.lat] }
-      }))
-    });
-  }
-
-  // Imposta visibilitÃ  iniziale coerente con lo zoom corrente
-  syncMarkersToZoom();
+  if (!scIndex) scIndex = new Supercluster({ radius: 60, maxZoom: 15, minPoints: 2 });
+  scIndex.load(filtered.map(p => ({
+    type: 'Feature',
+    properties: { id: p.id, cat: p.cat, name: p.name },
+    geometry: { type: 'Point', coordinates: [p.lng, p.lat] }
+  })));
+  renderClusters();
 }
 
 // â”€â”€â”€ QUICK CARD (primo click pin) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
