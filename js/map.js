@@ -372,6 +372,17 @@ const CAT_COLORS = {
   porto:       '#0066CC'
 };
 
+const CAT_LABELS = {
+  spiaggia:   'Spiaggia',
+  'città':    'Città',
+  hotel:      'Hotel',
+  ristorante: 'Ristorante',
+  attrazione: 'Attrazione',
+  parco:      'Parco Naturale',
+  esperienza: 'Esperienza',
+  porto:      'Porto / Marina'
+};
+
 // â”€â”€â”€ MAPPING CATEGORIA â†’ FILE ICONA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const CAT_ICONS = {
   spiaggia:   'spiagge',
@@ -504,7 +515,6 @@ function _initMapCore(onReady) {
   // Quando la mappa Ã¨ pronta
   sardMap.on('load', () => {
     addClusterLayer();
-    addAllMarkers();
     addCityLabels();
     sardMap.addControl(new maplibregl.TerrainControl({
       source: 'terrain-dem',
@@ -591,6 +601,12 @@ function addClusterLayer() {
 
 function renderClusters() {
   if (!scIndex || !sardMap) return;
+  if (!pinsVisible) {
+    clusterDivMarkers.forEach(m => m.remove());
+    clusterDivMarkers = [];
+    allMarkers.forEach(m => { const el = m.getElement(); el.style.opacity = '0'; el.style.pointerEvents = 'none'; });
+    return;
+  }
 
   clusterDivMarkers.forEach(m => m.remove());
   clusterDivMarkers = [];
@@ -668,7 +684,7 @@ function addAllMarkers() {
       .addTo(sardMap);
     allMarkers.push(marker);
   });
-  if (!scIndex) scIndex = new Supercluster({ radius: 90, maxZoom: 16, minPoints: 2 });
+  scIndex = new Supercluster({ radius: 90, maxZoom: 16, minPoints: 2 });
   scIndex.load(filtered.map(p => ({
     type: 'Feature',
     properties: { id: p.id, cat: p.cat, name: p.name },
