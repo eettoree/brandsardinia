@@ -579,16 +579,19 @@ const CAT_COLORS = {
   porto:       '#0066CC'
 };
 
-const CAT_LABELS = {
-  spiaggia:   'Spiaggia',
-  'città':    'Città',
-  hotel:      'Hotel',
-  ristorante: 'Ristorante',
-  attrazione: 'Attrazione',
-  parco:      'Parco Naturale',
-  esperienza: 'Esperienza',
-  porto:      'Porto / Marina'
-};
+function getCatLabel(cat) {
+  const labels = {
+    spiaggia:   t('map.cat.spiaggia'),
+    'citt\u00e0':    t('map.cat.citta'),
+    hotel:      t('map.cat.hotel'),
+    ristorante: t('map.cat.ristorante'),
+    attrazione: t('map.cat.attrazione'),
+    parco:      t('map.cat.parco'),
+    esperienza: t('map.cat.esperienza'),
+    porto:      t('map.cat.porto')
+  };
+  return labels[cat] || cat;
+}
 
 // â”€â”€â”€ MAPPING CATEGORIA â†’ FILE ICONA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const CAT_ICONS = {
@@ -766,7 +769,7 @@ function addCityLabels() {
   });
 
   const tierConfig = [
-    { tier: 1, minzoom: 5.5, size: ['interpolate',['linear'],['zoom'], 6,13, 10,17], weight: 700 },
+    { tier: 1, minzoom: 5.0, size: ['interpolate',['linear'],['zoom'], 6,13, 10,17], weight: 700, ignorePlacement: true },
     { tier: 2, minzoom: 7.8, size: ['interpolate',['linear'],['zoom'], 8,11, 11,14], weight: 600 },
     { tier: 3, minzoom: 9.2, size: ['interpolate',['linear'],['zoom'], 9.5,10, 12,13], weight: 500 },
     { tier: 4, minzoom: 10.8, size: 9, weight: 400 },
@@ -914,13 +917,13 @@ function showQuickCard(poi) {
     ${photoData ? `<div class="qc-photo"><img src="${photoData.url}" alt="${poi.name}" loading="lazy" onerror="this.parentElement.style.display='none'"><div class="qc-photo-overlay"></div></div>` : `<div class="qc-photo qc-photo-grad" style="background:${CAT_GRADIENTS[poi.cat]||'#111'}"></div>`}
     <button class="qc-close" onclick="closeQuickCard()">&#10005;</button>
     <div class="qc-body">
-      <div class="qc-cat" style="color:${catColor}">${CAT_LABELS[poi.cat] || poi.cat}</div>
+      <div class="qc-cat" style="color:${catColor}">${getCatLabel(poi.cat) || poi.cat}</div>
       <h3 class="qc-name">${poi.name}</h3>
       <p class="qc-desc">${shortDesc}</p>
       <div class="qc-actions">
         <button class="qc-expand" onclick="expandToFullPanel()">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
-          Espandi scheda
+          ${t('map.card.expand')}
         </button>
         <a class="qc-gmaps" href="https://www.google.com/maps/place/${encodeURIComponent(poi.name + ', Sardegna, Italy')}/@${poi.lat},${poi.lng},17z" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12" height="12"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -978,7 +981,7 @@ function togglePins() {
   const btn = document.getElementById('pin-toggle-btn');
   if (btn) {
     btn.classList.toggle('active', pinsVisible);
-    btn.querySelector('span').textContent = pinsVisible ? 'Nascondi Pin' : 'Mostra Pin';
+    btn.querySelector('span').textContent = pinsVisible ? t('map.pins.hide') : t('map.pins.show');
   }
   if (pinsVisible && sardMap && sardMap.loaded()) addAllMarkers();
   else renderClusters();
@@ -1011,17 +1014,17 @@ function handleMapSearch(query) {
   const matches = MAP_POI.filter(p =>
     p.name.toLowerCase().includes(q) ||
     (p.description && p.description.toLowerCase().includes(q)) ||
-    (p.cat && CAT_LABELS[p.cat]?.toLowerCase().includes(q))
+    (p.cat && getCatLabel(p.cat)?.toLowerCase().includes(q))
   ).slice(0, 12);
 
   if (!matches.length) {
-    results.innerHTML = '<div class="search-no-result">Nessun risultato</div>';
+    results.innerHTML = `<div class="search-no-result">${t('map.no_results')}</div>`;
   } else {
     results.innerHTML = matches.map(p => `
       <div class="search-result-item" onclick="selectSearchResult('${p.id}')">
         <span class="search-result-dot" style="background:${CAT_COLORS[p.cat]||'#fff'}"></span>
         <span class="search-result-name">${p.name}</span>
-        <span class="search-result-cat">${CAT_LABELS[p.cat] || p.cat}</span>
+        <span class="search-result-cat">${getCatLabel(p.cat) || p.cat}</span>
       </div>
     `).join('');
   }
@@ -1097,16 +1100,7 @@ function showMapInfoPanel(poi) {
   const panel = document.getElementById('map-info-panel');
   if (!panel) return;
 
-  const catLabel = {
-    spiaggia:    'Spiaggia',
-    cittÃ :       'CittÃ ',
-    hotel:       'Hotel',
-    ristorante:  'Ristorante',
-    attrazione:  'Attrazione',
-    parco:       'Parco Naturale',
-    esperienza:  'Esperienza',
-    porto:       'Porto / Marina'
-  }[poi.cat] || poi.cat;
+  getCatLabel(poi.cat) || poi.cat;
 
   const catColor = CAT_COLORS[poi.cat] || '#fff';
   const catGradient = CAT_GRADIENTS[poi.cat] || CAT_GRADIENTS.attrazione;
@@ -1458,16 +1452,16 @@ function rpShowResults(stops, route) {
 
   const resultsEl = document.getElementById('rp-results');
   document.getElementById('rp-summary').innerHTML = `
-    <div class="rp-stat"><div class="rp-stat-value">${distKm} km</div><div class="rp-stat-label">Distanza</div></div>
-    <div class="rp-stat"><div class="rp-stat-value">${durText}</div><div class="rp-stat-label">Durata</div></div>
-    <div class="rp-stat"><div class="rp-stat-value">${stops.length}</div><div class="rp-stat-label">Tappe</div></div>`;
+    <div class="rp-stat"><div class="rp-stat-value">${distKm} km</div><div class="rp-stat-label">${t('map.route.distance')}</div></div>
+    <div class="rp-stat"><div class="rp-stat-value">${durText}</div><div class="rp-stat-label">${t('map.route.duration')}</div></div>
+    <div class="rp-stat"><div class="rp-stat-value">${stops.length}</div><div class="rp-stat-label">${t('map.route.stops')}</div></div>`;
 
   document.getElementById('rp-legs').innerHTML = stops.map((s, i) => `
     <div class="rp-leg">
       <div class="rp-leg-dot" style="background:${i === 0 ? '#32CD32' : i === stops.length - 1 ? '#C8102E' : '#FF8C00'}"></div>
       <div class="rp-leg-info">
         <div class="rp-leg-name">${s.name}</div>
-        <div class="rp-leg-detail">${i === 0 ? 'Partenza' : i === stops.length - 1 ? 'Arrivo' : `Tappa ${i}`}</div>
+        <div class="rp-leg-detail">${i === 0 ? 'Partenza' : i === stops.length - 1 ? 'Arrivo' : `${t('map.route.leg')} ${i}`}</div>
       </div>
     </div>`).join('');
 
@@ -1490,7 +1484,7 @@ function rpShowResultsFallback(stops) {
       <div class="rp-leg-dot"></div>
       <div class="rp-leg-info">
         <div class="rp-leg-name">${s.name}</div>
-        <div class="rp-leg-detail">${i === 0 ? 'Partenza' : i === stops.length - 1 ? 'Arrivo' : `Tappa ${i}`}</div>
+        <div class="rp-leg-detail">${i === 0 ? 'Partenza' : i === stops.length - 1 ? 'Arrivo' : `${t('map.route.leg')} ${i}`}</div>
       </div>
     </div>`).join('');
 

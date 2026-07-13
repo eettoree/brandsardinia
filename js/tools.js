@@ -445,7 +445,8 @@ const SERVICE_ICONS = {
   bar:         { icon: 'BAR', label: 'Bar/Ristorante' }
 };
 
-const MONTH_NAMES = ['', 'Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'];
+// MONTH_NAMES now driven by i18n
+function getMonthNames() { return t('tools.calendar.months'); }
 
 // ─── CANTINE DATA ─────────────────────────────────────────────
 const CANTINE_DATA = [
@@ -690,7 +691,8 @@ function renderCalendar(container) {
     sport: 'Sport', tradizione: 'Tradizioni', concerto: 'Concerti',
     cinema: 'Cinema', mostre: 'Mostre'
   };
-  const DAY_NAMES = ['Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab', 'Dom'];
+  // DAY_NAMES now driven by i18n
+function getDayNames() { return t('tools.calendar.days'); }
 
   let currentView    = 'list';
   let currentFilters = { month: 0, province: 'ALL', category: 'ALL' };
@@ -741,7 +743,7 @@ function renderCalendar(container) {
       <div class="event-card glass-card">
         <div class="event-date-box" style="border-color:${catColor}">
           <span class="event-day">${date.getDate()}</span>
-          <span class="event-month">${MONTH_NAMES[date.getMonth() + 1].substring(0,3).toUpperCase()}</span>
+          <span class="event-month">${getMonthNames()[date.getMonth() + 1].substring(0,3).toUpperCase()}</span>
         </div>
         <div class="event-body">
           <div class="event-category" style="color:${catColor}">${(CAT_LABELS[ev.category] || ev.category).toUpperCase()}</div>
@@ -768,7 +770,7 @@ function renderCalendar(container) {
       const months = Object.keys(grouped).map(Number).sort((a, b) => a - b);
       return months.map(m => `
         <div class="events-month-group">
-          <h4 class="events-month-label">${MONTH_NAMES[m]}</h4>
+          <h4 class="events-month-label">${getMonthNames()[m]}</h4>
           <div class="events-grid">${grouped[m].map(ev => buildEventCardHTML(ev)).join('')}</div>
         </div>`).join('');
     }
@@ -813,7 +815,7 @@ function renderCalendar(container) {
       <div class="cal-grid-container">
         <div class="cal-nav">
           <button class="cal-nav-btn" id="cal-prev">&#8592;</button>
-          <h3 class="cal-month-title">${MONTH_NAMES[month]} ${year}</h3>
+          <h3 class="cal-month-title">${getMonthNames()[month]} ${year}</h3>
           <button class="cal-nav-btn" id="cal-next">&#8594;</button>
         </div>
         <div class="cal-grid">
@@ -856,7 +858,7 @@ function renderCalendar(container) {
       <div style="display:flex;align-items:flex-start;gap:16px;margin-bottom:16px">
         <div class="event-date-box" style="border-color:${catColor};flex-shrink:0">
           <span class="event-day">${date.getDate()}</span>
-          <span class="event-month">${MONTH_NAMES[date.getMonth() + 1].substring(0,3).toUpperCase()}</span>
+          <span class="event-month">${getMonthNames()[date.getMonth() + 1].substring(0,3).toUpperCase()}</span>
         </div>
         <div>
           <div class="event-category" style="color:${catColor};margin-bottom:4px">${(CAT_LABELS[ev.category] || ev.category).toUpperCase()}</div>
@@ -886,7 +888,7 @@ function renderCalendar(container) {
         </div>
       </div>
       <div class="tools-section-header">
-        <h2>Calendario Eventi Sardegna</h2>
+        <h2>${t('tools.render.calendar')}</h2>
         <div class="tools-filter">
           <div class="view-toggle">
             <div class="view-toggle-indicator ${isCal ? 'right' : ''}"></div>
@@ -968,7 +970,7 @@ function renderComingSoon(container, title, desc) {
   container.innerHTML = `
     <div class="tools-section-header">
       <h2>${title}</h2>
-      <span class="coming-soon-badge">In arrivo</span>
+      <span class="coming-soon-badge">${t('tools.coming_soon')}</span>
     </div>
     <div class="coming-soon-wrap">
       <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="1" width="64" height="64" class="coming-soon-illus">
@@ -1041,7 +1043,7 @@ function renderPrenotazioni(container) {
 
   container.innerHTML = `
     <div class="tools-section-header">
-      <h2>Prenotazioni</h2>
+      <h2>${t('tools.render.prenotazioni')}</h2>
       <p class="prenot-subtitle">Hub di prenotazione — accedi alle migliori piattaforme per organizzare il tuo soggiorno.</p>
     </div>
     <div class="prenotazioni-grid">
@@ -1086,7 +1088,7 @@ function renderBiglietti(container) {
 
   container.innerHTML = `
     <div class="tools-section-header">
-      <h2>Biglietti & Attrazioni</h2>
+      <h2>${t('tools.render.biglietti')}</h2>
       <p class="prenot-subtitle">Acquista online — salta le code e accedi direttamente alle piattaforme ufficiali.</p>
     </div>
     <div class="biglietti-grid">
@@ -1132,7 +1134,7 @@ function renderArtigiani(container) {
       ? ARTIGIANI_DATA
       : ARTIGIANI_DATA.filter(a => (groupMap[active] || [active]).includes(a.specialita));
     container.innerHTML = `
-      <h2 class="tool-section-title">Artigiani Sardi</h2>
+      <h2 class="tool-section-title">${t('tools.render.artigiani')}</h2>
       <p class="tool-section-sub">Maestri artigiani dell'isola — ceramica, filigrana, tessuti, coltelli e molto altro</p>
       <div class="tool-filter-pills">
         ${filters.map(f => `<button class="filter-pill${f.key===active?' active':''}" data-key="${f.key}">${f.label}</button>`).join('')}
@@ -1150,7 +1152,7 @@ function renderArtigiani(container) {
             <div class="artg-prodotti">${a.prodotti.map(p=>`<span class="artg-prod-tag">${p}</span>`).join('')}</div>
             <div class="artg-footer">
               ${a.tel ? `<span class="artg-tel">${a.tel}</span>` : ''}
-              ${a.web ? `<a href="${a.web}" target="_blank" class="artg-link">Sito web</a>` : ''}
+              ${a.web ? `<a href="${a.web}" target="_blank" class="artg-link">${t('tools.action.website')}</a>` : ''}
             </div>
           </div>`).join('')}
       </div>`;
@@ -1175,7 +1177,7 @@ function renderGuide(container) {
   function draw(active) {
     const list = active === 'tutti' ? GUIDE_DATA : GUIDE_DATA.filter(g => g.tipo === active);
     container.innerHTML = `
-      <h2 class="tool-section-title">Guide Turistiche</h2>
+      <h2 class="tool-section-title">${t('tools.render.guide')}</h2>
       <p class="tool-section-sub">Cooperative e agenzie di guide certificate — per scoprire la Sardegna con chi la conosce davvero</p>
       <div class="tool-filter-pills">
         ${filters.map(f => `<button class="filter-pill${f.key===active?' active':''}" data-key="${f.key}">${f.label}</button>`).join('')}
@@ -1193,7 +1195,7 @@ function renderGuide(container) {
             <div class="guida-lingue">${g.lingue.map(l=>`<span class="guida-lang-tag">${l}</span>`).join('')}</div>
             <div class="guida-footer">
               <span class="guida-tel">${g.tel}</span>
-              <a href="${g.web}" target="_blank" class="guida-link">Sito web</a>
+              <a href="${g.web}" target="_blank" class="guida-link">${t('tools.action.website')}</a>
             </div>
           </div>`).join('')}
       </div>`;
@@ -1216,7 +1218,7 @@ function renderComuni(container) {
   function draw(active) {
     const list = active === 'tutti' ? COMUNI_DATA : COMUNI_DATA.filter(c => c.zona === active);
     container.innerHTML = `
-      <h2 class="tool-section-title">Comuni della Sardegna</h2>
+      <h2 class="tool-section-title">${t('tools.render.comuni')}</h2>
       <p class="tool-section-sub">Una selezione dei borghi e città più significativi dell'isola — storia, arte, natura e identità</p>
       <div class="tool-filter-pills">
         ${filters.map(f => `<button class="filter-pill${f.key===active?' active':''}" data-key="${f.key}">${f.label}</button>`).join('')}
@@ -1263,7 +1265,7 @@ function renderProdotti(container) {
   function draw(active) {
     const list = active === 'tutti' ? PRODOTTI_DATA : PRODOTTI_DATA.filter(p => p.categoria === active);
     container.innerHTML = `
-      <h2 class="tool-section-title">Prodotti Tipici Sardi</h2>
+      <h2 class="tool-section-title">${t('tools.render.prodotti')}</h2>
       <p class="tool-section-sub">Eccellenze enogastronomiche e artigianali dell'isola — con indicazioni su dove acquistarle</p>
       <div class="tool-filter-pills">
         ${filters.map(f => `<button class="filter-pill${f.key===active?' active':''}" data-key="${f.key}">${f.label}</button>`).join('')}
@@ -1281,7 +1283,7 @@ function renderProdotti(container) {
             <p class="prodotto-desc">${p.desc}</p>
             <div class="prodotto-dove"><span class="prodotto-dove-label">Dove acquistare:</span> ${p.dove}</div>
             <div class="prodotto-footer">
-              <a href="${p.link}" target="_blank" class="prodotto-link">Scopri di più</a>
+              <a href="${p.link}" target="_blank" class="prodotto-link">${t('tools.action.discover')}</a>
             </div>
           </div>`).join('')}
       </div>`;
@@ -1307,7 +1309,7 @@ function renderSentieri(container) {
     const list = diff === 'tutti' ? SENTIERI_DATA : SENTIERI_DATA.filter(s => s.difficolta === diff);
     container.innerHTML = `
       <div class="tools-section-header">
-        <h2>Sentieri & Trekking</h2>
+        <h2>${t('tools.render.sentieri')}</h2>
         <p class="prenot-subtitle">Percorsi CAI e naturalistici in Sardegna — difficoltà, dislivello e punti di partenza.</p>
       </div>
       <div class="tool-filter-pills">
@@ -1360,7 +1362,7 @@ function renderRistoranti(container) {
     const list = tipo === 'tutti' ? RISTORANTI_DATA : RISTORANTI_DATA.filter(r => r.tipo === tipo);
     container.innerHTML = `
       <div class="tools-section-header">
-        <h2>Ristoranti</h2>
+        <h2>${t('tools.render.ristoranti')}</h2>
         <p class="prenot-subtitle">Ristoranti, trattorie e agriturismi selezionati per qualità e cucina tipica sarda.</p>
       </div>
       <div class="tool-filter-pills">
@@ -1384,7 +1386,7 @@ function renderRistoranti(container) {
             </div>
             <div class="cantina-footer">
               ${r.tel ? `<span class="cantina-tel">📞 ${r.tel}</span>` : ''}
-              ${r.web && r.web!=='#' ? `<a href="${r.web}" target="_blank" rel="noopener" class="cantina-link">Prenota →</a>` : ''}
+              ${r.web && r.web!=='#' ? `<a href="${r.web}" target="_blank" rel="noopener" class="cantina-link">${t('tools.action.book')} →</a>` : ''}
             </div>
           </div>`;
         }).join('')}
@@ -1414,7 +1416,7 @@ function renderHotel(container) {
     const list = tipo === 'tutti' ? HOTEL_DATA : HOTEL_DATA.filter(h => h.tipo === tipo);
     container.innerHTML = `
       <div class="tools-section-header">
-        <h2>Hotel & Alloggi</h2>
+        <h2>${t('tools.render.hotel')}</h2>
         <p class="prenot-subtitle">Hotel, resort, B&B e agriturismo — selezione curata per ogni budget e stile di viaggio.</p>
       </div>
       <div class="tool-filter-pills">
@@ -1439,7 +1441,7 @@ function renderHotel(container) {
             </div>
             <div class="cantina-footer">
               ${h.tel ? `<span class="cantina-tel">📞 ${h.tel}</span>` : ''}
-              ${h.web && h.web!=='#' ? `<a href="${h.web}" target="_blank" rel="noopener" class="cantina-link">Sito web →</a>` : ''}
+              ${h.web && h.web!=='#' ? `<a href="${h.web}" target="_blank" rel="noopener" class="cantina-link">${t('tools.action.website')} →</a>` : ''}
             </div>
           </div>`;
         }).join('')}
@@ -1468,7 +1470,7 @@ function renderCantine(container) {
     const list = zona === 'tutte' ? CANTINE_DATA : CANTINE_DATA.filter(c => c.zona === zona);
     container.innerHTML = `
       <div class="tools-section-header">
-        <h2>Cantine & Vino</h2>
+        <h2>${t('tools.render.cantine')}</h2>
         <p class="prenot-subtitle">Cantine sarde aperte al pubblico — degustazioni, visite guidate e acquisto diretto.</p>
       </div>
       <div class="tool-filter-pills">
@@ -1490,7 +1492,7 @@ function renderCantine(container) {
             </div>
             <div class="cantina-footer">
               ${c.tel ? `<span class="cantina-tel">📞 ${c.tel}</span>` : ''}
-              <a href="${c.web}" target="_blank" rel="noopener" class="cantina-link">Sito web →</a>
+              <a href="${c.web}" target="_blank" rel="noopener" class="cantina-link">${t('tools.action.website')} →</a>
             </div>
           </div>`).join('')}
         ${list.length===0 ? '<div class="no-events">Nessuna cantina trovata.</div>' : ''}
@@ -1520,7 +1522,7 @@ function renderMusei(container) {
     const list = tipo === 'tutti' ? MUSEI_DATA : MUSEI_DATA.filter(m => m.tipo === tipo);
     container.innerHTML = `
       <div class="tools-section-header">
-        <h2>Musei & Cultura</h2>
+        <h2>${t('tools.render.musei')}</h2>
         <p class="prenot-subtitle">Musei, siti nuragici e collezioni permanenti — orari, biglietti e percorsi tematici in Sardegna.</p>
       </div>
       <div class="tool-filter-pills">
@@ -1740,7 +1742,7 @@ function renderBeaches(container) {
 
     container.innerHTML = `
       <div class="tools-section-header">
-        <h2>Spiagge Live</h2>
+        <h2>${t('tools.render.beaches')}</h2>
         <div class="beaches-meta">
           <span class="update-time" id="beaches-update-time">Aggiornato: ${timeStr}</span>
           <button id="update-beaches-btn" class="btn-glass">Aggiorna</button>
@@ -1828,7 +1830,7 @@ function renderBeaches(container) {
 function renderCamper(container) {
   container.innerHTML = `
     <div class="tools-section-header">
-      <h2>Aree Sosta Camper & Van</h2>
+      <h2>${t('tools.render.camper')}</h2>
     </div>
     <p class="section-subtitle">8 aree sosta selezionate in tutta la Sardegna. Verifica disponibilità prima di partire.</p>
     <div class="camper-grid">
@@ -1870,7 +1872,7 @@ function renderSports(container) {
 
   container.innerHTML = `
     <div class="tools-section-header">
-      <h2>Sport & Avventura</h2>
+      <h2>${t('tools.render.sports')}</h2>
     </div>
     <p class="section-subtitle">Le migliori attività outdoor in Sardegna con operatori certificati e aree selezionate.</p>
     <div class="sports-grid">
@@ -1923,7 +1925,7 @@ function renderSports(container) {
 function renderTransport(container) {
   container.innerHTML = `
     <div class="tools-section-header">
-      <h2>Come Raggiungere la Sardegna</h2>
+      <h2>${t('tools.render.transport')}</h2>
     </div>
     <p class="section-subtitle">Tutto quello che devi sapere su aeroporti, traghetti, bus, treni e noleggi.</p>
 
@@ -2172,7 +2174,7 @@ function renderItinerari(container) {
   function render() {
     container.innerHTML = `
       <div class="tools-section-header">
-        <h2>Itinerari Pronti</h2>
+        <h2>${t('tools.render.itinerari')}</h2>
       </div>
       <p class="section-subtitle">10 percorsi verificati — da 2 a 10 giorni, temi diversi. Clicca per vedere le tappe giorno per giorno.</p>
       <div class="itinerari-grid">
@@ -2807,7 +2809,7 @@ function renderSocialWall(container) {
   // Build shell (once)
   container.innerHTML = `
     <div class="tools-section-header">
-      <h2>Sardegna Live</h2>
+      <h2>${t('tools.render.social')}</h2>
       <p class="section-subtitle">Foto, video e reel dalle migliori pagine Instagram sulla Sardegna. Cerca un argomento o filtra per tema.</p>
     </div>
     <div class="sw-controls">
@@ -2958,7 +2960,7 @@ function renderNordSardegna(container) {
 
     container.innerHTML = `
       <div class="tools-section-header">
-        <h2>Nord Sardegna</h2>
+        <h2>${t('tools.render.nord')}</h2>
       </div>
       <p class="section-subtitle">Guida completa al nord — Gallura, Sassari, Alghero, Logudoro. Con focus su inverno e bassa stagione.</p>
 
@@ -3047,7 +3049,7 @@ function renderNavigazione(container) {
 
   container.innerHTML = `
     <div class="tools-section-header">
-      <h2>Navigazione in Sardegna</h2>
+      <h2>${t('tools.render.navigazione')}</h2>
       <p class="section-subtitle">Porti, zone protette, aree di navigazione e info pratiche per chi esplora la Sardegna via mare.</p>
     </div>
 

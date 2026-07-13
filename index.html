@@ -282,21 +282,21 @@
             <svg class="map-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
               <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
             </svg>
-            <input type="text" id="map-search-input" placeholder="Cerca luogo, spiaggia, città..." autocomplete="off" oninput="handleMapSearch(this.value)" onfocus="showMapSearchResults()" onblur="hideMapSearchResultsDelayed()">
+            <input type="text" id="map-search-input" placeholder="Cerca luogo, spiaggia, città..." data-i18n-placeholder="map.search.placeholder" autocomplete="off" oninput="handleMapSearch(this.value)" onfocus="showMapSearchResults()" onblur="hideMapSearchResultsDelayed()">
             <div id="map-search-results" class="map-search-results"></div>
           </div>
           <button id="pin-toggle-btn" class="pin-toggle-btn" onclick="togglePins()">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
             </svg>
-            <span>Mostra Pin</span>
+            <span data-i18n="map.pins.show">Mostra Pin</span>
           </button>
           <div class="map-filter-wrap">
           <button class="map-filter-toggle" id="map-filter-toggle" onclick="toggleMapFilters()">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
               <line x1="4" y1="6" x2="20" y2="6"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="11" y1="18" x2="13" y2="18"/>
             </svg>
-            <span>Filtri</span>
+            <span data-i18n="map.filters.btn">Filtri</span>
             <svg class="filter-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="11" height="11">
               <polyline points="6 9 12 15 18 9"/>
             </svg>
@@ -362,15 +362,15 @@
             <circle cx="3" cy="17" r="1.5" fill="currentColor" stroke="none"/>
             <circle cx="21" cy="10" r="1.5" fill="currentColor" stroke="none"/>
           </svg>
-          Crea Percorso
+          <span data-i18n="map.route.title">Crea Percorso</span>
         </button>
 
         <!-- Pannello Route Planner -->
         <div id="route-planner-panel">
           <div class="rp-header">
             <div>
-              <div class="rp-header-title">Percorso Personalizzato</div>
-              <div class="rp-header-sub">Aggiungi tappe nell'ordine del viaggio</div>
+              <div class="rp-header-title" data-i18n="map.route.title">Percorso Personalizzato</div>
+              <div class="rp-header-sub" data-i18n="map.route.subtitle">Aggiungi tappe nell'ordine del viaggio</div>
             </div>
             <button id="rp-close" onclick="toggleRoutePlanner()">✕</button>
           </div>
@@ -379,37 +379,37 @@
               <!-- Partenza -->
               <div class="rp-stop" data-index="0">
                 <div class="rp-stop-num">A</div>
-                <input class="rp-stop-input" type="text" placeholder="Punto di partenza..." data-stop="0" oninput="rpHandleInput(this)" onfocus="rpShowSuggestions(this)" onblur="rpHideSuggestions(this)">
+                <input class="rp-stop-input" type="text" placeholder="Punto di partenza..." data-i18n-placeholder="map.route.start" data-stop="0" oninput="rpHandleInput(this)" onfocus="rpShowSuggestions(this)" onblur="rpHideSuggestions(this)">
                 <div class="rp-suggestions"></div>
               </div>
               <div class="rp-connector"><div class="rp-connector-line"></div></div>
               <!-- Arrivo -->
               <div class="rp-stop rp-stop-end" data-index="1">
                 <div class="rp-stop-num rp-end-num">B</div>
-                <input class="rp-stop-input" type="text" placeholder="Destinazione finale..." data-stop="1" oninput="rpHandleInput(this)" onfocus="rpShowSuggestions(this)" onblur="rpHideSuggestions(this)">
+                <input class="rp-stop-input" type="text" placeholder="Destinazione finale..." data-i18n-placeholder="map.route.end" data-stop="1" oninput="rpHandleInput(this)" onfocus="rpShowSuggestions(this)" onblur="rpHideSuggestions(this)">
                 <div class="rp-suggestions"></div>
               </div>
             </div>
 
             <button class="rp-add-btn" onclick="rpAddStop()">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><path d="M12 5v14M5 12h14"/></svg>
-              Aggiungi tappa
+              <span data-i18n="map.route.add_stop">Aggiungi tappa</span>
             </button>
 
             <div class="rp-transport">
               <button class="rp-transport-btn active" data-mode="driving" onclick="rpSetTransport(this)">
-                <span class="rp-transport-icon">🚗</span>Auto
+                <span class="rp-transport-icon">🚗</span><span data-i18n="map.route.driving">Auto</span>
               </button>
               <button class="rp-transport-btn" data-mode="walking" onclick="rpSetTransport(this)">
-                <span class="rp-transport-icon">🚶</span>A piedi
+                <span class="rp-transport-icon">🚶</span><span data-i18n="map.route.walking">A piedi</span>
               </button>
               <button class="rp-transport-btn" data-mode="cycling" onclick="rpSetTransport(this)">
-                <span class="rp-transport-icon">🚴</span>Bici
+                <span class="rp-transport-icon">🚴</span><span data-i18n="map.route.cycling">Bici</span>
               </button>
             </div>
 
             <button class="rp-calc-btn" onclick="rpCalculateRoute()" id="rp-calc-btn">
-              Calcola Percorso
+              <span data-i18n="map.route.calc">Calcola Percorso</span>
             </button>
           </div>
 
@@ -418,7 +418,7 @@
             <div class="rp-legs" id="rp-legs"></div>
             <a id="rp-gmaps-link" class="rp-gmaps-btn" href="#" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              Apri in Google Maps
+              <span data-i18n="map.route.gmaps">Apri in Google Maps</span>
             </a>
           </div>
         </div>
@@ -429,7 +429,7 @@
             <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
             <path d="M3 3v5h5"/>
           </svg>
-          Vista Sardegna
+          <span data-i18n="map.reset">Vista Sardegna</span>
         </button>
 
         <!-- Hint interazione -->
@@ -444,7 +444,7 @@
     <div id="tools-section" class="main-section">
 
       <div class="tools-section-title" data-i18n="tools.title">Tools Sardegna</div>
-      <div class="tools-section-subtitle">Strumenti pratici per esplorare la tua Sardegna</div>
+      <div class="tools-section-subtitle" data-i18n="tools.subtitle">Strumenti pratici per esplorare la tua Sardegna</div>
 
       <!-- Menu card tools -->
       <div id="tools-menu">
@@ -460,7 +460,7 @@
             </svg>
           </div>
           <div class="tool-title" data-i18n="tools.calendar">Calendario Eventi</div>
-          <div class="tool-desc">Sagre, festival, concerti e manifestazioni in Sardegna</div>
+          <div class="tool-desc" data-i18n="tools.calendar.desc">Sagre, festival, concerti e manifestazioni in Sardegna</div>
         </div>
 
         <div class="tool-card" data-tool="beaches">
@@ -473,7 +473,7 @@
             </svg>
           </div>
           <div class="tool-title" data-i18n="tools.beaches">Meteo Live</div>
-          <div class="tool-desc">Il meteo che ti suggerisce dove andare oggi, in tempo reale</div>
+          <div class="tool-desc" data-i18n="tools.beaches.desc">Il meteo che ti suggerisce dove andare oggi, in tempo reale</div>
         </div>
 
         <div class="tool-card" data-tool="camper" style="display:none">
@@ -488,7 +488,7 @@
             </svg>
           </div>
           <div class="tool-title" data-i18n="tools.camper">Camper & Van</div>
-          <div class="tool-desc">Aree sosta con servizi, coordinate e informazioni pratiche</div>
+          <div class="tool-desc" data-i18n="tools.camper.desc">Aree sosta con servizi, coordinate e informazioni pratiche</div>
         </div>
 
         <div class="tool-card" data-tool="sports">
@@ -500,7 +500,7 @@
             </svg>
           </div>
           <div class="tool-title" data-i18n="tools.sports">Sport & Avventura</div>
-          <div class="tool-desc">Kayak, arrampicata, kitesurf, diving e molto altro</div>
+          <div class="tool-desc" data-i18n="tools.sports.desc">Kayak, arrampicata, kitesurf, diving e molto altro</div>
         </div>
 
         <div class="tool-card" data-tool="transport">
@@ -511,8 +511,8 @@
               <ellipse cx="16" cy="16" rx="6" ry="12"/>
             </svg>
           </div>
-          <div class="tool-title">Come Arrivare</div>
-          <div class="tool-desc">Aeroporti, traghetti, bus, treni e noleggi 2026</div>
+          <div class="tool-title" data-i18n="tools.transport.title">Come Arrivare</div>
+          <div class="tool-desc" data-i18n="tools.transport.desc">Aeroporti, traghetti, bus, treni e noleggi 2026</div>
         </div>
 
         <div class="tool-card" data-tool="itinerari">
@@ -523,8 +523,8 @@
               <path d="M24 24l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
             </svg>
           </div>
-          <div class="tool-title">Itinerari Pronti</div>
-          <div class="tool-desc">10 percorsi verificati da 2 a 10 giorni, con tappe giorno per giorno</div>
+          <div class="tool-title" data-i18n="tools.itinerari.title">Itinerari Pronti</div>
+          <div class="tool-desc" data-i18n="tools.itinerari.desc">10 percorsi verificati da 2 a 10 giorni, con tappe giorno per giorno</div>
         </div>
 
         <div class="tool-card" data-tool="social">
@@ -537,8 +537,8 @@
               <path d="M21 23.5h5M23.5 21v5" stroke-linecap="round"/>
             </svg>
           </div>
-          <div class="tool-title">Sardegna Live</div>
-          <div class="tool-desc">Post curati da Instagram — paesaggi, sport, food, eventi, ogni stagione</div>
+          <div class="tool-title" data-i18n="tools.social.title">Sardegna Live</div>
+          <div class="tool-desc" data-i18n="tools.social.desc">Post curati da Instagram — paesaggi, sport, food, eventi, ogni stagione</div>
         </div>
 
         <div class="tool-card" data-tool="nord">
@@ -552,8 +552,8 @@
               <path d="M3 12h26" stroke-width="1" opacity="0.8"/>
             </svg>
           </div>
-          <div class="tool-title">Nord Sardegna</div>
-          <div class="tool-desc">Gallura, Alghero, Sassari — guida completa con focus su inverno e bassa stagione</div>
+          <div class="tool-title" data-i18n="tools.nord.title">Nord Sardegna</div>
+          <div class="tool-desc" data-i18n="tools.nord.desc">Gallura, Alghero, Sassari — guida completa con focus su inverno e bassa stagione</div>
         </div>
 
         <div class="tool-card" data-tool="prenotazioni">
@@ -564,8 +564,8 @@
               <path d="M10 20l3 3 7-7" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </div>
-          <div class="tool-title">Prenotazioni</div>
-          <div class="tool-desc">Prenota alloggi, esperienze e tour — accedi alle migliori piattaforme</div>
+          <div class="tool-title" data-i18n="tools.prenotazioni.title">Prenotazioni</div>
+          <div class="tool-desc" data-i18n="tools.prenotazioni.desc">Prenota alloggi, esperienze e tour — accedi alle migliori piattaforme</div>
         </div>
 
         <div class="tool-card" data-tool="sentieri">
@@ -576,8 +576,8 @@
               <path d="M6 28c2-3 5-4 8-3s5 2 7 1 4-2 5-3" stroke-dasharray="3 2"/>
             </svg>
           </div>
-          <div class="tool-title">Sentieri</div>
-          <div class="tool-desc">Trekking e percorsi CAI con difficoltà, dislivello e mappa interattiva</div>
+          <div class="tool-title" data-i18n="tools.sentieri.title">Sentieri</div>
+          <div class="tool-desc" data-i18n="tools.sentieri.desc">Trekking e percorsi CAI con difficoltà, dislivello e mappa interattiva</div>
         </div>
 
         <div class="tool-card" data-tool="cantine">
@@ -588,8 +588,8 @@
               <path d="M16 17v9M10 26h12"/>
             </svg>
           </div>
-          <div class="tool-title">Cantine</div>
-          <div class="tool-desc">Cantine aperte — degustazioni, visite guidate e acquisto vino diretto</div>
+          <div class="tool-title" data-i18n="tools.cantine.title">Cantine</div>
+          <div class="tool-desc" data-i18n="tools.cantine.desc">Cantine aperte — degustazioni, visite guidate e acquisto vino diretto</div>
         </div>
 
         <div class="tool-card" data-tool="prodotti">
@@ -600,8 +600,8 @@
               <path d="M3 9h26M12 9a4 4 0 018 0"/>
             </svg>
           </div>
-          <div class="tool-title">Prodotti</div>
-          <div class="tool-desc">Prodotti tipici sardi — cibo, tessuti, ceramiche e artigianato locale</div>
+          <div class="tool-title" data-i18n="tools.prodotti.title">Prodotti</div>
+          <div class="tool-desc" data-i18n="tools.prodotti.desc">Prodotti tipici sardi — cibo, tessuti, ceramiche e artigianato locale</div>
         </div>
 
         <div class="tool-card" data-tool="artigiani">
@@ -612,8 +612,8 @@
               <path d="M10.5 10L28 21M10.5 22L28 11"/>
             </svg>
           </div>
-          <div class="tool-title">Artigiani</div>
-          <div class="tool-desc">Maestri artigiani locali con bottega, specialità e contatti diretti</div>
+          <div class="tool-title" data-i18n="tools.artigiani.title">Artigiani</div>
+          <div class="tool-desc" data-i18n="tools.artigiani.desc">Maestri artigiani locali con bottega, specialità e contatti diretti</div>
         </div>
 
         <div class="tool-card" data-tool="comuni">
@@ -626,8 +626,8 @@
               <path d="M2 28h28M14 12h6M14 16h6M14 20h6"/>
             </svg>
           </div>
-          <div class="tool-title">Comuni</div>
-          <div class="tool-desc">Schede comuni con servizi, uffici, spiagge vicine e punti d'interesse</div>
+          <div class="tool-title" data-i18n="tools.comuni.title">Comuni</div>
+          <div class="tool-desc" data-i18n="tools.comuni.desc">Schede comuni con servizi, uffici, spiagge vicine e punti d'interesse</div>
         </div>
 
         <div class="tool-card" data-tool="guide">
@@ -638,8 +638,8 @@
               <path d="M22 4v12M22 4l5 3-5 3" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </div>
-          <div class="tool-title">Guide</div>
-          <div class="tool-desc">Guide certificate per zona, lingua e specialità — prenota la tua esperienza</div>
+          <div class="tool-title" data-i18n="tools.guide.title">Guide</div>
+          <div class="tool-desc" data-i18n="tools.guide.desc">Guide certificate per zona, lingua e specialità — prenota la tua esperienza</div>
         </div>
 
         <div class="tool-card" data-tool="musei">
@@ -652,8 +652,8 @@
               <rect x="2" y="25" width="28" height="3" rx="1"/>
             </svg>
           </div>
-          <div class="tool-title">Musei</div>
-          <div class="tool-desc">Musei, siti nuragici e collezioni — orari, biglietti e percorsi tematici</div>
+          <div class="tool-title" data-i18n="tools.musei.title">Musei</div>
+          <div class="tool-desc" data-i18n="tools.musei.desc">Musei, siti nuragici e collezioni — orari, biglietti e percorsi tematici</div>
         </div>
 
         <div class="tool-card" data-tool="biglietti">
@@ -665,8 +665,8 @@
               <path d="M7 15h8M7 19h5"/>
             </svg>
           </div>
-          <div class="tool-title">Biglietti</div>
-          <div class="tool-desc">Biglietti per eventi, musei e attrazioni — link alle piattaforme ufficiali</div>
+          <div class="tool-title" data-i18n="tools.biglietti.title">Biglietti</div>
+          <div class="tool-desc" data-i18n="tools.biglietti.desc">Biglietti per eventi, musei e attrazioni — link alle piattaforme ufficiali</div>
         </div>
 
         <div class="tool-card" data-tool="ristoranti">
@@ -676,8 +676,8 @@
               <path d="M22 3v11h6V3M25 14v15"/>
             </svg>
           </div>
-          <div class="tool-title">Ristoranti</div>
-          <div class="tool-desc">Ristoranti e trattorie selezionati per cucina tipica e qualità</div>
+          <div class="tool-title" data-i18n="tools.ristoranti.title">Ristoranti</div>
+          <div class="tool-desc" data-i18n="tools.ristoranti.desc">Ristoranti e trattorie selezionati per cucina tipica e qualità</div>
         </div>
 
         <div class="tool-card" data-tool="hotel">
@@ -689,8 +689,8 @@
               <rect x="14" y="16" width="16" height="6" rx="2"/>
             </svg>
           </div>
-          <div class="tool-title">Hotel</div>
-          <div class="tool-desc">Hotel, B&B e agriturismo — confronta disponibilità e prenota</div>
+          <div class="tool-title" data-i18n="tools.hotel.title">Hotel</div>
+          <div class="tool-desc" data-i18n="tools.hotel.desc">Hotel, B&B e agriturismo — confronta disponibilità e prenota</div>
         </div>
 
         <div class="tool-card" data-tool="pacchetti">
@@ -702,8 +702,8 @@
               <path d="M4 18h24M16 10v18"/>
             </svg>
           </div>
-          <div class="tool-title">Pacchetti</div>
-          <div class="tool-desc">Pacchetti viaggio completi — volo, hotel e esperienze in un click</div>
+          <div class="tool-title" data-i18n="tools.pacchetti.title">Pacchetti</div>
+          <div class="tool-desc" data-i18n="tools.pacchetti.desc">Pacchetti viaggio completi — volo, hotel e esperienze in un click</div>
         </div>
 
         <div class="tool-card" data-tool="navigazione">
@@ -718,8 +718,8 @@
               <circle cx="24" cy="20" r="1.8" fill="currentColor"/>
             </svg>
           </div>
-          <div class="tool-title">Navigazione</div>
-          <div class="tool-desc">Porti, diporti, zone di navigazione, aree protette e info pratiche per il mare</div>
+          <div class="tool-title" data-i18n="tools.navigazione.title">Navigazione</div>
+          <div class="tool-desc" data-i18n="tools.navigazione.desc">Porti, diporti, zone di navigazione, aree protette e info pratiche per il mare</div>
         </div>
 
       </div>
@@ -728,7 +728,7 @@
       <div id="tools-content">
         <button class="tools-back-btn" onclick="closeToolSection()">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-          Tools
+          <span data-i18n="tools.back">← Tools</span>
         </button>
         <div id="tools-content-area"></div>
       </div>
