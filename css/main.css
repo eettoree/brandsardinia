@@ -1448,6 +1448,36 @@ body.section-map .app-navbar {
   transform: rotate(180deg);
 }
 
+.pin-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(10,10,20,0.35);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 12px;
+  padding: 10px 14px;
+  color: rgba(255,255,255,0.8);
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.35);
+  font-family: inherit;
+}
+.pin-toggle-btn:hover {
+  background: rgba(0,180,216,0.2);
+  border-color: rgba(0,180,216,0.4);
+  color: #fff;
+}
+.pin-toggle-btn.active {
+  background: rgba(0,180,216,0.28);
+  border-color: rgba(0,180,216,0.6);
+  color: #fff;
+}
+
 /* Popup filtri */
 .map-filter-wrap { position: relative; }
 

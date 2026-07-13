@@ -7,6 +7,8 @@
 
 let sardMap = null;
 let activeMapFilter = 'all';
+let pinsVisible = false;
+let _suppressMapClick = false;
 let allMarkers = [];
 let clusterDivMarkers = [];
 let scIndex = null;
@@ -497,7 +499,7 @@ function _initMapCore(onReady) {
   }), 'bottom-right');
 
   // Click su canvas (fuori dai pin) â€” chiude quick card
-  sardMap.on('click', () => closeQuickCard());
+  sardMap.on('click', () => { if (!_suppressMapClick) closeQuickCard(); });
 
   // Quando la mappa Ã¨ pronta
   sardMap.on('load', () => {
@@ -660,7 +662,7 @@ function addAllMarkers() {
     el.innerHTML = getMarkerSVG(CAT_COLORS[poi.cat] || '#ffffff', poi.cat);
     el.addEventListener('mouseenter', () => { el.firstElementChild.style.transform = 'scale(1.3)'; showHoverTooltip(poi, el); });
     el.addEventListener('mouseleave', () => { el.firstElementChild.style.transform = 'scale(1)'; hideHoverTooltip(); });
-    el.addEventListener('click', (e) => { e.stopPropagation(); hideHoverTooltip(); showQuickCard(poi); });
+    el.addEventListener('click', (e) => { e.stopPropagation(); hideHoverTooltip(); _suppressMapClick = true; showQuickCard(poi); setTimeout(() => { _suppressMapClick = false; }, 100); });
     const marker = new maplibregl.Marker({ element: el, anchor: 'center' })
       .setLngLat([poi.lng, poi.lat])
       .addTo(sardMap);
@@ -748,6 +750,17 @@ function toggleMapFilters() {
   }
 }
 
+function togglePins() {
+  pinsVisible = !pinsVisible;
+  const btn = document.getElementById('pin-toggle-btn');
+  if (btn) {
+    btn.classList.toggle('active', pinsVisible);
+    btn.querySelector('span').textContent = pinsVisible ? 'Nascondi Pin' : 'Mostra Pin';
+  }
+  if (pinsVisible && sardMap && sardMap.loaded()) addAllMarkers();
+  else renderClusters();
+}
+
 function setActiveMapFilter(cat) {
   activeMapFilter = cat;
   document.querySelectorAll('.map-filter-chip').forEach(b => {
@@ -755,6 +768,11 @@ function setActiveMapFilter(cat) {
   });
   document.getElementById('map-filter-popup')?.classList.remove('open');
   document.getElementById('map-filter-toggle')?.classList.remove('active');
+  if (!pinsVisible) {
+    pinsVisible = true;
+    const btn = document.getElementById('pin-toggle-btn');
+    if (btn) { btn.classList.add('active'); btn.querySelector('span').textContent = 'Nascondi Pin'; }
+  }
   if (sardMap && sardMap.loaded()) addAllMarkers();
   closeQuickCard();
   closeMapInfoPanel();
