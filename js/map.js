@@ -827,20 +827,26 @@ function selectSearchResult(id) {
   document.getElementById('map-search-input').value = poi.name;
   document.getElementById('map-search-results').classList.remove('open');
 
-  // Ensure markers are loaded (lazy init: first time user searches before toggling pins)
-  if (allMarkers.length === 0) addAllMarkers();
-
   if (!pinsVisible) {
-    // Pins are hidden: show only the searched pin, keep all others hidden
+    // Rebuild markers with ALL categories so the target POI always has a DOM marker,
+    // regardless of any previous category filter state.
+    const savedFilter = activeMapFilter;
+    activeMapFilter = 'all';
+    addAllMarkers(); // renderClusters inside hides all (pinsVisible=false)
+    activeMapFilter = savedFilter;
+
+    // Show only the searched pin
     allMarkers.forEach(m => {
       const el = m.getElement();
       const show = el.getAttribute('data-id') === id;
       el.style.opacity = show ? '1' : '0';
       el.style.pointerEvents = show ? 'auto' : 'none';
     });
-    // Remove cluster bubbles (irrelevant when showing single pin)
     clusterDivMarkers.forEach(m => m.remove());
     clusterDivMarkers = [];
+  } else {
+    // Pins visible: ensure markers exist (lazy init)
+    if (allMarkers.length === 0) addAllMarkers();
   }
 
   sardMap.flyTo({
