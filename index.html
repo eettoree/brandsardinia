@@ -285,6 +285,12 @@
             <input type="text" id="map-search-input" placeholder="Cerca luogo, spiaggia, città..." autocomplete="off" oninput="handleMapSearch(this.value)" onfocus="showMapSearchResults()" onblur="hideMapSearchResultsDelayed()">
             <div id="map-search-results" class="map-search-results"></div>
           </div>
+          <button id="pin-toggle-btn" class="pin-toggle-btn" onclick="togglePins()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+            <span>Mostra Pin</span>
+          </button>
           <div class="map-filter-wrap">
           <button class="map-filter-toggle" id="map-filter-toggle" onclick="toggleMapFilters()">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
@@ -334,12 +340,6 @@
             </button>
           </div>
           </div><!-- /.map-filter-wrap -->
-          <button id="pin-toggle-btn" class="pin-toggle-btn" onclick="togglePins()">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
-            </svg>
-            <span>Mostra Pin</span>
-          </button>
         </div>
 
         <!-- Hover tooltip pin -->

@@ -805,7 +805,7 @@ function handleMapSearch(query) {
     p.name.toLowerCase().includes(q) ||
     (p.description && p.description.toLowerCase().includes(q)) ||
     (p.cat && CAT_LABELS[p.cat]?.toLowerCase().includes(q))
-  ).slice(0, 7);
+  ).slice(0, 12);
 
   if (!matches.length) {
     results.innerHTML = '<div class="search-no-result">Nessun risultato</div>';
@@ -826,14 +826,35 @@ function selectSearchResult(id) {
   if (!poi || !sardMap) return;
   document.getElementById('map-search-input').value = poi.name;
   document.getElementById('map-search-results').classList.remove('open');
+
+  // Ensure markers are loaded (lazy init: first time user searches before toggling pins)
+  if (allMarkers.length === 0) addAllMarkers();
+
+  if (!pinsVisible) {
+    // Pins are hidden: show only the searched pin, keep all others hidden
+    allMarkers.forEach(m => {
+      const el = m.getElement();
+      const show = el.getAttribute('data-id') === id;
+      el.style.opacity = show ? '1' : '0';
+      el.style.pointerEvents = show ? 'auto' : 'none';
+    });
+    // Remove cluster bubbles (irrelevant when showing single pin)
+    clusterDivMarkers.forEach(m => m.remove());
+    clusterDivMarkers = [];
+  }
+
   sardMap.flyTo({
     center: [poi.lng, poi.lat],
-    zoom: 12,
+    zoom: 14,
     pitch: 55,
     duration: 1200,
     easing: (t) => 1 - Math.pow(1 - t, 3)
   });
-  setTimeout(() => showQuickCard(poi), 800);
+  setTimeout(() => {
+    _suppressMapClick = true;
+    showQuickCard(poi);
+    setTimeout(() => { _suppressMapClick = false; }, 100);
+  }, 800);
 }
 
 function showMapSearchResults() {
@@ -870,7 +891,8 @@ function showMapInfoPanel(poi) {
     ristorante:  'Ristorante',
     attrazione:  'Attrazione',
     parco:       'Parco Naturale',
-    esperienza:  'Esperienza'
+    esperienza:  'Esperienza',
+    porto:       'Porto / Marina'
   }[poi.cat] || poi.cat;
 
   const catColor = CAT_COLORS[poi.cat] || '#fff';
