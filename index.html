@@ -276,71 +276,88 @@
         <!-- Contenitore mappa MapLibre — fullscreen -->
         <div id="map-canvas-container"></div>
 
-        <!-- Overlay: barra di ricerca + filtri (top-left) -->
-        <div class="map-overlay-controls">
-          <div class="map-search-wrap">
-            <svg class="map-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
-              <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
-            </svg>
-            <input type="text" id="map-search-input" placeholder="Cerca luogo, spiaggia, città..." data-i18n-placeholder="map.search.placeholder" autocomplete="off" oninput="handleMapSearch(this.value)" onfocus="showMapSearchResults()" onblur="hideMapSearchResultsDelayed()">
-            <div id="map-search-results" class="map-search-results"></div>
-          </div>
-          <button id="pin-toggle-btn" class="pin-toggle-btn" onclick="togglePins()">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
-            </svg>
-            <span data-i18n="map.pins.show">Mostra Pin</span>
-          </button>
-          <div class="map-filter-wrap">
-          <button class="map-filter-toggle" id="map-filter-toggle" onclick="toggleMapFilters()">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
-              <line x1="4" y1="6" x2="20" y2="6"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="11" y1="18" x2="13" y2="18"/>
-            </svg>
-            <span data-i18n="map.filters.btn">Filtri</span>
-            <svg class="filter-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="11" height="11">
-              <polyline points="6 9 12 15 18 9"/>
-            </svg>
-          </button>
-          <div class="map-filter-popup" id="map-filter-popup">
-            <button class="map-filter-chip active" data-cat="all" onclick="setActiveMapFilter('all')">
-              <span class="filter-dot" style="background:#888"></span>
-              <span data-i18n="map.filter.all">Tutti</span>
-            </button>
-            <button class="map-filter-chip" data-cat="spiaggia" onclick="setActiveMapFilter('spiaggia')">
-              <img class="filter-icon" src="assets/images/map/filters/spiagge.svg" alt="">
-              <span data-i18n="map.filter.spiagge">Spiagge</span>
-            </button>
-            <button class="map-filter-chip" data-cat="città" onclick="setActiveMapFilter('città')">
-              <img class="filter-icon" src="assets/images/map/filters/citta.svg" alt="">
-              <span data-i18n="map.filter.citta">Città</span>
-            </button>
-            <button class="map-filter-chip" data-cat="hotel" onclick="setActiveMapFilter('hotel')">
-              <img class="filter-icon" src="assets/images/map/filters/hotel.svg" alt="">
-              <span data-i18n="map.filter.hotel">Hotel</span>
-            </button>
-            <button class="map-filter-chip" data-cat="ristorante" onclick="setActiveMapFilter('ristorante')">
-              <img class="filter-icon" src="assets/images/map/filters/ristoranti.svg" alt="">
-              <span data-i18n="map.filter.ristoranti">Ristoranti</span>
-            </button>
-            <button class="map-filter-chip" data-cat="attrazione" onclick="setActiveMapFilter('attrazione')">
-              <img class="filter-icon" src="assets/images/map/filters/attrazioni.svg" alt="">
-              <span data-i18n="map.filter.attrazioni">Attrazioni</span>
-            </button>
-            <button class="map-filter-chip" data-cat="parco" onclick="setActiveMapFilter('parco')">
-              <img class="filter-icon" src="assets/images/map/filters/parchi.svg" alt="">
-              <span data-i18n="map.filter.parchi">Parchi</span>
-            </button>
-            <button class="map-filter-chip" data-cat="esperienza" onclick="setActiveMapFilter('esperienza')">
-              <img class="filter-icon" src="assets/images/map/filters/esperienze.svg" alt="">
-              <span data-i18n="map.filter.esperienze">Esperienze</span>
-            </button>
-            <button class="map-filter-chip" data-cat="porto" onclick="setActiveMapFilter('porto')">
-              <img class="filter-icon" src="assets/images/map/filters/porti.svg" alt="">
-              <span data-i18n="map.filter.porti">Porti</span>
+        <!-- Overlay controls: left col (search + route) + right col (pin + filter) -->
+        <div class="map-controls-group">
+
+          <!-- Left column: search bar + route planner button -->
+          <div class="map-left-col">
+            <div class="map-search-wrap">
+              <svg class="map-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+              </svg>
+              <input type="text" id="map-search-input" placeholder="Cerca luogo, spiaggia, città..." data-i18n-placeholder="map.search.placeholder" autocomplete="off" oninput="handleMapSearch(this.value)" onfocus="showMapSearchResults()" onblur="hideMapSearchResultsDelayed()">
+              <div id="map-search-results" class="map-search-results"></div>
+            </div>
+            <button id="btn-route-planner" onclick="toggleRoutePlanner()" title="Crea percorso personalizzato">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15">
+                <path d="M3 17l4-8 4 4 4-6 4 3"/>
+                <circle cx="3" cy="17" r="1.5" fill="currentColor" stroke="none"/>
+                <circle cx="21" cy="10" r="1.5" fill="currentColor" stroke="none"/>
+              </svg>
+              <span data-i18n="map.route.title">Crea Percorso</span>
             </button>
           </div>
-          </div><!-- /.map-filter-wrap -->
-        </div>
+
+          <!-- Right column: pin toggle + filter -->
+          <div class="map-right-col">
+            <button id="pin-toggle-btn" class="pin-toggle-btn" onclick="togglePins()">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+              </svg>
+              <span data-i18n="map.pins.show">Mostra Pin</span>
+            </button>
+            <div class="map-filter-wrap">
+              <button class="map-filter-toggle" id="map-filter-toggle" onclick="toggleMapFilters()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+                  <line x1="4" y1="6" x2="20" y2="6"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="11" y1="18" x2="13" y2="18"/>
+                </svg>
+                <span data-i18n="map.filters.btn">Filtri</span>
+                <svg class="filter-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="11" height="11">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </button>
+              <div class="map-filter-popup" id="map-filter-popup">
+                <button class="map-filter-chip active" data-cat="all" onclick="setActiveMapFilter('all')">
+                  <span class="filter-dot" style="background:#888"></span>
+                  <span data-i18n="map.filter.all">Tutti</span>
+                </button>
+                <button class="map-filter-chip" data-cat="spiaggia" onclick="setActiveMapFilter('spiaggia')">
+                  <img class="filter-icon" src="assets/images/map/filters/spiagge.svg" alt="">
+                  <span data-i18n="map.filter.spiagge">Spiagge</span>
+                </button>
+                <button class="map-filter-chip" data-cat="città" onclick="setActiveMapFilter('città')">
+                  <img class="filter-icon" src="assets/images/map/filters/citta.svg" alt="">
+                  <span data-i18n="map.filter.citta">Città</span>
+                </button>
+                <button class="map-filter-chip" data-cat="hotel" onclick="setActiveMapFilter('hotel')">
+                  <img class="filter-icon" src="assets/images/map/filters/hotel.svg" alt="">
+                  <span data-i18n="map.filter.hotel">Hotel</span>
+                </button>
+                <button class="map-filter-chip" data-cat="ristorante" onclick="setActiveMapFilter('ristorante')">
+                  <img class="filter-icon" src="assets/images/map/filters/ristoranti.svg" alt="">
+                  <span data-i18n="map.filter.ristoranti">Ristoranti</span>
+                </button>
+                <button class="map-filter-chip" data-cat="attrazione" onclick="setActiveMapFilter('attrazione')">
+                  <img class="filter-icon" src="assets/images/map/filters/attrazioni.svg" alt="">
+                  <span data-i18n="map.filter.attrazioni">Attrazioni</span>
+                </button>
+                <button class="map-filter-chip" data-cat="parco" onclick="setActiveMapFilter('parco')">
+                  <img class="filter-icon" src="assets/images/map/filters/parchi.svg" alt="">
+                  <span data-i18n="map.filter.parchi">Parchi</span>
+                </button>
+                <button class="map-filter-chip" data-cat="esperienza" onclick="setActiveMapFilter('esperienza')">
+                  <img class="filter-icon" src="assets/images/map/filters/esperienze.svg" alt="">
+                  <span data-i18n="map.filter.esperienze">Esperienze</span>
+                </button>
+                <button class="map-filter-chip" data-cat="porto" onclick="setActiveMapFilter('porto')">
+                  <img class="filter-icon" src="assets/images/map/filters/porti.svg" alt="">
+                  <span data-i18n="map.filter.porti">Porti</span>
+                </button>
+              </div>
+            </div><!-- /.map-filter-wrap -->
+          </div><!-- /.map-right-col -->
+
+        </div><!-- /.map-controls-group -->
 
         <!-- Hover tooltip pin -->
         <div id="map-hover-tooltip" class="map-hover-tooltip"></div>
@@ -354,16 +371,6 @@
         <div id="map-info-panel">
           <!-- Popolato dinamicamente da map.js -->
         </div>
-
-        <!-- Bottone Crea Percorso -->
-        <button id="btn-route-planner" onclick="toggleRoutePlanner()" title="Crea percorso personalizzato">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15">
-            <path d="M3 17l4-8 4 4 4-6 4 3"/>
-            <circle cx="3" cy="17" r="1.5" fill="currentColor" stroke="none"/>
-            <circle cx="21" cy="10" r="1.5" fill="currentColor" stroke="none"/>
-          </svg>
-          <span data-i18n="map.route.title">Crea Percorso</span>
-        </button>
 
         <!-- Pannello Route Planner -->
         <div id="route-planner-panel">

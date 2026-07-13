@@ -1323,14 +1323,30 @@ body.section-map .app-navbar {
 }
 
 /* ── MAP OVERLAY CONTROLS (search + filtri) ─── */
-.map-overlay-controls {
+/* Map controls wrapper — absolute top-left, flex row of left/right columns */
+.map-controls-group {
   position: absolute;
   top: 16px;
   left: 16px;
   z-index: 20;
   display: flex;
+  flex-direction: row;
   align-items: flex-start;
   gap: 8px;
+  pointer-events: none; /* transparent to map pan/zoom */
+}
+.map-controls-group > * { pointer-events: all; }
+
+.map-left-col {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.map-right-col {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 /* Barra di ricerca */
@@ -1608,7 +1624,7 @@ body.section-map .app-navbar {
   opacity: 0;
   transition: opacity 0.3s ease, transform 0.35s cubic-bezier(0.16,1,0.3,1);
   pointer-events: none;
-  z-index: 12;
+  z-index: 22;
 }
 .map-quick-card.active {
   opacity: 1;
@@ -1911,6 +1927,7 @@ body.section-map .app-navbar {
 /* Contenuto tools dinamico */
 #tools-content {
   display: none;
+  -webkit-overflow-scrolling: touch;
 }
 
 .tools-section-header {
@@ -3069,7 +3086,7 @@ body.section-map .app-navbar {
     height: 100%;
   }
 
-  .map-search-wrap { width: 190px; }
+  .map-search-wrap { width: 200px; }
 
   #map-info-panel {
     width: calc(100% - 32px);
@@ -3084,10 +3101,10 @@ body.section-map .app-navbar {
 
   .map-quick-card {
     width: calc(100% - 32px);
-    bottom: 48px;
+    bottom: 56px;
   }
 
-  /* Route planner panel mobile */
+  /* Route planner panel — bottom sheet on tablet/mobile */
   #route-planner-panel {
     width: 100% !important;
     max-width: 100% !important;
@@ -3096,11 +3113,123 @@ body.section-map .app-navbar {
     bottom: 0 !important;
     top: auto !important;
     border-radius: 20px 20px 0 0 !important;
-    max-height: 70vh;
+    max-height: 75vh;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .map-hint { display: none; }
+
+  /* MapLibre zoom controls: move to bottom-right on tablet */
+  .maplibregl-ctrl-top-right {
+    top: auto !important;
+    bottom: 64px;
+    right: 12px;
+  }
+}
+
+/* ── MAP MOBILE LAYOUT (≤ 600px) ──────────────────────────── */
+@media (max-width: 600px) {
+
+  /* Controls group: stretch full width, gap tighter */
+  .map-controls-group {
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    gap: 6px;
+  }
+
+  /* Left column: fill all available horizontal space */
+  .map-left-col {
+    flex: 1;
+    min-width: 0;
+  }
+
+  /* Search bar: fill column width */
+  .map-search-wrap {
+    width: 100%;
+  }
+
+  /* Route planner button: same width as search bar */
+  #btn-route-planner {
+    width: 100%;
+    justify-content: center;
+    font-size: 0.78rem;
+    padding: 8px 12px;
+  }
+
+  /* Right column: compact icon-only column */
+  .map-right-col {
+    flex-shrink: 0;
+    gap: 6px;
+  }
+
+  /* Pin toggle: icon-only square button */
+  .pin-toggle-btn {
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    justify-content: center;
+    border-radius: 12px;
+    gap: 0;
+  }
+  .pin-toggle-btn span { display: none; }
+
+  /* Filter button: icon-only, no text, no chevron */
+  .map-filter-toggle {
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    justify-content: center;
+    border-radius: 12px;
+    gap: 0;
+  }
+  .map-filter-toggle span[data-i18n] { display: none; }
+  .map-filter-toggle .filter-chevron { display: none; }
+
+  /* Filter popup: open to the left (right-aligned to button) */
+  .map-filter-popup {
+    left: auto;
+    right: 0;
+    min-width: 200px;
+  }
+
+  /* Quick card: wider, sits above reset button */
+  .map-quick-card {
+    width: calc(100% - 24px);
+    left: 12px;
+    right: 12px;
+    transform: translateX(0) translateY(20px);
+    bottom: 60px;
+  }
+  .map-quick-card.active {
+    transform: translateX(0) translateY(0);
+  }
+
+  /* Info panel: full-width bottom sheet, taller */
+  #map-info-panel {
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px 20px 0 0;
+    max-height: 82vh;
+    transform: translateY(calc(100% + 20px));
+  }
+  #map-info-panel.active {
+    transform: translateY(0);
+  }
+
+  /* Reset button: safe bottom margin */
+  .map-reset-btn {
+    bottom: env(safe-area-inset-bottom, 14px);
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 14px);
+    padding: 7px 16px;
+    font-size: 0.74rem;
+  }
+
+  /* MapLibre controls: hidden on mobile (use pinch-to-zoom) */
+  .maplibregl-ctrl-top-right { display: none !important; }
 }
 
 @media (max-width: 600px) {
@@ -3216,7 +3345,7 @@ strong { font-weight: 600; color: var(--text); }
   transform: translateX(370px);
   opacity: 0;
   transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), opacity 0.4s ease;
-  z-index: 10;
+  z-index: 25;
   pointer-events: none;
   box-shadow: 0 12px 48px rgba(0,0,0,0.5);
 }
@@ -3507,9 +3636,8 @@ strong { font-weight: 600; color: var(--text); }
 
 /* ── ROUTE PLANNER ──────────────────────────────────────────── */
 #btn-route-planner {
-  position: absolute;
-  top: 58px;
-  left: 16px;
+  position: static;
+  width: 100%;
   z-index: 20;
   display: flex;
   align-items: center;
