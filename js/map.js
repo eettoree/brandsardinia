@@ -225,7 +225,7 @@ const SARDINIA_CITIES_LABELS = {
     { type:'Feature', properties:{ name:'Santa Maria Coghinas', tier:4 }, geometry:{ type:'Point', coordinates:[8.8764,40.9103] } },
     { type:'Feature', properties:{ name:'Viddalba',             tier:4 }, geometry:{ type:'Point', coordinates:[8.9131,40.9189] } },
     { type:'Feature', properties:{ name:'Badesi',               tier:4 }, geometry:{ type:'Point', coordinates:[8.9048,40.9678] } },
-    { type:'Feature', properties:{ name:'Trinità d'Agultu',    tier:4 }, geometry:{ type:'Point', coordinates:[8.9754,41.0014] } },
+    { type:'Feature', properties:{ name:'Trinità d\'Agultu',    tier:4 }, geometry:{ type:'Point', coordinates:[8.9754,41.0014] } },
     { type:'Feature', properties:{ name:'Aglientu',             tier:4 }, geometry:{ type:'Point', coordinates:[9.1014,41.0867] } },
     { type:'Feature', properties:{ name:'Santa Maria Navarrese',tier:4 }, geometry:{ type:'Point', coordinates:[9.6780,40.0356] } },
     { type:'Feature', properties:{ name:'Cala Gonone',          tier:4 }, geometry:{ type:'Point', coordinates:[9.6227,40.2757] } },
