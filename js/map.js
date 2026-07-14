@@ -843,13 +843,19 @@ function initPOILayers() {
       'circle-radius': ['step', ['get', 'point_count'], 18, 10, 24, 50, 30] }
   });
 
-  // Numero dentro cluster
-  sardMap.addLayer({ id: 'poi-cluster-count', type: 'symbol', source: 'pois',
-    filter: ['has', 'point_count'],
-    layout: { visibility: 'none', 'text-field': '{point_count_abbreviated}',
-      'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'], 'text-size': 13 },
-    paint: { 'text-color': '#fff' }
-  });
+  // Numero dentro cluster — usa font disponibili su demotiles
+  try {
+    sardMap.addLayer({ id: 'poi-cluster-count', type: 'symbol', source: 'pois',
+      filter: ['has', 'point_count'],
+      layout: { visibility: 'none',
+        'text-field': ['to-string', ['get', 'point_count']],
+        'text-font': ['Open Sans Regular', 'Arial Unicode MS Regular'],
+        'text-size': 13,
+        'text-allow-overlap': true
+      },
+      paint: { 'text-color': '#fff' }
+    });
+  } catch(e) { console.warn('poi-cluster-count layer skipped:', e.message); }
 
   // Glow pin singoli
   sardMap.addLayer({ id: 'poi-glow', type: 'circle', source: 'pois',
@@ -858,11 +864,15 @@ function initPOILayers() {
       'circle-opacity': 0.22, 'circle-blur': 0.6 }
   });
 
-  // Pin singoli
+  // Pin singoli — cerchio colorato per categoria con bordo bianco
   sardMap.addLayer({ id: 'poi-unclustered', type: 'circle', source: 'pois',
     filter: ['!', ['has', 'point_count']], layout: { visibility: 'none' },
-    paint: { 'circle-color': POI_COLOR_EXPR, 'circle-radius': 10,
-      'circle-stroke-width': 2.2, 'circle-stroke-color': 'rgba(255,255,255,0.92)' }
+    paint: {
+      'circle-color': POI_COLOR_EXPR,
+      'circle-radius': ['interpolate', ['linear'], ['zoom'], 8, 7, 12, 11, 16, 14],
+      'circle-stroke-width': 2.2,
+      'circle-stroke-color': 'rgba(255,255,255,0.92)'
+    }
   });
 
   // Click su cluster — espandi zoom
@@ -905,6 +915,7 @@ function updatePoisSource() {
   const poisSrc = sardMap && sardMap.getSource('pois');
   if (!poisSrc) return;
   const filtered = activeMapFilter === 'all' ? MAP_POI : MAP_POI.filter(p => p.cat === activeMapFilter);
+  console.log('[pins] updatePoisSource:', filtered.length, 'POI, filter:', activeMapFilter);
   poisSrc.setData({
     type: 'FeatureCollection',
     features: filtered.map(p => ({
