@@ -640,7 +640,7 @@ function _initMapCore(onReady) {
   // Stile custom: satellite ESRI (gratuito, nessuna API key) + terrain AWS
   const MAP_STYLE = {
     version: 8,
-    glyphs: 'https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf',
+    glyphs: 'https://fonts.openmaptiles.org/{fontstack}/{range}.pbf',
     sources: {
       'satellite': {
         type: 'raster',
@@ -843,19 +843,9 @@ function initPOILayers() {
       'circle-radius': ['step', ['get', 'point_count'], 18, 10, 24, 50, 30] }
   });
 
-  // Numero dentro cluster — usa font disponibili su demotiles
-  try {
-    sardMap.addLayer({ id: 'poi-cluster-count', type: 'symbol', source: 'pois',
-      filter: ['has', 'point_count'],
-      layout: { visibility: 'none',
-        'text-field': ['to-string', ['get', 'point_count']],
-        'text-font': ['Open Sans Regular', 'Arial Unicode MS Regular'],
-        'text-size': 13,
-        'text-allow-overlap': true
-      },
-      paint: { 'text-color': '#fff' }
-    });
-  } catch(e) { console.warn('poi-cluster-count layer skipped:', e.message); }
+  // poi-cluster-count rimosso: il symbol layer richiedeva font da demotiles.maplibre.org
+  // che con 503 POI generava 429 rate-limit e falliva l'intera tile GeoJSON.
+  // I cluster rimangono visibili come cerchi colorati cliccabili.
 
   // Glow pin singoli
   sardMap.addLayer({ id: 'poi-glow', type: 'circle', source: 'pois',
@@ -915,7 +905,6 @@ function updatePoisSource() {
   const poisSrc = sardMap && sardMap.getSource('pois');
   if (!poisSrc) return;
   const filtered = activeMapFilter === 'all' ? MAP_POI : MAP_POI.filter(p => p.cat === activeMapFilter);
-  console.log('[pins] updatePoisSource:', filtered.length, 'POI, filter:', activeMapFilter);
   poisSrc.setData({
     type: 'FeatureCollection',
     features: filtered.map(p => ({
@@ -926,7 +915,7 @@ function updatePoisSource() {
   });
 }
 
-const POI_LAYER_IDS = ['poi-cluster-glow', 'poi-clusters', 'poi-cluster-count', 'poi-glow', 'poi-unclustered'];
+const POI_LAYER_IDS = ['poi-cluster-glow', 'poi-clusters', 'poi-glow', 'poi-unclustered'];
 
 function setPOILayersVisibility(visible) {
   const vis = visible ? 'visible' : 'none';
