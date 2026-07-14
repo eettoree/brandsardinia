@@ -9,9 +9,7 @@ let sardMap = null;
 let activeMapFilter = 'all';
 let pinsVisible = false;
 let _suppressMapClick = false;
-let allMarkers = [];
-let clusterDivMarkers = [];
-let scIndex = null;
+// allMarkers/clusterDivMarkers/scIndex: rimossi (sistema nativo MapLibre)
 let currentQuickPoi = null;
 let searchBlurTimer = null;
 
@@ -724,7 +722,7 @@ function _initMapCore(onReady) {
 
   // Quando la mappa Ã¨ pronta
   sardMap.on('load', () => {
-    addClusterLayer();
+    initPOILayers();
     addCityLabels();
     sardMap.addControl(new maplibregl.TerrainControl({
       source: 'terrain-dem',
@@ -803,104 +801,142 @@ function addCityLabels() {
   });
 }
 
-// â”€â”€â”€ CLUSTER LAYER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-function addClusterLayer() {
-  sardMap.on('moveend', renderClusters);
-  sardMap.on('zoomend', renderClusters);
-}
+// ─── POI LAYERS — MapLibre native GeoJSON + GPU circle layers ─────────────
+// Nessun DOM marker: tutto via WebGL. Zero reflow, zero compositing overhead.
 
-function renderClusters() {
-  if (!scIndex || !sardMap) return;
-  if (!pinsVisible) {
-    clusterDivMarkers.forEach(m => m.remove());
-    clusterDivMarkers = [];
-    allMarkers.forEach(m => { const el = m.getElement(); el.style.opacity = '0'; el.style.pointerEvents = 'none'; });
-    return;
-  }
+function initPOILayers() {
+  if (sardMap.getSource('pois')) return;
 
-  clusterDivMarkers.forEach(m => m.remove());
-  clusterDivMarkers = [];
-
-  const zoom = Math.round(sardMap.getZoom());
-  const b = sardMap.getBounds();
-  const bbox = [b.getWest(), b.getSouth(), b.getEast(), b.getNorth()];
-  const clusters = scIndex.getClusters(bbox, zoom);
-
-  const individualIds = new Set();
-
-  clusters.forEach(feature => {
-    const [lng, lat] = feature.geometry.coordinates;
-    if (feature.properties.cluster) {
-      const count = feature.properties.point_count;
-      const size = count < 10 ? 40 : count < 50 ? 50 : 62;
-      const fs = count < 10 ? 15 : count < 50 ? 13 : 12;
-      const el = document.createElement('div');
-      el.className = 'sc-cluster';
-      el.innerHTML = '<span>' + count + '</span>';
-      el.style.cssText = 'width:' + size + 'px;height:' + size + 'px;background:rgba(0,180,216,0.88);border:2.5px solid rgba(255,255,255,0.50);border-radius:50%;display:flex;align-items:center;justify-content:center;font:700 ' + fs + 'px/1 system-ui;color:#fff;cursor:pointer;box-shadow:0 2px 16px rgba(0,0,0,0.45);user-select:none;';
-      el.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const expZoom = scIndex.getClusterExpansionZoom(feature.properties.cluster_id);
-        sardMap.easeTo({ center: [lng, lat], zoom: Math.min(expZoom + 0.5, 18), duration: 500 });
-      });
-      const m = new maplibregl.Marker({ element: el, anchor: 'center' }).setLngLat([lng, lat]).addTo(sardMap);
-      clusterDivMarkers.push(m);
-    } else {
-      individualIds.add(feature.properties.id);
-    }
+  sardMap.addSource('pois', {
+    type: 'geojson',
+    data: { type: 'FeatureCollection', features: [] },
+    cluster: true,
+    clusterMaxZoom: 15,
+    clusterRadius: 55,
+    clusterMinPoints: 2
   });
 
-  allMarkers.forEach(m => {
-    const el = m.getElement();
-    const id = el.getAttribute('data-id');
-    const show = individualIds.has(id);
-    el.style.opacity = show ? '1' : '0';
-    el.style.pointerEvents = show ? 'auto' : 'none';
+  const POI_COLOR_EXPR = ['match', ['get', 'cat'],
+    'spiaggia',   '#00BFFF',
+    'città', '#8899bb',
+    'hotel',      '#C8102E',
+    'ristorante', '#FF8C00',
+    'attrazione', '#FFD700',
+    'parco',      '#32CD32',
+    'esperienza', '#B040FF',
+    'porto',      '#0066CC',
+    '#ffffff'
+  ];
+
+  // Glow cluster
+  sardMap.addLayer({ id: 'poi-cluster-glow', type: 'circle', source: 'pois',
+    filter: ['has', 'point_count'], layout: { visibility: 'none' },
+    paint: { 'circle-color': 'rgba(0,180,216,0.18)', 'circle-blur': 0.7,
+      'circle-radius': ['step', ['get', 'point_count'], 28, 10, 36, 50, 44] }
+  });
+
+  // Cerchi cluster
+  sardMap.addLayer({ id: 'poi-clusters', type: 'circle', source: 'pois',
+    filter: ['has', 'point_count'], layout: { visibility: 'none' },
+    paint: { 'circle-color': 'rgba(0,180,216,0.88)',
+      'circle-stroke-width': 2.5, 'circle-stroke-color': 'rgba(255,255,255,0.5)',
+      'circle-radius': ['step', ['get', 'point_count'], 18, 10, 24, 50, 30] }
+  });
+
+  // Numero dentro cluster
+  sardMap.addLayer({ id: 'poi-cluster-count', type: 'symbol', source: 'pois',
+    filter: ['has', 'point_count'],
+    layout: { visibility: 'none', 'text-field': '{point_count_abbreviated}',
+      'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'], 'text-size': 13 },
+    paint: { 'text-color': '#fff' }
+  });
+
+  // Glow pin singoli
+  sardMap.addLayer({ id: 'poi-glow', type: 'circle', source: 'pois',
+    filter: ['!', ['has', 'point_count']], layout: { visibility: 'none' },
+    paint: { 'circle-color': POI_COLOR_EXPR, 'circle-radius': 17,
+      'circle-opacity': 0.22, 'circle-blur': 0.6 }
+  });
+
+  // Pin singoli
+  sardMap.addLayer({ id: 'poi-unclustered', type: 'circle', source: 'pois',
+    filter: ['!', ['has', 'point_count']], layout: { visibility: 'none' },
+    paint: { 'circle-color': POI_COLOR_EXPR, 'circle-radius': 10,
+      'circle-stroke-width': 2.2, 'circle-stroke-color': 'rgba(255,255,255,0.92)' }
+  });
+
+  // Click su cluster — espandi zoom
+  sardMap.on('click', 'poi-clusters', (e) => {
+    e.originalEvent.stopPropagation();
+    _suppressMapClick = true;
+    const feat = e.features[0];
+    sardMap.getSource('pois').getClusterExpansionZoom(feat.properties.cluster_id, (err, zoom) => {
+      if (!err) sardMap.easeTo({ center: feat.geometry.coordinates, zoom: Math.min(zoom + 0.5, 18), duration: 500 });
+    });
+    setTimeout(() => { _suppressMapClick = false; }, 200);
+  });
+
+  // Click su pin singolo — apri quick card
+  sardMap.on('click', 'poi-unclustered', (e) => {
+    e.originalEvent.stopPropagation();
+    _suppressMapClick = true;
+    const poi = MAP_POI.find(p => p.id === e.features[0].properties.id);
+    if (poi) { hideHoverTooltip(); showQuickCard(poi); }
+    setTimeout(() => { _suppressMapClick = false; }, 100);
+  });
+
+  // Hover tooltip su pin singolo
+  sardMap.on('mouseenter', 'poi-unclustered', (e) => {
+    sardMap.getCanvas().style.cursor = 'pointer';
+    if (!e.features || !e.features.length) return;
+    const poi = MAP_POI.find(p => p.id === e.features[0].properties.id);
+    if (poi) showHoverTooltip(poi, e.point);
+  });
+  sardMap.on('mouseleave', 'poi-unclustered', () => {
+    sardMap.getCanvas().style.cursor = '';
+    hideHoverTooltip();
+  });
+  sardMap.on('mouseenter', 'poi-clusters', () => { sardMap.getCanvas().style.cursor = 'pointer'; });
+  sardMap.on('mouseleave', 'poi-clusters', () => { sardMap.getCanvas().style.cursor = ''; });
+}
+
+// Aggiorna GeoJSON source con il filtro categoria attivo
+function updatePoisSource() {
+  const poisSrc = sardMap && sardMap.getSource('pois');
+  if (!poisSrc) return;
+  const filtered = activeMapFilter === 'all' ? MAP_POI : MAP_POI.filter(p => p.cat === activeMapFilter);
+  poisSrc.setData({
+    type: 'FeatureCollection',
+    features: filtered.map(p => ({
+      type: 'Feature',
+      properties: { id: p.id, cat: p.cat, name: p.name },
+      geometry: { type: 'Point', coordinates: [p.lng, p.lat] }
+    }))
   });
 }
 
-function showHoverTooltip(poi, el) {
+const POI_LAYER_IDS = ['poi-cluster-glow', 'poi-clusters', 'poi-cluster-count', 'poi-glow', 'poi-unclustered'];
+
+function setPOILayersVisibility(visible) {
+  const vis = visible ? 'visible' : 'none';
+  POI_LAYER_IDS.forEach(id => {
+    if (sardMap.getLayer(id)) sardMap.setLayoutProperty(id, 'visibility', vis);
+  });
+}
+
+function showHoverTooltip(poi, point) {
   const tooltip = document.getElementById('map-hover-tooltip');
   if (!tooltip) return;
-  const rect = el.getBoundingClientRect();
-  const mapRect = (document.getElementById('map-canvas-container') || document.body).getBoundingClientRect();
   const color = CAT_COLORS[poi.cat] || '#ffffff';
   tooltip.innerHTML = '<span class="tooltip-dot" style="background:' + color + '"></span>' + poi.name;
-  tooltip.style.left = (rect.left + rect.width / 2 - mapRect.left) + 'px';
-  tooltip.style.top  = (rect.top - mapRect.top) + 'px';
+  tooltip.style.left = point.x + 'px';
+  tooltip.style.top  = point.y + 'px';
   tooltip.classList.add('active');
 }
 
 function hideHoverTooltip() {
   const t = document.getElementById('map-hover-tooltip');
   if (t) t.classList.remove('active');
-}
-
-function addAllMarkers() {
-  allMarkers.forEach(m => m.remove());
-  allMarkers = [];
-  const filtered = activeMapFilter === 'all' ? MAP_POI : MAP_POI.filter(p => p.cat === activeMapFilter);
-  filtered.forEach(poi => {
-    const el = document.createElement('div');
-    el.className = 'map-marker';
-    el.setAttribute('data-cat', poi.cat);
-    el.setAttribute('data-id', poi.id);
-    el.innerHTML = getMarkerSVG(CAT_COLORS[poi.cat] || '#ffffff', poi.cat);
-    el.addEventListener('mouseenter', () => { el.firstElementChild.style.transform = 'scale(1.3)'; showHoverTooltip(poi, el); });
-    el.addEventListener('mouseleave', () => { el.firstElementChild.style.transform = 'scale(1)'; hideHoverTooltip(); });
-    el.addEventListener('click', (e) => { e.stopPropagation(); hideHoverTooltip(); _suppressMapClick = true; showQuickCard(poi); setTimeout(() => { _suppressMapClick = false; }, 100); });
-    const marker = new maplibregl.Marker({ element: el, anchor: 'center' })
-      .setLngLat([poi.lng, poi.lat])
-      .addTo(sardMap);
-    allMarkers.push(marker);
-  });
-  scIndex = new Supercluster({ radius: 90, maxZoom: 16, minPoints: 2 });
-  scIndex.load(filtered.map(p => ({
-    type: 'Feature',
-    properties: { id: p.id, cat: p.cat, name: p.name },
-    geometry: { type: 'Point', coordinates: [p.lng, p.lat] }
-  })));
-  renderClusters();
 }
 
 // â”€â”€â”€ QUICK CARD (primo click pin) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
@@ -983,8 +1019,10 @@ function togglePins() {
     btn.classList.toggle('active', pinsVisible);
     btn.querySelector('span').textContent = pinsVisible ? t('map.pins.hide') : t('map.pins.show');
   }
-  if (pinsVisible && sardMap && sardMap.loaded()) addAllMarkers();
-  else renderClusters();
+  if (sardMap) {
+    setPOILayersVisibility(pinsVisible);
+    if (pinsVisible) updatePoisSource();
+  }
 }
 
 function setActiveMapFilter(cat) {
@@ -997,9 +1035,12 @@ function setActiveMapFilter(cat) {
   if (!pinsVisible) {
     pinsVisible = true;
     const btn = document.getElementById('pin-toggle-btn');
-    if (btn) { btn.classList.add('active'); btn.querySelector('span').textContent = 'Nascondi Pin'; }
+    if (btn) { btn.classList.add('active'); btn.querySelector('span').textContent = t('map.pins.hide'); }
   }
-  if (sardMap && sardMap.loaded()) addAllMarkers();
+  if (sardMap && sardMap.getSource('pois')) {
+    updatePoisSource();
+    setPOILayersVisibility(true);
+  }
   closeQuickCard();
   closeMapInfoPanel();
 }
@@ -1038,31 +1079,19 @@ function selectSearchResult(id) {
   document.getElementById('map-search-results').classList.remove('open');
 
   if (!pinsVisible) {
-    // Rebuild markers with ALL categories so the target POI always has a DOM marker,
-    // regardless of any previous category filter state.
-    const savedFilter = activeMapFilter;
+    pinsVisible = true;
     activeMapFilter = 'all';
-    addAllMarkers(); // renderClusters inside hides all (pinsVisible=false)
-    activeMapFilter = savedFilter;
-
-    // Show only the searched pin
-    allMarkers.forEach(m => {
-      const el = m.getElement();
-      const show = el.getAttribute('data-id') === id;
-      el.style.opacity = show ? '1' : '0';
-      el.style.pointerEvents = show ? 'auto' : 'none';
-    });
-    clusterDivMarkers.forEach(m => m.remove());
-    clusterDivMarkers = [];
-  } else {
-    // Pins visible: ensure markers exist (lazy init)
-    if (allMarkers.length === 0) addAllMarkers();
+    const btn = document.getElementById('pin-toggle-btn');
+    if (btn) { btn.classList.add('active'); btn.querySelector('span').textContent = t('map.pins.hide'); }
+    updatePoisSource();
+    setPOILayersVisibility(true);
   }
 
   sardMap.flyTo({
     center: [poi.lng, poi.lat],
     zoom: 14,
     pitch: 55,
+    bearing: 0,
     duration: 1200,
     easing: (t) => 1 - Math.pow(1 - t, 3)
   });
@@ -1071,6 +1100,7 @@ function selectSearchResult(id) {
     showQuickCard(poi);
     setTimeout(() => { _suppressMapClick = false; }, 100);
   }, 800);
+  document.getElementById('map-search-input').blur();
 }
 
 function showMapSearchResults() {
@@ -1100,7 +1130,7 @@ function showMapInfoPanel(poi) {
   const panel = document.getElementById('map-info-panel');
   if (!panel) return;
 
-  getCatLabel(poi.cat) || poi.cat;
+  const catLabel = getCatLabel(poi.cat) || poi.cat;
 
   const catColor = CAT_COLORS[poi.cat] || '#fff';
   const catGradient = CAT_GRADIENTS[poi.cat] || CAT_GRADIENTS.attrazione;
