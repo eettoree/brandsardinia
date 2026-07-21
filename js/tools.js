@@ -445,6 +445,18 @@ const SERVICE_ICONS = {
   bar:         { icon: 'BAR', label: 'Bar/Ristorante' }
 };
 
+// Micro-icone SVG inline (rimpiazzano gli emoji — direttiva "mai emoji").
+// 12px, currentColor: si adattano al colore del testo del contenitore.
+const TOOL_ICONS = {
+  pin:    '<svg class="ti-ico" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>',
+  phone:  '<svg class="ti-ico" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>',
+  star:   '<svg class="ti-ico" viewBox="0 0 24 24" width="12" height="12" fill="currentColor"><path d="M12 2l3 6.5 7 .6-5.3 4.6 1.6 6.8L12 17l-6.9 3.5L6.7 13.7 1.4 9.1l7-.6z"/></svg>',
+  clock:  '<svg class="ti-ico" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
+  ticket: '<svg class="ti-ico" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2 2 2 0 0 0 0 4 2 2 0 0 1-2 2H5a2 2 0 0 1-2-2 2 2 0 0 0 0-4z"/><path d="M15 6v12"/></svg>',
+  map:    '<svg class="ti-ico" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg>',
+  car:    '<svg class="ti-ico" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l1.5-4.5A2 2 0 0 1 8.4 7h7.2a2 2 0 0 1 1.9 1.5L19 13v4h-2v-1H7v1H5z"/><circle cx="7.5" cy="15" r="1"/><circle cx="16.5" cy="15" r="1"/></svg>'
+};
+
 // MONTH_NAMES now driven by i18n
 function getMonthNames() { return t('tools.calendar.months'); }
 
@@ -611,11 +623,41 @@ function initTools() {
 function renderToolsMenu() {
   // Bind click su card tools dal HTML
   document.querySelectorAll('.tool-card').forEach(card => {
-    card.addEventListener('click', () => {
-      const tool = card.getAttribute('data-tool');
-      openToolSection(tool);
+    // Accessibilità: <div> → attivabile da tastiera (Enter/Spazio).
+    if (!card.hasAttribute('role')) card.setAttribute('role', 'button');
+    if (!card.hasAttribute('tabindex')) card.setAttribute('tabindex', '0');
+    const activate = () => openToolSection(card.getAttribute('data-tool'));
+    card.addEventListener('click', activate);
+    card.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(); }
     });
   });
+}
+
+// Mappa nome tool → funzione di render, riusata da openToolSection e dal
+// re-render al cambio lingua.
+function dispatchToolRender(name, contentArea) {
+  if      (name === 'calendar')     renderCalendar(contentArea);
+  else if (name === 'beaches')      renderBeaches(contentArea);
+  else if (name === 'camper')       renderCamper(contentArea);
+  else if (name === 'sports')       renderSports(contentArea);
+  else if (name === 'transport')    renderTransport(contentArea);
+  else if (name === 'itinerari')    renderItinerari(contentArea);
+  else if (name === 'social')       renderSocialWall(contentArea);
+  else if (name === 'nord')         renderNordSardegna(contentArea);
+  else if (name === 'prenotazioni') renderPrenotazioni(contentArea);
+  else if (name === 'biglietti')    renderBiglietti(contentArea);
+  else if (name === 'sentieri')     renderSentieri(contentArea);
+  else if (name === 'cantine')      renderCantine(contentArea);
+  else if (name === 'prodotti')     renderProdotti(contentArea);
+  else if (name === 'artigiani')    renderArtigiani(contentArea);
+  else if (name === 'comuni')       renderComuni(contentArea);
+  else if (name === 'guide')        renderGuide(contentArea);
+  else if (name === 'musei')        renderMusei(contentArea);
+  else if (name === 'ristoranti')   renderRistoranti(contentArea);
+  else if (name === 'hotel')        renderHotel(contentArea);
+  else if (name === 'pacchetti')    renderPacchetti(contentArea);
+  else if (name === 'navigazione')  renderNavigazione(contentArea);
 }
 
 function openToolSection(name) {
@@ -632,27 +674,7 @@ function openToolSection(name) {
 
       // Render del contenuto
       const contentArea = document.getElementById('tools-content-area');
-      if      (name === 'calendar')     renderCalendar(contentArea);
-      else if (name === 'beaches')      renderBeaches(contentArea);
-      else if (name === 'camper')       renderCamper(contentArea);
-      else if (name === 'sports')       renderSports(contentArea);
-      else if (name === 'transport')    renderTransport(contentArea);
-      else if (name === 'itinerari')    renderItinerari(contentArea);
-      else if (name === 'social')       renderSocialWall(contentArea);
-      else if (name === 'nord')         renderNordSardegna(contentArea);
-      else if (name === 'prenotazioni') renderPrenotazioni(contentArea);
-      else if (name === 'biglietti')    renderBiglietti(contentArea);
-      else if (name === 'sentieri')     renderSentieri(contentArea);
-      else if (name === 'cantine')      renderCantine(contentArea);
-      else if (name === 'prodotti')     renderProdotti(contentArea);
-      else if (name === 'artigiani')    renderArtigiani(contentArea);
-      else if (name === 'comuni')       renderComuni(contentArea);
-      else if (name === 'guide')        renderGuide(contentArea);
-      else if (name === 'musei')        renderMusei(contentArea);
-      else if (name === 'ristoranti')   renderRistoranti(contentArea);
-      else if (name === 'hotel')        renderHotel(contentArea);
-      else if (name === 'pacchetti')    renderComingSoon(contentArea, 'Pacchetti Viaggio', 'Pacchetti completi con volo, hotel e esperienze — tutto organizzato, tutto in un click.');
-      else if (name === 'navigazione') renderNavigazione(contentArea);
+      dispatchToolRender(name, contentArea);
 
       gsap.fromTo(content,
         { opacity: 0, y: 30 },
@@ -663,6 +685,7 @@ function openToolSection(name) {
 }
 
 function closeToolSection() {
+  activeToolSection = null;
   const menu = document.getElementById('tools-menu');
   const content = document.getElementById('tools-content');
 
@@ -678,6 +701,16 @@ function closeToolSection() {
     }
   });
 }
+
+// Re-render del tool attualmente aperto quando cambia la lingua, così le
+// parti che passano da t() si aggiornano senza dover riaprire il tool.
+document.addEventListener('langChanged', () => {
+  const content = document.getElementById('tools-content');
+  const contentArea = document.getElementById('tools-content-area');
+  if (activeToolSection && contentArea && content && content.style.display === 'block') {
+    dispatchToolRender(activeToolSection, contentArea);
+  }
+});
 
 // ─── CALENDARIO EVENTI ───────────────────────────────────────
 function renderCalendar(container) {
@@ -748,7 +781,7 @@ function getDayNames() { return t('tools.calendar.days'); }
         <div class="event-body">
           <div class="event-category" style="color:${catColor}">${(CAT_LABELS[ev.category] || ev.category).toUpperCase()}</div>
           <h3 class="event-name">${ev.name}</h3>
-          <div class="event-location">📍 ${ev.city}</div>
+          <div class="event-location">${TOOL_ICONS.pin} ${ev.city}</div>
           <p class="event-desc">${ev.description}</p>
           ${ev.link ? `<a href="${ev.link}" target="_blank" class="event-link">Scopri di più →</a>` : ''}
         </div>
@@ -819,7 +852,7 @@ function getDayNames() { return t('tools.calendar.days'); }
           <button class="cal-nav-btn" id="cal-next">&#8594;</button>
         </div>
         <div class="cal-grid">
-          ${DAY_NAMES.map(d => `<div class="cal-day-header">${d}</div>`).join('')}
+          ${(() => { const dn = getDayNames(); return [...dn.slice(1), dn[0]]; })().map(d => `<div class="cal-day-header">${d}</div>`).join('')}
           ${cells}
         </div>
         ${monthEvents.length === 0 ? '<div class="no-events" style="margin-top:20px">Nessun evento in questo mese.</div>' : ''}
@@ -827,7 +860,7 @@ function getDayNames() { return t('tools.calendar.days'); }
   }
 
   function buildMonthOptions(v) {
-    return MONTH_NAMES.map((m, i) => i === 0
+    return getMonthNames().map((m, i) => i === 0
       ? `<option value="0" ${v === 0 ? 'selected' : ''}>Tutti i mesi</option>`
       : `<option value="${i}" ${v === i ? 'selected' : ''}>${m}</option>`
     ).join('');
@@ -863,7 +896,7 @@ function getDayNames() { return t('tools.calendar.days'); }
         <div>
           <div class="event-category" style="color:${catColor};margin-bottom:4px">${(CAT_LABELS[ev.category] || ev.category).toUpperCase()}</div>
           <h3 class="event-name" style="margin:0 0 4px">${ev.name}</h3>
-          <div class="event-location">📍 ${ev.city}</div>
+          <div class="event-location">${TOOL_ICONS.pin} ${ev.city}</div>
         </div>
       </div>
       <p class="event-desc" style="margin-bottom:16px">${ev.description}</p>
@@ -883,7 +916,7 @@ function getDayNames() { return t('tools.calendar.days'); }
     container.innerHTML = `
       <div class="event-modal-overlay" style="display:none">
         <div class="event-modal-box glass-card">
-          <button class="event-modal-close">✕</button>
+          <button class="event-modal-close"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
           <div class="event-modal-content"></div>
         </div>
       </div>
@@ -956,6 +989,128 @@ function getDayNames() { return t('tools.calendar.days'); }
   }
 
   render();
+}
+
+// ─── PACCHETTI VIAGGIO ────────────────────────────────────────
+function renderPacchetti(container) {
+  const pacchetti = [
+    {
+      titolo: 'Mare & Relax',
+      desc: 'Hotel fronte mare, spiagge cristalline e tutto incluso — la Sardegna da cartolina.',
+      prezzo: '€ 600 – 1.800 / pers.',
+      durata: '7–14 notti',
+      links: [
+        { text: 'Alpitour — Sardegna', url: 'https://www.alpitour.it/destinazioni/sardegna/' },
+        { text: 'Eden Viaggi — Sardinia', url: 'https://www.edenvacanze.it/' },
+        { text: 'Turisanda — Sardegna Mare', url: 'https://www.turisanda.it/' }
+      ],
+      icon: '<path d="M4 24s4-4 8-4 8 4 8 4 4-4 8-4" stroke-linecap="round"/><path d="M2 12h28M6 7l1 5M26 7l-1 5" stroke-linecap="round"/><circle cx="16" cy="7" r="5" fill="currentColor" opacity="0.12"/><circle cx="16" cy="7" r="5"/>'
+    },
+    {
+      titolo: 'Avventura & Sport',
+      desc: 'Trekking, diving, kitesurf, arrampicata e MTB con guide specializzate locali.',
+      prezzo: '€ 500 – 1.200 / pers.',
+      durata: '5–10 notti',
+      links: [
+        { text: 'Escursì — Tour Avventura', url: 'https://www.escursi.com/' },
+        { text: 'Viator — Outdoor Sardinia', url: 'https://www.viator.com/Sardinia/d4241-ttd' },
+        { text: 'GetYourGuide — Sardinia Adventure', url: 'https://www.getyourguide.it/sardinia-l946/' }
+      ],
+      icon: '<path d="M4 28L16 6l12 22" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 22h16" stroke-linecap="round"/><circle cx="16" cy="6" r="3" fill="currentColor" opacity="0.15"/>'
+    },
+    {
+      titolo: 'Gastronomia & Cultura',
+      desc: 'Sagre, enoteche, nuraghi e musei. Sardegna vera, lontana dal turismo di massa.',
+      prezzo: '€ 400 – 900 / pers.',
+      durata: '4–8 notti',
+      links: [
+        { text: 'Turismo.sardegna.it — Itinerari', url: 'https://turismo.sardegna.it/' },
+        { text: 'Airbnb Esperienze — Sardegna', url: 'https://www.airbnb.it/experiences' },
+        { text: 'Booking — Pacchetti Cultura', url: 'https://www.booking.com/region/it/sardinia.it.html' }
+      ],
+      icon: '<path d="M8 28V16a4 4 0 018-8 4 4 0 018 8v12" stroke-linecap="round"/><path d="M4 28h24" stroke-linecap="round"/><circle cx="16" cy="8" r="4" fill="currentColor" opacity="0.12"/>'
+    },
+    {
+      titolo: 'Family & Bambini',
+      desc: 'Villaggi attrezzati, acquapark, spiagge sicure e animazione. Vacanza senza pensieri.',
+      prezzo: '€ 800 – 2.200 / famiglia',
+      durata: '7–14 notti',
+      links: [
+        { text: 'Club Med — Sardinia', url: 'https://www.clubmed.it/' },
+        { text: 'Alpitour Family — Sardegna', url: 'https://www.alpitour.it/destinazioni/sardegna/' },
+        { text: 'Expedia — Sardinia Family', url: 'https://www.expedia.it/Sardinia.d6037073.Travel-Guide-Destinations' }
+      ],
+      icon: '<circle cx="11" cy="7" r="4" fill="currentColor" opacity="0.12"/><circle cx="11" cy="7" r="4"/><circle cx="21" cy="9" r="3" fill="currentColor" opacity="0.12"/><circle cx="21" cy="9" r="3"/><path d="M3 28a8 8 0 0116 0" stroke-linecap="round"/><path d="M19 28a6 6 0 0110 0" stroke-linecap="round"/>'
+    },
+    {
+      titolo: 'Romantico & Wellness',
+      desc: 'Resort boutique, spa, cene al tramonto sul mare. Per coppie che vogliono il meglio.',
+      prezzo: '€ 900 – 3.000 / coppia',
+      durata: '5–10 notti',
+      links: [
+        { text: 'Small Luxury Hotels — Sardinia', url: 'https://www.slh.com/destinations/europe/italy/sardinia/' },
+        { text: 'Booking — Spa & Wellness', url: 'https://www.booking.com/region/it/sardinia.it.html?label=wellness' },
+        { text: 'Condé Nast Traveller — Sardinia', url: 'https://www.cntraveller.com/gallery/best-hotels-sardinia' }
+      ],
+      icon: '<path d="M16 28C10 22 4 18 4 12a6 6 0 0112-2 6 6 0 0112 2c0 6-6 10-12 16z" fill="currentColor" opacity="0.12"/><path d="M16 28C10 22 4 18 4 12a6 6 0 0112-2 6 6 0 0112 2c0 6-6 10-12 16z"/>'
+    },
+    {
+      titolo: 'Volo + Hotel',
+      desc: 'Combina volo e alloggio in un\'unica prenotazione — spesso più conveniente del separato.',
+      prezzo: 'da € 299 / pers.',
+      durata: 'da 3 notti',
+      links: [
+        { text: 'Expedia — Volo + Hotel Sardegna', url: 'https://www.expedia.it/Sardinia.d6037073.Travel-Guide-Destinations' },
+        { text: 'Skyscanner — Pacchetti', url: 'https://www.skyscanner.it/voli-per/sar/sardegna.html' },
+        { text: 'eDreams — Sardegna', url: 'https://www.edreams.it/voli/sardegna/' }
+      ],
+      icon: '<path d="M28 10l-4 2-2-4-8 8-6-2-4 4 6 2v6l4-4 2 6 4-4-2-8 8-8-2-4 2-4z" fill="currentColor" opacity="0.12"/><path d="M28 10l-4 2-2-4-8 8-6-2-4 4 6 2v6l4-4 2 6 4-4-2-8 8-8-2-4 2-4z"/>'
+    }
+  ];
+
+  container.innerHTML = `
+    <div class="tools-section-header">
+      <h2>Pacchetti Viaggio</h2>
+      <p class="prenot-subtitle">Scegli il tuo stile di vacanza — accedi ai migliori tour operator e piattaforme per prenotare in Sardegna.</p>
+    </div>
+    <div class="pacchetti-grid">
+      ${pacchetti.map(p => `
+        <div class="pacchetto-card glass-card">
+          <div class="pacchetto-head">
+            <div class="prenot-icon-wrap">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22">${p.icon}</svg>
+            </div>
+            <div>
+              <div class="prenot-title">${p.titolo}</div>
+              <div class="prenot-desc">${p.desc}</div>
+            </div>
+          </div>
+          <div class="pacchetto-meta">
+            <span class="pacchetto-badge">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" width="11" height="11"><circle cx="8" cy="8" r="6"/><path d="M8 5v3l2 2" stroke-linecap="round"/></svg>
+              ${p.durata}
+            </span>
+            <span class="pacchetto-badge pacchetto-price">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" width="11" height="11"><circle cx="8" cy="8" r="6"/><path d="M6 10.5h4M8 5.5v5" stroke-linecap="round"/></svg>
+              ${p.prezzo}
+            </span>
+          </div>
+          <div class="prenot-links">
+            ${p.links.map(l => `
+              <a href="${l.url}" target="_blank" rel="noopener" class="prenot-link">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" width="11" height="11" style="flex-shrink:0"><path d="M3 8h9M8 4l5 4-5 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                ${l.text}
+              </a>`).join('')}
+          </div>
+        </div>`).join('')}
+    </div>
+    <p class="pacchetti-note">I link aprono siti esterni — BrandSardinia non è affiliata e non riceve commissioni.</p>
+  `;
+
+  gsap.fromTo('.pacchetto-card',
+    { opacity: 0, y: 20 },
+    { opacity: 1, y: 0, stagger: 0.08, duration: 0.35, ease: 'power2.out' }
+  );
 }
 
 // ─── COMING SOON PLACEHOLDER ──────────────────────────────────
@@ -1323,7 +1478,7 @@ function renderSentieri(container) {
             <div class="sentiero-head">
               <span class="sentiero-badge" style="color:${color};border-color:${color}40;background:${color}14">${s.difficolta}</span>
               <div class="sentiero-name">${s.name}</div>
-              <div class="sentiero-zona">📍 ${s.zona}</div>
+              <div class="sentiero-zona">${TOOL_ICONS.pin} ${s.zona}</div>
             </div>
             <p class="sentiero-desc">${s.desc}</p>
             <div class="sentiero-stats">
@@ -1332,7 +1487,7 @@ function renderSentieri(container) {
               <div class="sentiero-stat"><span class="stat-val">${s.durata}</span><span class="stat-lbl">Durata</span></div>
             </div>
             <div class="cantina-footer">
-              <span class="sentiero-partenza">🚗 ${s.partenza}</span>
+              <span class="sentiero-partenza">${TOOL_ICONS.car} ${s.partenza}</span>
               ${s.web && s.web!=='#' ? `<a href="${s.web}" target="_blank" rel="noopener" class="cantina-link">Info →</a>` : ''}
             </div>
           </div>`;
@@ -1376,16 +1531,16 @@ function renderRistoranti(container) {
             <div class="risto-badges">
               <span class="risto-tipo-badge" style="color:${color};border-color:${color}40;background:${color}14">${r.tipo}</span>
               <span class="risto-fascia">${FASCIA_SYM[r.fascia]||'€'}</span>
-              ${r.michelin ? '<span class="michelin-star">⭐ Michelin</span>' : ''}
+              ${r.michelin ? `<span class="michelin-star">${TOOL_ICONS.star} Michelin</span>` : ''}
             </div>
             <div class="ristorante-name">${r.name}</div>
-            <div class="ristorante-city">📍 ${r.city}</div>
+            <div class="ristorante-city">${TOOL_ICONS.pin} ${r.city}</div>
             <p class="ristorante-desc">${r.desc}</p>
             <div class="risto-specialita">
               ${r.specialita.map(sp => `<span class="spec-tag">${sp}</span>`).join('')}
             </div>
             <div class="cantina-footer">
-              ${r.tel ? `<span class="cantina-tel">📞 ${r.tel}</span>` : ''}
+              ${r.tel ? `<span class="cantina-tel">${TOOL_ICONS.phone} ${r.tel}</span>` : ''}
               ${r.web && r.web!=='#' ? `<a href="${r.web}" target="_blank" rel="noopener" class="cantina-link">${t('tools.action.book')} →</a>` : ''}
             </div>
           </div>`;
@@ -1434,13 +1589,13 @@ function renderHotel(container) {
               <span class="hotel-fascia" style="color:${fascColor}">${FASCIA_LABELS[h.fascia]||h.fascia}</span>
             </div>
             <div class="hotel-name">${h.name}</div>
-            <div class="hotel-city">📍 ${h.city}</div>
+            <div class="hotel-city">${TOOL_ICONS.pin} ${h.city}</div>
             <p class="hotel-desc">${h.desc}</p>
             <div class="hotel-servizi">
               ${h.servizi.map(s => `<span class="servizio-tag">${s}</span>`).join('')}
             </div>
             <div class="cantina-footer">
-              ${h.tel ? `<span class="cantina-tel">📞 ${h.tel}</span>` : ''}
+              ${h.tel ? `<span class="cantina-tel">${TOOL_ICONS.phone} ${h.tel}</span>` : ''}
               ${h.web && h.web!=='#' ? `<a href="${h.web}" target="_blank" rel="noopener" class="cantina-link">${t('tools.action.website')} →</a>` : ''}
             </div>
           </div>`;
@@ -1481,7 +1636,7 @@ function renderCantine(container) {
           <div class="cantina-card glass-card">
             <div>
               <div class="cantina-name">${c.name}</div>
-              <div class="cantina-city">📍 ${c.city}</div>
+              <div class="cantina-city">${TOOL_ICONS.pin} ${c.city}</div>
             </div>
             <p class="cantina-desc">${c.desc}</p>
             <div class="cantina-vitigni">
@@ -1491,7 +1646,7 @@ function renderCantine(container) {
               ${c.servizi.map(s => `<span class="servizio-tag">${SERV_LABELS[s]||s}</span>`).join('')}
             </div>
             <div class="cantina-footer">
-              ${c.tel ? `<span class="cantina-tel">📞 ${c.tel}</span>` : ''}
+              ${c.tel ? `<span class="cantina-tel">${TOOL_ICONS.phone} ${c.tel}</span>` : ''}
               <a href="${c.web}" target="_blank" rel="noopener" class="cantina-link">${t('tools.action.website')} →</a>
             </div>
           </div>`).join('')}
@@ -1536,13 +1691,13 @@ function renderMusei(container) {
             <div class="museo-head">
               <span class="museo-tipo-badge" style="color:${color};border-color:${color}40;background:${color}14">${m.tipo}</span>
               <div class="museo-name">${m.name}</div>
-              <div class="museo-city">📍 ${m.city}</div>
+              <div class="museo-city">${TOOL_ICONS.pin} ${m.city}</div>
             </div>
             <p class="museo-desc">${m.desc}</p>
             <div class="museo-info">
-              <span class="museo-info-item">🕐 ${m.orari}</span>
-              <span class="museo-info-item">🎫 ${m.biglietto}</span>
-              <span class="museo-info-item">📌 ${m.indirizzo}</span>
+              <span class="museo-info-item">${TOOL_ICONS.clock} ${m.orari}</span>
+              <span class="museo-info-item">${TOOL_ICONS.ticket} ${m.biglietto}</span>
+              <span class="museo-info-item">${TOOL_ICONS.pin} ${m.indirizzo}</span>
             </div>
             ${m.web && m.web!=='#' ? `<a href="${m.web}" target="_blank" rel="noopener" class="cantina-link" style="margin-top:10px;display:inline-block">Sito ufficiale →</a>` : ''}
           </div>`;
@@ -1562,23 +1717,33 @@ function renderMusei(container) {
 function renderBeaches(container) {
   // Fetch wind + wave + sea temp from Open-Meteo (free, no API key, CORS ok)
   async function fetchBeachWeather(lat, lng) {
-    const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lng}` +
-      `&current=wind_speed_10m,wind_direction_10m,wind_gusts_10m,wave_height,sea_surface_temperature` +
-      `&wind_speed_unit=kmh&hourly=wave_height&forecast_days=1`;
-    try {
-      const r = await fetch(url);
-      const d = await r.json();
-      const c = d.current || {};
-      return {
-        wind:  Math.round(c.wind_speed_10m   || 0),
-        gusts: Math.round(c.wind_gusts_10m   || 0),
-        dir:   Math.round(c.wind_direction_10m || 0),
-        wavH:  c.wave_height != null ? parseFloat(c.wave_height).toFixed(1) : null,
-        seaT:  c.sea_surface_temperature != null ? Math.round(c.sea_surface_temperature) : null
-      };
-    } catch {
-      return null;
-    }
+    // Wind → Forecast API. Waves + sea temp → Marine API (separate endpoints:
+    // wave_height / sea_surface_temperature do NOT exist on /v1/forecast).
+    const windUrl = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lng}` +
+      `&current=wind_speed_10m,wind_direction_10m,wind_gusts_10m&wind_speed_unit=kmh&forecast_days=1`;
+    const marineUrl = `https://marine-api.open-meteo.com/v1/marine?latitude=${lat}&longitude=${lng}` +
+      `&current=wave_height,sea_surface_temperature&forecast_days=1`;
+
+    const getCurrent = async (url) => {
+      try {
+        const r = await fetch(url);
+        if (!r.ok) return {};
+        const d = await r.json();
+        return d.current || {};
+      } catch { return {}; }
+    };
+
+    const [wind, marine] = await Promise.all([getCurrent(windUrl), getCurrent(marineUrl)]);
+    // No wind data at all → treat as failure so the card shows "—".
+    if (wind.wind_speed_10m == null && wind.wind_gusts_10m == null) return null;
+
+    return {
+      wind:  Math.round(wind.wind_speed_10m   || 0),
+      gusts: Math.round(wind.wind_gusts_10m   || 0),
+      dir:   Math.round(wind.wind_direction_10m || 0),
+      wavH:  marine.wave_height != null ? parseFloat(marine.wave_height).toFixed(1) : null,
+      seaT:  marine.sea_surface_temperature != null ? Math.round(marine.sea_surface_temperature) : null
+    };
   }
 
   // True if wind direction falls inside bad range [from, to]
@@ -1781,11 +1946,18 @@ function renderBeaches(container) {
           });
         });
       });
-      document.addEventListener('click', e => {
-        if (!searchInput.contains(e.target) && !searchDropdown.contains(e.target)) {
-          searchDropdown.style.display = 'none';
-        }
-      }, { once: false });
+      // Register the outside-click handler once (querying elements fresh by id)
+      // to avoid stacking a new document listener on every re-render.
+      if (!window.__beachOutsideClickBound) {
+        window.__beachOutsideClickBound = true;
+        document.addEventListener('click', e => {
+          const si = document.getElementById('beach-search-input');
+          const sd = document.getElementById('beach-search-dropdown');
+          if (sd && si && !si.contains(e.target) && !sd.contains(e.target)) {
+            sd.style.display = 'none';
+          }
+        });
+      }
     }
 
     // Fetch weather for all 12 curated beaches in parallel
@@ -1832,7 +2004,7 @@ function renderCamper(container) {
     <div class="tools-section-header">
       <h2>${t('tools.render.camper')}</h2>
     </div>
-    <p class="section-subtitle">8 aree sosta selezionate in tutta la Sardegna. Verifica disponibilità prima di partire.</p>
+    <p class="section-subtitle">${CAMPER_DATA.length} aree sosta selezionate in tutta la Sardegna. Verifica disponibilità prima di partire.</p>
     <div class="camper-grid">
       ${CAMPER_DATA.map(area => {
         const servicesHtml = area.services.map(s => {
@@ -1845,8 +2017,8 @@ function renderCamper(container) {
             <h3 class="camper-name">${area.name}</h3>
             <span class="camper-cost">${area.cost}</span>
           </div>
-          <div class="camper-location">📍 ${area.city}</div>
-          <div class="camper-coords">🗺️ ${area.coords}</div>
+          <div class="camper-location">${TOOL_ICONS.pin} ${area.city}</div>
+          <div class="camper-coords">${TOOL_ICONS.map} ${area.coords}</div>
           <div class="camper-services">${servicesHtml}</div>
           <p class="camper-notes">${area.notes}</p>
         </div>`;
@@ -2816,7 +2988,7 @@ function renderSocialWall(container) {
       <div class="sw-search-wrap">
         <svg class="sw-search-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><circle cx="9" cy="9" r="6"/><path stroke-linecap="round" d="m15 15 3 3"/></svg>
         <input id="sw-search" type="text" placeholder="Cerca: spiagge, trekking, festival, @account..." autocomplete="off" spellcheck="false">
-        <button class="sw-clear-btn" id="sw-clear" style="display:none">✕</button>
+        <button class="sw-clear-btn" id="sw-clear" style="display:none"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
       </div>
       <div class="sw-chips">
         ${TOPICS.map(t => `<button class="sw-chip${activeFilter === t.key ? ' active' : ''}" data-filter="${t.key}">${t.label}</button>`).join('')}
@@ -2873,9 +3045,9 @@ function renderNordSardegna(container) {
   let activeSeason = 'inverno';
 
   const seasons = [
-    { key: 'inverno', label: 'Inverno', icon: '❄' },
-    { key: 'musei', label: 'Musei & Cultura', icon: '🏛' },
-    { key: 'ristoranti', label: 'Dove Mangiare', icon: '🍷' }
+    { key: 'inverno', label: 'Inverno', icon: '' },
+    { key: 'musei', label: 'Musei & Cultura', icon: '' },
+    { key: 'ristoranti', label: 'Dove Mangiare', icon: '' }
   ];
 
   function render() {
@@ -2951,7 +3123,7 @@ function renderNordSardegna(container) {
               </div>
               <div class="nord-risto-tipo">${r.tipo}</div>
               <div class="nord-risto-piatti">${r.piatti}</div>
-              <div class="nord-risto-zona">📍 ${r.zona}</div>
+              <div class="nord-risto-zona">${TOOL_ICONS.pin} ${r.zona}</div>
             </div>
           `).join('')}
         </div>

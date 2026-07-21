@@ -2,11 +2,12 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="BrandSardinia — Il portale definitivo sulla Sardegna. Pianifica il tuo viaggio con AI, esplora la mappa satellite 3D e scopri eventi, spiagge e sport.">
   <meta name="keywords" content="Sardegna, Sardinia, vacanze, itinerario, spiagge, eventi, turismo, mappa interattiva, 3D">
   <meta name="author" content="BrandSardinia">
-  <meta name="theme-color" content="#0a0a0a">
+  <meta name="theme-color" content="#f5f5f5">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230a0a0a'/><text x='50%25' y='52%25' dominant-baseline='middle' text-anchor='middle' fill='%23C8102E' font-family='system-ui,sans-serif' font-weight='800' font-size='13'>BS</text></svg>">
 
   <!-- Open Graph -->
   <meta property="og:title" content="BrandSardinia — Esplora l'Isola">
@@ -23,13 +24,11 @@
 
   <!-- MapLibre GL JS — mappa satellite 3D gratuita -->
   <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css">
-  <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
-  <!-- Supercluster — clustering DOM-based per i pin della mappa -->
-  <script src="https://unpkg.com/supercluster@8.0.1/dist/supercluster.min.js"></script>
+  <script defer src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
 
   <!-- GSAP 3.x per animazioni -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
   <!-- Bebas Neue — display font per card titles -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -379,7 +378,7 @@
               <div class="rp-header-title" data-i18n="map.route.title">Percorso Personalizzato</div>
               <div class="rp-header-sub" data-i18n="map.route.subtitle">Aggiungi tappe nell'ordine del viaggio</div>
             </div>
-            <button id="rp-close" onclick="toggleRoutePlanner()">✕</button>
+            <button id="rp-close" onclick="toggleRoutePlanner()" aria-label="Chiudi"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
           </div>
           <div class="rp-body">
             <div id="rp-stops-container">
@@ -405,13 +404,13 @@
 
             <div class="rp-transport">
               <button class="rp-transport-btn active" data-mode="driving" onclick="rpSetTransport(this)">
-                <span class="rp-transport-icon">🚗</span><span data-i18n="map.route.driving">Auto</span>
+                <span class="rp-transport-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="17" height="17"><path d="M5 13l1.5-4.5A2 2 0 018.4 7h7.2a2 2 0 011.9 1.5L19 13M5 13h14v4a1 1 0 01-1 1h-1a1 1 0 01-1-1v-1H8v1a1 1 0 01-1 1H6a1 1 0 01-1-1v-4z" stroke-linejoin="round"/><circle cx="7.5" cy="15.5" r="0.6" fill="currentColor"/><circle cx="16.5" cy="15.5" r="0.6" fill="currentColor"/></svg></span><span data-i18n="map.route.driving">Auto</span>
               </button>
               <button class="rp-transport-btn" data-mode="walking" onclick="rpSetTransport(this)">
-                <span class="rp-transport-icon">🚶</span><span data-i18n="map.route.walking">A piedi</span>
+                <span class="rp-transport-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="17" height="17" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="4" r="1.6"/><path d="M11 8l3 1 2 3M11 8l-2 4 1 4-1 3M11 8l-3 3"/></svg></span><span data-i18n="map.route.walking">A piedi</span>
               </button>
               <button class="rp-transport-btn" data-mode="cycling" onclick="rpSetTransport(this)">
-                <span class="rp-transport-icon">🚴</span><span data-i18n="map.route.cycling">Bici</span>
+                <span class="rp-transport-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="17" height="17" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="17" r="3"/><circle cx="18.5" cy="17" r="3"/><path d="M8 17l4-7h4M9.5 10h4l3 7M13 6h2"/></svg></span><span data-i18n="map.route.cycling">Bici</span>
               </button>
             </div>
 
@@ -747,12 +746,12 @@
   <!-- ═══════════════════════════════════════════════════════
        MODULI APPLICAZIONE
   ══════════════════════════════════════════════════════════ -->
-  <script src="js/i18n.js"></script>
-  <script src="js/preloader.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/map.js"></script>
-  <script src="js/sardinai.js"></script>
-  <script src="js/tools.js"></script>
+  <script defer src="js/i18n.js"></script>
+  <script defer src="js/preloader.js"></script>
+  <script defer src="js/main.js"></script>
+  <script defer src="js/map.js"></script>
+  <script defer src="js/sardinai.js"></script>
+  <script defer src="js/tools.js"></script>
 
 
 </body>

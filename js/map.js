@@ -658,14 +658,6 @@ function _initMapCore(onReady) {
         tileSize: 256,
         encoding: 'terrarium',
         maxzoom: 15
-      },
-      'labels': {
-        type: 'raster',
-        tiles: [
-          'https://stamen-tiles.a.ssl.fastly.net/toner-labels/{z}/{x}/{y}.png'
-        ],
-        tileSize: 256,
-        attribution: 'Map tiles by Stamen Design, OpenStreetMap contributors'
       }
     },
     layers: [
@@ -752,8 +744,18 @@ function _initMapCore(onReady) {
     }
   });
 
+  // Diagnostic error handler: surfaces the real cause (source + url + message)
+  // instead of collapsing every failed sub-resource into a generic "Error".
+  // Deduped so a flaky tile endpoint can't flood the console.
+  const _mapErrSeen = new Set();
   sardMap.on('error', (e) => {
-    console.warn('MapLibre error:', e.error);
+    const src = e.sourceId || (e.source && e.source.id) || '?';
+    const url = e.error && (e.error.url || (e.error.request && e.error.request.url)) || '';
+    const msg = (e.error && e.error.message) || String(e.error || 'unknown');
+    const key = src + '|' + msg;
+    if (_mapErrSeen.has(key)) return;
+    _mapErrSeen.add(key);
+    console.warn(`[map] source="${src}" ${url ? 'url=' + url + ' ' : ''}→ ${msg}`);
   });
 }
 
@@ -1223,8 +1225,7 @@ function initMapFilters() {} // Legacy stub â€” filtri ora gestiti da overl
 // â”€â”€â”€ CLEANUP â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function destroyMap() {
   if (sardMap) {
-    allMarkers.forEach(m => m.remove());
-    allMarkers = [];
+    // Pins are native GeoJSON layers (no DOM markers to clean up).
     sardMap.remove();
     sardMap = null;
   }

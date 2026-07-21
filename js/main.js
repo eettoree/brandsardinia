@@ -192,10 +192,17 @@ function transitionToMainApp() {
 function bindSelectorCards() {
   const cards = document.querySelectorAll('.selector-card');
   cards.forEach(card => {
-    card.addEventListener('click', () => {
+    // Accessibilità: le card sono <div>, le rendo attivabili da tastiera.
+    if (!card.hasAttribute('role')) card.setAttribute('role', 'button');
+    if (!card.hasAttribute('tabindex')) card.setAttribute('tabindex', '0');
+    const activate = () => {
       const section = card.getAttribute('data-section');
       if (section === 'map') transitionToMap();
       else if (section) showSection(section);
+    };
+    card.addEventListener('click', activate);
+    card.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(); }
     });
   });
 }
@@ -431,7 +438,7 @@ const EVENT_HIGHLIGHTS = [
   { name: 'Sa Sartiglia', location: 'Oristano', date: '15–17 Feb', month: 'FEB', day: '15', desc: 'La giostra medievale più spettacolare della Sardegna. 75a edizione. Biglietti 10-55€ su Tick@.', gradient: 'linear-gradient(135deg,#e63946 0%,#c1121f 100%)', tool: 'calendar' },
   { name: 'Time in Jazz', location: 'Berchidda, Sassari', date: '8–16 Ago', month: 'AGO', day: '8', desc: 'Festival jazz internazionale. Tema 2026: "Kind of Blue" di Miles Davis. Venue outdoor spettacolari.', gradient: 'linear-gradient(135deg,#1d3557 0%,#457b9d 100%)', tool: 'calendar' },
   { name: 'Faradda di li Candareri', location: 'Sassari', date: '14 Agosto', month: 'AGO', day: '14', desc: 'Patrimonio UNESCO. Processione dei candelieri. 14 agosto, vigilia di Ferragosto.', gradient: 'linear-gradient(135deg,#f4a261 0%,#e76f51 100%)', tool: 'calendar' },
-  { name: 'Dromos Festival', location: 'Oristano e Sinis', date: '18 Lug – 16 Ago', month: 'LUG', day: '18', desc: 'Carmen Consoli, Subsonica, Mario Biondi. Musica tra nuraghi e siti archaeologici.', gradient: 'linear-gradient(135deg,#6d28d9 0%,#a855f7 100%)', tool: 'calendar' }
+  { name: 'Dromos Festival', location: 'Oristano e Sinis', date: '18 Lug – 16 Ago', month: 'LUG', day: '18', desc: 'Carmen Consoli, Subsonica, Mario Biondi. Musica tra nuraghi e siti archeologici.', gradient: 'linear-gradient(135deg,#6d28d9 0%,#a855f7 100%)', tool: 'calendar' }
 ];
 
 const EXPERIENCE_HIGHLIGHTS = [
@@ -448,7 +455,7 @@ function buildBeachCard(b) {
         <div class="preview-photo-gradient" style="background:${b.gradient};width:100%;height:100%;"></div>
         <div class="preview-photo-overlay"></div>
         <div class="preview-photo-caption">
-          <span class="preview-badge">Spiaggia</span>
+          <span class="preview-badge">${t('landing.badge.spiaggia')}</span>
           <div class="preview-photo-title">${b.name}</div>
           <div class="preview-photo-loc">${b.location}</div>
         </div>
@@ -470,7 +477,7 @@ function buildEventCard(e) {
         <div style="width:100%;height:100%;background:${e.gradient};"></div>
         <div class="preview-photo-overlay"></div>
         <div class="preview-photo-caption">
-          <span class="preview-badge">Evento</span>
+          <span class="preview-badge">${t('landing.badge.evento')}</span>
           <div class="preview-photo-title">${e.name}</div>
           <div class="preview-photo-loc">${e.location}</div>
         </div>
@@ -486,7 +493,7 @@ function buildEventCard(e) {
         <div class="preview-card-sub">${e.desc}</div>
         <div class="preview-card-meta">
           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="12" height="12"><rect x="2" y="3" width="12" height="11" rx="1"/><path d="M2 7h12M6 2v2M10 2v2"/></svg>
-          Calendario completo
+          ${t('landing.card.calendario')}
         </div>
       </div>
     </div>`;
@@ -499,7 +506,7 @@ function buildExperienceCard(x) {
         <div class="preview-photo-gradient" style="background:${x.gradient};width:100%;height:100%;"></div>
         <div class="preview-photo-overlay"></div>
         <div class="preview-photo-caption">
-          <span class="preview-badge">Esperienza</span>
+          <span class="preview-badge">${t('landing.badge.esperienza')}</span>
           <div class="preview-photo-title">${x.name}</div>
           <div class="preview-photo-loc">${x.location}</div>
         </div>
@@ -607,11 +614,11 @@ function renderLandingSections() {
     <section class="landing-section" id="ls-spiagge">
       <div class="landing-section-head">
         <div>
-          <div class="landing-label">Spiagge</div>
-          <div class="landing-title">Le spiagge da non perdere</div>
+          <div class="landing-label">${t('landing.spiagge.label')}</div>
+          <div class="landing-title">${t('landing.spiagge.title')}</div>
         </div>
         <button class="landing-cta" onclick="showSection('map')">
-          Vedi sulla mappa
+          ${t('landing.spiagge.cta')}
           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
         </button>
       </div>
@@ -621,11 +628,11 @@ function renderLandingSections() {
     <section class="landing-section" id="ls-eventi">
       <div class="landing-section-head">
         <div>
-          <div class="landing-label">Eventi 2026</div>
-          <div class="landing-title">Prossimi eventi da vivere</div>
+          <div class="landing-label">${t('landing.eventi.label')}</div>
+          <div class="landing-title">${t('landing.eventi.title')}</div>
         </div>
         <button class="landing-cta" onclick="openToolsDirect('calendar')">
-          Calendario completo
+          ${t('landing.eventi.cta')}
           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
         </button>
       </div>
@@ -635,11 +642,11 @@ function renderLandingSections() {
     <section class="landing-section" id="ls-esperienze">
       <div class="landing-section-head">
         <div>
-          <div class="landing-label">Esperienze</div>
-          <div class="landing-title">Avventure uniche nell'isola</div>
+          <div class="landing-label">${t('landing.esperienze.label')}</div>
+          <div class="landing-title">${t('landing.esperienze.title')}</div>
         </div>
         <button class="landing-cta" onclick="showSection('map')">
-          Esplora sulla mappa
+          ${t('landing.esperienze.cta')}
           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
         </button>
       </div>
@@ -694,3 +701,12 @@ window.showSection = showSection;
 window.applyTranslations = applyTranslations;
 window.openMapAtPoi = openMapAtPoi;
 window.openToolsDirect = openToolsDirect;
+
+// ─── RE-RENDER AL CAMBIO LINGUA ──────────────────────────────
+// I carousel landing sono costruiti via innerHTML con t(): vanno
+// rigenerati quando cambia la lingua (applyTranslations copre solo
+// gli elementi statici con data-i18n).
+document.addEventListener('langChanged', () => {
+  const landing = document.getElementById('landing-sections');
+  if (landing && landing.children.length) renderLandingSections();
+});

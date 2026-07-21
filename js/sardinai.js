@@ -78,7 +78,7 @@ const SARDINIA_DATA = {
       { name: 'Quartiere Castello (Cagliari)', location: 'Cagliari alta', tel: '+39 070 6776397', web: 'cagliariturismo.comune.cagliari.it', orari: 'Sempre aperto', costo: 'Gratuito', note: 'Borgata medievale murata. Torre dell\'Elefante (XIV sec.), Bastione Saint Remy, Cattedrale pisano-romanica, Palazzo Regio. Vista mozzafiato sul Golfo degli Angeli.' },
       { name: 'Sito di Nora (Romano-Punico)', location: 'Pula (CA)', tel: '+39 070 9209138', web: 'fondazionepulacultura.it', orari: '9:00–20:00 (estate)', costo: '8€ adulti (visita guidata obbligatoria)', note: 'Città punico-romana fondata dai Fenici (IX sec. a.C.). Anfiteatro, terme, mosaici a picco sul mare. 40 km da Cagliari via SS195.' },
       { name: 'Nuraghe Losa', location: 'Abbasanta (OR)', tel: '+39 0785 52302', web: 'nuraghelosa.net', orari: 'Aprile–ottobre: 9:00–tramonto / Nov–marzo: 9:00–17:00', costo: '6€ adulti / 4,50€ gruppi / 3€ bambini 6-13', note: 'Tra i nuraghi trilobati meglio conservati. Due piani visitabili. Sulla SS131, 110 km da Cagliari. Parcheggio gratuito.' },
-      { name: 'Tharros (Punico-Romano)', location: 'Cabras (OR)', tel: '+39 0783 370019', web: '', orari: '9:00–tramonto (estate)', costo: '9-11€ adulti', note: 'Penisola del Sinis. Colonne romane con il tramonto sul Golfo di Oristano. Una delle aree archaeologiche più suggestive d\'Italia. 20 km da Oristano.' }
+      { name: 'Tharros (Punico-Romano)', location: 'Cabras (OR)', tel: '+39 0783 370019', web: '', orari: '9:00–tramonto (estate)', costo: '9-11€ adulti', note: 'Penisola del Sinis. Colonne romane con il tramonto sul Golfo di Oristano. Una delle aree archeologiche più suggestive d\'Italia. 20 km da Oristano.' }
     ],
     natura: [
       { name: 'Parco Nazionale del Gennargentu', location: 'Fonni / Desulo (NU)', tel: '+39 0784 228061', web: 'parks.it/parco.nazionale.gennargentu', orari: 'Sempre aperto (estate/autunno consigliati)', costo: 'Accesso libero / guide da 30€', note: 'Punta La Marmora 1834m, tetto della Sardegna. Cervi sardi endemici, mufloni, aquile reali, avvoltoi. Da Cagliari 2h, da Nuoro 40 min.' },
@@ -214,12 +214,16 @@ function buildItinerary(answers) {
     : airport.toLowerCase().includes('alghero') ? 'alghero'
     : 'cagliari';
 
-  // Seleziona hotel in base a budget
+  // Seleziona hotel in base a budget (matching per indice q4:
+  // 0=Economico 1=Medio 2=Premium 3=Lusso). Il match testuale su '300'
+  // falliva perché presente sia in "150-300€" sia in "300€+".
   const hotelList = SARDINIA_DATA.hotels[airportKey];
+  const budgetOpts = t('sardinai.q4.options');
+  const budgetIdx = Array.isArray(budgetOpts) ? budgetOpts.indexOf(budget) : -1;
   let selectedHotel;
-  if (budget.includes('Lusso') || budget.includes('300')) {
+  if (budgetIdx === 3) {
     selectedHotel = hotelList[0]; // 5 stelle
-  } else if (budget.includes('Premium') || budget.includes('150')) {
+  } else if (budgetIdx === 2) {
     selectedHotel = hotelList[1] || hotelList[0];
   } else {
     selectedHotel = hotelList[2] || hotelList[1];
@@ -228,15 +232,19 @@ function buildItinerary(answers) {
   const restaurants = SARDINIA_DATA.restaurants[airportKey] || SARDINIA_DATA.restaurants.cagliari;
   const beaches = SARDINIA_DATA.beaches[airportKey] || SARDINIA_DATA.beaches.cagliari;
 
+  // Matching per INDICE dell'opzione (robusto su tutte le lingue).
+  // q3 (tipo):  0=Mare  1=Cultura  2=Avventura  3=Enogastronomia  4=Misto
+  // q5 (gruppo):0=Solo  1=Coppia   2=Famiglia   3=Gruppo
+  const typeOpts = t('sardinai.q3.options');
+  const typeIdx = Array.isArray(typeOpts) ? typeOpts.indexOf(type) : -1;
+
   // Esperienze in base al tipo di vacanza
   let experiences = [];
-  if (type.includes('Avventura') || type.includes('Sport') || type.includes('Adventure')) {
+  if (typeIdx === 2) {
     experiences = [SARDINIA_DATA.experiences[0], SARDINIA_DATA.experiences[1], SARDINIA_DATA.experiences[2]];
-  } else if (type.includes('Cultura') || type.includes('History')) {
+  } else if (typeIdx === 1 || typeIdx === 3) {
     experiences = [SARDINIA_DATA.experiences[4], SARDINIA_DATA.experiences[5]];
-  } else if (type.includes('Enogastronom') || type.includes('Food') || type.includes('Gastr') || type.includes('Kulin')) {
-    experiences = [SARDINIA_DATA.experiences[4], SARDINIA_DATA.experiences[5]];
-  } else if (type.includes('Mare') || type.includes('Sea') || type.includes('Meer') || type.includes('Mer')) {
+  } else if (typeIdx === 0) {
     experiences = [SARDINIA_DATA.experiences[0], SARDINIA_DATA.experiences[3]];
   } else {
     experiences = [SARDINIA_DATA.experiences[0], SARDINIA_DATA.experiences[4]];
@@ -244,9 +252,9 @@ function buildItinerary(answers) {
 
   // Attrazioni in base al tipo
   let attractions;
-  if (type.includes('Cultura') || type.includes('History') || type.includes('Histoire') || type.includes('Kultur')) {
+  if (typeIdx === 1) {
     attractions = SARDINIA_DATA.attractions.cultura;
-  } else if (type.includes('Avventura') || type.includes('Sport') || type.includes('Abenteuer')) {
+  } else if (typeIdx === 2) {
     attractions = SARDINIA_DATA.attractions.natura;
   } else {
     attractions = [...SARDINIA_DATA.attractions.cultura.slice(0, 2), ...SARDINIA_DATA.attractions.natura.slice(0, 1)];
@@ -281,13 +289,15 @@ function buildItinerary(answers) {
     itineraryDays.push({ day: d, plan: dayPlan });
   }
 
-  // Consiglio speciale per tipo di gruppo
+  // Consiglio speciale per tipo di gruppo (matching per indice q5)
+  const compOpts = t('sardinai.q5.options');
+  const companyIdx = Array.isArray(compOpts) ? compOpts.indexOf(company) : -1;
   let tip = '';
-  if (company.includes('Famiglia') || company.includes('Family') || company.includes('enfants') || company.includes('Kindern')) {
+  if (companyIdx === 2) {
     tip = 'CONSIGLIO FAMIGLIE: Prenotate in anticipo i tour in kayak (minimo 6 anni) e optate per spiagge con acque basse come Maria Pia ad Alghero o Poetto a Cagliari. I nuraghi sono adatti a bambini dai 5 anni.';
-  } else if (company.includes('Solo') || company.includes('Alleine')) {
+  } else if (companyIdx === 0) {
     tip = 'CONSIGLIO VIAGGIATORI SOLO: Valutate i tour di gruppo di Barbagia Trek per socializzare. I B&B di paese sono ottimi per conoscere la cultura locale. Evitate agosto in Costa Smeralda per i prezzi.';
-  } else if (company.includes('Gruppo') || company.includes('Group') || company.includes('amis') || company.includes('Freun')) {
+  } else if (companyIdx === 3) {
     tip = 'CONSIGLIO GRUPPI: Noleggiate un minivan da Cagliari (circa 60€/giorno). Le sagre paesane e gli agriturismi sono perfetti per gruppi numerosi e conviviali.';
   } else {
     tip = 'CONSIGLIO COPPIE: Per un\'esperienza romantica, prenotate una cena al tramonto sul bastione di Alghero. La suite con vista mare di Villa Las Tronas è una scelta eccellente per una notte speciale.';
