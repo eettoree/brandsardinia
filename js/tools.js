@@ -658,6 +658,7 @@ function dispatchToolRender(name, contentArea) {
   else if (name === 'hotel')        renderHotel(contentArea);
   else if (name === 'pacchetti')    renderPacchetti(contentArea);
   else if (name === 'navigazione')  renderNavigazione(contentArea);
+  else if (name === 'bandi')        renderBandi(contentArea);
 }
 
 function openToolSection(name) {
@@ -1611,6 +1612,209 @@ function renderHotel(container) {
 }
 
 // ─── CANTINE ──────────────────────────────────────────────────
+// ─── BANDI & AGEVOLAZIONI ─────────────────────────────────────
+// Dati verificati su fonti ufficiali (luglio 2026). I bandi sono
+// time-sensitive: ogni card linka la fonte ufficiale da riverificare.
+// stato: 'aperto' | 'sportello' | 'apertura' | 'variabile' | 'scaduto'
+// cat:   'turismo' | 'vivere' | 'investire'
+const BANDI_DATA = [
+  {
+    titolo: 'Innovazione per reti di imprese del turismo',
+    ente: 'Sardegna Ricerche — PR FESR 2021-2027',
+    cat: 'turismo', stato: 'aperto',
+    desc: 'Finanzia servizi avanzati per l\'innovazione di prodotto, organizzativa e di mercato di reti e consorzi di imprese turistiche, per creare nuovi servizi o migliorare l\'offerta.',
+    beneficiari: 'Reti/consorzi di almeno 10 micro-PMI di turismo, cultura e ambiente',
+    agevolazione: 'Fondo perduto — progetti da 150.000 a 300.000 € (dotazione 6 mln)',
+    scadenza: 'Aperto dal 16/06/2026 al 15/09/2026 (ore 12) — piattaforma SIPES',
+    url: 'https://www.sardegnaricerche.it'
+  },
+  {
+    titolo: 'Contributi prima casa nei piccoli comuni (anti-spopolamento)',
+    ente: 'Regione Sardegna — Assessorato Enti Locali',
+    cat: 'vivere', stato: 'apertura',
+    desc: 'Contributo a fondo perduto per acquisto e/o ristrutturazione della prima casa (incluso recupero di immobili nei centri storici) per chi trasferisce la residenza in piccoli comuni.',
+    beneficiari: 'Nuclei che trasferiscono la residenza in comuni fino a 5.000 abitanti (priorità under 40, da altra regione/estero, con figli minori)',
+    agevolazione: 'Fondo perduto fino a 15.000 € per nucleo, max 50% della spesa (15 mln/anno 2026-2028)',
+    scadenza: 'Misura pluriennale attiva — verificare l\'avviso 2026 sul portale',
+    url: 'https://www.regione.sardegna.it/misure-anti-spopolamento/acquisto-e-ristrutturazione'
+  },
+  {
+    titolo: 'Resto al Sud 2.0',
+    ente: 'Invitalia',
+    cat: 'investire', stato: 'sportello',
+    desc: 'Sostiene nuove iniziative imprenditoriali, di lavoro autonomo e libera professione nel Mezzogiorno (esclusi agricoltura e pesca).',
+    beneficiari: '18-35 anni in condizione di inattività, inoccupazione o disoccupazione — Sardegna inclusa',
+    agevolazione: 'Mix: voucher/fondo perduto fino a 40.000 € + contributo fino al 75% dell\'investimento',
+    scadenza: 'A sportello dal 15/10/2025, ordine cronologico fino a esaurimento fondi',
+    url: 'https://www.invitalia.it/incentivi-e-strumenti/resto-al-sud-20'
+  },
+  {
+    titolo: 'ON — Oltre Nuove imprese a tasso zero',
+    ente: 'Invitalia',
+    cat: 'investire', stato: 'sportello',
+    desc: 'Finanzia l\'avvio e lo sviluppo di micro e piccole imprese a prevalenza giovanile o femminile su tutto il territorio nazionale.',
+    beneficiari: 'Micro-PMI con compagine a maggioranza under 35 o donne',
+    agevolazione: 'Finanziamento a tasso zero fino a 3 mln (copertura fino al 90%). Nota: quota a fondo perduto esaurita dal 01/07/2026',
+    scadenza: 'A sportello, valutazione cronologica fino a esaurimento',
+    url: 'https://www.invitalia.it/incentivi-e-strumenti/nuove-imprese-tasso-zero'
+  },
+  {
+    titolo: 'Smart&Start Italia',
+    ente: 'Invitalia — MIMIT',
+    cat: 'investire', stato: 'sportello',
+    desc: 'Sostiene nascita e crescita di startup innovative ad alto contenuto tecnologico, con condizioni più favorevoli nel Mezzogiorno.',
+    beneficiari: 'Startup innovative iscritte al Registro Imprese e team in costituzione',
+    agevolazione: 'Finanziamento a tasso zero (spese 100.000 – 1,5 mln); nel Sud una quota è a fondo perduto',
+    scadenza: 'A sportello, senza graduatorie, ordine cronologico',
+    url: 'https://www.invitalia.it/incentivi-e-strumenti/smart-e-start-italia'
+  },
+  {
+    titolo: 'Credito d\'imposta ZES Unica Mezzogiorno',
+    ente: 'Agenzia delle Entrate — Struttura di Missione ZES',
+    cat: 'investire', stato: 'aperto',
+    desc: 'Credito d\'imposta su investimenti in beni strumentali (macchinari, impianti, immobili produttivi) realizzati nella ZES Unica, che include tutta la Sardegna. Dal 2026 misura triennale.',
+    beneficiari: 'Imprese che investono in Sardegna (e nelle altre regioni del Sud)',
+    agevolazione: 'Credito d\'imposta: aliquota base fino al 30%, maggiorazioni fino a +20 punti per le piccole imprese',
+    scadenza: 'Attivo con comunicazione annuale (indicativamente mar-mag) — verificare finestre 2026',
+    url: 'https://www.sardegnaimpresa.eu/it/news/zes-unica-2026-il-credito-dimposta-diventa-triennale'
+  },
+  {
+    titolo: 'Voucher Doppia Transizione 2026',
+    ente: 'Camera di Commercio di Sassari — PID',
+    cat: 'investire', stato: 'aperto',
+    desc: 'Contributo per progetti di innovazione, digitalizzazione, competenze e investimenti in nuove tecnologie, anche con finalità ambientali.',
+    beneficiari: 'Micro-PMI del Nord Sardegna (province di Sassari)',
+    agevolazione: 'Fondo perduto 70% delle spese, max 10.000 € (investimento minimo 3.000 €)',
+    scadenza: 'A sportello dall\'08/07/2026, chiusura 21/09/2026',
+    url: 'https://www.ss.camcom.it/promozione-del-territorio/voucher-in-corso/bando-voucher-doppia-transizione-anno-2026'
+  },
+  {
+    titolo: 'Voucher Digitali e Green Imprese Turistiche 2026',
+    ente: 'Camera di Commercio di Sassari',
+    cat: 'turismo', stato: 'aperto',
+    desc: 'Sostiene la transizione digitale ed ecologica specificamente delle imprese turistiche del territorio.',
+    beneficiari: 'Micro-PMI turistiche del Nord Sardegna',
+    agevolazione: 'Fondo perduto fino a 5.000 € (dotazione 50.000 €) — piattaforma ReStart',
+    scadenza: 'Edizione 2026 a sportello — date esatte da confermare sul portale camerale',
+    url: 'https://www.ss.camcom.it'
+  },
+  {
+    titolo: 'Fondo Microcredito FSE',
+    ente: 'SFIRS — Finanziaria Regione Sardegna',
+    cat: 'investire', stato: 'apertura',
+    desc: 'Microcrediti per avviare o sviluppare micro-attività imprenditoriali, con attenzione a chi non accede al credito bancario tradizionale.',
+    beneficiari: 'Micro-PMI e persone fisiche in condizione di svantaggio economico',
+    agevolazione: 'Finanziamento agevolato fino a 25.000 €',
+    scadenza: 'Nuovo avviso atteso nel 2026 — verificare l\'apertura sul sito SFIRS',
+    url: 'https://www.sfirs.it/sostegno-alle-imprese/fondo-microcredito-fse/'
+  },
+  {
+    titolo: 'Contratti di Investimento — Turistico ricettivo',
+    ente: 'Regione Sardegna — PR FESR 2021-2027',
+    cat: 'turismo', stato: 'scaduto',
+    desc: 'Aiuti a investimenti nel turistico-ricettivo: realizzazione e ampliamento strutture, efficientamento energetico, accessibilità, digitalizzazione.',
+    beneficiari: 'Piccole, medie e grandi imprese ricettive (ATECO 55.10, 55.30, 56.11)',
+    agevolazione: 'Mix: fondo perduto 40-60% (PMI) + finanziamenti fino a 10 mln/progetto',
+    scadenza: 'Chiuso (18/07/2025 – 20/10/2025) — probabile riedizione, monitorare il portale',
+    url: 'https://www.sardegnaimpresa.eu/it/agevolazioni/contratti-di-investimento-ci-settore-turistico-ricettivo'
+  },
+  {
+    titolo: 'Contributi per l\'Albergo Diffuso',
+    ente: 'Regione Sardegna — Assessorato Turismo (L.R. 17/2016)',
+    cat: 'turismo', stato: 'scaduto',
+    desc: 'Recupero e riqualificazione del patrimonio immobiliare nei centri storici per realizzare strutture ricettive di tipo "albergo diffuso".',
+    beneficiari: 'Enti locali e micro-piccole imprese turistiche',
+    agevolazione: 'Fondo perduto fino a 300.000 € per beneficiario, fino al 100% delle spese',
+    scadenza: 'Chiuso (16/07/2025 – 17/10/2025) — probabile riedizione',
+    url: 'https://www.regione.sardegna.it/notizie/al-via-il-bando-per-l-albergo-diffuso-la-regione-sostiene-enti-locali-e-imprese-turistiche-con-7-5-milioni-di-euro'
+  },
+  {
+    titolo: 'Bandi LEADER dei GAL (turismo rurale)',
+    ente: 'GAL Sardegna — CSR 2023-2027',
+    cat: 'turismo', stato: 'variabile',
+    desc: 'Incentivi per turismo rurale e servizi turistici nelle aree interne. Ogni GAL pubblica bandi propri, a rotazione, sul proprio territorio.',
+    beneficiari: 'Micro-PMI e operatori nelle aree GAL (variano per bando)',
+    agevolazione: 'Prevalentemente fondo perduto — importi definiti dal singolo bando GAL',
+    scadenza: 'Variabile per GAL — verificare il GAL competente per il proprio territorio',
+    url: 'https://sardegnapsr.it/'
+  }
+];
+
+// Portali ufficiali permanenti (riferimento sempre valido)
+const BANDI_PORTALI = [
+  { label: 'Bandi Regione Sardegna', url: 'https://www.regione.sardegna.it/atti-bandi-archivi/atti-amministrativi/bandi' },
+  { label: 'SardegnaImpresa — Agevolazioni', url: 'https://www.sardegnaimpresa.eu/it/agevolazioni' },
+  { label: 'Invitalia — Incentivi', url: 'https://www.invitalia.it/incentivi-e-strumenti' },
+  { label: 'Sardegna Ricerche', url: 'https://www.sardegnaricerche.it' }
+];
+
+function renderBandi(container) {
+  const CATS = [
+    { key: 'tutti',     label: 'Tutti' },
+    { key: 'turismo',   label: 'Turismo' },
+    { key: 'vivere',    label: 'Vivere in Sardegna' },
+    { key: 'investire', label: 'Investire' }
+  ];
+  const STATI = {
+    aperto:    { label: 'Aperto',       cls: 'st-aperto' },
+    sportello: { label: 'A sportello',  cls: 'st-sportello' },
+    apertura:  { label: 'In apertura',  cls: 'st-apertura' },
+    variabile: { label: 'Variabile',    cls: 'st-variabile' },
+    scaduto:   { label: 'Scaduto',      cls: 'st-scaduto' }
+  };
+  const CAT_LABELS = { turismo: 'Turismo', vivere: 'Vivere', investire: 'Investire' };
+  // Ordine: prima gli attivi, poi variabili/in apertura, infine scaduti
+  const ORDER = { aperto: 0, sportello: 1, apertura: 2, variabile: 3, scaduto: 4 };
+
+  function render(cat) {
+    const list = (cat === 'tutti' ? BANDI_DATA : BANDI_DATA.filter(b => b.cat === cat))
+      .slice().sort((a, b) => ORDER[a.stato] - ORDER[b.stato]);
+
+    container.innerHTML = `
+      <div class="tools-section-header">
+        <h2>${t('tools.render.bandi')}</h2>
+        <p class="prenot-subtitle">Bandi e agevolazioni attivi per turismo, vivere e investire in Sardegna. I bandi cambiano nel tempo: verifica sempre stato e scadenze sulla fonte ufficiale prima di presentare domanda.</p>
+      </div>
+      <div class="tool-filter-pills">
+        ${CATS.map(c => `<button class="filter-pill${c.key===cat?' active':''}" data-cat="${c.key}">${c.label}</button>`).join('')}
+      </div>
+      <div class="bandi-grid">
+        ${list.map(b => {
+          const st = STATI[b.stato] || STATI.aperto;
+          return `
+          <div class="bando-card glass-card">
+            <div class="bando-top">
+              <span class="bando-status ${st.cls}">${st.label}</span>
+              <span class="bando-cat">${CAT_LABELS[b.cat] || b.cat}</span>
+            </div>
+            <div class="bando-title">${b.titolo}</div>
+            <div class="bando-ente">${b.ente}</div>
+            <p class="bando-desc">${b.desc}</p>
+            <div class="bando-meta">
+              <div class="bando-meta-row"><span class="bando-meta-lbl">Chi può</span><span>${b.beneficiari}</span></div>
+              <div class="bando-meta-row"><span class="bando-meta-lbl">Agevolazione</span><span>${b.agevolazione}</span></div>
+              <div class="bando-meta-row"><span class="bando-meta-lbl">Scadenza</span><span>${b.scadenza}</span></div>
+            </div>
+            <a href="${b.url}" target="_blank" rel="noopener" class="bando-link">${t('tools.action.bando')} →</a>
+          </div>`;
+        }).join('')}
+        ${list.length===0 ? '<div class="no-events">Nessun bando in questa categoria.</div>' : ''}
+      </div>
+      <div class="bandi-portali">
+        <div class="bandi-portali-title">Portali ufficiali — sempre aggiornati</div>
+        <div class="bandi-portali-links">
+          ${BANDI_PORTALI.map(p => `<a href="${p.url}" target="_blank" rel="noopener" class="bandi-portale-chip">${p.label} →</a>`).join('')}
+        </div>
+      </div>`;
+
+    container.querySelectorAll('.filter-pill[data-cat]').forEach(btn =>
+      btn.addEventListener('click', () => render(btn.dataset.cat))
+    );
+    gsap.fromTo('.bando-card', { opacity:0, y:18 }, { opacity:1, y:0, stagger:0.06, duration:0.35, ease:'power2.out' });
+  }
+  render('tutti');
+}
+
 function renderCantine(container) {
   const ZONE = [
     { key:'tutte', label:'Tutte le zone' },

@@ -572,6 +572,8 @@ const CAT_COLORS = {
   hotel:       '#C8102E',
   ristorante:  '#FF8C00',
   attrazione:  '#FFD700',
+  nuraghe:            '#A0522D',
+  'sito-archeologico':'#B08D3C',
   parco:       '#32CD32',
   esperienza:  '#B040FF',
   porto:       '#0066CC'
@@ -584,6 +586,8 @@ function getCatLabel(cat) {
     hotel:      t('map.cat.hotel'),
     ristorante: t('map.cat.ristorante'),
     attrazione: t('map.cat.attrazione'),
+    nuraghe:            t('map.cat.nuraghe'),
+    'sito-archeologico':t('map.cat.archeologia'),
     parco:      t('map.cat.parco'),
     esperienza: t('map.cat.esperienza'),
     porto:      t('map.cat.porto')
@@ -598,6 +602,8 @@ const CAT_ICONS = {
   hotel:      'hotel',
   ristorante: 'ristoranti',
   attrazione: 'attrazioni',
+  nuraghe:            'nuraghe',
+  'sito-archeologico':'archeologia',
   parco:      'parchi',
   esperienza: 'esperienze',
   porto:      'porti'
@@ -824,6 +830,8 @@ function initPOILayers() {
     'hotel',      '#C8102E',
     'ristorante', '#FF8C00',
     'attrazione', '#FFD700',
+    'nuraghe',            '#A0522D',
+    'sito-archeologico',  '#B08D3C',
     'parco',      '#32CD32',
     'esperienza', '#B040FF',
     'porto',      '#0066CC',
@@ -1124,6 +1132,8 @@ const CAT_GRADIENTS = {
   hotel:      'linear-gradient(160deg,#2a0a0a 0%,#6b1a1a 50%,#c8102e 100%)',
   ristorante: 'linear-gradient(160deg,#2a1400 0%,#6b3500 50%,#e08020 100%)',
   attrazione: 'linear-gradient(160deg,#2a2000 0%,#6b5500 50%,#ffd700 100%)',
+  nuraghe:            'linear-gradient(160deg,#241408 0%,#5c3316 50%,#a0522d 100%)',
+  'sito-archeologico':'linear-gradient(160deg,#241d0e 0%,#5c4a20 50%,#b08d3c 100%)',
   parco:      'linear-gradient(160deg,#0a1e0a 0%,#1a5c1a 50%,#32cd32 100%)',
   esperienza: 'linear-gradient(160deg,#1a0a2a 0%,#4a1a6b 50%,#b040ff 100%)'
 };

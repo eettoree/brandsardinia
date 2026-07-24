@@ -340,6 +340,14 @@
                   <img class="filter-icon" src="assets/images/map/filters/attrazioni.svg" alt="">
                   <span data-i18n="map.filter.attrazioni">Attrazioni</span>
                 </button>
+                <button class="map-filter-chip" data-cat="nuraghe" onclick="setActiveMapFilter('nuraghe')">
+                  <img class="filter-icon" src="assets/images/map/filters/nuraghe.svg" alt="">
+                  <span data-i18n="map.filter.nuraghe">Nuraghi</span>
+                </button>
+                <button class="map-filter-chip" data-cat="sito-archeologico" onclick="setActiveMapFilter('sito-archeologico')">
+                  <img class="filter-icon" src="assets/images/map/filters/archeologia.svg" alt="">
+                  <span data-i18n="map.filter.archeologia">Siti Archeologici</span>
+                </button>
                 <button class="map-filter-chip" data-cat="parco" onclick="setActiveMapFilter('parco')">
                   <img class="filter-icon" src="assets/images/map/filters/parchi.svg" alt="">
                   <span data-i18n="map.filter.parchi">Parchi</span>
@@ -572,6 +580,20 @@
           </div>
           <div class="tool-title" data-i18n="tools.prenotazioni.title">Prenotazioni</div>
           <div class="tool-desc" data-i18n="tools.prenotazioni.desc">Prenota alloggi, esperienze e tour — accedi alle migliori piattaforme</div>
+        </div>
+
+        <div class="tool-card" data-tool="bandi">
+          <div class="tool-icon-wrap">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28">
+              <path d="M7 3h13l6 6v20a1 1 0 01-1 1H7a1 1 0 01-1-1V4a1 1 0 011-1z"/>
+              <path d="M19 3v6h6"/>
+              <path d="M11 15h10M11 19h10M11 23h6" stroke-linecap="round"/>
+              <circle cx="23" cy="23" r="4.5" fill="currentColor" opacity="0.12"/>
+              <path d="M21 23l1.5 1.5L26 21" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="tool-title" data-i18n="tools.bandi.title">Bandi</div>
+          <div class="tool-desc" data-i18n="tools.bandi.desc">Bandi e agevolazioni per turismo, vivere e investire in Sardegna</div>
         </div>
 
         <div class="tool-card" data-tool="sentieri">
