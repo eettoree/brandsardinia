@@ -32,6 +32,27 @@ async function loadData(name) {
 }
 window.loadData = loadData;
 
+// Eventi "live": prova l'endpoint serverless /api/events (sempre relativo a
+// oggi, punto d'innesto per feed ufficiali), con fallback al dataset statico.
+let _eventsCache = null;
+async function loadEvents() {
+  if (_eventsCache) return _eventsCache;
+  try {
+    const r = await fetch('/api/events');
+    if (r.ok) {
+      const d = await r.json();
+      if (d && Array.isArray(d.events) && d.events.length) { _eventsCache = d.events; return _eventsCache; }
+    }
+  } catch (e) { /* fallback statico */ }
+  try {
+    const r = await fetch('assets/data/events.json');
+    if (r.ok) { const d = await r.json(); _eventsCache = Array.isArray(d) ? d : []; return _eventsCache; }
+  } catch (e) { /* noop */ }
+  _eventsCache = [];
+  return _eventsCache;
+}
+window.loadEvents = loadEvents;
+
 // ─── INIT HERO ───────────────────────────────────────────────
 function initHero() {
   const hero = document.getElementById('hero');
@@ -467,11 +488,11 @@ const EVENT_GRADIENTS = {
   mostre:     'linear-gradient(135deg,#8338ec 0%,#3a86ff 100%)'
 };
 
-function getEventHighlights() {
-  if (typeof EVENTS_DATA === 'undefined') return [];
+function getEventHighlights(events) {
+  if (!Array.isArray(events) || !events.length) return [];
   const months = (typeof getMonthNames === 'function') ? getMonthNames() : null;
   const today = new Date();
-  const mapped = EVENTS_DATA.map(e => {
+  const mapped = events.map(e => {
     const d = new Date(e.date);
     const mAbbr = months ? months[e.month].substring(0, 3).toUpperCase() : '';
     const desc = e.description.length > 120 ? e.description.slice(0, 117) + '…' : e.description;
@@ -651,6 +672,7 @@ function renderLandingSections() {
   const container = document.getElementById('landing-sections');
   if (!container) return;
 
+  loadEvents().then(evData => {
   container.innerHTML = `
     <section class="landing-section" id="ls-spiagge">
       <div class="landing-section-head">
@@ -677,7 +699,7 @@ function renderLandingSections() {
           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
         </button>
       </div>
-      ${buildCarousel('eventi', getEventHighlights().map(buildEventCard).join(''))}
+      ${buildCarousel('eventi', getEventHighlights(evData).map(buildEventCard).join(''))}
     </section>
 
     <section class="landing-section" id="ls-esperienze">
@@ -712,6 +734,7 @@ function renderLandingSections() {
   }, { threshold: 0.1 });
 
   container.querySelectorAll('.landing-section').forEach(s => observer.observe(s));
+  });
 }
 
 function openMapAtPoi(poiId) {

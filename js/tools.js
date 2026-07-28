@@ -6,33 +6,7 @@
 
 // ─── DATI REALI (ricerca giugno 2026) ────────────────────────
 
-const EVENTS_DATA = [
-  { id: 1,  name: 'Carnevale Storico di Mamoiada', date: '2026-02-15', city: 'Mamoiada (NU)', category: 'tradizione', month: 2, description: 'I Mamuthones (maschere lignee nere, campanacci) e gli Issohadores sfilano in corteo. Prima uscita: 16-17 gennaio per S.Antonio Abate. Sfilata principale: domenica 15 febbraio. Martedi Grasso: 17 febbraio.', link: 'https://www.museodellemaschere.it' },
-  { id: 2,  name: 'Sartiglia di Oristano', date: '2026-02-15', city: 'Oristano', category: 'tradizione', month: 2, description: 'Giostra equestre medievale (XV sec.). Domenica 15 febbraio (Gremio dei Falegnami) e Martedì 17 febbraio (Gremio dei Contadini). Biglietti 10–55€ su Tick@ da 4 febbraio. Una delle manifestazioni equestri più antiche d\'Europa.', link: 'https://www.sartiglia.info' },
-  { id: 3,  name: 'Festa di Sant\'Efisio', date: '2026-05-01', city: 'Cagliari', category: 'tradizione', month: 5, description: '370ª edizione. 1–4 maggio. Processione storica dal 1657: statua del santo da Cagliari a Pula e ritorno, su carro trainato da buoi, scortata da migliaia in costume sardo. Ingresso gratuito. La più grande processione d\'Italia.', link: 'https://www.santefisio.it' },
-  { id: 4,  name: 'Cavalcata Sarda', date: '2026-05-17', city: 'Sassari', category: 'tradizione', month: 5, description: '75ª edizione, 17 maggio 2026. 3.500 figuranti in costume da 100 comuni. Centinaia di cavalieri in sfilata per le vie di Sassari. Una delle manifestazioni folcloristiche più grandi d\'Italia.', link: 'https://www.cavalcatasarda.it' },
-  { id: 5,  name: 'S\'Ardia di Sedilo', date: '2026-07-06', city: 'Sedilo (OR)', category: 'tradizione', month: 7, description: 'Corsa votiva a cavallo intorno al Santuario di San Costantino. 6-7 luglio fissi + ottava il 19 luglio. 2026: capocorsa Danilo Pes. Tra gli spettacoli equestri più adrenalinici e pericolosi del mondo.', link: '' },
-  { id: 6,  name: 'Dromos Festival', date: '2026-07-18', city: 'Oristano e provincia', category: 'festival', month: 7, description: '18 luglio – 16 agosto 2026. Festival multidisciplinare: musica world, jazz, teatro e arti visive in siti storico-naturali del territorio oristanese. 2026 con Carmen Consoli, Subsonica, Mario Biondi e altri.', link: 'https://www.dromos.org' },
-  { id: 7,  name: 'Faradda di li Candareri', date: '2026-08-14', city: 'Sassari', category: 'tradizione', month: 8, description: 'Patrimonio UNESCO. 14 agosto. Grandi candelabri di legno portati a spalla attraverso il centro di Sassari dai rappresentanti delle Gremio (corporazioni storiche). Origini medievali (XIV sec.).', link: 'https://www.ilcandeliere.it' },
-  { id: 8,  name: 'Time in Jazz (Paolo Fresu)', date: '2026-08-08', city: 'Berchidda e 15 comuni', category: 'festival', month: 8, description: 'Edizione 2026 tema "Kind of Blue" — Miles Davis. 19-21 giugno (anteprima) + 8-16 agosto (festival principale). Concerti in piazze, cantine, boschi, nuraghi di 15 centri del nord Sardegna. Include workshop "I Colori della Musica" per bambini.', link: 'https://www.timeinjazz.it' },
-  { id: 9,  name: 'Festa del Redentore', date: '2026-08-22', city: 'Nuoro', category: 'tradizione', month: 8, description: '125ª edizione, 22-23 e 29 agosto 2026. Processione con la statua del Redentore e sfilata in costumi barbaricini. Festival Tradizioni Popolari annesso. Una delle feste più sentite della Sardegna interna.', link: '' },
-  { id: 10, name: 'Autunno in Barbagia — Cortes Apertas', date: '2026-09-26', city: 'Barbagia (NU)', category: 'sagra', month: 9, description: 'Da settembre a dicembre, ogni weekend un paese barbaricino apre le porte: cantine, laboratori artigianali, cucine tradizionali. Mamoiada, Oliena, Orgosolo, Dorgali, Tonara... Date 2026 da confermare su autunnoinbarbagia.it.', link: 'https://www.autunnoinbarbagia.it' },
-  { id: 11, name: 'Sagra delle Castagne e delle Nocciole', date: '2026-10-24', city: 'Aritzo (NU)', category: 'sagra', month: 10, description: '47ª edizione. Stimato 24-25 ottobre 2026. 50.000 visitatori. Borgo montano (796m). Castagne arrostite, nocciole, pane, salsiccia sarda, vini locali. Costumi tradizionali, musica folk. Uno degli appuntamenti gastronomici autunnali più amati.', link: '' },
-  { id: 12, name: 'Sagra del Pecorino', date: '2026-06-20', city: 'Simaxis (OR)', category: 'sagra', month: 6, description: '20 giugno 2026. Degustazione formaggi DOP (Pecorino Sardo, Fiore Sardo), ricotta, dolci tradizionali. Produttori locali, musica e costumi. Provincia di Oristano.', link: '' },
-  { id: 13, name: 'Notte dei Nuraghi', date: '2026-07-11', city: 'Barumini (SU)', category: 'cultura', month: 7, description: 'Visita notturna al nuraghe UNESCO Su Nuraxi illuminato con spettacolo di luci e suoni. Prenotazione obbligatoria: prenotazioni@fondazionebarumini.it — posti limitati.', link: 'https://www.fondazionebarumini.it' },
-  { id: 14, name: 'Giro di Sardegna Ciclistico', date: '2026-04-25', city: 'Tutta la Sardegna', category: 'sport', month: 4, description: '25 aprile – 1 maggio 2026. Corsa ciclistica a tappe attraverso le strade più belle dell\'isola. Tappa finale tradizionalmente a Cagliari. Evento internazionale UCI.', link: '' },
-  { id: 15, name: 'Sa Sartiglia — Martedì Grasso', date: '2026-02-17', city: 'Oristano', category: 'tradizione', month: 2, description: '17 febbraio 2026. Il Gremio dei Contadini e la Sartiglia del Martedì Grasso. Replica con carattere più intimo rispetto alla domenica. Biglietti su Tick@ da 4 febbraio.', link: 'https://www.sartiglia.info' },
-  { id: 16, name: 'Monumenti Aperti 2026', date: '2026-04-18', city: 'Tutta la Sardegna', category: 'cultura', month: 4, description: 'Apertura straordinaria e gratuita di monumenti, chiese e siti storici. Visite guidate da studenti. Weekend selezionati da aprile a novembre in 30+ comuni: Cagliari (18-19 apr), Sassari (2-3 mag), Alghero (16-17 mag), Villasimius/Pula (23-31 mag). Si prosegue in autunno.', link: 'https://sardegnatuttolanno.net/evento/monumenti-aperti-il-calendario-2026/' },
-  { id: 17, name: 'Festival del Cinema di Tavolara', date: '2026-06-13', city: 'Porto San Paolo (OT)', category: 'cinema', month: 6, description: '13–26 giugno. Proiezioni cinematografiche all\'aperto con l\'isola di Tavolara come sfondo. Uno degli scenari naturali più spettacolari per un festival di cinema in Italia.', link: 'https://www.sardegnaturismo.it/it/eventi' },
-  { id: 18, name: 'Vasco Rossi Live 2026', date: '2026-06-12', city: 'Olbia Arena', category: 'concerto', month: 6, description: '12–13 giugno. Due date del tour di Vasco Rossi all\'Olbia Arena. Evento di grande richiamo nazionale. Biglietti su TicketOne.', link: 'https://www.ticketone.it' },
-  { id: 19, name: 'Focs de Sant Joan', date: '2026-06-20', city: 'Alghero', category: 'tradizione', month: 6, description: '20–24 giugno. Festa catalana del fuoco di San Giovanni. Falò, musica, balli tradizionali e fuochi d\'artificio nel centro storico catalano di Alghero. Celebrazione dei legami storici catalano-sardi.', link: '' },
-  { id: 20, name: 'Red Valley Festival', date: '2026-08-13', city: 'Olbia', category: 'festival', month: 8, description: '13–15 agosto. Festival musicale estivo con artisti nazionali e internazionali. Uno degli eventi musicali più importanti della Sardegna nord-orientale.', link: '' },
-  { id: 21, name: 'Negramaro in concerto', date: '2026-06-27', city: 'Golfo Aranci (SS)', category: 'concerto', month: 6, description: '27 giugno. Unica tappa sarda del tour dei Negramaro. Concerto in piazza a ingresso gratuito.', link: '' },
-  { id: 22, name: 'Festival Internazionale dell\'Archeologia', date: '2026-06-24', city: 'Cabras (OR)', category: 'cultura', month: 6, description: '24–29 giugno. Festival dedicato all\'archeologia mediterranea. Conferenze, visite guidate, mostre. Location strategica vicino al sito di Tharros e al Museo del Mediterraneo.', link: 'https://www.sardegnaturismo.it/it/eventi' },
-  { id: 23, name: 'Mare e Miniere', date: '2026-06-23', city: 'Portoscuso (SU)', category: 'festival', month: 6, description: '23–28 giugno. Festival che unisce musica etnica, tradizioni marinare e patrimonio minerario del Sulcis-Iglesiente. Concerti, visite alle ex miniere, gastronomia locale.', link: '' },
-  { id: 24, name: 'Tutankhamon — La tomba, il tesoro, la scoperta', date: '2026-03-22', city: 'Cagliari', category: 'mostre', month: 3, description: '22 marzo – 31 luglio. Mostra immersiva sulla scoperta della tomba di Tutankhamon con riproduzioni fedeli al Bastione di Saint Remy. Vista panoramica sul Golfo degli Angeli inclusa.', link: '' },
-  { id: 25, name: 'Autunno in Barbagia — Cortes Apertas', date: '2026-09-26', city: 'Barbagia (NU)', category: 'cultura', month: 9, description: 'Da settembre a dicembre, ogni weekend un paese della Barbagia apre porte e cortili: cantine, laboratori artigianali, cucine tradizionali. Mamoiada, Oliena, Orgosolo, Dorgali, Tonara e altri. Gratuito.', link: 'https://www.autunnoinbarbagia.it' }
-];
+// events ora in assets/data/events.json, caricato via loadEvents() (endpoint /api/events con fallback statico)
 
 // Dati verificati da sardegnaturismo.it, spiaggialapelosa.it, turismobaunei.eu — giugno 2026
 const BEACHES_DATA = [
@@ -735,6 +709,7 @@ function getDayNames() { return t('tools.calendar.days'); }
   let currentFilters = { month: 0, province: 'ALL', category: 'ALL', lowSeason: false };
   let calYear        = 2026;
   let calMonth       = new Date().getMonth() + 1;
+  let events         = []; // popolato da loadEvents() (endpoint /api/events con fallback statico)
 
   // Bassa stagione (mesi di spalla + inverno): ott–apr. Focus destagionalizzazione.
   const LOW_SEASON_MONTHS = [10, 11, 12, 1, 2, 3, 4];
@@ -763,7 +738,7 @@ function getDayNames() { return t('tools.calendar.days'); }
 
   // Filter + always sort chronologically
   function filterEvents(filters) {
-    return EVENTS_DATA
+    return events
       .filter(e => {
         if (filters.month !== 0 && e.month !== filters.month) return false;
         if (filters.lowSeason && !LOW_SEASON_MONTHS.includes(e.month)) return false;
@@ -819,7 +794,7 @@ function getDayNames() { return t('tools.calendar.days'); }
   }
 
   function buildCalendarHTML(year, month) {
-    const monthEvents = EVENTS_DATA.filter(e => {
+    const monthEvents = events.filter(e => {
       const d = new Date(e.date);
       return d.getFullYear() === year && d.getMonth() + 1 === month;
     }).sort((a, b) => new Date(a.date) - new Date(b.date));
@@ -985,7 +960,7 @@ function getDayNames() { return t('tools.calendar.days'); }
     // Calendar chips — click to open modal
     container.querySelectorAll('.cal-event-chip').forEach(chip => {
       chip.addEventListener('click', () => {
-        const ev = EVENTS_DATA.find(e => e.id === parseInt(chip.dataset.evId));
+        const ev = events.find(e => e.id === parseInt(chip.dataset.evId));
         if (ev) openEventModal(ev);
       });
     });
@@ -999,7 +974,9 @@ function getDayNames() { return t('tools.calendar.days'); }
     }
   }
 
-  render();
+  // Carica gli eventi (endpoint live /api/events con fallback statico), poi renderizza.
+  container.innerHTML = `<div class="tools-section-header"><h2>${t('tools.render.calendar')}</h2></div><div class="no-events">${t('ui.loading')}</div>`;
+  loadEvents().then(d => { events = Array.isArray(d) ? d : []; render(); });
 }
 
 // ─── PACCHETTI VIAGGIO ────────────────────────────────────────
