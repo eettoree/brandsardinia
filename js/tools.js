@@ -659,6 +659,8 @@ function dispatchToolRender(name, contentArea) {
   else if (name === 'pacchetti')    renderPacchetti(contentArea);
   else if (name === 'navigazione')  renderNavigazione(contentArea);
   else if (name === 'bandi')        renderBandi(contentArea);
+  else if (name === 'galleria')     renderGallery(contentArea);
+  else if (name === 'oggi')         renderToday(contentArea);
 }
 
 function openToolSection(name) {
@@ -729,9 +731,12 @@ function renderCalendar(container) {
 function getDayNames() { return t('tools.calendar.days'); }
 
   let currentView    = 'list';
-  let currentFilters = { month: 0, province: 'ALL', category: 'ALL' };
+  let currentFilters = { month: 0, province: 'ALL', category: 'ALL', lowSeason: false };
   let calYear        = 2026;
   let calMonth       = new Date().getMonth() + 1;
+
+  // Bassa stagione (mesi di spalla + inverno): ott–apr. Focus destagionalizzazione.
+  const LOW_SEASON_MONTHS = [10, 11, 12, 1, 2, 3, 4];
 
   // Derive province code from city string
   function getProvince(city) {
@@ -760,6 +765,7 @@ function getDayNames() { return t('tools.calendar.days'); }
     return EVENTS_DATA
       .filter(e => {
         if (filters.month !== 0 && e.month !== filters.month) return false;
+        if (filters.lowSeason && !LOW_SEASON_MONTHS.includes(e.month)) return false;
         if (filters.province !== 'ALL') {
           const ep = getProvince(e.city);
           if (ep !== 'ALL' && ep !== filters.province) return false;
@@ -784,7 +790,7 @@ function getDayNames() { return t('tools.calendar.days'); }
           <h3 class="event-name">${ev.name}</h3>
           <div class="event-location">${TOOL_ICONS.pin} ${ev.city}</div>
           <p class="event-desc">${ev.description}</p>
-          ${ev.link ? `<a href="${ev.link}" target="_blank" class="event-link">Scopri di più →</a>` : ''}
+          ${ev.link ? `<a href="${ev.link}" target="_blank" class="event-link">${t('tools.action.discover')} →</a>` : ''}
         </div>
       </div>`;
   }
@@ -856,20 +862,20 @@ function getDayNames() { return t('tools.calendar.days'); }
           ${(() => { const dn = getDayNames(); return [...dn.slice(1), dn[0]]; })().map(d => `<div class="cal-day-header">${d}</div>`).join('')}
           ${cells}
         </div>
-        ${monthEvents.length === 0 ? '<div class="no-events" style="margin-top:20px">Nessun evento in questo mese.</div>' : ''}
+        ${monthEvents.length === 0 ? `<div class="no-events" style="margin-top:20px">${t('ui.no_results')}</div>` : ''}
       </div>`;
   }
 
   function buildMonthOptions(v) {
     return getMonthNames().map((m, i) => i === 0
-      ? `<option value="0" ${v === 0 ? 'selected' : ''}>Tutti i mesi</option>`
+      ? `<option value="0" ${v === 0 ? 'selected' : ''}>${t('ui.all_months')}</option>`
       : `<option value="${i}" ${v === i ? 'selected' : ''}>${m}</option>`
     ).join('');
   }
 
   function buildProvinceOptions(v) {
     const opts = [
-      ['ALL', 'Tutte le province'], ['CA', 'Cagliari'], ['NU', 'Nuoro'],
+      ['ALL', t('ui.all_provinces')], ['CA', 'Cagliari'], ['NU', 'Nuoro'],
       ['OR', 'Oristano'], ['SS', 'Sassari'], ['OT', 'Olbia-Tempio'], ['SU', 'Sud Sardegna']
     ];
     return opts.map(([val, label]) => `<option value="${val}" ${v === val ? 'selected' : ''}>${label}</option>`).join('');
@@ -877,7 +883,7 @@ function getDayNames() { return t('tools.calendar.days'); }
 
   function buildCategoryOptions(v) {
     const opts = [
-      ['ALL', 'Tutte le categorie'], ['tradizione', 'Tradizioni'], ['sagra', 'Sagre'],
+      ['ALL', t('ui.all_categories')], ['tradizione', 'Tradizioni'], ['sagra', 'Sagre'],
       ['festival', 'Festival'], ['cultura', 'Cultura'], ['sport', 'Sport'],
       ['concerto', 'Concerti'], ['cinema', 'Cinema'], ['mostre', 'Mostre']
     ];
@@ -901,7 +907,7 @@ function getDayNames() { return t('tools.calendar.days'); }
         </div>
       </div>
       <p class="event-desc" style="margin-bottom:16px">${ev.description}</p>
-      ${ev.link ? `<a href="${ev.link}" target="_blank" class="event-link">Scopri di più →</a>` : ''}
+      ${ev.link ? `<a href="${ev.link}" target="_blank" class="event-link">${t('tools.action.discover')} →</a>` : ''}
     `;
     overlay.style.display = 'flex';
     if (typeof gsap !== 'undefined') {
@@ -926,8 +932,8 @@ function getDayNames() { return t('tools.calendar.days'); }
         <div class="tools-filter">
           <div class="view-toggle">
             <div class="view-toggle-indicator ${isCal ? 'right' : ''}"></div>
-            <button class="view-toggle-btn ${!isCal ? 'active' : ''}" data-view="list">Elenco</button>
-            <button class="view-toggle-btn ${isCal ? 'active' : ''}" data-view="calendar">Calendario</button>
+            <button class="view-toggle-btn ${!isCal ? 'active' : ''}" data-view="list">${t('ui.view_list')}</button>
+            <button class="view-toggle-btn ${isCal ? 'active' : ''}" data-view="calendar">${t('ui.view_calendar')}</button>
           </div>
         </div>
       </div>
@@ -936,6 +942,7 @@ function getDayNames() { return t('tools.calendar.days'); }
           <select id="month-filter" class="glass-select">${buildMonthOptions(currentFilters.month)}</select>
           <select id="province-filter" class="glass-select">${buildProvinceOptions(currentFilters.province)}</select>
           <select id="category-filter" class="glass-select">${buildCategoryOptions(currentFilters.category)}</select>
+          <button id="lowseason-filter" class="filter-pill${currentFilters.lowSeason ? ' active' : ''}" title="Eventi dei mesi di bassa stagione (ott–apr)">${t('ui.low_season')}</button>
         </div>` : ''}
       ${isCal ? buildCalendarHTML(calYear, calMonth) : buildListHTML(currentFilters)}
     `;
@@ -965,6 +972,8 @@ function getDayNames() { return t('tools.calendar.days'); }
     if (provSel) provSel.addEventListener('change', () => { currentFilters.province = provSel.value; render(); });
     const catSel = document.getElementById('category-filter');
     if (catSel) catSel.addEventListener('change', () => { currentFilters.category = catSel.value; render(); });
+    const lowSeasonBtn = document.getElementById('lowseason-filter');
+    if (lowSeasonBtn) lowSeasonBtn.addEventListener('click', () => { currentFilters.lowSeason = !currentFilters.lowSeason; render(); });
 
     // Calendar prev/next
     const prevBtn = document.getElementById('cal-prev');
@@ -1266,7 +1275,7 @@ function renderBiglietti(container) {
 // ─── ARTIGIANI ───────────────────────────────────────────────
 function renderArtigiani(container) {
   const filters = [
-    { key:'tutti',     label:'Tutti' },
+    { key:'tutti',     label:t('ui.all') },
     { key:'tessuti',   label:'Tessuti' },
     { key:'gioielli',  label:'Gioielli & Filigrana' },
     { key:'ceramica',  label:'Ceramica' },
@@ -1322,7 +1331,7 @@ function renderArtigiani(container) {
 // ─── GUIDE ───────────────────────────────────────────────────
 function renderGuide(container) {
   const filters = [
-    { key:'tutti',       label:'Tutte' },
+    { key:'tutti',       label:t('ui.all_f') },
     { key:'trekking',    label:'Trekking' },
     { key:'culturale',   label:'Culturali' },
     { key:'mare',        label:'Mare & Sub' },
@@ -1365,7 +1374,7 @@ function renderGuide(container) {
 // ─── COMUNI ───────────────────────────────────────────────────
 function renderComuni(container) {
   const filters = [
-    { key:'tutti',  label:'Tutti' },
+    { key:'tutti',  label:t('ui.all') },
     { key:'nord',   label:'Nord Sardegna' },
     { key:'centro', label:'Centro' },
     { key:'sud',    label:'Sud Sardegna' }
@@ -1410,7 +1419,7 @@ function renderComuni(container) {
 // ─── PRODOTTI ─────────────────────────────────────────────────
 function renderProdotti(container) {
   const filters = [
-    { key:'tutti',       label:'Tutti' },
+    { key:'tutti',       label:t('ui.all') },
     { key:'gastronomia', label:'Gastronomia' },
     { key:'vini',        label:'Vini' },
     { key:'liquori',     label:'Liquori' },
@@ -1453,7 +1462,7 @@ function renderProdotti(container) {
 // ─── SENTIERI ─────────────────────────────────────────────────
 function renderSentieri(container) {
   const DIFF = [
-    { key:'tutti',    label:'Tutti' },
+    { key:'tutti',    label:t('ui.all') },
     { key:'facile',   label:'Facile' },
     { key:'media',    label:'Media' },
     { key:'difficile',label:'Difficile' },
@@ -1493,7 +1502,7 @@ function renderSentieri(container) {
             </div>
           </div>`;
         }).join('')}
-        ${list.length===0 ? '<div class="no-events">Nessun sentiero trovato.</div>' : ''}
+        ${list.length===0 ? `<div class="no-events">${t('ui.no_results')}</div>` : ''}
       </div>`;
     container.querySelectorAll('.filter-pill[data-diff]').forEach(btn =>
       btn.addEventListener('click', () => render(btn.dataset.diff))
@@ -1506,7 +1515,7 @@ function renderSentieri(container) {
 // ─── RISTORANTI ───────────────────────────────────────────────
 function renderRistoranti(container) {
   const TIPI = [
-    { key:'tutti', label:'Tutti' },
+    { key:'tutti', label:t('ui.all') },
     { key:'pesce', label:'Pesce & Mare' },
     { key:'tipico',label:'Tipico Sardo' },
     { key:'carne', label:'Carne & Griglie' }
@@ -1522,7 +1531,7 @@ function renderRistoranti(container) {
         <p class="prenot-subtitle">Ristoranti, trattorie e agriturismi selezionati per qualità e cucina tipica sarda.</p>
       </div>
       <div class="tool-filter-pills">
-        ${TIPI.map(t => `<button class="filter-pill${t.key===tipo?' active':''}" data-tipo="${t.key}">${t.label}</button>`).join('')}
+        ${TIPI.map(f => `<button class="filter-pill${f.key===tipo?' active':''}" data-tipo="${f.key}">${f.label}</button>`).join('')}
       </div>
       <div class="ristoranti-grid">
         ${list.map(r => {
@@ -1546,7 +1555,7 @@ function renderRistoranti(container) {
             </div>
           </div>`;
         }).join('')}
-        ${list.length===0 ? '<div class="no-events">Nessun ristorante trovato.</div>' : ''}
+        ${list.length===0 ? `<div class="no-events">${t('ui.no_results')}</div>` : ''}
       </div>`;
     container.querySelectorAll('.filter-pill[data-tipo]').forEach(btn =>
       btn.addEventListener('click', () => render(btn.dataset.tipo))
@@ -1559,7 +1568,7 @@ function renderRistoranti(container) {
 // ─── HOTEL ────────────────────────────────────────────────────
 function renderHotel(container) {
   const TIPI = [
-    { key:'tutti',       label:'Tutti' },
+    { key:'tutti',       label:t('ui.all') },
     { key:'resort',      label:'Resort' },
     { key:'hotel',       label:'Hotel' },
     { key:'boutique',    label:'Boutique' },
@@ -1576,7 +1585,7 @@ function renderHotel(container) {
         <p class="prenot-subtitle">Hotel, resort, B&B e agriturismo — selezione curata per ogni budget e stile di viaggio.</p>
       </div>
       <div class="tool-filter-pills">
-        ${TIPI.map(t => `<button class="filter-pill${t.key===tipo?' active':''}" data-tipo="${t.key}">${t.label}</button>`).join('')}
+        ${TIPI.map(f => `<button class="filter-pill${f.key===tipo?' active':''}" data-tipo="${f.key}">${f.label}</button>`).join('')}
       </div>
       <div class="hotel-grid">
         ${list.map(h => {
@@ -1601,7 +1610,7 @@ function renderHotel(container) {
             </div>
           </div>`;
         }).join('')}
-        ${list.length===0 ? '<div class="no-events">Nessun alloggio trovato.</div>' : ''}
+        ${list.length===0 ? `<div class="no-events">${t('ui.no_results')}</div>` : ''}
       </div>`;
     container.querySelectorAll('.filter-pill[data-tipo]').forEach(btn =>
       btn.addEventListener('click', () => render(btn.dataset.tipo))
@@ -1612,6 +1621,193 @@ function renderHotel(container) {
 }
 
 // ─── CANTINE ──────────────────────────────────────────────────
+// ─── SARDEGNA OGGI (vivere tutto l'anno) ──────────────────────
+// Widget Open-Meteo (meteo + UV + qualità aria, client-side, no key):
+// mostra le condizioni odierne e cosa fare oggi — messaggio anti-stagionalità.
+function renderToday(container) {
+  const LAT = 40.12, LNG = 9.07; // centro Sardegna
+  const WEATHER = {
+    0:'Sereno',1:'Poco nuvoloso',2:'Parz. nuvoloso',3:'Coperto',45:'Nebbia',48:'Nebbia',
+    51:'Pioviggine',53:'Pioviggine',55:'Pioviggine',61:'Pioggia',63:'Pioggia',65:'Pioggia forte',
+    71:'Neve',73:'Neve',75:'Neve forte',80:'Rovesci',81:'Rovesci',82:'Rovesci forti',
+    95:'Temporale',96:'Temporale',99:'Temporale'
+  };
+  const RAIN = [51,53,55,61,63,65,80,81,82,95,96,99];
+  const SEASONS = { 12:'Inverno',1:'Inverno',2:'Inverno',3:'Primavera',4:'Primavera',5:'Primavera',6:'Estate',7:'Estate',8:'Estate',9:'Autunno',10:'Autunno',11:'Autunno' };
+  const AQI_LABEL = v => v==null ? '—' : v<=20?'Ottima' : v<=40?'Buona' : v<=60?'Discreta' : v<=80?'Scarsa' : 'Cattiva';
+
+  container.innerHTML = `<div class="tools-section-header"><h2>${t('tools.render.oggi')}</h2></div><div class="no-events">${t('ui.loading')}</div>`;
+
+  const getCur = async (url) => {
+    try { const r = await fetch(url); if (!r.ok) return {}; const d = await r.json(); return d.current || {}; }
+    catch { return {}; }
+  };
+
+  Promise.all([
+    getCur(`https://api.open-meteo.com/v1/forecast?latitude=${LAT}&longitude=${LNG}&current=temperature_2m,weather_code,wind_speed_10m,uv_index&wind_speed_unit=kmh&timezone=auto`),
+    getCur(`https://air-quality-api.open-meteo.com/v1/air-quality?latitude=${LAT}&longitude=${LNG}&current=european_aqi&timezone=auto`)
+  ]).then(([w, air]) => {
+    const month = new Date().getMonth() + 1;
+    const season = SEASONS[month];
+    const temp = w.temperature_2m != null ? Math.round(w.temperature_2m) : null;
+    const wind = w.wind_speed_10m != null ? Math.round(w.wind_speed_10m) : null;
+    const uv   = w.uv_index != null ? Math.round(w.uv_index) : null;
+    const code = w.weather_code;
+    const cond = WEATHER[code] || '—';
+    const rain = RAIN.includes(code);
+    const aqi  = air.european_aqi;
+
+    const t2 = temp == null ? 18 : temp, wi = wind == null ? 10 : wind;
+    const rate = (ideal, good) => ideal ? { cls:'st-aperto', label:'Ideale oggi' } : good ? { cls:'st-sportello', label:'Buono' } : { cls:'st-scaduto', label:'Fuori stagione' };
+    const activities = [
+      { name:'Mare & Spiagge', icon: TOOL_ICONS.pin,
+        rating: rate(t2>=22 && wi<28 && !rain && month>=5 && month<=9, t2>=19 && !rain && month>=4 && month<=10),
+        note:'Acque cristalline e calette. Perfetto da maggio a ottobre; primavera e inizio autunno spesso ideali e senza folla.' },
+      { name:'Trekking & Outdoor', icon: TOOL_ICONS.map,
+        rating: rate(t2>=10 && t2<=26 && !rain, t2>=6 && t2<=30 && ![65,82,95,96,99].includes(code)),
+        note:'Cammini, Supramonte, gole e cammini costieri. Migliore in primavera, autunno e nelle giornate limpide d\'inverno.' },
+      { name:'Borghi & Cultura', icon: TOOL_ICONS.star,
+        rating: { cls:'st-aperto', label:'Sempre ideale' },
+        note:'Musei, nuraghi, sagre, enoteche e centri storici: la Sardegna da vivere tutto l\'anno, con il meglio in bassa stagione.' }
+    ];
+
+    container.innerHTML = `
+      <div class="tools-section-header">
+        <h2>${t('tools.render.oggi')}</h2>
+        <p class="prenot-subtitle">Condizioni di oggi al centro dell'isola e cosa vivere adesso. La Sardegna non è solo estate: c'è sempre qualcosa da fare.</p>
+      </div>
+      <div class="today-hero glass-card">
+        <div class="today-season">${season}</div>
+        <div class="today-stats">
+          <div class="today-stat"><span class="today-stat-val">${temp==null?'—':temp+'°'}</span><span class="today-stat-lbl">Temperatura</span></div>
+          <div class="today-stat"><span class="today-stat-val">${cond}</span><span class="today-stat-lbl">Cielo</span></div>
+          <div class="today-stat"><span class="today-stat-val">${wind==null?'—':wind+' km/h'}</span><span class="today-stat-lbl">Vento</span></div>
+          <div class="today-stat"><span class="today-stat-val">${uv==null?'—':uv}</span><span class="today-stat-lbl">Indice UV</span></div>
+          <div class="today-stat"><span class="today-stat-val">${AQI_LABEL(aqi)}</span><span class="today-stat-lbl">Aria</span></div>
+        </div>
+      </div>
+      <div class="today-activities">
+        ${activities.map(a => `
+          <div class="today-act-card glass-card">
+            <div class="today-act-top">
+              <span class="today-act-name">${a.name}</span>
+              <span class="bando-status ${a.rating.cls}">${a.rating.label}</span>
+            </div>
+            <p class="today-act-note">${a.note}</p>
+          </div>`).join('')}
+      </div>
+      <p class="today-source">Dati meteo e qualità aria in tempo reale via Open-Meteo.</p>`;
+
+    if (typeof gsap !== 'undefined') {
+      gsap.fromTo('.today-hero, .today-act-card', { opacity:0, y:16 }, { opacity:1, y:0, stagger:0.06, duration:0.35, ease:'power2.out' });
+    }
+  });
+}
+
+// ─── GALLERIA ARTE & FOTOGRAFIA ───────────────────────────────
+// v1: vetrina curata (dati da assets/data/gallery.json via loadData).
+// v2 (Fase 3): upload autori + contest fotografici con liberatoria.
+function renderGallery(container) {
+  const CATS = [
+    { key: 'tutte',       label: t('ui.all_f') },
+    { key: 'paesaggi',    label: 'Paesaggi' },
+    { key: 'borghi',      label: 'Borghi' },
+    { key: 'archeologia', label: 'Archeologia' },
+    { key: 'arte',        label: 'Arte' }
+  ];
+  let items = [];
+  let activeCat = 'tutte';
+  let lightboxIdx = -1;
+
+  const currentList = () => activeCat === 'tutte' ? items : items.filter(i => i.category === activeCat);
+
+  function openLightbox(idx) {
+    const list = currentList();
+    if (!list.length) return;
+    lightboxIdx = (idx + list.length) % list.length;
+    const it = list[lightboxIdx];
+    const box = document.getElementById('gallery-lightbox');
+    if (!box) return;
+    box.querySelector('.glb-img').src = it.imageUrl;
+    box.querySelector('.glb-img').alt = it.title;
+    box.querySelector('.glb-title').textContent = it.title;
+    box.querySelector('.glb-author').textContent = it.author;
+    box.querySelector('.glb-credit').textContent = it.credit;
+    const link = box.querySelector('.glb-link');
+    if (it.link) { link.href = it.link; link.style.display = ''; } else { link.style.display = 'none'; }
+    box.style.display = 'flex';
+  }
+  function closeLightbox() {
+    const box = document.getElementById('gallery-lightbox');
+    if (box) box.style.display = 'none';
+    lightboxIdx = -1;
+  }
+
+  function render() {
+    const list = currentList();
+    const availableCats = new Set(items.map(i => i.category));
+    // rimuove eventuale lightbox orfano da render precedenti (è riparentato in body)
+    document.querySelectorAll('body > #gallery-lightbox').forEach(el => el.remove());
+    container.innerHTML = `
+      <div class="tools-section-header">
+        <h2>${t('tools.render.galleria')}</h2>
+        <p class="prenot-subtitle">Arte, fotografia e paesaggi legati alla Sardegna. Una vetrina di autori e opere, in ogni stagione.</p>
+      </div>
+      <div class="tool-filter-pills">
+        ${CATS.filter(c => c.key === 'tutte' || availableCats.has(c.key)).map(c => `<button class="filter-pill${c.key===activeCat?' active':''}" data-cat="${c.key}">${c.label}</button>`).join('')}
+      </div>
+      <div class="gallery-grid">
+        ${list.map((it, i) => `
+          <figure class="gallery-item" data-idx="${i}" tabindex="0" role="button" aria-label="${it.title}">
+            <img src="${it.imageUrl}" alt="${it.title}" loading="lazy">
+            <figcaption>
+              <div class="gallery-item-title">${it.title}</div>
+              <div class="gallery-item-author">${it.author}</div>
+            </figcaption>
+          </figure>`).join('')}
+        ${list.length===0 ? `<div class="no-events">${t('ui.no_results')}</div>` : ''}
+      </div>
+      <div class="gallery-lightbox" id="gallery-lightbox" style="display:none">
+        <button class="glb-close" aria-label="Chiudi"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+        <button class="glb-nav glb-prev" aria-label="Precedente"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <div class="glb-stage" onclick="event.stopPropagation()">
+          <img class="glb-img" src="" alt="">
+          <div class="glb-info">
+            <div class="glb-title"></div>
+            <div class="glb-author"></div>
+            <div class="glb-credit"></div>
+            <a class="glb-link" href="#" target="_blank" rel="noopener">${t('tools.action.website')} →</a>
+          </div>
+        </div>
+        <button class="glb-nav glb-next" aria-label="Successivo"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+      </div>`;
+
+    container.querySelectorAll('.filter-pill[data-cat]').forEach(btn =>
+      btn.addEventListener('click', () => { activeCat = btn.dataset.cat; render(); })
+    );
+    container.querySelectorAll('.gallery-item').forEach(fig => {
+      const open = () => openLightbox(parseInt(fig.dataset.idx));
+      fig.addEventListener('click', open);
+      fig.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
+    });
+    const box = container.querySelector('.gallery-lightbox');
+    box.querySelector('.glb-close').addEventListener('click', closeLightbox);
+    box.addEventListener('click', e => { if (e.target === box) closeLightbox(); });
+    box.querySelector('.glb-prev').addEventListener('click', () => openLightbox(lightboxIdx - 1));
+    box.querySelector('.glb-next').addEventListener('click', () => openLightbox(lightboxIdx + 1));
+    // Riparenta il lightbox in body: così position:fixed è relativo al viewport
+    // anche se un antenato ha un transform residuo (GSAP). I listener restano.
+    document.body.appendChild(box);
+
+    if (typeof gsap !== 'undefined') {
+      gsap.fromTo('.gallery-item', { opacity:0, y:16 }, { opacity:1, y:0, stagger:0.04, duration:0.35, ease:'power2.out' });
+    }
+  }
+
+  container.innerHTML = `<div class="tools-section-header"><h2>${t('tools.render.galleria')}</h2></div><div class="no-events">${t('ui.loading')}</div>`;
+  loadData('gallery').then(data => { items = Array.isArray(data) ? data : []; render(); });
+}
+
 // ─── BANDI & AGEVOLAZIONI ─────────────────────────────────────
 // Dati verificati su fonti ufficiali (luglio 2026). I bandi sono
 // time-sensitive: ogni card linka la fonte ufficiale da riverificare.
@@ -1750,7 +1946,7 @@ const BANDI_PORTALI = [
 
 function renderBandi(container) {
   const CATS = [
-    { key: 'tutti',     label: 'Tutti' },
+    { key: 'tutti',     label: t('ui.all') },
     { key: 'turismo',   label: 'Turismo' },
     { key: 'vivere',    label: 'Vivere in Sardegna' },
     { key: 'investire', label: 'Investire' }
@@ -1798,7 +1994,7 @@ function renderBandi(container) {
             <a href="${b.url}" target="_blank" rel="noopener" class="bando-link">${t('tools.action.bando')} →</a>
           </div>`;
         }).join('')}
-        ${list.length===0 ? '<div class="no-events">Nessun bando in questa categoria.</div>' : ''}
+        ${list.length===0 ? `<div class="no-events">${t('ui.no_results')}</div>` : ''}
       </div>
       <div class="bandi-portali">
         <div class="bandi-portali-title">Portali ufficiali — sempre aggiornati</div>
@@ -1817,7 +2013,7 @@ function renderBandi(container) {
 
 function renderCantine(container) {
   const ZONE = [
-    { key:'tutte', label:'Tutte le zone' },
+    { key:'tutte', label:t('ui.all_zones') },
     { key:'nord',  label:'Nord Sardegna' },
     { key:'centro',label:'Centro' },
     { key:'sud',   label:'Sud' },
@@ -1854,7 +2050,7 @@ function renderCantine(container) {
               <a href="${c.web}" target="_blank" rel="noopener" class="cantina-link">${t('tools.action.website')} →</a>
             </div>
           </div>`).join('')}
-        ${list.length===0 ? '<div class="no-events">Nessuna cantina trovata.</div>' : ''}
+        ${list.length===0 ? `<div class="no-events">${t('ui.no_results')}</div>` : ''}
       </div>`;
 
     container.querySelectorAll('.filter-pill[data-zona]').forEach(btn =>
@@ -1868,7 +2064,7 @@ function renderCantine(container) {
 // ─── MUSEI ────────────────────────────────────────────────────
 function renderMusei(container) {
   const TIPI = [
-    { key:'tutti',      label:'Tutti' },
+    { key:'tutti',      label:t('ui.all') },
     { key:'archeologia',label:'Archeologia' },
     { key:'arte',       label:'Arte' },
     { key:'etnografia', label:'Etnografia' },
@@ -1885,7 +2081,7 @@ function renderMusei(container) {
         <p class="prenot-subtitle">Musei, siti nuragici e collezioni permanenti — orari, biglietti e percorsi tematici in Sardegna.</p>
       </div>
       <div class="tool-filter-pills">
-        ${TIPI.map(t => `<button class="filter-pill${t.key===tipo?' active':''}" data-tipo="${t.key}">${t.label}</button>`).join('')}
+        ${TIPI.map(f => `<button class="filter-pill${f.key===tipo?' active':''}" data-tipo="${f.key}">${f.label}</button>`).join('')}
       </div>
       <div class="musei-grid">
         ${list.map(m => {
@@ -1903,10 +2099,10 @@ function renderMusei(container) {
               <span class="museo-info-item">${TOOL_ICONS.ticket} ${m.biglietto}</span>
               <span class="museo-info-item">${TOOL_ICONS.pin} ${m.indirizzo}</span>
             </div>
-            ${m.web && m.web!=='#' ? `<a href="${m.web}" target="_blank" rel="noopener" class="cantina-link" style="margin-top:10px;display:inline-block">Sito ufficiale →</a>` : ''}
+            ${m.web && m.web!=='#' ? `<a href="${m.web}" target="_blank" rel="noopener" class="cantina-link" style="margin-top:10px;display:inline-block">${t('ui.official_site')} →</a>` : ''}
           </div>`;
         }).join('')}
-        ${list.length===0 ? '<div class="no-events">Nessun museo trovato.</div>' : ''}
+        ${list.length===0 ? `<div class="no-events">${t('ui.no_results')}</div>` : ''}
       </div>`;
 
     container.querySelectorAll('.filter-pill[data-tipo]').forEach(btn =>
@@ -2036,7 +2232,7 @@ function renderBeaches(container) {
         <div class="beach-photo-wrap">
           ${b.photo ? `<img src="${b.photo}" alt="${b.name}" class="beach-photo" loading="lazy">` : ''}
           <div class="beach-photo-gradient"></div>
-          <span class="beach-status status-loading beach-status-overlay">Caricamento...</span>
+          <span class="beach-status status-loading beach-status-overlay">${t('ui.loading')}</span>
         </div>
         <div class="beach-body">
           <h3 class="beach-name">${b.name}</h3>
@@ -2557,11 +2753,11 @@ function renderItinerari(container) {
         ${ITINERARI_DATA.map(itin => {
           const isOpen = expanded === itin.id;
           const diffColor = themeColors[itin.difficolta] || '#fff';
-          const tappeHtml = itin.tappe.map(t => `
+          const tappeHtml = itin.tappe.map(tp => `
             <div class="itinerary-day-row">
-              <span class="itin-day-num">G${t.g}</span>
-              <span class="itin-day-luogo">${t.luogo}</span>
-              <span class="itin-day-att">${t.att}</span>
+              <span class="itin-day-num">G${tp.g}</span>
+              <span class="itin-day-luogo">${tp.luogo}</span>
+              <span class="itin-day-att">${tp.att}</span>
             </div>`).join('');
           return `
           <div class="itin-card glass-card ${isOpen ? 'itin-open' : ''}" data-id="${itin.id}">
@@ -3059,7 +3255,7 @@ function renderSocialWall(container) {
   let debounceTimer = null;
 
   const TOPICS = [
-    { key: 'all', label: 'Tutti' },
+    { key: 'all', label: t('ui.all') },
     { key: 'spiagge', label: 'Spiagge' },
     { key: 'natura', label: 'Natura' },
     { key: 'sport', label: 'Sport & Avventura' },
@@ -3195,7 +3391,7 @@ function renderSocialWall(container) {
         <button class="sw-clear-btn" id="sw-clear" style="display:none"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
       </div>
       <div class="sw-chips">
-        ${TOPICS.map(t => `<button class="sw-chip${activeFilter === t.key ? ' active' : ''}" data-filter="${t.key}">${t.label}</button>`).join('')}
+        ${TOPICS.map(f => `<button class="sw-chip${activeFilter === f.key ? ' active' : ''}" data-filter="${f.key}">${f.label}</button>`).join('')}
       </div>
       <div class="sw-account-wrap">
         <select class="sw-account-sel" id="sw-account-sel">
@@ -3295,7 +3491,7 @@ function renderNordSardegna(container) {
                 <span class="nord-ev-periodo">${ev.periodo}</span>
               </div>
               <p class="nord-ev-desc">${ev.desc}</p>
-              ${ev.link ? `<a href="${ev.link}" target="_blank" class="nord-ev-link">Sito ufficiale →</a>` : ''}
+              ${ev.link ? `<a href="${ev.link}" target="_blank" class="nord-ev-link">${t('ui.official_site')} →</a>` : ''}
             </div>
           `).join('')}
         </div>

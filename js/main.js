@@ -12,6 +12,26 @@ const AppState = {
   toolsInitialized: false
 };
 
+// ─── LOADER DATI CONDIVISO ───────────────────────────────────
+// Fetch di un JSON statico da assets/data con cache in memoria.
+// Riusabile da qualsiasi sezione data-driven; predispone il passaggio
+// a dati aggiornati dinamicamente (Fase 3) senza cambiare i consumer.
+const _dataCache = {};
+async function loadData(name) {
+  if (_dataCache[name]) return _dataCache[name];
+  try {
+    const r = await fetch(`assets/data/${name}.json`);
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const data = await r.json();
+    _dataCache[name] = data;
+    return data;
+  } catch (e) {
+    console.warn(`[loadData] impossibile caricare ${name}.json:`, e.message);
+    return [];
+  }
+}
+window.loadData = loadData;
+
 // ─── INIT HERO ───────────────────────────────────────────────
 function initHero() {
   const hero = document.getElementById('hero');
@@ -434,12 +454,33 @@ const BEACH_HIGHLIGHTS = [
   { name: 'Su Giudeu', location: 'Domus de Maria, Cagliari', desc: 'Dune di sabbia bianca, isolotto raggiungibile a nuoto. La Saint-Tropez sarda.', cost: 'Libera', access: 'Auto + 1 km dune', gradient: 'linear-gradient(135deg,#52b788 0%,#74c69d 50%,#b7e4c7 100%)', poi: 'su-giudeu' }
 ];
 
-const EVENT_HIGHLIGHTS = [
-  { name: 'Sa Sartiglia', location: 'Oristano', date: '15–17 Feb', month: 'FEB', day: '15', desc: 'La giostra medievale più spettacolare della Sardegna. 75a edizione. Biglietti 10-55€ su Tick@.', gradient: 'linear-gradient(135deg,#e63946 0%,#c1121f 100%)', tool: 'calendar' },
-  { name: 'Time in Jazz', location: 'Berchidda, Sassari', date: '8–16 Ago', month: 'AGO', day: '8', desc: 'Festival jazz internazionale. Tema 2026: "Kind of Blue" di Miles Davis. Venue outdoor spettacolari.', gradient: 'linear-gradient(135deg,#1d3557 0%,#457b9d 100%)', tool: 'calendar' },
-  { name: 'Faradda di li Candareri', location: 'Sassari', date: '14 Agosto', month: 'AGO', day: '14', desc: 'Patrimonio UNESCO. Processione dei candelieri. 14 agosto, vigilia di Ferragosto.', gradient: 'linear-gradient(135deg,#f4a261 0%,#e76f51 100%)', tool: 'calendar' },
-  { name: 'Dromos Festival', location: 'Oristano e Sinis', date: '18 Lug – 16 Ago', month: 'LUG', day: '18', desc: 'Carmen Consoli, Subsonica, Mario Biondi. Musica tra nuraghi e siti archeologici.', gradient: 'linear-gradient(135deg,#6d28d9 0%,#a855f7 100%)', tool: 'calendar' }
-];
+// Il carosello eventi deriva da EVENTS_DATA (single source of truth in tools.js)
+// invece di una lista duplicata: mostra i prossimi eventi con gradiente per categoria.
+const EVENT_GRADIENTS = {
+  tradizione: 'linear-gradient(135deg,#e63946 0%,#c1121f 100%)',
+  festival:   'linear-gradient(135deg,#6d28d9 0%,#a855f7 100%)',
+  sagra:      'linear-gradient(135deg,#f4a261 0%,#e76f51 100%)',
+  cultura:    'linear-gradient(135deg,#1d3557 0%,#457b9d 100%)',
+  sport:      'linear-gradient(135deg,#2d6a4f 0%,#52b788 100%)',
+  concerto:   'linear-gradient(135deg,#7209b7 0%,#3a0ca3 100%)',
+  cinema:     'linear-gradient(135deg,#264653 0%,#2a9d8f 100%)',
+  mostre:     'linear-gradient(135deg,#8338ec 0%,#3a86ff 100%)'
+};
+
+function getEventHighlights() {
+  if (typeof EVENTS_DATA === 'undefined') return [];
+  const months = (typeof getMonthNames === 'function') ? getMonthNames() : null;
+  const today = new Date();
+  const mapped = EVENTS_DATA.map(e => {
+    const d = new Date(e.date);
+    const mAbbr = months ? months[e.month].substring(0, 3).toUpperCase() : '';
+    const desc = e.description.length > 120 ? e.description.slice(0, 117) + '…' : e.description;
+    return { name: e.name, location: e.city, date: `${d.getDate()} ${mAbbr}`, month: mAbbr, day: String(d.getDate()), desc, gradient: EVENT_GRADIENTS[e.category] || EVENT_GRADIENTS.cultura, _date: d };
+  });
+  const upcoming = mapped.filter(e => e._date >= today).sort((a, b) => a._date - b._date);
+  const list = upcoming.length >= 4 ? upcoming : mapped.sort((a, b) => a._date - b._date);
+  return list.slice(0, 6);
+}
 
 const EXPERIENCE_HIGHLIGHTS = [
   { name: 'Selvaggio Blu', location: 'Supramonte, Ogliastra', desc: 'Il trekking più bello d\'Italia. 7 giorni, 45 km tra pareti e calette inaccessibili.', cost: '800–1200€ tutto incluso', gradient: 'linear-gradient(135deg,#2d6a4f 0%,#52b788 50%,#95d5b2 100%)', poi: 'selvaggio-blu' },
@@ -636,7 +677,7 @@ function renderLandingSections() {
           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
         </button>
       </div>
-      ${buildCarousel('eventi', EVENT_HIGHLIGHTS.map(buildEventCard).join(''))}
+      ${buildCarousel('eventi', getEventHighlights().map(buildEventCard).join(''))}
     </section>
 
     <section class="landing-section" id="ls-esperienze">

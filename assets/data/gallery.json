@@ -1,0 +1,122 @@
+[
+  {
+    "id": "cala-goloritze",
+    "title": "Cala Goloritzé",
+    "author": "Mentnafunangann",
+    "category": "paesaggi",
+    "season": "estate",
+    "imageUrl": "assets/images/gallery/cala-goloritze.jpg",
+    "credit": "Mentnafunangann / CC BY-SA 3.0",
+    "link": "https://commons.wikimedia.org/wiki/File:Cala_Goloritz%C3%A9_3.JPG"
+  },
+  {
+    "id": "cala-luna",
+    "title": "Cala Luna, Golfo di Orosei",
+    "author": "Alessandro Mangione",
+    "category": "paesaggi",
+    "season": "estate",
+    "imageUrl": "assets/images/gallery/cala-luna.jpg",
+    "credit": "Alessandro Mangione / CC BY-SA 4.0",
+    "link": "https://commons.wikimedia.org/wiki/File:Cala_Luna_(Golfo_di_Orosei).jpg"
+  },
+  {
+    "id": "la-pelosa",
+    "title": "La Pelosa, Stintino",
+    "author": "David Blaikie",
+    "category": "paesaggi",
+    "season": "estate",
+    "imageUrl": "assets/images/gallery/la-pelosa.jpg",
+    "credit": "David Blaikie / CC BY 2.0",
+    "link": "https://commons.wikimedia.org/wiki/File:Beach_Della_Pelosa_(527708116).jpg"
+  },
+  {
+    "id": "is-arutas",
+    "title": "Is Arutas, il quarzo del Sinis",
+    "author": "ManuelM",
+    "category": "paesaggi",
+    "season": "primavera",
+    "imageUrl": "assets/images/gallery/is-arutas.jpg",
+    "credit": "ManuelM / Public Domain",
+    "link": "https://commons.wikimedia.org/wiki/File:Is_arutas.jpg"
+  },
+  {
+    "id": "bosa",
+    "title": "Bosa, le case sul Temo",
+    "author": "Wikimedia Commons",
+    "category": "borghi",
+    "season": "inverno",
+    "imageUrl": "assets/images/gallery/bosa.jpg",
+    "credit": "Wikimedia / CC BY-SA 3.0",
+    "link": "https://commons.wikimedia.org/wiki/File:Bosa_%C3%A8_Colore.jpg"
+  },
+  {
+    "id": "castelsardo",
+    "title": "Castelsardo, borgo medievale",
+    "author": "Wikimedia Commons",
+    "category": "borghi",
+    "season": "inverno",
+    "imageUrl": "assets/images/gallery/castelsardo.jpg",
+    "credit": "Wikimedia / CC BY 2.0",
+    "link": "https://commons.wikimedia.org/wiki/File:Medieval_town_Castelsardo,_Sardinia,_Italy.jpg"
+  },
+  {
+    "id": "tempio-pausania",
+    "title": "Tempio Pausania, Piazza Gallura",
+    "author": "Wikimedia Commons",
+    "category": "borghi",
+    "season": "autunno",
+    "imageUrl": "assets/images/gallery/tempio-pausania.jpg",
+    "credit": "Wikimedia / CC BY-SA 4.0",
+    "link": "https://commons.wikimedia.org/wiki/File:Piazza_Gallura,_Tempio_Pausania_(Sardinien).JPG"
+  },
+  {
+    "id": "alghero",
+    "title": "Alghero, i bastioni catalani",
+    "author": "Wikimedia Commons",
+    "category": "borghi",
+    "season": "autunno",
+    "imageUrl": "assets/images/gallery/alghero.jpg",
+    "credit": "Wikimedia / CC0 Public Domain",
+    "link": "https://commons.wikimedia.org/wiki/File:Alghero_city_walls_and_bastions_-_1.JPG"
+  },
+  {
+    "id": "su-nuraxi",
+    "title": "Nuraghe Su Nuraxi, Barumini",
+    "author": "Norbert Nagel",
+    "category": "archeologia",
+    "season": "inverno",
+    "imageUrl": "assets/images/gallery/su-nuraxi.jpg",
+    "credit": "Norbert Nagel / CC BY-SA 3.0",
+    "link": "https://commons.wikimedia.org/wiki/File:Nuraghe_Su_Nuraxi_-_Barumini_-_Sardinia_-_Italy_-_02.jpg"
+  },
+  {
+    "id": "grotte-nettuno",
+    "title": "Grotte di Nettuno, Capo Caccia",
+    "author": "Stahlkocher",
+    "category": "archeologia",
+    "season": "inverno",
+    "imageUrl": "assets/images/gallery/grotte-nettuno.jpg",
+    "credit": "Stahlkocher / CC BY-SA 3.0",
+    "link": "https://commons.wikimedia.org/wiki/File:Alghero_Grotta_di_Nettuno_Stairways_Entrance.jpg"
+  },
+  {
+    "id": "nuoro-ortobene",
+    "title": "Nuoro dal Monte Ortobene",
+    "author": "Wikimedia Commons",
+    "category": "paesaggi",
+    "season": "autunno",
+    "imageUrl": "assets/images/gallery/nuoro-ortobene.jpg",
+    "credit": "Wikimedia / CC BY-SA 3.0",
+    "link": "https://commons.wikimedia.org/wiki/File:Vista_di_Nuoro_dal_monte_Ortobene.JPG"
+  },
+  {
+    "id": "castello-cagliari",
+    "title": "Cagliari, quartiere Castello",
+    "author": "Wikimedia Commons",
+    "category": "borghi",
+    "season": "inverno",
+    "imageUrl": "assets/images/gallery/castello-cagliari.jpg",
+    "credit": "Wikimedia / CC BY-SA 3.0 IT",
+    "link": "https://commons.wikimedia.org/wiki/File:Castello_(Cagliari).jpg"
+  }
+]
