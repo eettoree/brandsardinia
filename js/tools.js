@@ -661,6 +661,7 @@ function dispatchToolRender(name, contentArea) {
   else if (name === 'bandi')        renderBandi(contentArea);
   else if (name === 'galleria')     renderGallery(contentArea);
   else if (name === 'oggi')         renderToday(contentArea);
+  else if (name === 'vivere')       renderVivere(contentArea);
 }
 
 function openToolSection(name) {
@@ -2009,6 +2010,60 @@ function renderBandi(container) {
     gsap.fromTo('.bando-card', { opacity:0, y:18 }, { opacity:1, y:0, stagger:0.06, duration:0.35, ease:'power2.out' });
   }
   render('tutti');
+}
+
+// ─── VIVERE IN SARDEGNA ───────────────────────────────────────
+// Directory di programmi reali per trasferirsi/lavorare/studiare/vivere:
+// nomadi digitali, turismo delle radici, volontariato europeo, borghi.
+// Dati da assets/data/vivere.json via loadData.
+function renderVivere(container) {
+  const CATS = [
+    { key: 'tutti',        label: t('ui.all') },
+    { key: 'nomadi',       label: 'Nomadi digitali' },
+    { key: 'radici',       label: 'Turismo delle radici' },
+    { key: 'volontariato', label: 'Volontariato & scambi' },
+    { key: 'borghi',       label: 'Vivere nei borghi' }
+  ];
+  const CAT_LABELS = { nomadi: 'Nomadi', radici: 'Radici', volontariato: 'Volontariato', borghi: 'Borghi' };
+  const CAT_BADGE  = { nomadi: 'st-sportello', radici: 'st-aperto', volontariato: 'st-apertura', borghi: 'st-variabile' };
+  let items = [];
+  let activeCat = 'tutti';
+
+  function render() {
+    const list = activeCat === 'tutti' ? items : items.filter(i => i.cat === activeCat);
+    container.innerHTML = `
+      <div class="tools-section-header">
+        <h2>${t('tools.render.vivere')}</h2>
+        <p class="prenot-subtitle">Trasferirsi, lavorare, studiare e vivere la Sardegna tutto l'anno: nomadi digitali, turismo delle radici, volontariato europeo e incentivi per i borghi. Programmi reali con link ufficiali.</p>
+      </div>
+      <div class="tool-filter-pills">
+        ${CATS.map(c => `<button class="filter-pill${c.key===activeCat?' active':''}" data-cat="${c.key}">${c.label}</button>`).join('')}
+      </div>
+      <div class="bandi-grid">
+        ${list.map(v => `
+          <div class="bando-card glass-card">
+            <div class="bando-top"><span class="bando-status ${CAT_BADGE[v.cat]||'st-sportello'}">${CAT_LABELS[v.cat]||v.cat}</span></div>
+            <div class="bando-title">${v.titolo}</div>
+            <div class="bando-ente">${v.ente}</div>
+            <p class="bando-desc">${v.desc}</p>
+            <div class="bando-meta">
+              <div class="bando-meta-row"><span class="bando-meta-lbl">Per chi</span><span>${v.target}</span></div>
+            </div>
+            <a href="${v.url}" target="_blank" rel="noopener" class="bando-link">${t('tools.action.discover')} →</a>
+          </div>`).join('')}
+        ${list.length===0 ? `<div class="no-events">${t('ui.no_results')}</div>` : ''}
+      </div>`;
+
+    container.querySelectorAll('.filter-pill[data-cat]').forEach(btn =>
+      btn.addEventListener('click', () => { activeCat = btn.dataset.cat; render(); })
+    );
+    if (typeof gsap !== 'undefined') {
+      gsap.fromTo('.bando-card', { opacity:0, y:18 }, { opacity:1, y:0, stagger:0.06, duration:0.35, ease:'power2.out' });
+    }
+  }
+
+  container.innerHTML = `<div class="tools-section-header"><h2>${t('tools.render.vivere')}</h2></div><div class="no-events">${t('ui.loading')}</div>`;
+  loadData('vivere').then(data => { items = Array.isArray(data) ? data : []; render(); });
 }
 
 function renderCantine(container) {

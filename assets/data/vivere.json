@@ -1,0 +1,83 @@
+[
+  {
+    "id": "work-from-ollolai",
+    "titolo": "Work from Ollolai",
+    "ente": "Comune di Ollolai",
+    "cat": "nomadi",
+    "target": "Nomadi digitali e remote worker",
+    "desc": "Il borgo barbaricino che ha lanciato le case a 1 € e affitti simbolici per chi lavora da remoto e si trasferisce: oltre 40.000 candidature da tutto il mondo.",
+    "url": "https://www.comune.ollolai.nu.it/"
+  },
+  {
+    "id": "italea",
+    "titolo": "ITALEA — Turismo delle Radici",
+    "ente": "Ministero degli Esteri (PNRR)",
+    "cat": "radici",
+    "target": "Discendenti di emigrati italiani",
+    "desc": "Programma nazionale per riscoprire le proprie origini: itinerari, servizi e supporto per il viaggio nei luoghi della famiglia. In Sardegna con aree pilota dedicate.",
+    "url": "https://www.italea.com/"
+  },
+  {
+    "id": "sardinian-roots",
+    "titolo": "Sardinian Roots",
+    "ente": "Regione Sardegna",
+    "cat": "radici",
+    "target": "Sardi nel mondo e discendenti",
+    "desc": "L'iniziativa regionale del turismo delle radici: riconnettersi con i paesi d'origine attraverso esperienze, comunità locali e circoli sardi nel mondo.",
+    "url": "https://www.sardegnaturismo.it/it/eventi/sardinian-roots-turismo-delle-radici"
+  },
+  {
+    "id": "esc",
+    "titolo": "Corpo Europeo di Solidarietà (ESC)",
+    "ente": "Unione Europea / Eurodesk",
+    "cat": "volontariato",
+    "target": "Giovani 18–30 anni",
+    "desc": "Volontariato da 2 a 12 mesi presso enti accreditati, con vitto, alloggio e rimborso spese. Un modo per vivere un territorio a lungo, anche fuori stagione.",
+    "url": "https://www.eurodesk.it/esc"
+  },
+  {
+    "id": "erasmus-plus",
+    "titolo": "Erasmus+",
+    "ente": "Unione Europea",
+    "cat": "volontariato",
+    "target": "Studenti, giovani, volontari",
+    "desc": "Mobilità europea per studio, tirocinio, formazione e scambi giovanili. La porta d'accesso per periodi di studio o esperienza in Sardegna e non solo.",
+    "url": "https://www.erasmusplus.it/"
+  },
+  {
+    "id": "acarbio",
+    "titolo": "ACARBIO — Progetti in Sardegna",
+    "ente": "Ente accreditato ESC/Erasmus+",
+    "cat": "volontariato",
+    "target": "Volontari internazionali",
+    "desc": "Associazione dell'area di Alghero–Porto Conte che ospita progetti di volontariato europeo, workcamp e scambi ambientali e culturali.",
+    "url": "https://www.acarbio.org/erasmus/"
+  },
+  {
+    "id": "workaway",
+    "titolo": "Workaway",
+    "ente": "Rete internazionale",
+    "cat": "volontariato",
+    "target": "Viaggiatori e lavoratori",
+    "desc": "Scambio lavoro–ospitalità: poche ore di aiuto al giorno presso host locali (agriturismi, ostelli, progetti) in cambio di vitto e alloggio. Ottimo per soggiorni lunghi.",
+    "url": "https://www.workaway.info/"
+  },
+  {
+    "id": "wwoof",
+    "titolo": "WWOOF Italia",
+    "ente": "World Wide Opportunities on Organic Farms",
+    "cat": "volontariato",
+    "target": "Chi vuole vivere la campagna",
+    "desc": "Volontariato nelle aziende agricole biologiche sarde in cambio di vitto e alloggio: si impara facendo, immersi nella vita rurale dell'isola.",
+    "url": "https://wwoof.it/"
+  },
+  {
+    "id": "prima-casa-borghi",
+    "titolo": "Contributi prima casa nei piccoli comuni",
+    "ente": "Regione Sardegna",
+    "cat": "borghi",
+    "target": "Chi trasferisce la residenza",
+    "desc": "Fondo perduto fino a 15.000 € per acquisto o ristrutturazione della prima casa nei comuni fino a 5.000 abitanti. Misura anti-spopolamento pluriennale (vedi anche i Bandi).",
+    "url": "https://www.regione.sardegna.it/misure-anti-spopolamento/acquisto-e-ristrutturazione"
+  }
+]
