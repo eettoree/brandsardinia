@@ -194,6 +194,38 @@ textarea:focus-visible,
 .btn-arrow, .landing-cta svg, .bando-link svg, .bandi-portale-chip svg { transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1); }
 .btn:hover .btn-arrow, .landing-cta:hover svg, .bando-link:hover svg { transform: translateX(4px); }
 
+/* Estensione firma a controlli mappa, carosello e route planner (contesti vari) */
+#btn-route-planner, .pin-toggle-btn, .map-filter-toggle, .map-reset-btn,
+.carousel-btn, .rp-gmaps-btn {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  border-color: var(--red) !important;
+  transition: color 0.3s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+#btn-route-planner::before, .pin-toggle-btn::before, .map-filter-toggle::before,
+.map-reset-btn::before, .carousel-btn::before, .rp-gmaps-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--red);
+  transform: translateY(101%);
+  border-radius: 42% 42% 0 0;
+  transition: transform 0.42s cubic-bezier(0.7, 0, 0.2, 1), border-radius 0.42s cubic-bezier(0.7, 0, 0.2, 1);
+}
+#btn-route-planner:hover::before, .pin-toggle-btn:hover::before, .map-filter-toggle:hover::before,
+.map-reset-btn:hover::before, .carousel-btn:hover::before, .rp-gmaps-btn:hover::before {
+  transform: translateY(0);
+  border-radius: 0;
+}
+#btn-route-planner:hover, .pin-toggle-btn:hover, .map-filter-toggle:hover,
+.map-reset-btn:hover, .carousel-btn:hover, .rp-gmaps-btn:hover { color: #fff !important; }
+.carousel-btn:hover svg, .map-reset-btn:hover svg { stroke: #fff; }
+
+/* CTA piena route planner: lift coerente */
+.rp-calc-btn:hover { background: var(--red-dark); transform: translateY(-1px); box-shadow: 0 6px 18px var(--red-glow); }
+
 .glass-card {
   background: var(--glass);
   border: 1px solid var(--border);
@@ -624,11 +656,11 @@ body.world-active .scroll-invite-chevron { stroke: #333; }
 #btn-start {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   padding: 18px 48px;
-  background: var(--red);
+  background: rgba(255, 255, 255, 0.92);
   border: 1.5px solid var(--red);
-  color: #fff;
+  color: var(--red);
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 1px;
@@ -636,34 +668,33 @@ body.world-active .scroll-invite-chevron { stroke: #333; }
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  transition: all 0.4s ease;
+  isolation: isolate;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: color 0.35s ease, border-color 0.25s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Liquid fill: si riempie di rosso dal basso all'hover */
 #btn-start::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  border-radius: inherit;
+  z-index: -1;
+  background: var(--red);
+  transform: translateY(101%);
+  border-radius: 42% 42% 0 0;
+  transition: transform 0.45s cubic-bezier(0.7, 0, 0.2, 1), border-radius 0.45s cubic-bezier(0.7, 0, 0.2, 1);
 }
-
-#btn-start::after {
-  content: none;
-}
+#btn-start:hover::before { transform: translateY(0); border-radius: 0; }
 
 #btn-start:hover {
+  color: #fff;
   border-color: var(--red);
   box-shadow: 0 0 40px var(--red-glow), 0 0 80px rgba(200,16,46,0.15);
   transform: translateY(-2px);
 }
 
-#btn-start:hover::before { opacity: 1; }
-#btn-start:hover::after { transform: translateX(4px); }
-
 #btn-start span { position: relative; z-index: 1; }
-#btn-start::after { position: relative; z-index: 1; }
 
 .hero-bottom-deco { display: none; }
 
