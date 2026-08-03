@@ -121,8 +121,9 @@ textarea:focus-visible,
   }
 }
 
-/* ── BOTTONI (sistema condiviso) ───────────────────────────── */
+/* ── BOTTONI (sistema unificato — outline rosso + liquid fill) ── */
 .btn {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -134,17 +135,64 @@ textarea:focus-visible,
   font-family: inherit;
   line-height: 1;
   cursor: pointer;
-  border: 1px solid transparent;
-  transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+  border: 1.5px solid transparent;
+  overflow: hidden;
+  isolation: isolate;
   white-space: nowrap;
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: color 0.3s ease, background 0.25s ease, border-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
 }
 .btn svg { flex-shrink: 0; }
+
+/* Firma del sistema: outline rosso su vetro che si riempie di rosso (liquid)
+   dal basso all'hover. Condiviso da tutti i bottoni outline del sito. */
+.btn-outline, .filter-pill, .tools-back-btn, .lang-btn {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.btn-outline::before,
+.filter-pill:not(.active)::before,
+.tools-back-btn::before,
+.lang-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--red);
+  transform: translateY(101%);
+  border-radius: 42% 42% 0 0;
+  transition: transform 0.42s cubic-bezier(0.7, 0, 0.2, 1), border-radius 0.42s cubic-bezier(0.7, 0, 0.2, 1);
+}
+.btn-outline:hover::before,
+.filter-pill:not(.active):hover::before,
+.tools-back-btn:hover::before,
+.lang-btn:hover::before {
+  transform: translateY(0);
+  border-radius: 0;
+}
+
+.btn-outline {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: var(--red);
+  color: var(--red);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.btn-outline:hover { color: var(--white); border-color: var(--red); }
+
 .btn-primary { background: var(--red); border-color: var(--red); color: var(--white); }
-.btn-primary:hover { background: var(--red-dark); border-color: var(--red-dark); color: var(--white); transform: translateY(-1px); }
+.btn-primary:hover { background: var(--red-dark); border-color: var(--red-dark); color: var(--white); transform: translateY(-1px); box-shadow: 0 6px 18px var(--red-glow); }
+
 .btn-ghost { background: var(--glass); border-color: var(--border); color: var(--text); }
-.btn-ghost:hover { border-color: var(--border2); background: var(--glass2); color: var(--text); }
+.btn-ghost:hover { border-color: var(--red); color: var(--red); }
+
 .btn-sm { padding: 6px 12px; font-size: 0.8rem; }
+
+/* Freccia che scorre all'hover nelle CTA con SVG a freccia */
+.btn-arrow, .landing-cta svg, .bando-link svg, .bandi-portale-chip svg { transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1); }
+.btn:hover .btn-arrow, .landing-cta:hover svg, .bando-link:hover svg { transform: translateX(4px); }
 
 .glass-card {
   background: var(--glass);
@@ -432,9 +480,9 @@ body.world-active .scroll-invite-chevron { stroke: #333; }
   transition: background var(--transition);
   font-family: var(--font-sans);
 }
-.lang-btn:hover, .lang-btn.open {
-  background: rgba(200,16,46,0.07);
-}
+.lang-btn.open { background: rgba(200,16,46,0.07); }
+.lang-btn:hover { color: var(--white); }
+.lang-btn:hover .lang-chevron { stroke: var(--white); }
 .lang-btn .lang-code { min-width: 18px; }
 .lang-chevron {
   stroke: var(--red);
@@ -2039,30 +2087,38 @@ body.section-map .app-navbar {
   line-height: 1.5;
 }
 
-.tools-back-btn {
+/* Barra superiore dei tool: back button ancorato in alto a destra, sticky */
+.tools-topbar {
   position: sticky;
   top: calc(var(--navbar-h) + var(--space-2));
   z-index: 6;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: var(--space-4);
+  pointer-events: none;
+}
+.tools-topbar .tools-back-btn { pointer-events: auto; }
+
+.tools-back-btn {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  background: var(--glass2);
-  backdrop-filter: blur(var(--blur));
-  -webkit-backdrop-filter: blur(var(--blur));
-  border: 1px solid var(--border);
-  color: var(--text);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1.5px solid var(--red);
+  color: var(--red);
   padding: var(--btn-pad-y) var(--btn-pad-x);
   border-radius: var(--btn-radius);
   cursor: pointer;
   font-size: var(--btn-font);
   font-weight: 600;
   font-family: inherit;
-  margin-bottom: var(--space-5);
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-  transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.2s;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: color 0.3s ease, border-color 0.25s ease, transform 0.2s ease;
 }
-.tools-back-btn svg { transition: transform 0.2s; }
-.tools-back-btn:hover { border-color: var(--red); color: var(--red); }
+.tools-back-btn svg { transition: transform 0.25s cubic-bezier(0.7, 0, 0.2, 1); }
+.tools-back-btn:hover { color: var(--white); border-color: var(--red); }
 .tools-back-btn:hover svg { transform: translateX(-3px); }
 
 /* ── EVENTS ────────────────────────────────────────────────── */
@@ -2372,7 +2428,7 @@ body.section-map .app-navbar {
   transition: all 0.2s;
   white-space: nowrap;
 }
-.filter-pill:hover { border-color: var(--border2); color: var(--text); }
+.filter-pill:not(.active):hover { border-color: var(--red); color: #fff; }
 .filter-pill.active { background: var(--red); border-color: var(--red); color: #fff; }
 
 /* ── SENTIERI ────────────────────────────────────────────────── */
