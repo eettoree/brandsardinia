@@ -37,7 +37,8 @@ const TRANSLATIONS = {
     'landing.badge.esperienza': 'Esperienza',
     'landing.card.calendario': 'Calendario completo',
 
-    'sardinai.welcome': "Ciao, sono SardinAI, l'assistente intelligente dedicato alla Sardegna. Posso aiutarti a scoprire territori, eventi, esperienze, imprese locali e opportunità legate all'isola: che tu voglia organizzare un viaggio, conoscere un Comune, valutare un investimento, trasferirti, lavorare da remoto o immaginare una nuova vita in Sardegna.",
+    'sardinai.welcome': "Ciao, sono SardinAI, l'assistente intelligente dedicato alla Sardegna. Chiedimi quello che vuoi: organizzare un viaggio, scoprire territori, eventi ed esperienze, conoscere un Comune, oppure capire come trasferirti, lavorare da remoto o investire sull'isola. Da dove partiamo?",
+    'sardinai.error': "Ops, non riesco a rispondere in questo momento. Riprova tra poco.",
     'sardinai.questions': [
       'Da quale aeroporto atterri o da dove parti?',
       'Quanti giorni hai a disposizione?',
@@ -46,7 +47,7 @@ const TRANSLATIONS = {
       'Con chi viaggi?',
       'Quando pensi di venire in Sardegna?'
     ],
-    'sardinai.placeholder': 'Scrivi la tua risposta...',
+    'sardinai.placeholder': 'Chiedimi qualcosa sulla Sardegna...',
     'sardinai.send': 'Invia',
     'sardinai.generating': 'Sto preparando il tuo itinerario personalizzato...',
     'sardinai.restart': 'Ricomincia',
@@ -263,7 +264,8 @@ const TRANSLATIONS = {
     'landing.badge.esperienza': 'Experience',
     'landing.card.calendario': 'Full calendar',
 
-    'sardinai.welcome': "Hi! I'm SardinAI, your travel assistant for Sardinia. I'll ask you a few questions to create the perfect itinerary for you.",
+    'sardinai.welcome': "Hi, I'm SardinAI, your intelligent assistant for Sardinia. Ask me anything: plan a trip, discover places, events and experiences, or explore how to live, work remotely or move to the island. Where shall we start?",
+    'sardinai.error': "Oops, I can't reply right now. Please try again shortly.",
     'sardinai.questions': [
       'Which airport do you land at or where do you depart from?',
       'How many days do you have available?',
@@ -272,7 +274,7 @@ const TRANSLATIONS = {
       'Who are you travelling with?',
       'When are you planning to visit Sardinia?'
     ],
-    'sardinai.placeholder': 'Type your answer...',
+    'sardinai.placeholder': 'Ask me anything about Sardinia...',
     'sardinai.send': 'Send',
     'sardinai.generating': 'Preparing your personalised itinerary...',
     'sardinai.restart': 'Start Over',
@@ -489,7 +491,8 @@ const TRANSLATIONS = {
     'landing.badge.esperienza': 'Experiencia',
     'landing.card.calendario': 'Calendario completo',
 
-    'sardinai.welcome': "¡Hola! Soy SardinAI, tu asistente de viaje para Cerdeña. Te haré algunas preguntas para crear el itinerario perfecto.",
+    'sardinai.welcome': "¡Hola! Soy SardinAI, tu asistente inteligente para Cerdeña. Pregúntame lo que quieras: organizar un viaje, descubrir lugares, eventos y experiencias, o cómo vivir, trabajar en remoto o mudarte a la isla. ¿Por dónde empezamos?",
+    'sardinai.error': "Vaya, no puedo responder ahora mismo. Inténtalo de nuevo en un momento.",
     'sardinai.questions': [
       '¿En qué aeropuerto aterrizas o desde dónde partes?',
       '¿Cuántos días tienes disponibles?',
@@ -498,7 +501,7 @@ const TRANSLATIONS = {
       '¿Con quién viajas?',
       '¿Cuándo planeas visitar Cerdeña?'
     ],
-    'sardinai.placeholder': 'Escribe tu respuesta...',
+    'sardinai.placeholder': 'Pregúntame sobre Cerdeña...',
     'sardinai.send': 'Enviar',
     'sardinai.generating': 'Preparando tu itinerario personalizado...',
     'sardinai.restart': 'Empezar de nuevo',
@@ -715,7 +718,8 @@ const TRANSLATIONS = {
     'landing.badge.esperienza': 'Expérience',
     'landing.card.calendario': 'Calendrier complet',
 
-    'sardinai.welcome': "Bonjour! Je suis SardinAI, votre assistant de voyage pour la Sardaigne. Je vais vous poser quelques questions pour créer l'itinéraire parfait.",
+    'sardinai.welcome': "Bonjour ! Je suis SardinAI, votre assistant intelligent pour la Sardaigne. Demandez-moi tout : organiser un voyage, découvrir des lieux, des événements et des expériences, ou comment vivre, travailler à distance ou s'installer sur l'île. Par où commençons-nous ?",
+    'sardinai.error': "Oups, je ne peux pas répondre pour le moment. Réessayez dans un instant.",
     'sardinai.questions': [
       'À quel aéroport atterrissez-vous ou depuis où partez-vous?',
       'Combien de jours avez-vous disponibles?',
@@ -724,7 +728,7 @@ const TRANSLATIONS = {
       'Avec qui voyagez-vous?',
       'Quand prévoyez-vous de visiter la Sardaigne?'
     ],
-    'sardinai.placeholder': 'Écrivez votre réponse...',
+    'sardinai.placeholder': 'Demandez-moi sur la Sardaigne...',
     'sardinai.send': 'Envoyer',
     'sardinai.generating': 'Préparation de votre itinéraire personnalisé...',
     'sardinai.restart': 'Recommencer',
@@ -941,7 +945,8 @@ const TRANSLATIONS = {
     'landing.badge.esperienza': 'Erlebnis',
     'landing.card.calendario': 'Vollständiger Kalender',
 
-    'sardinai.welcome': 'Hallo! Ich bin SardinAI, Ihr Reiseassistent für Sardinien. Ich stelle Ihnen einige Fragen, um die perfekte Reiseroute zu erstellen.',
+    'sardinai.welcome': 'Hallo! Ich bin SardinAI, dein intelligenter Assistent für Sardinien. Frag mich alles: eine Reise planen, Orte, Events und Erlebnisse entdecken, oder wie man auf der Insel lebt, remote arbeitet oder hinzieht. Wo fangen wir an?',
+    'sardinai.error': 'Ups, ich kann gerade nicht antworten. Bitte versuche es gleich noch einmal.',
     'sardinai.questions': [
       'An welchem Flughafen landen Sie oder von wo reisen Sie ab?',
       'Wie viele Tage haben Sie zur Verfügung?',
@@ -950,7 +955,7 @@ const TRANSLATIONS = {
       'Mit wem reisen Sie?',
       'Wann planen Sie Sardinien zu besuchen?'
     ],
-    'sardinai.placeholder': 'Schreiben Sie Ihre Antwort...',
+    'sardinai.placeholder': 'Frag mich über Sardinien...',
     'sardinai.send': 'Senden',
     'sardinai.generating': 'Ihre persönliche Reiseroute wird erstellt...',
     'sardinai.restart': 'Neu starten',

@@ -605,8 +605,7 @@ function generateItinerary() {
 
 // ─── RESET CHAT ───────────────────────────────────────────────
 function resetSardinAI() {
-  SardinAIState.step = 0;
-  SardinAIState.answers = {};
+  SARDINAI_HISTORY.length = 0;
 
   const chat = document.getElementById('sardinai-chat');
   if (chat) {
@@ -622,48 +621,77 @@ function resetSardinAI() {
   }
 }
 
+// ─── CHAT LLM (Gemini via /api/chat) ──────────────────────────
+const SARDINAI_HISTORY = [];
+let _sardinaiBusy = false;
+let _sardinaiLangBound = false;
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
+}
+
+async function sardinaiAsk() {
+  const r = await fetch('/api/chat', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ messages: SARDINAI_HISTORY })
+  });
+  const d = await r.json().catch(() => ({}));
+  if (!r.ok || !d.reply) throw new Error((d && (d.message || d.error)) || 'errore');
+  return d.reply;
+}
+
+async function handleChatMessage(text) {
+  const clean = (text || '').trim();
+  if (!clean || _sardinaiBusy) return;
+  _sardinaiBusy = true;
+  const input = document.getElementById('sardinai-input');
+  if (input) input.value = '';
+  // Input utente reso in modo sicuro (escape) per evitare XSS
+  addMessage(escapeHtml(clean).replace(/\n/g, '<br>'), 'user', true);
+  SARDINAI_HISTORY.push({ role: 'user', text: clean });
+  showTypingIndicator();
+  try {
+    const reply = await sardinaiAsk();
+    removeTypingIndicator();
+    addMessage(reply, 'ai');
+    SARDINAI_HISTORY.push({ role: 'model', text: reply });
+  } catch (e) {
+    removeTypingIndicator();
+    addMessage(t('sardinai.error'), 'ai');
+  } finally {
+    _sardinaiBusy = false;
+  }
+}
+
 // ─── AVVIO CHAT ───────────────────────────────────────────────
 function startSardinAIChat() {
-  // Messaggio benvenuto
-  typeMessage(t('sardinai.welcome'), 'ai', 200, () => {
-    askQuestion(0);
-  });
+  SARDINAI_HISTORY.length = 0;
+  typeMessage(t('sardinai.welcome'), 'ai', 200);
 }
 
 function initSardinAI() {
-  // Reset stato
-  SardinAIState.step = 0;
-  SardinAIState.answers = {};
+  SARDINAI_HISTORY.length = 0;
 
   const chat = document.getElementById('sardinai-chat');
   if (chat) chat.innerHTML = '';
 
-  // Setup invio input testo
+  // Chat libera: l'area input è sempre visibile
+  const area = document.getElementById('sardinai-input-area');
+  if (area) area.style.display = 'flex';
+
   const sendBtn = document.getElementById('sardinai-send');
   const input = document.getElementById('sardinai-input');
+  if (sendBtn) sendBtn.onclick = () => { if (input) handleChatMessage(input.value); };
+  if (input) input.onkeydown = (e) => { if (e.key === 'Enter') { e.preventDefault(); handleChatMessage(input.value); } };
 
-  if (sendBtn) {
-    sendBtn.onclick = () => {
-      const val = input ? input.value.trim() : '';
-      if (val) handleUserAnswer(val);
-    };
+  // Listener cambio lingua registrato una sola volta (evita accumulo)
+  if (!_sardinaiLangBound) {
+    _sardinaiLangBound = true;
+    document.addEventListener('langChanged', () => {
+      if (AppState && AppState.currentSection === 'sardinai') resetSardinAI();
+    });
   }
-
-  if (input) {
-    input.onkeydown = (e) => {
-      if (e.key === 'Enter') {
-        const val = input.value.trim();
-        if (val) handleUserAnswer(val);
-      }
-    };
-  }
-
-  // Ascolta cambio lingua
-  document.addEventListener('langChanged', () => {
-    if (AppState && AppState.currentSection === 'sardinai') {
-      resetSardinAI();
-    }
-  });
 
   startSardinAIChat();
 }
