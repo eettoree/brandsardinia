@@ -321,9 +321,10 @@ function addMessage(text, sender, isHTML) {
   if (isHTML) {
     msg.innerHTML = text;
   } else {
-    // Markdown semplice: **bold**
-    const formatted = text
-      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    // Testo escapato (anti-XSS) + markdown semplice: **grassetto**, *corsivo*, a capo
+    const formatted = escapeHtml(text)
+      .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+      .replace(/\*([^*\n]+)\*/g, '<em>$1</em>')
       .replace(/\n/g, '<br>');
     msg.innerHTML = formatted;
   }
@@ -638,13 +639,90 @@ async function sardinaiAsk() {
   });
   const d = await r.json().catch(() => ({}));
   if (!r.ok || !d.reply) throw new Error((d && (d.message || d.error)) || 'errore');
-  return d.reply;
+  return d; // { reply, chips, cards }
+}
+
+// Apre lo strumento/mappa/URL collegato a una card
+function sardinaiCardAction(action) {
+  if (!action) return;
+  if (action.startsWith('url:')) { window.open(action.slice(4), '_blank', 'noopener'); return; }
+  if (action === 'map' || action.startsWith('map:')) {
+    const id = action.startsWith('map:') ? action.slice(4) : '';
+    if (id && typeof openMapAtPoi === 'function') openMapAtPoi(id);
+    else if (typeof showSection === 'function') showSection('map');
+    return;
+  }
+  if (action.startsWith('tool:') && typeof openToolsDirect === 'function') {
+    openToolsDirect(action.slice(5));
+  }
+}
+
+function renderSardinaiCards(cards) {
+  const chat = document.getElementById('sardinai-chat');
+  if (!chat || !cards.length) return;
+  const cta = t('tools.action.discover');
+  const wrap = document.createElement('div');
+  wrap.className = 'sai-cards';
+  wrap.innerHTML = cards.map(c => `
+    <div class="sai-card" data-action="${escapeHtml(c.action || '')}" tabindex="0" role="button">
+      <div class="sai-card-title">${escapeHtml(c.title)}</div>
+      ${c.meta ? `<div class="sai-card-meta">${escapeHtml(c.meta)}</div>` : ''}
+      ${c.desc ? `<div class="sai-card-desc">${escapeHtml(c.desc)}</div>` : ''}
+      <span class="sai-card-cta">${cta} →</span>
+    </div>`).join('');
+  chat.appendChild(wrap);
+  wrap.querySelectorAll('.sai-card').forEach(el => {
+    const act = () => sardinaiCardAction(el.dataset.action);
+    el.addEventListener('click', act);
+    el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); act(); } });
+  });
+  chat.scrollTop = chat.scrollHeight;
+  if (typeof gsap !== 'undefined') gsap.fromTo(wrap.querySelectorAll('.sai-card'), { opacity: 0, y: 14 }, { opacity: 1, y: 0, stagger: 0.06, duration: 0.3, ease: 'power2.out' });
+}
+
+function renderSardinaiChips(chips) {
+  const chat = document.getElementById('sardinai-chat');
+  if (!chat || !chips.length) return;
+  const wrap = document.createElement('div');
+  wrap.className = 'sai-chips';
+  chips.forEach(txt => {
+    const b = document.createElement('button');
+    b.className = 'sai-chip';
+    b.textContent = txt;
+    b.addEventListener('click', () => { wrap.remove(); handleChatMessage(txt); });
+    wrap.appendChild(b);
+  });
+  chat.appendChild(wrap);
+  chat.scrollTop = chat.scrollHeight;
+  if (typeof gsap !== 'undefined') gsap.fromTo(wrap, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: 'power2.out' });
+}
+
+// Chip di avvio (facilitazione guidata) mostrati dopo il benvenuto
+function renderSardinaiStarters() {
+  const chat = document.getElementById('sardinai-chat');
+  if (!chat) return;
+  const list = t('sardinai.starters');
+  if (!Array.isArray(list) || !list.length) return;
+  const wrap = document.createElement('div');
+  wrap.className = 'sai-starters';
+  list.forEach(txt => {
+    const b = document.createElement('button');
+    b.className = 'sai-starter';
+    b.textContent = txt;
+    b.addEventListener('click', () => handleChatMessage(txt));
+    wrap.appendChild(b);
+  });
+  chat.appendChild(wrap);
+  chat.scrollTop = chat.scrollHeight;
+  if (typeof gsap !== 'undefined') gsap.fromTo(wrap.querySelectorAll('.sai-starter'), { opacity: 0, y: 10 }, { opacity: 1, y: 0, stagger: 0.05, duration: 0.3, ease: 'power2.out' });
 }
 
 async function handleChatMessage(text) {
   const clean = (text || '').trim();
   if (!clean || _sardinaiBusy) return;
   _sardinaiBusy = true;
+  // rimuovi chip/starter ancora attivi
+  document.querySelectorAll('#sardinai-chat .sai-chips, #sardinai-chat .sai-starters').forEach(el => el.remove());
   const input = document.getElementById('sardinai-input');
   if (input) input.value = '';
   // Input utente reso in modo sicuro (escape) per evitare XSS
@@ -652,10 +730,14 @@ async function handleChatMessage(text) {
   SARDINAI_HISTORY.push({ role: 'user', text: clean });
   showTypingIndicator();
   try {
-    const reply = await sardinaiAsk();
+    const data = await sardinaiAsk();
     removeTypingIndicator();
-    addMessage(reply, 'ai');
-    SARDINAI_HISTORY.push({ role: 'model', text: reply });
+    addMessage(data.reply, 'ai');
+    SARDINAI_HISTORY.push({ role: 'model', text: data.reply });
+    const cards = Array.isArray(data.cards) ? data.cards : [];
+    const chips = Array.isArray(data.chips) ? data.chips : [];
+    if (cards.length) renderSardinaiCards(cards);
+    if (chips.length) renderSardinaiChips(chips);
   } catch (e) {
     removeTypingIndicator();
     addMessage(t('sardinai.error'), 'ai');
@@ -667,7 +749,7 @@ async function handleChatMessage(text) {
 // ─── AVVIO CHAT ───────────────────────────────────────────────
 function startSardinAIChat() {
   SARDINAI_HISTORY.length = 0;
-  typeMessage(t('sardinai.welcome'), 'ai', 200);
+  typeMessage(t('sardinai.welcome'), 'ai', 200, renderSardinaiStarters);
 }
 
 function initSardinAI() {

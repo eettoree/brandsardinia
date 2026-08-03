@@ -39,6 +39,7 @@ const TRANSLATIONS = {
 
     'sardinai.welcome': "Ciao, sono SardinAI, l'assistente intelligente dedicato alla Sardegna. Chiedimi quello che vuoi: organizzare un viaggio, scoprire territori, eventi ed esperienze, conoscere un Comune, oppure capire come trasferirti, lavorare da remoto o investire sull'isola. Da dove partiamo?",
     'sardinai.error': "Ops, non riesco a rispondere in questo momento. Riprova tra poco.",
+    'sardinai.starters': ['Organizza un viaggio', 'Cosa fare questo mese', 'Trekking + dove dormire e mangiare', 'Come trasferirmi in Sardegna'],
     'sardinai.questions': [
       'Da quale aeroporto atterri o da dove parti?',
       'Quanti giorni hai a disposizione?',
@@ -266,6 +267,7 @@ const TRANSLATIONS = {
 
     'sardinai.welcome': "Hi, I'm SardinAI, your intelligent assistant for Sardinia. Ask me anything: plan a trip, discover places, events and experiences, or explore how to live, work remotely or move to the island. Where shall we start?",
     'sardinai.error': "Oops, I can't reply right now. Please try again shortly.",
+    'sardinai.starters': ['Plan a trip', 'What to do this month', 'Trekking + where to sleep and eat', 'How to move to Sardinia'],
     'sardinai.questions': [
       'Which airport do you land at or where do you depart from?',
       'How many days do you have available?',
@@ -493,6 +495,7 @@ const TRANSLATIONS = {
 
     'sardinai.welcome': "¡Hola! Soy SardinAI, tu asistente inteligente para Cerdeña. Pregúntame lo que quieras: organizar un viaje, descubrir lugares, eventos y experiencias, o cómo vivir, trabajar en remoto o mudarte a la isla. ¿Por dónde empezamos?",
     'sardinai.error': "Vaya, no puedo responder ahora mismo. Inténtalo de nuevo en un momento.",
+    'sardinai.starters': ['Organizar un viaje', 'Qué hacer este mes', 'Trekking + dónde dormir y comer', 'Cómo mudarme a Cerdeña'],
     'sardinai.questions': [
       '¿En qué aeropuerto aterrizas o desde dónde partes?',
       '¿Cuántos días tienes disponibles?',
@@ -720,6 +723,7 @@ const TRANSLATIONS = {
 
     'sardinai.welcome': "Bonjour ! Je suis SardinAI, votre assistant intelligent pour la Sardaigne. Demandez-moi tout : organiser un voyage, découvrir des lieux, des événements et des expériences, ou comment vivre, travailler à distance ou s'installer sur l'île. Par où commençons-nous ?",
     'sardinai.error': "Oups, je ne peux pas répondre pour le moment. Réessayez dans un instant.",
+    'sardinai.starters': ['Organiser un voyage', 'Que faire ce mois-ci', 'Randonnée + où dormir et manger', "Comment m'installer en Sardaigne"],
     'sardinai.questions': [
       'À quel aéroport atterrissez-vous ou depuis où partez-vous?',
       'Combien de jours avez-vous disponibles?',
@@ -947,6 +951,7 @@ const TRANSLATIONS = {
 
     'sardinai.welcome': 'Hallo! Ich bin SardinAI, dein intelligenter Assistent für Sardinien. Frag mich alles: eine Reise planen, Orte, Events und Erlebnisse entdecken, oder wie man auf der Insel lebt, remote arbeitet oder hinzieht. Wo fangen wir an?',
     'sardinai.error': 'Ups, ich kann gerade nicht antworten. Bitte versuche es gleich noch einmal.',
+    'sardinai.starters': ['Eine Reise planen', 'Was diesen Monat unternehmen', 'Wandern + wo schlafen und essen', 'Wie ziehe ich nach Sardinien'],
     'sardinai.questions': [
       'An welchem Flughafen landen Sie oder von wo reisen Sie ab?',
       'Wie viele Tage haben Sie zur Verfügung?',
