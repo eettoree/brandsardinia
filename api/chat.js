@@ -77,12 +77,18 @@ ${catalog}
 RISPONDI IN JSON STRUTTURATO con questi campi:
 - "reply": la risposta discorsiva, CONCISA e calorosa, nella lingua dell'utente (sintetizza; i dettagli concreti vanno nelle cards, non elencarli nel testo). Puoi usare **grassetto** e *corsivo*. Niente emoji.
 - "chips": SEMPRE 2-4 stringhe brevi (max ~5 parole) — proposte di risposta rapida per facilitare il passo successivo (conversazione guidata). Non citare eventi/luoghi inventati.
-- "cards": quando l'utente chiede mete, idee o "cosa fare/vedere/dove dormire/mangiare", popola SEMPRE 2-4 schede prese dai LUOGHI DEL SITO qui sopra (o dagli EVENTI NOTI). Ogni card: "title" (il nome esatto del luogo/evento), "meta" (una riga breve: zona o categoria; aggiungi prezzo/data SOLO se lo conosci con certezza), "desc" (1 frase), "action" (l'azione tra graffe del luogo, es. "map:la-pelosa"; oppure uno strumento del sito: "tool:calendar" | "tool:sentieri" | "tool:cantine" | "tool:musei" | "tool:ristoranti" | "tool:hotel" | "tool:itinerari" | "tool:vivere" | "tool:bandi" | "tool:galleria" | "tool:oggi" | "tool:transport" | "tool:beaches" | "tool:sports" | "tool:prodotti"; oppure "url:https://..."). Lascia "cards" vuoto SOLO se la domanda non riguarda mete concrete.
+- "cards": quando l'utente chiede mete, idee o "cosa fare/vedere/dove dormire/mangiare", DEVI popolare 2-4 schede prese dai LUOGHI DEL SITO qui sopra (o dagli EVENTI NOTI). Ogni card: "title" (il nome esatto del luogo/evento), "meta" (una riga breve: zona o categoria; aggiungi prezzo/data SOLO se lo conosci con certezza), "desc" (1 frase), "action" (l'azione tra graffe del luogo, es. "map:la-pelosa"; oppure uno strumento del sito: "tool:calendar" | "tool:sentieri" | "tool:cantine" | "tool:musei" | "tool:ristoranti" | "tool:hotel" | "tool:itinerari" | "tool:vivere" | "tool:bandi" | "tool:galleria" | "tool:oggi" | "tool:transport" | "tool:beaches" | "tool:sports" | "tool:prodotti"; oppure "url:https://..."). Metti i luoghi concreti nelle cards, non nel testo. Lascia "cards" vuoto SOLO se la domanda non riguarda affatto mete concrete (es. un saluto o una domanda pratica).
+
+ESEMPIO di output corretto (adatta sempre alla domanda reale e alla stagione):
+{"reply":"Ecco tre spiagge iconiche da non perdere. Tocca una scheda per trovarla sulla mappa 3D.","chips":["Spiagge del nord","Spiagge per famiglie","Come arrivarci"],"cards":[{"title":"La Pelosa","meta":"Stintino, nord-ovest","desc":"Sabbia bianchissima e acque bassissime turchesi.","action":"map:la-pelosa"},{"title":"Cala Goloritzé","meta":"Baunei, golfo di Orosei","desc":"Cala di ciottoli con l'iconico pinnacolo calcareo.","action":"map:cala-goloritzé"},{"title":"Is Arutas","meta":"Cabras, penisola del Sinis","desc":"Celebre per i granelli di quarzo bianco e rosa.","action":"map:is-arutas"}]}
 
 Rispondi alla conversazione seguente.`;
 }
 
-// Schema che garantisce un JSON valido e parsabile (niente parsing fragile lato client)
+// Schema che garantisce un JSON valido e parsabile (niente parsing fragile lato client).
+// IMPORTANTE: chips e cards devono essere REQUIRED, altrimenti Gemini (structured
+// output) tende a omettere i campi opzionali e non genera mai le schede.
+// Le cards possono comunque essere un array vuoto quando non pertinenti.
 const RESPONSE_SCHEMA = {
   type: 'object',
   properties: {
@@ -98,11 +104,13 @@ const RESPONSE_SCHEMA = {
           desc: { type: 'string' },
           action: { type: 'string' },
         },
-        required: ['title'],
+        required: ['title', 'action'],
+        propertyOrdering: ['title', 'meta', 'desc', 'action'],
       },
     },
   },
-  required: ['reply'],
+  required: ['reply', 'chips', 'cards'],
+  propertyOrdering: ['reply', 'chips', 'cards'],
 };
 
 module.exports = async (req, res) => {
@@ -173,3 +181,8 @@ module.exports = async (req, res) => {
     res.status(500).json({ error: 'chat_unavailable', message: String(err && err.message || err) });
   }
 };
+
+// Esposti solo per test locali (non usati in produzione dall'handler).
+module.exports.systemPrompt = systemPrompt;
+module.exports.RESPONSE_SCHEMA = RESPONSE_SCHEMA;
+module.exports.MODEL = MODEL;
