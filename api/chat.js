@@ -7,12 +7,34 @@ const MODEL = 'gemini-flash-latest'; // alias sempre aggiornato al Flash corrent
 let _events = [];
 try { _events = require('../assets/data/events.json'); } catch (e) { _events = []; }
 
+let _pois = [];
+try { _pois = require('../assets/data/pois.json'); } catch (e) { _pois = []; }
+
+const CAT_LABEL = {
+  spiaggia: 'SPIAGGE', 'città': 'CITTA E PAESI', nuraghe: 'NURAGHI',
+  'sito-archeologico': 'SITI ARCHEOLOGICI', attrazione: 'ATTRAZIONI E MUSEI',
+  parco: 'PARCHI E NATURA', esperienza: 'ESPERIENZE E ATTIVITA',
+  ristorante: 'RISTORANTI', hotel: 'DOVE DORMIRE', porto: 'PORTI',
+};
+const CAT_ORDER = ['spiaggia', 'città', 'nuraghe', 'sito-archeologico', 'attrazione', 'parco', 'esperienza', 'ristorante', 'hotel', 'porto'];
+
+// Catalogo compatto dei luoghi reali del sito: e' la fonte di verita' per le cards.
+// Ogni voce riporta tra graffe l'azione da usare (es. {map:la-pelosa}).
+function poiCatalog() {
+  const byCat = {};
+  for (const p of _pois) { (byCat[p.cat] = byCat[p.cat] || []).push(`${p.name} {map:${p.id}}`); }
+  return CAT_ORDER.filter(c => byCat[c])
+    .map(c => `[${CAT_LABEL[c] || c.toUpperCase()}]\n${byCat[c].join('; ')}`)
+    .join('\n\n');
+}
+
 function systemPrompt() {
   const eventsList = _events
     .slice()
     .sort((a, b) => new Date(a.date) - new Date(b.date))
     .map(e => `- ${e.name} (${e.city}, ${e.date}, ${e.category})`)
     .join('\n');
+  const catalog = poiCatalog();
 
   const now = new Date();
   const M = now.getMonth() + 1;
@@ -27,7 +49,8 @@ CONTESTO TEMPORALE
 ACCURATEZZA E ONESTÀ (regola prioritaria — non violarla mai)
 - NON inventare MAI fatti specifici: orari, prezzi, date precise, numeri di telefono, disponibilità, eventi non confermati. Se non hai un dato certo, DILLO chiaramente ("non ho questa informazione aggiornata") e invita a verificare sulla fonte ufficiale o sugli strumenti del sito.
 - È molto meglio ammettere di non sapere che dare un'informazione falsa. La fiducia dell'utente viene prima di tutto.
-- Usa le conoscenze reali qui sotto (eventi del calendario, strumenti del sito) come base. Per il resto, attieniti alla conoscenza geografica/culturale consolidata della Sardegna, senza dettagli inventati.
+- FONTE DI VERITÀ: per luoghi/mete concrete usa ESCLUSIVAMENTE i luoghi elencati in "LUOGHI DEL SITO" qui sotto; per gli eventi usa ESCLUSIVAMENTE quelli in "EVENTI NOTI". NON citare né mettere in card/chip luoghi o eventi che non compaiono in queste liste. Se l'utente chiede qualcosa che non è in elenco, dillo con onestà invece di inventare un nome.
+- Per il contesto discorsivo puoi attingere alla conoscenza geografica/culturale generale e consolidata della Sardegna, ma senza inventare dettagli specifici (nomi propri di locali, eventi, prezzi, orari) non presenti nelle liste.
 
 STAGIONALITÀ (fondamentale)
 - Ogni suggerimento (testo, chips e cards) DEVE essere adatto alla stagione richiesta (o a quella attuale se non specificata). NON proporre attività fuori stagione: es. NON suggerire bagni in mare, spiagge affollate o eventi estivi in autunno/inverno; NON proporre un evento la cui data è già passata o lontana mesi come se fosse "adesso".
@@ -44,13 +67,17 @@ STILE
 IL SITO (indirizza l'utente agli strumenti quando pertinente)
 BrandSardinia ha: Mappa interattiva 3D con pin filtrabili (spiagge, città, hotel, ristoranti, attrazioni, nuraghi, siti archeologici, parchi, esperienze, porti); Calendario Eventi con filtro bassa stagione; Sardegna Oggi (meteo/UV/aria live); Meteo Live spiagge; Sentieri; Cantine; Musei; Ristoranti; Hotel; Itinerari pronti; Bandi e agevolazioni; Vivere in Sardegna (nomadi, radici, volontariato, borghi); Galleria; e altro.
 
-EVENTI NOTI (dal calendario del sito, usali quando pertinenti):
+EVENTI NOTI (dal calendario del sito — sono gli UNICI eventi che puoi citare):
 ${eventsList}
 
+LUOGHI DEL SITO (fonte di verità per le mete — usa SOLO questi nelle card)
+Ogni voce riporta tra graffe l'azione da usare nel campo "action" della card: es. "La Pelosa {map:la-pelosa}" → action "map:la-pelosa" (apre esattamente quel pin sulla mappa 3D). Non inventare id.
+${catalog}
+
 RISPONDI IN JSON STRUTTURATO con questi campi:
-- "reply": la risposta discorsiva, CONCISA e calorosa, nella lingua dell'utente (sintetizza; i dettagli vanno nelle cards). Puoi usare **grassetto** e *corsivo*. Niente emoji.
-- "chips": SEMPRE 2-4 stringhe brevi (max ~5 parole) — proposte di risposta rapida per facilitare il passo successivo (conversazione guidata).
-- "cards": 0-4 schede quando proponi luoghi/esperienze/eventi/itinerari concreti. Ogni card: "title" (nome), "meta" (una riga breve: zona, durata, prezzo o data), "desc" (1 frase), "action". "action" è una fra: "tool:calendar" | "tool:sentieri" | "tool:cantine" | "tool:musei" | "tool:ristoranti" | "tool:hotel" | "tool:itinerari" | "tool:vivere" | "tool:bandi" | "tool:galleria" | "tool:oggi" | "tool:transport" | "tool:beaches" | "tool:sports" | "tool:prodotti" | "map" | "url:https://..." — scegli lo strumento più pertinente del sito. Lascia "cards" vuoto se non hai proposte concrete.
+- "reply": la risposta discorsiva, CONCISA e calorosa, nella lingua dell'utente (sintetizza; i dettagli concreti vanno nelle cards, non elencarli nel testo). Puoi usare **grassetto** e *corsivo*. Niente emoji.
+- "chips": SEMPRE 2-4 stringhe brevi (max ~5 parole) — proposte di risposta rapida per facilitare il passo successivo (conversazione guidata). Non citare eventi/luoghi inventati.
+- "cards": quando l'utente chiede mete, idee o "cosa fare/vedere/dove dormire/mangiare", popola SEMPRE 2-4 schede prese dai LUOGHI DEL SITO qui sopra (o dagli EVENTI NOTI). Ogni card: "title" (il nome esatto del luogo/evento), "meta" (una riga breve: zona o categoria; aggiungi prezzo/data SOLO se lo conosci con certezza), "desc" (1 frase), "action" (l'azione tra graffe del luogo, es. "map:la-pelosa"; oppure uno strumento del sito: "tool:calendar" | "tool:sentieri" | "tool:cantine" | "tool:musei" | "tool:ristoranti" | "tool:hotel" | "tool:itinerari" | "tool:vivere" | "tool:bandi" | "tool:galleria" | "tool:oggi" | "tool:transport" | "tool:beaches" | "tool:sports" | "tool:prodotti"; oppure "url:https://..."). Lascia "cards" vuoto SOLO se la domanda non riguarda mete concrete.
 
 Rispondi alla conversazione seguente.`;
 }
