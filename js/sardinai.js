@@ -642,12 +642,29 @@ async function sardinaiAsk() {
   return d; // { reply, chips, cards }
 }
 
+// Risolve l'id del POI: usa l'id esatto se esiste, altrimenti ripiega sul titolo
+// della card (l'LLM a volte trascrive l'id con un piccolo refuso, es. su-golgonne).
+function sardinaiResolvePoiId(id, title) {
+  if (typeof MAP_POI === 'undefined' || !Array.isArray(MAP_POI)) return id;
+  if (id && MAP_POI.some(p => p.id === id)) return id;
+  const norm = s => (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
+  const nt = norm(title);
+  if (!nt) return id;
+  let contains = null;
+  for (const p of MAP_POI) {
+    const np = norm(p.name);
+    if (np === nt) return p.id;
+    if (!contains && (np.includes(nt) || nt.includes(np))) contains = p.id;
+  }
+  return contains || id;
+}
+
 // Apre lo strumento/mappa/URL collegato a una card
-function sardinaiCardAction(action) {
+function sardinaiCardAction(action, title) {
   if (!action) return;
   if (action.startsWith('url:')) { window.open(action.slice(4), '_blank', 'noopener'); return; }
   if (action === 'map' || action.startsWith('map:')) {
-    const id = action.startsWith('map:') ? action.slice(4) : '';
+    const id = sardinaiResolvePoiId(action.startsWith('map:') ? action.slice(4) : '', title);
     if (id && typeof openMapAtPoi === 'function') openMapAtPoi(id);
     else if (typeof showSection === 'function') showSection('map');
     return;
@@ -664,7 +681,7 @@ function renderSardinaiCards(cards) {
   const wrap = document.createElement('div');
   wrap.className = 'sai-cards';
   wrap.innerHTML = cards.map(c => `
-    <div class="sai-card" data-action="${escapeHtml(c.action || '')}" tabindex="0" role="button">
+    <div class="sai-card" data-action="${escapeHtml(c.action || '')}" data-title="${escapeHtml(c.title || '')}" tabindex="0" role="button">
       <div class="sai-card-title">${escapeHtml(c.title)}</div>
       ${c.meta ? `<div class="sai-card-meta">${escapeHtml(c.meta)}</div>` : ''}
       ${c.desc ? `<div class="sai-card-desc">${escapeHtml(c.desc)}</div>` : ''}
@@ -672,7 +689,7 @@ function renderSardinaiCards(cards) {
     </div>`).join('');
   chat.appendChild(wrap);
   wrap.querySelectorAll('.sai-card').forEach(el => {
-    const act = () => sardinaiCardAction(el.dataset.action);
+    const act = () => sardinaiCardAction(el.dataset.action, el.dataset.title);
     el.addEventListener('click', act);
     el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); act(); } });
   });
