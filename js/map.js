@@ -1171,7 +1171,26 @@ function showMapInfoPanel(poi) {
     contactHTML += `<a href="${webUrl}" target="_blank" rel="noopener" class="panel-contact-link"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>${webDisplay}</a>`;
   }
 
-  let metaHTML = '';
+  // Badge valutazione Google (dati autorevoli e aggiornati)
+  const fmtCount = n => n >= 1000 ? (Math.round(n / 100) / 10) + 'k' : '' + n;
+  const ratingHTML = poi.rating
+    ? `<div class="panel-rating" title="Valutazione Google">
+         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+         <strong>${poi.rating.toFixed(1)}</strong>${poi.reviews ? `<span class="panel-rating-count">${fmtCount(poi.reviews)} recensioni</span>` : ''}
+       </div>`
+    : '';
+
+  // Orari da Google (weekday) solo per categorie dove ha senso, se non ci sono orari curati
+  const HOURS_CATS = ['ristorante', 'hotel', 'attrazione', 'esperienza', 'nuraghe', 'sito-archeologico'];
+  let hoursGoogleHTML = '';
+  if (!poi.orari && Array.isArray(poi.ghours) && poi.ghours.length && HOURS_CATS.includes(poi.cat)) {
+    const ti = (new Date().getDay() + 6) % 7; // 0 = lunedì
+    const today = (poi.ghours[ti] || '').replace(/^[^:]+:\s*/, '');
+    hoursGoogleHTML = `<div class="panel-meta"><div class="panel-meta-label"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Orari <span class="panel-hours-src">Google</span></div>
+      <details class="panel-hours"><summary><span class="panel-hours-today">Oggi: ${today || 'n/d'}</span></summary><ul>${poi.ghours.map(h => `<li>${h}</li>`).join('')}</ul></details></div>`;
+  }
+
+  let metaHTML = hoursGoogleHTML;
   if (poi.orari)   metaHTML += `<div class="panel-meta"><div class="panel-meta-label"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Orari</div><p>${poi.orari}</p></div>`;
   if (poi.costo)   metaHTML += `<div class="panel-meta"><div class="panel-meta-label"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg> Costi</div><p>${poi.costo}</p></div>`;
   if (poi.come)    metaHTML += `<div class="panel-meta"><div class="panel-meta-label"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg> Come arrivare</div><p>${poi.come}</p></div>`;
@@ -1181,6 +1200,7 @@ function showMapInfoPanel(poi) {
     ${photoHTML}
     <div class="panel-inner">
       <h3 class="panel-title">${poi.name}</h3>
+      ${ratingHTML}
       <p class="panel-desc">${poi.description}</p>
       ${metaHTML}
       ${contactHTML ? `<div class="panel-contacts">${contactHTML}</div>` : ''}

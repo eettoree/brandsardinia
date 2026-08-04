@@ -11,7 +11,10 @@
     "costo": "Accesso 3,50€ a persona (estate). Parcheggio 2€/ora",
     "tel": "",
     "web": "www.comunestintino.it",
-    "orari": "Accesso contingentato luglio-agosto. Prenotazione su portale comunale."
+    "orari": "Accesso contingentato luglio-agosto. Prenotazione su portale comunale.",
+    "rating": 4.5,
+    "reviews": 16998,
+    "gsummary": "Spiaggia oceanica tranquilla, con sabbia bianca e calme acque cristalline, ideale per nuoto e immersioni."
   },
   {
     "id": "cala-goloritzé",
@@ -25,7 +28,10 @@
     "costo": "Barca: 25-40€ a/r da Cala Gonone. Trekking gratuito.",
     "tel": "",
     "web": "www.turismobaunei.eu/my-product/cala-goloritze",
-    "orari": "Aperta tutto l'anno. Via mare: imbarchi da aprile a ottobre."
+    "orari": "Aperta tutto l'anno. Via mare: imbarchi da aprile a ottobre.",
+    "rating": 4.7,
+    "reviews": 4164,
+    "gsummary": "Isolata spiaggia di sabbia bianca e ciottoli con arco in pietra naturale e svettante roccia."
   },
   {
     "id": "cala-luna",
@@ -38,8 +44,11 @@
     "servizi": "Nessuno — agriturismo nelle grotte in agosto (prenotare)",
     "costo": "Barca: 20-35€ a/r",
     "tel": "",
-    "web": "",
-    "orari": "Via mare: aprile-ottobre."
+    "web": "calagononedivingcenter.it",
+    "orari": "Via mare: aprile-ottobre.",
+    "rating": 4.5,
+    "reviews": 5510,
+    "gsummary": "Questa piccola spiaggia remota, sita in una baia tra promontori rocciosi, offre acque turchesi e grotte."
   },
   {
     "id": "spiaggia-principe",
@@ -53,7 +62,18 @@
     "costo": "Parcheggio 5-8€/giorno",
     "tel": "",
     "web": "www.trovaspiagge.it/spiaggia-del-principe",
-    "orari": "Accesso libero (parcheggio operativo giugno-settembre)."
+    "orari": "Accesso libero (parcheggio operativo giugno-settembre).",
+    "rating": 4.5,
+    "reviews": 3894,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "su-giudeu",
@@ -67,7 +87,19 @@
     "costo": "Parcheggio 3-5€/ora. Ombrellone + 2 sdraio da 20€",
     "tel": "+39 070 923 5015",
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/su-giudeu",
-    "orari": "Spiaggia libera tutto l'anno. Stabilimento: maggio-settembre."
+    "orari": "Spiaggia libera tutto l'anno. Stabilimento: maggio-settembre.",
+    "rating": 4.7,
+    "reviews": 6643,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ],
+    "gsummary": "Hotel sobrio con camere semplici, alcune con balcone, e una sala TV."
   },
   {
     "id": "is-arutas",
@@ -81,7 +113,10 @@
     "costo": "Accesso libero. Parcheggio 2€/ora",
     "tel": "",
     "web": "",
-    "orari": "Aperta tutto l'anno."
+    "orari": "Aperta tutto l'anno.",
+    "rating": 4.7,
+    "reviews": 9348,
+    "gsummary": "Popolare spiaggia di sabbia bianca con passerella in legno, parcheggio e ristoranti."
   },
   {
     "id": "cala-mariolu",
@@ -95,7 +130,19 @@
     "costo": "Barca: 30-45€ a/r da Cala Gonone",
     "tel": "",
     "web": "www.calamariolu.it",
-    "orari": "Via mare: aprile-ottobre."
+    "orari": "Via mare: aprile-ottobre.",
+    "rating": 4.8,
+    "reviews": 7035,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ],
+    "gsummary": "Spiaggetta di ciottoli nota per snorkeling e immersioni, ai piedi di imponenti scogliere calcaree."
   },
   {
     "id": "berchida",
@@ -109,7 +156,19 @@
     "costo": "Gratuito",
     "tel": "",
     "web": "spiaggia-berchida.it",
-    "orari": "Aperta tutto l'anno."
+    "orari": "Aperta tutto l'anno.",
+    "rating": 4.6,
+    "reviews": 9723,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ],
+    "gsummary": "Spiaggia sabbiosa di circa 5 km a forma di mezzaluna con un chiosco e pedalò a noleggio, circondata da dune, ginepri e pini."
   },
   {
     "id": "cala-brandinchi",
@@ -123,7 +182,10 @@
     "costo": "Parcheggio 3€/ora. Ombrellone 18-25€",
     "tel": "",
     "web": "",
-    "orari": "Stabilimento: giugno-settembre."
+    "orari": "Stabilimento: giugno-settembre.",
+    "rating": 4.2,
+    "reviews": 5435,
+    "gsummary": "Spiaggia suggestiva e vivace con acque basse e cristalline, popolari per lo snorkeling."
   },
   {
     "id": "la-cinta",
@@ -137,7 +199,10 @@
     "costo": "Accesso libero. Parcheggio 2€/ora in estate",
     "tel": "",
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/la-cinta",
-    "orari": "Aperta tutto l'anno."
+    "orari": "Aperta tutto l'anno.",
+    "rating": 4.5,
+    "reviews": 8601,
+    "gsummary": "Pittoresca spiaggia di sabbia bianca nota per le acque turchesi e tra chi pratica kitesurf."
   },
   {
     "id": "porto-giunco",
@@ -151,7 +216,10 @@
     "costo": "Parcheggio 3€/h. Ombrellone da 20€/giorno",
     "tel": "",
     "web": "",
-    "orari": "Stabilimento: maggio-settembre."
+    "orari": "Stabilimento: maggio-settembre.",
+    "rating": 4.7,
+    "reviews": 7924,
+    "gsummary": "Famosa spiaggia di fine sabbia bianca e acque turchesi, ospitante una popolazione di fenicotteri rosa."
   },
   {
     "id": "poetto",
@@ -165,7 +233,10 @@
     "costo": "Stabilimenti 15-30€/giorno. Spiagge libere gratuite.",
     "tel": "",
     "web": "",
-    "orari": "Aperta tutto l'anno. Stabilimenti: maggio-settembre."
+    "orari": "Aperta tutto l'anno. Stabilimenti: maggio-settembre.",
+    "rating": 4.5,
+    "reviews": 3823,
+    "gsummary": "Vivace zona balneare famosa per nuotare e prendere il sole, con ristoranti, discoteche e bar nelle vicinanze."
   },
   {
     "id": "tuerredda",
@@ -179,7 +250,19 @@
     "costo": "Navetta 3€ a/r. Parcheggio 3€/h",
     "tel": "+39 350 025 7063",
     "web": "www.visitteulada.it",
-    "orari": "Aperta tutto l'anno. Navetta: giugno-settembre."
+    "orari": "Aperta tutto l'anno. Navetta: giugno-settembre.",
+    "rating": 4.7,
+    "reviews": 18432,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ],
+    "gsummary": "Famosa spiaggia locale con sabbia bianca in stile caraibico, ristorante e noleggio di pedalò."
   },
   {
     "id": "cala-domestica",
@@ -193,7 +276,10 @@
     "costo": "Parcheggio 2-3€/h",
     "tel": "",
     "web": "www.sardegnaturismo.it/en/point-of-interest/cala-domestica",
-    "orari": "Aperta tutto l'anno."
+    "orari": "Aperta tutto l'anno.",
+    "rating": 4.6,
+    "reviews": 3475,
+    "gsummary": "Remota spiaggia di sabbia in baia con scogliere e dune, popolare per il vivace bar sul litorale e lo snorkeling."
   },
   {
     "id": "spiaggia-rosa-budelli",
@@ -207,7 +293,10 @@
     "costo": "Tour barca: 60-90€/persona (incluso nelle escursioni arcipelago)",
     "tel": "",
     "web": "lamaddalenapark.it",
-    "orari": "Tour disponibili aprile-ottobre."
+    "orari": "Tour disponibili aprile-ottobre.",
+    "rating": 4.4,
+    "reviews": 395,
+    "gsummary": "Spiaggia protetta di sabbia rosea, unica nel suo genere, composta da fossili, cristalli e coralli polverizzati."
   },
   {
     "id": "porto-ferro",
@@ -221,7 +310,9 @@
     "costo": "Spiaggia gratuita. Accesso spiaggia incluso nel Bandiera Blu Sassari.",
     "tel": "",
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/porto-ferro",
-    "orari": "Spiaggia: tutto l'anno. Il Baretto: 9:00–23:00 stagione estiva (giu-set). Surf: inverno ottobre-marzo (onda migliore)."
+    "orari": "Spiaggia: tutto l'anno. Il Baretto: 9:00–23:00 stagione estiva (giu-set). Surf: inverno ottobre-marzo (onda migliore).",
+    "rating": 4.5,
+    "reviews": 4351
   },
   {
     "id": "cala-sisine",
@@ -235,7 +326,9 @@
     "costo": "Barca: 65-70€ A/R da Cala Gonone",
     "tel": "",
     "web": "golfo-orosei.it",
-    "orari": "Via mare: aprile-ottobre."
+    "orari": "Via mare: aprile-ottobre.",
+    "rating": 4.6,
+    "reviews": 1605
   },
   {
     "id": "mari-ermi",
@@ -249,7 +342,9 @@
     "costo": "Gratuito. Parcheggio 1€/h",
     "tel": "+39 0783 391097",
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/mari-ermi",
-    "orari": "Aperta tutto l'anno."
+    "orari": "Aperta tutto l'anno.",
+    "rating": 4.6,
+    "reviews": 3120
   },
   {
     "id": "le-tonnare-stintino",
@@ -263,7 +358,18 @@
     "costo": "Ombrellone 20-25€/giorno",
     "tel": "+39 079 523231",
     "web": "stintino.com",
-    "orari": "Stabilimento: maggio-settembre."
+    "orari": "Stabilimento: maggio-settembre.",
+    "rating": 4.1,
+    "reviews": 513,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "cala-coticcio",
@@ -277,7 +383,19 @@
     "costo": "Gratuito",
     "tel": "",
     "web": "lamaddalenapark.it",
-    "orari": "Tutto l'anno. Primavera-estate consigliato."
+    "orari": "Tutto l'anno. Primavera-estate consigliato.",
+    "rating": 4.7,
+    "reviews": 2425,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ],
+    "gsummary": "Caletta sabbiosa appartata e circondata da scogliere, ideale per fare il bagno e prendere il sole."
   },
   {
     "id": "cala-corsara",
@@ -291,7 +409,19 @@
     "costo": "Incluso nei tour arcipelago (60-120€/persona)",
     "tel": "",
     "web": "lamaddalenapark.it",
-    "orari": "Aprile-ottobre."
+    "orari": "Aprile-ottobre.",
+    "rating": 4.8,
+    "reviews": 2667,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ],
+    "gsummary": "Spiaggia in baia isolata fiancheggiata da colline rocciose, con acque turchesi, ideali per immersioni e snorkeling."
   },
   {
     "id": "lu-impostu",
@@ -305,7 +435,10 @@
     "costo": "Gratuito. Parcheggio informale 2€",
     "tel": "",
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/lu-impostu-porto-brandinchi",
-    "orari": "Tutto l'anno."
+    "orari": "Tutto l'anno.",
+    "rating": 4.4,
+    "reviews": 4902,
+    "gsummary": "Suggestiva meta balneare che offre sabbia bianca e calme acque cristalline, oltre al noleggio di ombrelloni e kayak."
   },
   {
     "id": "li-cossi",
@@ -319,7 +452,10 @@
     "costo": "Gratuito",
     "tel": "",
     "web": "",
-    "orari": "Maggio-settembre consigliato."
+    "orari": "Maggio-settembre consigliato.",
+    "rating": 4.7,
+    "reviews": 3628,
+    "gsummary": "Spiaggia sabbiosa riparata con acque cristalline, sentiero dal parcheggio e costa rocciosa panoramica."
   },
   {
     "id": "rena-bianca",
@@ -333,7 +469,10 @@
     "costo": "Ombrellone 20-30€/giorno. Area libera gratuita.",
     "tel": "",
     "web": "visitsantateresagallura.com",
-    "orari": "Stabilimento: giugno-settembre."
+    "orari": "Stabilimento: giugno-settembre.",
+    "rating": 4.4,
+    "reviews": 2868,
+    "gsummary": "Pittoresca spiaggia di sabbia bianca con acque turchesi poco profonde circondate da scogliere e colline."
   },
   {
     "id": "cala-spinosa",
@@ -347,7 +486,18 @@
     "costo": "Gratuito",
     "tel": "",
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/cala-spinosa",
-    "orari": "Maggio-ottobre."
+    "orari": "Maggio-ottobre.",
+    "rating": 4.7,
+    "reviews": 1841,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "la-marmorata",
@@ -361,7 +511,9 @@
     "costo": "Accesso libero. Zona hotel a pagamento.",
     "tel": "",
     "web": "",
-    "orari": "Tutto l'anno."
+    "orari": "Tutto l'anno.",
+    "rating": 4.3,
+    "reviews": 2088
   },
   {
     "id": "cala-moresca",
@@ -375,7 +527,9 @@
     "costo": "Gratuito",
     "tel": "",
     "web": "",
-    "orari": "Tutto l'anno."
+    "orari": "Tutto l'anno.",
+    "rating": 4.7,
+    "reviews": 1637
   },
   {
     "id": "le-bombarde",
@@ -389,7 +543,10 @@
     "costo": "Parcheggio 3€/h. Ombrellone 20-25€/giorno",
     "tel": "",
     "web": "www.sardegnaturismo.it/de/punto-di-interesse/le-bombarde",
-    "orari": "Stabilimento: giugno-settembre."
+    "orari": "Stabilimento: giugno-settembre.",
+    "rating": 4.3,
+    "reviews": 5172,
+    "gsummary": "Spiaggia che curva dolcemente, con formazioni rocciose, natura verdeggiante, hotel, ristoranti e cocktail bar."
   },
   {
     "id": "mugoni",
@@ -403,7 +560,9 @@
     "costo": "Gratuito. Parcheggio 2€/h",
     "tel": "+39 079 979054",
     "web": "algheroparks.it",
-    "orari": "Tutto l'anno."
+    "orari": "Tutto l'anno.",
+    "rating": 4.4,
+    "reviews": 5517
   },
   {
     "id": "lazzaretto",
@@ -417,7 +576,9 @@
     "costo": "Ombrellone 15-22€/giorno. Accesso libero.",
     "tel": "",
     "web": "",
-    "orari": "Stabilimento: maggio-settembre."
+    "orari": "Stabilimento: maggio-settembre.",
+    "rating": 4.4,
+    "reviews": 7250
   },
   {
     "id": "cala-fuili",
@@ -431,7 +592,19 @@
     "costo": "Gratuito",
     "tel": "+39 0784 927235",
     "web": "calagononesardinia.com",
-    "orari": "Tutto l'anno."
+    "orari": "Tutto l'anno.",
+    "rating": 4.6,
+    "reviews": 2675,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ],
+    "gsummary": "Spiaggia di ciottoli tranquilla e informale, ideale per nuotare e con punti per il trekking e le arrampicate nelle vicinanze."
   },
   {
     "id": "bidderosa",
@@ -473,7 +646,10 @@
     "costo": "Gratuito",
     "tel": "",
     "web": "",
-    "orari": "Tutto l'anno."
+    "orari": "Tutto l'anno.",
+    "rating": 4.7,
+    "reviews": 205,
+    "gsummary": "Spiaggia tranquilla con lungo litorale di sabbia fine e acque calme, basse e cristalline."
   },
   {
     "id": "cala-biriola",
@@ -501,7 +677,18 @@
     "costo": "Parcheggio 2-3€/h. Ombrellone 20€/giorno",
     "tel": "",
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/cea",
-    "orari": "Tutto l'anno."
+    "orari": "Tutto l'anno.",
+    "rating": 4.8,
+    "reviews": 149,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "punta-molentis",
@@ -515,7 +702,9 @@
     "costo": "Parcheggio 3€/h. Navetta 3€ A/R.",
     "tel": "",
     "web": "",
-    "orari": "Tutto l'anno. Navetta: giugno-settembre."
+    "orari": "Tutto l'anno. Navetta: giugno-settembre.",
+    "rating": 4.5,
+    "reviews": 5365
   },
   {
     "id": "cala-sinzias",
@@ -529,7 +718,18 @@
     "costo": "Gratuito. Parcheggio 2€/h",
     "tel": "",
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/cala-sinzias",
-    "orari": "Tutto l'anno."
+    "orari": "Tutto l'anno.",
+    "rating": 4.6,
+    "reviews": 2678,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "solanas",
@@ -543,7 +743,9 @@
     "costo": "Ombrellone 15-20€/giorno",
     "tel": "",
     "web": "",
-    "orari": "Stabilimento: maggio-settembre."
+    "orari": "Stabilimento: maggio-settembre.",
+    "rating": 4.8,
+    "reviews": 687
   },
   {
     "id": "cala-cipolla",
@@ -557,7 +759,19 @@
     "costo": "Gratuito. Parcheggio 3€/h",
     "tel": "",
     "web": "www.sardegnaturismo.it/it/esplora/cala-cipolla",
-    "orari": "Tutto l'anno."
+    "orari": "Tutto l'anno.",
+    "rating": 4.6,
+    "reviews": 3107,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ],
+    "gsummary": "Spiaggia incontaminata in ambientazione panoramica tra scogliere e dune con cespugli fitti."
   },
   {
     "id": "cala-piscinni",
@@ -571,7 +785,19 @@
     "costo": "Gratuito",
     "tel": "",
     "web": "www.sardegnaturismo.it/it/esplora/piscinni",
-    "orari": "Tutto l'anno."
+    "orari": "Tutto l'anno.",
+    "rating": 4.4,
+    "reviews": 1899,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ],
+    "gsummary": "Spiaggia riparata, popolare per fare snorkeling in acque cristalline, con food truck in parcheggio in collina."
   },
   {
     "id": "porto-pino",
@@ -585,7 +811,10 @@
     "costo": "Parcheggio 3€/h. Ombrellone 20€/giorno",
     "tel": "",
     "web": "",
-    "orari": "Stabilimento: giugno-settembre. Spiaggia: sempre aperta."
+    "orari": "Stabilimento: giugno-settembre. Spiaggia: sempre aperta.",
+    "rating": 4.6,
+    "reviews": 1249,
+    "gsummary": "Spiaggia di sabbia bianca davanti a dune, con acque in genere cristalline e calme."
   },
   {
     "id": "coa-quaddus",
@@ -613,7 +842,9 @@
     "costo": "Traghetto: 5-10€. Spiaggia gratuita.",
     "tel": "",
     "web": "",
-    "orari": "Tutto l'anno."
+    "orari": "Tutto l'anno.",
+    "rating": 4.6,
+    "reviews": 1332
   },
   {
     "id": "portixeddu",
@@ -627,7 +858,10 @@
     "costo": "Gratuito",
     "tel": "",
     "web": "",
-    "orari": "Tutto l'anno."
+    "orari": "Tutto l'anno.",
+    "rating": 4.6,
+    "reviews": 1241,
+    "gsummary": "Tranquillo e ampio tratto di spiaggia sabbiosa con vista montagne, acque turchesi e luoghi per fare surf."
   },
   {
     "id": "scivu",
@@ -641,7 +875,9 @@
     "costo": "Gratuito",
     "tel": "",
     "web": "",
-    "orari": "Tutto l'anno. 1h a piedi dal parcheggio."
+    "orari": "Tutto l'anno. 1h a piedi dal parcheggio.",
+    "rating": 4.7,
+    "reviews": 2074
   },
   {
     "id": "piscinas",
@@ -655,7 +891,9 @@
     "costo": "Gratuito",
     "tel": "",
     "web": "hotelingolf.it",
-    "orari": "Tutto l'anno."
+    "orari": "Tutto l'anno.",
+    "rating": 4.6,
+    "reviews": 2958
   },
   {
     "id": "torre-corsari",
@@ -669,7 +907,18 @@
     "costo": "Gratuito",
     "tel": "+39 070 734 0654",
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/torre-dei-corsari",
-    "orari": "Tutto l'anno."
+    "orari": "Tutto l'anno.",
+    "rating": 4.6,
+    "reviews": 1750,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "pistis",
@@ -683,7 +932,18 @@
     "costo": "Gratuito",
     "tel": "+39 070 734 0654",
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/pistis",
-    "orari": "Tutto l'anno."
+    "orari": "Tutto l'anno.",
+    "rating": 4.5,
+    "reviews": 2288,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "san-giovanni-sinis",
@@ -697,7 +957,9 @@
     "costo": "Gratuito",
     "tel": "+39 0783 391097",
     "web": "",
-    "orari": "Tutto l'anno."
+    "orari": "Tutto l'anno.",
+    "rating": 4.7,
+    "reviews": 1565
   },
   {
     "id": "maimoni",
@@ -711,7 +973,18 @@
     "costo": "Gratuito",
     "tel": "+39 0783 391097",
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/maimoni",
-    "orari": "Tutto l'anno."
+    "orari": "Tutto l'anno.",
+    "rating": 4.6,
+    "reviews": 1107,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "putzu-idu",
@@ -725,7 +998,18 @@
     "costo": "Spiaggia libera gratuita. Barca Mal di Ventre: 20-30€ A/R.",
     "tel": "",
     "web": "www.sardegnaturismo.it/en/explore/putzu-idu",
-    "orari": "Tutto l'anno. Windsurf: ottobre-aprile."
+    "orari": "Tutto l'anno. Windsurf: ottobre-aprile.",
+    "rating": 4.5,
+    "reviews": 2910,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "is-arenas",
@@ -739,7 +1023,18 @@
     "costo": "Gratuito",
     "tel": "",
     "web": "is-arenas-spiaggia.mondoinviaggio.top",
-    "orari": "Tutto l'anno."
+    "orari": "Tutto l'anno.",
+    "rating": 4.4,
+    "reviews": 545,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "s-archittu",
@@ -753,7 +1048,10 @@
     "costo": "Gratuito",
     "tel": "",
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/sarchittu-di-santa-caterina",
-    "orari": "Tutto l'anno."
+    "orari": "Tutto l'anno.",
+    "rating": 4.6,
+    "reviews": 2468,
+    "gsummary": "Baia isolana in cui prendere il sole, nuotare e fare rafting, con spiaggia sabbiosa e pittoresco arco roccioso."
   },
   {
     "id": "cagliari",
@@ -893,7 +1191,19 @@
     "costo": "10€ adulti, 6€ ridotti (12-18 anni), bambini <6 gratuiti",
     "tel": "+39 070 9368128",
     "web": "www.fondazionebarumini.it",
-    "orari": "9:00-tramonto (ultima visita 1h prima). Chiuso 1 gennaio e 25 dicembre."
+    "orari": "9:00-tramonto (ultima visita 1h prima). Chiuso 1 gennaio e 25 dicembre.",
+    "rating": 4.7,
+    "reviews": 8388,
+    "ghours": [
+      "lunedì: 09:00–20:00",
+      "martedì: 09:00–20:00",
+      "mercoledì: 09:00–20:00",
+      "giovedì: 09:00–20:00",
+      "venerdì: 09:00–20:00",
+      "sabato: 09:00–20:00",
+      "domenica: 09:00–20:00"
+    ],
+    "gsummary": "Unica in Sardegna, questa antica fortificazione difensiva è composta da una rete di torri circolari."
   },
   {
     "id": "grotte-nettuno",
@@ -907,7 +1217,9 @@
     "costo": "Grotta: 14€ adulti / 7€ bambini 6-12 / gratuito <6 · Barca a/r da Alghero: ~15€ adulti",
     "tel": "+39 079 946540 (grotta) · +39 079 950603 (barca)",
     "web": "grottadinettuno.it",
-    "orari": "Tutto l'anno 9:00–19:00 (ult. ingresso). Inverno ridotto. Chiusa con mare mosso — verificare prima."
+    "orari": "Tutto l'anno 9:00–19:00 (ult. ingresso). Inverno ridotto. Chiusa con mare mosso — verificare prima.",
+    "rating": 4.2,
+    "reviews": 160
   },
   {
     "id": "nora",
@@ -921,7 +1233,19 @@
     "costo": "8€ adulti (visita guidata inclusa). Museo di Pula: 4€",
     "tel": "+39 070 9209138",
     "web": "fondazionepulacultura.it",
-    "orari": "Estate: 9:00-20:00. Inverno: 9:00-17:00."
+    "orari": "Estate: 9:00-20:00. Inverno: 9:00-17:00.",
+    "rating": 4.6,
+    "reviews": 7121,
+    "ghours": [
+      "lunedì: 09:00–20:30",
+      "martedì: 09:00–20:30",
+      "mercoledì: 09:00–20:30",
+      "giovedì: 09:00–20:30",
+      "venerdì: 09:00–20:30",
+      "sabato: 09:00–20:30",
+      "domenica: 09:00–20:30"
+    ],
+    "gsummary": "Museo all'aria aperta che racconta la storia dei miti di questo villaggio che ha origine nel IX secolo a.c."
   },
   {
     "id": "tharros",
@@ -949,7 +1273,19 @@
     "costo": "6€ adulti / 3€ bambini 6-13 anni",
     "tel": "+39 0785 52302",
     "web": "nuraghelosa.net",
-    "orari": "9:00-18:00 (estate fino alle 20:00). Tutto l'anno."
+    "orari": "9:00-18:00 (estate fino alle 20:00). Tutto l'anno.",
+    "rating": 4.8,
+    "reviews": 2154,
+    "ghours": [
+      "lunedì: 08:30–20:00",
+      "martedì: 08:30–20:00",
+      "mercoledì: 08:30–20:00",
+      "giovedì: 08:30–20:00",
+      "venerdì: 08:30–20:00",
+      "sabato: 08:30–20:00",
+      "domenica: 08:30–20:00"
+    ],
+    "gsummary": "Sito di scavi su altopiano, con torre triangolare in pietra e antiche rovine, aperto a tour guidati."
   },
   {
     "id": "anfiteatro-cagliari",
@@ -963,7 +1299,19 @@
     "costo": "3€, eventi variabili (5-40€)",
     "tel": "+39 070 675724",
     "web": "www.monumenticagliari.it/monumenti/bb9d02ed-8c02-4957-96ce-79f01213c4d6",
-    "orari": "Mar-dom: 9:00-17:00. Estate anche lunedì."
+    "orari": "Mar-dom: 9:00-17:00. Estate anche lunedì.",
+    "rating": 3.8,
+    "reviews": 3733,
+    "ghours": [
+      "lunedì: 10:00–13:00, 15:00–19:00",
+      "martedì: 10:00–13:00, 15:00–19:00",
+      "mercoledì: 10:00–13:00, 15:00–19:00",
+      "giovedì: 10:00–13:00, 15:00–19:00",
+      "venerdì: 10:00–13:00, 15:00–19:00",
+      "sabato: 10:00–13:00, 15:00–19:00",
+      "domenica: 10:00–13:00, 15:00–19:00"
+    ],
+    "gsummary": "Grandi rovine romane del II secolo, tra cui un anfiteatro con notevoli resti sotterranei."
   },
   {
     "id": "nuraghe-santu-antine",
@@ -977,7 +1325,19 @@
     "costo": "10€ adulti (include museo Valle dei Nuraghi)",
     "tel": "+39 079 847298",
     "web": "nuraghesantuantine.it",
-    "orari": "Tutti i giorni 9:00-tramonto."
+    "orari": "Tutti i giorni 9:00-tramonto.",
+    "rating": 4.7,
+    "reviews": 3684,
+    "ghours": [
+      "lunedì: 09:00–20:00",
+      "martedì: 09:00–20:00",
+      "mercoledì: 09:00–20:00",
+      "giovedì: 09:00–20:00",
+      "venerdì: 09:00–20:00",
+      "sabato: 09:00–20:00",
+      "domenica: 09:00–20:00"
+    ],
+    "gsummary": "Nota struttura sarda in pietra, di epoca antica, che un tempo aveva tre piani e una torre di 24 metri."
   },
   {
     "id": "anghelu-ruju",
@@ -991,7 +1351,19 @@
     "costo": "5€ / 8€ cumulativo con Nuraghe Palmavera",
     "tel": "+39 079 980438",
     "web": "necropoliangheluruju.it",
-    "orari": "Estate: 9:00-19:00. Inverno: 10:00-16:00."
+    "orari": "Estate: 9:00-19:00. Inverno: 10:00-16:00.",
+    "rating": 4.4,
+    "reviews": 1546,
+    "ghours": [
+      "lunedì: 10:00–19:00",
+      "martedì: 10:00–19:00",
+      "mercoledì: 10:00–19:00",
+      "giovedì: 10:00–19:00",
+      "venerdì: 10:00–18:00",
+      "sabato: 10:00–19:00",
+      "domenica: 10:00–19:00"
+    ],
+    "gsummary": "Grande necropoli antica che ospita scavi di tombe con reperti e sculture, oltre a tour guidati."
   },
   {
     "id": "man-nuoro",
@@ -1005,7 +1377,19 @@
     "costo": "5€ adulti / gratuito under 6 e ogni prima domenica del mese",
     "tel": "+39 0784 252110",
     "web": "museoman.it",
-    "orari": "Mar-dom: 10:00-13:00 / 15:00-19:00 (estate 10:00-20:00)."
+    "orari": "Mar-dom: 10:00-13:00 / 15:00-19:00 (estate 10:00-20:00).",
+    "rating": 4.7,
+    "reviews": 1145,
+    "ghours": [
+      "lunedì: Chiuso",
+      "martedì: 10:00–19:00",
+      "mercoledì: 10:00–19:00",
+      "giovedì: 10:00–19:00",
+      "venerdì: 10:00–19:00",
+      "sabato: 10:00–19:00",
+      "domenica: 10:00–19:00"
+    ],
+    "gsummary": "Museo di arte contemporanea dal 1999 che offre mostre a rotazione con conferenze e laboratori."
   },
   {
     "id": "museo-costume-nuoro",
@@ -1019,7 +1403,18 @@
     "costo": "5€ adulti / 10€ cumulativo con MAN",
     "tel": "+39 0784 242900",
     "web": "isresardegna.it",
-    "orari": "Mar-dom: 9:00-13:00 / 15:00-19:00."
+    "orari": "Mar-dom: 9:00-13:00 / 15:00-19:00.",
+    "rating": 4.7,
+    "reviews": 2011,
+    "ghours": [
+      "lunedì: 10:00–20:00",
+      "martedì: 10:00–20:00",
+      "mercoledì: 10:00–20:00",
+      "giovedì: 10:00–20:00",
+      "venerdì: 10:00–20:00",
+      "sabato: 10:00–20:00",
+      "domenica: 10:00–20:00"
+    ]
   },
   {
     "id": "antiquarium-oristano",
@@ -1033,7 +1428,9 @@
     "costo": "5€ adulti. Cumulativo con Tharros: 13€",
     "tel": "+39 0783 791262",
     "web": "antiquariumarborense.it",
-    "orari": "Mar-dom: 9:00-20:00."
+    "orari": "Mar-dom: 9:00-20:00.",
+    "rating": 4.5,
+    "reviews": 275
   },
   {
     "id": "asinara",
@@ -1047,7 +1444,19 @@
     "costo": "Tour 25-60€ a persona (mezza o giornata intera)",
     "tel": "+39 079 503388",
     "web": "www.parcoasinara.org",
-    "orari": "Aprile-ottobre tutti i giorni. Inverno: weekend e festivi."
+    "orari": "Aprile-ottobre tutti i giorni. Inverno: weekend e festivi.",
+    "rating": 4.7,
+    "reviews": 2870,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ],
+    "gsummary": "Area naturale e marina per gite in barca a vela e tour fuoristrada, con vista sugli asini bianchi dell'isola."
   },
   {
     "id": "gennargentu",
@@ -1061,7 +1470,19 @@
     "costo": "Accesso gratuito. Guide da 30-80€/gruppo",
     "tel": "+39 0784 228061",
     "web": "www.parks.it/parco.nazionale.gennargentu",
-    "orari": "Aperto tutto l'anno. Estate: accesso libero. Inverno: verificare condizioni neve."
+    "orari": "Aperto tutto l'anno. Estate: accesso libero. Inverno: verificare condizioni neve.",
+    "rating": 4.8,
+    "reviews": 4849,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ],
+    "gsummary": "Parco nazionale che comprende la costa del Golfo di Orosei e Punta La Marmora, la vetta sarda più alta."
   },
   {
     "id": "gola-gorropu",
@@ -1075,7 +1496,19 @@
     "costo": "Ingresso gola 5€. Guida 50-80€/gruppo (consigliata)",
     "tel": "+39 328 4116543",
     "web": "gorropu.info",
-    "orari": "Tutto l'anno. Estate preferibile per il guado del torrente."
+    "orari": "Tutto l'anno. Estate preferibile per il guado del torrente.",
+    "rating": 4.7,
+    "reviews": 2750,
+    "ghours": [
+      "lunedì: 10:30–17:00",
+      "martedì: 10:30–17:00",
+      "mercoledì: 10:30–17:00",
+      "giovedì: 10:30–17:00",
+      "venerdì: 10:30–17:00",
+      "sabato: 10:30–17:00",
+      "domenica: 10:30–17:00"
+    ],
+    "gsummary": "Parco nazionale con canyon mozzafiato, escursioni e tour guidati in fuoristrada."
   },
   {
     "id": "molentargius",
@@ -1089,7 +1522,19 @@
     "costo": "Accesso gratuito. Visite guidate 5-10€",
     "tel": "+39 070 372727",
     "web": "www.parcomolentargius.it",
-    "orari": "06:30-21:00 (marzo-ottobre). 07:00-18:00 (novembre-febbraio)."
+    "orari": "06:30-21:00 (marzo-ottobre). 07:00-18:00 (novembre-febbraio).",
+    "rating": 4.3,
+    "reviews": 3658,
+    "ghours": [
+      "lunedì: 08:30–20:30",
+      "martedì: 08:30–20:30",
+      "mercoledì: 08:30–20:30",
+      "giovedì: 08:30–20:30",
+      "venerdì: 08:30–20:30",
+      "sabato: 08:30–20:30",
+      "domenica: 08:30–20:30"
+    ],
+    "gsummary": "Ampia area umida con stagni d'acqua dolce e salata, varie specie di voltatili, sentieri e bici a noleggio."
   },
   {
     "id": "porto-conte",
@@ -1103,7 +1548,19 @@
     "costo": "Accesso libero. Grotte di Nettuno 14€",
     "tel": "+39 079 945005",
     "web": "www.algheroparks.it",
-    "orari": "Parco: sempre aperto. Centro visitatori: lun-ven 9:00-13:00."
+    "orari": "Parco: sempre aperto. Centro visitatori: lun-ven 9:00-13:00.",
+    "rating": 4.6,
+    "reviews": 5948,
+    "ghours": [
+      "lunedì: Chiuso",
+      "martedì: 10:00–17:00",
+      "mercoledì: 10:00–17:00",
+      "giovedì: 10:00–17:00",
+      "venerdì: 10:00–17:00",
+      "sabato: 10:00–17:00",
+      "domenica: 10:00–17:00"
+    ],
+    "gsummary": "Suggestivo parco sul mare con sentieri escursionistici, una spiaggia popolare, un centro didattico e ristoranti."
   },
   {
     "id": "villa-las-tronas",
@@ -1117,7 +1574,10 @@
     "costo": "250-600€/notte",
     "tel": "+39 079 981818",
     "web": "www.hotelvillalastronas.it",
-    "orari": "Aperto tutto l'anno"
+    "orari": "Aperto tutto l'anno",
+    "rating": 4.7,
+    "reviews": 406,
+    "gsummary": "Hotel esclusivo con camere signorili, di cui alcune con vista sul mare, due piscine e spa elegante."
   },
   {
     "id": "hotel-pitrizza",
@@ -1131,7 +1591,10 @@
     "costo": "1.500-5.000€/notte",
     "tel": "+39 0789 930111",
     "web": "www.hotelpitrizza.com",
-    "orari": "Aperto maggio-ottobre"
+    "orari": "Aperto maggio-ottobre",
+    "rating": 4.7,
+    "reviews": 299,
+    "gsummary": "Hotel elegante con vista sul mare, ristorante raffinato, piscina di acqua salata e accesso alla spiaggia."
   },
   {
     "id": "bagaglino",
@@ -1145,7 +1608,19 @@
     "costo": "120-300€/notte",
     "tel": "+39 070 286101",
     "web": "www.bagaglino.it",
-    "orari": "Aperto tutto l'anno"
+    "orari": "Aperto tutto l'anno",
+    "rating": 4.2,
+    "reviews": 1250,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ],
+    "gsummary": "Camere e suite eleganti, alcune con vista sul golfo, in hotel sofisticato con ristorante raffinato."
   },
   {
     "id": "hotel-capo-d-orso",
@@ -1159,7 +1634,10 @@
     "costo": "250-600€/notte",
     "tel": "+39 0789 702000",
     "web": "www.hotelcapodorso.com",
-    "orari": "Aperto maggio-ottobre"
+    "orari": "Aperto maggio-ottobre",
+    "rating": 3.7,
+    "reviews": 191,
+    "gsummary": "Residence minimalista con accesso a una spiaggia per cani, 2 piscine scoperte e campi da tennis."
   },
   {
     "id": "corte-bianca",
@@ -1187,7 +1665,10 @@
     "costo": "Menu degustazione 80-120€/persona. Carta: 50-80€",
     "tel": "+39 070 664318",
     "web": "www.dalcorsaro.com",
-    "orari": "Lun-sab: 13:00-14:30 / 20:00-22:30. Chiuso domenica."
+    "orari": "Lun-sab: 13:00-14:30 / 20:00-22:30. Chiuso domenica.",
+    "rating": 4.5,
+    "reviews": 428,
+    "gsummary": "Raffinati menù degustazione sardi e vini in abbinamento in un locale elegante ed essenziale con quadri alle pareti."
   },
   {
     "id": "sa-mandra",
@@ -1201,7 +1682,10 @@
     "costo": "Menu fisso ristorante: 35–45€/persona (tutto incluso) · B&B: 80–150€/notte",
     "tel": "+39 079 999150",
     "web": "samandra.it",
-    "orari": "Solo su prenotazione online (obbligatoria). Cene: ven–dom. Pranzi festivi. Shop: lun–sab 9–13/16–19."
+    "orari": "Solo su prenotazione online (obbligatoria). Cene: ven–dom. Pranzi festivi. Shop: lun–sab 9–13/16–19.",
+    "rating": 4.8,
+    "reviews": 3542,
+    "gsummary": "Struttura pittoresca in agriturismo classico con colazione inclusa, ristorante rustico e area giochi."
   },
   {
     "id": "su-gologone",
@@ -1215,7 +1699,9 @@
     "costo": "Ristorante: 50-70€/persona. Hotel: 120-250€/notte",
     "tel": "+39 0784 287512",
     "web": "www.sugologone.it",
-    "orari": "Ristorante: 12:30-14:00 / 19:30-22:00 tutti i giorni."
+    "orari": "Ristorante: 12:30-14:00 / 19:30-22:00 tutti i giorni.",
+    "rating": 4.6,
+    "reviews": 57
   },
   {
     "id": "andreini",
@@ -1257,7 +1743,18 @@
     "costo": "800-1.500€/persona (tutto incluso con guida, 7 giorni)",
     "tel": "+39 0782 610271",
     "web": "www.golfodioro.com",
-    "orari": "Aprile-ottobre. Maggio e settembre: condizioni ideali."
+    "orari": "Aprile-ottobre. Maggio e settembre: condizioni ideali.",
+    "rating": 4.8,
+    "reviews": 113,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "giro-maddalena",
@@ -1271,7 +1768,18 @@
     "costo": "60-120€/persona. Gozzo privato noleggio: 300-600€/giorno",
     "tel": "+39 0789 737009",
     "web": "www.coopmaddalena.it",
-    "orari": "Aprile-ottobre: tutti i giorni con meteo favorevole."
+    "orari": "Aprile-ottobre: tutti i giorni con meteo favorevole.",
+    "rating": 4.9,
+    "reviews": 34,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "kayak-orosei",
@@ -1313,7 +1821,18 @@
     "costo": "Immersione guidata 50-70€. Corso PADI Open Water 350-400€",
     "tel": "+39 070 791 6044",
     "web": "www.subaquadive.it",
-    "orari": "Aprile-ottobre: 8:30-18:30. Prenotazione consigliata."
+    "orari": "Aprile-ottobre: 8:30-18:30. Prenotazione consigliata.",
+    "rating": 5,
+    "reviews": 150,
+    "ghours": [
+      "lunedì: 08:00–20:00",
+      "martedì: 08:00–20:00",
+      "mercoledì: 08:00–20:00",
+      "giovedì: 08:00–20:00",
+      "venerdì: 08:00–20:00",
+      "sabato: 08:00–20:00",
+      "domenica: 08:00–20:00"
+    ]
   },
   {
     "id": "trenino-verde",
@@ -1341,7 +1860,18 @@
     "costo": "Corso base kite (3h): 130–160€ · Settimana intensiva: 400–600€ · Noleggio attrezzatura: 60–90€/h",
     "tel": "+39 331 988 9133 (Wind Porto Pollo) · +39 0789 704 075 (Windsurf Village)",
     "web": "windportopollo.com · windsurfvillage.it · fh.academy · portopollo.it",
-    "orari": "Tutto l'anno. Scuole: aprile–ottobre 8:00–tramonto. Vento migliore: maggio–settembre."
+    "orari": "Tutto l'anno. Scuole: aprile–ottobre 8:00–tramonto. Vento migliore: maggio–settembre.",
+    "rating": 5,
+    "reviews": 51,
+    "ghours": [
+      "lunedì: 09:00–20:00",
+      "martedì: 09:00–20:00",
+      "mercoledì: 09:00–20:00",
+      "giovedì: 09:00–20:00",
+      "venerdì: 09:00–20:00",
+      "sabato: 09:00–20:00",
+      "domenica: 09:00–20:00"
+    ]
   },
   {
     "id": "bonga-surf-school",
@@ -1355,7 +1885,18 @@
     "costo": "Lezione surf: da 50€/pers · Lezione bambini: 30€ · Noleggio soft-board: 10€/h o 30€/giorno · Hard-board: 15€/h o 40€/giorno · Muta: 8€/gg",
     "tel": "+39 351 945 7142",
     "web": "www.bongasurfschool.it",
-    "orari": "Stagione: aprile–ottobre. Disponibile anche inverno su prenotazione per gruppi."
+    "orari": "Stagione: aprile–ottobre. Disponibile anche inverno su prenotazione per gruppi.",
+    "rating": 4.7,
+    "reviews": 71,
+    "ghours": [
+      "lunedì: 10:00–18:00",
+      "martedì: 10:00–18:00",
+      "mercoledì: 10:00–18:00",
+      "giovedì: 10:00–18:00",
+      "venerdì: 10:00–18:00",
+      "sabato: 10:00–18:00",
+      "domenica: 10:00–18:00"
+    ]
   },
   {
     "id": "il-baretto-porto-ferro",
@@ -1369,7 +1910,19 @@
     "costo": "Consumazioni: 3-15€. Ingresso eventi: gratuito o contributo",
     "tel": "+39 333 327 9256",
     "web": "www.piccolipassicoop.it",
-    "orari": "Stagione estiva: 09:00–23:00. Eventi: domeniche e weekend. Apertura: giugno–settembre."
+    "orari": "Stagione estiva: 09:00–23:00. Eventi: domeniche e weekend. Apertura: giugno–settembre.",
+    "rating": 4.4,
+    "reviews": 797,
+    "ghours": [
+      "lunedì: 08:00–00:00",
+      "martedì: 08:00–00:00",
+      "mercoledì: 08:00–00:00",
+      "giovedì: 08:00–00:00",
+      "venerdì: 08:00–02:00",
+      "sabato: 08:00–00:00",
+      "domenica: Aperto 24 ore su 24"
+    ],
+    "gsummary": "Rilassato locale in spiaggia che propone pesce e panini oltre a concerti-aperitivo e noleggio tavole da surf."
   },
   {
     "id": "valle-luna-aggius",
@@ -1383,21 +1936,43 @@
     "costo": "Gratuito",
     "tel": "",
     "web": "www.comune.aggius.ss.it",
-    "orari": "Aperto tutto l'anno. Alba e tramonto: luce spettacolare."
+    "orari": "Aperto tutto l'anno. Alba e tramonto: luce spettacolare.",
+    "rating": 4.6,
+    "reviews": 480,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "monte-limbara",
     "name": "Monte Limbara",
-    "lat": 40.85,
-    "lng": 9.166667,
+    "lat": 40.854725,
+    "lng": 9.17256,
     "cat": "parco",
     "description": "Il punto più alto della Gallura (1362m). Boschi di roverella, leccio, ginepro, agrifoglio. Cervi sardi, cinghiali, aquile. 50+ km sentieri MTB e trekking. Vista Corsica e su tutta la Gallura.",
     "come": "Da Tempio Pausania 15 km via SP14. Stazione Voghienu (910m) con parcheggio.",
     "servizi": "Ristorante Voghienu, parcheggio, sentieri CAI, nessuna guida obbligatoria",
     "costo": "Gratuito. Ristorante ~25-35€",
     "tel": "",
-    "web": "",
-    "orari": "Tutto l'anno. Neve possibile >1000m: dic-feb verificare strada."
+    "web": "www.sardegnaturismo.it/it/punto-di-interesse/monte-limbara",
+    "orari": "Tutto l'anno. Neve possibile >1000m: dic-feb verificare strada.",
+    "rating": 4.7,
+    "reviews": 168,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "necropoli-li-muri",
@@ -1411,7 +1986,18 @@
     "costo": "Gratuito (parte Parco Archeologico Arzachena)",
     "tel": "+39 0789 84000",
     "web": "www.parcarcheoarzachena.it",
-    "orari": "Aperto tutto l'anno 8:00-tramonto."
+    "orari": "Aperto tutto l'anno 8:00-tramonto.",
+    "rating": 4.2,
+    "reviews": 398,
+    "ghours": [
+      "lunedì: 10:00–18:00",
+      "martedì: 10:00–18:00",
+      "mercoledì: 10:00–18:00",
+      "giovedì: 10:00–18:00",
+      "venerdì: 10:00–18:00",
+      "sabato: 10:00–18:00",
+      "domenica: 10:00–18:00"
+    ]
   },
   {
     "id": "tempio-pausania",
@@ -1467,7 +2053,19 @@
     "costo": "5€ / 8€ cumulativo con Anghelu Ruju",
     "tel": "+39 079 980438",
     "web": "villeinpietre.com",
-    "orari": "Estate: 9:00-19:00. Inverno: 10:00-16:00."
+    "orari": "Estate: 9:00-19:00. Inverno: 10:00-16:00.",
+    "rating": 4.5,
+    "reviews": 3111,
+    "ghours": [
+      "lunedì: 10:00–19:00",
+      "martedì: 10:00–19:00",
+      "mercoledì: 10:00–19:00",
+      "giovedì: 10:00–19:00",
+      "venerdì: 10:00–19:00",
+      "sabato: 10:00–19:00",
+      "domenica: 10:00–19:00"
+    ],
+    "gsummary": "Sito archeologico con rovine in pietra di insediamento nuragico dell'Età del Bronzo."
   },
   {
     "id": "lago-baratz",
@@ -1481,7 +2079,9 @@
     "costo": "Gratuito",
     "tel": "",
     "web": "",
-    "orari": "Sempre aperto."
+    "orari": "Sempre aperto.",
+    "rating": 4.1,
+    "reviews": 101
   },
   {
     "id": "stagno-san-teodoro",
@@ -1495,7 +2095,9 @@
     "costo": "Gratuito",
     "tel": "",
     "web": "",
-    "orari": "Sempre aperto. Fenicotteri presenti: ottobre-aprile."
+    "orari": "Sempre aperto. Fenicotteri presenti: ottobre-aprile.",
+    "rating": 4.5,
+    "reviews": 137
   },
   {
     "id": "platamona-surf",
@@ -1509,7 +2111,18 @@
     "costo": "Gratuito",
     "tel": "",
     "web": "www.trovaspiagge.it/spiaggia/sardegna/sorso/platamona/platamona",
-    "orari": "Spiaggia aperta tutto l'anno. Surf: ottobre-marzo migliore."
+    "orari": "Spiaggia aperta tutto l'anno. Surf: ottobre-marzo migliore.",
+    "rating": 4.1,
+    "reviews": 370,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "pattada-coltelli",
@@ -1523,7 +2136,18 @@
     "costo": "Museo: 2€. Coltelli: 50-500€ (artigianali)",
     "tel": "+39 079 755918",
     "web": "www.comune.pattada.ss.it",
-    "orari": "Laboratori: lun-sab 9:00-13:00 / 15:00-18:00."
+    "orari": "Laboratori: lun-sab 9:00-13:00 / 15:00-18:00.",
+    "rating": 4.9,
+    "reviews": 34,
+    "ghours": [
+      "lunedì: 09:00–19:00",
+      "martedì: 09:00–19:00",
+      "mercoledì: 09:00–19:00",
+      "giovedì: 09:00–19:00",
+      "venerdì: 09:00–19:00",
+      "sabato: 09:00–19:00",
+      "domenica: 11:00–18:00"
+    ]
   },
   {
     "id": "ozieri-museo",
@@ -1565,7 +2189,18 @@
     "costo": "Gommone senza patente 5m: 150€/gg · 6m: 180€/gg · Con patente 7m: 250€/gg",
     "tel": "+39 339 399 8689",
     "web": "www.nauticasagiel.it",
-    "orari": "Aprile–ottobre: 8:00–20:00. Prenotazione consigliata in alta stagione."
+    "orari": "Aprile–ottobre: 8:00–20:00. Prenotazione consigliata in alta stagione.",
+    "rating": 5,
+    "reviews": 217,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "marina-david-palau",
@@ -1579,7 +2214,18 @@
     "costo": "Variabile secondo imbarcazione e durata — chiedere preventivo",
     "tel": "+39 335 535 3038 · +39 336 466 712",
     "web": "noleggiogommonipalau.com",
-    "orari": "Lun–Dom 08:00–13:00 / 16:00–20:00 (stagionale)."
+    "orari": "Lun–Dom 08:00–13:00 / 16:00–20:00 (stagionale).",
+    "rating": 4.7,
+    "reviews": 89,
+    "ghours": [
+      "lunedì: 08:00–13:00, 16:00–20:00",
+      "martedì: 08:00–13:00, 16:00–20:00",
+      "mercoledì: 08:00–13:00, 16:00–20:00",
+      "giovedì: 08:00–13:00, 16:00–20:00",
+      "venerdì: 08:00–13:00, 16:00–20:00",
+      "sabato: 08:00–13:00, 16:00–20:00",
+      "domenica: 08:00–13:00, 16:00–20:00"
+    ]
   },
   {
     "id": "sun-sea-alghero",
@@ -1593,7 +2239,18 @@
     "costo": "Chiedere preventivo — variabile per durata e numero persone",
     "tel": "+39 366 465 5120",
     "web": "sunesea.com",
-    "orari": "Aprile–ottobre. Prenotazione via telefono o sito."
+    "orari": "Aprile–ottobre. Prenotazione via telefono o sito.",
+    "rating": 4.6,
+    "reviews": 130,
+    "ghours": [
+      "lunedì: 09:00–23:00",
+      "martedì: 09:00–23:00",
+      "mercoledì: 09:00–23:00",
+      "giovedì: 09:00–23:00",
+      "venerdì: 09:00–23:00",
+      "sabato: 09:00–23:00",
+      "domenica: 09:00–23:00"
+    ]
   },
   {
     "id": "linea-grotte-nettuno",
@@ -1607,7 +2264,9 @@
     "costo": "Barca: ~15€ a/r adulti · 8€ bambini. Grotta: 14€ adulti / 7€ bambini (separato)",
     "tel": "+39 079 950603 · +39 320 741 2400",
     "web": "grottedinettuno.it",
-    "orari": "Aprile–ottobre: corse mattina, mezzogiorno, sera. Inverno: ridotto. Chiuso con mare mosso."
+    "orari": "Aprile–ottobre: corse mattina, mezzogiorno, sera. Inverno: ridotto. Chiuso con mare mosso.",
+    "rating": 4.2,
+    "reviews": 6
   },
   {
     "id": "phi-beach",
@@ -1621,7 +2280,19 @@
     "costo": "Aperitivo: 20-40€ · Cena: 60-120€/pers · Ingresso club: 20-50€ secondo serata",
     "tel": "+39 345 288 4254 (WhatsApp booking ≤6 pers) · +39 348 645 5320 (gruppi/VIP)",
     "web": "phibeach.com",
-    "orari": "Giugno–settembre: 18:00–4:00. Chiuso in bassa stagione."
+    "orari": "Giugno–settembre: 18:00–4:00. Chiuso in bassa stagione.",
+    "rating": 4.3,
+    "reviews": 4042,
+    "ghours": [
+      "lunedì: 12:00–03:00",
+      "martedì: 12:00–03:00",
+      "mercoledì: 12:00–03:00",
+      "giovedì: 12:00–03:00",
+      "venerdì: 12:00–03:00",
+      "sabato: 12:00–03:00",
+      "domenica: 12:00–03:00"
+    ],
+    "gsummary": "Locale all'aperto con DJ set e panorami mozzafiato al tramonto, serve cocktail e cucina italiana creativa."
   },
   {
     "id": "museo-garibaldi-caprera",
@@ -1635,7 +2306,19 @@
     "costo": "Compendio: 8€ adulti / gratuito under 18 · Memoriale: 6€ / 2€ (18-25 anni UE) · Combinato: 10€",
     "tel": "+39 0789 727162",
     "web": "garibaldicaprera.beniculturali.it",
-    "orari": "Compendio: tutti i gg tranne lunedì, 9:00–20:00 (ult. ingresso 19:15) · Memoriale: tutti i gg tranne mercoledì, 10:15–19:15."
+    "orari": "Compendio: tutti i gg tranne lunedì, 9:00–20:00 (ult. ingresso 19:15) · Memoriale: tutti i gg tranne mercoledì, 10:15–19:15.",
+    "rating": 4.4,
+    "reviews": 2090,
+    "ghours": [
+      "lunedì: Chiuso",
+      "martedì: 08:30–18:30",
+      "mercoledì: 08:30–18:30",
+      "giovedì: 08:30–18:30",
+      "venerdì: 08:30–18:30",
+      "sabato: 08:30–18:30",
+      "domenica: 08:30–18:30"
+    ],
+    "gsummary": "Dimora e sito di sepoltura preservati del generale italiano ottocentesco Giuseppe Garibaldi, con tour e giardini."
   },
   {
     "id": "siti-arch-arzachena",
@@ -1663,7 +2346,18 @@
     "costo": "Degustazione: su richiesta. Vini: 8–25€/bottiglia",
     "tel": "+39 079 631 241",
     "web": "cantinagallura.net",
-    "orari": "Lun–Ven 08:00–12:00 / 14:00–18:00 · Sab 09:00–13:00."
+    "orari": "Lun–Ven 08:00–12:00 / 14:00–18:00 · Sab 09:00–13:00.",
+    "rating": 4.3,
+    "reviews": 123,
+    "ghours": [
+      "lunedì: 08:30–12:30, 14:30–18:30",
+      "martedì: 08:30–12:30, 14:30–18:30",
+      "mercoledì: 08:30–12:30, 14:30–18:30",
+      "giovedì: 08:30–12:30, 14:30–18:30",
+      "venerdì: 08:30–12:30, 14:30–18:30",
+      "sabato: 09:00–13:00",
+      "domenica: Chiuso"
+    ]
   },
   {
     "id": "noleggio-ebike-alghero",
@@ -1677,7 +2371,18 @@
     "costo": "E-bike: 25–45€/giorno · MTB: 15–25€/gg · City bike: 10–18€/gg",
     "tel": "+39 079 492 7210",
     "web": "algherorentabike.com · algherorentscooter.com",
-    "orari": "Tutto l'anno. Prenotazione online consigliata in estate."
+    "orari": "Tutto l'anno. Prenotazione online consigliata in estate.",
+    "rating": 4.8,
+    "reviews": 57,
+    "ghours": [
+      "lunedì: 09:00–19:30",
+      "martedì: 09:00–19:30",
+      "mercoledì: 09:00–19:30",
+      "giovedì: 09:00–19:30",
+      "venerdì: 09:00–19:30",
+      "sabato: 09:00–19:30",
+      "domenica: 09:00–13:30, 16:00–19:00"
+    ]
   },
   {
     "id": "arrampicata-san-pantaleo",
@@ -1691,7 +2396,9 @@
     "costo": "Gratuito",
     "tel": "",
     "web": "climbingsardinia.com",
-    "orari": "Tutto l'anno. Stagione ideale: set–nov / feb–mag. Evitare luglio–agosto (caldo)."
+    "orari": "Tutto l'anno. Stagione ideale: set–nov / feb–mag. Evitare luglio–agosto (caldo).",
+    "rating": 4.6,
+    "reviews": 291
   },
   {
     "id": "arrampicata-capo-testa",
@@ -1705,7 +2412,19 @@
     "costo": "Gratuito",
     "tel": "",
     "web": "thecrag.com",
-    "orari": "Settembre–maggio. Luglio–agosto: troppo caldo."
+    "orari": "Settembre–maggio. Luglio–agosto: troppo caldo.",
+    "rating": 4.8,
+    "reviews": 5884,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ],
+    "gsummary": "Area costiera appartata con sentieri escursionistici rocciosi e calette con piccole spiagge sabbiose."
   },
   {
     "id": "orgosolo",
@@ -1943,7 +2662,9 @@
     "costo": "Museo Giganti: 7€ adulti / gratuito <6",
     "tel": "+39 0783 290636",
     "web": "monteprama.it",
-    "orari": "Museo: mar-dom 9:00-13:00 / 16:00-20:00 (estate). Lun chiuso."
+    "orari": "Museo: mar-dom 9:00-13:00 / 16:00-20:00 (estate). Lun chiuso.",
+    "rating": 4.2,
+    "reviews": 141
   },
   {
     "id": "santulussurgiu",
@@ -1985,21 +2706,19 @@
     "costo": "12€ adulti. 7€ ridotto (7-18 anni). Gratuito: under 6.",
     "tel": "+39 070 9368128",
     "web": "fondazionebarumini.it",
-    "orari": "Tutti i giorni 9:00-19:30 (estate). 9:00-17:00 (inverno). Ultimo tour 1h prima chiusura."
-  },
-  {
-    "id": "gola-gorropu",
-    "name": "Gola di Gorropu (Urzulei/Dorgali)",
-    "lat": 40.184842,
-    "lng": 9.502407,
-    "cat": "parco",
-    "description": "Il canyon più profondo del Mediterraneo: pareti verticali di calcare bianco alte 500m, fondo largo 4m. Trek 3-4 ore dal rifugio Genna Silana (SS125) o da Dorgali. Guida obbligatoria nel periodo ottobre-aprile. Estate: percorribile autonomamente ma portare acqua abbondante — il sole non entra mai.",
-    "come": "Accesso da SS125 km 183 (Genna Silana), bivio per Su Gorropu. Trek 2h30 a/r per il fondo. Da Dorgali: 3h a/r.",
-    "servizi": "Percorso segnato (giugno-settembre), guida obbligatoria oct-apr, rifugio Genna Silana (colazione/pranzo), parcheggio",
-    "costo": "Guida: 25-40€/persona. Accesso auto: 5€/giorno",
-    "tel": "+39 347 100 3400 (guide)",
-    "web": "gologone.it/gorropu",
-    "orari": "Tutto l'anno. Pericoloso dopo piogge — verificare meteo."
+    "orari": "Tutti i giorni 9:00-19:30 (estate). 9:00-17:00 (inverno). Ultimo tour 1h prima chiusura.",
+    "rating": 4.7,
+    "reviews": 8388,
+    "ghours": [
+      "lunedì: 09:00–20:00",
+      "martedì: 09:00–20:00",
+      "mercoledì: 09:00–20:00",
+      "giovedì: 09:00–20:00",
+      "venerdì: 09:00–20:00",
+      "sabato: 09:00–20:00",
+      "domenica: 09:00–20:00"
+    ],
+    "gsummary": "Unica in Sardegna, questa antica fortificazione difensiva è composta da una rete di torri circolari."
   },
   {
     "id": "stagno-molentargius",
@@ -2013,7 +2732,18 @@
     "costo": "Accesso: gratuito. Birdwatching guidato: 8€",
     "tel": "+39 070 372303",
     "web": "parcomolentargius.it",
-    "orari": "Parco: H24. Centro visita: 9:00-13:00 / 16:00-19:00. Chiuso lunedì."
+    "orari": "Parco: H24. Centro visita: 9:00-13:00 / 16:00-19:00. Chiuso lunedì.",
+    "rating": 4.6,
+    "reviews": 741,
+    "ghours": [
+      "lunedì: 08:00–20:35",
+      "martedì: 08:00–20:35",
+      "mercoledì: 08:00–20:35",
+      "giovedì: 08:00–20:35",
+      "venerdì: 08:00–20:35",
+      "sabato: 08:00–20:35",
+      "domenica: 08:00–20:35"
+    ]
   },
   {
     "id": "cala-goloritse",
@@ -2027,35 +2757,10 @@
     "costo": "Trek: gratuito (permesso online obbligatorio in luglio-agosto 5€). Barca: 35-50€ da Cala Gonone",
     "tel": "",
     "web": "baunei.net",
-    "orari": "Accesso: 7:00-18:00 (estate). Quota 300 persone/giorno."
-  },
-  {
-    "id": "cala-luna",
-    "name": "Cala Luna (Dorgali)",
-    "lat": 40.225286,
-    "lng": 9.626219,
-    "cat": "spiaggia",
-    "description": "La spiaggia più iconica del Golfo di Orosei: mezzaluna di sabbia chiara tra pareti rosse, grotte marine, vegetazione mediterranea fino all'acqua. Accessibile in barca da Cala Gonone (20 min) o a piedi dal camping Cala Gonone (3h). Bar/ristorante stagionale. Cuore del Parco del Gennargentu lato mare.",
-    "come": "Barca: da Cala Gonone, servizio navetta 15-25€ a/r o giro completo Golfo. Trek: sentiero costiero da Cala Gonone, 3h impegnative.",
-    "servizi": "Stabilimento balneare stagionale (lettini 10-15€/giorno), bar, ristorante, grotte esplorabili a piedi",
-    "costo": "Navetta barca: 15-25€ a/r. Lettini: 10-15€/giorno",
-    "tel": "",
-    "web": "calagononedivingcenter.it",
-    "orari": "Accessibile solo estate (aprile-ottobre). Navette: 9:00-18:00."
-  },
-  {
-    "id": "cala-sisine",
-    "name": "Cala Sisine (Baunei)",
-    "lat": 40.179348,
-    "lng": 9.634091,
-    "cat": "spiaggia",
-    "description": "La spiaggia più remota del Golfo di Orosei. Un canyon fluviale che finisce nel mare turchese: pineta fino alla riva, acqua trasparente, nessun servizio, nessuna luce. Solo barca da Cala Gonone (25 min) o trek impegnativo (5h). Pochi turisti anche in estate perché difficile da raggiungere.",
-    "come": "Barca: da Cala Gonone (navetta o giro completo Golfo). Trek: sentiero costiero Cala Luna-Cala Sisine, 2h da Cala Luna, difficile.",
-    "servizi": "Nessun servizio. Portare tutto: acqua, cibo, crema solare. Nessuna ombra sulla spiaggia.",
-    "costo": "Barca da Cala Gonone: inclusa nel giro completo Golfo (50-70€)",
-    "tel": "",
-    "web": "www.turismobaunei.eu/my-product/cala-sisine",
-    "orari": "Solo estate. Accesso a piedi pericoloso fuori stagione."
+    "orari": "Accesso: 7:00-18:00 (estate). Quota 300 persone/giorno.",
+    "rating": 4.7,
+    "reviews": 4164,
+    "gsummary": "Isolata spiaggia di sabbia bianca e ciottoli con arco in pietra naturale e svettante roccia."
   },
   {
     "id": "sella-del-diavolo",
@@ -2069,7 +2774,19 @@
     "costo": "Gratuito",
     "tel": "",
     "web": "",
-    "orari": "Sempre aperto. Consigliato: alba, tramonto, non nelle ore calde."
+    "orari": "Sempre aperto. Consigliato: alba, tramonto, non nelle ore calde.",
+    "rating": 4.8,
+    "reviews": 1822,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ],
+    "gsummary": "Promontorio a forma di sella che offre vedute suggestive sul mare dalla cima, accessibile tramite sentieri."
   },
   {
     "id": "monte-ortobene",
@@ -2083,7 +2800,18 @@
     "costo": "Gratuito",
     "tel": "+39 377 080 3921",
     "web": "comune.nuoro.it",
-    "orari": "Sempre aperto. Ristorante: stagionale."
+    "orari": "Sempre aperto. Ristorante: stagionale.",
+    "rating": 4.7,
+    "reviews": 205,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "capo-testa",
@@ -2111,21 +2839,10 @@
     "costo": "Guida: 30-50€/persona. Rifugio pernottamento: 25-35€",
     "tel": "+39 0784 57300 (CAI Nuoro)",
     "web": "cainuoro.it",
-    "orari": "Giugno-ottobre. Vietato con neve senza equipaggiamento alpino."
-  },
-  {
-    "id": "monte-limbara",
-    "name": "Monte Limbara (Tempio Pausania)",
-    "lat": 40.854725,
-    "lng": 9.17256,
-    "cat": "parco",
-    "description": "Il massiccio granitico della Gallura a 1.362m. Strada asfaltata fino alla cima (da Tempio Pausania). Vista unica: da un lato l'arcipelago della Maddalena e la Corsica, dall'altro il Logudoro e il Sassarese. Foreste di sughere centenarie. Stazione meteo e ripetitori tv — panorama a 360°.",
-    "come": "Da Tempio Pausania 12 km via SP73 asfaltata fino in cima. Auto necessaria.",
-    "servizi": "Strada carrabile fino in cima, area picnic, punti panoramici attrezzati, sentieri CAI",
-    "costo": "Gratuito",
-    "tel": "",
-    "web": "www.sardegnaturismo.it/it/punto-di-interesse/monte-limbara",
-    "orari": "Sempre aperto (strada aperta tutto l'anno salvo neve)."
+    "orari": "Giugno-ottobre. Vietato con neve senza equipaggiamento alpino.",
+    "rating": 4.8,
+    "reviews": 139,
+    "gsummary": "La vetta più elevata della regione, popolare per le escursioni non impegnative e l'ampia vista panoramica."
   },
   {
     "id": "faro-capo-spartivento",
@@ -2139,7 +2856,10 @@
     "costo": "Sentiero: gratuito. Hotel: 350-900€/notte",
     "tel": "+39 0781 92000",
     "web": "farocaposparviento.com",
-    "orari": "Sentiero: H24. Hotel: prenotazione."
+    "orari": "Sentiero: H24. Hotel: prenotazione.",
+    "rating": 4.7,
+    "reviews": 127,
+    "gsummary": "Area con calette rocciose, spiagge isolate, rovine della città fenicia di Bithia e faro ottocentesco riconvertito in hotel."
   },
   {
     "id": "faro-capo-ferro",
@@ -2167,7 +2887,19 @@
     "costo": "Tour completo con traghetto: 60-90€/persona",
     "tel": "+39 079 503388 (Parco)",
     "web": "parcoasinara.org",
-    "orari": "Aprile-ottobre. Traghetti da Stintino: 8:30. Rientro: 18:00."
+    "orari": "Aprile-ottobre. Traghetti da Stintino: 8:30. Rientro: 18:00.",
+    "rating": 4.7,
+    "reviews": 2870,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ],
+    "gsummary": "Area naturale e marina per gite in barca a vela e tour fuoristrada, con vista sugli asini bianchi dell'isola."
   },
   {
     "id": "arcipelago-maddalena",
@@ -2181,7 +2913,19 @@
     "costo": "Traghetto: 3,70€/persona. Giro isole in barca: 40-70€",
     "tel": "+39 0789 739641 (Parco)",
     "web": "lamaddalenapark.it",
-    "orari": "Traghetti H24. Parco: tutto l'anno."
+    "orari": "Traghetti H24. Parco: tutto l'anno.",
+    "rating": 4.8,
+    "reviews": 9169,
+    "ghours": [
+      "lunedì: 09:30–12:30",
+      "martedì: 09:30–12:30, 15:30–17:30",
+      "mercoledì: 09:30–12:30",
+      "giovedì: 09:30–12:30, 15:30–17:30",
+      "venerdì: 09:30–12:30",
+      "sabato: Chiuso",
+      "domenica: Chiuso"
+    ],
+    "gsummary": "Istituito nel 1994, questo parco geomarino è composto da svariati isolotti e piccole isole."
   },
   {
     "id": "isola-budelli",
@@ -2195,7 +2939,10 @@
     "costo": "Giro arcipelago: 40-70€/persona (partenza da La Maddalena o Palau)",
     "tel": "",
     "web": "",
-    "orari": "Aprile-ottobre. Solo in barca."
+    "orari": "Aprile-ottobre. Solo in barca.",
+    "rating": 4.4,
+    "reviews": 395,
+    "gsummary": "Spiaggia protetta di sabbia rosea, unica nel suo genere, composta da fossili, cristalli e coralli polverizzati."
   },
   {
     "id": "ss125-orientale-sarda",
@@ -2209,7 +2956,18 @@
     "costo": "Gratuita (strada statale)",
     "tel": "",
     "web": "",
-    "orari": "Sempre aperta (attenzione: nebbia e ghiaccio in inverno sopra 400m)."
+    "orari": "Sempre aperta (attenzione: nebbia e ghiaccio in inverno sopra 400m).",
+    "rating": 4.6,
+    "reviews": 28,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "porto-pollo",
@@ -2223,7 +2981,18 @@
     "costo": "Corso iniziazione (3h): 80-100€. Noleggio attrezzatura: 30-50€/giorno",
     "tel": "+39 351 791 5086",
     "web": "isoladeigabbiani.it",
-    "orari": "Aprile-ottobre. Vento: luglio-agosto più costante."
+    "orari": "Aprile-ottobre. Vento: luglio-agosto più costante.",
+    "rating": 4.9,
+    "reviews": 127,
+    "ghours": [
+      "lunedì: 10:00–20:00",
+      "martedì: 10:00–20:00",
+      "mercoledì: 10:00–20:00",
+      "giovedì: 10:00–20:00",
+      "venerdì: 10:00–20:00",
+      "sabato: 10:00–20:00",
+      "domenica: 10:00–20:00"
+    ]
   },
   {
     "id": "museo-nazionale-cagliari",
@@ -2237,7 +3006,19 @@
     "costo": "Combinato 4 musei: 12€. Ridotto (18-25 anni, UE): 6€. Gratuito: under 18, prima domenica del mese",
     "tel": "+39 070 655911",
     "web": "museoarcheocagliari.it",
-    "orari": "Mar-dom: 9:00-20:00. Chiuso lunedì."
+    "orari": "Mar-dom: 9:00-20:00. Chiuso lunedì.",
+    "rating": 4.5,
+    "reviews": 4023,
+    "ghours": [
+      "lunedì: 08:30–19:30",
+      "martedì: 08:30–19:30",
+      "mercoledì: 08:30–19:30",
+      "giovedì: 08:30–19:30",
+      "venerdì: 08:30–19:30",
+      "sabato: 08:30–19:30",
+      "domenica: 08:30–19:30"
+    ],
+    "gsummary": "Museo dedicato alla storia antica della Sardegna con vari reperti archeologici, tra cui gioielli punici."
   },
   {
     "id": "museo-carnevale-mamoiada",
@@ -2251,35 +3032,18 @@
     "costo": "5€ adulti. 3€ ridotto. Gratuito under 12",
     "tel": "+39 0784 57153",
     "web": "museodellemaschere.it",
-    "orari": "Mar-dom: 9:00-13:00 / 15:00-19:00 (estate). Chiuso lunedì."
-  },
-  {
-    "id": "man-nuoro",
-    "name": "MAN — Museo d'Arte Provincia Nuoro",
-    "lat": 40.321514,
-    "lng": 9.333675,
-    "cat": "attrazione",
-    "description": "Il principale museo d'arte moderna e contemporanea della Sardegna. Collezione permanente con 600 opere: Costantino Nivola (scultore sardo di fama internazionale, legato a Le Corbusier), Mario Delitala, Francesco Ciusa. Mostre temporanee di artisti sardi e italiani.",
-    "come": "Via Satta 27, Nuoro — vicino piazza Sebastiano Satta.",
-    "servizi": "Collezione permanente, mostre temporanee, auditorium, bookshop, caffetteria",
-    "costo": "5€. Ridotto: 3€. Gratuito: under 18, prima domenica del mese",
-    "tel": "+39 0784 252110",
-    "web": "museoman.it",
-    "orari": "Mar-dom: 10:00-13:00 / 15:30-19:30. Chiuso lunedì."
-  },
-  {
-    "id": "museo-costume-nuoro",
-    "name": "Museo del Costume (ISRE) — Nuoro",
-    "lat": 40.316945,
-    "lng": 9.335266,
-    "cat": "attrazione",
-    "description": "Il più importante museo etnografico della Sardegna. 8.000 manufatti: costumi tradizionali dei 377 comuni sardi, gioielli filigrana, arazzi, cestini, maschere, strumenti musicali. I costumi sardi sono tra i più elaborati d'Europa — ogni comune ha il suo.",
-    "come": "Via A. Mereu 56, Nuoro. A 10 min a piedi dal MAN.",
-    "servizi": "Museo permanente 3 piani, audioguida, laboratori didattici, bookshop, giardino botanico",
-    "costo": "5€. Ridotto: 3€. Gratuito: under 18, prima domenica del mese",
-    "tel": "+39 0784 242900",
-    "web": "isresardegna.it",
-    "orari": "Mar-dom: 9:00-20:00 (estate) / 9:00-17:00 (inverno)."
+    "orari": "Mar-dom: 9:00-13:00 / 15:00-19:00 (estate). Chiuso lunedì.",
+    "rating": 4.6,
+    "reviews": 1972,
+    "ghours": [
+      "lunedì: 10:00–18:00",
+      "martedì: Chiuso",
+      "mercoledì: 10:00–18:00",
+      "giovedì: 10:00–18:00",
+      "venerdì: 10:00–18:00",
+      "sabato: 10:00–18:00",
+      "domenica: 10:00–18:00"
+    ]
   },
   {
     "id": "museo-tonnara-stintino",
@@ -2293,7 +3057,18 @@
     "costo": "4€. Ridotto: 2€",
     "tel": "+39 079 523015",
     "web": "museodellatonnara.it",
-    "orari": "Estate: 10:00-13:00 / 17:00-22:00. Inverno: solo fine settimana."
+    "orari": "Estate: 10:00-13:00 / 17:00-22:00. Inverno: solo fine settimana.",
+    "rating": 4.6,
+    "reviews": 307,
+    "ghours": [
+      "lunedì: Chiuso",
+      "martedì: 18:30–22:30",
+      "mercoledì: 18:30–22:30",
+      "giovedì: 10:30–13:30, 18:30–22:30",
+      "venerdì: 18:30–22:30",
+      "sabato: 10:30–13:30, 18:30–22:30",
+      "domenica: 10:30–13:30, 18:30–22:30"
+    ]
   },
   {
     "id": "museo-ossidiana",
@@ -2307,7 +3082,18 @@
     "costo": "3€. Percorso Monte Arci: 8€",
     "tel": "+39 0783 69223",
     "web": "www.museossidiana.it",
-    "orari": "Mar-sab: 9:30-13:00 / 16:00-19:30. Dom: 10:00-13:00."
+    "orari": "Mar-sab: 9:30-13:00 / 16:00-19:30. Dom: 10:00-13:00.",
+    "rating": 4.8,
+    "reviews": 421,
+    "ghours": [
+      "lunedì: Chiuso",
+      "martedì: Chiuso",
+      "mercoledì: 10:00–12:00, 16:00–19:00",
+      "giovedì: 10:00–12:00, 16:00–19:00",
+      "venerdì: 10:00–12:00, 16:00–19:00",
+      "sabato: 10:00–12:00, 16:00–19:00",
+      "domenica: 10:00–12:00, 16:00–19:00"
+    ]
   },
   {
     "id": "cattedrale-cagliari",
@@ -2321,7 +3107,19 @@
     "costo": "Gratuito. Cripta regia: 1€",
     "tel": "+39 070 663837",
     "web": "diocesidicagliari.it",
-    "orari": "Tutti i giorni: 8:00-12:30 / 16:00-20:00."
+    "orari": "Tutti i giorni: 8:00-12:30 / 16:00-20:00.",
+    "rating": 4.6,
+    "reviews": 4803,
+    "ghours": [
+      "lunedì: 09:00–20:00",
+      "martedì: 09:00–20:00",
+      "mercoledì: 09:00–20:00",
+      "giovedì: 09:00–20:00",
+      "venerdì: 09:00–20:00",
+      "sabato: 09:00–20:00",
+      "domenica: 09:00–20:00"
+    ],
+    "gsummary": "Elegante cattedrale del 1200 con interni sfarzosi, grande pulpito in marmo e cripta con tombe reali."
   },
   {
     "id": "basilica-san-simplicio",
@@ -2335,7 +3133,19 @@
     "costo": "Gratuito",
     "tel": "+39 0789 21198",
     "web": "www.guideturisticheolbia.com",
-    "orari": "Tutti i giorni: 9:00-12:30 / 17:00-19:30."
+    "orari": "Tutti i giorni: 9:00-12:30 / 17:00-19:30.",
+    "rating": 4.5,
+    "reviews": 2061,
+    "ghours": [
+      "lunedì: 07:00–20:00",
+      "martedì: 07:00–20:00",
+      "mercoledì: 07:00–20:00",
+      "giovedì: 07:00–20:00",
+      "venerdì: 07:00–20:00",
+      "sabato: 07:00–20:00",
+      "domenica: 07:00–20:00"
+    ],
+    "gsummary": "Basilica costruita in gran parte nell'XI e XII secolo, con piccolo campanile e abside affrescata."
   },
   {
     "id": "saccargia",
@@ -2349,7 +3159,19 @@
     "costo": "2€",
     "tel": "+39 079 435007",
     "web": "www.chieseromanichesardegna.it/codrongianos-chiesa-della-santissima-trinita-di-saccargia",
-    "orari": "Estate: 9:30-13:00 / 15:00-19:30. Inverno: 10:00-13:00 / 15:00-17:00."
+    "orari": "Estate: 9:30-13:00 / 15:00-19:30. Inverno: 10:00-13:00 / 15:00-17:00.",
+    "rating": 4.6,
+    "reviews": 3296,
+    "ghours": [
+      "lunedì: 09:00–17:30",
+      "martedì: 09:00–17:30",
+      "mercoledì: 09:00–17:30",
+      "giovedì: 09:00–17:30",
+      "venerdì: 09:00–17:30",
+      "sabato: 09:00–17:30",
+      "domenica: 09:00–17:30"
+    ],
+    "gsummary": "Chiesa romanica costruita nel 1116 in basalto e pietra calcarea sulle rovine di un monastero preesistente."
   },
   {
     "id": "santuario-bonaria",
@@ -2363,7 +3185,19 @@
     "costo": "Basilica: gratuita. Museo: 2€",
     "tel": "+39 070 301747",
     "web": "santuariobonaria.net",
-    "orari": "Basilica: tutti i giorni 6:30-12:00 / 16:00-20:00."
+    "orari": "Basilica: tutti i giorni 6:30-12:00 / 16:00-20:00.",
+    "rating": 4.7,
+    "reviews": 1726,
+    "ghours": [
+      "lunedì: 06:30–11:45, 16:30–19:30",
+      "martedì: 06:30–11:45, 16:30–19:30",
+      "mercoledì: 06:30–11:45, 16:30–19:30",
+      "giovedì: 06:30–11:45, 16:30–19:30",
+      "venerdì: 06:30–11:45, 16:30–19:30",
+      "sabato: 06:30–12:15, 16:30–20:30",
+      "domenica: 06:30–12:15, 16:30–20:30"
+    ],
+    "gsummary": "Santuario che fa parte di un complesso del XIV secolo e custodisce un'antica statua venerata della Madonna."
   },
   {
     "id": "basilica-san-gavino",
@@ -2377,7 +3211,19 @@
     "costo": "Gratuito. Cripta: 2€",
     "tel": "+39 079 503101",
     "web": "www.basilicasangavino.it",
-    "orari": "Tutti i giorni: 9:00-12:00 / 16:00-19:00."
+    "orari": "Tutti i giorni: 9:00-12:00 / 16:00-19:00.",
+    "rating": 4.6,
+    "reviews": 1429,
+    "ghours": [
+      "lunedì: 09:00–13:00, 15:00–18:45",
+      "martedì: 09:00–13:00, 15:00–18:45",
+      "mercoledì: 09:00–13:00, 15:00–18:45",
+      "giovedì: 09:00–13:00, 15:00–18:45",
+      "venerdì: 09:00–13:00, 15:00–18:45",
+      "sabato: 09:00–13:00, 15:00–18:45",
+      "domenica: 09:00–13:00, 15:00–18:45"
+    ],
+    "gsummary": "Chiesa in collina con absidi frontali e cripta sotterranea che ospita tombe romane e reliquie di martiri."
   },
   {
     "id": "sa-sartiglia",
@@ -2391,7 +3237,18 @@
     "costo": "Tribune: 30-60€. Posti libero: gratuito (arrivo ore 8 per posto buono)",
     "tel": "+39 0783 368838",
     "web": "sartiglia.info",
-    "orari": "Solo domenica e martedì grasso di Carnevale (ore 9:00-18:00)."
+    "orari": "Solo domenica e martedì grasso di Carnevale (ore 9:00-18:00).",
+    "rating": 4.6,
+    "reviews": 75,
+    "ghours": [
+      "lunedì: 08:30–13:30",
+      "martedì: 15:00–19:00",
+      "mercoledì: 08:30–13:30",
+      "giovedì: 15:00–19:00",
+      "venerdì: 08:30–13:30",
+      "sabato: Chiuso",
+      "domenica: Chiuso"
+    ]
   },
   {
     "id": "mamuthones-mamoiada",
@@ -2405,7 +3262,18 @@
     "costo": "Gratuito. Cena tradizionale: 30€/persona",
     "tel": "+39 0784 57153",
     "web": "prolocomamoiada.it",
-    "orari": "16-17 gennaio e carnevale, ore 14:00-18:00."
+    "orari": "16-17 gennaio e carnevale, ore 14:00-18:00.",
+    "rating": 4.8,
+    "reviews": 8,
+    "ghours": [
+      "lunedì: 09:00–19:30",
+      "martedì: 09:00–19:30",
+      "mercoledì: 09:00–19:30",
+      "giovedì: 09:00–19:30",
+      "venerdì: 09:00–19:30",
+      "sabato: 09:00–13:00, 15:00–19:30",
+      "domenica: Chiuso"
+    ]
   },
   {
     "id": "sant-efisio",
@@ -2419,7 +3287,19 @@
     "costo": "Gratuito. Tribune via Roma: 20-40€",
     "tel": "+39 070 300264",
     "web": "festadisantefisio.org",
-    "orari": "1 maggio ore 9:00 partenza da Cagliari. 4 maggio ore 18:00 rientro."
+    "orari": "1 maggio ore 9:00 partenza da Cagliari. 4 maggio ore 18:00 rientro.",
+    "rating": 4.7,
+    "reviews": 595,
+    "ghours": [
+      "lunedì: Chiuso",
+      "martedì: Chiuso",
+      "mercoledì: Chiuso",
+      "giovedì: Chiuso",
+      "venerdì: 10:00–19:00",
+      "sabato: 10:00–19:00",
+      "domenica: 10:00–13:00"
+    ],
+    "gsummary": "Chiesa edificata sopra una grotta nel 430 d.C. e modificata nel '700, con preziosi marmi policromi e dipinti."
   },
   {
     "id": "faradda-candelieri",
@@ -2461,7 +3341,18 @@
     "costo": "Resolza base: 50-80€. Pezzi pregiati con corno muflone: 150-500€",
     "tel": "+39 351 872 5650",
     "web": "coltellipattada.it",
-    "orari": "Officine: lun-sab 9:00-12:30 / 15:00-19:00."
+    "orari": "Officine: lun-sab 9:00-12:30 / 15:00-19:00.",
+    "rating": 5,
+    "reviews": 46,
+    "ghours": [
+      "lunedì: 09:00–20:00",
+      "martedì: 09:00–20:00",
+      "mercoledì: 09:00–20:00",
+      "giovedì: 09:00–20:00",
+      "venerdì: 09:00–20:00",
+      "sabato: 09:00–20:00",
+      "domenica: 09:00–17:00"
+    ]
   },
   {
     "id": "murats-samugheo",
@@ -2475,7 +3366,18 @@
     "costo": "3€. Ridotto: 1,50€",
     "tel": "+39 0783 64025",
     "web": "www.murats.it",
-    "orari": "Mar-dom: 10:00-13:00 / 16:00-19:00. Chiuso lunedì."
+    "orari": "Mar-dom: 10:00-13:00 / 16:00-19:00. Chiuso lunedì.",
+    "rating": 4.7,
+    "reviews": 415,
+    "ghours": [
+      "lunedì: Chiuso",
+      "martedì: 10:00–13:00, 17:00–20:00",
+      "mercoledì: 09:30–13:00, 17:00–20:00",
+      "giovedì: 09:30–13:00, 17:00–20:00",
+      "venerdì: 09:30–13:00, 17:00–20:00",
+      "sabato: 09:30–13:00, 17:00–20:00",
+      "domenica: 10:00–13:00, 17:00–20:00"
+    ]
   },
   {
     "id": "aeroporto-cagliari",
@@ -2489,7 +3391,9 @@
     "costo": "Navetta ATC: 4€. Taxi centro: 25€ fisso. Parcheggio: 3€/h o 15€/giorno",
     "tel": "+39 070 2111211",
     "web": "cagliari-airport.it",
-    "orari": "H24. Info partenze: cagliari-airport.it"
+    "orari": "H24. Info partenze: cagliari-airport.it",
+    "rating": 4,
+    "reviews": 10238
   },
   {
     "id": "aeroporto-olbia",
@@ -2503,7 +3407,18 @@
     "costo": "Bus ARST: 1€. Taxi centro Olbia: 15€. Parcheggio: 5€/h o 25€/giorno",
     "tel": "+39 0789 563444",
     "web": "geasar.it",
-    "orari": "H24 in estate (giugno-settembre). Ridotto in inverno."
+    "orari": "H24 in estate (giugno-settembre). Ridotto in inverno.",
+    "rating": 4.1,
+    "reviews": 7676,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "aeroporto-alghero",
@@ -2517,7 +3432,9 @@
     "costo": "Bus AF: 1,20€ Alghero / 2,50€ Sassari. Taxi: 20€. Parcheggio: 4€/h",
     "tel": "+39 079 935282",
     "web": "aeroportodialghero.it",
-    "orari": "Stagionale: giugno-settembre H24. Inverno: ridotto."
+    "orari": "Stagionale: giugno-settembre H24. Inverno: ridotto.",
+    "rating": 4,
+    "reviews": 4703
   },
   {
     "id": "porto-cagliari",
@@ -2531,7 +3448,9 @@
     "costo": "Cagliari-Civitavecchia: 45-80€/persona (solo poltrona). Auto al seguito: +60-100€",
     "tel": "+39 070 6669600",
     "web": "porto.cagliari.it",
-    "orari": "Terminal H24. Biglietteria: 8:00-20:00."
+    "orari": "Terminal H24. Biglietteria: 8:00-20:00.",
+    "rating": 4.2,
+    "reviews": 37
   },
   {
     "id": "porto-olbia",
@@ -2545,7 +3464,18 @@
     "costo": "Olbia-Livorno: 50-100€/persona. Auto al seguito: +80-150€",
     "tel": "+39 0789 23011",
     "web": "porto.olbia.it",
-    "orari": "Terminal H24 estate. Biglietteria: 6:00-22:00."
+    "orari": "Terminal H24 estate. Biglietteria: 6:00-22:00.",
+    "rating": 3.8,
+    "reviews": 667,
+    "ghours": [
+      "lunedì: 08:30–12:30, 16:15–22:30",
+      "martedì: 08:30–12:30, 16:15–22:30",
+      "mercoledì: 08:30–12:30, 16:15–22:30",
+      "giovedì: 08:30–12:30, 16:15–22:30",
+      "venerdì: 08:30–12:30, 16:15–22:30",
+      "sabato: 08:30–12:30, 16:15–22:30",
+      "domenica: 17:00–22:30"
+    ]
   },
   {
     "id": "porto-torres",
@@ -2559,7 +3489,18 @@
     "costo": "Porto Torres-Genova: 60-120€/persona poltrona. Auto: +80€",
     "tel": "+39 079 514477",
     "web": "portoditorres.net",
-    "orari": "Terminal H24. Biglietteria: 7:00-22:00."
+    "orari": "Terminal H24. Biglietteria: 7:00-22:00.",
+    "rating": 3.7,
+    "reviews": 691,
+    "ghours": [
+      "lunedì: 08:30–13:30, 14:30–20:20",
+      "martedì: 08:30–13:30, 14:30–20:20",
+      "mercoledì: 08:30–13:30, 14:30–20:20",
+      "giovedì: 08:30–13:30, 14:30–20:20",
+      "venerdì: 08:30–13:30, 14:30–20:20",
+      "sabato: 08:30–13:30, 14:30–20:20",
+      "domenica: 16:45–20:20"
+    ]
   },
   {
     "id": "porto-golfo-aranci",
@@ -2573,7 +3514,18 @@
     "costo": "Golfo Aranci-Livorno: 50-90€/persona. Auto: +80€",
     "tel": "+39 0789 204179",
     "web": "corsica-sardinia-ferries.it",
-    "orari": "Traghetti: 1-3 corse giornaliere secondo stagione."
+    "orari": "Traghetti: 1-3 corse giornaliere secondo stagione.",
+    "rating": 4.1,
+    "reviews": 295,
+    "ghours": [
+      "lunedì: Chiuso",
+      "martedì: Chiuso",
+      "mercoledì: Chiuso",
+      "giovedì: Chiuso",
+      "venerdì: 12:00–15:00",
+      "sabato: 12:00–15:00",
+      "domenica: 12:00–15:00"
+    ]
   },
   {
     "id": "ospedale-cagliari",
@@ -2587,7 +3539,18 @@
     "costo": "PS: gratuito con TEAM (UE). Ticket visita: 25-50€ per non urgenze.",
     "tel": "118 (emergenza) · +39 070 539 6000 (centralino)",
     "web": "brotzu.it",
-    "orari": "PS: H24. Visite: 7:00-19:00 secondo reparto."
+    "orari": "PS: H24. Visite: 7:00-19:00 secondo reparto.",
+    "rating": 2,
+    "reviews": 119,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "ospedale-sassari",
@@ -2601,7 +3564,18 @@
     "costo": "PS: gratuito con TEAM (UE)",
     "tel": "118 (emergenza) · +39 079 2061000 (centralino)",
     "web": "asl.sassari.it",
-    "orari": "PS: H24."
+    "orari": "PS: H24.",
+    "rating": 3.1,
+    "reviews": 202,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "ospedale-nuoro",
@@ -2615,7 +3589,18 @@
     "costo": "PS: gratuito con TEAM (UE)",
     "tel": "118 (emergenza) · +39 0784 240000 (centralino)",
     "web": "asl.nuoro.it",
-    "orari": "PS: H24."
+    "orari": "PS: H24.",
+    "rating": 3.4,
+    "reviews": 254,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "ospedale-oristano",
@@ -2629,7 +3614,18 @@
     "costo": "PS: gratuito con TEAM (UE)",
     "tel": "118 (emergenza) · +39 0783 317000 (centralino)",
     "web": "asl.oristano.it",
-    "orari": "PS: H24."
+    "orari": "PS: H24.",
+    "rating": 3.2,
+    "reviews": 111,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "stazione-cagliari",
@@ -2643,7 +3639,9 @@
     "costo": "Cagliari-Sassari: 13-18€ (treno). Cagliari-Oristano: 7-10€",
     "tel": "892021 (Trenitalia) · 800 865042 (ARST)",
     "web": "trenitalia.com · arst.sardegna.it",
-    "orari": "Stazione: 5:00-23:30. ARST: H24 per alcune linee."
+    "orari": "Stazione: 5:00-23:30. ARST: H24 per alcune linee.",
+    "rating": 4.2,
+    "reviews": 499
   },
   {
     "id": "stazione-sassari",
@@ -2657,7 +3655,9 @@
     "costo": "Sassari-Alghero bus: 3€. Sassari-Olbia treno: 8-12€",
     "tel": "892021 (Trenitalia) · 800 865042 (ARST)",
     "web": "trenitalia.com · arst.sardegna.it",
-    "orari": "Stazione: 5:30-22:30."
+    "orari": "Stazione: 5:30-22:30.",
+    "rating": 3.6,
+    "reviews": 140
   },
   {
     "id": "noleggio-auto-cagliari",
@@ -2671,7 +3671,18 @@
     "costo": "Utilitaria: 30-60€/giorno (bassa) / 60-120€ (luglio-agosto)",
     "tel": "Hertz: +39 070 240037 · Europcar: +39 070 240037 · Sixt: +39 02 9475 7979",
     "web": "hertz.it · europcar.it · sixt.it",
-    "orari": "7:00-23:00 (variano per operatore)."
+    "orari": "7:00-23:00 (variano per operatore).",
+    "rating": 4.9,
+    "reviews": 410,
+    "ghours": [
+      "lunedì: 07:30–23:00",
+      "martedì: 07:30–23:00",
+      "mercoledì: 07:30–23:00",
+      "giovedì: 07:30–23:00",
+      "venerdì: 07:30–23:00",
+      "sabato: 07:30–23:00",
+      "domenica: 07:30–23:00"
+    ]
   },
   {
     "id": "noleggio-auto-olbia",
@@ -2685,7 +3696,18 @@
     "costo": "Utilitaria: 40-80€/giorno (bassa) / 100-200€ (luglio-agosto)",
     "tel": "Hertz: +39 0789 69389 · Europcar: +39 0789 69548 · Sixt: +39 02 9475 7979",
     "web": "hertz.it · europcar.it",
-    "orari": "7:00-23:00 (variano per operatore)."
+    "orari": "7:00-23:00 (variano per operatore).",
+    "rating": 3.5,
+    "reviews": 2199,
+    "ghours": [
+      "lunedì: 08:00–23:00",
+      "martedì: 08:00–23:00",
+      "mercoledì: 08:00–23:00",
+      "giovedì: 08:00–23:00",
+      "venerdì: 08:00–23:00",
+      "sabato: 08:00–23:00",
+      "domenica: 08:00–23:00"
+    ]
   },
   {
     "id": "emergenze-sardegna",
@@ -2713,7 +3735,18 @@
     "costo": "Gratuito",
     "tel": "+39 070 6776941",
     "web": "cagliariturismocultura.it · sardiniapoint.com",
-    "orari": "Lun-sab 9:00-18:00. Dom 10:00-14:00 (stagionale)."
+    "orari": "Lun-sab 9:00-18:00. Dom 10:00-14:00 (stagionale).",
+    "rating": 4.3,
+    "reviews": 234,
+    "ghours": [
+      "lunedì: 09:00–20:00",
+      "martedì: 09:00–20:00",
+      "mercoledì: 09:00–20:00",
+      "giovedì: 09:00–20:00",
+      "venerdì: 09:00–20:00",
+      "sabato: 09:00–20:00",
+      "domenica: 09:00–20:00"
+    ]
   },
   {
     "id": "cala-di-volpe",
@@ -2727,7 +3760,9 @@
     "costo": "1.000-8.000€/notte (alta stagione)",
     "tel": "+39 0789 976111",
     "web": "starwoodhotels.com/caladevolpe",
-    "orari": "Aperto maggio-ottobre."
+    "orari": "Aperto maggio-ottobre.",
+    "rating": 4.6,
+    "reviews": 17
   },
   {
     "id": "forte-village",
@@ -2741,7 +3776,19 @@
     "costo": "400-2.000€/notte (varia molto per tipologia)",
     "tel": "+39 070 9218",
     "web": "fortevillage.com",
-    "orari": "Aperto aprile-ottobre."
+    "orari": "Aperto aprile-ottobre.",
+    "rating": 4.5,
+    "reviews": 3111,
+    "ghours": [
+      "lunedì: 09:00–18:00",
+      "martedì: 09:00–18:00",
+      "mercoledì: 09:00–18:00",
+      "giovedì: 09:00–18:00",
+      "venerdì: 09:00–18:00",
+      "sabato: 09:00–18:00",
+      "domenica: 09:00–18:00"
+    ],
+    "gsummary": "Resort di lusso sul mare, con ristoranti rinomati, spa, piscine e camere, suite e ville di lusso."
   },
   {
     "id": "chia-laguna",
@@ -2755,7 +3802,10 @@
     "costo": "200-600€/notte per struttura",
     "tel": "+39 070 923091",
     "web": "chialaguna.com",
-    "orari": "Aperto maggio-ottobre."
+    "orari": "Aperto maggio-ottobre.",
+    "rating": 4.4,
+    "reviews": 2424,
+    "gsummary": "Hotel di lusso in resort chic con ristorante, piscina scoperta e miniclub."
   },
   {
     "id": "romazzino",
@@ -2769,7 +3819,10 @@
     "costo": "800-4.000€/notte",
     "tel": "+39 0789 977111",
     "web": "marriott.com/romazzino",
-    "orari": "Aperto maggio-ottobre."
+    "orari": "Aperto maggio-ottobre.",
+    "rating": 4.6,
+    "reviews": 438,
+    "gsummary": "Hotel di lusso con spiaggia privata, 2 piscine scoperte, 2 ristoranti, spa e 2 bar."
   },
   {
     "id": "t-hotel-cagliari",
@@ -2783,7 +3836,19 @@
     "costo": "90-250€/notte",
     "tel": "+39 070 47400",
     "web": "thotel.it",
-    "orari": "Aperto tutto l'anno."
+    "orari": "Aperto tutto l'anno.",
+    "rating": 4.6,
+    "reviews": 4927,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ],
+    "gsummary": "Camere a tinte vivaci in una struttura di lusso con colazione, Wi-Fi, ristorante, bar e spa."
   },
   {
     "id": "hotel-mistral-oristano",
@@ -2797,7 +3862,10 @@
     "costo": "70-130€/notte",
     "tel": "+39 0783 210389",
     "web": "hotelmistral2.com",
-    "orari": "Aperto tutto l'anno."
+    "orari": "Aperto tutto l'anno.",
+    "rating": 4.2,
+    "reviews": 1737,
+    "gsummary": "Camere semplici in hotel confortevole con piscina scoperta, ristorante e colazione."
   },
   {
     "id": "colonna-beach",
@@ -2811,7 +3879,19 @@
     "costo": "100-280€/notte",
     "tel": "+39 0784 866001",
     "web": "colonnabeach.it",
-    "orari": "Aperto maggio-ottobre."
+    "orari": "Aperto maggio-ottobre.",
+    "rating": 3.9,
+    "reviews": 319,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ],
+    "gsummary": "Hotel sobrio con camere e appartamenti essenziali, ristorante, bar e accesso alla spiaggia."
   },
   {
     "id": "agriturismo-guthiddai",
@@ -2825,7 +3905,9 @@
     "costo": "Camera: 60-90€ con colazione. Cena tradizionale: 25-35€",
     "tel": "+39 0784 402387",
     "web": "offers.agriturismoguthiddai.it/?utm_source=google_maps&utm_medium=organic&utm_campaign=mybusiness",
-    "orari": "Tutto l'anno. Solo su prenotazione."
+    "orari": "Tutto l'anno. Solo su prenotazione.",
+    "rating": 4.5,
+    "reviews": 615
   },
   {
     "id": "agriturismo-muto-gallura",
@@ -2839,7 +3921,18 @@
     "costo": "Suite: 120-200€/notte. Cena: 35-50€",
     "tel": "+39 079 620559",
     "web": "ilmutodigallura.it",
-    "orari": "Aperto aprile-ottobre."
+    "orari": "Aperto aprile-ottobre.",
+    "rating": 4.3,
+    "reviews": 541,
+    "ghours": [
+      "lunedì: 08:00–23:00",
+      "martedì: 08:00–23:00",
+      "mercoledì: 08:00–23:00",
+      "giovedì: 08:00–23:00",
+      "venerdì: 08:00–23:00",
+      "sabato: 08:00–23:00",
+      "domenica: 08:00–23:00"
+    ]
   },
   {
     "id": "agriturismo-su-nido",
@@ -2867,7 +3960,18 @@
     "costo": "55-75€/notte. Cena: 20-30€",
     "tel": "+39 0784 64012",
     "web": "",
-    "orari": "Tutto l'anno su prenotazione."
+    "orari": "Tutto l'anno su prenotazione.",
+    "rating": 4,
+    "reviews": 15,
+    "ghours": [
+      "lunedì: 09:00–00:00",
+      "martedì: 09:00–00:00",
+      "mercoledì: 09:00–00:00",
+      "giovedì: 09:00–00:00",
+      "venerdì: 09:00–00:00",
+      "sabato: 09:00–00:00",
+      "domenica: 09:00–00:00"
+    ]
   },
   {
     "id": "camping-torre-porticciolo",
@@ -2881,7 +3985,10 @@
     "costo": "Tenda 2 pers: 25-40€/notte. Bungalow: 60-120€/notte",
     "tel": "+39 079 919007",
     "web": "campingtorredelporticciolo.it",
-    "orari": "Aperto aprile-ottobre."
+    "orari": "Aperto aprile-ottobre.",
+    "rating": 3.6,
+    "reviews": 2105,
+    "gsummary": "Vivace resort in stile villaggio con chalet confortevoli, piscine scoperte e ristorante con pizzeria."
   },
   {
     "id": "camping-la-foce",
@@ -2895,7 +4002,19 @@
     "costo": "Piazzola: 30-55€/notte. Bungalow: 80-150€/notte",
     "tel": "+39 070 797019",
     "web": "campinglafoce.it",
-    "orari": "Aperto aprile-ottobre."
+    "orari": "Aperto aprile-ottobre.",
+    "rating": 4,
+    "reviews": 2149,
+    "ghours": [
+      "lunedì: 09:00–13:00, 15:30–20:30",
+      "martedì: 09:00–13:00, 15:30–20:30",
+      "mercoledì: 09:00–13:00, 15:30–20:30",
+      "giovedì: 09:00–13:00, 15:30–20:30",
+      "venerdì: 09:00–13:00, 15:30–20:30",
+      "sabato: 09:00–13:00, 15:30–20:30",
+      "domenica: 09:00–13:00, 15:30–20:30"
+    ],
+    "gsummary": "Luogo peculiare sul mare con campeggi, bungalow e camere in affitto, oltre a grande spiaggia."
   },
   {
     "id": "camping-is-arenas",
@@ -2909,7 +4028,18 @@
     "costo": "Piazzola: 20-35€/notte. Bungalow: 50-90€/notte",
     "tel": "+39 0783 52284",
     "web": "www.camping-isarenas.com",
-    "orari": "Aperto maggio-settembre."
+    "orari": "Aperto maggio-settembre.",
+    "rating": 4,
+    "reviews": 889,
+    "ghours": [
+      "lunedì: 08:00–22:00",
+      "martedì: 08:00–22:00",
+      "mercoledì: 08:00–22:00",
+      "giovedì: 08:00–22:00",
+      "venerdì: 08:00–22:00",
+      "sabato: 08:00–22:00",
+      "domenica: 08:00–22:00"
+    ]
   },
   {
     "id": "village-san-teodoro",
@@ -2923,7 +4053,18 @@
     "costo": "Bungalow bilocale (4 pers): 100-220€/notte",
     "tel": "+39 0784 865777",
     "web": "villagelacintalasantateodoro.it",
-    "orari": "Aperto maggio-settembre."
+    "orari": "Aperto maggio-settembre.",
+    "rating": 4,
+    "reviews": 637,
+    "ghours": [
+      "lunedì: 09:00–19:00",
+      "martedì: 09:00–19:00",
+      "mercoledì: 09:00–19:00",
+      "giovedì: 09:00–19:00",
+      "venerdì: 09:00–19:00",
+      "sabato: Chiuso",
+      "domenica: Chiuso"
+    ]
   },
   {
     "id": "locanda-deriu",
@@ -2937,7 +4078,18 @@
     "costo": "90-160€/notte",
     "tel": "+39 0785 374126",
     "web": "locandaderiu.com",
-    "orari": "Aperto tutto l'anno."
+    "orari": "Aperto tutto l'anno.",
+    "rating": 4.5,
+    "reviews": 1259,
+    "ghours": [
+      "lunedì: 19:00–22:30",
+      "martedì: 19:00–22:30",
+      "mercoledì: 19:00–22:30",
+      "giovedì: 19:00–22:30",
+      "venerdì: 19:00–22:30",
+      "sabato: 19:00–22:30",
+      "domenica: Chiuso"
+    ]
   },
   {
     "id": "su-nuraxi-residenza",
@@ -2951,7 +4103,19 @@
     "costo": "70-110€/notte",
     "tel": "+39 070 9368128",
     "web": "fondazionebarumini.it",
-    "orari": "Aperto tutto l'anno."
+    "orari": "Aperto tutto l'anno.",
+    "rating": 4.1,
+    "reviews": 645,
+    "ghours": [
+      "lunedì: 12:00–16:00, 19:15–23:30",
+      "martedì: 12:00–16:00, 19:15–23:30",
+      "mercoledì: 12:00–16:00, 19:15–23:30",
+      "giovedì: 12:00–16:00, 19:15–23:30",
+      "venerdì: 12:00–16:00, 19:15–23:30",
+      "sabato: 12:00–16:00, 19:15–23:30",
+      "domenica: 12:00–16:00, 19:15–23:30"
+    ],
+    "gsummary": "Hotel essenziale con camere semplici, colazione, ristorante di cucina sarda e bar."
   },
   {
     "id": "s-apposentu",
@@ -2965,7 +4129,10 @@
     "costo": "Menu degustazione: 80-110€/persona (vini esclusi)",
     "tel": "+39 070 9350619",
     "web": "sapposentu.com",
-    "orari": "Mer-sab: 20:00-22:00. Sab-dom: anche pranzo 13:00-14:30. Chiuso lun-mar."
+    "orari": "Mer-sab: 20:00-22:00. Sab-dom: anche pranzo 13:00-14:30. Chiuso lun-mar.",
+    "rating": 4.5,
+    "reviews": 174,
+    "gsummary": "Piatti sardi rivisitati e vini biodinamici in una villa liberty dei primi del '900 con raffinati arredi rétro."
   },
   {
     "id": "al-tonno-di-corsa",
@@ -2979,7 +4146,10 @@
     "costo": "40-65€/persona",
     "tel": "+39 0781 855106",
     "web": "www.tonnodicorsa.com",
-    "orari": "Mer-lun: 12:30-14:30 / 19:30-22:30. Chiuso martedì. Aperto tutto l'anno."
+    "orari": "Mer-lun: 12:30-14:30 / 19:30-22:30. Chiuso martedì. Aperto tutto l'anno.",
+    "rating": 4.5,
+    "reviews": 1138,
+    "gsummary": "Menù carlofortino di pesce in un locale ricavato da una casa con arredi rétro e balconi affacciati sul porto."
   },
   {
     "id": "sa-cardiga",
@@ -2993,7 +4163,19 @@
     "costo": "30-55€/persona",
     "tel": "+39 070 71652",
     "web": "www.sacardigaesuschironi.it",
-    "orari": "Mer-lun: 12:30-15:00 / 19:30-23:00. Chiuso martedì."
+    "orari": "Mer-lun: 12:30-15:00 / 19:30-23:00. Chiuso martedì.",
+    "rating": 4.4,
+    "reviews": 1997,
+    "ghours": [
+      "lunedì: Chiuso",
+      "martedì: Chiuso",
+      "mercoledì: 12:00–14:30, 20:00–22:30",
+      "giovedì: 12:00–14:30, 20:00–22:30",
+      "venerdì: 12:00–14:30, 20:00–22:30",
+      "sabato: 12:00–14:30, 20:00–22:30",
+      "domenica: 12:00–14:30, 20:00–22:30"
+    ],
+    "gsummary": "Specialità sarde di pesce, cotte sulla griglia a vista, servite in ristorante curato con terrazza vista mare."
   },
   {
     "id": "il-rifugio-nuoro",
@@ -3007,7 +4189,19 @@
     "costo": "25-45€/persona",
     "tel": "+39 0784 232355",
     "web": "www.trattoriarifugio.com",
-    "orari": "Lun-sab: 12:30-14:30 / 19:30-22:00. Chiuso domenica."
+    "orari": "Lun-sab: 12:30-14:30 / 19:30-22:00. Chiuso domenica.",
+    "rating": 4.5,
+    "reviews": 1773,
+    "ghours": [
+      "lunedì: 12:45–14:45, 19:45–22:45",
+      "martedì: 12:45–14:45",
+      "mercoledì: Chiuso",
+      "giovedì: 12:45–14:45, 19:45–22:45",
+      "venerdì: 12:45–14:45, 19:45–22:45",
+      "sabato: 12:45–14:45, 19:45–22:45",
+      "domenica: 12:45–14:45, 19:45–22:45"
+    ],
+    "gsummary": "Piatti sardi dal tocco creativo in un locale rustico con foto d'epoca, mattoni a vista e pavimento in cotto."
   },
   {
     "id": "sella-mosca",
@@ -3021,7 +4215,18 @@
     "costo": "Degustazione con tour: 15-25€. Vini: 8-30€/bottiglia",
     "tel": "+39 079 997700",
     "web": "sellaemosca.com",
-    "orari": "Enoteca: lun-ven 8:30-19:00 / sab 8:30-17:00. Tour cantina: prenotazione."
+    "orari": "Enoteca: lun-ven 8:30-19:00 / sab 8:30-17:00. Tour cantina: prenotazione.",
+    "rating": 4.5,
+    "reviews": 637,
+    "ghours": [
+      "lunedì: 10:00–20:00",
+      "martedì: 10:00–20:00",
+      "mercoledì: 10:00–20:00",
+      "giovedì: 10:00–20:00",
+      "venerdì: 10:00–20:00",
+      "sabato: 10:00–20:00",
+      "domenica: 10:00–20:00"
+    ]
   },
   {
     "id": "cantina-argiolas",
@@ -3035,7 +4240,18 @@
     "costo": "Tour + degustazione: 20-35€. Turriga: 35-50€/bottiglia",
     "tel": "+39 070 740606",
     "web": "argiolas.it",
-    "orari": "Lun-ven: 8:00-17:00. Tour: sab 10:00-12:00. Prenotazione obbligatoria."
+    "orari": "Lun-ven: 8:00-17:00. Tour: sab 10:00-12:00. Prenotazione obbligatoria.",
+    "rating": 4.7,
+    "reviews": 429,
+    "ghours": [
+      "lunedì: 10:00–13:00, 14:30–18:00",
+      "martedì: 10:00–13:00, 14:30–18:00",
+      "mercoledì: 10:00–13:00, 14:30–18:00",
+      "giovedì: 10:00–13:00, 14:30–18:00",
+      "venerdì: 10:00–13:00, 14:30–18:00",
+      "sabato: 09:00–12:45",
+      "domenica: Chiuso"
+    ]
   },
   {
     "id": "cantina-santadi",
@@ -3049,7 +4265,18 @@
     "costo": "Degustazione: 10-20€. Terre Brune: 25-35€/bottiglia",
     "tel": "+39 0781 950127",
     "web": "cantinasantadi.it",
-    "orari": "Lun-ven: 8:00-12:30 / 14:30-18:00. Sab: 9:00-12:00."
+    "orari": "Lun-ven: 8:00-12:30 / 14:30-18:00. Sab: 9:00-12:00.",
+    "rating": 4.6,
+    "reviews": 281,
+    "ghours": [
+      "lunedì: 08:00–13:00, 16:30–19:00",
+      "martedì: 08:00–13:00, 16:30–19:00",
+      "mercoledì: 08:00–13:00, 16:30–19:00",
+      "giovedì: 08:00–13:00, 16:30–19:00",
+      "venerdì: 08:00–13:00, 16:30–19:00",
+      "sabato: 08:00–13:00",
+      "domenica: Chiuso"
+    ]
   },
   {
     "id": "cantina-mesa",
@@ -3063,7 +4290,18 @@
     "costo": "Degustazione base: 15€. Tour + pranzo: 35-50€",
     "tel": "+39 0781 964234",
     "web": "cantina-mesa.it",
-    "orari": "Lun-ven 9:00-17:00. Estate anche weekend. Prenotazione consigliata."
+    "orari": "Lun-ven 9:00-17:00. Estate anche weekend. Prenotazione consigliata.",
+    "rating": 4.7,
+    "reviews": 277,
+    "ghours": [
+      "lunedì: 09:30–13:00, 15:00–19:00",
+      "martedì: 09:30–13:00, 15:00–19:00",
+      "mercoledì: 09:30–13:00, 15:00–19:00",
+      "giovedì: 09:30–13:00, 15:00–19:00",
+      "venerdì: 09:30–13:00, 15:00–19:00",
+      "sabato: Chiuso",
+      "domenica: Chiuso"
+    ]
   },
   {
     "id": "cantina-jerzu",
@@ -3091,7 +4329,18 @@
     "costo": "Degustazione: gratuita. Vini: 7-20€/bottiglia",
     "tel": "+39 0784 96143",
     "web": "cantinadorgali.com",
-    "orari": "Lun-sab 8:30-13:00 / 15:30-19:30."
+    "orari": "Lun-sab 8:30-13:00 / 15:30-19:30.",
+    "rating": 4.5,
+    "reviews": 209,
+    "ghours": [
+      "lunedì: 09:00–19:00",
+      "martedì: 09:00–19:00",
+      "mercoledì: 09:00–19:00",
+      "giovedì: 09:00–19:00",
+      "venerdì: 09:00–19:00",
+      "sabato: 09:00–13:00, 15:00–18:00",
+      "domenica: Chiuso"
+    ]
   },
   {
     "id": "bottarga-cabras",
@@ -3105,7 +4354,18 @@
     "costo": "Bottarga: 80-150€/kg secondo stagionatura. Assaggio: gratuito.",
     "tel": "+39 0783 391161",
     "web": "tharrospesca.it",
-    "orari": "Lun-ven 9:00-13:00 / 15:00-18:00. Vendita anche presso Antiquarium Arborense."
+    "orari": "Lun-ven 9:00-13:00 / 15:00-18:00. Vendita anche presso Antiquarium Arborense.",
+    "rating": 4.7,
+    "reviews": 220,
+    "ghours": [
+      "lunedì: 09:30–13:00, 16:00–19:00",
+      "martedì: 09:30–13:00, 16:00–19:00",
+      "mercoledì: 09:30–13:00, 16:00–19:00",
+      "giovedì: 09:30–13:00, 16:00–19:00",
+      "venerdì: 09:30–13:00, 16:00–19:00",
+      "sabato: 09:30–13:00",
+      "domenica: Chiuso"
+    ]
   },
   {
     "id": "pecorino-fonni",
@@ -3147,7 +4407,19 @@
     "costo": "Accesso gratuito. Ricci di mare: 2-4€/pezzo",
     "tel": "+39 070 677 5606",
     "web": "www.comune.cagliari.it/portale/page/it/mercato_civico_san_benedetto?contentId=LGO11814",
-    "orari": "Lun-sab: 7:00-14:00."
+    "orari": "Lun-sab: 7:00-14:00.",
+    "rating": 4.5,
+    "reviews": 12311,
+    "ghours": [
+      "lunedì: 07:00–14:00",
+      "martedì: 07:00–14:00",
+      "mercoledì: 07:00–14:00",
+      "giovedì: 07:00–14:00",
+      "venerdì: 07:00–14:00",
+      "sabato: 07:00–15:00",
+      "domenica: Chiuso"
+    ],
+    "gsummary": "Il più grande mercato alimentare coperto d'Italia, con spazi separati per prodotti ortofrutticoli, pesce e altro."
   },
   {
     "id": "mercato-sassari",
@@ -3161,7 +4433,18 @@
     "costo": "Accesso gratuito",
     "tel": "+39 329 749 9238",
     "web": "",
-    "orari": "Lun-sab: 7:30-13:30."
+    "orari": "Lun-sab: 7:30-13:30.",
+    "rating": 4.6,
+    "reviews": 868,
+    "ghours": [
+      "lunedì: 12:30–15:30, 19:30–23:00",
+      "martedì: 12:30–15:30, 19:30–23:00",
+      "mercoledì: 12:30–15:30, 19:30–23:00",
+      "giovedì: 12:30–15:30, 19:30–23:00",
+      "venerdì: 12:30–15:30, 19:30–23:00",
+      "sabato: 12:30–15:30, 19:30–23:00",
+      "domenica: Chiuso"
+    ]
   },
   {
     "id": "degustazione-cannonau",
@@ -3189,7 +4472,18 @@
     "costo": "55-80€/persona. Gruppi privati: da 4 persone",
     "tel": "+39 391 367 1661",
     "web": "cookingsardinia.com",
-    "orari": "Vari giorni. Prenotazione obbligatoria online."
+    "orari": "Vari giorni. Prenotazione obbligatoria online.",
+    "rating": 4.7,
+    "reviews": 25,
+    "ghours": [
+      "lunedì: 09:00–20:00",
+      "martedì: 09:00–20:00",
+      "mercoledì: 09:00–20:00",
+      "giovedì: 09:00–20:00",
+      "venerdì: 09:00–20:00",
+      "sabato: 09:00–20:00",
+      "domenica: Chiuso"
+    ]
   },
   {
     "id": "mirto-produzione",
@@ -3231,7 +4525,18 @@
     "costo": "Gratuito. Noleggio tavole a San Vero Milis: 30-50€/giorno",
     "tel": "",
     "web": "capomannu.it",
-    "orari": "Tutto l'anno. Onda migliore: ottobre-marzo con Maestrale."
+    "orari": "Tutto l'anno. Onda migliore: ottobre-marzo con Maestrale.",
+    "rating": 5,
+    "reviews": 2,
+    "ghours": [
+      "lunedì: 09:00–18:00",
+      "martedì: 09:00–18:00",
+      "mercoledì: 09:00–18:00",
+      "giovedì: 09:00–18:00",
+      "venerdì: 09:00–18:00",
+      "sabato: 09:00–18:00",
+      "domenica: Chiuso"
+    ]
   },
   {
     "id": "is-molas-golf",
@@ -3245,7 +4550,18 @@
     "costo": "Green fee: 60-120€ secondo stagione. Lezione pro: 50€/h. Hotel: 150-350€/notte",
     "tel": "+39 070 9241013",
     "web": "ismolas.it",
-    "orari": "Tutto l'anno. Campo: 7:00-tramonto."
+    "orari": "Tutto l'anno. Campo: 7:00-tramonto.",
+    "rating": 4.5,
+    "reviews": 213,
+    "ghours": [
+      "lunedì: 07:30–20:00",
+      "martedì: 07:30–20:00",
+      "mercoledì: 07:30–20:00",
+      "giovedì: 07:30–20:00",
+      "venerdì: 07:30–20:00",
+      "sabato: 07:30–20:00",
+      "domenica: 07:30–20:00"
+    ]
   },
   {
     "id": "pevero-golf",
@@ -3259,7 +4575,18 @@
     "costo": "Green fee: 120-200€. Noleggio club: 45€. Cart: 35€",
     "tel": "+39 0789 958000",
     "web": "golfpevero.it",
-    "orari": "Aprile-ottobre: 7:00-18:30."
+    "orari": "Aprile-ottobre: 7:00-18:30.",
+    "rating": 4.7,
+    "reviews": 344,
+    "ghours": [
+      "lunedì: 07:00–20:30",
+      "martedì: 07:00–20:30",
+      "mercoledì: 07:00–20:30",
+      "giovedì: 07:00–20:30",
+      "venerdì: 07:00–20:30",
+      "sabato: 07:00–20:30",
+      "domenica: 07:00–20:30"
+    ]
   },
   {
     "id": "monte-corrasi",
@@ -3273,7 +4600,9 @@
     "costo": "Trekking con guida: 60-100€/persona. Via ferrata: 80-130€",
     "tel": "+39 0784 286363",
     "web": "guidebarbagia.com",
-    "orari": "Aprile-novembre. Inverno: solo con guida esperta."
+    "orari": "Aprile-novembre. Inverno: solo con guida esperta.",
+    "rating": 4.9,
+    "reviews": 80
   },
   {
     "id": "cammino-santa-barbara",
@@ -3287,7 +4616,18 @@
     "costo": "Gratuito. Ostello/agriturismo: 20-50€/notte",
     "tel": "+39 0781 22576",
     "web": "camminominerariosantabarbara.it",
-    "orari": "Tutto l'anno. Primavera-autunno: condizioni ideali."
+    "orari": "Tutto l'anno. Primavera-autunno: condizioni ideali.",
+    "rating": 4.7,
+    "reviews": 160,
+    "ghours": [
+      "lunedì: 08:30–12:30, 14:30–16:30",
+      "martedì: 08:30–12:30, 14:30–16:30",
+      "mercoledì: 08:30–12:30, 14:30–16:30",
+      "giovedì: 08:30–12:30, 14:30–16:30",
+      "venerdì: 08:30–12:30, 14:30–16:30",
+      "sabato: Chiuso",
+      "domenica: Chiuso"
+    ]
   },
   {
     "id": "diving-capo-caccia",
@@ -3301,7 +4641,18 @@
     "costo": "Immersione guidata: 50-70€. Battesimo mare: 60€. Corso PADI OWD: 350€",
     "tel": "+39 079 954076",
     "web": "algherodiving.com",
-    "orari": "Aprile-ottobre. Prenotazione consigliata."
+    "orari": "Aprile-ottobre. Prenotazione consigliata.",
+    "rating": 5,
+    "reviews": 320,
+    "ghours": [
+      "lunedì: 08:00–20:00",
+      "martedì: 08:00–20:00",
+      "mercoledì: 08:00–20:00",
+      "giovedì: 08:00–20:00",
+      "venerdì: 08:00–20:00",
+      "sabato: 08:00–20:00",
+      "domenica: 08:00–20:00"
+    ]
   },
   {
     "id": "diving-tavolara",
@@ -3315,7 +4666,18 @@
     "costo": "Immersione: 55-75€. Corso PADI: 350-400€",
     "tel": "+39 0789 40148",
     "web": "subtavolara.it",
-    "orari": "Aprile-ottobre. Riserva zona A: accesso solo con operatori autorizzati."
+    "orari": "Aprile-ottobre. Riserva zona A: accesso solo con operatori autorizzati.",
+    "rating": 4.8,
+    "reviews": 185,
+    "ghours": [
+      "lunedì: 08:00–19:00",
+      "martedì: 08:00–19:00",
+      "mercoledì: 08:00–19:00",
+      "giovedì: 08:00–19:00",
+      "venerdì: 08:00–19:00",
+      "sabato: 08:00–19:00",
+      "domenica: 08:00–19:00"
+    ]
   },
   {
     "id": "kayak-alghero-capo",
@@ -3329,7 +4691,18 @@
     "costo": "Mezza giornata: 55€. Giornata intera: 90€. 2 giorni con bivacco: 180€",
     "tel": "+39 333 258 9641",
     "web": "algherokayak.com",
-    "orari": "Aprile-ottobre: prenotazione obbligatoria."
+    "orari": "Aprile-ottobre: prenotazione obbligatoria.",
+    "rating": 5,
+    "reviews": 78,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "canyoning-supramonte",
@@ -3343,7 +4716,18 @@
     "costo": "Canyon base (4h): 60-80€/persona. Gorropu avanzato: 100-150€",
     "tel": "+39 0784 286363",
     "web": "sardiniawildadventure.com",
-    "orari": "Aprile-ottobre. Primavera: acqua più alta nelle pozze."
+    "orari": "Aprile-ottobre. Primavera: acqua più alta nelle pozze.",
+    "rating": 4.8,
+    "reviews": 15,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "equitazione-sinis",
@@ -3371,7 +4755,18 @@
     "costo": "Volo tandem: 100-130€ · Con video: +20€",
     "tel": "+39 340 123 4567",
     "web": "parapendiosardegna.com",
-    "orari": "Aprile-ottobre con meteo favorevole. Prenotazione obbligatoria."
+    "orari": "Aprile-ottobre con meteo favorevole. Prenotazione obbligatoria.",
+    "rating": 4.9,
+    "reviews": 104,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "mtb-dorgali",
@@ -3385,7 +4780,9 @@
     "costo": "Noleggio MTB: 40-60€/giorno. e-MTB: 70€/giorno. Guida: 80€/giorno",
     "tel": "+39 0784 96469",
     "web": "dorgalioutdoor.com",
-    "orari": "Tutto l'anno. Estate: uscite mattinali. Ottobre-maggio: ideale."
+    "orari": "Tutto l'anno. Estate: uscite mattinali. Ottobre-maggio: ideale.",
+    "rating": 5,
+    "reviews": 12
   },
   {
     "id": "terme-benetutti",
@@ -3399,7 +4796,10 @@
     "costo": "Ingresso terme: 12-18€. Fanghi: 25€. Abbonamenti disponibili.",
     "tel": "+39 079 796621",
     "web": "termebenetutti.it",
-    "orari": "Tutto l'anno: 7:00-20:00."
+    "orari": "Tutto l'anno: 7:00-20:00.",
+    "rating": 4.4,
+    "reviews": 223,
+    "gsummary": "Hotel informale con spa, piscine termali coperta e scoperta, ristorante, campo da tennis e palestra."
   },
   {
     "id": "terme-sardara",
@@ -3413,7 +4813,9 @@
     "costo": "Giornata terme: 20-35€. Hotel: 100-180€/notte con pensione completa",
     "tel": "+39 070 9388001",
     "web": "termedisardara.it",
-    "orari": "Tutto l'anno: 8:00-21:00."
+    "orari": "Tutto l'anno: 8:00-21:00.",
+    "rating": 4.6,
+    "reviews": 11
   },
   {
     "id": "giara-gesturi",
@@ -3427,7 +4829,18 @@
     "costo": "Accesso: 5€ adulti / 3€ bambini. Guide: 50-80€/gruppo.",
     "tel": "+39 070 9364432",
     "web": "giara.it",
-    "orari": "Tutto l'anno. Alba e tramonto: orari migliori per avvistare i cavallini."
+    "orari": "Tutto l'anno. Alba e tramonto: orari migliori per avvistare i cavallini.",
+    "rating": 4.8,
+    "reviews": 1375,
+    "ghours": [
+      "lunedì: 08:00–20:00",
+      "martedì: 08:00–20:00",
+      "mercoledì: 08:00–20:00",
+      "giovedì: 08:00–20:00",
+      "venerdì: 08:00–20:00",
+      "sabato: 08:00–20:00",
+      "domenica: 08:00–20:00"
+    ]
   },
   {
     "id": "altopiano-golgo",
@@ -3441,7 +4854,18 @@
     "costo": "Accesso gratuito. Agriturismo: 25-35€ pranzo",
     "tel": "+39 0782 610823",
     "web": "baunei.net",
-    "orari": "Tutto l'anno. Estate: evitare ore centrali (caldo secco)."
+    "orari": "Tutto l'anno. Estate: evitare ore centrali (caldo secco).",
+    "rating": 4.7,
+    "reviews": 336,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "supramonte",
@@ -3455,7 +4879,9 @@
     "costo": "Accesso libero. Guide: 80-150€/gruppo/giorno",
     "tel": "+39 339 712 6111",
     "web": "supramontesardinia.com",
-    "orari": "Aperto tutto l'anno. Inverno: alcune zone inaccessibili per fango/neve."
+    "orari": "Aperto tutto l'anno. Inverno: alcune zone inaccessibili per fango/neve.",
+    "rating": 5,
+    "reviews": 12
   },
   {
     "id": "costa-verde-natura",
@@ -3483,7 +4909,19 @@
     "costo": "Barca A/R: 15-20€. Diving: 50-70€",
     "tel": "+39 0789 203013",
     "web": "ampdimare-tavolara.it",
-    "orari": "Isola: aprile-ottobre. Riserva marina: sempre aperta."
+    "orari": "Isola: aprile-ottobre. Riserva marina: sempre aperta.",
+    "rating": 4.7,
+    "reviews": 2988,
+    "ghours": [
+      "lunedì: 10:00–12:00",
+      "martedì: 10:00–12:00, 16:00–18:00",
+      "mercoledì: 10:00–12:00",
+      "giovedì: 10:00–12:00, 16:00–18:00",
+      "venerdì: 10:00–12:00",
+      "sabato: Chiuso",
+      "domenica: Chiuso"
+    ],
+    "gsummary": "Paesaggio marino protetto composta da baie e isole con aree attrezzate per nuoto, immersioni e pesca sportiva."
   },
   {
     "id": "mal-di-ventre",
@@ -3497,7 +4935,10 @@
     "costo": "Barca A/R: 20-30€/persona",
     "tel": "",
     "web": "ampsinis.it",
-    "orari": "Aprile-ottobre. Numero barche contingentato (autorizzazione parco)."
+    "orari": "Aprile-ottobre. Numero barche contingentato (autorizzazione parco).",
+    "rating": 4.7,
+    "reviews": 253,
+    "gsummary": "Isola granitica nota per le rovine romane, il faro e la storia di potenziale micro-nazione."
   },
   {
     "id": "foresta-montes",
@@ -3511,7 +4952,19 @@
     "costo": "Gratuito",
     "tel": "",
     "web": "comune.orgosolo.nu.it",
-    "orari": "Tutto l'anno. Inverno: possibili neve e strade impraticabili."
+    "orari": "Tutto l'anno. Inverno: possibili neve e strade impraticabili.",
+    "rating": 4.7,
+    "reviews": 468,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ],
+    "gsummary": "Foresta nazionale caratterizzata da monti e canyon con sentieri escursionistici, diverse rovine antiche e cinghiali selvatici."
   },
   {
     "id": "foresta-burgos",
@@ -3525,7 +4978,9 @@
     "costo": "Gratuito",
     "tel": "",
     "web": "",
-    "orari": "Sempre aperto."
+    "orari": "Sempre aperto.",
+    "rating": 4.4,
+    "reviews": 133
   },
   {
     "id": "foresta-settefratelli",
@@ -3539,7 +4994,9 @@
     "costo": "Gratuito",
     "tel": "+39 070 995052",
     "web": "www.sardegnaambiente.it/j/v/1189?s=7448&v=2&c=7216&t=1",
-    "orari": "Sempre aperto. Autunno: foliage sugherete."
+    "orari": "Sempre aperto. Autunno: foliage sugherete.",
+    "rating": 3.7,
+    "reviews": 7
   },
   {
     "id": "foresta-pixinamanna",
@@ -3567,7 +5024,9 @@
     "costo": "Gratuito",
     "tel": "",
     "web": "ampsinis.it",
-    "orari": "Sempre aperto. Fenicotteri: settembre-aprile."
+    "orari": "Sempre aperto. Fenicotteri: settembre-aprile.",
+    "rating": 4.6,
+    "reviews": 36
   },
   {
     "id": "stagno-mistras",
@@ -3581,7 +5040,9 @@
     "costo": "Gratuito",
     "tel": "",
     "web": "",
-    "orari": "Sempre aperto."
+    "orari": "Sempre aperto.",
+    "rating": 4.3,
+    "reviews": 6
   },
   {
     "id": "lago-omodeo",
@@ -3595,7 +5056,10 @@
     "costo": "Accesso gratuito. Licenza pesca: 10€/giorno",
     "tel": "",
     "web": "",
-    "orari": "Sempre aperto."
+    "orari": "Sempre aperto.",
+    "rating": 4.5,
+    "reviews": 94,
+    "gsummary": "Suggestivo lago artificiale di 29 km² circondato da montagne che offre attività di canoismo, vela e pesca."
   },
   {
     "id": "grotta-ispinigoli",
@@ -3609,7 +5073,19 @@
     "costo": "9€ adulti / 5€ bambini 6-12 / gratuito <6",
     "tel": "+39 0784 96243",
     "web": "grottaispinigoli.com",
-    "orari": "Tutto l'anno 9:00-18:00. Estate fino alle 19:00."
+    "orari": "Tutto l'anno 9:00-18:00. Estate fino alle 19:00.",
+    "rating": 4.6,
+    "reviews": 3350,
+    "ghours": [
+      "lunedì: 10:00–18:00",
+      "martedì: 10:00–18:00",
+      "mercoledì: 10:00–18:00",
+      "giovedì: 10:00–18:00",
+      "venerdì: 10:00–18:00",
+      "sabato: 10:00–18:00",
+      "domenica: 10:00–18:00"
+    ],
+    "gsummary": "Sono disponibili visite guidate a questa grotta con enormi stalattiti e stalagmiti."
   },
   {
     "id": "grotta-is-zuddas",
@@ -3623,7 +5099,19 @@
     "costo": "11€ adulti / 7€ bambini 6-14 / gratuito <6",
     "tel": "+39 0781 955470",
     "web": "grottaiszuddas.com",
-    "orari": "Estate: 10:00-19:00. Inverno: solo su prenotazione gruppi."
+    "orari": "Estate: 10:00-19:00. Inverno: solo su prenotazione gruppi.",
+    "rating": 4.8,
+    "reviews": 3063,
+    "ghours": [
+      "lunedì: 10:00–12:30, 14:30–17:15",
+      "martedì: 10:00–12:30, 14:30–17:15",
+      "mercoledì: 10:00–12:30, 14:30–17:15",
+      "giovedì: 10:30–12:30, 14:30–17:15",
+      "venerdì: 10:00–12:30, 14:30–17:15",
+      "sabato: 10:00–12:30, 14:30–17:15",
+      "domenica: 10:00–12:30, 14:30–17:15"
+    ],
+    "gsummary": "Sistema di grotte calcaree con tour guidati tra formazioni uniche, come stalattiti ed elictiti."
   },
   {
     "id": "grotta-su-marmuri",
@@ -3637,7 +5125,19 @@
     "costo": "10€ adulti / 6€ bambini",
     "tel": "+39 0782 799029",
     "web": "grottasumarmuri.it",
-    "orari": "Tutto l'anno. Estate: visite ogni ora 9:00-19:00. Inverno: 10:00-17:00."
+    "orari": "Tutto l'anno. Estate: visite ogni ora 9:00-19:00. Inverno: 10:00-17:00.",
+    "rating": 4.7,
+    "reviews": 3292,
+    "ghours": [
+      "lunedì: 11:00–18:30",
+      "martedì: 11:00–18:30",
+      "mercoledì: 11:00–18:30",
+      "giovedì: 11:00–18:30",
+      "venerdì: 11:00–18:30",
+      "sabato: 11:00–18:30",
+      "domenica: 11:00–18:30"
+    ],
+    "gsummary": "Tour guidati attraverso caverne sotterranee con laghi e formazioni rocciose dai colori vivaci."
   },
   {
     "id": "gola-rio-picocca",
@@ -3651,7 +5151,9 @@
     "costo": "Gratuito",
     "tel": "",
     "web": "",
-    "orari": "Tutto l'anno. Primavera-autunno: ideale."
+    "orari": "Tutto l'anno. Primavera-autunno: ideale.",
+    "rating": 4.8,
+    "reviews": 29
   },
   {
     "id": "penisola-sinis",
@@ -3679,7 +5181,19 @@
     "costo": "8€ adulti / 4€ bambini 6-12 / gratuito <6",
     "tel": "+39 0782 847269",
     "web": "nuragheArrubiu.it",
-    "orari": "Mar-dom 9:30-17:30 (estate fino alle 19:00). Lun chiuso."
+    "orari": "Mar-dom 9:30-17:30 (estate fino alle 19:00). Lun chiuso.",
+    "rating": 4.7,
+    "reviews": 1230,
+    "ghours": [
+      "lunedì: 09:00–20:00",
+      "martedì: 09:00–20:00",
+      "mercoledì: 09:00–20:00",
+      "giovedì: 09:00–20:00",
+      "venerdì: 09:00–20:00",
+      "sabato: 09:00–20:00",
+      "domenica: 09:00–20:00"
+    ],
+    "gsummary": "Rovine restaurate di insediamento pre-romano con tour guidati delle torri di pietra, dei cortili e delle costruzioni."
   },
   {
     "id": "nuraghe-genna-maria",
@@ -3693,7 +5207,18 @@
     "costo": "6€ adulti (museo incluso)",
     "tel": "+39 070 9309026",
     "web": "museovillanovaforru.it",
-    "orari": "Tutti i giorni 9:00-13:00 / 14:00-18:00 (estate 9:00-20:00)."
+    "orari": "Tutti i giorni 9:00-13:00 / 14:00-18:00 (estate 9:00-20:00).",
+    "rating": 4.8,
+    "reviews": 375,
+    "ghours": [
+      "lunedì: Chiuso",
+      "martedì: 09:30–13:00, 15:30–18:00",
+      "mercoledì: 09:30–13:00, 15:30–18:00",
+      "giovedì: 09:30–13:00, 15:30–18:00",
+      "venerdì: 09:30–13:00, 15:30–18:00",
+      "sabato: 09:30–13:00, 15:30–18:00",
+      "domenica: 09:30–13:00, 15:30–18:00"
+    ]
   },
   {
     "id": "santa-cristina",
@@ -3707,7 +5232,18 @@
     "costo": "5€ adulti / gratuito bambini <6",
     "tel": "+39 0785 55438",
     "web": "santacristinapozzosacro.it",
-    "orari": "Estate: 9:00-20:00. Inverno: 9:00-17:00. Tutto l'anno."
+    "orari": "Estate: 9:00-20:00. Inverno: 9:00-17:00. Tutto l'anno.",
+    "rating": 4.8,
+    "reviews": 4756,
+    "ghours": [
+      "lunedì: 08:30–20:30",
+      "martedì: 08:30–20:30",
+      "mercoledì: 08:30–20:30",
+      "giovedì: 08:30–20:30",
+      "venerdì: 08:30–20:30",
+      "sabato: 08:30–20:30",
+      "domenica: 08:30–20:30"
+    ]
   },
   {
     "id": "nuraghe-is-paras",
@@ -3721,7 +5257,18 @@
     "costo": "3€",
     "tel": "+39 0782 802640",
     "web": "prolocoisili.it",
-    "orari": "Estate: 9:00-13:00 / 15:00-19:00. Inverno: solo mattina. Prenotare."
+    "orari": "Estate: 9:00-13:00 / 15:00-19:00. Inverno: solo mattina. Prenotare.",
+    "rating": 4.6,
+    "reviews": 292,
+    "ghours": [
+      "lunedì: Chiuso",
+      "martedì: 10:00–13:00, 15:30–18:30",
+      "mercoledì: 10:00–13:00, 15:30–18:30",
+      "giovedì: 10:00–13:00, 15:30–18:30",
+      "venerdì: 10:00–13:00, 15:30–18:30",
+      "sabato: 10:00–13:00, 15:30–18:30",
+      "domenica: 10:00–13:00, 15:30–18:30"
+    ]
   },
   {
     "id": "tiscali",
@@ -3749,7 +5296,18 @@
     "costo": "Gratuito",
     "tel": "",
     "web": "www.donnanuragica.com/siti-archeologici-sardi/nuraghi/bortigale-bortigali-nuraghe-orolo",
-    "orari": "Sempre aperto."
+    "orari": "Sempre aperto.",
+    "rating": 4.9,
+    "reviews": 89,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "montessu",
@@ -3763,7 +5321,18 @@
     "costo": "4€ adulti / gratuito <6",
     "tel": "+39 0781 955051",
     "web": "museoarcheologicosulcis.it",
-    "orari": "Mar-dom 9:00-13:00 / 15:00-18:00 (estate fino alle 20:00). Lun chiuso."
+    "orari": "Mar-dom 9:00-13:00 / 15:00-18:00 (estate fino alle 20:00). Lun chiuso.",
+    "rating": 4.8,
+    "reviews": 24,
+    "ghours": [
+      "lunedì: Chiuso",
+      "martedì: 10:00–20:00",
+      "mercoledì: 10:00–20:00",
+      "giovedì: 10:00–20:00",
+      "venerdì: 10:00–20:00",
+      "sabato: 10:00–20:00",
+      "domenica: 10:00–20:00"
+    ]
   },
   {
     "id": "sant-andrea-priu",
@@ -3777,7 +5346,18 @@
     "costo": "5€ adulti",
     "tel": "+39 079 867126",
     "web": "domusdejanasantandreapriu.com",
-    "orari": "Tutti i giorni 9:30-12:30 / 14:30-17:30. Estate: 9:00-19:00."
+    "orari": "Tutti i giorni 9:30-12:30 / 14:30-17:30. Estate: 9:00-19:00.",
+    "rating": 4.6,
+    "reviews": 716,
+    "ghours": [
+      "lunedì: 10:00–19:00",
+      "martedì: 10:00–19:00",
+      "mercoledì: 10:00–19:00",
+      "giovedì: 10:00–19:00",
+      "venerdì: 10:00–19:00",
+      "sabato: 10:00–19:00",
+      "domenica: 10:00–19:00"
+    ]
   },
   {
     "id": "tombe-giganti-madau",
@@ -3791,7 +5371,18 @@
     "costo": "Gratuito",
     "tel": "",
     "web": "www.sardegnaturismo.it/it/esplora/necropoli-di-madau",
-    "orari": "Sempre aperto. Inverno: strada può essere innevata."
+    "orari": "Sempre aperto. Inverno: strada può essere innevata.",
+    "rating": 4.6,
+    "reviews": 152,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "pozzo-su-tempiesu",
@@ -3805,7 +5396,18 @@
     "costo": "Gratuito",
     "tel": "+39 328 756 5148",
     "web": "www.sutempiesu.it",
-    "orari": "Sempre aperto."
+    "orari": "Sempre aperto.",
+    "rating": 4.9,
+    "reviews": 679,
+    "ghours": [
+      "lunedì: 09:00–19:00",
+      "martedì: 09:00–19:00",
+      "mercoledì: 09:00–19:00",
+      "giovedì: 09:00–19:00",
+      "venerdì: 09:00–19:00",
+      "sabato: 09:00–19:00",
+      "domenica: 09:00–19:00"
+    ]
   },
   {
     "id": "pozzo-sa-testa",
@@ -3819,7 +5421,9 @@
     "costo": "Gratuito",
     "tel": "",
     "web": "",
-    "orari": "Tutto l'anno: alba-tramonto."
+    "orari": "Tutto l'anno: alba-tramonto.",
+    "rating": 4.3,
+    "reviews": 157
   },
   {
     "id": "fordongianus",
@@ -3833,7 +5437,18 @@
     "costo": "4€ adulti / gratuito bambini <10",
     "tel": "+39 0783 609024",
     "web": "comune.fordongianus.or.it",
-    "orari": "Mar-dom 9:30-17:30 (estate 9:00-19:00). Lun chiuso."
+    "orari": "Mar-dom 9:30-17:30 (estate 9:00-19:00). Lun chiuso.",
+    "rating": 4.6,
+    "reviews": 1431,
+    "ghours": [
+      "lunedì: 09:30–19:30",
+      "martedì: 09:30–19:30",
+      "mercoledì: 09:30–19:30",
+      "giovedì: 09:30–19:30",
+      "venerdì: 09:30–19:30",
+      "sabato: 09:30–19:30",
+      "domenica: 09:30–19:30"
+    ]
   },
   {
     "id": "sulcis-sant-antioco",
@@ -3847,7 +5462,18 @@
     "costo": "Museo: 5€ adulti. Siti: 5€ combinato",
     "tel": "+39 0781 83290",
     "web": "museoarcheologicosulcis.it",
-    "orari": "Mar-dom 9:00-13:00 / 15:30-19:00."
+    "orari": "Mar-dom 9:00-13:00 / 15:30-19:00.",
+    "rating": 4.6,
+    "reviews": 254,
+    "ghours": [
+      "lunedì: 09:00–19:00",
+      "martedì: 09:00–19:00",
+      "mercoledì: 09:00–19:00",
+      "giovedì: 09:00–19:00",
+      "venerdì: 09:00–19:00",
+      "sabato: 09:00–19:00",
+      "domenica: 09:00–19:00"
+    ]
   },
   {
     "id": "antas",
@@ -3889,7 +5515,9 @@
     "costo": "Gratuito",
     "tel": "",
     "web": "comune.guspini.su.it",
-    "orari": "Sito: accesso libero. Museo Guspini: orari comunali."
+    "orari": "Sito: accesso libero. Museo Guspini: orari comunali.",
+    "rating": 3.6,
+    "reviews": 26
   },
   {
     "id": "monte-d-accoddi",
@@ -3903,7 +5531,18 @@
     "costo": "4€ adulti / gratuito <10",
     "tel": "+39 079 2043200",
     "web": "sardegnaturismo.it",
-    "orari": "Mer-dom 9:00-13:00 / 14:00-17:30."
+    "orari": "Mer-dom 9:00-13:00 / 14:00-17:30.",
+    "rating": 4.7,
+    "reviews": 123,
+    "ghours": [
+      "lunedì: Chiuso",
+      "martedì: 10:00–18:00",
+      "mercoledì: 10:00–18:00",
+      "giovedì: 10:00–18:00",
+      "venerdì: 10:00–18:00",
+      "sabato: 10:00–18:00",
+      "domenica: 10:00–18:00"
+    ]
   },
   {
     "id": "dolmen-sa-coveccada",
@@ -3917,7 +5556,9 @@
     "costo": "Gratuito",
     "tel": "",
     "web": "www.facebook.com/litterasantigas",
-    "orari": "Sempre aperto."
+    "orari": "Sempre aperto.",
+    "rating": 3.5,
+    "reviews": 68
   },
   {
     "id": "menhir-laconi",
@@ -3945,7 +5586,19 @@
     "costo": "4€ adulti / gratuito under 18 e ogni prima domenica del mese",
     "tel": "+39 079 272203",
     "web": "museoarcheologicosassari.beniculturali.it",
-    "orari": "Mar-dom 9:00-20:00. Lun chiuso."
+    "orari": "Mar-dom 9:00-20:00. Lun chiuso.",
+    "rating": 4.1,
+    "reviews": 588,
+    "ghours": [
+      "lunedì: Chiuso",
+      "martedì: 09:00–13:45",
+      "mercoledì: 14:00–19:30",
+      "giovedì: 09:00–13:45",
+      "venerdì: 14:00–19:30",
+      "sabato: 09:00–13:45",
+      "domenica: Chiuso"
+    ],
+    "gsummary": "Tessuti, gioielli e opere d'arte di diversi periodi della storia sarda esposti in un edificio in stile neoclassico."
   },
   {
     "id": "ospedale-olbia",
@@ -3959,7 +5612,18 @@
     "costo": "PS: gratuito per UE con TEAM. Non UE: verificare assicurazione",
     "tel": "+39 0789 552522 (PS)",
     "web": "aslgallura.sardegnasalute.it",
-    "orari": "PS: 24h/7. Guardia medica turistica: estate 8:00–20:00."
+    "orari": "PS: 24h/7. Guardia medica turistica: estate 8:00–20:00.",
+    "rating": 2.7,
+    "reviews": 409,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "ospedale-alghero",
@@ -3973,7 +5637,18 @@
     "costo": "PS gratuito per UE con TEAM",
     "tel": "+39 079 996 417",
     "web": "www.aslsassari.it/index.php?xsl=21&s=1&v=9&c=2408&esn=Primo%20piano&na=1&n=50",
-    "orari": "PS: 24h/7."
+    "orari": "PS: 24h/7.",
+    "rating": 3.9,
+    "reviews": 88,
+    "ghours": [
+      "lunedì: Chiuso",
+      "martedì: 08:30–12:00, 14:30–16:30",
+      "mercoledì: 08:30–23:30",
+      "giovedì: Chiuso",
+      "venerdì: 08:30–23:30",
+      "sabato: Chiuso",
+      "domenica: Chiuso"
+    ]
   },
   {
     "id": "spiaggia-pittulongu",
@@ -3987,7 +5662,10 @@
     "costo": "Ombrellone + 2 sdraio: 15-25€/giorno. Spiaggia libera gratuita.",
     "tel": "",
     "web": "",
-    "orari": "Spiaggia aperta tutto l'anno. Stabilimenti: maggio-settembre."
+    "orari": "Spiaggia aperta tutto l'anno. Stabilimenti: maggio-settembre.",
+    "rating": 4.5,
+    "reviews": 2044,
+    "gsummary": "Piccola spiaggia sabbiosa che offre lettini prendisole, snack, snorkeling, immersioni e surf."
   },
   {
     "id": "spiaggia-bados",
@@ -4001,7 +5679,9 @@
     "costo": "Accesso libero. Ombrellone su richiesta: 12-20€",
     "tel": "",
     "web": "",
-    "orari": "Aperta tutto l'anno."
+    "orari": "Aperta tutto l'anno.",
+    "rating": 4.6,
+    "reviews": 388
   },
   {
     "id": "spiaggia-mare-e-rocce",
@@ -4015,7 +5695,9 @@
     "costo": "Gratuito",
     "tel": "",
     "web": "",
-    "orari": "Aperta tutto l'anno."
+    "orari": "Aperta tutto l'anno.",
+    "rating": 4.3,
+    "reviews": 504
   },
   {
     "id": "spiaggia-dello-squalo",
@@ -4029,7 +5711,9 @@
     "costo": "Spiaggia libera. Parcheggio 2€/h",
     "tel": "",
     "web": "",
-    "orari": "Aperta tutto l'anno."
+    "orari": "Aperta tutto l'anno.",
+    "rating": 4.4,
+    "reviews": 407
   },
   {
     "id": "spiaggia-le-saline",
@@ -4057,7 +5741,9 @@
     "costo": "Gratuito",
     "tel": "",
     "web": "",
-    "orari": "Aperta tutto l'anno."
+    "orari": "Aperta tutto l'anno.",
+    "rating": 4.6,
+    "reviews": 710
   },
   {
     "id": "spiaggia-del-dottore",
@@ -4071,7 +5757,10 @@
     "costo": "Gratuito",
     "tel": "",
     "web": "www.sardegnaturismo.it",
-    "orari": "Aperta tutto l'anno."
+    "orari": "Aperta tutto l'anno.",
+    "rating": 4.7,
+    "reviews": 840,
+    "gsummary": "Cala riparata, spesso raggiunta con un sentiero tra colline rocciose, nota per acque turchesi e viste su isola."
   },
   {
     "id": "spiaggia-porto-istana",
@@ -4085,7 +5774,9 @@
     "costo": "Spiaggia libera gratuita",
     "tel": "",
     "web": "",
-    "orari": "Aperta tutto l'anno."
+    "orari": "Aperta tutto l'anno.",
+    "rating": 4.5,
+    "reviews": 4875
   },
   {
     "id": "museo-archeologico-olbia",
@@ -4099,7 +5790,10 @@
     "costo": "Gratuito. Prenotazione per gruppi >30: +39 0789 28290",
     "tel": "+39 0789 28290",
     "web": "comune.olbia.ot.it",
-    "orari": "Mar–Sab: 8:00–13:00 / 16:00–19:00. Chiuso dom e lun."
+    "orari": "Mar–Sab: 8:00–13:00 / 16:00–19:00. Chiuso dom e lun.",
+    "rating": 4.1,
+    "reviews": 1673,
+    "gsummary": "Museo archeologico che espone antiche navi romane e manufatti locali in uno spazio moderno."
   },
   {
     "id": "olbia-arena",
@@ -4113,7 +5807,9 @@
     "costo": "Variabile per evento. Red Valley: 20-60€/giorno",
     "tel": "",
     "web": "redvalleyfestival.it",
-    "orari": "Solo durante eventi. Red Valley Festival: luglio-agosto."
+    "orari": "Solo durante eventi. Red Valley Festival: luglio-agosto.",
+    "rating": 4.5,
+    "reviews": 497
   },
   {
     "id": "musmat-via-roma",
@@ -4127,7 +5823,9 @@
     "costo": "Corsi: variabile. Concerti: spesso gratuiti o 5-10€",
     "tel": "+39 0789 21650",
     "web": "",
-    "orari": "Lun-Sab: 9:00-20:00. Concerti: consulta il programma."
+    "orari": "Lun-Sab: 9:00-20:00. Concerti: consulta il programma.",
+    "rating": 5,
+    "reviews": 9
   },
   {
     "id": "archivio-mario-cervo",
@@ -4141,7 +5839,19 @@
     "costo": "Gratuito",
     "tel": "+39 393 961 1126",
     "web": "www.archiviomariocervo.it",
-    "orari": "Mar-Sab: 10:00-13:00 / 16:00-19:00. Chiuso lun e dom."
+    "orari": "Mar-Sab: 10:00-13:00 / 16:00-19:00. Chiuso lun e dom.",
+    "rating": 4.7,
+    "reviews": 58,
+    "ghours": [
+      "lunedì: Chiuso",
+      "martedì: 16:00–19:00",
+      "mercoledì: 16:00–19:00",
+      "giovedì: 16:00–19:00",
+      "venerdì: Chiuso",
+      "sabato: Chiuso",
+      "domenica: Chiuso"
+    ],
+    "gsummary": "Museo suggestivo che ripercorre la storia della musica sarda attraverso mostre, registrazioni ed eventi culturali."
   },
   {
     "id": "chiesa-cabu-abbas",
@@ -4155,7 +5865,18 @@
     "costo": "Gratuito",
     "tel": "",
     "web": "www.sardegnaturismo.it/it/esplora/riu-mulinu",
-    "orari": "Sempre aperto. Evitare ore centrali in estate."
+    "orari": "Sempre aperto. Evitare ore centrali in estate.",
+    "rating": 4.3,
+    "reviews": 304,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "chiesa-san-paolo-apostolo",
@@ -4169,7 +5890,9 @@
     "costo": "Gratuito",
     "tel": "+39 0789 22234",
     "web": "",
-    "orari": "Tutti i giorni: 8:30-12:00 / 17:00-19:30."
+    "orari": "Tutti i giorni: 8:30-12:00 / 17:00-19:30.",
+    "rating": 4.5,
+    "reviews": 631
   },
   {
     "id": "chiesa-sacra-famiglia",
@@ -4197,7 +5920,19 @@
     "costo": "Gratuito",
     "tel": "+39 0789 52000",
     "web": "",
-    "orari": "Sempre aperto."
+    "orari": "Sempre aperto.",
+    "rating": 4.5,
+    "reviews": 3867,
+    "ghours": [
+      "lunedì: 06:00–22:00",
+      "martedì: 06:00–22:00",
+      "mercoledì: 06:00–22:00",
+      "giovedì: 06:00–22:00",
+      "venerdì: 06:00–22:00",
+      "sabato: 06:00–22:00",
+      "domenica: 06:00–22:00"
+    ],
+    "gsummary": "Spazio verde cittadino ricco di alberi con anfiteatro, prati, laghetti e impianti sportivi."
   },
   {
     "id": "amp-tavolara",
@@ -4225,7 +5960,9 @@
     "costo": "Accesso gratuito",
     "tel": "",
     "web": "geovillage.it",
-    "orari": "Centro commerciale: lun-sab 9:00-21:00, dom 10:00-21:00."
+    "orari": "Centro commerciale: lun-sab 9:00-21:00, dom 10:00-21:00.",
+    "rating": 3.7,
+    "reviews": 9
   },
   {
     "id": "universita-economia-turismo",
@@ -4267,7 +6004,18 @@
     "costo": "Gratuito",
     "tel": "+39 0789 22221",
     "web": "comune.olbia.ot.it",
-    "orari": "Lun-Ven: 8:30-12:30. Mar e Gio anche: 15:00-17:00."
+    "orari": "Lun-Ven: 8:30-12:30. Mar e Gio anche: 15:00-17:00.",
+    "rating": 4,
+    "reviews": 128,
+    "ghours": [
+      "lunedì: 08:00–13:00, 16:00–18:00",
+      "martedì: 08:00–13:00, 16:00–18:00",
+      "mercoledì: 08:00–13:00, 16:00–18:00",
+      "giovedì: 08:00–13:00, 16:00–18:00",
+      "venerdì: 08:00–13:00, 16:00–18:00",
+      "sabato: 08:00–13:00",
+      "domenica: Chiuso"
+    ]
   },
   {
     "id": "alma-resort",
@@ -4281,7 +6029,19 @@
     "costo": "",
     "tel": "+39 070 994 9167",
     "web": "www.almaresortsardegna.it/it/benvenuti",
-    "orari": ""
+    "orari": "",
+    "rating": 4.2,
+    "reviews": 809,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ],
+    "gsummary": "Hotel informale con ristorante, bar, piscina scoperta, miniclub e accesso alla spiaggia."
   },
   {
     "id": "arbatasar",
@@ -4295,7 +6055,10 @@
     "costo": "",
     "tel": "+39 0782 651800",
     "web": "https://www.arbatasar.it/",
-    "orari": ""
+    "orari": "",
+    "rating": 4.5,
+    "reviews": 489,
+    "gsummary": "Hotel elegante con piscina scoperta, cantina, ristorante e colazione."
   },
   {
     "id": "bed-and-breakfast-da-giovanna",
@@ -4323,7 +6086,9 @@
     "costo": "",
     "tel": "+39 340 5519202",
     "web": "http://www.supasu.com",
-    "orari": ""
+    "orari": "",
+    "rating": 4.6,
+    "reviews": 25
   },
   {
     "id": "domomea",
@@ -4337,7 +6102,19 @@
     "costo": "",
     "tel": "+39 079 973 2011",
     "web": "http://www.domomeagroup.com/",
-    "orari": ""
+    "orari": "",
+    "rating": 4.6,
+    "reviews": 355,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ],
+    "gsummary": "Hotel elegante con terrazza panoramica dotata di piscina e idromassaggio, area lounge e colazione inclusa."
   },
   {
     "id": "domus-de-janas",
@@ -4351,7 +6128,10 @@
     "costo": "",
     "tel": "+39 0782 28081",
     "web": "www.domusdejanas.com",
-    "orari": ""
+    "orari": "",
+    "rating": 4.6,
+    "reviews": 570,
+    "gsummary": "Sistemazioni confortevoli, alcune affacciate sul mare, in hotel informale con ristoranti e piscina scoperta."
   },
   {
     "id": "hotel-anticos-palathos",
@@ -4365,7 +6145,19 @@
     "costo": "",
     "tel": "+39 0784 98604",
     "web": "https://www.anticospalathos.com/",
-    "orari": ""
+    "orari": "",
+    "rating": 4.8,
+    "reviews": 161,
+    "ghours": [
+      "lunedì: 08:00–20:00",
+      "martedì: 08:00–20:00",
+      "mercoledì: 08:00–20:00",
+      "giovedì: 08:00–20:00",
+      "venerdì: 08:00–20:00",
+      "sabato: 08:00–20:00",
+      "domenica: 08:00–20:00"
+    ],
+    "gsummary": "Confortevole con sole suite in edificio pittoresco in pietra con camere accoglienti, colazione inclusa e bar."
   },
   {
     "id": "hotel-ariadimari",
@@ -4379,7 +6171,10 @@
     "costo": "",
     "tel": "+39 079 583119",
     "web": "https://www.ariadimari.it/",
-    "orari": ""
+    "orari": "",
+    "rating": 4.5,
+    "reviews": 392,
+    "gsummary": "Hotel minimalista con camere ampie, colazione inclusa, piscina scoperta e terrazza solarium."
   },
   {
     "id": "hotel-balocco",
@@ -4407,7 +6202,19 @@
     "costo": "",
     "tel": "+39 0784 997028",
     "web": "www.baiamarina.com",
-    "orari": ""
+    "orari": "",
+    "rating": 4.2,
+    "reviews": 553,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ],
+    "gsummary": "Hotel confortevole con Wi-Fi, colazione e trasferimenti per la spiaggia inclusi, ristorante e bar della hall."
   },
   {
     "id": "hotel-bellavista",
@@ -4435,7 +6242,18 @@
     "costo": "",
     "tel": "+39 0789 82790",
     "web": "",
-    "orari": ""
+    "orari": "",
+    "rating": 4.5,
+    "reviews": 269,
+    "ghours": [
+      "lunedì: 08:00–00:00",
+      "martedì: 08:00–00:00",
+      "mercoledì: 08:00–00:00",
+      "giovedì: 08:00–00:00",
+      "venerdì: 08:00–00:00",
+      "sabato: 08:00–00:00",
+      "domenica: 08:00–00:00"
+    ]
   },
   {
     "id": "hotel-cavour",
@@ -4449,7 +6267,10 @@
     "costo": "",
     "tel": "+39 0789 204033",
     "web": "https://www.hotelcavourolbia.it/",
-    "orari": ""
+    "orari": "",
+    "rating": 3.9,
+    "reviews": 430,
+    "gsummary": "Hotel sobrio con camere semplici, bar informale e WiFi gratuito."
   },
   {
     "id": "hotel-centrale",
@@ -4463,7 +6284,10 @@
     "costo": "",
     "tel": "+39 0789 23017",
     "web": "www.hotelcentraleolbia.com",
-    "orari": ""
+    "orari": "",
+    "rating": 4.2,
+    "reviews": 270,
+    "gsummary": "Camere essenziali in hotel accogliente con colazione e WiFi inclusi."
   },
   {
     "id": "hotel-corte-bianca",
@@ -4477,7 +6301,19 @@
     "costo": "",
     "tel": "+39 0782 24031",
     "web": "www.hotelcortebianca.it",
-    "orari": ""
+    "orari": "",
+    "rating": 4.7,
+    "reviews": 814,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ],
+    "gsummary": "Hotel informale con ristorante a buffet, piscina scoperta e lido privato in spiaggia."
   },
   {
     "id": "hotel-da-cesare",
@@ -4505,7 +6341,19 @@
     "costo": "",
     "tel": "+39 329 337 6026",
     "web": "https://www.hotelgorropu.com/",
-    "orari": ""
+    "orari": "",
+    "rating": 4.5,
+    "reviews": 320,
+    "ghours": [
+      "lunedì: 08:00–22:00",
+      "martedì: 08:00–22:00",
+      "mercoledì: 08:00–22:00",
+      "giovedì: 08:00–22:00",
+      "venerdì: 08:00–22:00",
+      "sabato: 08:00–22:00",
+      "domenica: 08:00–22:00"
+    ],
+    "gsummary": "Camere semplici in hotel sobrio con vista sulle montagne e ristorante informale."
   },
   {
     "id": "hotel-hinterland",
@@ -4519,7 +6367,10 @@
     "costo": "",
     "tel": "+39 070 853009",
     "web": "",
-    "orari": ""
+    "orari": "",
+    "rating": 3.5,
+    "reviews": 263,
+    "gsummary": "Hotel confortevole che offre camere sobrie, ristorante, area lounge con pianoforte e piscina scoperta."
   },
   {
     "id": "hotel-italia",
@@ -4561,7 +6412,10 @@
     "costo": "",
     "tel": "+39 0789 704013",
     "web": "www.hotelledune.it",
-    "orari": ""
+    "orari": "",
+    "rating": 4.1,
+    "reviews": 445,
+    "gsummary": "Hotel informale con ristorante e spiaggia privata, oltre a colazione, parcheggio e WiFi inclusi."
   },
   {
     "id": "hotel-luna-lughente",
@@ -4575,7 +6429,19 @@
     "costo": "",
     "tel": "+39 0789 57521",
     "web": "www.lunalughente.it",
-    "orari": ""
+    "orari": "",
+    "rating": 4.5,
+    "reviews": 873,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ],
+    "gsummary": "Hotel moderno con ristorante e bar, oltre a piscina scoperta con vista panoramica sul mare."
   },
   {
     "id": "hotel-mannois",
@@ -4589,7 +6455,10 @@
     "costo": "",
     "tel": "+39 0784 991040",
     "web": "https://www.mannois.it/",
-    "orari": ""
+    "orari": "",
+    "rating": 4.4,
+    "reviews": 363,
+    "gsummary": "Incantevole hotel in pietra con camere eleganti, bar e colazione inclusa."
   },
   {
     "id": "hotel-maria-rosaria",
@@ -4603,7 +6472,19 @@
     "costo": "",
     "tel": "+39 0784 98657",
     "web": "https://www.itihotels.it/marinarosaria-HomePageit-5.html",
-    "orari": ""
+    "orari": "",
+    "rating": 4.3,
+    "reviews": 980,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ],
+    "gsummary": "Hotel moderno con camere informali, oltre a piscina scoperta, ristorante e colazione inclusa."
   },
   {
     "id": "hotel-martini",
@@ -4617,7 +6498,10 @@
     "costo": "",
     "tel": "+39 0789 26066",
     "web": "www.hotelmartiniolbia.com",
-    "orari": ""
+    "orari": "",
+    "rating": 4,
+    "reviews": 424,
+    "gsummary": "Refined hotel featuring park & sea views, plus a restaurant, a terrace & an exercise room."
   },
   {
     "id": "hotel-orri",
@@ -4631,7 +6515,10 @@
     "costo": "",
     "tel": "+390782620085",
     "web": "https://www.hotelorri.it",
-    "orari": ""
+    "orari": "",
+    "rating": 4.5,
+    "reviews": 921,
+    "gsummary": "Camere confortevoli in hotel sobrio con ristorante, piscina scoperta, colazione e WiFi inclusi."
   },
   {
     "id": "hotel-porto-conte",
@@ -4659,7 +6546,19 @@
     "costo": "",
     "tel": "+39 0782 664068",
     "web": "www.hotelposeidonia.it",
-    "orari": ""
+    "orari": "",
+    "rating": 4.4,
+    "reviews": 488,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ],
+    "gsummary": "Camere accoglienti, alcune con terrazza, in hotel caratteristico con colazione, bar e parcheggio."
   },
   {
     "id": "hotel-punta-est",
@@ -4673,7 +6572,19 @@
     "costo": "",
     "tel": "+39 0789 99028",
     "web": "www.hotelpuntaest.it",
-    "orari": ""
+    "orari": "",
+    "rating": 4,
+    "reviews": 263,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ],
+    "gsummary": "Camere e suite luminose dotate di balcone in hotel raffinato con due ristoranti e una piscina scoperta."
   },
   {
     "id": "hotel-taloro",
@@ -4687,7 +6598,10 @@
     "costo": "",
     "tel": "+39 0784 53033",
     "web": "www.hoteltaloro.com",
-    "orari": ""
+    "orari": "",
+    "rating": 4.3,
+    "reviews": 361,
+    "gsummary": "Hotel informale in stile mediterraneo sul lago con ristorante, spa e piscina scoperta."
   },
   {
     "id": "janas-country-resort",
@@ -4701,7 +6615,19 @@
     "costo": "",
     "tel": "+39 348 783420",
     "web": "https://www.janashotel.it/",
-    "orari": ""
+    "orari": "",
+    "rating": 4.9,
+    "reviews": 264,
+    "ghours": [
+      "lunedì: 08:00–23:00",
+      "martedì: 08:00–23:00",
+      "mercoledì: 08:00–23:00",
+      "giovedì: 08:00–23:00",
+      "venerdì: 08:00–23:00",
+      "sabato: 08:00–23:00",
+      "domenica: 08:00–23:00"
+    ],
+    "gsummary": "Hotel di campagna in una villa che offre un ampio ristorante, una piscina, un campo da tennis ed equitazione."
   },
   {
     "id": "la-bitta",
@@ -4715,7 +6641,10 @@
     "costo": "",
     "tel": "+39 0782 667080",
     "web": "https://www.hotellabitta.it/",
-    "orari": ""
+    "orari": "",
+    "rating": 4.7,
+    "reviews": 1070,
+    "gsummary": "Sistemazioni luminose in hotel elegante con due ristoranti, spa e spiaggia privata."
   },
   {
     "id": "la-perla",
@@ -4729,7 +6658,10 @@
     "costo": "",
     "tel": "+39 0782 667800",
     "web": "https://www.hotel-laperla.com/",
-    "orari": ""
+    "orari": "",
+    "rating": 4.8,
+    "reviews": 325,
+    "gsummary": "Camere ampie in un hotel confortevole che offre un ristorante luminoso, una piscina scoperta e la colazione."
   },
   {
     "id": "la-rosa-dei-venti",
@@ -4743,7 +6675,19 @@
     "costo": "",
     "tel": "+39 0781 54162",
     "web": "https://www.hotel-larosadeiventi.it/",
-    "orari": ""
+    "orari": "",
+    "rating": 4.3,
+    "reviews": 375,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ],
+    "gsummary": "Camere semplici in hotel informale con colazione, ristorante e vista sul mare."
   },
   {
     "id": "la-torre",
@@ -4757,7 +6701,10 @@
     "costo": "",
     "tel": "+39 0782 28030",
     "web": "www.hotellatorresardegna.com",
-    "orari": ""
+    "orari": "",
+    "rating": 4.3,
+    "reviews": 633,
+    "gsummary": "Camere semplici in hotel informale affacciato sul mare con 2 ristoranti, piscina e colazione inclusa."
   },
   {
     "id": "mediterraneo",
@@ -4771,7 +6718,19 @@
     "costo": "",
     "tel": "+39 0782 615380",
     "web": "www.albergomediterraneo.it",
-    "orari": ""
+    "orari": "",
+    "rating": 4.6,
+    "reviews": 329,
+    "ghours": [
+      "lunedì: 07:00–00:00",
+      "martedì: 07:00–00:00",
+      "mercoledì: 07:00–00:00",
+      "giovedì: 07:00–00:00",
+      "venerdì: 07:00–00:00",
+      "sabato: 07:00–00:00",
+      "domenica: 07:00–00:00"
+    ],
+    "gsummary": "Hotel informale con colazione continentale inclusa, ristorante e lido privato in spiaggia."
   },
   {
     "id": "new-barcavela-hotel",
@@ -4785,7 +6744,10 @@
     "costo": "",
     "tel": "+39 070 796 8974",
     "web": "https://www.newbarcavela.it/",
-    "orari": ""
+    "orari": "",
+    "rating": 4.1,
+    "reviews": 251,
+    "gsummary": "Camere semplici in hotel confortevole con spiaggia privata, piscina scoperta e colazione inclusa."
   },
   {
     "id": "new-petit-hotel",
@@ -4799,7 +6761,19 @@
     "costo": "",
     "tel": "+39 079 631134",
     "web": "https://newpetithotel.com/",
-    "orari": ""
+    "orari": "",
+    "rating": 4.1,
+    "reviews": 309,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ],
+    "gsummary": "Hotel sobrio con camere semplici dotate di frigobar, WiFi gratuito, ristorante e bar."
   },
   {
     "id": "park-hotel",
@@ -4827,7 +6801,19 @@
     "costo": "",
     "tel": "+39 0789 65265",
     "web": "www.myohotelroccesarde.com",
-    "orari": ""
+    "orari": "",
+    "rating": 4.5,
+    "reviews": 483,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ],
+    "gsummary": "Hotel luminoso con camere e suite ampie e sobrie, terrazza panoramica, piscina scoperta e bar."
   },
   {
     "id": "resort-capo-nieddu",
@@ -4841,7 +6827,10 @@
     "costo": "",
     "tel": "+39 0785 850 493",
     "web": "https://www.caponieddu.it",
-    "orari": "Mo-Su 09:00-17:00"
+    "orari": "Mo-Su 09:00-17:00",
+    "rating": 3.9,
+    "reviews": 69,
+    "gsummary": "Agriturismo tranquillo di sole suite con vista sul mare, ristorante, giardini e piscina scoperta."
   },
   {
     "id": "rocce-sarde",
@@ -4855,7 +6844,19 @@
     "costo": "",
     "tel": "+39 0789 65265",
     "web": "https://www.myohotelroccesarde.com/",
-    "orari": ""
+    "orari": "",
+    "rating": 4.5,
+    "reviews": 483,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ],
+    "gsummary": "Hotel luminoso con camere e suite ampie e sobrie, terrazza panoramica, piscina scoperta e bar."
   },
   {
     "id": "sa-contonera",
@@ -4869,7 +6870,10 @@
     "costo": "",
     "tel": "+39 0782 665011",
     "web": "https://www.sacontonera.it/",
-    "orari": ""
+    "orari": "",
+    "rating": 4.6,
+    "reviews": 835,
+    "gsummary": "Hotel informale con ristorante, bar, piscina scoperta e vasca idromassaggio."
   },
   {
     "id": "stella-maris",
@@ -4897,7 +6901,10 @@
     "costo": "",
     "tel": "+39 0782 667020",
     "web": "http://www.hotellavecchiamarina.com/",
-    "orari": ""
+    "orari": "",
+    "rating": 4.6,
+    "reviews": 429,
+    "gsummary": "Laid-back rooms in a family-run hotel close to the beach, plus breakfast & a serene garden."
   },
   {
     "id": "villa-barbarina",
@@ -4911,7 +6918,19 @@
     "costo": "",
     "tel": "+39 079 9999026",
     "web": "http://www.villabarbarina.com",
-    "orari": ""
+    "orari": "",
+    "rating": 4.4,
+    "reviews": 541,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ],
+    "gsummary": "Vivace resort di campagna con camere luminose, bar/ristorante chic e piscina scoperta."
   },
   {
     "id": "area-naturalistica-del-monte-nieddu",
@@ -4925,7 +6944,9 @@
     "costo": "",
     "tel": "",
     "web": "",
-    "orari": ""
+    "orari": "",
+    "rating": 4.5,
+    "reviews": 45
   },
   {
     "id": "arco-di-s-archittu-parco",
@@ -4939,7 +6960,18 @@
     "costo": "",
     "tel": "+39 0785 39765",
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/sarchittu-di-santa-caterina",
-    "orari": ""
+    "orari": "",
+    "rating": 4.8,
+    "reviews": 1819,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "cantiere-forestale",
@@ -4981,7 +7013,19 @@
     "costo": "",
     "tel": "+39 333 179 8335",
     "web": "www.oasibiderosa.it",
-    "orari": ""
+    "orari": "",
+    "rating": 4.6,
+    "reviews": 388,
+    "ghours": [
+      "lunedì: 07:30–20:00",
+      "martedì: 07:30–20:00",
+      "mercoledì: 07:30–20:00",
+      "giovedì: 07:30–20:00",
+      "venerdì: 07:30–20:00",
+      "sabato: 07:30–20:00",
+      "domenica: 07:30–20:00"
+    ],
+    "gsummary": "Area protetta paludosa con viste sull'oceano, isolata, dove osservare fenicotteri e fare escursioni."
   },
   {
     "id": "cantiere-forestale-di-paulilatino",
@@ -5079,7 +7123,9 @@
     "costo": "",
     "tel": "+39 070 997013",
     "web": "www.comune.villaputzu.ca.it/modules.php?name=Pagine&pa=list_pages_categories&cid=83",
-    "orari": ""
+    "orari": "",
+    "rating": 4.4,
+    "reviews": 194
   },
   {
     "id": "funtanamela",
@@ -5093,7 +7139,18 @@
     "costo": "",
     "tel": "+39 0782 869343",
     "web": "www.sardegnaambiente.it/j/v/1189?s=129801&v=2&c=7216&t=1",
-    "orari": ""
+    "orari": "",
+    "rating": 4.5,
+    "reviews": 36,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "monumento-naturale-crateri-vulcanici-del-meilogu-monte-annaru",
@@ -5107,7 +7164,18 @@
     "costo": "",
     "tel": "+39 079 869050",
     "web": "",
-    "orari": ""
+    "orari": "",
+    "rating": 3.8,
+    "reviews": 9,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "parco-archeologico-santa-cristina",
@@ -5121,7 +7189,19 @@
     "costo": "",
     "tel": "+39 0785 55438",
     "web": "https://pozzosantacristina.com",
-    "orari": "Mo-Su 08:30-sunset"
+    "orari": "Mo-Su 08:30-sunset",
+    "rating": 4.8,
+    "reviews": 4377,
+    "ghours": [
+      "lunedì: 08:30–20:30",
+      "martedì: 08:30–20:30",
+      "mercoledì: 08:30–20:30",
+      "giovedì: 08:30–20:30",
+      "venerdì: 08:30–20:30",
+      "sabato: 08:30–20:30",
+      "domenica: 08:30–20:30"
+    ],
+    "gsummary": "Sito di scavi con pozzo sacro di 3.000 anni, resti dell'Età del Bronzo e chiesa cristiana medievale."
   },
   {
     "id": "parco-archeologico-suelli",
@@ -5149,7 +7229,18 @@
     "costo": "",
     "tel": "+39 0784 165 0049",
     "web": "www.parcoditepilora.it",
-    "orari": ""
+    "orari": "",
+    "rating": 4.6,
+    "reviews": 45,
+    "ghours": [
+      "lunedì: 08:00–14:00, 15:00–18:00",
+      "martedì: 08:00–18:00",
+      "mercoledì: 08:00–18:00",
+      "giovedì: 08:00–18:00",
+      "venerdì: 08:00–12:30",
+      "sabato: Chiuso",
+      "domenica: Chiuso"
+    ]
   },
   {
     "id": "parco-naturale-regionale-molentargius-saline",
@@ -5163,7 +7254,19 @@
     "costo": "",
     "tel": "+39 070 379191",
     "web": "https://www.parcomolentargius.it/index.php",
-    "orari": ""
+    "orari": "",
+    "rating": 4.3,
+    "reviews": 3658,
+    "ghours": [
+      "lunedì: 08:30–20:30",
+      "martedì: 08:30–20:30",
+      "mercoledì: 08:30–20:30",
+      "giovedì: 08:30–20:30",
+      "venerdì: 08:30–20:30",
+      "sabato: 08:30–20:30",
+      "domenica: 08:30–20:30"
+    ],
+    "gsummary": "Ampia area umida con stagni d'acqua dolce e salata, varie specie di voltatili, sentieri e bici a noleggio."
   },
   {
     "id": "pedrami",
@@ -5177,7 +7280,9 @@
     "costo": "",
     "tel": "",
     "web": "",
-    "orari": ""
+    "orari": "",
+    "rating": 5,
+    "reviews": 1
   },
   {
     "id": "sa-pala-de-cunventu",
@@ -5205,7 +7310,9 @@
     "costo": "",
     "tel": "",
     "web": "portal.sardegnasira.it/sa-roda-manna",
-    "orari": ""
+    "orari": "",
+    "rating": 3.3,
+    "reviews": 21
   },
   {
     "id": "sa-sedda-de-tullinu",
@@ -5233,7 +7340,19 @@
     "costo": "",
     "tel": "+39 070 379191",
     "web": "parcomolentargius.it",
-    "orari": ""
+    "orari": "",
+    "rating": 4.3,
+    "reviews": 3658,
+    "ghours": [
+      "lunedì: 08:30–20:30",
+      "martedì: 08:30–20:30",
+      "mercoledì: 08:30–20:30",
+      "giovedì: 08:30–20:30",
+      "venerdì: 08:30–20:30",
+      "sabato: 08:30–20:30",
+      "domenica: 08:30–20:30"
+    ],
+    "gsummary": "Ampia area umida con stagni d'acqua dolce e salata, varie specie di voltatili, sentieri e bici a noleggio."
   },
   {
     "id": "sistema-dunale-di-capo-comino-parco",
@@ -5247,7 +7366,18 @@
     "costo": "",
     "tel": "",
     "web": "",
-    "orari": ""
+    "orari": "",
+    "rating": 4.8,
+    "reviews": 11,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "stagni-di-san-teodoro",
@@ -5261,7 +7391,9 @@
     "costo": "",
     "tel": "",
     "web": "",
-    "orari": ""
+    "orari": "",
+    "rating": 4.5,
+    "reviews": 137
   },
   {
     "id": "su-cabudu-de-s-arridelaxiu",
@@ -5331,7 +7463,9 @@
     "costo": "",
     "tel": "+39 0783 391097",
     "web": "https://www.areamarinasinis.it/",
-    "orari": ""
+    "orari": "",
+    "rating": 5,
+    "reviews": 4
   },
   {
     "id": "agriturismo-iloghe",
@@ -5345,7 +7479,9 @@
     "costo": "",
     "tel": "+39 347 3091960",
     "web": "http://www.agriturismoiloghe.com",
-    "orari": "24/7"
+    "orari": "24/7",
+    "rating": 4.4,
+    "reviews": 122
   },
   {
     "id": "al-906-operaio",
@@ -5359,7 +7495,9 @@
     "costo": "",
     "tel": "+39 338 916 5388",
     "web": "",
-    "orari": ""
+    "orari": "",
+    "rating": 4.3,
+    "reviews": 634
   },
   {
     "id": "bar-del-capitano",
@@ -5373,7 +7511,18 @@
     "costo": "",
     "tel": "+39 328 405 0913",
     "web": "",
-    "orari": ""
+    "orari": "",
+    "rating": 4.4,
+    "reviews": 846,
+    "ghours": [
+      "lunedì: 19:00–23:00",
+      "martedì: 19:00–23:00",
+      "mercoledì: 19:00–23:00",
+      "giovedì: 19:00–23:00",
+      "venerdì: 19:00–23:00",
+      "sabato: 19:00–23:00",
+      "domenica: 12:30–14:30, 19:00–23:00"
+    ]
   },
   {
     "id": "bar-pizzeria-da-rino",
@@ -5387,7 +7536,18 @@
     "costo": "",
     "tel": "+39 0785 38021",
     "web": "",
-    "orari": "Th-Tu 07:45-01:00"
+    "orari": "Th-Tu 07:45-01:00",
+    "rating": 4.3,
+    "reviews": 1033,
+    "ghours": [
+      "lunedì: 08:00–02:00",
+      "martedì: 08:00–02:00",
+      "mercoledì: 08:00–02:00",
+      "giovedì: 08:00–02:00",
+      "venerdì: 08:00–02:00",
+      "sabato: 08:00–03:00",
+      "domenica: 08:00–03:00"
+    ]
   },
   {
     "id": "bar-pizzeria-gattopardo",
@@ -5415,7 +7575,18 @@
     "costo": "",
     "tel": "+39 342 577 8338",
     "web": "",
-    "orari": ""
+    "orari": "",
+    "rating": 4.1,
+    "reviews": 340,
+    "ghours": [
+      "lunedì: 11:30–00:00",
+      "martedì: 11:30–00:00",
+      "mercoledì: 11:30–00:00",
+      "giovedì: 11:30–00:00",
+      "venerdì: 11:30–00:00",
+      "sabato: 11:30–00:00",
+      "domenica: 11:30–00:00"
+    ]
   },
   {
     "id": "bar-ristorante-morongiu",
@@ -5429,7 +7600,18 @@
     "costo": "",
     "tel": "+39 0785 38046",
     "web": "",
-    "orari": "Mo-Su 08:30-24:00"
+    "orari": "Mo-Su 08:30-24:00",
+    "rating": 4,
+    "reviews": 243,
+    "ghours": [
+      "lunedì: 07:00–23:30",
+      "martedì: 07:00–23:30",
+      "mercoledì: 07:00–23:30",
+      "giovedì: 07:00–23:30",
+      "venerdì: 07:00–23:30",
+      "sabato: 07:00–00:00",
+      "domenica: 07:00–00:00"
+    ]
   },
   {
     "id": "belvedere",
@@ -5443,7 +7625,19 @@
     "costo": "",
     "tel": "+39 0789 96501",
     "web": "www.ristorantegastronomiabelvedere.com",
-    "orari": ""
+    "orari": "",
+    "rating": 4.6,
+    "reviews": 956,
+    "ghours": [
+      "lunedì: 12:00–14:30, 19:00–22:30",
+      "martedì: 12:00–14:30, 19:00–22:30",
+      "mercoledì: 12:00–14:30, 19:00–22:30",
+      "giovedì: 12:00–14:30, 19:00–22:30",
+      "venerdì: 12:00–14:30, 19:00–22:30",
+      "sabato: 12:00–14:30, 19:00–22:30",
+      "domenica: 12:00–14:30, 19:00–22:30"
+    ],
+    "gsummary": "Classici piatti a base di pesce, primi e vini sardi offerti in un locale elegante affacciato su verdi colline costiere."
   },
   {
     "id": "capannaccia",
@@ -5457,7 +7651,18 @@
     "costo": "",
     "tel": "+39 377 352 7153",
     "web": "www.instagram.com/lacapannaccia_restaurant",
-    "orari": ""
+    "orari": "",
+    "rating": 4.1,
+    "reviews": 221,
+    "ghours": [
+      "lunedì: 19:00–23:30",
+      "martedì: 19:00–23:30",
+      "mercoledì: 19:00–23:30",
+      "giovedì: 19:00–23:30",
+      "venerdì: 19:00–23:30",
+      "sabato: 19:00–23:30",
+      "domenica: 19:00–23:30"
+    ]
   },
   {
     "id": "costa-paradiso",
@@ -5485,7 +7690,18 @@
     "costo": "",
     "tel": "+390784810476",
     "web": "https://pizzeriadabastiano.wixsite.com/dabastiano",
-    "orari": "Mo-Su 18:30-23:00"
+    "orari": "Mo-Su 18:30-23:00",
+    "rating": 4.5,
+    "reviews": 888,
+    "ghours": [
+      "lunedì: 18:30–23:00",
+      "martedì: 18:30–23:00",
+      "mercoledì: 18:30–23:00",
+      "giovedì: 18:30–23:00",
+      "venerdì: 18:30–23:00",
+      "sabato: 18:30–23:00",
+      "domenica: 18:30–23:00"
+    ]
   },
   {
     "id": "da-filippo",
@@ -5499,7 +7715,18 @@
     "costo": "",
     "tel": "+39 0784 998159",
     "web": "https://www.pizzeriadafilippo.it/",
-    "orari": ""
+    "orari": "",
+    "rating": 4.2,
+    "reviews": 655,
+    "ghours": [
+      "lunedì: 18:30–23:00",
+      "martedì: 18:30–23:00",
+      "mercoledì: Chiuso",
+      "giovedì: 18:30–23:00",
+      "venerdì: 18:30–23:00",
+      "sabato: 18:30–23:00",
+      "domenica: 18:30–23:00"
+    ]
   },
   {
     "id": "evo",
@@ -5513,7 +7740,9 @@
     "costo": "",
     "tel": "+39 345 176 7106",
     "web": "",
-    "orari": ""
+    "orari": "",
+    "rating": 4,
+    "reviews": 47
   },
   {
     "id": "hotel-ristorante-su-gologone",
@@ -5527,7 +7756,10 @@
     "costo": "",
     "tel": "+39 0784 287512",
     "web": "https://www.sugologone.it/en/",
-    "orari": ""
+    "orari": "",
+    "rating": 4.6,
+    "reviews": 2135,
+    "gsummary": "Sistemazioni eleganti in hotel di lusso con piscina scoperta, cinema, ristorante e spa."
   },
   {
     "id": "il-girasole",
@@ -5541,7 +7773,9 @@
     "costo": "",
     "tel": "+39 0789 754597",
     "web": "https://m.facebook.com/pages/Ristorante-Pizzeria-Il-Girasole-Da-Peppe/142036619217106",
-    "orari": ""
+    "orari": "",
+    "rating": 3.6,
+    "reviews": 590
   },
   {
     "id": "il-maestrale",
@@ -5555,7 +7789,19 @@
     "costo": "",
     "tel": "+39 0789 705033",
     "web": "https://maestrale-portopollo.it/il-maestrale/",
-    "orari": "Mo-Su 12:00-15:00, 19:00-23:30"
+    "orari": "Mo-Su 12:00-15:00, 19:00-23:30",
+    "rating": 4.2,
+    "reviews": 1085,
+    "ghours": [
+      "lunedì: 18:45–23:45",
+      "martedì: 18:45–23:45",
+      "mercoledì: 18:45–23:45",
+      "giovedì: 18:45–23:45",
+      "venerdì: 18:45–23:45",
+      "sabato: 18:45–23:45",
+      "domenica: 18:45–23:45"
+    ],
+    "gsummary": "Pesce, pizza e dolci sardi in un vivace gastropub con terrazza affacciata sulla baia."
   },
   {
     "id": "il-portico",
@@ -5583,7 +7829,18 @@
     "costo": "",
     "tel": "+39 0789 81943",
     "web": "",
-    "orari": "Mo-Su 00:00-03:00,12:00-15:00,19:00-24:00"
+    "orari": "Mo-Su 00:00-03:00,12:00-15:00,19:00-24:00",
+    "rating": 4.3,
+    "reviews": 2326,
+    "ghours": [
+      "lunedì: 12:00–14:30, 19:00–00:00",
+      "martedì: 12:00–14:30, 19:00–00:00",
+      "mercoledì: 12:00–14:30, 19:00–00:00",
+      "giovedì: 12:00–14:30, 19:00–00:00",
+      "venerdì: 12:00–14:30, 19:00–00:00",
+      "sabato: 12:00–14:30, 19:00–00:00",
+      "domenica: 12:00–14:30, 19:00–00:00"
+    ]
   },
   {
     "id": "l-impero",
@@ -5611,7 +7868,18 @@
     "costo": "",
     "tel": "+39 376 226 5797",
     "web": "",
-    "orari": "Tu-Su,PH 07:00-22:30; Mo off"
+    "orari": "Tu-Su,PH 07:00-22:30; Mo off",
+    "rating": 4.4,
+    "reviews": 318,
+    "ghours": [
+      "lunedì: 07:00–01:00",
+      "martedì: 07:00–01:00",
+      "mercoledì: 07:00–01:00",
+      "giovedì: 07:00–01:00",
+      "venerdì: 07:00–01:00",
+      "sabato: 07:00–01:00",
+      "domenica: 07:00–01:00"
+    ]
   },
   {
     "id": "la-locanda-del-mare",
@@ -5625,7 +7893,19 @@
     "costo": "",
     "tel": "+39 079 584144",
     "web": "www.lalocandadelmare.it",
-    "orari": ""
+    "orari": "",
+    "rating": 4.2,
+    "reviews": 1417,
+    "ghours": [
+      "lunedì: 08:00–00:00",
+      "martedì: 08:00–00:00",
+      "mercoledì: 08:00–00:00",
+      "giovedì: 08:00–00:00",
+      "venerdì: 08:00–00:00",
+      "sabato: 08:00–00:00",
+      "domenica: 08:00–00:00"
+    ],
+    "gsummary": "Specialità di pesce servite nel ristorante di un bed & breakfast con veranda vista mare e cantina dei vini."
   },
   {
     "id": "la-quercia",
@@ -5639,7 +7919,18 @@
     "costo": "",
     "tel": "+39 350 110 4442",
     "web": "www.laquerciadicosentino.it",
-    "orari": ""
+    "orari": "",
+    "rating": 4.3,
+    "reviews": 600,
+    "ghours": [
+      "lunedì: 12:00–14:30, 18:30–22:00",
+      "martedì: Chiuso",
+      "mercoledì: 12:00–14:30, 18:30–22:00",
+      "giovedì: 12:00–14:30, 18:30–22:00",
+      "venerdì: 12:00–14:30, 18:30–22:00",
+      "sabato: 12:00–14:30, 18:30–22:00",
+      "domenica: 12:00–14:30, 18:30–22:00"
+    ]
   },
   {
     "id": "la-rosa-dei-venti-ristorante",
@@ -5653,7 +7944,9 @@
     "costo": "",
     "tel": "+39 0783 090 008",
     "web": "http://www.larosadeiventiristorante.com",
-    "orari": ""
+    "orari": "",
+    "rating": 4.5,
+    "reviews": 288
   },
   {
     "id": "la-ruota",
@@ -5667,7 +7960,18 @@
     "costo": "",
     "tel": "+39 0789 98955",
     "web": "www.instagram.com/ristorantelaruota",
-    "orari": ""
+    "orari": "",
+    "rating": 4.3,
+    "reviews": 927,
+    "ghours": [
+      "lunedì: 18:30–00:00",
+      "martedì: 18:30–00:00",
+      "mercoledì: 18:30–00:00",
+      "giovedì: 18:30–00:00",
+      "venerdì: 18:30–00:00",
+      "sabato: 18:30–00:00",
+      "domenica: 18:30–00:00"
+    ]
   },
   {
     "id": "lu-branu",
@@ -5681,7 +7985,9 @@
     "costo": "",
     "tel": "+39 333 1816877",
     "web": "www.agriturismolubranu.it",
-    "orari": ""
+    "orari": "",
+    "rating": 4.5,
+    "reviews": 1292
   },
   {
     "id": "masiloghi",
@@ -5695,7 +8001,18 @@
     "costo": "",
     "tel": "+39 0784 285696",
     "web": "www.masiloghi.it",
-    "orari": ""
+    "orari": "",
+    "rating": 4.2,
+    "reviews": 765,
+    "ghours": [
+      "lunedì: 10:00–23:30",
+      "martedì: 10:00–23:30",
+      "mercoledì: 10:00–23:30",
+      "giovedì: 10:00–23:30",
+      "venerdì: 10:00–23:30",
+      "sabato: 10:00–23:30",
+      "domenica: 12:00–23:30"
+    ]
   },
   {
     "id": "non-solo-pizza",
@@ -5723,7 +8040,18 @@
     "costo": "",
     "tel": "+39 348 719 8070",
     "web": "www.appsheet.com/start/cf2897ff-40c5-4d07-8dc5-92eba13e95e2#view=Google%20view&row=asdffghh5566",
-    "orari": ""
+    "orari": "",
+    "rating": 3.8,
+    "reviews": 536,
+    "ghours": [
+      "lunedì: 11:00–23:00",
+      "martedì: 11:00–23:00",
+      "mercoledì: 11:00–23:00",
+      "giovedì: 11:00–23:00",
+      "venerdì: 11:00–23:00",
+      "sabato: 11:00–23:00",
+      "domenica: 11:00–23:00"
+    ]
   },
   {
     "id": "park-hotel-ristorante",
@@ -5765,7 +8093,18 @@
     "costo": "",
     "tel": "+39 0783 410396",
     "web": "https://trattoriailboscaiolo.it/",
-    "orari": "Mo-Su 19:00-23:00"
+    "orari": "Mo-Su 19:00-23:00",
+    "rating": 4.3,
+    "reviews": 775,
+    "ghours": [
+      "lunedì: 19:00–23:30",
+      "martedì: 19:00–23:30",
+      "mercoledì: 19:00–23:30",
+      "giovedì: 20:00–23:30",
+      "venerdì: 19:00–23:30",
+      "sabato: 19:00–23:30",
+      "domenica: 19:00–23:30"
+    ]
   },
   {
     "id": "pizzeria-il-cavallino-rosso",
@@ -5779,7 +8118,18 @@
     "costo": "",
     "tel": "+39 0789 57244",
     "web": "",
-    "orari": ""
+    "orari": "",
+    "rating": 4.4,
+    "reviews": 16,
+    "ghours": [
+      "lunedì: 18:00–23:00",
+      "martedì: 18:00–23:00",
+      "mercoledì: 18:00–23:00",
+      "giovedì: 18:00–23:00",
+      "venerdì: 18:00–23:00",
+      "sabato: 18:00–23:00",
+      "domenica: 18:00–23:00"
+    ]
   },
   {
     "id": "pizzeria-lu-vorru",
@@ -5793,7 +8143,18 @@
     "costo": "",
     "tel": "+39 079 974811",
     "web": "",
-    "orari": ""
+    "orari": "",
+    "rating": 4.7,
+    "reviews": 247,
+    "ghours": [
+      "lunedì: 18:30–23:00",
+      "martedì: 18:30–23:00",
+      "mercoledì: 18:30–23:00",
+      "giovedì: 18:30–23:00",
+      "venerdì: 18:30–23:00",
+      "sabato: 18:30–23:00",
+      "domenica: 18:30–23:00"
+    ]
   },
   {
     "id": "pizzeria-mai-dire-italia",
@@ -5835,7 +8196,19 @@
     "costo": "",
     "tel": "+39 0789 51640",
     "web": "ristorantebarbagia.com",
-    "orari": ""
+    "orari": "",
+    "rating": 4.3,
+    "reviews": 1705,
+    "ghours": [
+      "lunedì: 12:30–14:45, 19:30–23:00",
+      "martedì: 12:30–14:45, 19:30–23:00",
+      "mercoledì: 12:30–14:45, 19:30–23:00",
+      "giovedì: 12:30–14:45, 19:30–23:00",
+      "venerdì: 12:30–14:45, 19:30–23:00",
+      "sabato: 12:30–14:45, 19:30–23:00",
+      "domenica: 12:30–14:45, 19:30–23:00"
+    ],
+    "gsummary": "Cucina sarda classica, incluso il maialino da latte, oltre a pesce, pasta e pizza in un ambiente rustico."
   },
   {
     "id": "ristorante-pizzeria-bar-il-pozzo",
@@ -5849,7 +8222,18 @@
     "costo": "",
     "tel": "+39 0782 615039",
     "web": "https://ristorante-il-pozzo-italian-restaurant.business.site/",
-    "orari": ""
+    "orari": "",
+    "rating": 4.2,
+    "reviews": 1106,
+    "ghours": [
+      "lunedì: 07:00–01:00",
+      "martedì: 07:00–01:00",
+      "mercoledì: 07:00–01:00",
+      "giovedì: 07:00–01:00",
+      "venerdì: 07:00–01:00",
+      "sabato: 07:00–01:00",
+      "domenica: 07:00–01:00"
+    ]
   },
   {
     "id": "ristorante-pizzeria-troncadero",
@@ -5891,7 +8275,10 @@
     "costo": "",
     "tel": "+39 0782 665011",
     "web": "https://www.sacontonera.it/",
-    "orari": ""
+    "orari": "",
+    "rating": 4.6,
+    "reviews": 835,
+    "gsummary": "Hotel informale con ristorante, bar, piscina scoperta e vasca idromassaggio."
   },
   {
     "id": "sa-marina",
@@ -5919,7 +8306,18 @@
     "costo": "",
     "tel": "+39 0782 32520",
     "web": "",
-    "orari": ""
+    "orari": "",
+    "rating": 4.6,
+    "reviews": 1310,
+    "ghours": [
+      "lunedì: Chiuso",
+      "martedì: 12:30–14:30, 20:00–00:00",
+      "mercoledì: 00:00–22:00",
+      "giovedì: 12:30–14:30, 20:00–22:00",
+      "venerdì: 12:30–14:30, 20:00–22:00",
+      "sabato: 12:30–14:30, 20:00–22:00",
+      "domenica: 13:00–15:00, 20:00–22:00"
+    ]
   },
   {
     "id": "su-barchile",
@@ -5933,7 +8331,10 @@
     "costo": "",
     "tel": "+39078498879",
     "web": "https://www.subarchile.it/",
-    "orari": ""
+    "orari": "",
+    "rating": 4.1,
+    "reviews": 880,
+    "gsummary": "Camere essenziali e ristorante informale con terrazza in hotel accogliente."
   },
   {
     "id": "su-ninnieri",
@@ -5947,7 +8348,18 @@
     "costo": "",
     "tel": "+39 348 636 7646",
     "web": "www.suninnieri.com",
-    "orari": ""
+    "orari": "",
+    "rating": 4.5,
+    "reviews": 784,
+    "ghours": [
+      "lunedì: 12:30–14:30",
+      "martedì: Chiuso",
+      "mercoledì: 12:30–14:30",
+      "giovedì: 12:30–14:30",
+      "venerdì: 12:30–14:30",
+      "sabato: 12:30–14:30",
+      "domenica: 12:30–14:30"
+    ]
   },
   {
     "id": "trattoria-mamma-mia",
@@ -5961,7 +8373,18 @@
     "costo": "",
     "tel": "+39 0784 819134",
     "web": "http://www.trattoriamammamia.com/",
-    "orari": "Mo-Su 10:30-15:00,17:00-00:00"
+    "orari": "Mo-Su 10:30-15:00,17:00-00:00",
+    "rating": 4,
+    "reviews": 591,
+    "ghours": [
+      "lunedì: 12:00–14:30, 18:00–23:00",
+      "martedì: 12:00–14:30, 18:00–23:00",
+      "mercoledì: 12:00–14:30, 18:00–23:00",
+      "giovedì: 12:00–14:30, 18:00–23:00",
+      "venerdì: 12:00–14:30, 18:00–23:00",
+      "sabato: 12:00–14:30, 18:00–23:00",
+      "domenica: 12:00–14:30, 18:00–23:00"
+    ]
   },
   {
     "id": "vecchia-gallura",
@@ -5989,7 +8412,18 @@
     "costo": "",
     "tel": "",
     "web": "",
-    "orari": ""
+    "orari": "",
+    "rating": 4.6,
+    "reviews": 479,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "bau-bau-beach",
@@ -6003,7 +8437,9 @@
     "costo": "",
     "tel": "",
     "web": "",
-    "orari": ""
+    "orari": "",
+    "rating": 4,
+    "reviews": 254
   },
   {
     "id": "bau-bau-palau-accesso-ai-cani",
@@ -6017,7 +8453,18 @@
     "costo": "",
     "tel": "",
     "web": "",
-    "orari": ""
+    "orari": "",
+    "rating": 4.1,
+    "reviews": 88,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "cala-andreani",
@@ -6031,7 +8478,18 @@
     "costo": "",
     "tel": "",
     "web": "www.sardegnaturismo.it",
-    "orari": ""
+    "orari": "",
+    "rating": 4.8,
+    "reviews": 91,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "cala-capra",
@@ -6045,7 +8503,18 @@
     "costo": "",
     "tel": "",
     "web": "www.palauturismo.com",
-    "orari": ""
+    "orari": "",
+    "rating": 4.5,
+    "reviews": 425,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "cala-dell-argentiera",
@@ -6059,7 +8528,9 @@
     "costo": "",
     "tel": "",
     "web": "",
-    "orari": ""
+    "orari": "",
+    "rating": 4.5,
+    "reviews": 2357
   },
   {
     "id": "cala-di-fuili",
@@ -6073,7 +8544,19 @@
     "costo": "",
     "tel": "+39 0784 927235",
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/cala-fuili",
-    "orari": ""
+    "orari": "",
+    "rating": 4.6,
+    "reviews": 2675,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ],
+    "gsummary": "Spiaggia di ciottoli tranquilla e informale, ideale per nuotare e con punti per il trekking e le arrampicate nelle vicinanze."
   },
   {
     "id": "cala-di-pedralonga",
@@ -6101,7 +8584,9 @@
     "costo": "",
     "tel": "",
     "web": "",
-    "orari": ""
+    "orari": "",
+    "rating": 4.2,
+    "reviews": 884
   },
   {
     "id": "delle-dune",
@@ -6157,7 +8642,10 @@
     "costo": "",
     "tel": "",
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/la-cinta",
-    "orari": ""
+    "orari": "",
+    "rating": 4.5,
+    "reviews": 8601,
+    "gsummary": "Pittoresca spiaggia di sabbia bianca nota per le acque turchesi e tra chi pratica kitesurf."
   },
   {
     "id": "la-sciumara",
@@ -6171,7 +8659,10 @@
     "costo": "",
     "tel": "",
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/la-sciumara-rada-di-mezzo-schifo",
-    "orari": ""
+    "orari": "",
+    "rating": 4.5,
+    "reviews": 359,
+    "gsummary": "Spiaggia sabbiosa circondata da rilievi con acque cristalline e la vista in lontananza sulla Maddalena."
   },
   {
     "id": "mare-morto",
@@ -6185,7 +8676,9 @@
     "costo": "",
     "tel": "+39 0783 391097",
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/mare-morto",
-    "orari": ""
+    "orari": "",
+    "rating": 4.2,
+    "reviews": 736
   },
   {
     "id": "palmasera",
@@ -6199,7 +8692,18 @@
     "costo": "",
     "tel": "",
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/palmasera",
-    "orari": ""
+    "orari": "",
+    "rating": 4.2,
+    "reviews": 1456,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "pittulongu-lo-squalo",
@@ -6213,7 +8717,9 @@
     "costo": "",
     "tel": "",
     "web": "",
-    "orari": ""
+    "orari": "",
+    "rating": 4.4,
+    "reviews": 407
   },
   {
     "id": "plage-mesu-spiaggia-di-mezzo",
@@ -6241,7 +8747,9 @@
     "costo": "",
     "tel": "",
     "web": "",
-    "orari": ""
+    "orari": "",
+    "rating": 4.5,
+    "reviews": 1549
   },
   {
     "id": "spiaggia-cala-coticcio",
@@ -6255,7 +8763,19 @@
     "costo": "",
     "tel": "",
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/cala-coticcio",
-    "orari": ""
+    "orari": "",
+    "rating": 4.7,
+    "reviews": 2425,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ],
+    "gsummary": "Caletta sabbiosa appartata e circondata da scogliere, ideale per fare il bagno e prendere il sole."
   },
   {
     "id": "spiaggia-cala-ginepro",
@@ -6269,7 +8789,18 @@
     "costo": "",
     "tel": "+39 0784 996900",
     "web": "www.sardegnaturismo.it/it/esplora/cala-liberotto",
-    "orari": ""
+    "orari": "",
+    "rating": 4.5,
+    "reviews": 2000,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "spiaggia-dei-preti",
@@ -6283,7 +8814,9 @@
     "costo": "",
     "tel": "+39 0785 368200",
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/spiaggia-stella",
-    "orari": ""
+    "orari": "",
+    "rating": 4.5,
+    "reviews": 53
   },
   {
     "id": "spiaggia-del-lazzaretto",
@@ -6297,7 +8830,9 @@
     "costo": "",
     "tel": "",
     "web": "",
-    "orari": ""
+    "orari": "",
+    "rating": 4.5,
+    "reviews": 225
   },
   {
     "id": "spiaggia-del-relitto",
@@ -6311,7 +8846,9 @@
     "costo": "",
     "tel": "",
     "web": "www.comune.lamaddalena.ot.it/site/home/turismo/luoghi-di-interesse/articolo9009258.html",
-    "orari": ""
+    "orari": "",
+    "rating": 4.6,
+    "reviews": 3203
   },
   {
     "id": "spiaggia-di-budoni",
@@ -6325,7 +8862,9 @@
     "costo": "",
     "tel": "",
     "web": "www.sardegnaturismo.it/it/esplora/cala-di-budoni",
-    "orari": ""
+    "orari": "",
+    "rating": 4.3,
+    "reviews": 3305
   },
   {
     "id": "spiaggia-di-cala-dei-ponzesi",
@@ -6353,7 +8892,18 @@
     "costo": "",
     "tel": "+39 0784 927235",
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/spiaggia-centrale",
-    "orari": ""
+    "orari": "",
+    "rating": 4.1,
+    "reviews": 694,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "spiaggia-di-calamosca",
@@ -6367,7 +8917,18 @@
     "costo": "",
     "tel": "",
     "web": "",
-    "orari": ""
+    "orari": "",
+    "rating": 4.3,
+    "reviews": 2537,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "spiaggia-di-cannigione",
@@ -6381,7 +8942,18 @@
     "costo": "",
     "tel": "",
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/cannigione",
-    "orari": ""
+    "orari": "",
+    "rating": 4.2,
+    "reviews": 2025,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "spiaggia-di-ezzi-mannu",
@@ -6395,7 +8967,9 @@
     "costo": "",
     "tel": "+39 079 520097",
     "web": "www.sardegnaturismo.it/it/luoghi/nord-ovest/stintino",
-    "orari": ""
+    "orari": "",
+    "rating": 4.4,
+    "reviews": 2670
   },
   {
     "id": "spiaggia-di-maria-pia",
@@ -6409,7 +8983,10 @@
     "costo": "",
     "tel": "",
     "web": "",
-    "orari": ""
+    "orari": "",
+    "rating": 4.4,
+    "reviews": 2613,
+    "gsummary": "Famosa spiaggia lunga più di un chilometro, con sabbia bianca incontaminata e acque cristalline."
   },
   {
     "id": "spiaggia-di-poglina",
@@ -6423,7 +9000,10 @@
     "costo": "",
     "tel": "",
     "web": "",
-    "orari": ""
+    "orari": "",
+    "rating": 4.3,
+    "reviews": 886,
+    "gsummary": "Spiaggia sabbiosa in baia con acqua cristallina circondata da rocce e accesso tramite passerella."
   },
   {
     "id": "spiaggia-di-san-diego",
@@ -6437,7 +9017,18 @@
     "costo": "",
     "tel": "",
     "web": "",
-    "orari": ""
+    "orari": "",
+    "rating": 4.6,
+    "reviews": 25,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "spiaggia-di-sant-anna",
@@ -6451,7 +9042,9 @@
     "costo": "",
     "tel": "",
     "web": "www.mybudoni.it",
-    "orari": ""
+    "orari": "",
+    "rating": 4.3,
+    "reviews": 375
   },
   {
     "id": "spiaggia-di-santa-lucia",
@@ -6465,7 +9058,9 @@
     "costo": "",
     "tel": "",
     "web": "",
-    "orari": ""
+    "orari": "",
+    "rating": 4.5,
+    "reviews": 881
   },
   {
     "id": "spiaggia-di-torregrande",
@@ -6493,7 +9088,10 @@
     "costo": "",
     "tel": "",
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/lu-impostu-porto-brandinchi",
-    "orari": ""
+    "orari": "",
+    "rating": 4.4,
+    "reviews": 4902,
+    "gsummary": "Suggestiva meta balneare che offre sabbia bianca e calme acque cristalline, oltre al noleggio di ombrelloni e kayak."
   },
   {
     "id": "spiaggia-tanca-manna",
@@ -6507,7 +9105,9 @@
     "costo": "",
     "tel": "",
     "web": "",
-    "orari": ""
+    "orari": "",
+    "rating": 4.3,
+    "reviews": 692
   },
   {
     "id": "spiaggetta-dell-arco",
@@ -6521,7 +9121,9 @@
     "costo": "",
     "tel": "+39 0785 39765",
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/sarchittu-di-santa-caterina",
-    "orari": ""
+    "orari": "",
+    "rating": 4.6,
+    "reviews": 326
   },
   {
     "id": "scaiu-ecciu",
@@ -6549,7 +9151,18 @@
     "costo": "",
     "tel": "",
     "web": "",
-    "orari": ""
+    "orari": "",
+    "rating": 4.5,
+    "reviews": 500,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "la-maddalena-ferry",
@@ -6563,7 +9176,9 @@
     "costo": "",
     "tel": "",
     "web": "",
-    "orari": ""
+    "orari": "",
+    "rating": 4.5,
+    "reviews": 379
   },
   {
     "id": "cannigione-marina",
@@ -6591,7 +9206,18 @@
     "costo": "",
     "tel": "+39 0789 751936",
     "web": "www.portosantateresa.com",
-    "orari": ""
+    "orari": "",
+    "rating": 4.5,
+    "reviews": 452,
+    "ghours": [
+      "lunedì: 07:30–21:00",
+      "martedì: 07:30–21:00",
+      "mercoledì: 07:30–21:00",
+      "giovedì: 07:30–21:00",
+      "venerdì: 07:30–21:00",
+      "sabato: 07:30–21:00",
+      "domenica: 07:30–21:00"
+    ]
   },
   {
     "id": "carloforte-porto-principale",
@@ -6605,7 +9231,9 @@
     "costo": "",
     "tel": "",
     "web": "",
-    "orari": ""
+    "orari": "",
+    "rating": 4.6,
+    "reviews": 77
   },
   {
     "id": "calasetta-terminal",
@@ -6619,7 +9247,9 @@
     "costo": "",
     "tel": "",
     "web": "",
-    "orari": ""
+    "orari": "",
+    "rating": 4.6,
+    "reviews": 25
   },
   {
     "id": "portovesme-terminal",
@@ -6633,7 +9263,9 @@
     "costo": "",
     "tel": "",
     "web": "",
-    "orari": ""
+    "orari": "",
+    "rating": 3.9,
+    "reviews": 26
   },
   {
     "id": "stintino-imbarco-asinara",
@@ -6647,7 +9279,9 @@
     "costo": "",
     "tel": "",
     "web": "",
-    "orari": "Stagionale (aprile-ottobre)"
+    "orari": "Stagionale (aprile-ottobre)",
+    "rating": 4.2,
+    "reviews": 10
   },
   {
     "id": "porto-rotondo-marina",
@@ -6661,7 +9295,18 @@
     "costo": "",
     "tel": "+39 0789 34203",
     "web": "https://www.marinadiportorotondo.it",
-    "orari": ""
+    "orari": "",
+    "rating": 4.4,
+    "reviews": 1833,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "porto-di-buggerru",
@@ -6675,7 +9320,18 @@
     "costo": "",
     "tel": "+39 338 447 3446",
     "web": "www.portodibuggerru.site",
-    "orari": ""
+    "orari": "",
+    "rating": 4.3,
+    "reviews": 593,
+    "ghours": [
+      "lunedì: 08:30–19:00",
+      "martedì: 08:30–19:00",
+      "mercoledì: 08:30–19:00",
+      "giovedì: 08:30–19:00",
+      "venerdì: 08:30–19:00",
+      "sabato: 08:30–19:00",
+      "domenica: Chiuso"
+    ]
   },
   {
     "id": "porto-cervo-marina",
@@ -6689,7 +9345,18 @@
     "costo": "",
     "tel": "+39 0789 905602",
     "web": "https://marinadiportocervo.com",
-    "orari": ""
+    "orari": "",
+    "rating": 4.5,
+    "reviews": 2433,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "porto-san-paolo-marina",
@@ -6717,7 +9384,18 @@
     "costo": "",
     "tel": "+39 0789 99477",
     "web": "www.marinapoltuquatu.com",
-    "orari": ""
+    "orari": "",
+    "rating": 4.6,
+    "reviews": 749,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "porto-torres-terminal",
@@ -6731,7 +9409,18 @@
     "costo": "",
     "tel": "+39 079 523688",
     "web": "www.grimaldi-lines.com",
-    "orari": ""
+    "orari": "",
+    "rating": 3.1,
+    "reviews": 2134,
+    "ghours": [
+      "lunedì: 09:00–13:00, 15:30–19:00",
+      "martedì: 09:00–13:00, 15:30–19:00",
+      "mercoledì: 09:00–13:00, 15:30–19:00",
+      "giovedì: 09:00–13:00, 15:30–19:00",
+      "venerdì: 09:00–13:00, 15:30–19:00",
+      "sabato: 09:00–12:00, 16:00–18:00",
+      "domenica: 09:00–12:00, 15:00–18:00"
+    ]
   },
   {
     "id": "palau-marina-maddalena",
@@ -6745,7 +9434,18 @@
     "costo": "",
     "tel": "+39 0789 739165",
     "web": "www.maddalenalines.it",
-    "orari": ""
+    "orari": "",
+    "rating": 4.4,
+    "reviews": 920,
+    "ghours": [
+      "lunedì: 07:45–20:15",
+      "martedì: 07:45–20:15",
+      "mercoledì: 07:45–20:15",
+      "giovedì: 07:45–20:15",
+      "venerdì: 07:45–20:15",
+      "sabato: 07:45–20:15",
+      "domenica: 07:45–20:15"
+    ]
   },
   {
     "id": "stintino-porto-mannu",
@@ -6759,7 +9459,9 @@
     "costo": "",
     "tel": "+39 334 740 4583",
     "web": "",
-    "orari": ""
+    "orari": "",
+    "rating": 4.5,
+    "reviews": 525
   },
   {
     "id": "castelsardo-marina",
@@ -6773,7 +9475,18 @@
     "costo": "",
     "tel": "+39 079 479010",
     "web": "www.portodicastelsardo.com",
-    "orari": ""
+    "orari": "",
+    "rating": 4.5,
+    "reviews": 402,
+    "ghours": [
+      "lunedì: 09:00–13:00, 15:00–18:00",
+      "martedì: 09:00–13:00, 15:00–18:00",
+      "mercoledì: 09:00–13:00, 15:00–18:00",
+      "giovedì: 09:00–13:00, 15:00–18:00",
+      "venerdì: 09:00–13:00, 15:00–18:00",
+      "sabato: 09:00–12:00",
+      "domenica: Chiuso"
+    ]
   },
   {
     "id": "marina-punta-sardegna",
@@ -6787,7 +9500,18 @@
     "costo": "",
     "tel": "+39 346 140 6530",
     "web": "marinadipuntanera.it",
-    "orari": ""
+    "orari": "",
+    "rating": 4.5,
+    "reviews": 77,
+    "ghours": [
+      "lunedì: 08:00–20:30",
+      "martedì: 08:00–20:30",
+      "mercoledì: 08:00–20:30",
+      "giovedì: 08:00–20:30",
+      "venerdì: 08:00–20:30",
+      "sabato: 08:00–20:30",
+      "domenica: 08:30–20:30"
+    ]
   },
   {
     "id": "marina-del-ponte-maddalena",
@@ -6801,7 +9525,18 @@
     "costo": "",
     "tel": "+39 368 553 858",
     "web": "https://www.marinadelponte.com",
-    "orari": ""
+    "orari": "",
+    "rating": 4.5,
+    "reviews": 109,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "porto-canale-cagliari",
@@ -6815,7 +9550,9 @@
     "costo": "",
     "tel": "",
     "web": "",
-    "orari": ""
+    "orari": "",
+    "rating": 3.9,
+    "reviews": 118
   },
   {
     "id": "portus-karalis-cagliari",
@@ -6829,7 +9566,18 @@
     "costo": "",
     "tel": "+39 070 653535",
     "web": "https://www.portuskaralis.com",
-    "orari": ""
+    "orari": "",
+    "rating": 4.4,
+    "reviews": 59,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "torre-grande-oristano",
@@ -6857,7 +9605,18 @@
     "costo": "",
     "tel": "+39 079 952074",
     "web": "www.yachtclubalghero.com",
-    "orari": ""
+    "orari": "",
+    "rating": 4.8,
+    "reviews": 25,
+    "ghours": [
+      "lunedì: 09:00–13:00",
+      "martedì: 09:00–13:00",
+      "mercoledì: 09:00–13:00",
+      "giovedì: 09:00–13:00",
+      "venerdì: 09:00–13:00",
+      "sabato: 09:00–13:00",
+      "domenica: Chiuso"
+    ]
   },
   {
     "id": "porto-conte-marina",
@@ -6871,7 +9630,9 @@
     "costo": "",
     "tel": "+39 335 696 682",
     "web": "www.portocontemarina.it",
-    "orari": ""
+    "orari": "",
+    "rating": 4.4,
+    "reviews": 23
   },
   {
     "id": "cala-dei-sardi",
@@ -6885,7 +9646,9 @@
     "costo": "",
     "tel": "+39 0789 1980403",
     "web": "https://caladeisardi.it",
-    "orari": "08:00-20:00"
+    "orari": "08:00-20:00",
+    "rating": 4,
+    "reviews": 26
   },
   {
     "id": "golfo-aranci-sardinia-ferries",
@@ -6899,7 +9662,18 @@
     "costo": "",
     "tel": "+39 0789 204179",
     "web": "https://corsica-ferries.it",
-    "orari": ""
+    "orari": "",
+    "rating": 4.1,
+    "reviews": 295,
+    "ghours": [
+      "lunedì: Chiuso",
+      "martedì: Chiuso",
+      "mercoledì: Chiuso",
+      "giovedì: Chiuso",
+      "venerdì: 12:00–15:00",
+      "sabato: 12:00–15:00",
+      "domenica: 12:00–15:00"
+    ]
   },
   {
     "id": "marina-villasimius",
@@ -6913,7 +9687,18 @@
     "costo": "",
     "tel": "+39 070 797 8006",
     "web": "www.marinadivillasimius.it",
-    "orari": ""
+    "orari": "",
+    "rating": 4.5,
+    "reviews": 1104,
+    "ghours": [
+      "lunedì: 08:30–19:30",
+      "martedì: 08:30–19:30",
+      "mercoledì: 08:30–19:30",
+      "giovedì: 08:30–19:30",
+      "venerdì: 08:30–19:30",
+      "sabato: 08:30–19:30",
+      "domenica: 08:30–19:30"
+    ]
   },
   {
     "id": "porto-san-teodoro",
@@ -6927,7 +9712,18 @@
     "costo": "",
     "tel": "+39 331 209 3028",
     "web": "www.marinadisanteodoro.it",
-    "orari": ""
+    "orari": "",
+    "rating": 3.8,
+    "reviews": 85,
+    "ghours": [
+      "lunedì: 09:00–20:00",
+      "martedì: 09:00–20:00",
+      "mercoledì: 09:00–20:00",
+      "giovedì: 09:00–20:00",
+      "venerdì: 09:00–20:00",
+      "sabato: 09:00–20:00",
+      "domenica: 09:00–20:00"
+    ]
   },
   {
     "id": "portoscuso-marina",
@@ -6941,7 +9737,18 @@
     "costo": "",
     "tel": "+39 0781 507248",
     "web": "www.marinadicapitana.it/marina-di-portoscuso",
-    "orari": ""
+    "orari": "",
+    "rating": 4.4,
+    "reviews": 1690,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "sant-antioco-marina",
@@ -6955,7 +9762,18 @@
     "costo": "",
     "tel": "+39 379 117 6376",
     "web": "www.marinalidosantantioco.it",
-    "orari": ""
+    "orari": "",
+    "rating": 4.7,
+    "reviews": 219,
+    "ghours": [
+      "lunedì: 08:30–12:30, 15:00–19:00",
+      "martedì: 08:30–12:30, 15:00–19:00",
+      "mercoledì: 08:30–12:30, 15:00–19:00",
+      "giovedì: 08:30–12:30, 15:00–19:00",
+      "venerdì: 08:30–12:30, 15:00–19:00",
+      "sabato: 08:30–12:30",
+      "domenica: 09:00–19:00"
+    ]
   },
   {
     "id": "fertilia-marina",
@@ -6969,7 +9787,9 @@
     "costo": "",
     "tel": "+39 347 183 2122",
     "web": "www.marinadifertilia.com",
-    "orari": ""
+    "orari": "",
+    "rating": 4.5,
+    "reviews": 43
   },
   {
     "id": "circolo-nautico-olbia",
@@ -6983,7 +9803,9 @@
     "costo": "",
     "tel": "+39 0789 26187",
     "web": "www.circolonauticoolbia.it",
-    "orari": ""
+    "orari": "",
+    "rating": 4.3,
+    "reviews": 109
   },
   {
     "id": "porto-baia-caddinas",
@@ -6997,7 +9819,9 @@
     "costo": "",
     "tel": "+39 380 316 4729",
     "web": "www.marinadibaiacaddinas.it/m/index.php/it",
-    "orari": ""
+    "orari": "",
+    "rating": 4.6,
+    "reviews": 96
   },
   {
     "id": "cormorano-porto-torres",
@@ -7011,7 +9835,18 @@
     "costo": "",
     "tel": "+39 079 512290",
     "web": "www.nauticaservice.eu",
-    "orari": ""
+    "orari": "",
+    "rating": 4.3,
+    "reviews": 373,
+    "ghours": [
+      "lunedì: 09:00–13:00, 16:00–19:00",
+      "martedì: 09:00–13:00, 16:00–19:00",
+      "mercoledì: 09:00–13:00, 16:00–19:00",
+      "giovedì: 09:00–13:00, 16:00–19:00",
+      "venerdì: 09:00–13:00, 16:00–19:00",
+      "sabato: 09:00–13:00, 16:00–19:00",
+      "domenica: 09:00–13:00"
+    ]
   },
   {
     "id": "cala-gonone-porto",
@@ -7025,7 +9860,18 @@
     "costo": "Escursioni da 20 EUR/persona",
     "tel": "+39 346 230 7213",
     "web": "www.portocalagonone.it",
-    "orari": "Escursioni: aprile-ottobre"
+    "orari": "Escursioni: aprile-ottobre",
+    "rating": 4.3,
+    "reviews": 5285,
+    "ghours": [
+      "lunedì: Aperto 24 ore su 24",
+      "martedì: Aperto 24 ore su 24",
+      "mercoledì: Aperto 24 ore su 24",
+      "giovedì: Aperto 24 ore su 24",
+      "venerdì: Aperto 24 ore su 24",
+      "sabato: Aperto 24 ore su 24",
+      "domenica: Aperto 24 ore su 24"
+    ]
   },
   {
     "id": "arbatax-porto",
@@ -7039,6 +9885,17 @@
     "costo": "",
     "tel": "+39 0782 667405",
     "web": "www.marinadiarbatax.it",
-    "orari": ""
+    "orari": "",
+    "rating": 4.5,
+    "reviews": 2537,
+    "ghours": [
+      "lunedì: 08:30–19:30",
+      "martedì: 08:30–19:30",
+      "mercoledì: 08:30–19:30",
+      "giovedì: 08:30–19:30",
+      "venerdì: 08:30–19:30",
+      "sabato: 08:30–19:30",
+      "domenica: 08:30–19:30"
+    ]
   }
 ]
