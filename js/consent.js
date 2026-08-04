@@ -179,7 +179,7 @@
       + '<div class="bs-privacy-body">'
       + '<p><em>Ultimo aggiornamento: agosto 2026 — versione ' + POLICY_VERSION + '</em></p>'
       + '<h3>1. Titolare del trattamento</h3>'
-      + '<p>[RAGIONE SOCIALE / NOME], [indirizzo], email: [email di contatto]. Per esercitare i tuoi diritti scrivi a questo indirizzo.</p>'
+      + '<p>Brand Sardinia — P.IVA 02999050905 — 07026 Olbia (SS), Italia. Email: <a href="mailto:info@brandsardinia.com">info@brandsardinia.com</a>. Per esercitare i tuoi diritti scrivi a questo indirizzo.</p>'
       + '<h3>2. Quali dati trattiamo</h3>'
       + '<p>Non raccogliamo dati che ti identificano personalmente per navigare il sito. Trattiamo:</p>'
       + '<ul>'

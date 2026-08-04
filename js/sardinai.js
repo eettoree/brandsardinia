@@ -753,8 +753,10 @@ async function handleChatMessage(text) {
     SARDINAI_HISTORY.push({ role: 'model', text: data.reply });
     const cards = Array.isArray(data.cards) ? data.cards : [];
     const chips = Array.isArray(data.chips) ? data.chips : [];
-    if (cards.length) renderSardinaiCards(cards);
+    // Prima le chip (risposte rapide), poi le card: cosi' lo scroll automatico
+    // si ferma sulle card (contenuto azionabile), che restano visibili e cliccabili.
     if (chips.length) renderSardinaiChips(chips);
+    if (cards.length) renderSardinaiCards(cards);
   } catch (e) {
     removeTypingIndicator();
     addMessage(t('sardinai.error'), 'ai');
