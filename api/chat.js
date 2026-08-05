@@ -22,7 +22,10 @@ const CAT_ORDER = ['spiaggia', 'città', 'nuraghe', 'sito-archeologico', 'attraz
 // Ogni voce riporta tra graffe l'azione da usare (es. {map:la-pelosa}).
 function poiCatalog() {
   const byCat = {};
-  for (const p of _pois) { (byCat[p.cat] = byCat[p.cat] || []).push(`${p.name} {map:${p.id}}`); }
+  for (const p of _pois) {
+    const web = p.web ? ` sito:${/^https?:\/\//.test(p.web) ? p.web : 'https://' + p.web}` : '';
+    (byCat[p.cat] = byCat[p.cat] || []).push(`${p.name} {map:${p.id}}${web}`);
+  }
   return CAT_ORDER.filter(c => byCat[c])
     .map(c => `[${CAT_LABEL[c] || c.toUpperCase()}]\n${byCat[c].join('; ')}`)
     .join('\n\n');
@@ -71,7 +74,8 @@ EVENTI NOTI (dal calendario del sito — sono gli UNICI eventi che puoi citare):
 ${eventsList}
 
 LUOGHI DEL SITO (fonte di verità per le mete — usa SOLO questi nelle card)
-Ogni voce riporta tra graffe l'azione da usare nel campo "action" della card: es. "La Pelosa {map:la-pelosa}" → action "map:la-pelosa" (apre esattamente quel pin sulla mappa 3D). Non inventare id.
+Ogni voce riporta tra graffe l'azione mappa (es. "La Pelosa {map:la-pelosa}" → action "map:la-pelosa", apre quel pin sulla mappa 3D) e, quando disponibile, il sito ufficiale dopo "sito:". Non inventare id né URL.
+LINK DIRETTI: quando l'utente vuole compiere un'azione concreta — comprare biglietti, prenotare, contattare, trovare il sito ufficiale — dai il link diretto in una card con action "url:<sito ufficiale del luogo qui elencato>" (copia l'URL dopo "sito:" esattamente). Se quel luogo non ha un "sito:" in elenco, NON inventare un URL: usa l'azione mappa o lo strumento del sito più pertinente e di' onestamente che non hai il link diretto.
 ${catalog}
 
 RISPONDI IN JSON STRUTTURATO con questi campi:

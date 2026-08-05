@@ -674,19 +674,34 @@ function sardinaiCardAction(action, title) {
   }
 }
 
+// Etichetta + icona della call-to-action in base al tipo di azione
+const SAI_CTA_ICONS = {
+  map: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>',
+  site: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>',
+  more: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
+};
+function sardinaiCtaFor(action) {
+  const a = action || '';
+  if (a === 'map' || a.startsWith('map:')) return { label: t('sardinai.cta_map'), icon: SAI_CTA_ICONS.map };
+  if (a.startsWith('url:')) return { label: t('sardinai.cta_site'), icon: SAI_CTA_ICONS.site };
+  return { label: t('tools.action.discover'), icon: SAI_CTA_ICONS.more };
+}
+
 function renderSardinaiCards(cards) {
   const chat = document.getElementById('sardinai-chat');
   if (!chat || !cards.length) return;
-  const cta = t('tools.action.discover');
   const wrap = document.createElement('div');
   wrap.className = 'sai-cards';
-  wrap.innerHTML = cards.map(c => `
+  wrap.innerHTML = cards.map(c => {
+    const cta = sardinaiCtaFor(c.action);
+    return `
     <div class="sai-card" data-action="${escapeHtml(c.action || '')}" data-title="${escapeHtml(c.title || '')}" tabindex="0" role="button">
       <div class="sai-card-title">${escapeHtml(c.title)}</div>
       ${c.meta ? `<div class="sai-card-meta">${escapeHtml(c.meta)}</div>` : ''}
       ${c.desc ? `<div class="sai-card-desc">${escapeHtml(c.desc)}</div>` : ''}
-      <span class="sai-card-cta">${cta} →</span>
-    </div>`).join('');
+      <span class="sai-card-cta">${cta.icon}${cta.label}</span>
+    </div>`;
+  }).join('');
   chat.appendChild(wrap);
   wrap.querySelectorAll('.sai-card').forEach(el => {
     const act = () => sardinaiCardAction(el.dataset.action, el.dataset.title);
