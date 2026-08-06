@@ -674,40 +674,102 @@ function sardinaiCardAction(action, title) {
   }
 }
 
-// Etichetta + icona della call-to-action in base al tipo di azione
-const SAI_CTA_ICONS = {
+// Icone inline per pulsanti e badge delle card
+const SAI_ICONS = {
   map: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>',
   site: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>',
   more: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
+  star: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>',
 };
-function sardinaiCtaFor(action) {
+const saiNormUrl = u => /^https?:\/\//.test(u) ? u : 'https://' + u;
+
+// Indice POI (foto, sito, rating) dai dati verificati, per arricchire le card
+let _saiPoiIndex = null;
+function sardinaiPoiIndex() {
+  if (_saiPoiIndex) return _saiPoiIndex;
+  const norm = s => (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
+  _saiPoiIndex = fetch('assets/data/pois.json').then(r => r.json()).then(list => {
+    const byId = new Map(), byName = new Map();
+    for (const p of list) { byId.set(p.id, p); if (!byName.has(norm(p.name))) byName.set(norm(p.name), p); }
+    return { byId, byName, norm };
+  }).catch(() => ({ byId: new Map(), byName: new Map(), norm }));
+  return _saiPoiIndex;
+}
+function sardinaiFindPoi(idx, action, title) {
   const a = action || '';
-  if (a === 'map' || a.startsWith('map:')) return { label: t('sardinai.cta_map'), icon: SAI_CTA_ICONS.map };
-  if (a.startsWith('url:')) return { label: t('sardinai.cta_site'), icon: SAI_CTA_ICONS.site };
-  return { label: t('tools.action.discover'), icon: SAI_CTA_ICONS.more };
+  if (a.startsWith('map:')) { const id = a.slice(4); if (idx.byId.has(id)) return idx.byId.get(id); }
+  const nt = idx.norm(title || '');
+  if (nt && idx.byName.has(nt)) return idx.byName.get(nt);
+  if (nt) for (const [n, p] of idx.byName) { if (n.includes(nt) || nt.includes(n)) return p; }
+  return null;
 }
 
-function renderSardinaiCards(cards) {
+// Scroll orizzontale con grab & drag (mouse), touch nativo e rotella
+function sardinaiEnableGrab(el) {
+  let down = false, startX = 0, startLeft = 0;
+  el.addEventListener('pointerdown', e => {
+    if (e.pointerType === 'mouse' && e.button !== 0) return;
+    down = true; startX = e.clientX; startLeft = el.scrollLeft; el.dataset.dragging = '0';
+  });
+  el.addEventListener('pointermove', e => {
+    if (!down) return;
+    const dx = e.clientX - startX;
+    if (Math.abs(dx) > 4) { el.dataset.dragging = '1'; el.classList.add('is-grabbing'); if (el.setPointerCapture) try { el.setPointerCapture(e.pointerId); } catch (_) {} }
+    el.scrollLeft = startLeft - dx;
+  });
+  const end = () => { down = false; el.classList.remove('is-grabbing'); setTimeout(() => { el.dataset.dragging = '0'; }, 10); };
+  el.addEventListener('pointerup', end);
+  el.addEventListener('pointercancel', end);
+  el.addEventListener('lostpointercapture', end);
+  el.addEventListener('wheel', e => { if (el.scrollWidth > el.clientWidth + 2) { el.scrollLeft += (e.deltaY || e.deltaX); e.preventDefault(); } }, { passive: false });
+}
+
+async function renderSardinaiCards(cards) {
   const chat = document.getElementById('sardinai-chat');
   if (!chat || !cards.length) return;
+  const idx = await sardinaiPoiIndex();
   const wrap = document.createElement('div');
   wrap.className = 'sai-cards';
+  if (cards.length > 1) wrap.classList.add('is-carousel');
   wrap.innerHTML = cards.map(c => {
-    const cta = sardinaiCtaFor(c.action);
+    const a = c.action || '';
+    const poi = sardinaiFindPoi(idx, a, c.title);
+    const photo = poi && poi.photo ? saiNormUrl(poi.photo) : '';
+    const imgHTML = photo ? `<div class="sai-card-img"><img src="${escapeHtml(photo)}" alt="${escapeHtml(c.title)}" loading="lazy" onerror="this.closest('.sai-card-img').remove()"></div>` : '';
+    const rating = poi && poi.rating ? `<span class="sai-card-rating">${SAI_ICONS.star}${poi.rating.toFixed(1)}</span>` : '';
+    // Azioni: link diretto al sito/biglietti + rimando alla mappa (entrambi quando disponibili)
+    const btns = [];
+    let site = '';
+    if (a.startsWith('url:')) site = a.slice(4);
+    else if (poi && poi.web) site = saiNormUrl(poi.web);
+    if (site) btns.push(`<button type="button" class="sai-card-btn primary" data-act="site" data-url="${escapeHtml(site)}">${SAI_ICONS.site}${escapeHtml(t('sardinai.cta_site'))}</button>`);
+    let mapId = '';
+    if (a === 'map' || a.startsWith('map:')) mapId = a.startsWith('map:') ? a.slice(4) : (poi ? poi.id : '');
+    else if (poi) mapId = poi.id;
+    if (mapId) btns.push(`<button type="button" class="sai-card-btn" data-act="map" data-id="${escapeHtml(mapId)}" data-title="${escapeHtml(c.title || '')}">${SAI_ICONS.map}${escapeHtml(t('sardinai.cta_map'))}</button>`);
+    if (a.startsWith('tool:')) btns.push(`<button type="button" class="sai-card-btn" data-act="tool" data-tool="${escapeHtml(a.slice(5))}">${SAI_ICONS.more}${escapeHtml(t('tools.action.discover'))}</button>`);
+    if (!btns.length) btns.push(`<button type="button" class="sai-card-btn" data-act="none">${SAI_ICONS.more}${escapeHtml(t('tools.action.discover'))}</button>`);
     return `
-    <div class="sai-card" data-action="${escapeHtml(c.action || '')}" data-title="${escapeHtml(c.title || '')}" tabindex="0" role="button">
-      <div class="sai-card-title">${escapeHtml(c.title)}</div>
-      ${c.meta ? `<div class="sai-card-meta">${escapeHtml(c.meta)}</div>` : ''}
-      ${c.desc ? `<div class="sai-card-desc">${escapeHtml(c.desc)}</div>` : ''}
-      <span class="sai-card-cta">${cta.icon}${cta.label}</span>
+    <div class="sai-card">
+      ${imgHTML}
+      <div class="sai-card-body">
+        <div class="sai-card-title">${escapeHtml(c.title)}</div>
+        ${(c.meta || rating) ? `<div class="sai-card-metarow">${c.meta ? `<span class="sai-card-meta">${escapeHtml(c.meta)}</span>` : '<span></span>'}${rating}</div>` : ''}
+        ${c.desc ? `<div class="sai-card-desc">${escapeHtml(c.desc)}</div>` : ''}
+        <div class="sai-card-actions">${btns.join('')}</div>
+      </div>
     </div>`;
   }).join('');
   chat.appendChild(wrap);
-  wrap.querySelectorAll('.sai-card').forEach(el => {
-    const act = () => sardinaiCardAction(el.dataset.action, el.dataset.title);
-    el.addEventListener('click', act);
-    el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); act(); } });
+  wrap.addEventListener('click', e => {
+    const btn = e.target.closest('.sai-card-btn');
+    if (!btn || wrap.dataset.dragging === '1') return;
+    const act = btn.dataset.act;
+    if (act === 'site') window.open(btn.dataset.url, '_blank', 'noopener');
+    else if (act === 'map') sardinaiCardAction('map:' + btn.dataset.id, btn.dataset.title);
+    else if (act === 'tool') sardinaiCardAction('tool:' + btn.dataset.tool);
   });
+  sardinaiEnableGrab(wrap);
   chat.scrollTop = chat.scrollHeight;
   if (typeof gsap !== 'undefined') gsap.fromTo(wrap.querySelectorAll('.sai-card'), { opacity: 0, y: 14 }, { opacity: 1, y: 0, stagger: 0.06, duration: 0.3, ease: 'power2.out' });
 }
@@ -771,7 +833,7 @@ async function handleChatMessage(text) {
     // Prima le chip (risposte rapide), poi le card: cosi' lo scroll automatico
     // si ferma sulle card (contenuto azionabile), che restano visibili e cliccabili.
     if (chips.length) renderSardinaiChips(chips);
-    if (cards.length) renderSardinaiCards(cards);
+    if (cards.length) await renderSardinaiCards(cards);
   } catch (e) {
     removeTypingIndicator();
     addMessage(t('sardinai.error'), 'ai');
