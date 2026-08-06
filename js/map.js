@@ -1153,7 +1153,7 @@ function showMapInfoPanel(poi) {
     ? `<div class="panel-photo">
          <img src="${photoData.url}" alt="${poi.name}" loading="lazy" onerror="this.parentElement.classList.add('panel-photo-fallback');this.style.display='none';">
          <div class="panel-photo-overlay"></div>
-         ${photoData.credit ? `<span class="panel-photo-credit">${photoData.credit}</span>` : ''}
+         ${photoData.credit ? `<span class="panel-photo-credit">© ${photoData.credit}</span>` : ''}
          <button class="panel-close-photo" onclick="closeMapInfoPanel()">&#10005;</button>
          <div class="panel-photo-cat" style="background:${catColor}22;color:${catColor};border-color:${catColor}40;">${catLabel}</div>
        </div>`

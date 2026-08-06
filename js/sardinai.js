@@ -734,8 +734,9 @@ async function renderSardinaiCards(cards) {
   wrap.innerHTML = cards.map(c => {
     const a = c.action || '';
     const poi = sardinaiFindPoi(idx, a, c.title);
-    const photo = poi && poi.photo ? saiNormUrl(poi.photo) : '';
-    const imgHTML = photo ? `<div class="sai-card-img"><img src="${escapeHtml(photo)}" alt="${escapeHtml(c.title)}" loading="lazy" onerror="this.closest('.sai-card-img').remove()"></div>` : '';
+    const photo = poi && poi.photo ? poi.photo : '';
+    const credit = poi && poi.photoCredit ? poi.photoCredit : '';
+    const imgHTML = photo ? `<div class="sai-card-img"><img src="${escapeHtml(photo)}" alt="${escapeHtml(c.title)}" loading="lazy" onerror="this.closest('.sai-card-img').remove()">${credit ? `<span class="sai-card-credit">© ${escapeHtml(credit)}</span>` : ''}</div>` : '';
     const rating = poi && poi.rating ? `<span class="sai-card-rating">${SAI_ICONS.star}${poi.rating.toFixed(1)}</span>` : '';
     // Azioni: link diretto al sito/biglietti + rimando alla mappa (entrambi quando disponibili)
     const btns = [];

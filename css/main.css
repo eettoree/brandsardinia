@@ -1210,11 +1210,18 @@ body.section-map .app-navbar {
   box-shadow: 0 12px 30px rgba(200, 16, 46, 0.14);
 }
 .sai-card-img {
+  position: relative;
   width: 100%; height: 122px; flex: none;
   background: linear-gradient(135deg, var(--bg2), var(--bg3));
   overflow: hidden;
 }
 .sai-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.sai-card-credit {
+  position: absolute; bottom: 4px; right: 5px;
+  font-size: 0.56rem; color: #fff; background: rgba(0, 0, 0, 0.45);
+  padding: 1px 6px; border-radius: 999px; letter-spacing: 0.02em;
+  max-width: 85%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
 .sai-card-body {
   display: flex; flex-direction: column; gap: 5px;
   padding: 13px 15px 14px; flex: 1 1 auto;

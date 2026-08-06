@@ -13,8 +13,10 @@
     "web": "www.comunestintino.it",
     "orari": "Accesso contingentato luglio-agosto. Prenotazione su portale comunale.",
     "rating": 4.5,
-    "reviews": 16998,
-    "gsummary": "Spiaggia oceanica tranquilla, con sabbia bianca e calme acque cristalline, ideale per nuoto e immersioni."
+    "reviews": 17010,
+    "gsummary": "Spiaggia oceanica tranquilla, con sabbia bianca e calme acque cristalline, ideale per nuoto e immersioni.",
+    "photo": "assets/images/poi/la-pelosa.webp",
+    "photoCredit": "Marco Nervi"
   },
   {
     "id": "cala-goloritzé",
@@ -30,8 +32,10 @@
     "web": "www.turismobaunei.eu/my-product/cala-goloritze",
     "orari": "Aperta tutto l'anno. Via mare: imbarchi da aprile a ottobre.",
     "rating": 4.7,
-    "reviews": 4164,
-    "gsummary": "Isolata spiaggia di sabbia bianca e ciottoli con arco in pietra naturale e svettante roccia."
+    "reviews": 4165,
+    "gsummary": "Isolata spiaggia di sabbia bianca e ciottoli con arco in pietra naturale e svettante roccia.",
+    "photo": "assets/images/poi/cala-goloritzé.webp",
+    "photoCredit": "Carlos Alberto do Amaral"
   },
   {
     "id": "cala-luna",
@@ -47,8 +51,10 @@
     "web": "calagononedivingcenter.it",
     "orari": "Via mare: aprile-ottobre.",
     "rating": 4.5,
-    "reviews": 5510,
-    "gsummary": "Questa piccola spiaggia remota, sita in una baia tra promontori rocciosi, offre acque turchesi e grotte."
+    "reviews": 5514,
+    "gsummary": "Questa piccola spiaggia remota, sita in una baia tra promontori rocciosi, offre acque turchesi e grotte.",
+    "photo": "assets/images/poi/cala-luna.webp",
+    "photoCredit": "Tomas Gregor"
   },
   {
     "id": "spiaggia-principe",
@@ -64,7 +70,7 @@
     "web": "www.trovaspiagge.it/spiaggia-del-principe",
     "orari": "Accesso libero (parcheggio operativo giugno-settembre).",
     "rating": 4.5,
-    "reviews": 3894,
+    "reviews": 3901,
     "ghours": [
       "lunedì: Aperto 24 ore su 24",
       "martedì: Aperto 24 ore su 24",
@@ -73,7 +79,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/spiaggia-principe.webp",
+    "photoCredit": "Krzysztof Noster"
   },
   {
     "id": "su-giudeu",
@@ -89,7 +97,7 @@
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/su-giudeu",
     "orari": "Spiaggia libera tutto l'anno. Stabilimento: maggio-settembre.",
     "rating": 4.7,
-    "reviews": 6643,
+    "reviews": 6653,
     "ghours": [
       "lunedì: Aperto 24 ore su 24",
       "martedì: Aperto 24 ore su 24",
@@ -99,7 +107,9 @@
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
     ],
-    "gsummary": "Hotel sobrio con camere semplici, alcune con balcone, e una sala TV."
+    "gsummary": "Hotel sobrio con camere semplici, alcune con balcone, e una sala TV.",
+    "photo": "assets/images/poi/su-giudeu.webp",
+    "photoCredit": "mirko curridori"
   },
   {
     "id": "is-arutas",
@@ -115,8 +125,10 @@
     "web": "",
     "orari": "Aperta tutto l'anno.",
     "rating": 4.7,
-    "reviews": 9348,
-    "gsummary": "Popolare spiaggia di sabbia bianca con passerella in legno, parcheggio e ristoranti."
+    "reviews": 9355,
+    "gsummary": "Popolare spiaggia di sabbia bianca con passerella in legno, parcheggio e ristoranti.",
+    "photo": "assets/images/poi/is-arutas.webp",
+    "photoCredit": "Lia Nasti"
   },
   {
     "id": "cala-mariolu",
@@ -132,7 +144,7 @@
     "web": "www.calamariolu.it",
     "orari": "Via mare: aprile-ottobre.",
     "rating": 4.8,
-    "reviews": 7035,
+    "reviews": 7050,
     "ghours": [
       "lunedì: Aperto 24 ore su 24",
       "martedì: Aperto 24 ore su 24",
@@ -142,7 +154,9 @@
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
     ],
-    "gsummary": "Spiaggetta di ciottoli nota per snorkeling e immersioni, ai piedi di imponenti scogliere calcaree."
+    "gsummary": "Spiaggetta di ciottoli nota per snorkeling e immersioni, ai piedi di imponenti scogliere calcaree.",
+    "photo": "assets/images/poi/cala-mariolu.webp",
+    "photoCredit": "matthias chevrier"
   },
   {
     "id": "berchida",
@@ -158,7 +172,7 @@
     "web": "spiaggia-berchida.it",
     "orari": "Aperta tutto l'anno.",
     "rating": 4.6,
-    "reviews": 9723,
+    "reviews": 9739,
     "ghours": [
       "lunedì: Aperto 24 ore su 24",
       "martedì: Aperto 24 ore su 24",
@@ -168,7 +182,9 @@
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
     ],
-    "gsummary": "Spiaggia sabbiosa di circa 5 km a forma di mezzaluna con un chiosco e pedalò a noleggio, circondata da dune, ginepri e pini."
+    "gsummary": "Spiaggia sabbiosa di circa 5 km a forma di mezzaluna con un chiosco e pedalò a noleggio, circondata da dune, ginepri e pini.",
+    "photo": "assets/images/poi/berchida.webp",
+    "photoCredit": "Fabrizio Ferretti"
   },
   {
     "id": "cala-brandinchi",
@@ -184,8 +200,10 @@
     "web": "",
     "orari": "Stabilimento: giugno-settembre.",
     "rating": 4.2,
-    "reviews": 5435,
-    "gsummary": "Spiaggia suggestiva e vivace con acque basse e cristalline, popolari per lo snorkeling."
+    "reviews": 5442,
+    "gsummary": "Spiaggia suggestiva e vivace con acque basse e cristalline, popolari per lo snorkeling.",
+    "photo": "assets/images/poi/cala-brandinchi.webp",
+    "photoCredit": "Davide Malinverno"
   },
   {
     "id": "la-cinta",
@@ -201,8 +219,10 @@
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/la-cinta",
     "orari": "Aperta tutto l'anno.",
     "rating": 4.5,
-    "reviews": 8601,
-    "gsummary": "Pittoresca spiaggia di sabbia bianca nota per le acque turchesi e tra chi pratica kitesurf."
+    "reviews": 8609,
+    "gsummary": "Pittoresca spiaggia di sabbia bianca nota per le acque turchesi e tra chi pratica kitesurf.",
+    "photo": "assets/images/poi/la-cinta.webp",
+    "photoCredit": "Anita Sloot"
   },
   {
     "id": "porto-giunco",
@@ -218,8 +238,10 @@
     "web": "",
     "orari": "Stabilimento: maggio-settembre.",
     "rating": 4.7,
-    "reviews": 7924,
-    "gsummary": "Famosa spiaggia di fine sabbia bianca e acque turchesi, ospitante una popolazione di fenicotteri rosa."
+    "reviews": 7926,
+    "gsummary": "Famosa spiaggia di fine sabbia bianca e acque turchesi, ospitante una popolazione di fenicotteri rosa.",
+    "photo": "assets/images/poi/porto-giunco.webp",
+    "photoCredit": "Renata Mancini"
   },
   {
     "id": "poetto",
@@ -235,8 +257,10 @@
     "web": "",
     "orari": "Aperta tutto l'anno. Stabilimenti: maggio-settembre.",
     "rating": 4.5,
-    "reviews": 3823,
-    "gsummary": "Vivace zona balneare famosa per nuotare e prendere il sole, con ristoranti, discoteche e bar nelle vicinanze."
+    "reviews": 3828,
+    "gsummary": "Vivace zona balneare famosa per nuotare e prendere il sole, con ristoranti, discoteche e bar nelle vicinanze.",
+    "photo": "assets/images/poi/poetto.webp",
+    "photoCredit": "Salvatore Alagna"
   },
   {
     "id": "tuerredda",
@@ -252,7 +276,7 @@
     "web": "www.visitteulada.it",
     "orari": "Aperta tutto l'anno. Navetta: giugno-settembre.",
     "rating": 4.7,
-    "reviews": 18432,
+    "reviews": 18456,
     "ghours": [
       "lunedì: Aperto 24 ore su 24",
       "martedì: Aperto 24 ore su 24",
@@ -262,7 +286,9 @@
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
     ],
-    "gsummary": "Famosa spiaggia locale con sabbia bianca in stile caraibico, ristorante e noleggio di pedalò."
+    "gsummary": "Famosa spiaggia locale con sabbia bianca in stile caraibico, ristorante e noleggio di pedalò.",
+    "photo": "assets/images/poi/tuerredda.webp",
+    "photoCredit": "Mc Picc"
   },
   {
     "id": "cala-domestica",
@@ -278,8 +304,10 @@
     "web": "www.sardegnaturismo.it/en/point-of-interest/cala-domestica",
     "orari": "Aperta tutto l'anno.",
     "rating": 4.6,
-    "reviews": 3475,
-    "gsummary": "Remota spiaggia di sabbia in baia con scogliere e dune, popolare per il vivace bar sul litorale e lo snorkeling."
+    "reviews": 3476,
+    "gsummary": "Remota spiaggia di sabbia in baia con scogliere e dune, popolare per il vivace bar sul litorale e lo snorkeling.",
+    "photo": "assets/images/poi/cala-domestica.webp",
+    "photoCredit": "Jan Nachtigal"
   },
   {
     "id": "spiaggia-rosa-budelli",
@@ -296,7 +324,9 @@
     "orari": "Tour disponibili aprile-ottobre.",
     "rating": 4.4,
     "reviews": 395,
-    "gsummary": "Spiaggia protetta di sabbia rosea, unica nel suo genere, composta da fossili, cristalli e coralli polverizzati."
+    "gsummary": "Spiaggia protetta di sabbia rosea, unica nel suo genere, composta da fossili, cristalli e coralli polverizzati.",
+    "photo": "assets/images/poi/spiaggia-rosa-budelli.webp",
+    "photoCredit": "Aleš Hambálek"
   },
   {
     "id": "porto-ferro",
@@ -312,7 +342,9 @@
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/porto-ferro",
     "orari": "Spiaggia: tutto l'anno. Il Baretto: 9:00–23:00 stagione estiva (giu-set). Surf: inverno ottobre-marzo (onda migliore).",
     "rating": 4.5,
-    "reviews": 4351
+    "reviews": 4354,
+    "photo": "assets/images/poi/porto-ferro.webp",
+    "photoCredit": "Francesco Albino"
   },
   {
     "id": "cala-sisine",
@@ -328,7 +360,9 @@
     "web": "golfo-orosei.it",
     "orari": "Via mare: aprile-ottobre.",
     "rating": 4.6,
-    "reviews": 1605
+    "reviews": 1607,
+    "photo": "assets/images/poi/cala-sisine.webp",
+    "photoCredit": "laura migliore"
   },
   {
     "id": "mari-ermi",
@@ -344,7 +378,9 @@
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/mari-ermi",
     "orari": "Aperta tutto l'anno.",
     "rating": 4.6,
-    "reviews": 3120
+    "reviews": 3123,
+    "photo": "assets/images/poi/mari-ermi.webp",
+    "photoCredit": "Daniele BIANCO"
   },
   {
     "id": "le-tonnare-stintino",
@@ -360,7 +396,7 @@
     "web": "stintino.com",
     "orari": "Stabilimento: maggio-settembre.",
     "rating": 4.1,
-    "reviews": 513,
+    "reviews": 515,
     "ghours": [
       "lunedì: Aperto 24 ore su 24",
       "martedì: Aperto 24 ore su 24",
@@ -369,7 +405,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/le-tonnare-stintino.webp",
+    "photoCredit": "POUSADA DEL SOLE"
   },
   {
     "id": "cala-coticcio",
@@ -395,7 +433,9 @@
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
     ],
-    "gsummary": "Caletta sabbiosa appartata e circondata da scogliere, ideale per fare il bagno e prendere il sole."
+    "gsummary": "Caletta sabbiosa appartata e circondata da scogliere, ideale per fare il bagno e prendere il sole.",
+    "photo": "assets/images/poi/cala-coticcio.webp",
+    "photoCredit": "Manuele Messera"
   },
   {
     "id": "cala-corsara",
@@ -421,7 +461,9 @@
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
     ],
-    "gsummary": "Spiaggia in baia isolata fiancheggiata da colline rocciose, con acque turchesi, ideali per immersioni e snorkeling."
+    "gsummary": "Spiaggia in baia isolata fiancheggiata da colline rocciose, con acque turchesi, ideali per immersioni e snorkeling.",
+    "photo": "assets/images/poi/cala-corsara.webp",
+    "photoCredit": "Andrea Rapacci"
   },
   {
     "id": "lu-impostu",
@@ -437,8 +479,10 @@
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/lu-impostu-porto-brandinchi",
     "orari": "Tutto l'anno.",
     "rating": 4.4,
-    "reviews": 4902,
-    "gsummary": "Suggestiva meta balneare che offre sabbia bianca e calme acque cristalline, oltre al noleggio di ombrelloni e kayak."
+    "reviews": 4911,
+    "gsummary": "Suggestiva meta balneare che offre sabbia bianca e calme acque cristalline, oltre al noleggio di ombrelloni e kayak.",
+    "photo": "assets/images/poi/lu-impostu.webp",
+    "photoCredit": "cesare carosi"
   },
   {
     "id": "li-cossi",
@@ -454,8 +498,10 @@
     "web": "",
     "orari": "Maggio-settembre consigliato.",
     "rating": 4.7,
-    "reviews": 3628,
-    "gsummary": "Spiaggia sabbiosa riparata con acque cristalline, sentiero dal parcheggio e costa rocciosa panoramica."
+    "reviews": 3632,
+    "gsummary": "Spiaggia sabbiosa riparata con acque cristalline, sentiero dal parcheggio e costa rocciosa panoramica.",
+    "photo": "assets/images/poi/li-cossi.webp",
+    "photoCredit": "Sylwia P"
   },
   {
     "id": "rena-bianca",
@@ -471,8 +517,10 @@
     "web": "visitsantateresagallura.com",
     "orari": "Stabilimento: giugno-settembre.",
     "rating": 4.4,
-    "reviews": 2868,
-    "gsummary": "Pittoresca spiaggia di sabbia bianca con acque turchesi poco profonde circondate da scogliere e colline."
+    "reviews": 2872,
+    "gsummary": "Pittoresca spiaggia di sabbia bianca con acque turchesi poco profonde circondate da scogliere e colline.",
+    "photo": "assets/images/poi/rena-bianca.webp",
+    "photoCredit": "Nicola Muntoni"
   },
   {
     "id": "cala-spinosa",
@@ -488,7 +536,7 @@
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/cala-spinosa",
     "orari": "Maggio-ottobre.",
     "rating": 4.7,
-    "reviews": 1841,
+    "reviews": 1843,
     "ghours": [
       "lunedì: Aperto 24 ore su 24",
       "martedì: Aperto 24 ore su 24",
@@ -497,7 +545,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/cala-spinosa.webp",
+    "photoCredit": "alessio pera"
   },
   {
     "id": "la-marmorata",
@@ -513,7 +563,9 @@
     "web": "",
     "orari": "Tutto l'anno.",
     "rating": 4.3,
-    "reviews": 2088
+    "reviews": 2090,
+    "photo": "assets/images/poi/la-marmorata.webp",
+    "photoCredit": "Alberto Porcu"
   },
   {
     "id": "cala-moresca",
@@ -529,7 +581,9 @@
     "web": "",
     "orari": "Tutto l'anno.",
     "rating": 4.7,
-    "reviews": 1637
+    "reviews": 1638,
+    "photo": "assets/images/poi/cala-moresca.webp",
+    "photoCredit": "JBE"
   },
   {
     "id": "le-bombarde",
@@ -545,8 +599,10 @@
     "web": "www.sardegnaturismo.it/de/punto-di-interesse/le-bombarde",
     "orari": "Stabilimento: giugno-settembre.",
     "rating": 4.3,
-    "reviews": 5172,
-    "gsummary": "Spiaggia che curva dolcemente, con formazioni rocciose, natura verdeggiante, hotel, ristoranti e cocktail bar."
+    "reviews": 5177,
+    "gsummary": "Spiaggia che curva dolcemente, con formazioni rocciose, natura verdeggiante, hotel, ristoranti e cocktail bar.",
+    "photo": "assets/images/poi/le-bombarde.webp",
+    "photoCredit": "Csaba Biro"
   },
   {
     "id": "mugoni",
@@ -562,7 +618,9 @@
     "web": "algheroparks.it",
     "orari": "Tutto l'anno.",
     "rating": 4.4,
-    "reviews": 5517
+    "reviews": 5520,
+    "photo": "assets/images/poi/mugoni.webp",
+    "photoCredit": "Francesca Marchetti"
   },
   {
     "id": "lazzaretto",
@@ -578,7 +636,9 @@
     "web": "",
     "orari": "Stabilimento: maggio-settembre.",
     "rating": 4.4,
-    "reviews": 7250
+    "reviews": 7254,
+    "photo": "assets/images/poi/lazzaretto.webp",
+    "photoCredit": "Alberto Giordano"
   },
   {
     "id": "cala-fuili",
@@ -594,7 +654,7 @@
     "web": "calagononesardinia.com",
     "orari": "Tutto l'anno.",
     "rating": 4.6,
-    "reviews": 2675,
+    "reviews": 2676,
     "ghours": [
       "lunedì: Aperto 24 ore su 24",
       "martedì: Aperto 24 ore su 24",
@@ -604,7 +664,9 @@
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
     ],
-    "gsummary": "Spiaggia di ciottoli tranquilla e informale, ideale per nuotare e con punti per il trekking e le arrampicate nelle vicinanze."
+    "gsummary": "Spiaggia di ciottoli tranquilla e informale, ideale per nuotare e con punti per il trekking e le arrampicate nelle vicinanze.",
+    "photo": "assets/images/poi/cala-fuili.webp",
+    "photoCredit": "Ernst-Joerg Oberhoessel"
   },
   {
     "id": "bidderosa",
@@ -649,7 +711,9 @@
     "orari": "Tutto l'anno.",
     "rating": 4.7,
     "reviews": 205,
-    "gsummary": "Spiaggia tranquilla con lungo litorale di sabbia fine e acque calme, basse e cristalline."
+    "gsummary": "Spiaggia tranquilla con lungo litorale di sabbia fine e acque calme, basse e cristalline.",
+    "photo": "assets/images/poi/pedra-marchesa.webp",
+    "photoCredit": "Davide Russo"
   },
   {
     "id": "cala-biriola",
@@ -688,7 +752,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/scogli-rossi.webp",
+    "photoCredit": "Stefania"
   },
   {
     "id": "punta-molentis",
@@ -704,7 +770,9 @@
     "web": "",
     "orari": "Tutto l'anno. Navetta: giugno-settembre.",
     "rating": 4.5,
-    "reviews": 5365
+    "reviews": 5366,
+    "photo": "assets/images/poi/punta-molentis.webp",
+    "photoCredit": "Papoff Laura"
   },
   {
     "id": "cala-sinzias",
@@ -720,7 +788,7 @@
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/cala-sinzias",
     "orari": "Tutto l'anno.",
     "rating": 4.6,
-    "reviews": 2678,
+    "reviews": 2682,
     "ghours": [
       "lunedì: Aperto 24 ore su 24",
       "martedì: Aperto 24 ore su 24",
@@ -729,7 +797,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/cala-sinzias.webp",
+    "photoCredit": "Michele La Maida"
   },
   {
     "id": "solanas",
@@ -745,7 +815,9 @@
     "web": "",
     "orari": "Stabilimento: maggio-settembre.",
     "rating": 4.8,
-    "reviews": 687
+    "reviews": 689,
+    "photo": "assets/images/poi/solanas.webp",
+    "photoCredit": "Rita P (Floraldesigner)"
   },
   {
     "id": "cala-cipolla",
@@ -761,7 +833,7 @@
     "web": "www.sardegnaturismo.it/it/esplora/cala-cipolla",
     "orari": "Tutto l'anno.",
     "rating": 4.6,
-    "reviews": 3107,
+    "reviews": 3113,
     "ghours": [
       "lunedì: Aperto 24 ore su 24",
       "martedì: Aperto 24 ore su 24",
@@ -771,7 +843,9 @@
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
     ],
-    "gsummary": "Spiaggia incontaminata in ambientazione panoramica tra scogliere e dune con cespugli fitti."
+    "gsummary": "Spiaggia incontaminata in ambientazione panoramica tra scogliere e dune con cespugli fitti.",
+    "photo": "assets/images/poi/cala-cipolla.webp",
+    "photoCredit": "John Arndts"
   },
   {
     "id": "cala-piscinni",
@@ -787,7 +861,7 @@
     "web": "www.sardegnaturismo.it/it/esplora/piscinni",
     "orari": "Tutto l'anno.",
     "rating": 4.4,
-    "reviews": 1899,
+    "reviews": 1902,
     "ghours": [
       "lunedì: Aperto 24 ore su 24",
       "martedì: Aperto 24 ore su 24",
@@ -797,7 +871,9 @@
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
     ],
-    "gsummary": "Spiaggia riparata, popolare per fare snorkeling in acque cristalline, con food truck in parcheggio in collina."
+    "gsummary": "Spiaggia riparata, popolare per fare snorkeling in acque cristalline, con food truck in parcheggio in collina.",
+    "photo": "assets/images/poi/cala-piscinni.webp",
+    "photoCredit": "Marius Caster"
   },
   {
     "id": "porto-pino",
@@ -813,8 +889,10 @@
     "web": "",
     "orari": "Stabilimento: giugno-settembre. Spiaggia: sempre aperta.",
     "rating": 4.6,
-    "reviews": 1249,
-    "gsummary": "Spiaggia di sabbia bianca davanti a dune, con acque in genere cristalline e calme."
+    "reviews": 1251,
+    "gsummary": "Spiaggia di sabbia bianca davanti a dune, con acque in genere cristalline e calme.",
+    "photo": "assets/images/poi/porto-pino.webp",
+    "photoCredit": "Loris Abbati"
   },
   {
     "id": "coa-quaddus",
@@ -844,7 +922,9 @@
     "web": "",
     "orari": "Tutto l'anno.",
     "rating": 4.6,
-    "reviews": 1332
+    "reviews": 1336,
+    "photo": "assets/images/poi/bobba.webp",
+    "photoCredit": "Roberto Colleoni"
   },
   {
     "id": "portixeddu",
@@ -861,7 +941,9 @@
     "orari": "Tutto l'anno.",
     "rating": 4.6,
     "reviews": 1241,
-    "gsummary": "Tranquillo e ampio tratto di spiaggia sabbiosa con vista montagne, acque turchesi e luoghi per fare surf."
+    "gsummary": "Tranquillo e ampio tratto di spiaggia sabbiosa con vista montagne, acque turchesi e luoghi per fare surf.",
+    "photo": "assets/images/poi/portixeddu.webp",
+    "photoCredit": "Cristian Corrias"
   },
   {
     "id": "scivu",
@@ -877,7 +959,9 @@
     "web": "",
     "orari": "Tutto l'anno. 1h a piedi dal parcheggio.",
     "rating": 4.7,
-    "reviews": 2074
+    "reviews": 2078,
+    "photo": "assets/images/poi/scivu.webp",
+    "photoCredit": "Christian Collu"
   },
   {
     "id": "piscinas",
@@ -893,7 +977,9 @@
     "web": "hotelingolf.it",
     "orari": "Tutto l'anno.",
     "rating": 4.6,
-    "reviews": 2958
+    "reviews": 2961,
+    "photo": "assets/images/poi/piscinas.webp",
+    "photoCredit": "Spiaggia di Piscinas"
   },
   {
     "id": "torre-corsari",
@@ -918,7 +1004,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/torre-corsari.webp",
+    "photoCredit": "Viola Viola"
   },
   {
     "id": "pistis",
@@ -934,7 +1022,7 @@
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/pistis",
     "orari": "Tutto l'anno.",
     "rating": 4.5,
-    "reviews": 2288,
+    "reviews": 2290,
     "ghours": [
       "lunedì: Aperto 24 ore su 24",
       "martedì: Aperto 24 ore su 24",
@@ -943,7 +1031,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/pistis.webp",
+    "photoCredit": "Carlo Solinas (Dettero)"
   },
   {
     "id": "san-giovanni-sinis",
@@ -959,7 +1049,9 @@
     "web": "",
     "orari": "Tutto l'anno.",
     "rating": 4.7,
-    "reviews": 1565
+    "reviews": 1566,
+    "photo": "assets/images/poi/san-giovanni-sinis.webp",
+    "photoCredit": "Sardegnaremixroby"
   },
   {
     "id": "maimoni",
@@ -975,7 +1067,7 @@
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/maimoni",
     "orari": "Tutto l'anno.",
     "rating": 4.6,
-    "reviews": 1107,
+    "reviews": 1108,
     "ghours": [
       "lunedì: Aperto 24 ore su 24",
       "martedì: Aperto 24 ore su 24",
@@ -984,7 +1076,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/maimoni.webp",
+    "photoCredit": "Giuseppe Grussu"
   },
   {
     "id": "putzu-idu",
@@ -1000,7 +1094,7 @@
     "web": "www.sardegnaturismo.it/en/explore/putzu-idu",
     "orari": "Tutto l'anno. Windsurf: ottobre-aprile.",
     "rating": 4.5,
-    "reviews": 2910,
+    "reviews": 2918,
     "ghours": [
       "lunedì: Aperto 24 ore su 24",
       "martedì: Aperto 24 ore su 24",
@@ -1009,7 +1103,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/putzu-idu.webp",
+    "photoCredit": "Nicola Peri"
   },
   {
     "id": "is-arenas",
@@ -1025,7 +1121,7 @@
     "web": "is-arenas-spiaggia.mondoinviaggio.top",
     "orari": "Tutto l'anno.",
     "rating": 4.4,
-    "reviews": 545,
+    "reviews": 546,
     "ghours": [
       "lunedì: Aperto 24 ore su 24",
       "martedì: Aperto 24 ore su 24",
@@ -1034,7 +1130,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/is-arenas.webp",
+    "photoCredit": "Stefan Oli Sommer"
   },
   {
     "id": "s-archittu",
@@ -1051,7 +1149,9 @@
     "orari": "Tutto l'anno.",
     "rating": 4.6,
     "reviews": 2468,
-    "gsummary": "Baia isolana in cui prendere il sole, nuotare e fare rafting, con spiaggia sabbiosa e pittoresco arco roccioso."
+    "gsummary": "Baia isolana in cui prendere il sole, nuotare e fare rafting, con spiaggia sabbiosa e pittoresco arco roccioso.",
+    "photo": "assets/images/poi/s-archittu.webp",
+    "photoCredit": "Marco Facchin"
   },
   {
     "id": "cagliari",
@@ -1065,7 +1165,9 @@
     "costo": "Musei 3-8€. Bastione Saint Remy: gratuito",
     "tel": "+39 070 6776111",
     "web": "www.comune.cagliari.it",
-    "orari": "Musei: mar-dom 9:00-20:00"
+    "orari": "Musei: mar-dom 9:00-20:00",
+    "photo": "assets/images/poi/cagliari.webp",
+    "photoCredit": "Giacomo Console"
   },
   {
     "id": "olbia",
@@ -1079,7 +1181,9 @@
     "costo": "Museo Archeologico: gratuito (prenotare gruppi >30: 0789 28290) · Basilica San Simplicio: gratuito",
     "tel": "+39 0789 22221",
     "web": "www.comune.olbia.ot.it",
-    "orari": "Museo Arch.: Mar–Sab 08:00–13:00 / 16:00–19:00. Basilica: 8:00–12:00 / 16:00–18:30."
+    "orari": "Museo Arch.: Mar–Sab 08:00–13:00 / 16:00–19:00. Basilica: 8:00–12:00 / 16:00–18:30.",
+    "photo": "assets/images/poi/olbia.webp",
+    "photoCredit": "Magda Sosinska"
   },
   {
     "id": "alghero",
@@ -1093,7 +1197,9 @@
     "costo": "Centro storico gratuito. Grotte di Nettuno 14€",
     "tel": "+39 079 9978054",
     "web": "www.alghero-turismo.it",
-    "orari": "Bastioni: sempre aperti"
+    "orari": "Bastioni: sempre aperti",
+    "photo": "assets/images/poi/alghero.webp",
+    "photoCredit": "Maria Calia"
   },
   {
     "id": "sassari",
@@ -1107,7 +1213,9 @@
     "costo": "Museo Sanna 3€. Piazza Italia: gratuito",
     "tel": "+39 079 2078000",
     "web": "www.comune.sassari.it",
-    "orari": "Museo Nazionale Sanna: mar-dom 9:00-20:00"
+    "orari": "Museo Nazionale Sanna: mar-dom 9:00-20:00",
+    "photo": "assets/images/poi/sassari.webp",
+    "photoCredit": "Filippo Nieddu"
   },
   {
     "id": "nuoro",
@@ -1121,7 +1229,9 @@
     "costo": "Museo del Costume 5€. MAN 5€",
     "tel": "+39 0784 238520",
     "web": "www.comune.nuoro.it",
-    "orari": "Musei: mar-dom 9:00-13:00 / 15:00-19:00"
+    "orari": "Musei: mar-dom 9:00-13:00 / 15:00-19:00",
+    "photo": "assets/images/poi/nuoro.webp",
+    "photoCredit": "abdelmajid ouazine"
   },
   {
     "id": "oristano",
@@ -1135,7 +1245,9 @@
     "costo": "Tharros 9-11€. Piazza Eleonora: gratuito",
     "tel": "+39 0783 791148",
     "web": "www.comune.oristano.or.it",
-    "orari": "Centro storico sempre aperto"
+    "orari": "Centro storico sempre aperto",
+    "photo": "assets/images/poi/oristano.webp",
+    "photoCredit": "Maria Calia"
   },
   {
     "id": "la-maddalena",
@@ -1149,7 +1261,9 @@
     "costo": "Traghetto Palau–Maddalena: 3-5€/persona. Tour arcipelago: 60-120€. Garibaldi: 10€ combinato.",
     "tel": "+39 0789 790228",
     "web": "www.lamaddalenapark.it",
-    "orari": "Traghetti: ogni 30 min estate (6:00–23:00), ridotti inverno."
+    "orari": "Traghetti: ogni 30 min estate (6:00–23:00), ridotti inverno.",
+    "photo": "assets/images/poi/la-maddalena.webp",
+    "photoCredit": "Carlo Salvato"
   },
   {
     "id": "bosa",
@@ -1163,7 +1277,9 @@
     "costo": "Castello Malaspina 3€",
     "tel": "+39 0785 377003",
     "web": "www.comune.bosa.or.it",
-    "orari": "Castello: 10:00-13:00 / 15:00-18:00 (estate fino alle 20:00)"
+    "orari": "Castello: 10:00-13:00 / 15:00-18:00 (estate fino alle 20:00)",
+    "photo": "assets/images/poi/bosa.webp",
+    "photoCredit": "Maria Calia"
   },
   {
     "id": "castelsardo",
@@ -1177,7 +1293,9 @@
     "costo": "Museo Intreccio (Castello Doria): incluso visita castello — tariffe variabili",
     "tel": "+39 079 601 4769",
     "web": "mimcastelsardo.it",
-    "orari": "Gen–Mar / Nov–Dic: 10:00–17:00. Apr–Ott: 09:00–19:30."
+    "orari": "Gen–Mar / Nov–Dic: 10:00–17:00. Apr–Ott: 09:00–19:30.",
+    "photo": "assets/images/poi/castelsardo.webp",
+    "photoCredit": "Filippo Nieddu"
   },
   {
     "id": "su-nuraxi",
@@ -1193,7 +1311,7 @@
     "web": "www.fondazionebarumini.it",
     "orari": "9:00-tramonto (ultima visita 1h prima). Chiuso 1 gennaio e 25 dicembre.",
     "rating": 4.7,
-    "reviews": 8388,
+    "reviews": 8393,
     "ghours": [
       "lunedì: 09:00–20:00",
       "martedì: 09:00–20:00",
@@ -1203,7 +1321,9 @@
       "sabato: 09:00–20:00",
       "domenica: 09:00–20:00"
     ],
-    "gsummary": "Unica in Sardegna, questa antica fortificazione difensiva è composta da una rete di torri circolari."
+    "gsummary": "Unica in Sardegna, questa antica fortificazione difensiva è composta da una rete di torri circolari.",
+    "photo": "assets/images/poi/su-nuraxi.webp",
+    "photoCredit": "Su Nuraxi di Barumini"
   },
   {
     "id": "grotte-nettuno",
@@ -1218,8 +1338,10 @@
     "tel": "+39 079 946540 (grotta) · +39 079 950603 (barca)",
     "web": "grottadinettuno.it",
     "orari": "Tutto l'anno 9:00–19:00 (ult. ingresso). Inverno ridotto. Chiusa con mare mosso — verificare prima.",
-    "rating": 4.2,
-    "reviews": 160
+    "rating": 4.1,
+    "reviews": 162,
+    "photo": "assets/images/poi/grotte-nettuno.webp",
+    "photoCredit": "Giorgia 97"
   },
   {
     "id": "nora",
@@ -1235,7 +1357,7 @@
     "web": "fondazionepulacultura.it",
     "orari": "Estate: 9:00-20:00. Inverno: 9:00-17:00.",
     "rating": 4.6,
-    "reviews": 7121,
+    "reviews": 7128,
     "ghours": [
       "lunedì: 09:00–20:30",
       "martedì: 09:00–20:30",
@@ -1245,7 +1367,9 @@
       "sabato: 09:00–20:30",
       "domenica: 09:00–20:30"
     ],
-    "gsummary": "Museo all'aria aperta che racconta la storia dei miti di questo villaggio che ha origine nel IX secolo a.c."
+    "gsummary": "Museo all'aria aperta che racconta la storia dei miti di questo villaggio che ha origine nel IX secolo a.c.",
+    "photo": "assets/images/poi/nora.webp",
+    "photoCredit": "Parco Archeologico di Nora"
   },
   {
     "id": "tharros",
@@ -1275,7 +1399,7 @@
     "web": "nuraghelosa.net",
     "orari": "9:00-18:00 (estate fino alle 20:00). Tutto l'anno.",
     "rating": 4.8,
-    "reviews": 2154,
+    "reviews": 2155,
     "ghours": [
       "lunedì: 08:30–20:00",
       "martedì: 08:30–20:00",
@@ -1285,7 +1409,9 @@
       "sabato: 08:30–20:00",
       "domenica: 08:30–20:00"
     ],
-    "gsummary": "Sito di scavi su altopiano, con torre triangolare in pietra e antiche rovine, aperto a tour guidati."
+    "gsummary": "Sito di scavi su altopiano, con torre triangolare in pietra e antiche rovine, aperto a tour guidati.",
+    "photo": "assets/images/poi/nuraghe-losa.webp",
+    "photoCredit": "Nuraghe Losa"
   },
   {
     "id": "anfiteatro-cagliari",
@@ -1301,7 +1427,7 @@
     "web": "www.monumenticagliari.it/monumenti/bb9d02ed-8c02-4957-96ce-79f01213c4d6",
     "orari": "Mar-dom: 9:00-17:00. Estate anche lunedì.",
     "rating": 3.8,
-    "reviews": 3733,
+    "reviews": 3738,
     "ghours": [
       "lunedì: 10:00–13:00, 15:00–19:00",
       "martedì: 10:00–13:00, 15:00–19:00",
@@ -1311,7 +1437,9 @@
       "sabato: 10:00–13:00, 15:00–19:00",
       "domenica: 10:00–13:00, 15:00–19:00"
     ],
-    "gsummary": "Grandi rovine romane del II secolo, tra cui un anfiteatro con notevoli resti sotterranei."
+    "gsummary": "Grandi rovine romane del II secolo, tra cui un anfiteatro con notevoli resti sotterranei.",
+    "photo": "assets/images/poi/anfiteatro-cagliari.webp",
+    "photoCredit": "Nicola B. (Cippoclever)"
   },
   {
     "id": "nuraghe-santu-antine",
@@ -1327,7 +1455,7 @@
     "web": "nuraghesantuantine.it",
     "orari": "Tutti i giorni 9:00-tramonto.",
     "rating": 4.7,
-    "reviews": 3684,
+    "reviews": 3685,
     "ghours": [
       "lunedì: 09:00–20:00",
       "martedì: 09:00–20:00",
@@ -1337,7 +1465,9 @@
       "sabato: 09:00–20:00",
       "domenica: 09:00–20:00"
     ],
-    "gsummary": "Nota struttura sarda in pietra, di epoca antica, che un tempo aveva tre piani e una torre di 24 metri."
+    "gsummary": "Nota struttura sarda in pietra, di epoca antica, che un tempo aveva tre piani e una torre di 24 metri.",
+    "photo": "assets/images/poi/nuraghe-santu-antine.webp",
+    "photoCredit": "Roberto nessuno (Nessuno77)"
   },
   {
     "id": "anghelu-ruju",
@@ -1363,7 +1493,9 @@
       "sabato: 10:00–19:00",
       "domenica: 10:00–19:00"
     ],
-    "gsummary": "Grande necropoli antica che ospita scavi di tombe con reperti e sculture, oltre a tour guidati."
+    "gsummary": "Grande necropoli antica che ospita scavi di tombe con reperti e sculture, oltre a tour guidati.",
+    "photo": "assets/images/poi/anghelu-ruju.webp",
+    "photoCredit": "Monika Fest"
   },
   {
     "id": "man-nuoro",
@@ -1389,7 +1521,9 @@
       "sabato: 10:00–19:00",
       "domenica: 10:00–19:00"
     ],
-    "gsummary": "Museo di arte contemporanea dal 1999 che offre mostre a rotazione con conferenze e laboratori."
+    "gsummary": "Museo di arte contemporanea dal 1999 che offre mostre a rotazione con conferenze e laboratori.",
+    "photo": "assets/images/poi/man-nuoro.webp",
+    "photoCredit": "Efisio Balloi"
   },
   {
     "id": "museo-costume-nuoro",
@@ -1414,7 +1548,9 @@
       "venerdì: 10:00–20:00",
       "sabato: 10:00–20:00",
       "domenica: 10:00–20:00"
-    ]
+    ],
+    "photo": "assets/images/poi/museo-costume-nuoro.webp",
+    "photoCredit": "CLAUDIO PERONCINI"
   },
   {
     "id": "antiquarium-oristano",
@@ -1430,7 +1566,9 @@
     "web": "antiquariumarborense.it",
     "orari": "Mar-dom: 9:00-20:00.",
     "rating": 4.5,
-    "reviews": 275
+    "reviews": 275,
+    "photo": "assets/images/poi/antiquarium-oristano.webp",
+    "photoCredit": "Daniela G Matielo"
   },
   {
     "id": "asinara",
@@ -1456,7 +1594,9 @@
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
     ],
-    "gsummary": "Area naturale e marina per gite in barca a vela e tour fuoristrada, con vista sugli asini bianchi dell'isola."
+    "gsummary": "Area naturale e marina per gite in barca a vela e tour fuoristrada, con vista sugli asini bianchi dell'isola.",
+    "photo": "assets/images/poi/asinara.webp",
+    "photoCredit": "Gabriele Giuli"
   },
   {
     "id": "gennargentu",
@@ -1472,7 +1612,7 @@
     "web": "www.parks.it/parco.nazionale.gennargentu",
     "orari": "Aperto tutto l'anno. Estate: accesso libero. Inverno: verificare condizioni neve.",
     "rating": 4.8,
-    "reviews": 4849,
+    "reviews": 4850,
     "ghours": [
       "lunedì: Aperto 24 ore su 24",
       "martedì: Aperto 24 ore su 24",
@@ -1482,7 +1622,9 @@
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
     ],
-    "gsummary": "Parco nazionale che comprende la costa del Golfo di Orosei e Punta La Marmora, la vetta sarda più alta."
+    "gsummary": "Parco nazionale che comprende la costa del Golfo di Orosei e Punta La Marmora, la vetta sarda più alta.",
+    "photo": "assets/images/poi/gennargentu.webp",
+    "photoCredit": "Muhammad Musa"
   },
   {
     "id": "gola-gorropu",
@@ -1498,7 +1640,7 @@
     "web": "gorropu.info",
     "orari": "Tutto l'anno. Estate preferibile per il guado del torrente.",
     "rating": 4.7,
-    "reviews": 2750,
+    "reviews": 2753,
     "ghours": [
       "lunedì: 10:30–17:00",
       "martedì: 10:30–17:00",
@@ -1508,7 +1650,9 @@
       "sabato: 10:30–17:00",
       "domenica: 10:30–17:00"
     ],
-    "gsummary": "Parco nazionale con canyon mozzafiato, escursioni e tour guidati in fuoristrada."
+    "gsummary": "Parco nazionale con canyon mozzafiato, escursioni e tour guidati in fuoristrada.",
+    "photo": "assets/images/poi/gola-gorropu.webp",
+    "photoCredit": "Gorropu"
   },
   {
     "id": "molentargius",
@@ -1524,7 +1668,7 @@
     "web": "www.parcomolentargius.it",
     "orari": "06:30-21:00 (marzo-ottobre). 07:00-18:00 (novembre-febbraio).",
     "rating": 4.3,
-    "reviews": 3658,
+    "reviews": 3662,
     "ghours": [
       "lunedì: 08:30–20:30",
       "martedì: 08:30–20:30",
@@ -1534,7 +1678,9 @@
       "sabato: 08:30–20:30",
       "domenica: 08:30–20:30"
     ],
-    "gsummary": "Ampia area umida con stagni d'acqua dolce e salata, varie specie di voltatili, sentieri e bici a noleggio."
+    "gsummary": "Ampia area umida con stagni d'acqua dolce e salata, varie specie di voltatili, sentieri e bici a noleggio.",
+    "photo": "assets/images/poi/molentargius.webp",
+    "photoCredit": "Parco Naturale Molentargius Saline"
   },
   {
     "id": "porto-conte",
@@ -1550,7 +1696,7 @@
     "web": "www.algheroparks.it",
     "orari": "Parco: sempre aperto. Centro visitatori: lun-ven 9:00-13:00.",
     "rating": 4.6,
-    "reviews": 5948,
+    "reviews": 5952,
     "ghours": [
       "lunedì: Chiuso",
       "martedì: 10:00–17:00",
@@ -1560,7 +1706,9 @@
       "sabato: 10:00–17:00",
       "domenica: 10:00–17:00"
     ],
-    "gsummary": "Suggestivo parco sul mare con sentieri escursionistici, una spiaggia popolare, un centro didattico e ristoranti."
+    "gsummary": "Suggestivo parco sul mare con sentieri escursionistici, una spiaggia popolare, un centro didattico e ristoranti.",
+    "photo": "assets/images/poi/porto-conte.webp",
+    "photoCredit": "Parco Naturale Regionale di Porto Conte"
   },
   {
     "id": "villa-las-tronas",
@@ -1577,7 +1725,9 @@
     "orari": "Aperto tutto l'anno",
     "rating": 4.7,
     "reviews": 406,
-    "gsummary": "Hotel esclusivo con camere signorili, di cui alcune con vista sul mare, due piscine e spa elegante."
+    "gsummary": "Hotel esclusivo con camere signorili, di cui alcune con vista sul mare, due piscine e spa elegante.",
+    "photo": "assets/images/poi/villa-las-tronas.webp",
+    "photoCredit": "Villa Las Tronas Restaurant & Lounge"
   },
   {
     "id": "hotel-pitrizza",
@@ -1594,7 +1744,9 @@
     "orari": "Aperto maggio-ottobre",
     "rating": 4.7,
     "reviews": 299,
-    "gsummary": "Hotel elegante con vista sul mare, ristorante raffinato, piscina di acqua salata e accesso alla spiaggia."
+    "gsummary": "Hotel elegante con vista sul mare, ristorante raffinato, piscina di acqua salata e accesso alla spiaggia.",
+    "photo": "assets/images/poi/hotel-pitrizza.webp",
+    "photoCredit": "Hotel Pitrizza, Costa Smeralda"
   },
   {
     "id": "bagaglino",
@@ -1610,7 +1762,7 @@
     "web": "www.bagaglino.it",
     "orari": "Aperto tutto l'anno",
     "rating": 4.2,
-    "reviews": 1250,
+    "reviews": 1252,
     "ghours": [
       "lunedì: Aperto 24 ore su 24",
       "martedì: Aperto 24 ore su 24",
@@ -1620,7 +1772,9 @@
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
     ],
-    "gsummary": "Camere e suite eleganti, alcune con vista sul golfo, in hotel sofisticato con ristorante raffinato."
+    "gsummary": "Camere e suite eleganti, alcune con vista sul golfo, in hotel sofisticato con ristorante raffinato.",
+    "photo": "assets/images/poi/bagaglino.webp",
+    "photoCredit": "Bagaglino I Giardini di Porto Cervo"
   },
   {
     "id": "hotel-capo-d-orso",
@@ -1637,7 +1791,9 @@
     "orari": "Aperto maggio-ottobre",
     "rating": 3.7,
     "reviews": 191,
-    "gsummary": "Residence minimalista con accesso a una spiaggia per cani, 2 piscine scoperte e campi da tennis."
+    "gsummary": "Residence minimalista con accesso a una spiaggia per cani, 2 piscine scoperte e campi da tennis.",
+    "photo": "assets/images/poi/hotel-capo-d-orso.webp",
+    "photoCredit": "Hotel Capo d'Orso Thalasso & SPA"
   },
   {
     "id": "corte-bianca",
@@ -1668,7 +1824,9 @@
     "orari": "Lun-sab: 13:00-14:30 / 20:00-22:30. Chiuso domenica.",
     "rating": 4.5,
     "reviews": 428,
-    "gsummary": "Raffinati menù degustazione sardi e vini in abbinamento in un locale elegante ed essenziale con quadri alle pareti."
+    "gsummary": "Raffinati menù degustazione sardi e vini in abbinamento in un locale elegante ed essenziale con quadri alle pareti.",
+    "photo": "assets/images/poi/dal-corsaro.webp",
+    "photoCredit": "Fredrik Lundgren"
   },
   {
     "id": "sa-mandra",
@@ -1684,8 +1842,10 @@
     "web": "samandra.it",
     "orari": "Solo su prenotazione online (obbligatoria). Cene: ven–dom. Pranzi festivi. Shop: lun–sab 9–13/16–19.",
     "rating": 4.8,
-    "reviews": 3542,
-    "gsummary": "Struttura pittoresca in agriturismo classico con colazione inclusa, ristorante rustico e area giochi."
+    "reviews": 3545,
+    "gsummary": "Struttura pittoresca in agriturismo classico con colazione inclusa, ristorante rustico e area giochi.",
+    "photo": "assets/images/poi/sa-mandra.webp",
+    "photoCredit": "Azienda Agrituristica Sa Mandra"
   },
   {
     "id": "su-gologone",
@@ -1701,7 +1861,9 @@
     "web": "www.sugologone.it",
     "orari": "Ristorante: 12:30-14:00 / 19:30-22:00 tutti i giorni.",
     "rating": 4.6,
-    "reviews": 57
+    "reviews": 59,
+    "photo": "assets/images/poi/su-gologone.webp",
+    "photoCredit": "IDa"
   },
   {
     "id": "andreini",
@@ -1754,7 +1916,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/selvaggio-blu.webp",
+    "photoCredit": "PINKO PALLO"
   },
   {
     "id": "giro-maddalena",
@@ -1770,7 +1934,7 @@
     "web": "www.coopmaddalena.it",
     "orari": "Aprile-ottobre: tutti i giorni con meteo favorevole.",
     "rating": 4.9,
-    "reviews": 34,
+    "reviews": 35,
     "ghours": [
       "lunedì: Aperto 24 ore su 24",
       "martedì: Aperto 24 ore su 24",
@@ -1779,7 +1943,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/giro-maddalena.webp",
+    "photoCredit": "Maddalena Experience - Tour in barca nell’Arcipelago di La Maddalena"
   },
   {
     "id": "kayak-orosei",
@@ -1823,7 +1989,7 @@
     "web": "www.subaquadive.it",
     "orari": "Aprile-ottobre: 8:30-18:30. Prenotazione consigliata.",
     "rating": 5,
-    "reviews": 150,
+    "reviews": 153,
     "ghours": [
       "lunedì: 08:00–20:00",
       "martedì: 08:00–20:00",
@@ -1832,7 +1998,9 @@
       "venerdì: 08:00–20:00",
       "sabato: 08:00–20:00",
       "domenica: 08:00–20:00"
-    ]
+    ],
+    "photo": "assets/images/poi/diving-villasimius.webp",
+    "photoCredit": "Air Sub Diving Center Villasimius - Scuba & Snorkeling"
   },
   {
     "id": "trenino-verde",
@@ -1862,7 +2030,7 @@
     "web": "windportopollo.com · windsurfvillage.it · fh.academy · portopollo.it",
     "orari": "Tutto l'anno. Scuole: aprile–ottobre 8:00–tramonto. Vento migliore: maggio–settembre.",
     "rating": 5,
-    "reviews": 51,
+    "reviews": 52,
     "ghours": [
       "lunedì: 09:00–20:00",
       "martedì: 09:00–20:00",
@@ -1871,7 +2039,9 @@
       "venerdì: 09:00–20:00",
       "sabato: 09:00–20:00",
       "domenica: 09:00–20:00"
-    ]
+    ],
+    "photo": "assets/images/poi/kitesurf-porto-pollo.webp",
+    "photoCredit": "Kite Porto Pollo"
   },
   {
     "id": "bonga-surf-school",
@@ -1896,7 +2066,9 @@
       "venerdì: 10:00–18:00",
       "sabato: 10:00–18:00",
       "domenica: 10:00–18:00"
-    ]
+    ],
+    "photo": "assets/images/poi/bonga-surf-school.webp",
+    "photoCredit": "Bonga Surf School"
   },
   {
     "id": "il-baretto-porto-ferro",
@@ -1912,7 +2084,7 @@
     "web": "www.piccolipassicoop.it",
     "orari": "Stagione estiva: 09:00–23:00. Eventi: domeniche e weekend. Apertura: giugno–settembre.",
     "rating": 4.4,
-    "reviews": 797,
+    "reviews": 798,
     "ghours": [
       "lunedì: 08:00–00:00",
       "martedì: 08:00–00:00",
@@ -1922,7 +2094,9 @@
       "sabato: 08:00–00:00",
       "domenica: Aperto 24 ore su 24"
     ],
-    "gsummary": "Rilassato locale in spiaggia che propone pesce e panini oltre a concerti-aperitivo e noleggio tavole da surf."
+    "gsummary": "Rilassato locale in spiaggia che propone pesce e panini oltre a concerti-aperitivo e noleggio tavole da surf.",
+    "photo": "assets/images/poi/il-baretto-porto-ferro.webp",
+    "photoCredit": "Ann Van Camp"
   },
   {
     "id": "valle-luna-aggius",
@@ -1947,7 +2121,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/valle-luna-aggius.webp",
+    "photoCredit": "Rad Zió"
   },
   {
     "id": "monte-limbara",
@@ -1972,7 +2148,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/monte-limbara.webp",
+    "photoCredit": "RANDY'S FAMILY 4X4 & NATURE PASSION"
   },
   {
     "id": "necropoli-li-muri",
@@ -1988,7 +2166,7 @@
     "web": "www.parcarcheoarzachena.it",
     "orari": "Aperto tutto l'anno 8:00-tramonto.",
     "rating": 4.2,
-    "reviews": 398,
+    "reviews": 399,
     "ghours": [
       "lunedì: 10:00–18:00",
       "martedì: 10:00–18:00",
@@ -1997,7 +2175,9 @@
       "venerdì: 10:00–18:00",
       "sabato: 10:00–18:00",
       "domenica: 10:00–18:00"
-    ]
+    ],
+    "photo": "assets/images/poi/necropoli-li-muri.webp",
+    "photoCredit": "Michal Sarňák"
   },
   {
     "id": "tempio-pausania",
@@ -2011,7 +2191,9 @@
     "costo": "Centro storico gratuito. Museo Bernardi: 3€",
     "tel": "+39 079 671011",
     "web": "www.comune.tempiopausania.ss.it",
-    "orari": "Sempre aperto. Carnevale: gen-feb (sfilate domenica pomeriggio)."
+    "orari": "Sempre aperto. Carnevale: gen-feb (sfilate domenica pomeriggio).",
+    "photo": "assets/images/poi/tempio-pausania.webp",
+    "photoCredit": "Jo Dejonckheere"
   },
   {
     "id": "palau-centro",
@@ -2025,7 +2207,9 @@
     "costo": "Traghetto La Maddalena: 3€/persona (20 min)",
     "tel": "+39 0789 709570",
     "web": "www.palauturismo.it",
-    "orari": "Traghetti ogni 30 min: 6:00-23:00 (inverno ridotto)."
+    "orari": "Traghetti ogni 30 min: 6:00-23:00 (inverno ridotto).",
+    "photo": "assets/images/poi/palau-centro.webp",
+    "photoCredit": "giustino iori"
   },
   {
     "id": "santa-teresa-gallura",
@@ -2039,7 +2223,9 @@
     "costo": "Centro gratuito. Traghetti Corsica: da 15€",
     "tel": "",
     "web": "www.visitsantateresagallura.com",
-    "orari": "Spiagge aperte tutto l'anno. Traghetti Corsica: aprile-ottobre."
+    "orari": "Spiagge aperte tutto l'anno. Traghetti Corsica: aprile-ottobre.",
+    "photo": "assets/images/poi/santa-teresa-gallura.webp",
+    "photoCredit": "Stelyann Ivan"
   },
   {
     "id": "nuraghe-palmavera",
@@ -2055,7 +2241,7 @@
     "web": "villeinpietre.com",
     "orari": "Estate: 9:00-19:00. Inverno: 10:00-16:00.",
     "rating": 4.5,
-    "reviews": 3111,
+    "reviews": 3110,
     "ghours": [
       "lunedì: 10:00–19:00",
       "martedì: 10:00–19:00",
@@ -2065,7 +2251,9 @@
       "sabato: 10:00–19:00",
       "domenica: 10:00–19:00"
     ],
-    "gsummary": "Sito archeologico con rovine in pietra di insediamento nuragico dell'Età del Bronzo."
+    "gsummary": "Sito archeologico con rovine in pietra di insediamento nuragico dell'Età del Bronzo.",
+    "photo": "assets/images/poi/nuraghe-palmavera.webp",
+    "photoCredit": "Esther"
   },
   {
     "id": "lago-baratz",
@@ -2081,7 +2269,9 @@
     "web": "",
     "orari": "Sempre aperto.",
     "rating": 4.1,
-    "reviews": 101
+    "reviews": 101,
+    "photo": "assets/images/poi/lago-baratz.webp",
+    "photoCredit": "Google"
   },
   {
     "id": "stagno-san-teodoro",
@@ -2097,7 +2287,9 @@
     "web": "",
     "orari": "Sempre aperto. Fenicotteri presenti: ottobre-aprile.",
     "rating": 4.5,
-    "reviews": 137
+    "reviews": 137,
+    "photo": "assets/images/poi/stagno-san-teodoro.webp",
+    "photoCredit": "Luca A. 1969"
   },
   {
     "id": "platamona-surf",
@@ -2113,7 +2305,7 @@
     "web": "www.trovaspiagge.it/spiaggia/sardegna/sorso/platamona/platamona",
     "orari": "Spiaggia aperta tutto l'anno. Surf: ottobre-marzo migliore.",
     "rating": 4.1,
-    "reviews": 370,
+    "reviews": 371,
     "ghours": [
       "lunedì: Aperto 24 ore su 24",
       "martedì: Aperto 24 ore su 24",
@@ -2122,7 +2314,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/platamona-surf.webp",
+    "photoCredit": "Csaba Biro"
   },
   {
     "id": "pattada-coltelli",
@@ -2147,7 +2341,9 @@
       "venerdì: 09:00–19:00",
       "sabato: 09:00–19:00",
       "domenica: 11:00–18:00"
-    ]
+    ],
+    "photo": "assets/images/poi/pattada-coltelli.webp",
+    "photoCredit": "Amel Luna"
   },
   {
     "id": "ozieri-museo",
@@ -2200,7 +2396,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/nautica-sagiel-palau.webp",
+    "photoCredit": "lucrezia bartelloni"
   },
   {
     "id": "marina-david-palau",
@@ -2225,7 +2423,9 @@
       "venerdì: 08:00–13:00, 16:00–20:00",
       "sabato: 08:00–13:00, 16:00–20:00",
       "domenica: 08:00–13:00, 16:00–20:00"
-    ]
+    ],
+    "photo": "assets/images/poi/marina-david-palau.webp",
+    "photoCredit": "Mattia Murru"
   },
   {
     "id": "sun-sea-alghero",
@@ -2250,7 +2450,9 @@
       "venerdì: 09:00–23:00",
       "sabato: 09:00–23:00",
       "domenica: 09:00–23:00"
-    ]
+    ],
+    "photo": "assets/images/poi/sun-sea-alghero.webp",
+    "photoCredit": "Andrea Manconi"
   },
   {
     "id": "linea-grotte-nettuno",
@@ -2266,7 +2468,9 @@
     "web": "grottedinettuno.it",
     "orari": "Aprile–ottobre: corse mattina, mezzogiorno, sera. Inverno: ridotto. Chiuso con mare mosso.",
     "rating": 4.2,
-    "reviews": 6
+    "reviews": 6,
+    "photo": "assets/images/poi/linea-grotte-nettuno.webp",
+    "photoCredit": "Javi Trigo"
   },
   {
     "id": "phi-beach",
@@ -2282,7 +2486,7 @@
     "web": "phibeach.com",
     "orari": "Giugno–settembre: 18:00–4:00. Chiuso in bassa stagione.",
     "rating": 4.3,
-    "reviews": 4042,
+    "reviews": 4048,
     "ghours": [
       "lunedì: 12:00–03:00",
       "martedì: 12:00–03:00",
@@ -2292,7 +2496,9 @@
       "sabato: 12:00–03:00",
       "domenica: 12:00–03:00"
     ],
-    "gsummary": "Locale all'aperto con DJ set e panorami mozzafiato al tramonto, serve cocktail e cucina italiana creativa."
+    "gsummary": "Locale all'aperto con DJ set e panorami mozzafiato al tramonto, serve cocktail e cucina italiana creativa.",
+    "photo": "assets/images/poi/phi-beach.webp",
+    "photoCredit": "Phi Beach - Spiaggia, Club & Ristorante"
   },
   {
     "id": "museo-garibaldi-caprera",
@@ -2308,7 +2514,7 @@
     "web": "garibaldicaprera.beniculturali.it",
     "orari": "Compendio: tutti i gg tranne lunedì, 9:00–20:00 (ult. ingresso 19:15) · Memoriale: tutti i gg tranne mercoledì, 10:15–19:15.",
     "rating": 4.4,
-    "reviews": 2090,
+    "reviews": 2091,
     "ghours": [
       "lunedì: Chiuso",
       "martedì: 08:30–18:30",
@@ -2318,7 +2524,9 @@
       "sabato: 08:30–18:30",
       "domenica: 08:30–18:30"
     ],
-    "gsummary": "Dimora e sito di sepoltura preservati del generale italiano ottocentesco Giuseppe Garibaldi, con tour e giardini."
+    "gsummary": "Dimora e sito di sepoltura preservati del generale italiano ottocentesco Giuseppe Garibaldi, con tour e giardini.",
+    "photo": "assets/images/poi/museo-garibaldi-caprera.webp",
+    "photoCredit": "Marie"
   },
   {
     "id": "siti-arch-arzachena",
@@ -2357,7 +2565,9 @@
       "venerdì: 08:30–12:30, 14:30–18:30",
       "sabato: 09:00–13:00",
       "domenica: Chiuso"
-    ]
+    ],
+    "photo": "assets/images/poi/cantina-gallura.webp",
+    "photoCredit": "R. B."
   },
   {
     "id": "noleggio-ebike-alghero",
@@ -2382,7 +2592,9 @@
       "venerdì: 09:00–19:30",
       "sabato: 09:00–19:30",
       "domenica: 09:00–13:30, 16:00–19:00"
-    ]
+    ],
+    "photo": "assets/images/poi/noleggio-ebike-alghero.webp",
+    "photoCredit": "Bike Alghero"
   },
   {
     "id": "arrampicata-san-pantaleo",
@@ -2398,7 +2610,9 @@
     "web": "climbingsardinia.com",
     "orari": "Tutto l'anno. Stagione ideale: set–nov / feb–mag. Evitare luglio–agosto (caldo).",
     "rating": 4.6,
-    "reviews": 291
+    "reviews": 291,
+    "photo": "assets/images/poi/arrampicata-san-pantaleo.webp",
+    "photoCredit": "Bertl Bök"
   },
   {
     "id": "arrampicata-capo-testa",
@@ -2414,7 +2628,7 @@
     "web": "thecrag.com",
     "orari": "Settembre–maggio. Luglio–agosto: troppo caldo.",
     "rating": 4.8,
-    "reviews": 5884,
+    "reviews": 5887,
     "ghours": [
       "lunedì: Aperto 24 ore su 24",
       "martedì: Aperto 24 ore su 24",
@@ -2424,7 +2638,9 @@
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
     ],
-    "gsummary": "Area costiera appartata con sentieri escursionistici rocciosi e calette con piccole spiagge sabbiose."
+    "gsummary": "Area costiera appartata con sentieri escursionistici rocciosi e calette con piccole spiagge sabbiose.",
+    "photo": "assets/images/poi/arrampicata-capo-testa.webp",
+    "photoCredit": "Francesco porcu"
   },
   {
     "id": "orgosolo",
@@ -2438,7 +2654,9 @@
     "costo": "Accesso gratuito. Parcheggio libero.",
     "tel": "",
     "web": "proloco-orgosolo.com",
-    "orari": "Sempre aperto. Carnevale: febbraio."
+    "orari": "Sempre aperto. Carnevale: febbraio.",
+    "photo": "assets/images/poi/orgosolo.webp",
+    "photoCredit": "gavinocbr"
   },
   {
     "id": "mamoiada",
@@ -2452,7 +2670,9 @@
     "costo": "Museo MATER: 5€ adulti / gratuito <6. Carnevale: accesso libero.",
     "tel": "+39 0784 56392",
     "web": "museomater.com",
-    "orari": "Museo: mar-dom 9:00-13:00 / 15:30-19:00. Carnevale: 17 gen e martedì grasso."
+    "orari": "Museo: mar-dom 9:00-13:00 / 15:30-19:00. Carnevale: 17 gen e martedì grasso.",
+    "photo": "assets/images/poi/mamoiada.webp",
+    "photoCredit": "gianni casula"
   },
   {
     "id": "oliena",
@@ -2466,7 +2686,9 @@
     "costo": "Centro: gratuito. Escursioni Supramonte: 30-80€/persona",
     "tel": "",
     "web": "comune.oliena.nu.it",
-    "orari": "Centro aperto tutto l'anno. Autunno in Barbagia: ottobre."
+    "orari": "Centro aperto tutto l'anno. Autunno in Barbagia: ottobre.",
+    "photo": "assets/images/poi/oliena.webp",
+    "photoCredit": "Pina Padedda"
   },
   {
     "id": "gavoi",
@@ -2480,7 +2702,9 @@
     "costo": "Centro: gratuito. Kayak lago: 10-15€/h",
     "tel": "",
     "web": "festivalletteraturaisola.it",
-    "orari": "Festival: luglio. Lago Gusana: tutto l'anno."
+    "orari": "Festival: luglio. Lago Gusana: tutto l'anno.",
+    "photo": "assets/images/poi/gavoi.webp",
+    "photoCredit": "César Garrido Martín"
   },
   {
     "id": "aritzo",
@@ -2494,7 +2718,9 @@
     "costo": "Centro: gratuito. Sagra: ingresso libero.",
     "tel": "",
     "web": "proloco.aritzo.it",
-    "orari": "Sagra delle castagne: ultima domenica di ottobre."
+    "orari": "Sagra delle castagne: ultima domenica di ottobre.",
+    "photo": "assets/images/poi/aritzo.webp",
+    "photoCredit": "mauro angioni"
   },
   {
     "id": "desulo",
@@ -2508,7 +2734,9 @@
     "costo": "Centro: gratuito. Autunno in Barbagia: ingresso libero.",
     "tel": "",
     "web": "autunnoinbarbagia.it",
-    "orari": "Autunno in Barbagia: ottobre (ogni weekend)."
+    "orari": "Autunno in Barbagia: ottobre (ogni weekend).",
+    "photo": "assets/images/poi/desulo.webp",
+    "photoCredit": "Ajò in pullman"
   },
   {
     "id": "tonara",
@@ -2522,7 +2750,9 @@
     "costo": "Centro: gratuito. Torrone: 10-25€/kg",
     "tel": "",
     "web": "prolocotonara.it",
-    "orari": "Botteghe: lun-sab 9:00-13:00 / 15:00-19:00. Sagra: domenica di Pasqua."
+    "orari": "Botteghe: lun-sab 9:00-13:00 / 15:00-19:00. Sagra: domenica di Pasqua.",
+    "photo": "assets/images/poi/tonara.webp",
+    "photoCredit": "Patrizia Pireddu"
   },
   {
     "id": "baunei",
@@ -2536,7 +2766,9 @@
     "costo": "Centro: gratuito. Selvaggio Blu con guida: 800-1500€/persona (7 giorni)",
     "tel": "+39 0782 610271",
     "web": "golfodioro.com",
-    "orari": "Altopiano Golgo: sempre aperto. Escursioni: aprile-ottobre."
+    "orari": "Altopiano Golgo: sempre aperto. Escursioni: aprile-ottobre.",
+    "photo": "assets/images/poi/baunei.webp",
+    "photoCredit": "Bart"
   },
   {
     "id": "dorgali",
@@ -2550,7 +2782,9 @@
     "costo": "Centro: gratuito. Grotta Ispinigoli: 9€",
     "tel": "",
     "web": "comune.dorgali.nu.it",
-    "orari": "Grotta Ispinigoli: estate 9:00-19:00."
+    "orari": "Grotta Ispinigoli: estate 9:00-19:00.",
+    "photo": "assets/images/poi/dorgali.webp",
+    "photoCredit": "Giuliana Brunero"
   },
   {
     "id": "tortoli",
@@ -2564,7 +2798,9 @@
     "costo": "Centro: gratuito.",
     "tel": "",
     "web": "comune.tortoli.og.it",
-    "orari": "Aeroporto: aprile-ottobre (voli stagionali da Milano, Roma, Bergamo)."
+    "orari": "Aeroporto: aprile-ottobre (voli stagionali da Milano, Roma, Bergamo).",
+    "photo": "assets/images/poi/tortoli.webp",
+    "photoCredit": "Julio Rojo Eyaralar"
   },
   {
     "id": "aggius",
@@ -2578,7 +2814,9 @@
     "costo": "Centro: gratuito. Museo Banditismo: 4€",
     "tel": "+39 079 621057",
     "web": "museoetnoaggius.it",
-    "orari": "Museo: mar-dom 9:30-12:30 / 15:30-18:30. Chiuso lunedì."
+    "orari": "Museo: mar-dom 9:30-12:30 / 15:30-18:30. Chiuso lunedì.",
+    "photo": "assets/images/poi/aggius.webp",
+    "photoCredit": "Rick Price"
   },
   {
     "id": "galtelli",
@@ -2592,7 +2830,9 @@
     "costo": "Centro: gratuito",
     "tel": "",
     "web": "comune.galtelli.nu.it",
-    "orari": "Chiesa: 9:00-12:00 / 15:00-18:00."
+    "orari": "Chiesa: 9:00-12:00 / 15:00-18:00.",
+    "photo": "assets/images/poi/galtelli.webp",
+    "photoCredit": "gianni casula"
   },
   {
     "id": "orosei",
@@ -2606,7 +2846,9 @@
     "costo": "Centro: gratuito",
     "tel": "",
     "web": "comune.orosei.nu.it",
-    "orari": "Centro: sempre aperto."
+    "orari": "Centro: sempre aperto.",
+    "photo": "assets/images/poi/orosei.webp",
+    "photoCredit": "M.Virginia Cancedda"
   },
   {
     "id": "posada",
@@ -2620,7 +2862,9 @@
     "costo": "Castello: 4€ adulti",
     "tel": "",
     "web": "comune.posada.nu.it",
-    "orari": "Castello: estate 9:00-19:00. Inverno: orari ridotti."
+    "orari": "Castello: estate 9:00-19:00. Inverno: orari ridotti.",
+    "photo": "assets/images/poi/posada.webp",
+    "photoCredit": "Alberto Carraca"
   },
   {
     "id": "carloforte",
@@ -2634,7 +2878,9 @@
     "costo": "Traghetto: 5-10€/persona. Centro: gratuito.",
     "tel": "",
     "web": "prolococarloforte.it",
-    "orari": "Traghetti: 6:00-23:00 (estate). Festival Girotonno: maggio."
+    "orari": "Traghetti: 6:00-23:00 (estate). Festival Girotonno: maggio.",
+    "photo": "assets/images/poi/carloforte.webp",
+    "photoCredit": "Michelle Hill"
   },
   {
     "id": "iglesias",
@@ -2648,7 +2894,9 @@
     "costo": "Centro: gratuito. Museo Mineraria: 5€",
     "tel": "",
     "web": "museoartemineraria.it",
-    "orari": "Museo: mar-dom 10:00-13:00 / 16:00-19:00."
+    "orari": "Museo: mar-dom 10:00-13:00 / 16:00-19:00.",
+    "photo": "assets/images/poi/iglesias.webp",
+    "photoCredit": "Ray Smallwood"
   },
   {
     "id": "cabras",
@@ -2664,7 +2912,9 @@
     "web": "monteprama.it",
     "orari": "Museo: mar-dom 9:00-13:00 / 16:00-20:00 (estate). Lun chiuso.",
     "rating": 4.2,
-    "reviews": 141
+    "reviews": 141,
+    "photo": "assets/images/poi/cabras.webp",
+    "photoCredit": "Camilla Giubbilini"
   },
   {
     "id": "santulussurgiu",
@@ -2692,7 +2942,9 @@
     "costo": "Museo: 3€",
     "tel": "+39 0783 64116",
     "web": "murats.it",
-    "orari": "Museo: mer-lun 9:00-13:00 / 15:00-18:00. Chiuso martedì."
+    "orari": "Museo: mer-lun 9:00-13:00 / 15:00-18:00. Chiuso martedì.",
+    "photo": "assets/images/poi/samugheo.webp",
+    "photoCredit": "Giovanni Sini"
   },
   {
     "id": "su-nuraxi-barumini",
@@ -2708,7 +2960,7 @@
     "web": "fondazionebarumini.it",
     "orari": "Tutti i giorni 9:00-19:30 (estate). 9:00-17:00 (inverno). Ultimo tour 1h prima chiusura.",
     "rating": 4.7,
-    "reviews": 8388,
+    "reviews": 8393,
     "ghours": [
       "lunedì: 09:00–20:00",
       "martedì: 09:00–20:00",
@@ -2718,7 +2970,9 @@
       "sabato: 09:00–20:00",
       "domenica: 09:00–20:00"
     ],
-    "gsummary": "Unica in Sardegna, questa antica fortificazione difensiva è composta da una rete di torri circolari."
+    "gsummary": "Unica in Sardegna, questa antica fortificazione difensiva è composta da una rete di torri circolari.",
+    "photo": "assets/images/poi/su-nuraxi-barumini.webp",
+    "photoCredit": "Su Nuraxi di Barumini"
   },
   {
     "id": "stagno-molentargius",
@@ -2743,7 +2997,9 @@
       "venerdì: 08:00–20:35",
       "sabato: 08:00–20:35",
       "domenica: 08:00–20:35"
-    ]
+    ],
+    "photo": "assets/images/poi/stagno-molentargius.webp",
+    "photoCredit": "Ivano Di Stefano"
   },
   {
     "id": "cala-goloritse",
@@ -2759,8 +3015,10 @@
     "web": "baunei.net",
     "orari": "Accesso: 7:00-18:00 (estate). Quota 300 persone/giorno.",
     "rating": 4.7,
-    "reviews": 4164,
-    "gsummary": "Isolata spiaggia di sabbia bianca e ciottoli con arco in pietra naturale e svettante roccia."
+    "reviews": 4165,
+    "gsummary": "Isolata spiaggia di sabbia bianca e ciottoli con arco in pietra naturale e svettante roccia.",
+    "photo": "assets/images/poi/cala-goloritse.webp",
+    "photoCredit": "Carlos Alberto do Amaral"
   },
   {
     "id": "sella-del-diavolo",
@@ -2786,7 +3044,9 @@
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
     ],
-    "gsummary": "Promontorio a forma di sella che offre vedute suggestive sul mare dalla cima, accessibile tramite sentieri."
+    "gsummary": "Promontorio a forma di sella che offre vedute suggestive sul mare dalla cima, accessibile tramite sentieri.",
+    "photo": "assets/images/poi/sella-del-diavolo.webp",
+    "photoCredit": "Roberta Galici"
   },
   {
     "id": "monte-ortobene",
@@ -2811,7 +3071,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/monte-ortobene.webp",
+    "photoCredit": "Angelika Fischer"
   },
   {
     "id": "capo-testa",
@@ -2825,7 +3087,9 @@
     "costo": "Parcheggio: 2€/h. Accesso libero",
     "tel": "",
     "web": "",
-    "orari": "Sempre aperto. Affollato luglio-agosto: arrivare mattino presto."
+    "orari": "Sempre aperto. Affollato luglio-agosto: arrivare mattino presto.",
+    "photo": "assets/images/poi/capo-testa.webp",
+    "photoCredit": "Sven Schreiber"
   },
   {
     "id": "punta-la-marmora",
@@ -2842,7 +3106,9 @@
     "orari": "Giugno-ottobre. Vietato con neve senza equipaggiamento alpino.",
     "rating": 4.8,
     "reviews": 139,
-    "gsummary": "La vetta più elevata della regione, popolare per le escursioni non impegnative e l'ampia vista panoramica."
+    "gsummary": "La vetta più elevata della regione, popolare per le escursioni non impegnative e l'ampia vista panoramica.",
+    "photo": "assets/images/poi/punta-la-marmora.webp",
+    "photoCredit": "Herwig Rehatschek"
   },
   {
     "id": "faro-capo-spartivento",
@@ -2859,7 +3125,9 @@
     "orari": "Sentiero: H24. Hotel: prenotazione.",
     "rating": 4.7,
     "reviews": 127,
-    "gsummary": "Area con calette rocciose, spiagge isolate, rovine della città fenicia di Bithia e faro ottocentesco riconvertito in hotel."
+    "gsummary": "Area con calette rocciose, spiagge isolate, rovine della città fenicia di Bithia e faro ottocentesco riconvertito in hotel.",
+    "photo": "assets/images/poi/faro-capo-spartivento.webp",
+    "photoCredit": "M. L."
   },
   {
     "id": "faro-capo-ferro",
@@ -2873,7 +3141,9 @@
     "costo": "Gratuito",
     "tel": "",
     "web": "",
-    "orari": "Sempre aperto (sentiero). Alba e tramonto: consigliati."
+    "orari": "Sempre aperto (sentiero). Alba e tramonto: consigliati.",
+    "photo": "assets/images/poi/faro-capo-ferro.webp",
+    "photoCredit": "Anna Maria Profili"
   },
   {
     "id": "isola-asinara",
@@ -2899,7 +3169,9 @@
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
     ],
-    "gsummary": "Area naturale e marina per gite in barca a vela e tour fuoristrada, con vista sugli asini bianchi dell'isola."
+    "gsummary": "Area naturale e marina per gite in barca a vela e tour fuoristrada, con vista sugli asini bianchi dell'isola.",
+    "photo": "assets/images/poi/isola-asinara.webp",
+    "photoCredit": "Gabriele Giuli"
   },
   {
     "id": "arcipelago-maddalena",
@@ -2925,7 +3197,9 @@
       "sabato: Chiuso",
       "domenica: Chiuso"
     ],
-    "gsummary": "Istituito nel 1994, questo parco geomarino è composto da svariati isolotti e piccole isole."
+    "gsummary": "Istituito nel 1994, questo parco geomarino è composto da svariati isolotti e piccole isole.",
+    "photo": "assets/images/poi/arcipelago-maddalena.webp",
+    "photoCredit": "Aleksander Skoczylas"
   },
   {
     "id": "isola-budelli",
@@ -2942,7 +3216,9 @@
     "orari": "Aprile-ottobre. Solo in barca.",
     "rating": 4.4,
     "reviews": 395,
-    "gsummary": "Spiaggia protetta di sabbia rosea, unica nel suo genere, composta da fossili, cristalli e coralli polverizzati."
+    "gsummary": "Spiaggia protetta di sabbia rosea, unica nel suo genere, composta da fossili, cristalli e coralli polverizzati.",
+    "photo": "assets/images/poi/isola-budelli.webp",
+    "photoCredit": "Aleš Hambálek"
   },
   {
     "id": "ss125-orientale-sarda",
@@ -2958,7 +3234,7 @@
     "web": "",
     "orari": "Sempre aperta (attenzione: nebbia e ghiaccio in inverno sopra 400m).",
     "rating": 4.6,
-    "reviews": 28,
+    "reviews": 29,
     "ghours": [
       "lunedì: Aperto 24 ore su 24",
       "martedì: Aperto 24 ore su 24",
@@ -2967,7 +3243,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/ss125-orientale-sarda.webp",
+    "photoCredit": "Martin McIntaggart"
   },
   {
     "id": "porto-pollo",
@@ -2992,7 +3270,9 @@
       "venerdì: 10:00–20:00",
       "sabato: 10:00–20:00",
       "domenica: 10:00–20:00"
-    ]
+    ],
+    "photo": "assets/images/poi/porto-pollo.webp",
+    "photoCredit": "PKS Politi kite school"
   },
   {
     "id": "museo-nazionale-cagliari",
@@ -3008,7 +3288,7 @@
     "web": "museoarcheocagliari.it",
     "orari": "Mar-dom: 9:00-20:00. Chiuso lunedì.",
     "rating": 4.5,
-    "reviews": 4023,
+    "reviews": 4026,
     "ghours": [
       "lunedì: 08:30–19:30",
       "martedì: 08:30–19:30",
@@ -3018,7 +3298,9 @@
       "sabato: 08:30–19:30",
       "domenica: 08:30–19:30"
     ],
-    "gsummary": "Museo dedicato alla storia antica della Sardegna con vari reperti archeologici, tra cui gioielli punici."
+    "gsummary": "Museo dedicato alla storia antica della Sardegna con vari reperti archeologici, tra cui gioielli punici.",
+    "photo": "assets/images/poi/museo-nazionale-cagliari.webp",
+    "photoCredit": "Museo Archeologico Nazionale di Cagliari"
   },
   {
     "id": "museo-carnevale-mamoiada",
@@ -3034,7 +3316,7 @@
     "web": "museodellemaschere.it",
     "orari": "Mar-dom: 9:00-13:00 / 15:00-19:00 (estate). Chiuso lunedì.",
     "rating": 4.6,
-    "reviews": 1972,
+    "reviews": 1973,
     "ghours": [
       "lunedì: 10:00–18:00",
       "martedì: Chiuso",
@@ -3043,7 +3325,9 @@
       "venerdì: 10:00–18:00",
       "sabato: 10:00–18:00",
       "domenica: 10:00–18:00"
-    ]
+    ],
+    "photo": "assets/images/poi/museo-carnevale-mamoiada.webp",
+    "photoCredit": "Museo delle Maschere Mediterranee"
   },
   {
     "id": "museo-tonnara-stintino",
@@ -3068,7 +3352,9 @@
       "venerdì: 18:30–22:30",
       "sabato: 10:30–13:30, 18:30–22:30",
       "domenica: 10:30–13:30, 18:30–22:30"
-    ]
+    ],
+    "photo": "assets/images/poi/museo-tonnara-stintino.webp",
+    "photoCredit": "MuT - Museo della Tonnara di Stintino"
   },
   {
     "id": "museo-ossidiana",
@@ -3093,7 +3379,9 @@
       "venerdì: 10:00–12:00, 16:00–19:00",
       "sabato: 10:00–12:00, 16:00–19:00",
       "domenica: 10:00–12:00, 16:00–19:00"
-    ]
+    ],
+    "photo": "assets/images/poi/museo-ossidiana.webp",
+    "photoCredit": "Museo dell'Ossidiana"
   },
   {
     "id": "cattedrale-cagliari",
@@ -3109,7 +3397,7 @@
     "web": "diocesidicagliari.it",
     "orari": "Tutti i giorni: 8:00-12:30 / 16:00-20:00.",
     "rating": 4.6,
-    "reviews": 4803,
+    "reviews": 4806,
     "ghours": [
       "lunedì: 09:00–20:00",
       "martedì: 09:00–20:00",
@@ -3119,7 +3407,9 @@
       "sabato: 09:00–20:00",
       "domenica: 09:00–20:00"
     ],
-    "gsummary": "Elegante cattedrale del 1200 con interni sfarzosi, grande pulpito in marmo e cripta con tombe reali."
+    "gsummary": "Elegante cattedrale del 1200 con interni sfarzosi, grande pulpito in marmo e cripta con tombe reali.",
+    "photo": "assets/images/poi/cattedrale-cagliari.webp",
+    "photoCredit": "Christiane Gerlacher"
   },
   {
     "id": "basilica-san-simplicio",
@@ -3145,7 +3435,9 @@
       "sabato: 07:00–20:00",
       "domenica: 07:00–20:00"
     ],
-    "gsummary": "Basilica costruita in gran parte nell'XI e XII secolo, con piccolo campanile e abside affrescata."
+    "gsummary": "Basilica costruita in gran parte nell'XI e XII secolo, con piccolo campanile e abside affrescata.",
+    "photo": "assets/images/poi/basilica-san-simplicio.webp",
+    "photoCredit": "Basilica di San Simplicio"
   },
   {
     "id": "saccargia",
@@ -3161,7 +3453,7 @@
     "web": "www.chieseromanichesardegna.it/codrongianos-chiesa-della-santissima-trinita-di-saccargia",
     "orari": "Estate: 9:30-13:00 / 15:00-19:30. Inverno: 10:00-13:00 / 15:00-17:00.",
     "rating": 4.6,
-    "reviews": 3296,
+    "reviews": 3298,
     "ghours": [
       "lunedì: 09:00–17:30",
       "martedì: 09:00–17:30",
@@ -3171,7 +3463,9 @@
       "sabato: 09:00–17:30",
       "domenica: 09:00–17:30"
     ],
-    "gsummary": "Chiesa romanica costruita nel 1116 in basalto e pietra calcarea sulle rovine di un monastero preesistente."
+    "gsummary": "Chiesa romanica costruita nel 1116 in basalto e pietra calcarea sulle rovine di un monastero preesistente.",
+    "photo": "assets/images/poi/saccargia.webp",
+    "photoCredit": "Erzsébet Kovács"
   },
   {
     "id": "santuario-bonaria",
@@ -3187,7 +3481,7 @@
     "web": "santuariobonaria.net",
     "orari": "Basilica: tutti i giorni 6:30-12:00 / 16:00-20:00.",
     "rating": 4.7,
-    "reviews": 1726,
+    "reviews": 1729,
     "ghours": [
       "lunedì: 06:30–11:45, 16:30–19:30",
       "martedì: 06:30–11:45, 16:30–19:30",
@@ -3197,7 +3491,9 @@
       "sabato: 06:30–12:15, 16:30–20:30",
       "domenica: 06:30–12:15, 16:30–20:30"
     ],
-    "gsummary": "Santuario che fa parte di un complesso del XIV secolo e custodisce un'antica statua venerata della Madonna."
+    "gsummary": "Santuario che fa parte di un complesso del XIV secolo e custodisce un'antica statua venerata della Madonna.",
+    "photo": "assets/images/poi/santuario-bonaria.webp",
+    "photoCredit": "Ivano Di Stefano"
   },
   {
     "id": "basilica-san-gavino",
@@ -3213,7 +3509,7 @@
     "web": "www.basilicasangavino.it",
     "orari": "Tutti i giorni: 9:00-12:00 / 16:00-19:00.",
     "rating": 4.6,
-    "reviews": 1429,
+    "reviews": 1432,
     "ghours": [
       "lunedì: 09:00–13:00, 15:00–18:45",
       "martedì: 09:00–13:00, 15:00–18:45",
@@ -3223,7 +3519,9 @@
       "sabato: 09:00–13:00, 15:00–18:45",
       "domenica: 09:00–13:00, 15:00–18:45"
     ],
-    "gsummary": "Chiesa in collina con absidi frontali e cripta sotterranea che ospita tombe romane e reliquie di martiri."
+    "gsummary": "Chiesa in collina con absidi frontali e cripta sotterranea che ospita tombe romane e reliquie di martiri.",
+    "photo": "assets/images/poi/basilica-san-gavino.webp",
+    "photoCredit": "Giuseppe Bojano"
   },
   {
     "id": "sa-sartiglia",
@@ -3248,7 +3546,9 @@
       "venerdì: 08:30–13:30",
       "sabato: Chiuso",
       "domenica: Chiuso"
-    ]
+    ],
+    "photo": "assets/images/poi/sa-sartiglia.webp",
+    "photoCredit": "Luigi Macchiola"
   },
   {
     "id": "mamuthones-mamoiada",
@@ -3273,7 +3573,9 @@
       "venerdì: 09:00–19:30",
       "sabato: 09:00–13:00, 15:00–19:30",
       "domenica: Chiuso"
-    ]
+    ],
+    "photo": "assets/images/poi/mamuthones-mamoiada.webp",
+    "photoCredit": "Valentin Vičič"
   },
   {
     "id": "sant-efisio",
@@ -3299,7 +3601,9 @@
       "sabato: 10:00–19:00",
       "domenica: 10:00–13:00"
     ],
-    "gsummary": "Chiesa edificata sopra una grotta nel 430 d.C. e modificata nel '700, con preziosi marmi policromi e dipinti."
+    "gsummary": "Chiesa edificata sopra una grotta nel 430 d.C. e modificata nel '700, con preziosi marmi policromi e dipinti.",
+    "photo": "assets/images/poi/sant-efisio.webp",
+    "photoCredit": "Seun Awoye"
   },
   {
     "id": "faradda-candelieri",
@@ -3352,7 +3656,9 @@
       "venerdì: 09:00–20:00",
       "sabato: 09:00–20:00",
       "domenica: 09:00–17:00"
-    ]
+    ],
+    "photo": "assets/images/poi/coltelli-pattada.webp",
+    "photoCredit": "Coltelli Artigianali Manca"
   },
   {
     "id": "murats-samugheo",
@@ -3368,7 +3674,7 @@
     "web": "www.murats.it",
     "orari": "Mar-dom: 10:00-13:00 / 16:00-19:00. Chiuso lunedì.",
     "rating": 4.7,
-    "reviews": 415,
+    "reviews": 416,
     "ghours": [
       "lunedì: Chiuso",
       "martedì: 10:00–13:00, 17:00–20:00",
@@ -3377,7 +3683,9 @@
       "venerdì: 09:30–13:00, 17:00–20:00",
       "sabato: 09:30–13:00, 17:00–20:00",
       "domenica: 10:00–13:00, 17:00–20:00"
-    ]
+    ],
+    "photo": "assets/images/poi/murats-samugheo.webp",
+    "photoCredit": "Gianmario Manca"
   },
   {
     "id": "aeroporto-cagliari",
@@ -3393,7 +3701,9 @@
     "web": "cagliari-airport.it",
     "orari": "H24. Info partenze: cagliari-airport.it",
     "rating": 4,
-    "reviews": 10238
+    "reviews": 10258,
+    "photo": "assets/images/poi/aeroporto-cagliari.webp",
+    "photoCredit": "giuseppe fulciniti"
   },
   {
     "id": "aeroporto-olbia",
@@ -3409,7 +3719,7 @@
     "web": "geasar.it",
     "orari": "H24 in estate (giugno-settembre). Ridotto in inverno.",
     "rating": 4.1,
-    "reviews": 7676,
+    "reviews": 7693,
     "ghours": [
       "lunedì: Aperto 24 ore su 24",
       "martedì: Aperto 24 ore su 24",
@@ -3418,7 +3728,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/aeroporto-olbia.webp",
+    "photoCredit": "Aeroporto Olbia Costa Smeralda - S.A. Principe Karim Aga Khan IV"
   },
   {
     "id": "aeroporto-alghero",
@@ -3434,7 +3746,9 @@
     "web": "aeroportodialghero.it",
     "orari": "Stagionale: giugno-settembre H24. Inverno: ridotto.",
     "rating": 4,
-    "reviews": 4703
+    "reviews": 4710,
+    "photo": "assets/images/poi/aeroporto-alghero.webp",
+    "photoCredit": "Aeroporto di Alghero"
   },
   {
     "id": "porto-cagliari",
@@ -3449,8 +3763,10 @@
     "tel": "+39 070 6669600",
     "web": "porto.cagliari.it",
     "orari": "Terminal H24. Biglietteria: 8:00-20:00.",
-    "rating": 4.2,
-    "reviews": 37
+    "rating": 4.3,
+    "reviews": 38,
+    "photo": "assets/images/poi/porto-cagliari.webp",
+    "photoCredit": "Αναστάσιος Σαββίδης"
   },
   {
     "id": "porto-olbia",
@@ -3475,7 +3791,9 @@
       "venerdì: 08:30–12:30, 16:15–22:30",
       "sabato: 08:30–12:30, 16:15–22:30",
       "domenica: 17:00–22:30"
-    ]
+    ],
+    "photo": "assets/images/poi/porto-olbia.webp",
+    "photoCredit": "Luca Simone Varesi"
   },
   {
     "id": "porto-torres",
@@ -3491,7 +3809,7 @@
     "web": "portoditorres.net",
     "orari": "Terminal H24. Biglietteria: 7:00-22:00.",
     "rating": 3.7,
-    "reviews": 691,
+    "reviews": 692,
     "ghours": [
       "lunedì: 08:30–13:30, 14:30–20:20",
       "martedì: 08:30–13:30, 14:30–20:20",
@@ -3500,7 +3818,9 @@
       "venerdì: 08:30–13:30, 14:30–20:20",
       "sabato: 08:30–13:30, 14:30–20:20",
       "domenica: 16:45–20:20"
-    ]
+    ],
+    "photo": "assets/images/poi/porto-torres.webp",
+    "photoCredit": "Antonio Ledda"
   },
   {
     "id": "porto-golfo-aranci",
@@ -3516,7 +3836,7 @@
     "web": "corsica-sardinia-ferries.it",
     "orari": "Traghetti: 1-3 corse giornaliere secondo stagione.",
     "rating": 4.1,
-    "reviews": 295,
+    "reviews": 296,
     "ghours": [
       "lunedì: Chiuso",
       "martedì: Chiuso",
@@ -3525,7 +3845,9 @@
       "venerdì: 12:00–15:00",
       "sabato: 12:00–15:00",
       "domenica: 12:00–15:00"
-    ]
+    ],
+    "photo": "assets/images/poi/porto-golfo-aranci.webp",
+    "photoCredit": "Meththa Metta"
   },
   {
     "id": "ospedale-cagliari",
@@ -3550,7 +3872,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/ospedale-cagliari.webp",
+    "photoCredit": "Roberto"
   },
   {
     "id": "ospedale-sassari",
@@ -3575,7 +3899,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/ospedale-sassari.webp",
+    "photoCredit": "riccardo leoni"
   },
   {
     "id": "ospedale-nuoro",
@@ -3600,7 +3926,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/ospedale-nuoro.webp",
+    "photoCredit": "Alessandro Loi"
   },
   {
     "id": "ospedale-oristano",
@@ -3625,7 +3953,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/ospedale-oristano.webp",
+    "photoCredit": "Antony O"
   },
   {
     "id": "stazione-cagliari",
@@ -3641,7 +3971,9 @@
     "web": "trenitalia.com · arst.sardegna.it",
     "orari": "Stazione: 5:00-23:30. ARST: H24 per alcune linee.",
     "rating": 4.2,
-    "reviews": 499
+    "reviews": 502,
+    "photo": "assets/images/poi/stazione-cagliari.webp",
+    "photoCredit": "Christian Hoffmann"
   },
   {
     "id": "stazione-sassari",
@@ -3657,7 +3989,9 @@
     "web": "trenitalia.com · arst.sardegna.it",
     "orari": "Stazione: 5:30-22:30.",
     "rating": 3.6,
-    "reviews": 140
+    "reviews": 141,
+    "photo": "assets/images/poi/stazione-sassari.webp",
+    "photoCredit": "Rob S. Schwandl"
   },
   {
     "id": "noleggio-auto-cagliari",
@@ -3673,7 +4007,7 @@
     "web": "hertz.it · europcar.it · sixt.it",
     "orari": "7:00-23:00 (variano per operatore).",
     "rating": 4.9,
-    "reviews": 410,
+    "reviews": 415,
     "ghours": [
       "lunedì: 07:30–23:00",
       "martedì: 07:30–23:00",
@@ -3682,13 +4016,15 @@
       "venerdì: 07:30–23:00",
       "sabato: 07:30–23:00",
       "domenica: 07:30–23:00"
-    ]
+    ],
+    "photo": "assets/images/poi/noleggio-auto-cagliari.webp",
+    "photoCredit": "Michael Zaugg"
   },
   {
     "id": "noleggio-auto-olbia",
     "name": "Noleggio Auto — Aeroporto Olbia",
-    "lat": 40.903977,
-    "lng": 9.516729,
+    "lat": 40.903902,
+    "lng": 9.515796,
     "cat": "città",
     "description": "Hub noleggio all'aeroporto OLB: Hertz, Europcar, Avis, Sixt, Budget, Locauto. In estate (luglio-agosto) è l'aeroporto più caro d'Italia per noleggio auto. Prenotare 30+ giorni prima per prezzi ragionevoli. Alternative low-cost: Locauto, Sicily by Car (uffici fuori aeroporto con navetta).",
     "come": "Parcheggio multipiano aeroporto OLB, piano 0.",
@@ -3697,8 +4033,8 @@
     "tel": "Hertz: +39 0789 69389 · Europcar: +39 0789 69548 · Sixt: +39 02 9475 7979",
     "web": "hertz.it · europcar.it",
     "orari": "7:00-23:00 (variano per operatore).",
-    "rating": 3.5,
-    "reviews": 2199,
+    "rating": 4.5,
+    "reviews": 2006,
     "ghours": [
       "lunedì: 08:00–23:00",
       "martedì: 08:00–23:00",
@@ -3707,7 +4043,9 @@
       "venerdì: 08:00–23:00",
       "sabato: 08:00–23:00",
       "domenica: 08:00–23:00"
-    ]
+    ],
+    "photo": "assets/images/poi/noleggio-auto-olbia.webp",
+    "photoCredit": "Autonoleggio Sardinya - Aeroporto Olbia Costa Smeralda"
   },
   {
     "id": "emergenze-sardegna",
@@ -3746,7 +4084,9 @@
       "venerdì: 09:00–20:00",
       "sabato: 09:00–20:00",
       "domenica: 09:00–20:00"
-    ]
+    ],
+    "photo": "assets/images/poi/turismo-info-cagliari.webp",
+    "photoCredit": "Thierry Petithomme"
   },
   {
     "id": "cala-di-volpe",
@@ -3762,7 +4102,9 @@
     "web": "starwoodhotels.com/caladevolpe",
     "orari": "Aperto maggio-ottobre.",
     "rating": 4.6,
-    "reviews": 17
+    "reviews": 17,
+    "photo": "assets/images/poi/cala-di-volpe.webp",
+    "photoCredit": "Hotel Cala di Volpe, a Luxury Collection Hotel, Costa Smeralda"
   },
   {
     "id": "forte-village",
@@ -3778,7 +4120,7 @@
     "web": "fortevillage.com",
     "orari": "Aperto aprile-ottobre.",
     "rating": 4.5,
-    "reviews": 3111,
+    "reviews": 3116,
     "ghours": [
       "lunedì: 09:00–18:00",
       "martedì: 09:00–18:00",
@@ -3788,7 +4130,9 @@
       "sabato: 09:00–18:00",
       "domenica: 09:00–18:00"
     ],
-    "gsummary": "Resort di lusso sul mare, con ristoranti rinomati, spa, piscine e camere, suite e ville di lusso."
+    "gsummary": "Resort di lusso sul mare, con ristoranti rinomati, spa, piscine e camere, suite e ville di lusso.",
+    "photo": "assets/images/poi/forte-village.webp",
+    "photoCredit": "Forte Village Resort - Bouganville"
   },
   {
     "id": "chia-laguna",
@@ -3804,8 +4148,10 @@
     "web": "chialaguna.com",
     "orari": "Aperto maggio-ottobre.",
     "rating": 4.4,
-    "reviews": 2424,
-    "gsummary": "Hotel di lusso in resort chic con ristorante, piscina scoperta e miniclub."
+    "reviews": 2425,
+    "gsummary": "Hotel di lusso in resort chic con ristorante, piscina scoperta e miniclub.",
+    "photo": "assets/images/poi/chia-laguna.webp",
+    "photoCredit": "THE VILLAGE – CHIA LAGUNA SARDINIA"
   },
   {
     "id": "romazzino",
@@ -3822,7 +4168,9 @@
     "orari": "Aperto maggio-ottobre.",
     "rating": 4.6,
     "reviews": 438,
-    "gsummary": "Hotel di lusso con spiaggia privata, 2 piscine scoperte, 2 ristoranti, spa e 2 bar."
+    "gsummary": "Hotel di lusso con spiaggia privata, 2 piscine scoperte, 2 ristoranti, spa e 2 bar.",
+    "photo": "assets/images/poi/romazzino.webp",
+    "photoCredit": "V Richard"
   },
   {
     "id": "t-hotel-cagliari",
@@ -3838,7 +4186,7 @@
     "web": "thotel.it",
     "orari": "Aperto tutto l'anno.",
     "rating": 4.6,
-    "reviews": 4927,
+    "reviews": 4928,
     "ghours": [
       "lunedì: Aperto 24 ore su 24",
       "martedì: Aperto 24 ore su 24",
@@ -3848,7 +4196,9 @@
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
     ],
-    "gsummary": "Camere a tinte vivaci in una struttura di lusso con colazione, Wi-Fi, ristorante, bar e spa."
+    "gsummary": "Camere a tinte vivaci in una struttura di lusso con colazione, Wi-Fi, ristorante, bar e spa.",
+    "photo": "assets/images/poi/t-hotel-cagliari.webp",
+    "photoCredit": "UNAHOTELS T Hotel Cagliari"
   },
   {
     "id": "hotel-mistral-oristano",
@@ -3864,8 +4214,10 @@
     "web": "hotelmistral2.com",
     "orari": "Aperto tutto l'anno.",
     "rating": 4.2,
-    "reviews": 1737,
-    "gsummary": "Camere semplici in hotel confortevole con piscina scoperta, ristorante e colazione."
+    "reviews": 1738,
+    "gsummary": "Camere semplici in hotel confortevole con piscina scoperta, ristorante e colazione.",
+    "photo": "assets/images/poi/hotel-mistral-oristano.webp",
+    "photoCredit": "Mistral 2 Hotel Ristorante"
   },
   {
     "id": "colonna-beach",
@@ -3880,18 +4232,11 @@
     "tel": "+39 0784 866001",
     "web": "colonnabeach.it",
     "orari": "Aperto maggio-ottobre.",
-    "rating": 3.9,
-    "reviews": 319,
-    "ghours": [
-      "lunedì: Aperto 24 ore su 24",
-      "martedì: Aperto 24 ore su 24",
-      "mercoledì: Aperto 24 ore su 24",
-      "giovedì: Aperto 24 ore su 24",
-      "venerdì: Aperto 24 ore su 24",
-      "sabato: Aperto 24 ore su 24",
-      "domenica: Aperto 24 ore su 24"
-    ],
-    "gsummary": "Hotel sobrio con camere e appartamenti essenziali, ristorante, bar e accesso alla spiaggia."
+    "rating": 3.8,
+    "reviews": 140,
+    "gsummary": "Confortevole resort stagionale sulla spiaggia con ristoranti e bar, oltre a spa e piscine scoperte.",
+    "photo": "assets/images/poi/colonna-beach.webp",
+    "photoCredit": "Андрій Кулиняк"
   },
   {
     "id": "agriturismo-guthiddai",
@@ -3907,7 +4252,9 @@
     "web": "offers.agriturismoguthiddai.it/?utm_source=google_maps&utm_medium=organic&utm_campaign=mybusiness",
     "orari": "Tutto l'anno. Solo su prenotazione.",
     "rating": 4.5,
-    "reviews": 615
+    "reviews": 615,
+    "photo": "assets/images/poi/agriturismo-guthiddai.webp",
+    "photoCredit": "Agriturismo Guthiddai"
   },
   {
     "id": "agriturismo-muto-gallura",
@@ -3932,7 +4279,9 @@
       "venerdì: 08:00–23:00",
       "sabato: 08:00–23:00",
       "domenica: 08:00–23:00"
-    ]
+    ],
+    "photo": "assets/images/poi/agriturismo-muto-gallura.webp",
+    "photoCredit": "Agriturismo Il Muto di Gallura"
   },
   {
     "id": "agriturismo-su-nido",
@@ -3971,7 +4320,9 @@
       "venerdì: 09:00–00:00",
       "sabato: 09:00–00:00",
       "domenica: 09:00–00:00"
-    ]
+    ],
+    "photo": "assets/images/poi/agriturismo-barbagia.webp",
+    "photoCredit": "Agriturismo Su Zeminariu"
   },
   {
     "id": "camping-torre-porticciolo",
@@ -3987,8 +4338,10 @@
     "web": "campingtorredelporticciolo.it",
     "orari": "Aperto aprile-ottobre.",
     "rating": 3.6,
-    "reviews": 2105,
-    "gsummary": "Vivace resort in stile villaggio con chalet confortevoli, piscine scoperte e ristorante con pizzeria."
+    "reviews": 2107,
+    "gsummary": "Vivace resort in stile villaggio con chalet confortevoli, piscine scoperte e ristorante con pizzeria.",
+    "photo": "assets/images/poi/camping-torre-porticciolo.webp",
+    "photoCredit": "Camping | Glamping | Village Torre del Porticciolo"
   },
   {
     "id": "camping-la-foce",
@@ -4014,7 +4367,9 @@
       "sabato: 09:00–13:00, 15:30–20:30",
       "domenica: 09:00–13:00, 15:30–20:30"
     ],
-    "gsummary": "Luogo peculiare sul mare con campeggi, bungalow e camere in affitto, oltre a grande spiaggia."
+    "gsummary": "Luogo peculiare sul mare con campeggi, bungalow e camere in affitto, oltre a grande spiaggia.",
+    "photo": "assets/images/poi/camping-la-foce.webp",
+    "photoCredit": "Camping La Foce"
   },
   {
     "id": "camping-is-arenas",
@@ -4039,7 +4394,9 @@
       "venerdì: 08:00–22:00",
       "sabato: 08:00–22:00",
       "domenica: 08:00–22:00"
-    ]
+    ],
+    "photo": "assets/images/poi/camping-is-arenas.webp",
+    "photoCredit": "Camping Village Is Arenas"
   },
   {
     "id": "village-san-teodoro",
@@ -4055,7 +4412,7 @@
     "web": "villagelacintalasantateodoro.it",
     "orari": "Aperto maggio-settembre.",
     "rating": 4,
-    "reviews": 637,
+    "reviews": 640,
     "ghours": [
       "lunedì: 09:00–19:00",
       "martedì: 09:00–19:00",
@@ -4064,7 +4421,9 @@
       "venerdì: 09:00–19:00",
       "sabato: Chiuso",
       "domenica: Chiuso"
-    ]
+    ],
+    "photo": "assets/images/poi/village-san-teodoro.webp",
+    "photoCredit": "Camping San Teodoro la Cinta"
   },
   {
     "id": "locanda-deriu",
@@ -4080,7 +4439,7 @@
     "web": "locandaderiu.com",
     "orari": "Aperto tutto l'anno.",
     "rating": 4.5,
-    "reviews": 1259,
+    "reviews": 1260,
     "ghours": [
       "lunedì: 19:00–22:30",
       "martedì: 19:00–22:30",
@@ -4089,7 +4448,9 @@
       "venerdì: 19:00–22:30",
       "sabato: 19:00–22:30",
       "domenica: Chiuso"
-    ]
+    ],
+    "photo": "assets/images/poi/locanda-deriu.webp",
+    "photoCredit": "Ottica Deriu Bosa"
   },
   {
     "id": "su-nuraxi-residenza",
@@ -4105,7 +4466,7 @@
     "web": "fondazionebarumini.it",
     "orari": "Aperto tutto l'anno.",
     "rating": 4.1,
-    "reviews": 645,
+    "reviews": 647,
     "ghours": [
       "lunedì: 12:00–16:00, 19:15–23:30",
       "martedì: 12:00–16:00, 19:15–23:30",
@@ -4115,24 +4476,9 @@
       "sabato: 12:00–16:00, 19:15–23:30",
       "domenica: 12:00–16:00, 19:15–23:30"
     ],
-    "gsummary": "Hotel essenziale con camere semplici, colazione, ristorante di cucina sarda e bar."
-  },
-  {
-    "id": "s-apposentu",
-    "name": "S'Apposentu (Siddi — 1 stella Michelin)",
-    "lat": 39.670993,
-    "lng": 8.888142,
-    "cat": "ristorante",
-    "description": "La prima stella Michelin della Sardegna interna. Roberto Petza porta la cucina contadina sarda all'alta cucina: maialetto su tecnica francese, culurgiones rielaborati, erbe selvatiche del Meilogu. Casa Puddu, via Cavour, Siddi. Prenotazione essenziale con mesi d'anticipo.",
-    "come": "Da Cagliari 60 km via SS131 bis per Sanluri poi SP55 per Siddi. Paese di 700 abitanti.",
-    "servizi": "Sala con 25 coperti, cantina con 350 etichette sarde, menu degustazione 7-10 portate",
-    "costo": "Menu degustazione: 80-110€/persona (vini esclusi)",
-    "tel": "+39 070 9350619",
-    "web": "sapposentu.com",
-    "orari": "Mer-sab: 20:00-22:00. Sab-dom: anche pranzo 13:00-14:30. Chiuso lun-mar.",
-    "rating": 4.5,
-    "reviews": 174,
-    "gsummary": "Piatti sardi rivisitati e vini biodinamici in una villa liberty dei primi del '900 con raffinati arredi rétro."
+    "gsummary": "Hotel essenziale con camere semplici, colazione, ristorante di cucina sarda e bar.",
+    "photo": "assets/images/poi/su-nuraxi-residenza.webp",
+    "photoCredit": "Su Nuraxi di Barumini"
   },
   {
     "id": "al-tonno-di-corsa",
@@ -4149,7 +4495,9 @@
     "orari": "Mer-lun: 12:30-14:30 / 19:30-22:30. Chiuso martedì. Aperto tutto l'anno.",
     "rating": 4.5,
     "reviews": 1138,
-    "gsummary": "Menù carlofortino di pesce in un locale ricavato da una casa con arredi rétro e balconi affacciati sul porto."
+    "gsummary": "Menù carlofortino di pesce in un locale ricavato da una casa con arredi rétro e balconi affacciati sul porto.",
+    "photo": "assets/images/poi/al-tonno-di-corsa.webp",
+    "photoCredit": "Al Tonno di Corsa"
   },
   {
     "id": "sa-cardiga",
@@ -4165,7 +4513,7 @@
     "web": "www.sacardigaesuschironi.it",
     "orari": "Mer-lun: 12:30-15:00 / 19:30-23:00. Chiuso martedì.",
     "rating": 4.4,
-    "reviews": 1997,
+    "reviews": 1999,
     "ghours": [
       "lunedì: Chiuso",
       "martedì: Chiuso",
@@ -4175,7 +4523,9 @@
       "sabato: 12:00–14:30, 20:00–22:30",
       "domenica: 12:00–14:30, 20:00–22:30"
     ],
-    "gsummary": "Specialità sarde di pesce, cotte sulla griglia a vista, servite in ristorante curato con terrazza vista mare."
+    "gsummary": "Specialità sarde di pesce, cotte sulla griglia a vista, servite in ristorante curato con terrazza vista mare.",
+    "photo": "assets/images/poi/sa-cardiga.webp",
+    "photoCredit": "Sandro Muggiano"
   },
   {
     "id": "il-rifugio-nuoro",
@@ -4191,7 +4541,7 @@
     "web": "www.trattoriarifugio.com",
     "orari": "Lun-sab: 12:30-14:30 / 19:30-22:00. Chiuso domenica.",
     "rating": 4.5,
-    "reviews": 1773,
+    "reviews": 1774,
     "ghours": [
       "lunedì: 12:45–14:45, 19:45–22:45",
       "martedì: 12:45–14:45",
@@ -4201,7 +4551,9 @@
       "sabato: 12:45–14:45, 19:45–22:45",
       "domenica: 12:45–14:45, 19:45–22:45"
     ],
-    "gsummary": "Piatti sardi dal tocco creativo in un locale rustico con foto d'epoca, mattoni a vista e pavimento in cotto."
+    "gsummary": "Piatti sardi dal tocco creativo in un locale rustico con foto d'epoca, mattoni a vista e pavimento in cotto.",
+    "photo": "assets/images/poi/il-rifugio-nuoro.webp",
+    "photoCredit": "\"Il Rifugio\""
   },
   {
     "id": "sella-mosca",
@@ -4217,7 +4569,7 @@
     "web": "sellaemosca.com",
     "orari": "Enoteca: lun-ven 8:30-19:00 / sab 8:30-17:00. Tour cantina: prenotazione.",
     "rating": 4.5,
-    "reviews": 637,
+    "reviews": 639,
     "ghours": [
       "lunedì: 10:00–20:00",
       "martedì: 10:00–20:00",
@@ -4226,7 +4578,9 @@
       "venerdì: 10:00–20:00",
       "sabato: 10:00–20:00",
       "domenica: 10:00–20:00"
-    ]
+    ],
+    "photo": "assets/images/poi/sella-mosca.webp",
+    "photoCredit": "Sella&Mosca"
   },
   {
     "id": "cantina-argiolas",
@@ -4251,7 +4605,9 @@
       "venerdì: 10:00–13:00, 14:30–18:00",
       "sabato: 09:00–12:45",
       "domenica: Chiuso"
-    ]
+    ],
+    "photo": "assets/images/poi/cantina-argiolas.webp",
+    "photoCredit": "Cantina Argiolas"
   },
   {
     "id": "cantina-santadi",
@@ -4267,7 +4623,7 @@
     "web": "cantinasantadi.it",
     "orari": "Lun-ven: 8:00-12:30 / 14:30-18:00. Sab: 9:00-12:00.",
     "rating": 4.6,
-    "reviews": 281,
+    "reviews": 283,
     "ghours": [
       "lunedì: 08:00–13:00, 16:30–19:00",
       "martedì: 08:00–13:00, 16:30–19:00",
@@ -4276,7 +4632,9 @@
       "venerdì: 08:00–13:00, 16:30–19:00",
       "sabato: 08:00–13:00",
       "domenica: Chiuso"
-    ]
+    ],
+    "photo": "assets/images/poi/cantina-santadi.webp",
+    "photoCredit": "Fabio Fangareggi"
   },
   {
     "id": "cantina-mesa",
@@ -4292,7 +4650,7 @@
     "web": "cantina-mesa.it",
     "orari": "Lun-ven 9:00-17:00. Estate anche weekend. Prenotazione consigliata.",
     "rating": 4.7,
-    "reviews": 277,
+    "reviews": 280,
     "ghours": [
       "lunedì: 09:30–13:00, 15:00–19:00",
       "martedì: 09:30–13:00, 15:00–19:00",
@@ -4301,7 +4659,9 @@
       "venerdì: 09:30–13:00, 15:00–19:00",
       "sabato: Chiuso",
       "domenica: Chiuso"
-    ]
+    ],
+    "photo": "assets/images/poi/cantina-mesa.webp",
+    "photoCredit": "Cantina Mesa"
   },
   {
     "id": "cantina-jerzu",
@@ -4331,7 +4691,7 @@
     "web": "cantinadorgali.com",
     "orari": "Lun-sab 8:30-13:00 / 15:30-19:30.",
     "rating": 4.5,
-    "reviews": 209,
+    "reviews": 210,
     "ghours": [
       "lunedì: 09:00–19:00",
       "martedì: 09:00–19:00",
@@ -4340,7 +4700,9 @@
       "venerdì: 09:00–19:00",
       "sabato: 09:00–13:00, 15:00–18:00",
       "domenica: Chiuso"
-    ]
+    ],
+    "photo": "assets/images/poi/cantina-dorgali.webp",
+    "photoCredit": "Cantina Dorgali 1953"
   },
   {
     "id": "bottarga-cabras",
@@ -4365,7 +4727,9 @@
       "venerdì: 09:30–13:00, 16:00–19:00",
       "sabato: 09:30–13:00",
       "domenica: Chiuso"
-    ]
+    ],
+    "photo": "assets/images/poi/bottarga-cabras.webp",
+    "photoCredit": "Macaron"
   },
   {
     "id": "pecorino-fonni",
@@ -4409,7 +4773,7 @@
     "web": "www.comune.cagliari.it/portale/page/it/mercato_civico_san_benedetto?contentId=LGO11814",
     "orari": "Lun-sab: 7:00-14:00.",
     "rating": 4.5,
-    "reviews": 12311,
+    "reviews": 12314,
     "ghours": [
       "lunedì: 07:00–14:00",
       "martedì: 07:00–14:00",
@@ -4419,7 +4783,9 @@
       "sabato: 07:00–15:00",
       "domenica: Chiuso"
     ],
-    "gsummary": "Il più grande mercato alimentare coperto d'Italia, con spazi separati per prodotti ortofrutticoli, pesce e altro."
+    "gsummary": "Il più grande mercato alimentare coperto d'Italia, con spazi separati per prodotti ortofrutticoli, pesce e altro.",
+    "photo": "assets/images/poi/mercato-san-benedetto.webp",
+    "photoCredit": "Ron Teeuw"
   },
   {
     "id": "mercato-sassari",
@@ -4435,7 +4801,7 @@
     "web": "",
     "orari": "Lun-sab: 7:30-13:30.",
     "rating": 4.6,
-    "reviews": 868,
+    "reviews": 869,
     "ghours": [
       "lunedì: 12:30–15:30, 19:30–23:00",
       "martedì: 12:30–15:30, 19:30–23:00",
@@ -4444,7 +4810,9 @@
       "venerdì: 12:30–15:30, 19:30–23:00",
       "sabato: 12:30–15:30, 19:30–23:00",
       "domenica: Chiuso"
-    ]
+    ],
+    "photo": "assets/images/poi/mercato-sassari.webp",
+    "photoCredit": "Massimo Deriu"
   },
   {
     "id": "degustazione-cannonau",
@@ -4483,7 +4851,9 @@
       "venerdì: 09:00–20:00",
       "sabato: 09:00–20:00",
       "domenica: Chiuso"
-    ]
+    ],
+    "photo": "assets/images/poi/corsi-cucina-sarda.webp",
+    "photoCredit": "Totò"
   },
   {
     "id": "mirto-produzione",
@@ -4536,7 +4906,9 @@
       "venerdì: 09:00–18:00",
       "sabato: 09:00–18:00",
       "domenica: Chiuso"
-    ]
+    ],
+    "photo": "assets/images/poi/capo-mannu-surf.webp",
+    "photoCredit": "Mannu Tamarix Surf House"
   },
   {
     "id": "is-molas-golf",
@@ -4561,7 +4933,9 @@
       "venerdì: 07:30–20:00",
       "sabato: 07:30–20:00",
       "domenica: 07:30–20:00"
-    ]
+    ],
+    "photo": "assets/images/poi/is-molas-golf.webp",
+    "photoCredit": "Golf club Is Molas"
   },
   {
     "id": "pevero-golf",
@@ -4586,7 +4960,9 @@
       "venerdì: 07:00–20:30",
       "sabato: 07:00–20:30",
       "domenica: 07:00–20:30"
-    ]
+    ],
+    "photo": "assets/images/poi/pevero-golf.webp",
+    "photoCredit": "Pevero Golf Club"
   },
   {
     "id": "monte-corrasi",
@@ -4602,7 +4978,9 @@
     "web": "guidebarbagia.com",
     "orari": "Aprile-novembre. Inverno: solo con guida esperta.",
     "rating": 4.9,
-    "reviews": 80
+    "reviews": 80,
+    "photo": "assets/images/poi/monte-corrasi.webp",
+    "photoCredit": "Mauro P70"
   },
   {
     "id": "cammino-santa-barbara",
@@ -4627,7 +5005,9 @@
       "venerdì: 08:30–12:30, 14:30–16:30",
       "sabato: Chiuso",
       "domenica: Chiuso"
-    ]
+    ],
+    "photo": "assets/images/poi/cammino-santa-barbara.webp",
+    "photoCredit": "Rafaella Beltramone"
   },
   {
     "id": "diving-capo-caccia",
@@ -4652,7 +5032,9 @@
       "venerdì: 08:00–20:00",
       "sabato: 08:00–20:00",
       "domenica: 08:00–20:00"
-    ]
+    ],
+    "photo": "assets/images/poi/diving-capo-caccia.webp",
+    "photoCredit": "Riccardo Marchesini"
   },
   {
     "id": "diving-tavolara",
@@ -4677,7 +5059,9 @@
       "venerdì: 08:00–19:00",
       "sabato: 08:00–19:00",
       "domenica: 08:00–19:00"
-    ]
+    ],
+    "photo": "assets/images/poi/diving-tavolara.webp",
+    "photoCredit": "Yaguil Allouche"
   },
   {
     "id": "kayak-alghero-capo",
@@ -4702,7 +5086,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/kayak-alghero-capo.webp",
+    "photoCredit": "Escursioni Alghero Asinara - Capo Caccia - Pelosa"
   },
   {
     "id": "canyoning-supramonte",
@@ -4727,7 +5113,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/canyoning-supramonte.webp",
+    "photoCredit": "Enrico Panettieri"
   },
   {
     "id": "equitazione-sinis",
@@ -4766,7 +5154,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/parapendio-sardinia.webp",
+    "photoCredit": "Rosa"
   },
   {
     "id": "mtb-dorgali",
@@ -4782,7 +5172,9 @@
     "web": "dorgalioutdoor.com",
     "orari": "Tutto l'anno. Estate: uscite mattinali. Ottobre-maggio: ideale.",
     "rating": 5,
-    "reviews": 12
+    "reviews": 12,
+    "photo": "assets/images/poi/mtb-dorgali.webp",
+    "photoCredit": "Roberto Cecchele"
   },
   {
     "id": "terme-benetutti",
@@ -4799,7 +5191,9 @@
     "orari": "Tutto l'anno: 7:00-20:00.",
     "rating": 4.4,
     "reviews": 223,
-    "gsummary": "Hotel informale con spa, piscine termali coperta e scoperta, ristorante, campo da tennis e palestra."
+    "gsummary": "Hotel informale con spa, piscine termali coperta e scoperta, ristorante, campo da tennis e palestra.",
+    "photo": "assets/images/poi/terme-benetutti.webp",
+    "photoCredit": "Terme Aurora"
   },
   {
     "id": "terme-sardara",
@@ -4815,7 +5209,9 @@
     "web": "termedisardara.it",
     "orari": "Tutto l'anno: 8:00-21:00.",
     "rating": 4.6,
-    "reviews": 11
+    "reviews": 11,
+    "photo": "assets/images/poi/terme-sardara.webp",
+    "photoCredit": "Maria Campaiola"
   },
   {
     "id": "giara-gesturi",
@@ -4831,7 +5227,7 @@
     "web": "giara.it",
     "orari": "Tutto l'anno. Alba e tramonto: orari migliori per avvistare i cavallini.",
     "rating": 4.8,
-    "reviews": 1375,
+    "reviews": 1377,
     "ghours": [
       "lunedì: 08:00–20:00",
       "martedì: 08:00–20:00",
@@ -4840,7 +5236,9 @@
       "venerdì: 08:00–20:00",
       "sabato: 08:00–20:00",
       "domenica: 08:00–20:00"
-    ]
+    ],
+    "photo": "assets/images/poi/giara-gesturi.webp",
+    "photoCredit": "Parco della Giara incontro con la Guida"
   },
   {
     "id": "altopiano-golgo",
@@ -4865,7 +5263,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/altopiano-golgo.webp",
+    "photoCredit": "Marcello Cossu"
   },
   {
     "id": "supramonte",
@@ -4881,7 +5281,9 @@
     "web": "supramontesardinia.com",
     "orari": "Aperto tutto l'anno. Inverno: alcune zone inaccessibili per fango/neve.",
     "rating": 5,
-    "reviews": 12
+    "reviews": 12,
+    "photo": "assets/images/poi/supramonte.webp",
+    "photoCredit": "Enrico Panettieri"
   },
   {
     "id": "costa-verde-natura",
@@ -4921,7 +5323,9 @@
       "sabato: Chiuso",
       "domenica: Chiuso"
     ],
-    "gsummary": "Paesaggio marino protetto composta da baie e isole con aree attrezzate per nuoto, immersioni e pesca sportiva."
+    "gsummary": "Paesaggio marino protetto composta da baie e isole con aree attrezzate per nuoto, immersioni e pesca sportiva.",
+    "photo": "assets/images/poi/tavolara.webp",
+    "photoCredit": "Noemi Marongiu"
   },
   {
     "id": "mal-di-ventre",
@@ -4937,8 +5341,10 @@
     "web": "ampsinis.it",
     "orari": "Aprile-ottobre. Numero barche contingentato (autorizzazione parco).",
     "rating": 4.7,
-    "reviews": 253,
-    "gsummary": "Isola granitica nota per le rovine romane, il faro e la storia di potenziale micro-nazione."
+    "reviews": 254,
+    "gsummary": "Isola granitica nota per le rovine romane, il faro e la storia di potenziale micro-nazione.",
+    "photo": "assets/images/poi/mal-di-ventre.webp",
+    "photoCredit": "Maria Calia"
   },
   {
     "id": "foresta-montes",
@@ -4964,7 +5370,9 @@
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
     ],
-    "gsummary": "Foresta nazionale caratterizzata da monti e canyon con sentieri escursionistici, diverse rovine antiche e cinghiali selvatici."
+    "gsummary": "Foresta nazionale caratterizzata da monti e canyon con sentieri escursionistici, diverse rovine antiche e cinghiali selvatici.",
+    "photo": "assets/images/poi/foresta-montes.webp",
+    "photoCredit": "Michele Bona"
   },
   {
     "id": "foresta-burgos",
@@ -4980,7 +5388,9 @@
     "web": "",
     "orari": "Sempre aperto.",
     "rating": 4.4,
-    "reviews": 133
+    "reviews": 133,
+    "photo": "assets/images/poi/foresta-burgos.webp",
+    "photoCredit": "Lu 25 (LC25)"
   },
   {
     "id": "foresta-settefratelli",
@@ -4996,7 +5406,9 @@
     "web": "www.sardegnaambiente.it/j/v/1189?s=7448&v=2&c=7216&t=1",
     "orari": "Sempre aperto. Autunno: foliage sugherete.",
     "rating": 3.7,
-    "reviews": 7
+    "reviews": 7,
+    "photo": "assets/images/poi/foresta-settefratelli.webp",
+    "photoCredit": "Google"
   },
   {
     "id": "foresta-pixinamanna",
@@ -5026,7 +5438,9 @@
     "web": "ampsinis.it",
     "orari": "Sempre aperto. Fenicotteri: settembre-aprile.",
     "rating": 4.6,
-    "reviews": 36
+    "reviews": 36,
+    "photo": "assets/images/poi/stagno-sale-porcus.webp",
+    "photoCredit": "Alessandro"
   },
   {
     "id": "stagno-mistras",
@@ -5042,7 +5456,9 @@
     "web": "",
     "orari": "Sempre aperto.",
     "rating": 4.3,
-    "reviews": 6
+    "reviews": 6,
+    "photo": "assets/images/poi/stagno-mistras.webp",
+    "photoCredit": "Raffaella Zulian"
   },
   {
     "id": "lago-omodeo",
@@ -5059,7 +5475,9 @@
     "orari": "Sempre aperto.",
     "rating": 4.5,
     "reviews": 94,
-    "gsummary": "Suggestivo lago artificiale di 29 km² circondato da montagne che offre attività di canoismo, vela e pesca."
+    "gsummary": "Suggestivo lago artificiale di 29 km² circondato da montagne che offre attività di canoismo, vela e pesca.",
+    "photo": "assets/images/poi/lago-omodeo.webp",
+    "photoCredit": "Alessandro Tidu"
   },
   {
     "id": "grotta-ispinigoli",
@@ -5075,7 +5493,7 @@
     "web": "grottaispinigoli.com",
     "orari": "Tutto l'anno 9:00-18:00. Estate fino alle 19:00.",
     "rating": 4.6,
-    "reviews": 3350,
+    "reviews": 3359,
     "ghours": [
       "lunedì: 10:00–18:00",
       "martedì: 10:00–18:00",
@@ -5085,7 +5503,9 @@
       "sabato: 10:00–18:00",
       "domenica: 10:00–18:00"
     ],
-    "gsummary": "Sono disponibili visite guidate a questa grotta con enormi stalattiti e stalagmiti."
+    "gsummary": "Sono disponibili visite guidate a questa grotta con enormi stalattiti e stalagmiti.",
+    "photo": "assets/images/poi/grotta-ispinigoli.webp",
+    "photoCredit": "Madlen elsholz nusuccess miami"
   },
   {
     "id": "grotta-is-zuddas",
@@ -5101,7 +5521,7 @@
     "web": "grottaiszuddas.com",
     "orari": "Estate: 10:00-19:00. Inverno: solo su prenotazione gruppi.",
     "rating": 4.8,
-    "reviews": 3063,
+    "reviews": 3065,
     "ghours": [
       "lunedì: 10:00–12:30, 14:30–17:15",
       "martedì: 10:00–12:30, 14:30–17:15",
@@ -5111,7 +5531,9 @@
       "sabato: 10:00–12:30, 14:30–17:15",
       "domenica: 10:00–12:30, 14:30–17:15"
     ],
-    "gsummary": "Sistema di grotte calcaree con tour guidati tra formazioni uniche, come stalattiti ed elictiti."
+    "gsummary": "Sistema di grotte calcaree con tour guidati tra formazioni uniche, come stalattiti ed elictiti.",
+    "photo": "assets/images/poi/grotta-is-zuddas.webp",
+    "photoCredit": "Grotte Is Zuddas"
   },
   {
     "id": "grotta-su-marmuri",
@@ -5127,7 +5549,7 @@
     "web": "grottasumarmuri.it",
     "orari": "Tutto l'anno. Estate: visite ogni ora 9:00-19:00. Inverno: 10:00-17:00.",
     "rating": 4.7,
-    "reviews": 3292,
+    "reviews": 3299,
     "ghours": [
       "lunedì: 11:00–18:30",
       "martedì: 11:00–18:30",
@@ -5137,7 +5559,9 @@
       "sabato: 11:00–18:30",
       "domenica: 11:00–18:30"
     ],
-    "gsummary": "Tour guidati attraverso caverne sotterranee con laghi e formazioni rocciose dai colori vivaci."
+    "gsummary": "Tour guidati attraverso caverne sotterranee con laghi e formazioni rocciose dai colori vivaci.",
+    "photo": "assets/images/poi/grotta-su-marmuri.webp",
+    "photoCredit": "Grotta Su Marmuri"
   },
   {
     "id": "gola-rio-picocca",
@@ -5153,7 +5577,9 @@
     "web": "",
     "orari": "Tutto l'anno. Primavera-autunno: ideale.",
     "rating": 4.8,
-    "reviews": 29
+    "reviews": 29,
+    "photo": "assets/images/poi/gola-rio-picocca.webp",
+    "photoCredit": "manu fanni"
   },
   {
     "id": "penisola-sinis",
@@ -5193,7 +5619,9 @@
       "sabato: 09:00–20:00",
       "domenica: 09:00–20:00"
     ],
-    "gsummary": "Rovine restaurate di insediamento pre-romano con tour guidati delle torri di pietra, dei cortili e delle costruzioni."
+    "gsummary": "Rovine restaurate di insediamento pre-romano con tour guidati delle torri di pietra, dei cortili e delle costruzioni.",
+    "photo": "assets/images/poi/nuraghe-arrubiu.webp",
+    "photoCredit": "Nuraghe Arrubiu"
   },
   {
     "id": "nuraghe-genna-maria",
@@ -5218,7 +5646,9 @@
       "venerdì: 09:30–13:00, 15:30–18:00",
       "sabato: 09:30–13:00, 15:30–18:00",
       "domenica: 09:30–13:00, 15:30–18:00"
-    ]
+    ],
+    "photo": "assets/images/poi/nuraghe-genna-maria.webp",
+    "photoCredit": "Valentino Selis"
   },
   {
     "id": "santa-cristina",
@@ -5234,7 +5664,7 @@
     "web": "santacristinapozzosacro.it",
     "orari": "Estate: 9:00-20:00. Inverno: 9:00-17:00. Tutto l'anno.",
     "rating": 4.8,
-    "reviews": 4756,
+    "reviews": 4759,
     "ghours": [
       "lunedì: 08:30–20:30",
       "martedì: 08:30–20:30",
@@ -5243,7 +5673,9 @@
       "venerdì: 08:30–20:30",
       "sabato: 08:30–20:30",
       "domenica: 08:30–20:30"
-    ]
+    ],
+    "photo": "assets/images/poi/santa-cristina.webp",
+    "photoCredit": "Pozzo Sacro di Santa Cristina"
   },
   {
     "id": "nuraghe-is-paras",
@@ -5268,7 +5700,9 @@
       "venerdì: 10:00–13:00, 15:30–18:30",
       "sabato: 10:00–13:00, 15:30–18:30",
       "domenica: 10:00–13:00, 15:30–18:30"
-    ]
+    ],
+    "photo": "assets/images/poi/nuraghe-is-paras.webp",
+    "photoCredit": "irene armas"
   },
   {
     "id": "tiscali",
@@ -5307,7 +5741,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/nuraghe-orolo.webp",
+    "photoCredit": "Filippo Nieddu"
   },
   {
     "id": "montessu",
@@ -5332,7 +5768,9 @@
       "venerdì: 10:00–20:00",
       "sabato: 10:00–20:00",
       "domenica: 10:00–20:00"
-    ]
+    ],
+    "photo": "assets/images/poi/montessu.webp",
+    "photoCredit": "Ivano Di Stefano"
   },
   {
     "id": "sant-andrea-priu",
@@ -5357,7 +5795,9 @@
       "venerdì: 10:00–19:00",
       "sabato: 10:00–19:00",
       "domenica: 10:00–19:00"
-    ]
+    ],
+    "photo": "assets/images/poi/sant-andrea-priu.webp",
+    "photoCredit": "Giuseppe Pala"
   },
   {
     "id": "tombe-giganti-madau",
@@ -5382,7 +5822,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/tombe-giganti-madau.webp",
+    "photoCredit": "Elias Casula"
   },
   {
     "id": "pozzo-su-tempiesu",
@@ -5398,7 +5840,7 @@
     "web": "www.sutempiesu.it",
     "orari": "Sempre aperto.",
     "rating": 4.9,
-    "reviews": 679,
+    "reviews": 681,
     "ghours": [
       "lunedì: 09:00–19:00",
       "martedì: 09:00–19:00",
@@ -5407,7 +5849,9 @@
       "venerdì: 09:00–19:00",
       "sabato: 09:00–19:00",
       "domenica: 09:00–19:00"
-    ]
+    ],
+    "photo": "assets/images/poi/pozzo-su-tempiesu.webp",
+    "photoCredit": "Ula Moon"
   },
   {
     "id": "pozzo-sa-testa",
@@ -5423,7 +5867,9 @@
     "web": "",
     "orari": "Tutto l'anno: alba-tramonto.",
     "rating": 4.3,
-    "reviews": 157
+    "reviews": 157,
+    "photo": "assets/images/poi/pozzo-sa-testa.webp",
+    "photoCredit": "Jack Fanta"
   },
   {
     "id": "fordongianus",
@@ -5439,7 +5885,7 @@
     "web": "comune.fordongianus.or.it",
     "orari": "Mar-dom 9:30-17:30 (estate 9:00-19:00). Lun chiuso.",
     "rating": 4.6,
-    "reviews": 1431,
+    "reviews": 1433,
     "ghours": [
       "lunedì: 09:30–19:30",
       "martedì: 09:30–19:30",
@@ -5448,7 +5894,9 @@
       "venerdì: 09:30–19:30",
       "sabato: 09:30–19:30",
       "domenica: 09:30–19:30"
-    ]
+    ],
+    "photo": "assets/images/poi/fordongianus.webp",
+    "photoCredit": "Terme Romane di Fordongianus"
   },
   {
     "id": "sulcis-sant-antioco",
@@ -5473,7 +5921,9 @@
       "venerdì: 09:00–19:00",
       "sabato: 09:00–19:00",
       "domenica: 09:00–19:00"
-    ]
+    ],
+    "photo": "assets/images/poi/sulcis-sant-antioco.webp",
+    "photoCredit": "Museo Archeologico \"Ferruccio Barreca\" - MAB Sant'Antioco Sardegna"
   },
   {
     "id": "antas",
@@ -5517,7 +5967,9 @@
     "web": "comune.guspini.su.it",
     "orari": "Sito: accesso libero. Museo Guspini: orari comunali.",
     "rating": 3.6,
-    "reviews": 26
+    "reviews": 26,
+    "photo": "assets/images/poi/neapolis.webp",
+    "photoCredit": "Google"
   },
   {
     "id": "monte-d-accoddi",
@@ -5533,7 +5985,7 @@
     "web": "sardegnaturismo.it",
     "orari": "Mer-dom 9:00-13:00 / 14:00-17:30.",
     "rating": 4.7,
-    "reviews": 123,
+    "reviews": 124,
     "ghours": [
       "lunedì: Chiuso",
       "martedì: 10:00–18:00",
@@ -5542,7 +5994,9 @@
       "venerdì: 10:00–18:00",
       "sabato: 10:00–18:00",
       "domenica: 10:00–18:00"
-    ]
+    ],
+    "photo": "assets/images/poi/monte-d-accoddi.webp",
+    "photoCredit": "carlos em"
   },
   {
     "id": "dolmen-sa-coveccada",
@@ -5558,7 +6012,9 @@
     "web": "www.facebook.com/litterasantigas",
     "orari": "Sempre aperto.",
     "rating": 3.5,
-    "reviews": 68
+    "reviews": 68,
+    "photo": "assets/images/poi/dolmen-sa-coveccada.webp",
+    "photoCredit": "Franco Muroni"
   },
   {
     "id": "menhir-laconi",
@@ -5588,7 +6044,7 @@
     "web": "museoarcheologicosassari.beniculturali.it",
     "orari": "Mar-dom 9:00-20:00. Lun chiuso.",
     "rating": 4.1,
-    "reviews": 588,
+    "reviews": 589,
     "ghours": [
       "lunedì: Chiuso",
       "martedì: 09:00–13:45",
@@ -5598,7 +6054,9 @@
       "sabato: 09:00–13:45",
       "domenica: Chiuso"
     ],
-    "gsummary": "Tessuti, gioielli e opere d'arte di diversi periodi della storia sarda esposti in un edificio in stile neoclassico."
+    "gsummary": "Tessuti, gioielli e opere d'arte di diversi periodi della storia sarda esposti in un edificio in stile neoclassico.",
+    "photo": "assets/images/poi/museo-sanna-sassari.webp",
+    "photoCredit": "Museo Nazionale \"Giovanni Antonio Sanna\""
   },
   {
     "id": "ospedale-olbia",
@@ -5623,7 +6081,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/ospedale-olbia.webp",
+    "photoCredit": "Sandra Pansini"
   },
   {
     "id": "ospedale-alghero",
@@ -5648,7 +6108,9 @@
       "venerdì: 08:30–23:30",
       "sabato: Chiuso",
       "domenica: Chiuso"
-    ]
+    ],
+    "photo": "assets/images/poi/ospedale-alghero.webp",
+    "photoCredit": "Marina Loi"
   },
   {
     "id": "spiaggia-pittulongu",
@@ -5664,8 +6126,10 @@
     "web": "",
     "orari": "Spiaggia aperta tutto l'anno. Stabilimenti: maggio-settembre.",
     "rating": 4.5,
-    "reviews": 2044,
-    "gsummary": "Piccola spiaggia sabbiosa che offre lettini prendisole, snack, snorkeling, immersioni e surf."
+    "reviews": 2046,
+    "gsummary": "Piccola spiaggia sabbiosa che offre lettini prendisole, snack, snorkeling, immersioni e surf.",
+    "photo": "assets/images/poi/spiaggia-pittulongu.webp",
+    "photoCredit": "mário jorge de sena lourenço"
   },
   {
     "id": "spiaggia-bados",
@@ -5681,7 +6145,9 @@
     "web": "",
     "orari": "Aperta tutto l'anno.",
     "rating": 4.6,
-    "reviews": 388
+    "reviews": 388,
+    "photo": "assets/images/poi/spiaggia-bados.webp",
+    "photoCredit": "Marco “T.K.J” Barbieri"
   },
   {
     "id": "spiaggia-mare-e-rocce",
@@ -5697,7 +6163,9 @@
     "web": "",
     "orari": "Aperta tutto l'anno.",
     "rating": 4.3,
-    "reviews": 504
+    "reviews": 504,
+    "photo": "assets/images/poi/spiaggia-mare-e-rocce.webp",
+    "photoCredit": "Lucianna Calvisi"
   },
   {
     "id": "spiaggia-dello-squalo",
@@ -5713,7 +6181,9 @@
     "web": "",
     "orari": "Aperta tutto l'anno.",
     "rating": 4.4,
-    "reviews": 407
+    "reviews": 407,
+    "photo": "assets/images/poi/spiaggia-dello-squalo.webp",
+    "photoCredit": "Nadir Verginelli"
   },
   {
     "id": "spiaggia-le-saline",
@@ -5743,7 +6213,9 @@
     "web": "",
     "orari": "Aperta tutto l'anno.",
     "rating": 4.6,
-    "reviews": 710
+    "reviews": 710,
+    "photo": "assets/images/poi/spiaggia-li-cuncheddi.webp",
+    "photoCredit": "Luciana Squarci"
   },
   {
     "id": "spiaggia-del-dottore",
@@ -5759,8 +6231,10 @@
     "web": "www.sardegnaturismo.it",
     "orari": "Aperta tutto l'anno.",
     "rating": 4.7,
-    "reviews": 840,
-    "gsummary": "Cala riparata, spesso raggiunta con un sentiero tra colline rocciose, nota per acque turchesi e viste su isola."
+    "reviews": 841,
+    "gsummary": "Cala riparata, spesso raggiunta con un sentiero tra colline rocciose, nota per acque turchesi e viste su isola.",
+    "photo": "assets/images/poi/spiaggia-del-dottore.webp",
+    "photoCredit": "Marco Solito"
   },
   {
     "id": "spiaggia-porto-istana",
@@ -5776,7 +6250,9 @@
     "web": "",
     "orari": "Aperta tutto l'anno.",
     "rating": 4.5,
-    "reviews": 4875
+    "reviews": 4880,
+    "photo": "assets/images/poi/spiaggia-porto-istana.webp",
+    "photoCredit": "Martin Rose"
   },
   {
     "id": "museo-archeologico-olbia",
@@ -5793,7 +6269,9 @@
     "orari": "Mar–Sab: 8:00–13:00 / 16:00–19:00. Chiuso dom e lun.",
     "rating": 4.1,
     "reviews": 1673,
-    "gsummary": "Museo archeologico che espone antiche navi romane e manufatti locali in uno spazio moderno."
+    "gsummary": "Museo archeologico che espone antiche navi romane e manufatti locali in uno spazio moderno.",
+    "photo": "assets/images/poi/museo-archeologico-olbia.webp",
+    "photoCredit": "Museo Archeologico di Olbia"
   },
   {
     "id": "olbia-arena",
@@ -5809,7 +6287,9 @@
     "web": "redvalleyfestival.it",
     "orari": "Solo durante eventi. Red Valley Festival: luglio-agosto.",
     "rating": 4.5,
-    "reviews": 497
+    "reviews": 499,
+    "photo": "assets/images/poi/olbia-arena.webp",
+    "photoCredit": "GAP Gap"
   },
   {
     "id": "musmat-via-roma",
@@ -5825,7 +6305,9 @@
     "web": "",
     "orari": "Lun-Sab: 9:00-20:00. Concerti: consulta il programma.",
     "rating": 5,
-    "reviews": 9
+    "reviews": 9,
+    "photo": "assets/images/poi/musmat-via-roma.webp",
+    "photoCredit": "Maria Vittoria “MaviPulixi” Pulixi"
   },
   {
     "id": "archivio-mario-cervo",
@@ -5851,7 +6333,9 @@
       "sabato: Chiuso",
       "domenica: Chiuso"
     ],
-    "gsummary": "Museo suggestivo che ripercorre la storia della musica sarda attraverso mostre, registrazioni ed eventi culturali."
+    "gsummary": "Museo suggestivo che ripercorre la storia della musica sarda attraverso mostre, registrazioni ed eventi culturali.",
+    "photo": "assets/images/poi/archivio-mario-cervo.webp",
+    "photoCredit": "Archivio Mario Cervo"
   },
   {
     "id": "chiesa-cabu-abbas",
@@ -5876,7 +6360,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/chiesa-cabu-abbas.webp",
+    "photoCredit": "Piras stefano antonio"
   },
   {
     "id": "chiesa-san-paolo-apostolo",
@@ -5892,7 +6378,9 @@
     "web": "",
     "orari": "Tutti i giorni: 8:30-12:00 / 17:00-19:30.",
     "rating": 4.5,
-    "reviews": 631
+    "reviews": 633,
+    "photo": "assets/images/poi/chiesa-san-paolo-apostolo.webp",
+    "photoCredit": "Dietmar Behnke"
   },
   {
     "id": "chiesa-sacra-famiglia",
@@ -5922,7 +6410,7 @@
     "web": "",
     "orari": "Sempre aperto.",
     "rating": 4.5,
-    "reviews": 3867,
+    "reviews": 3868,
     "ghours": [
       "lunedì: 06:00–22:00",
       "martedì: 06:00–22:00",
@@ -5932,7 +6420,9 @@
       "sabato: 06:00–22:00",
       "domenica: 06:00–22:00"
     ],
-    "gsummary": "Spazio verde cittadino ricco di alberi con anfiteatro, prati, laghetti e impianti sportivi."
+    "gsummary": "Spazio verde cittadino ricco di alberi con anfiteatro, prati, laghetti e impianti sportivi.",
+    "photo": "assets/images/poi/parco-fausto-noce.webp",
+    "photoCredit": "Mattia Mosca"
   },
   {
     "id": "amp-tavolara",
@@ -5962,7 +6452,9 @@
     "web": "geovillage.it",
     "orari": "Centro commerciale: lun-sab 9:00-21:00, dom 10:00-21:00.",
     "rating": 3.7,
-    "reviews": 9
+    "reviews": 9,
+    "photo": "assets/images/poi/casa-studente-geovillage.webp",
+    "photoCredit": "rachid"
   },
   {
     "id": "universita-economia-turismo",
@@ -5990,7 +6482,9 @@
     "costo": "Gratuito",
     "tel": "",
     "web": "",
-    "orari": "Sempre aperto."
+    "orari": "Sempre aperto.",
+    "photo": "assets/images/poi/molo-brin.webp",
+    "photoCredit": "Константин Шафранский"
   },
   {
     "id": "municipio-olbia",
@@ -6015,7 +6509,9 @@
       "venerdì: 08:00–13:00, 16:00–18:00",
       "sabato: 08:00–13:00",
       "domenica: Chiuso"
-    ]
+    ],
+    "photo": "assets/images/poi/municipio-olbia.webp",
+    "photoCredit": "Dr. Thomas Liptak"
   },
   {
     "id": "alma-resort",
@@ -6031,7 +6527,7 @@
     "web": "www.almaresortsardegna.it/it/benvenuti",
     "orari": "",
     "rating": 4.2,
-    "reviews": 809,
+    "reviews": 811,
     "ghours": [
       "lunedì: Aperto 24 ore su 24",
       "martedì: Aperto 24 ore su 24",
@@ -6041,7 +6537,9 @@
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
     ],
-    "gsummary": "Hotel informale con ristorante, bar, piscina scoperta, miniclub e accesso alla spiaggia."
+    "gsummary": "Hotel informale con ristorante, bar, piscina scoperta, miniclub e accesso alla spiaggia.",
+    "photo": "assets/images/poi/alma-resort.webp",
+    "photoCredit": "Alma Resort"
   },
   {
     "id": "arbatasar",
@@ -6058,7 +6556,9 @@
     "orari": "",
     "rating": 4.5,
     "reviews": 489,
-    "gsummary": "Hotel elegante con piscina scoperta, cantina, ristorante e colazione."
+    "gsummary": "Hotel elegante con piscina scoperta, cantina, ristorante e colazione.",
+    "photo": "assets/images/poi/arbatasar.webp",
+    "photoCredit": "Arbatasar Hotel"
   },
   {
     "id": "bed-and-breakfast-da-giovanna",
@@ -6088,7 +6588,9 @@
     "web": "http://www.supasu.com",
     "orari": "",
     "rating": 4.6,
-    "reviews": 25
+    "reviews": 25,
+    "photo": "assets/images/poi/bed-and-breakfast-su-pasu.webp",
+    "photoCredit": "Margherita Fois"
   },
   {
     "id": "domomea",
@@ -6104,7 +6606,7 @@
     "web": "http://www.domomeagroup.com/",
     "orari": "",
     "rating": 4.6,
-    "reviews": 355,
+    "reviews": 356,
     "ghours": [
       "lunedì: Aperto 24 ore su 24",
       "martedì: Aperto 24 ore su 24",
@@ -6114,7 +6616,9 @@
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
     ],
-    "gsummary": "Hotel elegante con terrazza panoramica dotata di piscina e idromassaggio, area lounge e colazione inclusa."
+    "gsummary": "Hotel elegante con terrazza panoramica dotata di piscina e idromassaggio, area lounge e colazione inclusa.",
+    "photo": "assets/images/poi/domomea.webp",
+    "photoCredit": "Hotel Domomea"
   },
   {
     "id": "domus-de-janas",
@@ -6131,7 +6635,9 @@
     "orari": "",
     "rating": 4.6,
     "reviews": 570,
-    "gsummary": "Sistemazioni confortevoli, alcune affacciate sul mare, in hotel informale con ristoranti e piscina scoperta."
+    "gsummary": "Sistemazioni confortevoli, alcune affacciate sul mare, in hotel informale con ristoranti e piscina scoperta.",
+    "photo": "assets/images/poi/domus-de-janas.webp",
+    "photoCredit": "Sven M."
   },
   {
     "id": "hotel-anticos-palathos",
@@ -6157,7 +6663,9 @@
       "sabato: 08:00–20:00",
       "domenica: 08:00–20:00"
     ],
-    "gsummary": "Confortevole con sole suite in edificio pittoresco in pietra con camere accoglienti, colazione inclusa e bar."
+    "gsummary": "Confortevole con sole suite in edificio pittoresco in pietra con camere accoglienti, colazione inclusa e bar.",
+    "photo": "assets/images/poi/hotel-anticos-palathos.webp",
+    "photoCredit": "Hotel Anticos Palathos"
   },
   {
     "id": "hotel-ariadimari",
@@ -6174,7 +6682,9 @@
     "orari": "",
     "rating": 4.5,
     "reviews": 392,
-    "gsummary": "Hotel minimalista con camere ampie, colazione inclusa, piscina scoperta e terrazza solarium."
+    "gsummary": "Hotel minimalista con camere ampie, colazione inclusa, piscina scoperta e terrazza solarium.",
+    "photo": "assets/images/poi/hotel-ariadimari.webp",
+    "photoCredit": "Paul Nas"
   },
   {
     "id": "hotel-balocco",
@@ -6214,7 +6724,9 @@
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
     ],
-    "gsummary": "Hotel confortevole con Wi-Fi, colazione e trasferimenti per la spiaggia inclusi, ristorante e bar della hall."
+    "gsummary": "Hotel confortevole con Wi-Fi, colazione e trasferimenti per la spiaggia inclusi, ristorante e bar della hall.",
+    "photo": "assets/images/poi/hotel-baia-marina.webp",
+    "photoCredit": "Denise Zwahlen"
   },
   {
     "id": "hotel-bellavista",
@@ -6253,7 +6765,9 @@
       "venerdì: 08:00–00:00",
       "sabato: 08:00–00:00",
       "domenica: 08:00–00:00"
-    ]
+    ],
+    "photo": "assets/images/poi/hotel-casa-mia.webp",
+    "photoCredit": "Casa Mia Ristorante Lounge bar - Costa Smeralda"
   },
   {
     "id": "hotel-cavour",
@@ -6269,8 +6783,10 @@
     "web": "https://www.hotelcavourolbia.it/",
     "orari": "",
     "rating": 3.9,
-    "reviews": 430,
-    "gsummary": "Hotel sobrio con camere semplici, bar informale e WiFi gratuito."
+    "reviews": 432,
+    "gsummary": "Hotel sobrio con camere semplici, bar informale e WiFi gratuito.",
+    "photo": "assets/images/poi/hotel-cavour.webp",
+    "photoCredit": "Kadri Zirk"
   },
   {
     "id": "hotel-centrale",
@@ -6287,7 +6803,9 @@
     "orari": "",
     "rating": 4.2,
     "reviews": 270,
-    "gsummary": "Camere essenziali in hotel accogliente con colazione e WiFi inclusi."
+    "gsummary": "Camere essenziali in hotel accogliente con colazione e WiFi inclusi.",
+    "photo": "assets/images/poi/hotel-centrale.webp",
+    "photoCredit": "Hotel Centrale"
   },
   {
     "id": "hotel-corte-bianca",
@@ -6303,7 +6821,7 @@
     "web": "www.hotelcortebianca.it",
     "orari": "",
     "rating": 4.7,
-    "reviews": 814,
+    "reviews": 816,
     "ghours": [
       "lunedì: Aperto 24 ore su 24",
       "martedì: Aperto 24 ore su 24",
@@ -6313,7 +6831,9 @@
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
     ],
-    "gsummary": "Hotel informale con ristorante a buffet, piscina scoperta e lido privato in spiaggia."
+    "gsummary": "Hotel informale con ristorante a buffet, piscina scoperta e lido privato in spiaggia.",
+    "photo": "assets/images/poi/hotel-corte-bianca.webp",
+    "photoCredit": "Hotel Corte Bianca - Adults Only & SPA- Bovis Hotels -"
   },
   {
     "id": "hotel-da-cesare",
@@ -6353,7 +6873,9 @@
       "sabato: 08:00–22:00",
       "domenica: 08:00–22:00"
     ],
-    "gsummary": "Camere semplici in hotel sobrio con vista sulle montagne e ristorante informale."
+    "gsummary": "Camere semplici in hotel sobrio con vista sulle montagne e ristorante informale.",
+    "photo": "assets/images/poi/hotel-gorropu.webp",
+    "photoCredit": "Ondřej Neuman"
   },
   {
     "id": "hotel-hinterland",
@@ -6370,7 +6892,9 @@
     "orari": "",
     "rating": 3.5,
     "reviews": 263,
-    "gsummary": "Hotel confortevole che offre camere sobrie, ristorante, area lounge con pianoforte e piscina scoperta."
+    "gsummary": "Hotel confortevole che offre camere sobrie, ristorante, area lounge con pianoforte e piscina scoperta.",
+    "photo": "assets/images/poi/hotel-hinterland.webp",
+    "photoCredit": "Tomas Michna - Wedding Photo & Video Worldwide"
   },
   {
     "id": "hotel-italia",
@@ -6415,7 +6939,9 @@
     "orari": "",
     "rating": 4.1,
     "reviews": 445,
-    "gsummary": "Hotel informale con ristorante e spiaggia privata, oltre a colazione, parcheggio e WiFi inclusi."
+    "gsummary": "Hotel informale con ristorante e spiaggia privata, oltre a colazione, parcheggio e WiFi inclusi.",
+    "photo": "assets/images/poi/hotel-le-dune.webp",
+    "photoCredit": "gennaro cristinziano"
   },
   {
     "id": "hotel-luna-lughente",
@@ -6441,7 +6967,9 @@
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
     ],
-    "gsummary": "Hotel moderno con ristorante e bar, oltre a piscina scoperta con vista panoramica sul mare."
+    "gsummary": "Hotel moderno con ristorante e bar, oltre a piscina scoperta con vista panoramica sul mare.",
+    "photo": "assets/images/poi/hotel-luna-lughente.webp",
+    "photoCredit": "Hotel Luna Lughente"
   },
   {
     "id": "hotel-mannois",
@@ -6458,7 +6986,9 @@
     "orari": "",
     "rating": 4.4,
     "reviews": 363,
-    "gsummary": "Incantevole hotel in pietra con camere eleganti, bar e colazione inclusa."
+    "gsummary": "Incantevole hotel in pietra con camere eleganti, bar e colazione inclusa.",
+    "photo": "assets/images/poi/hotel-mannois.webp",
+    "photoCredit": "Albergo Diffuso Mannois"
   },
   {
     "id": "hotel-maria-rosaria",
@@ -6484,7 +7014,9 @@
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
     ],
-    "gsummary": "Hotel moderno con camere informali, oltre a piscina scoperta, ristorante e colazione inclusa."
+    "gsummary": "Hotel moderno con camere informali, oltre a piscina scoperta, ristorante e colazione inclusa.",
+    "photo": "assets/images/poi/hotel-maria-rosaria.webp",
+    "photoCredit": "Hotel Maria Rosaria"
   },
   {
     "id": "hotel-martini",
@@ -6501,7 +7033,9 @@
     "orari": "",
     "rating": 4,
     "reviews": 424,
-    "gsummary": "Refined hotel featuring park & sea views, plus a restaurant, a terrace & an exercise room."
+    "gsummary": "Refined hotel featuring park & sea views, plus a restaurant, a terrace & an exercise room.",
+    "photo": "assets/images/poi/hotel-martini.webp",
+    "photoCredit": "Hotel Martini"
   },
   {
     "id": "hotel-orri",
@@ -6517,8 +7051,10 @@
     "web": "https://www.hotelorri.it",
     "orari": "",
     "rating": 4.5,
-    "reviews": 921,
-    "gsummary": "Camere confortevoli in hotel sobrio con ristorante, piscina scoperta, colazione e WiFi inclusi."
+    "reviews": 922,
+    "gsummary": "Camere confortevoli in hotel sobrio con ristorante, piscina scoperta, colazione e WiFi inclusi.",
+    "photo": "assets/images/poi/hotel-orri.webp",
+    "photoCredit": "Hotel Orri"
   },
   {
     "id": "hotel-porto-conte",
@@ -6548,7 +7084,7 @@
     "web": "www.hotelposeidonia.it",
     "orari": "",
     "rating": 4.4,
-    "reviews": 488,
+    "reviews": 489,
     "ghours": [
       "lunedì: Aperto 24 ore su 24",
       "martedì: Aperto 24 ore su 24",
@@ -6558,7 +7094,9 @@
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
     ],
-    "gsummary": "Camere accoglienti, alcune con terrazza, in hotel caratteristico con colazione, bar e parcheggio."
+    "gsummary": "Camere accoglienti, alcune con terrazza, in hotel caratteristico con colazione, bar e parcheggio.",
+    "photo": "assets/images/poi/hotel-poseidonia.webp",
+    "photoCredit": "Jozef Oršula"
   },
   {
     "id": "hotel-punta-est",
@@ -6584,7 +7122,9 @@
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
     ],
-    "gsummary": "Camere e suite luminose dotate di balcone in hotel raffinato con due ristoranti e una piscina scoperta."
+    "gsummary": "Camere e suite luminose dotate di balcone in hotel raffinato con due ristoranti e una piscina scoperta.",
+    "photo": "assets/images/poi/hotel-punta-est.webp",
+    "photoCredit": "Hotel Punta Est - Baja Sardinia"
   },
   {
     "id": "hotel-taloro",
@@ -6601,7 +7141,9 @@
     "orari": "",
     "rating": 4.3,
     "reviews": 361,
-    "gsummary": "Hotel informale in stile mediterraneo sul lago con ristorante, spa e piscina scoperta."
+    "gsummary": "Hotel informale in stile mediterraneo sul lago con ristorante, spa e piscina scoperta.",
+    "photo": "assets/images/poi/hotel-taloro.webp",
+    "photoCredit": "Claudio De Iacovo"
   },
   {
     "id": "janas-country-resort",
@@ -6627,7 +7169,9 @@
       "sabato: 08:00–23:00",
       "domenica: 08:00–23:00"
     ],
-    "gsummary": "Hotel di campagna in una villa che offre un ampio ristorante, una piscina, un campo da tennis ed equitazione."
+    "gsummary": "Hotel di campagna in una villa che offre un ampio ristorante, una piscina, un campo da tennis ed equitazione.",
+    "photo": "assets/images/poi/janas-country-resort.webp",
+    "photoCredit": "Janas Country Resort"
   },
   {
     "id": "la-bitta",
@@ -6644,7 +7188,9 @@
     "orari": "",
     "rating": 4.7,
     "reviews": 1070,
-    "gsummary": "Sistemazioni luminose in hotel elegante con due ristoranti, spa e spiaggia privata."
+    "gsummary": "Sistemazioni luminose in hotel elegante con due ristoranti, spa e spiaggia privata.",
+    "photo": "assets/images/poi/la-bitta.webp",
+    "photoCredit": "Hotel La Bitta"
   },
   {
     "id": "la-perla",
@@ -6661,7 +7207,9 @@
     "orari": "",
     "rating": 4.8,
     "reviews": 325,
-    "gsummary": "Camere ampie in un hotel confortevole che offre un ristorante luminoso, una piscina scoperta e la colazione."
+    "gsummary": "Camere ampie in un hotel confortevole che offre un ristorante luminoso, una piscina scoperta e la colazione.",
+    "photo": "assets/images/poi/la-perla.webp",
+    "photoCredit": "Pietro Secci"
   },
   {
     "id": "la-rosa-dei-venti",
@@ -6677,7 +7225,7 @@
     "web": "https://www.hotel-larosadeiventi.it/",
     "orari": "",
     "rating": 4.3,
-    "reviews": 375,
+    "reviews": 376,
     "ghours": [
       "lunedì: Aperto 24 ore su 24",
       "martedì: Aperto 24 ore su 24",
@@ -6687,7 +7235,9 @@
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
     ],
-    "gsummary": "Camere semplici in hotel informale con colazione, ristorante e vista sul mare."
+    "gsummary": "Camere semplici in hotel informale con colazione, ristorante e vista sul mare.",
+    "photo": "assets/images/poi/la-rosa-dei-venti.webp",
+    "photoCredit": "Hotel La Rosa dei Venti by LVG Hotel Collection"
   },
   {
     "id": "la-torre",
@@ -6704,7 +7254,9 @@
     "orari": "",
     "rating": 4.3,
     "reviews": 633,
-    "gsummary": "Camere semplici in hotel informale affacciato sul mare con 2 ristoranti, piscina e colazione inclusa."
+    "gsummary": "Camere semplici in hotel informale affacciato sul mare con 2 ristoranti, piscina e colazione inclusa.",
+    "photo": "assets/images/poi/la-torre.webp",
+    "photoCredit": "La Torre, Hotel Ristorante Bar"
   },
   {
     "id": "mediterraneo",
@@ -6730,7 +7282,9 @@
       "sabato: 07:00–00:00",
       "domenica: 07:00–00:00"
     ],
-    "gsummary": "Hotel informale con colazione continentale inclusa, ristorante e lido privato in spiaggia."
+    "gsummary": "Hotel informale con colazione continentale inclusa, ristorante e lido privato in spiaggia.",
+    "photo": "assets/images/poi/mediterraneo.webp",
+    "photoCredit": "V. Koch (vk-express)"
   },
   {
     "id": "new-barcavela-hotel",
@@ -6746,8 +7300,10 @@
     "web": "https://www.newbarcavela.it/",
     "orari": "",
     "rating": 4.1,
-    "reviews": 251,
-    "gsummary": "Camere semplici in hotel confortevole con spiaggia privata, piscina scoperta e colazione inclusa."
+    "reviews": 252,
+    "gsummary": "Camere semplici in hotel confortevole con spiaggia privata, piscina scoperta e colazione inclusa.",
+    "photo": "assets/images/poi/new-barcavela-hotel.webp",
+    "photoCredit": "Hotel New Barcavela"
   },
   {
     "id": "new-petit-hotel",
@@ -6773,7 +7329,9 @@
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
     ],
-    "gsummary": "Hotel sobrio con camere semplici dotate di frigobar, WiFi gratuito, ristorante e bar."
+    "gsummary": "Hotel sobrio con camere semplici dotate di frigobar, WiFi gratuito, ristorante e bar.",
+    "photo": "assets/images/poi/new-petit-hotel.webp",
+    "photoCredit": "New Petit Hotel"
   },
   {
     "id": "park-hotel",
@@ -6803,7 +7361,7 @@
     "web": "www.myohotelroccesarde.com",
     "orari": "",
     "rating": 4.5,
-    "reviews": 483,
+    "reviews": 484,
     "ghours": [
       "lunedì: Aperto 24 ore su 24",
       "martedì: Aperto 24 ore su 24",
@@ -6813,24 +7371,9 @@
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
     ],
-    "gsummary": "Hotel luminoso con camere e suite ampie e sobrie, terrazza panoramica, piscina scoperta e bar."
-  },
-  {
-    "id": "resort-capo-nieddu",
-    "name": "Resort Capo Nieddu",
-    "lat": 40.150779,
-    "lng": 8.470567,
-    "cat": "hotel",
-    "description": "Resort agrituristico con 10 camere affacciato sulla costa occidentale della Sardegna.",
-    "come": "",
-    "servizi": "",
-    "costo": "",
-    "tel": "+39 0785 850 493",
-    "web": "https://www.caponieddu.it",
-    "orari": "Mo-Su 09:00-17:00",
-    "rating": 3.9,
-    "reviews": 69,
-    "gsummary": "Agriturismo tranquillo di sole suite con vista sul mare, ristorante, giardini e piscina scoperta."
+    "gsummary": "Hotel luminoso con camere e suite ampie e sobrie, terrazza panoramica, piscina scoperta e bar.",
+    "photo": "assets/images/poi/residence-rocce-sarde.webp",
+    "photoCredit": "SONIA DE PIANO"
   },
   {
     "id": "rocce-sarde",
@@ -6846,7 +7389,7 @@
     "web": "https://www.myohotelroccesarde.com/",
     "orari": "",
     "rating": 4.5,
-    "reviews": 483,
+    "reviews": 484,
     "ghours": [
       "lunedì: Aperto 24 ore su 24",
       "martedì: Aperto 24 ore su 24",
@@ -6856,7 +7399,9 @@
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
     ],
-    "gsummary": "Hotel luminoso con camere e suite ampie e sobrie, terrazza panoramica, piscina scoperta e bar."
+    "gsummary": "Hotel luminoso con camere e suite ampie e sobrie, terrazza panoramica, piscina scoperta e bar.",
+    "photo": "assets/images/poi/rocce-sarde.webp",
+    "photoCredit": "Hotel Rocce Sarde"
   },
   {
     "id": "sa-contonera",
@@ -6873,7 +7418,9 @@
     "orari": "",
     "rating": 4.6,
     "reviews": 835,
-    "gsummary": "Hotel informale con ristorante, bar, piscina scoperta e vasca idromassaggio."
+    "gsummary": "Hotel informale con ristorante, bar, piscina scoperta e vasca idromassaggio.",
+    "photo": "assets/images/poi/sa-contonera.webp",
+    "photoCredit": "Hotel Sa Contonera"
   },
   {
     "id": "stella-maris",
@@ -6904,7 +7451,9 @@
     "orari": "",
     "rating": 4.6,
     "reviews": 429,
-    "gsummary": "Laid-back rooms in a family-run hotel close to the beach, plus breakfast & a serene garden."
+    "gsummary": "Laid-back rooms in a family-run hotel close to the beach, plus breakfast & a serene garden.",
+    "photo": "assets/images/poi/vecchia-marina.webp",
+    "photoCredit": "Hotel Vecchia Marina"
   },
   {
     "id": "villa-barbarina",
@@ -6930,7 +7479,9 @@
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
     ],
-    "gsummary": "Vivace resort di campagna con camere luminose, bar/ristorante chic e piscina scoperta."
+    "gsummary": "Vivace resort di campagna con camere luminose, bar/ristorante chic e piscina scoperta.",
+    "photo": "assets/images/poi/villa-barbarina.webp",
+    "photoCredit": "Villa Barbarina Resort Alghero 4stelle"
   },
   {
     "id": "area-naturalistica-del-monte-nieddu",
@@ -6946,7 +7497,9 @@
     "web": "",
     "orari": "",
     "rating": 4.5,
-    "reviews": 45
+    "reviews": 46,
+    "photo": "assets/images/poi/area-naturalistica-del-monte-nieddu.webp",
+    "photoCredit": "Manfred Franke"
   },
   {
     "id": "arco-di-s-archittu-parco",
@@ -6962,7 +7515,7 @@
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/sarchittu-di-santa-caterina",
     "orari": "",
     "rating": 4.8,
-    "reviews": 1819,
+    "reviews": 1821,
     "ghours": [
       "lunedì: Aperto 24 ore su 24",
       "martedì: Aperto 24 ore su 24",
@@ -6971,7 +7524,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/arco-di-s-archittu-parco.webp",
+    "photoCredit": "Anna Fediaieva"
   },
   {
     "id": "cantiere-forestale",
@@ -7025,7 +7580,9 @@
       "sabato: 07:30–20:00",
       "domenica: 07:30–20:00"
     ],
-    "gsummary": "Area protetta paludosa con viste sull'oceano, isolata, dove osservare fenicotteri e fare escursioni."
+    "gsummary": "Area protetta paludosa con viste sull'oceano, isolata, dove osservare fenicotteri e fare escursioni.",
+    "photo": "assets/images/poi/cantiere-forestale-biderosa.webp",
+    "photoCredit": "Andrea Agliaudi"
   },
   {
     "id": "cantiere-forestale-di-paulilatino",
@@ -7125,7 +7682,9 @@
     "web": "www.comune.villaputzu.ca.it/modules.php?name=Pagine&pa=list_pages_categories&cid=83",
     "orari": "",
     "rating": 4.4,
-    "reviews": 194
+    "reviews": 195,
+    "photo": "assets/images/poi/foce-del-flumendosa-sa-praia.webp",
+    "photoCredit": "francesco"
   },
   {
     "id": "funtanamela",
@@ -7150,7 +7709,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/funtanamela.webp",
+    "photoCredit": "Piero Cattina"
   },
   {
     "id": "monumento-naturale-crateri-vulcanici-del-meilogu-monte-annaru",
@@ -7175,7 +7736,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/monumento-naturale-crateri-vulcanici-del-meilogu-monte-annaru.webp",
+    "photoCredit": "Carla Foddis"
   },
   {
     "id": "parco-archeologico-santa-cristina",
@@ -7191,7 +7754,7 @@
     "web": "https://pozzosantacristina.com",
     "orari": "Mo-Su 08:30-sunset",
     "rating": 4.8,
-    "reviews": 4377,
+    "reviews": 4378,
     "ghours": [
       "lunedì: 08:30–20:30",
       "martedì: 08:30–20:30",
@@ -7201,7 +7764,9 @@
       "sabato: 08:30–20:30",
       "domenica: 08:30–20:30"
     ],
-    "gsummary": "Sito di scavi con pozzo sacro di 3.000 anni, resti dell'Età del Bronzo e chiesa cristiana medievale."
+    "gsummary": "Sito di scavi con pozzo sacro di 3.000 anni, resti dell'Età del Bronzo e chiesa cristiana medievale.",
+    "photo": "assets/images/poi/parco-archeologico-santa-cristina.webp",
+    "photoCredit": "Danilo Ventura"
   },
   {
     "id": "parco-archeologico-suelli",
@@ -7240,7 +7805,9 @@
       "venerdì: 08:00–12:30",
       "sabato: Chiuso",
       "domenica: Chiuso"
-    ]
+    ],
+    "photo": "assets/images/poi/parco-naturale-di-tepilora.webp",
+    "photoCredit": "Riccardo Pretti"
   },
   {
     "id": "parco-naturale-regionale-molentargius-saline",
@@ -7256,7 +7823,7 @@
     "web": "https://www.parcomolentargius.it/index.php",
     "orari": "",
     "rating": 4.3,
-    "reviews": 3658,
+    "reviews": 3662,
     "ghours": [
       "lunedì: 08:30–20:30",
       "martedì: 08:30–20:30",
@@ -7266,7 +7833,9 @@
       "sabato: 08:30–20:30",
       "domenica: 08:30–20:30"
     ],
-    "gsummary": "Ampia area umida con stagni d'acqua dolce e salata, varie specie di voltatili, sentieri e bici a noleggio."
+    "gsummary": "Ampia area umida con stagni d'acqua dolce e salata, varie specie di voltatili, sentieri e bici a noleggio.",
+    "photo": "assets/images/poi/parco-naturale-regionale-molentargius-saline.webp",
+    "photoCredit": "Parco Naturale Molentargius Saline"
   },
   {
     "id": "pedrami",
@@ -7282,7 +7851,9 @@
     "web": "",
     "orari": "",
     "rating": 5,
-    "reviews": 1
+    "reviews": 1,
+    "photo": "assets/images/poi/pedrami.webp",
+    "photoCredit": "Claudio Casadio"
   },
   {
     "id": "sa-pala-de-cunventu",
@@ -7296,7 +7867,9 @@
     "costo": "",
     "tel": "",
     "web": "",
-    "orari": ""
+    "orari": "",
+    "photo": "assets/images/poi/sa-pala-de-cunventu.webp",
+    "photoCredit": "Sa Pala de Cunventu"
   },
   {
     "id": "sa-roda-manna",
@@ -7312,7 +7885,9 @@
     "web": "portal.sardegnasira.it/sa-roda-manna",
     "orari": "",
     "rating": 3.3,
-    "reviews": 21
+    "reviews": 21,
+    "photo": "assets/images/poi/sa-roda-manna.webp",
+    "photoCredit": "atc sarchittu"
   },
   {
     "id": "sa-sedda-de-tullinu",
@@ -7342,7 +7917,7 @@
     "web": "parcomolentargius.it",
     "orari": "",
     "rating": 4.3,
-    "reviews": 3658,
+    "reviews": 3662,
     "ghours": [
       "lunedì: 08:30–20:30",
       "martedì: 08:30–20:30",
@@ -7352,7 +7927,9 @@
       "sabato: 08:30–20:30",
       "domenica: 08:30–20:30"
     ],
-    "gsummary": "Ampia area umida con stagni d'acqua dolce e salata, varie specie di voltatili, sentieri e bici a noleggio."
+    "gsummary": "Ampia area umida con stagni d'acqua dolce e salata, varie specie di voltatili, sentieri e bici a noleggio.",
+    "photo": "assets/images/poi/saline-di-molentargius.webp",
+    "photoCredit": "Parco Naturale Molentargius Saline"
   },
   {
     "id": "sistema-dunale-di-capo-comino-parco",
@@ -7377,7 +7954,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/sistema-dunale-di-capo-comino-parco.webp",
+    "photoCredit": "Laura Grammling"
   },
   {
     "id": "stagni-di-san-teodoro",
@@ -7393,7 +7972,9 @@
     "web": "",
     "orari": "",
     "rating": 4.5,
-    "reviews": 137
+    "reviews": 137,
+    "photo": "assets/images/poi/stagni-di-san-teodoro.webp",
+    "photoCredit": "Luca A. 1969"
   },
   {
     "id": "su-cabudu-de-s-arridelaxiu",
@@ -7465,7 +8046,9 @@
     "web": "https://www.areamarinasinis.it/",
     "orari": "",
     "rating": 5,
-    "reviews": 4
+    "reviews": 4,
+    "photo": "assets/images/poi/zona-c-area-marina-protetta-penisola-del-sinis-isula-de-malu-bentu.webp",
+    "photoCredit": "Roberta Putzu"
   },
   {
     "id": "agriturismo-iloghe",
@@ -7481,7 +8064,9 @@
     "web": "http://www.agriturismoiloghe.com",
     "orari": "24/7",
     "rating": 4.4,
-    "reviews": 122
+    "reviews": 123,
+    "photo": "assets/images/poi/agriturismo-iloghe.webp",
+    "photoCredit": "Agriturismo Iloghe"
   },
   {
     "id": "al-906-operaio",
@@ -7497,7 +8082,9 @@
     "web": "",
     "orari": "",
     "rating": 4.3,
-    "reviews": 634
+    "reviews": 635,
+    "photo": "assets/images/poi/al-906-operaio.webp",
+    "photoCredit": "Roberto Atzeni"
   },
   {
     "id": "bar-del-capitano",
@@ -7513,7 +8100,7 @@
     "web": "",
     "orari": "",
     "rating": 4.4,
-    "reviews": 846,
+    "reviews": 848,
     "ghours": [
       "lunedì: 19:00–23:00",
       "martedì: 19:00–23:00",
@@ -7522,7 +8109,9 @@
       "venerdì: 19:00–23:00",
       "sabato: 19:00–23:00",
       "domenica: 12:30–14:30, 19:00–23:00"
-    ]
+    ],
+    "photo": "assets/images/poi/bar-del-capitano.webp",
+    "photoCredit": "Matteo Chateau"
   },
   {
     "id": "bar-pizzeria-da-rino",
@@ -7538,7 +8127,7 @@
     "web": "",
     "orari": "Th-Tu 07:45-01:00",
     "rating": 4.3,
-    "reviews": 1033,
+    "reviews": 1034,
     "ghours": [
       "lunedì: 08:00–02:00",
       "martedì: 08:00–02:00",
@@ -7547,7 +8136,9 @@
       "venerdì: 08:00–02:00",
       "sabato: 08:00–03:00",
       "domenica: 08:00–03:00"
-    ]
+    ],
+    "photo": "assets/images/poi/bar-pizzeria-da-rino.webp",
+    "photoCredit": "Bar Pizzeria Da Rino"
   },
   {
     "id": "bar-pizzeria-gattopardo",
@@ -7577,7 +8168,7 @@
     "web": "",
     "orari": "",
     "rating": 4.1,
-    "reviews": 340,
+    "reviews": 341,
     "ghours": [
       "lunedì: 11:30–00:00",
       "martedì: 11:30–00:00",
@@ -7586,7 +8177,9 @@
       "venerdì: 11:30–00:00",
       "sabato: 11:30–00:00",
       "domenica: 11:30–00:00"
-    ]
+    ],
+    "photo": "assets/images/poi/bar-ristorante-asterix.webp",
+    "photoCredit": "Valea Casule"
   },
   {
     "id": "bar-ristorante-morongiu",
@@ -7602,7 +8195,7 @@
     "web": "",
     "orari": "Mo-Su 08:30-24:00",
     "rating": 4,
-    "reviews": 243,
+    "reviews": 244,
     "ghours": [
       "lunedì: 07:00–23:30",
       "martedì: 07:00–23:30",
@@ -7611,7 +8204,9 @@
       "venerdì: 07:00–23:30",
       "sabato: 07:00–00:00",
       "domenica: 07:00–00:00"
-    ]
+    ],
+    "photo": "assets/images/poi/bar-ristorante-morongiu.webp",
+    "photoCredit": "alessandro paba"
   },
   {
     "id": "belvedere",
@@ -7627,7 +8222,7 @@
     "web": "www.ristorantegastronomiabelvedere.com",
     "orari": "",
     "rating": 4.6,
-    "reviews": 956,
+    "reviews": 958,
     "ghours": [
       "lunedì: 12:00–14:30, 19:00–22:30",
       "martedì: 12:00–14:30, 19:00–22:30",
@@ -7637,7 +8232,9 @@
       "sabato: 12:00–14:30, 19:00–22:30",
       "domenica: 12:00–14:30, 19:00–22:30"
     ],
-    "gsummary": "Classici piatti a base di pesce, primi e vini sardi offerti in un locale elegante affacciato su verdi colline costiere."
+    "gsummary": "Classici piatti a base di pesce, primi e vini sardi offerti in un locale elegante affacciato su verdi colline costiere.",
+    "photo": "assets/images/poi/belvedere.webp",
+    "photoCredit": "Ristorante Gastronomia Belvedere - Belvedere Lounge Porto Cervo"
   },
   {
     "id": "capannaccia",
@@ -7653,7 +8250,7 @@
     "web": "www.instagram.com/lacapannaccia_restaurant",
     "orari": "",
     "rating": 4.1,
-    "reviews": 221,
+    "reviews": 222,
     "ghours": [
       "lunedì: 19:00–23:30",
       "martedì: 19:00–23:30",
@@ -7662,7 +8259,9 @@
       "venerdì: 19:00–23:30",
       "sabato: 19:00–23:30",
       "domenica: 19:00–23:30"
-    ]
+    ],
+    "photo": "assets/images/poi/capannaccia.webp",
+    "photoCredit": "Google"
   },
   {
     "id": "costa-paradiso",
@@ -7701,7 +8300,9 @@
       "venerdì: 18:30–23:00",
       "sabato: 18:30–23:00",
       "domenica: 18:30–23:00"
-    ]
+    ],
+    "photo": "assets/images/poi/da-bastiano-pizza.webp",
+    "photoCredit": "Pizzeria da Bastiano"
   },
   {
     "id": "da-filippo",
@@ -7717,7 +8318,7 @@
     "web": "https://www.pizzeriadafilippo.it/",
     "orari": "",
     "rating": 4.2,
-    "reviews": 655,
+    "reviews": 658,
     "ghours": [
       "lunedì: 18:30–23:00",
       "martedì: 18:30–23:00",
@@ -7726,23 +8327,9 @@
       "venerdì: 18:30–23:00",
       "sabato: 18:30–23:00",
       "domenica: 18:30–23:00"
-    ]
-  },
-  {
-    "id": "evo",
-    "name": "Evò",
-    "lat": 39.2991014,
-    "lng": 9.2008698,
-    "cat": "ristorante",
-    "description": "Ristorante a Serdiana con pizza al piatto e grigliata di carne, cucina contemporanea nel Campidano di Cagliari.",
-    "come": "",
-    "servizi": "",
-    "costo": "",
-    "tel": "+39 345 176 7106",
-    "web": "",
-    "orari": "",
-    "rating": 4,
-    "reviews": 47
+    ],
+    "photo": "assets/images/poi/da-filippo.webp",
+    "photoCredit": "Da Filippo Pizza-Ristorante"
   },
   {
     "id": "hotel-ristorante-su-gologone",
@@ -7758,8 +8345,10 @@
     "web": "https://www.sugologone.it/en/",
     "orari": "",
     "rating": 4.6,
-    "reviews": 2135,
-    "gsummary": "Sistemazioni eleganti in hotel di lusso con piscina scoperta, cinema, ristorante e spa."
+    "reviews": 2136,
+    "gsummary": "Sistemazioni eleganti in hotel di lusso con piscina scoperta, cinema, ristorante e spa.",
+    "photo": "assets/images/poi/hotel-ristorante-su-gologone.webp",
+    "photoCredit": "Su Gologone Experience Hotel"
   },
   {
     "id": "il-girasole",
@@ -7775,7 +8364,9 @@
     "web": "https://m.facebook.com/pages/Ristorante-Pizzeria-Il-Girasole-Da-Peppe/142036619217106",
     "orari": "",
     "rating": 3.6,
-    "reviews": 590
+    "reviews": 592,
+    "photo": "assets/images/poi/il-girasole.webp",
+    "photoCredit": "RITA"
   },
   {
     "id": "il-maestrale",
@@ -7791,7 +8382,7 @@
     "web": "https://maestrale-portopollo.it/il-maestrale/",
     "orari": "Mo-Su 12:00-15:00, 19:00-23:30",
     "rating": 4.2,
-    "reviews": 1085,
+    "reviews": 1089,
     "ghours": [
       "lunedì: 18:45–23:45",
       "martedì: 18:45–23:45",
@@ -7801,7 +8392,9 @@
       "sabato: 18:45–23:45",
       "domenica: 18:45–23:45"
     ],
-    "gsummary": "Pesce, pizza e dolci sardi in un vivace gastropub con terrazza affacciata sulla baia."
+    "gsummary": "Pesce, pizza e dolci sardi in un vivace gastropub con terrazza affacciata sulla baia.",
+    "photo": "assets/images/poi/il-maestrale.webp",
+    "photoCredit": "Alessandro"
   },
   {
     "id": "il-portico",
@@ -7831,7 +8424,7 @@
     "web": "",
     "orari": "Mo-Su 00:00-03:00,12:00-15:00,19:00-24:00",
     "rating": 4.3,
-    "reviews": 2326,
+    "reviews": 2327,
     "ghours": [
       "lunedì: 12:00–14:30, 19:00–00:00",
       "martedì: 12:00–14:30, 19:00–00:00",
@@ -7840,7 +8433,9 @@
       "venerdì: 12:00–14:30, 19:00–00:00",
       "sabato: 12:00–14:30, 19:00–00:00",
       "domenica: 12:00–14:30, 19:00–00:00"
-    ]
+    ],
+    "photo": "assets/images/poi/il-vecchio-mulino.webp",
+    "photoCredit": "Jussara Freitas Oficial Guide (JussarafreitasBrasil)"
   },
   {
     "id": "l-impero",
@@ -7879,7 +8474,9 @@
       "venerdì: 07:00–01:00",
       "sabato: 07:00–01:00",
       "domenica: 07:00–01:00"
-    ]
+    ],
+    "photo": "assets/images/poi/la-grotta.webp",
+    "photoCredit": "Grotta Su Marmuri"
   },
   {
     "id": "la-locanda-del-mare",
@@ -7905,7 +8502,9 @@
       "sabato: 08:00–00:00",
       "domenica: 08:00–00:00"
     ],
-    "gsummary": "Specialità di pesce servite nel ristorante di un bed & breakfast con veranda vista mare e cantina dei vini."
+    "gsummary": "Specialità di pesce servite nel ristorante di un bed & breakfast con veranda vista mare e cantina dei vini.",
+    "photo": "assets/images/poi/la-locanda-del-mare.webp",
+    "photoCredit": "Barbara Callioni"
   },
   {
     "id": "la-quercia",
@@ -7921,7 +8520,7 @@
     "web": "www.laquerciadicosentino.it",
     "orari": "",
     "rating": 4.3,
-    "reviews": 600,
+    "reviews": 602,
     "ghours": [
       "lunedì: 12:00–14:30, 18:30–22:00",
       "martedì: Chiuso",
@@ -7930,7 +8529,9 @@
       "venerdì: 12:00–14:30, 18:30–22:00",
       "sabato: 12:00–14:30, 18:30–22:00",
       "domenica: 12:00–14:30, 18:30–22:00"
-    ]
+    ],
+    "photo": "assets/images/poi/la-quercia.webp",
+    "photoCredit": "La Quercia - Experience Hotel"
   },
   {
     "id": "la-rosa-dei-venti-ristorante",
@@ -7946,7 +8547,9 @@
     "web": "http://www.larosadeiventiristorante.com",
     "orari": "",
     "rating": 4.5,
-    "reviews": 288
+    "reviews": 288,
+    "photo": "assets/images/poi/la-rosa-dei-venti-ristorante.webp",
+    "photoCredit": "Giuseppe Tocco"
   },
   {
     "id": "la-ruota",
@@ -7971,7 +8574,9 @@
       "venerdì: 18:30–00:00",
       "sabato: 18:30–00:00",
       "domenica: 18:30–00:00"
-    ]
+    ],
+    "photo": "assets/images/poi/la-ruota.webp",
+    "photoCredit": "La Ruota Ristorante Pizzeria"
   },
   {
     "id": "lu-branu",
@@ -7987,7 +8592,9 @@
     "web": "www.agriturismolubranu.it",
     "orari": "",
     "rating": 4.5,
-    "reviews": 1292
+    "reviews": 1293,
+    "photo": "assets/images/poi/lu-branu.webp",
+    "photoCredit": "Lu Branu"
   },
   {
     "id": "masiloghi",
@@ -8003,7 +8610,7 @@
     "web": "www.masiloghi.it",
     "orari": "",
     "rating": 4.2,
-    "reviews": 765,
+    "reviews": 768,
     "ghours": [
       "lunedì: 10:00–23:30",
       "martedì: 10:00–23:30",
@@ -8012,7 +8619,9 @@
       "venerdì: 10:00–23:30",
       "sabato: 10:00–23:30",
       "domenica: 12:00–23:30"
-    ]
+    ],
+    "photo": "assets/images/poi/masiloghi.webp",
+    "photoCredit": "Ristorantino Masiloghi - Ristorante Tipico sardo"
   },
   {
     "id": "non-solo-pizza",
@@ -8042,7 +8651,7 @@
     "web": "www.appsheet.com/start/cf2897ff-40c5-4d07-8dc5-92eba13e95e2#view=Google%20view&row=asdffghh5566",
     "orari": "",
     "rating": 3.8,
-    "reviews": 536,
+    "reviews": 537,
     "ghours": [
       "lunedì: 11:00–23:00",
       "martedì: 11:00–23:00",
@@ -8051,7 +8660,9 @@
       "venerdì: 11:00–23:00",
       "sabato: 11:00–23:00",
       "domenica: 11:00–23:00"
-    ]
+    ],
+    "photo": "assets/images/poi/osteria-da-antonio.webp",
+    "photoCredit": "Andrea R"
   },
   {
     "id": "park-hotel-ristorante",
@@ -8095,7 +8706,7 @@
     "web": "https://trattoriailboscaiolo.it/",
     "orari": "Mo-Su 19:00-23:00",
     "rating": 4.3,
-    "reviews": 775,
+    "reviews": 776,
     "ghours": [
       "lunedì: 19:00–23:30",
       "martedì: 19:00–23:30",
@@ -8104,7 +8715,9 @@
       "venerdì: 19:00–23:30",
       "sabato: 19:00–23:30",
       "domenica: 19:00–23:30"
-    ]
+    ],
+    "photo": "assets/images/poi/pizzeria-il-boscaiolo.webp",
+    "photoCredit": "Il Boscaiolo"
   },
   {
     "id": "pizzeria-il-cavallino-rosso",
@@ -8129,7 +8742,9 @@
       "venerdì: 18:00–23:00",
       "sabato: 18:00–23:00",
       "domenica: 18:00–23:00"
-    ]
+    ],
+    "photo": "assets/images/poi/pizzeria-il-cavallino-rosso.webp",
+    "photoCredit": "Jordy ML"
   },
   {
     "id": "pizzeria-lu-vorru",
@@ -8144,8 +8759,8 @@
     "tel": "+39 079 974811",
     "web": "",
     "orari": "",
-    "rating": 4.7,
-    "reviews": 247,
+    "rating": 4.6,
+    "reviews": 252,
     "ghours": [
       "lunedì: 18:30–23:00",
       "martedì: 18:30–23:00",
@@ -8154,7 +8769,9 @@
       "venerdì: 18:30–23:00",
       "sabato: 18:30–23:00",
       "domenica: 18:30–23:00"
-    ]
+    ],
+    "photo": "assets/images/poi/pizzeria-lu-vorru.webp",
+    "photoCredit": "Simona Fanni"
   },
   {
     "id": "pizzeria-mai-dire-italia",
@@ -8198,7 +8815,7 @@
     "web": "ristorantebarbagia.com",
     "orari": "",
     "rating": 4.3,
-    "reviews": 1705,
+    "reviews": 1708,
     "ghours": [
       "lunedì: 12:30–14:45, 19:30–23:00",
       "martedì: 12:30–14:45, 19:30–23:00",
@@ -8208,7 +8825,9 @@
       "sabato: 12:30–14:45, 19:30–23:00",
       "domenica: 12:30–14:45, 19:30–23:00"
     ],
-    "gsummary": "Cucina sarda classica, incluso il maialino da latte, oltre a pesce, pasta e pizza in un ambiente rustico."
+    "gsummary": "Cucina sarda classica, incluso il maialino da latte, oltre a pesce, pasta e pizza in un ambiente rustico.",
+    "photo": "assets/images/poi/ristorante-barbagia.webp",
+    "photoCredit": "Ristorante Barbagia Olbia"
   },
   {
     "id": "ristorante-pizzeria-bar-il-pozzo",
@@ -8224,7 +8843,7 @@
     "web": "https://ristorante-il-pozzo-italian-restaurant.business.site/",
     "orari": "",
     "rating": 4.2,
-    "reviews": 1106,
+    "reviews": 1107,
     "ghours": [
       "lunedì: 07:00–01:00",
       "martedì: 07:00–01:00",
@@ -8233,7 +8852,9 @@
       "venerdì: 07:00–01:00",
       "sabato: 07:00–01:00",
       "domenica: 07:00–01:00"
-    ]
+    ],
+    "photo": "assets/images/poi/ristorante-pizzeria-bar-il-pozzo.webp",
+    "photoCredit": "Ristorante Il Pozzo"
   },
   {
     "id": "ristorante-pizzeria-troncadero",
@@ -8278,7 +8899,9 @@
     "orari": "",
     "rating": 4.6,
     "reviews": 835,
-    "gsummary": "Hotel informale con ristorante, bar, piscina scoperta e vasca idromassaggio."
+    "gsummary": "Hotel informale con ristorante, bar, piscina scoperta e vasca idromassaggio.",
+    "photo": "assets/images/poi/sa-contonera-ristorante.webp",
+    "photoCredit": "Hotel Sa Contonera"
   },
   {
     "id": "sa-marina",
@@ -8308,7 +8931,7 @@
     "web": "",
     "orari": "",
     "rating": 4.6,
-    "reviews": 1310,
+    "reviews": 1311,
     "ghours": [
       "lunedì: Chiuso",
       "martedì: 12:30–14:30, 20:00–00:00",
@@ -8317,7 +8940,9 @@
       "venerdì: 12:30–14:30, 20:00–22:00",
       "sabato: 12:30–14:30, 20:00–22:00",
       "domenica: 13:00–15:00, 20:00–22:00"
-    ]
+    ],
+    "photo": "assets/images/poi/santa-barbara.webp",
+    "photoCredit": "Google"
   },
   {
     "id": "su-barchile",
@@ -8333,8 +8958,10 @@
     "web": "https://www.subarchile.it/",
     "orari": "",
     "rating": 4.1,
-    "reviews": 880,
-    "gsummary": "Camere essenziali e ristorante informale con terrazza in hotel accogliente."
+    "reviews": 881,
+    "gsummary": "Camere essenziali e ristorante informale con terrazza in hotel accogliente.",
+    "photo": "assets/images/poi/su-barchile.webp",
+    "photoCredit": "Su Barchile Hotel Ristorante Orosei - Pizzeria Gluten Free - Orosei"
   },
   {
     "id": "su-ninnieri",
@@ -8359,7 +8986,9 @@
       "venerdì: 12:30–14:30",
       "sabato: 12:30–14:30",
       "domenica: 12:30–14:30"
-    ]
+    ],
+    "photo": "assets/images/poi/su-ninnieri.webp",
+    "photoCredit": "Francesco Floris"
   },
   {
     "id": "trattoria-mamma-mia",
@@ -8384,7 +9013,9 @@
       "venerdì: 12:00–14:30, 18:00–23:00",
       "sabato: 12:00–14:30, 18:00–23:00",
       "domenica: 12:00–14:30, 18:00–23:00"
-    ]
+    ],
+    "photo": "assets/images/poi/trattoria-mamma-mia.webp",
+    "photoCredit": "Savana D"
   },
   {
     "id": "vecchia-gallura",
@@ -8423,7 +9054,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/baja-sardinia.webp",
+    "photoCredit": "Sara Pellegrini"
   },
   {
     "id": "bau-bau-beach",
@@ -8439,7 +9072,9 @@
     "web": "",
     "orari": "",
     "rating": 4,
-    "reviews": 254
+    "reviews": 254,
+    "photo": "assets/images/poi/bau-bau-beach.webp",
+    "photoCredit": "Natalija Moseiko"
   },
   {
     "id": "bau-bau-palau-accesso-ai-cani",
@@ -8455,7 +9090,7 @@
     "web": "",
     "orari": "",
     "rating": 4.1,
-    "reviews": 88,
+    "reviews": 89,
     "ghours": [
       "lunedì: Aperto 24 ore su 24",
       "martedì: Aperto 24 ore su 24",
@@ -8464,7 +9099,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/bau-bau-palau-accesso-ai-cani.webp",
+    "photoCredit": "Pawarisa Heiz"
   },
   {
     "id": "cala-andreani",
@@ -8489,7 +9126,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/cala-andreani.webp",
+    "photoCredit": "Bitto 12"
   },
   {
     "id": "cala-capra",
@@ -8514,7 +9153,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/cala-capra.webp",
+    "photoCredit": "Bruno Maruca"
   },
   {
     "id": "cala-dell-argentiera",
@@ -8530,7 +9171,9 @@
     "web": "",
     "orari": "",
     "rating": 4.5,
-    "reviews": 2357
+    "reviews": 2359,
+    "photo": "assets/images/poi/cala-dell-argentiera.webp",
+    "photoCredit": "Gianluca Costanza (adrenalinik)"
   },
   {
     "id": "cala-di-fuili",
@@ -8546,7 +9189,7 @@
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/cala-fuili",
     "orari": "",
     "rating": 4.6,
-    "reviews": 2675,
+    "reviews": 2676,
     "ghours": [
       "lunedì: Aperto 24 ore su 24",
       "martedì: Aperto 24 ore su 24",
@@ -8556,7 +9199,9 @@
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
     ],
-    "gsummary": "Spiaggia di ciottoli tranquilla e informale, ideale per nuotare e con punti per il trekking e le arrampicate nelle vicinanze."
+    "gsummary": "Spiaggia di ciottoli tranquilla e informale, ideale per nuotare e con punti per il trekking e le arrampicate nelle vicinanze.",
+    "photo": "assets/images/poi/cala-di-fuili.webp",
+    "photoCredit": "Ernst-Joerg Oberhoessel"
   },
   {
     "id": "cala-di-pedralonga",
@@ -8586,7 +9231,9 @@
     "web": "",
     "orari": "",
     "rating": 4.2,
-    "reviews": 884
+    "reviews": 885,
+    "photo": "assets/images/poi/cala-garibaldi.webp",
+    "photoCredit": "Daniel Dotti Francioni"
   },
   {
     "id": "delle-dune",
@@ -8644,8 +9291,10 @@
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/la-cinta",
     "orari": "",
     "rating": 4.5,
-    "reviews": 8601,
-    "gsummary": "Pittoresca spiaggia di sabbia bianca nota per le acque turchesi e tra chi pratica kitesurf."
+    "reviews": 8609,
+    "gsummary": "Pittoresca spiaggia di sabbia bianca nota per le acque turchesi e tra chi pratica kitesurf.",
+    "photo": "assets/images/poi/la-cinta-su-cintura.webp",
+    "photoCredit": "SENNA AYD"
   },
   {
     "id": "la-sciumara",
@@ -8661,8 +9310,10 @@
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/la-sciumara-rada-di-mezzo-schifo",
     "orari": "",
     "rating": 4.5,
-    "reviews": 359,
-    "gsummary": "Spiaggia sabbiosa circondata da rilievi con acque cristalline e la vista in lontananza sulla Maddalena."
+    "reviews": 360,
+    "gsummary": "Spiaggia sabbiosa circondata da rilievi con acque cristalline e la vista in lontananza sulla Maddalena.",
+    "photo": "assets/images/poi/la-sciumara.webp",
+    "photoCredit": "Leo Minerva"
   },
   {
     "id": "mare-morto",
@@ -8678,7 +9329,9 @@
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/mare-morto",
     "orari": "",
     "rating": 4.2,
-    "reviews": 736
+    "reviews": 736,
+    "photo": "assets/images/poi/mare-morto.webp",
+    "photoCredit": "Andrea Renolfi"
   },
   {
     "id": "palmasera",
@@ -8694,7 +9347,7 @@
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/palmasera",
     "orari": "",
     "rating": 4.2,
-    "reviews": 1456,
+    "reviews": 1457,
     "ghours": [
       "lunedì: Aperto 24 ore su 24",
       "martedì: Aperto 24 ore su 24",
@@ -8703,7 +9356,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/palmasera.webp",
+    "photoCredit": "Club Esse Palmasera Resort"
   },
   {
     "id": "pittulongu-lo-squalo",
@@ -8719,7 +9374,9 @@
     "web": "",
     "orari": "",
     "rating": 4.4,
-    "reviews": 407
+    "reviews": 407,
+    "photo": "assets/images/poi/pittulongu-lo-squalo.webp",
+    "photoCredit": "Lo Squalo"
   },
   {
     "id": "plage-mesu-spiaggia-di-mezzo",
@@ -8749,7 +9406,9 @@
     "web": "",
     "orari": "",
     "rating": 4.5,
-    "reviews": 1549
+    "reviews": 1553,
+    "photo": "assets/images/poi/porto-frailis.webp",
+    "photoCredit": "Michael Roth"
   },
   {
     "id": "spiaggia-cala-coticcio",
@@ -8775,7 +9434,9 @@
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
     ],
-    "gsummary": "Caletta sabbiosa appartata e circondata da scogliere, ideale per fare il bagno e prendere il sole."
+    "gsummary": "Caletta sabbiosa appartata e circondata da scogliere, ideale per fare il bagno e prendere il sole.",
+    "photo": "assets/images/poi/spiaggia-cala-coticcio.webp",
+    "photoCredit": "Manuele Messera"
   },
   {
     "id": "spiaggia-cala-ginepro",
@@ -8791,7 +9452,7 @@
     "web": "www.sardegnaturismo.it/it/esplora/cala-liberotto",
     "orari": "",
     "rating": 4.5,
-    "reviews": 2000,
+    "reviews": 2004,
     "ghours": [
       "lunedì: Aperto 24 ore su 24",
       "martedì: Aperto 24 ore su 24",
@@ -8800,7 +9461,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/spiaggia-cala-ginepro.webp",
+    "photoCredit": "Livio Albinelli"
   },
   {
     "id": "spiaggia-dei-preti",
@@ -8816,7 +9479,9 @@
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/spiaggia-stella",
     "orari": "",
     "rating": 4.5,
-    "reviews": 53
+    "reviews": 54,
+    "photo": "assets/images/poi/spiaggia-dei-preti.webp",
+    "photoCredit": "Ornella"
   },
   {
     "id": "spiaggia-del-lazzaretto",
@@ -8832,7 +9497,9 @@
     "web": "",
     "orari": "",
     "rating": 4.5,
-    "reviews": 225
+    "reviews": 225,
+    "photo": "assets/images/poi/spiaggia-del-lazzaretto.webp",
+    "photoCredit": "Eli Porcu"
   },
   {
     "id": "spiaggia-del-relitto",
@@ -8848,7 +9515,9 @@
     "web": "www.comune.lamaddalena.ot.it/site/home/turismo/luoghi-di-interesse/articolo9009258.html",
     "orari": "",
     "rating": 4.6,
-    "reviews": 3203
+    "reviews": 3206,
+    "photo": "assets/images/poi/spiaggia-del-relitto.webp",
+    "photoCredit": "Luca Papini"
   },
   {
     "id": "spiaggia-di-budoni",
@@ -8864,7 +9533,9 @@
     "web": "www.sardegnaturismo.it/it/esplora/cala-di-budoni",
     "orari": "",
     "rating": 4.3,
-    "reviews": 3305
+    "reviews": 3307,
+    "photo": "assets/images/poi/spiaggia-di-budoni.webp",
+    "photoCredit": "Bernd Oldenburg"
   },
   {
     "id": "spiaggia-di-cala-dei-ponzesi",
@@ -8894,7 +9565,7 @@
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/spiaggia-centrale",
     "orari": "",
     "rating": 4.1,
-    "reviews": 694,
+    "reviews": 695,
     "ghours": [
       "lunedì: Aperto 24 ore su 24",
       "martedì: Aperto 24 ore su 24",
@@ -8903,7 +9574,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/spiaggia-di-cala-gonone.webp",
+    "photoCredit": "Anne Perigny"
   },
   {
     "id": "spiaggia-di-calamosca",
@@ -8919,7 +9592,7 @@
     "web": "",
     "orari": "",
     "rating": 4.3,
-    "reviews": 2537,
+    "reviews": 2542,
     "ghours": [
       "lunedì: Aperto 24 ore su 24",
       "martedì: Aperto 24 ore su 24",
@@ -8928,7 +9601,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/spiaggia-di-calamosca.webp",
+    "photoCredit": "Massimo Rodighiero"
   },
   {
     "id": "spiaggia-di-cannigione",
@@ -8944,7 +9619,7 @@
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/cannigione",
     "orari": "",
     "rating": 4.2,
-    "reviews": 2025,
+    "reviews": 2027,
     "ghours": [
       "lunedì: Aperto 24 ore su 24",
       "martedì: Aperto 24 ore su 24",
@@ -8953,7 +9628,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/spiaggia-di-cannigione.webp",
+    "photoCredit": "Daniela Grittini"
   },
   {
     "id": "spiaggia-di-ezzi-mannu",
@@ -8969,7 +9646,9 @@
     "web": "www.sardegnaturismo.it/it/luoghi/nord-ovest/stintino",
     "orari": "",
     "rating": 4.4,
-    "reviews": 2670
+    "reviews": 2671,
+    "photo": "assets/images/poi/spiaggia-di-ezzi-mannu.webp",
+    "photoCredit": "Gianfranco Malta"
   },
   {
     "id": "spiaggia-di-maria-pia",
@@ -8985,8 +9664,10 @@
     "web": "",
     "orari": "",
     "rating": 4.4,
-    "reviews": 2613,
-    "gsummary": "Famosa spiaggia lunga più di un chilometro, con sabbia bianca incontaminata e acque cristalline."
+    "reviews": 2620,
+    "gsummary": "Famosa spiaggia lunga più di un chilometro, con sabbia bianca incontaminata e acque cristalline.",
+    "photo": "assets/images/poi/spiaggia-di-maria-pia.webp",
+    "photoCredit": "Lifeguin"
   },
   {
     "id": "spiaggia-di-poglina",
@@ -9002,8 +9683,10 @@
     "web": "",
     "orari": "",
     "rating": 4.3,
-    "reviews": 886,
-    "gsummary": "Spiaggia sabbiosa in baia con acqua cristallina circondata da rocce e accesso tramite passerella."
+    "reviews": 888,
+    "gsummary": "Spiaggia sabbiosa in baia con acqua cristallina circondata da rocce e accesso tramite passerella.",
+    "photo": "assets/images/poi/spiaggia-di-poglina.webp",
+    "photoCredit": "Bogdan Velea"
   },
   {
     "id": "spiaggia-di-san-diego",
@@ -9028,7 +9711,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/spiaggia-di-san-diego.webp",
+    "photoCredit": "Daniele Di Bartolomeo"
   },
   {
     "id": "spiaggia-di-sant-anna",
@@ -9044,7 +9729,9 @@
     "web": "www.mybudoni.it",
     "orari": "",
     "rating": 4.3,
-    "reviews": 375
+    "reviews": 376,
+    "photo": "assets/images/poi/spiaggia-di-sant-anna.webp",
+    "photoCredit": "Giui"
   },
   {
     "id": "spiaggia-di-santa-lucia",
@@ -9060,7 +9747,9 @@
     "web": "",
     "orari": "",
     "rating": 4.5,
-    "reviews": 881
+    "reviews": 882,
+    "photo": "assets/images/poi/spiaggia-di-santa-lucia.webp",
+    "photoCredit": "angelo sannia"
   },
   {
     "id": "spiaggia-di-torregrande",
@@ -9090,8 +9779,10 @@
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/lu-impostu-porto-brandinchi",
     "orari": "",
     "rating": 4.4,
-    "reviews": 4902,
-    "gsummary": "Suggestiva meta balneare che offre sabbia bianca e calme acque cristalline, oltre al noleggio di ombrelloni e kayak."
+    "reviews": 4911,
+    "gsummary": "Suggestiva meta balneare che offre sabbia bianca e calme acque cristalline, oltre al noleggio di ombrelloni e kayak.",
+    "photo": "assets/images/poi/spiaggia-lu-impostu.webp",
+    "photoCredit": "Riccardo Bertola"
   },
   {
     "id": "spiaggia-tanca-manna",
@@ -9107,7 +9798,9 @@
     "web": "",
     "orari": "",
     "rating": 4.3,
-    "reviews": 692
+    "reviews": 692,
+    "photo": "assets/images/poi/spiaggia-tanca-manna.webp",
+    "photoCredit": "Maciekmjm"
   },
   {
     "id": "spiaggetta-dell-arco",
@@ -9123,7 +9816,9 @@
     "web": "www.sardegnaturismo.it/it/punto-di-interesse/sarchittu-di-santa-caterina",
     "orari": "",
     "rating": 4.6,
-    "reviews": 326
+    "reviews": 326,
+    "photo": "assets/images/poi/spiaggetta-dell-arco.webp",
+    "photoCredit": "Silvano Dellapina"
   },
   {
     "id": "scaiu-ecciu",
@@ -9162,7 +9857,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/sos-iscraios.webp",
+    "photoCredit": "Lorenzo D'Elia"
   },
   {
     "id": "la-maddalena-ferry",
@@ -9178,7 +9875,9 @@
     "web": "",
     "orari": "",
     "rating": 4.5,
-    "reviews": 379
+    "reviews": 382,
+    "photo": "assets/images/poi/la-maddalena-ferry.webp",
+    "photoCredit": "Luca Locci"
   },
   {
     "id": "cannigione-marina",
@@ -9208,7 +9907,7 @@
     "web": "www.portosantateresa.com",
     "orari": "",
     "rating": 4.5,
-    "reviews": 452,
+    "reviews": 453,
     "ghours": [
       "lunedì: 07:30–21:00",
       "martedì: 07:30–21:00",
@@ -9217,7 +9916,9 @@
       "venerdì: 07:30–21:00",
       "sabato: 07:30–21:00",
       "domenica: 07:30–21:00"
-    ]
+    ],
+    "photo": "assets/images/poi/santa-teresa-longonsardo.webp",
+    "photoCredit": "Csaba Biro"
   },
   {
     "id": "carloforte-porto-principale",
@@ -9233,7 +9934,9 @@
     "web": "",
     "orari": "",
     "rating": 4.6,
-    "reviews": 77
+    "reviews": 77,
+    "photo": "assets/images/poi/carloforte-porto-principale.webp",
+    "photoCredit": "Antonio Vergallo"
   },
   {
     "id": "calasetta-terminal",
@@ -9249,7 +9952,9 @@
     "web": "",
     "orari": "",
     "rating": 4.6,
-    "reviews": 25
+    "reviews": 25,
+    "photo": "assets/images/poi/calasetta-terminal.webp",
+    "photoCredit": "Laurent J"
   },
   {
     "id": "portovesme-terminal",
@@ -9265,7 +9970,9 @@
     "web": "",
     "orari": "",
     "rating": 3.9,
-    "reviews": 26
+    "reviews": 26,
+    "photo": "assets/images/poi/portovesme-terminal.webp",
+    "photoCredit": "Rainer Müssig"
   },
   {
     "id": "stintino-imbarco-asinara",
@@ -9281,7 +9988,9 @@
     "web": "",
     "orari": "Stagionale (aprile-ottobre)",
     "rating": 4.2,
-    "reviews": 10
+    "reviews": 10,
+    "photo": "assets/images/poi/stintino-imbarco-asinara.webp",
+    "photoCredit": "Frederic Botte"
   },
   {
     "id": "porto-rotondo-marina",
@@ -9297,7 +10006,7 @@
     "web": "https://www.marinadiportorotondo.it",
     "orari": "",
     "rating": 4.4,
-    "reviews": 1833,
+    "reviews": 1834,
     "ghours": [
       "lunedì: Aperto 24 ore su 24",
       "martedì: Aperto 24 ore su 24",
@@ -9306,7 +10015,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/porto-rotondo-marina.webp",
+    "photoCredit": "Marina di Porto Rotondo"
   },
   {
     "id": "porto-di-buggerru",
@@ -9331,7 +10042,9 @@
       "venerdì: 08:30–19:00",
       "sabato: 08:30–19:00",
       "domenica: Chiuso"
-    ]
+    ],
+    "photo": "assets/images/poi/porto-di-buggerru.webp",
+    "photoCredit": "gian luca Marras"
   },
   {
     "id": "porto-cervo-marina",
@@ -9356,7 +10069,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/porto-cervo-marina.webp",
+    "photoCredit": "Romana Rožman"
   },
   {
     "id": "porto-san-paolo-marina",
@@ -9370,7 +10085,9 @@
     "costo": "",
     "tel": "",
     "web": "",
-    "orari": ""
+    "orari": "",
+    "photo": "assets/images/poi/porto-san-paolo-marina.webp",
+    "photoCredit": "Maria Calia"
   },
   {
     "id": "poltu-quatu-marina",
@@ -9395,7 +10112,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/poltu-quatu-marina.webp",
+    "photoCredit": "Poltu Quatu Marina Dell'Orso"
   },
   {
     "id": "porto-torres-terminal",
@@ -9411,7 +10130,7 @@
     "web": "www.grimaldi-lines.com",
     "orari": "",
     "rating": 3.1,
-    "reviews": 2134,
+    "reviews": 2135,
     "ghours": [
       "lunedì: 09:00–13:00, 15:30–19:00",
       "martedì: 09:00–13:00, 15:30–19:00",
@@ -9420,7 +10139,9 @@
       "venerdì: 09:00–13:00, 15:30–19:00",
       "sabato: 09:00–12:00, 16:00–18:00",
       "domenica: 09:00–12:00, 15:00–18:00"
-    ]
+    ],
+    "photo": "assets/images/poi/porto-torres-terminal.webp",
+    "photoCredit": "Juana Mary Lecumberri Romea"
   },
   {
     "id": "palau-marina-maddalena",
@@ -9436,7 +10157,7 @@
     "web": "www.maddalenalines.it",
     "orari": "",
     "rating": 4.4,
-    "reviews": 920,
+    "reviews": 924,
     "ghours": [
       "lunedì: 07:45–20:15",
       "martedì: 07:45–20:15",
@@ -9445,7 +10166,9 @@
       "venerdì: 07:45–20:15",
       "sabato: 07:45–20:15",
       "domenica: 07:45–20:15"
-    ]
+    ],
+    "photo": "assets/images/poi/palau-marina-maddalena.webp",
+    "photoCredit": "Cristina"
   },
   {
     "id": "stintino-porto-mannu",
@@ -9461,7 +10184,9 @@
     "web": "",
     "orari": "",
     "rating": 4.5,
-    "reviews": 525
+    "reviews": 526,
+    "photo": "assets/images/poi/stintino-porto-mannu.webp",
+    "photoCredit": "Dario Valle"
   },
   {
     "id": "castelsardo-marina",
@@ -9477,7 +10202,7 @@
     "web": "www.portodicastelsardo.com",
     "orari": "",
     "rating": 4.5,
-    "reviews": 402,
+    "reviews": 403,
     "ghours": [
       "lunedì: 09:00–13:00, 15:00–18:00",
       "martedì: 09:00–13:00, 15:00–18:00",
@@ -9486,7 +10211,9 @@
       "venerdì: 09:00–13:00, 15:00–18:00",
       "sabato: 09:00–12:00",
       "domenica: Chiuso"
-    ]
+    ],
+    "photo": "assets/images/poi/castelsardo-marina.webp",
+    "photoCredit": "Csaba Biro"
   },
   {
     "id": "marina-punta-sardegna",
@@ -9511,7 +10238,9 @@
       "venerdì: 08:00–20:30",
       "sabato: 08:00–20:30",
       "domenica: 08:30–20:30"
-    ]
+    ],
+    "photo": "assets/images/poi/marina-punta-sardegna.webp",
+    "photoCredit": "Gianluca Sanna"
   },
   {
     "id": "marina-del-ponte-maddalena",
@@ -9536,7 +10265,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/marina-del-ponte-maddalena.webp",
+    "photoCredit": "PIOTR BUCZKOWSKI"
   },
   {
     "id": "porto-canale-cagliari",
@@ -9552,7 +10283,9 @@
     "web": "",
     "orari": "",
     "rating": 3.9,
-    "reviews": 118
+    "reviews": 118,
+    "photo": "assets/images/poi/porto-canale-cagliari.webp",
+    "photoCredit": "S M Eftakharul Islam"
   },
   {
     "id": "portus-karalis-cagliari",
@@ -9577,7 +10310,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/portus-karalis-cagliari.webp",
+    "photoCredit": "Rafal KOTUL"
   },
   {
     "id": "torre-grande-oristano",
@@ -9616,7 +10351,9 @@
       "venerdì: 09:00–13:00",
       "sabato: 09:00–13:00",
       "domenica: Chiuso"
-    ]
+    ],
+    "photo": "assets/images/poi/alghero-yacht-club.webp",
+    "photoCredit": "Alexander Berridge"
   },
   {
     "id": "porto-conte-marina",
@@ -9632,7 +10369,9 @@
     "web": "www.portocontemarina.it",
     "orari": "",
     "rating": 4.4,
-    "reviews": 23
+    "reviews": 23,
+    "photo": "assets/images/poi/porto-conte-marina.webp",
+    "photoCredit": "Mario Labelli"
   },
   {
     "id": "cala-dei-sardi",
@@ -9648,7 +10387,9 @@
     "web": "https://caladeisardi.it",
     "orari": "08:00-20:00",
     "rating": 4,
-    "reviews": 26
+    "reviews": 26,
+    "photo": "assets/images/poi/cala-dei-sardi.webp",
+    "photoCredit": "Joerg Erdmenger"
   },
   {
     "id": "golfo-aranci-sardinia-ferries",
@@ -9664,7 +10405,7 @@
     "web": "https://corsica-ferries.it",
     "orari": "",
     "rating": 4.1,
-    "reviews": 295,
+    "reviews": 296,
     "ghours": [
       "lunedì: Chiuso",
       "martedì: Chiuso",
@@ -9673,7 +10414,9 @@
       "venerdì: 12:00–15:00",
       "sabato: 12:00–15:00",
       "domenica: 12:00–15:00"
-    ]
+    ],
+    "photo": "assets/images/poi/golfo-aranci-sardinia-ferries.webp",
+    "photoCredit": "Meththa Metta"
   },
   {
     "id": "marina-villasimius",
@@ -9689,7 +10432,7 @@
     "web": "www.marinadivillasimius.it",
     "orari": "",
     "rating": 4.5,
-    "reviews": 1104,
+    "reviews": 1105,
     "ghours": [
       "lunedì: 08:30–19:30",
       "martedì: 08:30–19:30",
@@ -9698,7 +10441,9 @@
       "venerdì: 08:30–19:30",
       "sabato: 08:30–19:30",
       "domenica: 08:30–19:30"
-    ]
+    ],
+    "photo": "assets/images/poi/marina-villasimius.webp",
+    "photoCredit": "Robert Kuczewski"
   },
   {
     "id": "porto-san-teodoro",
@@ -9723,7 +10468,9 @@
       "venerdì: 09:00–20:00",
       "sabato: 09:00–20:00",
       "domenica: 09:00–20:00"
-    ]
+    ],
+    "photo": "assets/images/poi/porto-san-teodoro.webp",
+    "photoCredit": "nighthouser"
   },
   {
     "id": "portoscuso-marina",
@@ -9739,7 +10486,7 @@
     "web": "www.marinadicapitana.it/marina-di-portoscuso",
     "orari": "",
     "rating": 4.4,
-    "reviews": 1690,
+    "reviews": 1691,
     "ghours": [
       "lunedì: Aperto 24 ore su 24",
       "martedì: Aperto 24 ore su 24",
@@ -9748,7 +10495,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/portoscuso-marina.webp",
+    "photoCredit": "Marina di Portoscuso"
   },
   {
     "id": "sant-antioco-marina",
@@ -9773,7 +10522,9 @@
       "venerdì: 08:30–12:30, 15:00–19:00",
       "sabato: 08:30–12:30",
       "domenica: 09:00–19:00"
-    ]
+    ],
+    "photo": "assets/images/poi/sant-antioco-marina.webp",
+    "photoCredit": "Matteo Pinna"
   },
   {
     "id": "fertilia-marina",
@@ -9789,7 +10540,9 @@
     "web": "www.marinadifertilia.com",
     "orari": "",
     "rating": 4.5,
-    "reviews": 43
+    "reviews": 43,
+    "photo": "assets/images/poi/fertilia-marina.webp",
+    "photoCredit": "w b"
   },
   {
     "id": "circolo-nautico-olbia",
@@ -9805,7 +10558,9 @@
     "web": "www.circolonauticoolbia.it",
     "orari": "",
     "rating": 4.3,
-    "reviews": 109
+    "reviews": 109,
+    "photo": "assets/images/poi/circolo-nautico-olbia.webp",
+    "photoCredit": "miguel sousa"
   },
   {
     "id": "porto-baia-caddinas",
@@ -9821,7 +10576,9 @@
     "web": "www.marinadibaiacaddinas.it/m/index.php/it",
     "orari": "",
     "rating": 4.6,
-    "reviews": 96
+    "reviews": 96,
+    "photo": "assets/images/poi/porto-baia-caddinas.webp",
+    "photoCredit": "MARINA di Baia Caddinas"
   },
   {
     "id": "cormorano-porto-torres",
@@ -9846,7 +10603,9 @@
       "venerdì: 09:00–13:00, 16:00–19:00",
       "sabato: 09:00–13:00, 16:00–19:00",
       "domenica: 09:00–13:00"
-    ]
+    ],
+    "photo": "assets/images/poi/cormorano-porto-torres.webp",
+    "photoCredit": "Hamid (Hami-D)"
   },
   {
     "id": "cala-gonone-porto",
@@ -9862,7 +10621,7 @@
     "web": "www.portocalagonone.it",
     "orari": "Escursioni: aprile-ottobre",
     "rating": 4.3,
-    "reviews": 5285,
+    "reviews": 5288,
     "ghours": [
       "lunedì: Aperto 24 ore su 24",
       "martedì: Aperto 24 ore su 24",
@@ -9871,7 +10630,9 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "photo": "assets/images/poi/cala-gonone-porto.webp",
+    "photoCredit": "Porto di Cala Gonone"
   },
   {
     "id": "arbatax-porto",
@@ -9887,7 +10648,7 @@
     "web": "www.marinadiarbatax.it",
     "orari": "",
     "rating": 4.5,
-    "reviews": 2537,
+    "reviews": 2538,
     "ghours": [
       "lunedì: 08:30–19:30",
       "martedì: 08:30–19:30",
@@ -9896,6 +10657,8 @@
       "venerdì: 08:30–19:30",
       "sabato: 08:30–19:30",
       "domenica: 08:30–19:30"
-    ]
+    ],
+    "photo": "assets/images/poi/arbatax-porto.webp",
+    "photoCredit": "Valentina Serra"
   }
 ]
