@@ -774,7 +774,7 @@ function getDayNames() { return t('tools.calendar.days'); }
   function buildListHTML(filters) {
     const events = filterEvents(filters);
     if (events.length === 0) {
-      return '<div class="events-grid"><div class="no-events" style="grid-column:1/-1">Nessun evento trovato con questi filtri.</div></div>';
+      return '<div class="events-grid"><div class="no-events" style="grid-column:1/-1">' + t('tools.empty.events') + '</div></div>';
     }
     // Group by month when no month filter active
     if (filters.month === 0) {
@@ -1058,8 +1058,8 @@ function renderPacchetti(container) {
 
   container.innerHTML = `
     <div class="tools-section-header">
-      <h2>Pacchetti Viaggio</h2>
-      <p class="prenot-subtitle">Scegli il tuo stile di vacanza — accedi ai migliori tour operator e piattaforme per prenotare in Sardegna.</p>
+      <h2>${t('tools.meta.pacchetti_viaggio')}</h2>
+      <p class="prenot-subtitle">${t('tools.sub.pacchetti')}</p>
     </div>
     <div class="pacchetti-grid">
       ${pacchetti.map(p => `
@@ -1121,7 +1121,7 @@ function renderComingSoon(container, title, desc) {
         <path d="M40 22v20l12 8" stroke-width="1.5" stroke-linecap="round"/>
       </svg>
       <p class="coming-soon-desc">${desc}</p>
-      <span class="coming-soon-note">In costruzione — disponibile a breve</span>
+      <span class="coming-soon-note">${t('tools.meta.in_costruzione')}</span>
     </div>
     <div class="coming-soon-skeleton">${skeletons}</div>
   `;
@@ -1187,7 +1187,7 @@ function renderPrenotazioni(container) {
   container.innerHTML = `
     <div class="tools-section-header">
       <h2>${t('tools.render.prenotazioni')}</h2>
-      <p class="prenot-subtitle">Hub di prenotazione — accedi alle migliori piattaforme per organizzare il tuo soggiorno.</p>
+      <p class="prenot-subtitle">${t('tools.sub.prenotazioni')}</p>
     </div>
     <div class="prenotazioni-grid">
       ${hubs.map((h, i) => `
@@ -1232,7 +1232,7 @@ function renderBiglietti(container) {
   container.innerHTML = `
     <div class="tools-section-header">
       <h2>${t('tools.render.biglietti')}</h2>
-      <p class="prenot-subtitle">Acquista online — salta le code e accedi direttamente alle piattaforme ufficiali.</p>
+      <p class="prenot-subtitle">${t('tools.sub.biglietti')}</p>
     </div>
     <div class="biglietti-grid">
       ${platforms.map(p => `
@@ -1377,13 +1377,13 @@ function renderComuni(container) {
             <div class="comune-alt">${c.alt} s.l.m.</div>
             <p class="comune-desc">${c.desc}</p>
             <div class="comune-attrazioni">
-              <div class="comune-attr-label">Cosa vedere</div>
+              <div class="comune-attr-label">${t('tools.meta.cosa_vedere')}</div>
               <ul class="comune-attr-list">
                 ${c.cosa_vedere.map(a=>`<li>${a}</li>`).join('')}
               </ul>
             </div>
             <div class="comune-footer">
-              <a href="${c.web}" target="_blank" class="comune-link">Sito del Comune</a>
+              <a href="${c.web}" target="_blank" class="comune-link">${t('tools.meta.sito_comune')}</a>
             </div>
           </div>`).join('')}
       </div>`;
@@ -1413,7 +1413,7 @@ function renderProdotti(container) {
       <div class="tool-filter-pills">
         ${filters.map(f => `<button class="filter-pill${f.key===active?' active':''}" data-key="${f.key}">${f.label}</button>`).join('')}
       </div>
-      <p class="prodotti-artigiani-note">Per acquistare direttamente dai produttori artigianali → <button class="prodotti-artig-link" onclick="openToolSection('artigiani')">Artigiani Sardi</button></p>
+      <p class="prodotti-artigiani-note">Per acquistare direttamente dai produttori artigianali → <button class="prodotti-artig-link" onclick="openToolSection('artigiani')">${t('tools.meta.artigiani_sardi')}</button></p>
       <div class="prodotti-grid">
         ${list.map(p => `
           <div class="prodotto-card glass-card">
@@ -1424,7 +1424,7 @@ function renderProdotti(container) {
             <div class="prodotto-name">${p.name}</div>
             <div class="prodotto-zona">${p.zona}</div>
             <p class="prodotto-desc">${p.desc}</p>
-            <div class="prodotto-dove"><span class="prodotto-dove-label">Dove acquistare:</span> ${p.dove}</div>
+            <div class="prodotto-dove"><span class="prodotto-dove-label">${t('tools.meta.dove_acquistare')}</span> ${p.dove}</div>
             <div class="prodotto-footer">
               <a href="${p.link}" target="_blank" class="prodotto-link">${t('tools.action.discover')}</a>
             </div>
@@ -1453,7 +1453,7 @@ function renderSentieri(container) {
     container.innerHTML = `
       <div class="tools-section-header">
         <h2>${t('tools.render.sentieri')}</h2>
-        <p class="prenot-subtitle">Percorsi CAI e naturalistici in Sardegna — difficoltà, dislivello e punti di partenza.</p>
+        <p class="prenot-subtitle">${t('tools.sub.sentieri')}</p>
       </div>
       <div class="tool-filter-pills">
         ${DIFF.map(d => `<button class="filter-pill${d.key===diff?' active':''}" data-diff="${d.key}">${d.label}</button>`).join('')}
@@ -1470,13 +1470,13 @@ function renderSentieri(container) {
             </div>
             <p class="sentiero-desc">${s.desc}</p>
             <div class="sentiero-stats">
-              <div class="sentiero-stat"><span class="stat-val">${s.lunghezza} km</span><span class="stat-lbl">Lunghezza</span></div>
-              <div class="sentiero-stat"><span class="stat-val">${s.dislivello}</span><span class="stat-lbl">Dislivello</span></div>
-              <div class="sentiero-stat"><span class="stat-val">${s.durata}</span><span class="stat-lbl">Durata</span></div>
+              <div class="sentiero-stat"><span class="stat-val">${s.lunghezza} km</span><span class="stat-lbl">${t('tools.meta.lunghezza')}</span></div>
+              <div class="sentiero-stat"><span class="stat-val">${s.dislivello}</span><span class="stat-lbl">${t('tools.meta.dislivello')}</span></div>
+              <div class="sentiero-stat"><span class="stat-val">${s.durata}</span><span class="stat-lbl">${t('map.route.duration')}</span></div>
             </div>
             <div class="cantina-footer">
               <span class="sentiero-partenza">${TOOL_ICONS.car} ${s.partenza}</span>
-              ${s.web && s.web!=='#' ? `<a href="${s.web}" target="_blank" rel="noopener" class="cantina-link">Info →</a>` : ''}
+              ${s.web && s.web!=='#' ? `<a href="${s.web}" target="_blank" rel="noopener" class="cantina-link">${t('tools.meta.info')} →</a>` : ''}
             </div>
           </div>`;
         }).join('')}
@@ -1506,7 +1506,7 @@ function renderRistoranti(container) {
     container.innerHTML = `
       <div class="tools-section-header">
         <h2>${t('tools.render.ristoranti')}</h2>
-        <p class="prenot-subtitle">Ristoranti, trattorie e agriturismi selezionati per qualità e cucina tipica sarda.</p>
+        <p class="prenot-subtitle">${t('tools.sub.ristoranti')}</p>
       </div>
       <div class="tool-filter-pills">
         ${TIPI.map(f => `<button class="filter-pill${f.key===tipo?' active':''}" data-tipo="${f.key}">${f.label}</button>`).join('')}
@@ -1560,7 +1560,7 @@ function renderHotel(container) {
     container.innerHTML = `
       <div class="tools-section-header">
         <h2>${t('tools.render.hotel')}</h2>
-        <p class="prenot-subtitle">Hotel, resort, B&B e agriturismo — selezione curata per ogni budget e stile di viaggio.</p>
+        <p class="prenot-subtitle">${t('tools.sub.hotel')}</p>
       </div>
       <div class="tool-filter-pills">
         ${TIPI.map(f => `<button class="filter-pill${f.key===tipo?' active':''}" data-tipo="${f.key}">${f.label}</button>`).join('')}
@@ -1652,16 +1652,16 @@ function renderToday(container) {
     container.innerHTML = `
       <div class="tools-section-header">
         <h2>${t('tools.render.oggi')}</h2>
-        <p class="prenot-subtitle">Condizioni di oggi al centro dell'isola e cosa vivere adesso. La Sardegna non è solo estate: c'è sempre qualcosa da fare.</p>
+        <p class="prenot-subtitle">${t('tools.sub.oggi')}</p>
       </div>
       <div class="today-hero glass-card">
         <div class="today-season">${season}</div>
         <div class="today-stats">
-          <div class="today-stat"><span class="today-stat-val">${temp==null?'—':temp+'°'}</span><span class="today-stat-lbl">Temperatura</span></div>
-          <div class="today-stat"><span class="today-stat-val">${cond}</span><span class="today-stat-lbl">Cielo</span></div>
-          <div class="today-stat"><span class="today-stat-val">${wind==null?'—':wind+' km/h'}</span><span class="today-stat-lbl">Vento</span></div>
-          <div class="today-stat"><span class="today-stat-val">${uv==null?'—':uv}</span><span class="today-stat-lbl">Indice UV</span></div>
-          <div class="today-stat"><span class="today-stat-val">${AQI_LABEL(aqi)}</span><span class="today-stat-lbl">Aria</span></div>
+          <div class="today-stat"><span class="today-stat-val">${temp==null?'—':temp+'°'}</span><span class="today-stat-lbl">${t('tools.meta.temperatura')}</span></div>
+          <div class="today-stat"><span class="today-stat-val">${cond}</span><span class="today-stat-lbl">${t('tools.meta.cielo')}</span></div>
+          <div class="today-stat"><span class="today-stat-val">${wind==null?'—':wind+' km/h'}</span><span class="today-stat-lbl">${t('tools.beaches.wind')}</span></div>
+          <div class="today-stat"><span class="today-stat-val">${uv==null?'—':uv}</span><span class="today-stat-lbl">${t('tools.meta.indice_uv')}</span></div>
+          <div class="today-stat"><span class="today-stat-val">${AQI_LABEL(aqi)}</span><span class="today-stat-lbl">${t('tools.meta.aria')}</span></div>
         </div>
       </div>
       <div class="today-activities">
@@ -1729,7 +1729,7 @@ function renderGallery(container) {
     container.innerHTML = `
       <div class="tools-section-header">
         <h2>${t('tools.render.galleria')}</h2>
-        <p class="prenot-subtitle">Arte, fotografia e paesaggi legati alla Sardegna. Una vetrina di autori e opere, in ogni stagione.</p>
+        <p class="prenot-subtitle">${t('tools.sub.galleria')}</p>
       </div>
       <div class="tool-filter-pills">
         ${CATS.filter(c => c.key === 'tutte' || availableCats.has(c.key)).map(c => `<button class="filter-pill${c.key===activeCat?' active':''}" data-cat="${c.key}">${c.label}</button>`).join('')}
@@ -1746,8 +1746,8 @@ function renderGallery(container) {
         ${list.length===0 ? `<div class="no-events">${t('ui.no_results')}</div>` : ''}
       </div>
       <div class="gallery-lightbox" id="gallery-lightbox" style="display:none">
-        <button class="glb-close" aria-label="Chiudi"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
-        <button class="glb-nav glb-prev" aria-label="Precedente"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <button class="glb-close" aria-label="${t('map.info.close')}"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+        <button class="glb-nav glb-prev" aria-label="${t('tools.aria.prev')}"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
         <div class="glb-stage" onclick="event.stopPropagation()">
           <img class="glb-img" src="" alt="">
           <div class="glb-info">
@@ -1757,7 +1757,7 @@ function renderGallery(container) {
             <a class="glb-link" href="#" target="_blank" rel="noopener">${t('tools.action.website')} →</a>
           </div>
         </div>
-        <button class="glb-nav glb-next" aria-label="Successivo"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+        <button class="glb-nav glb-next" aria-label="${t('tools.aria.next')}"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
       </div>`;
 
     container.querySelectorAll('.filter-pill[data-cat]').forEach(btn =>
@@ -1947,7 +1947,7 @@ function renderBandi(container) {
     container.innerHTML = `
       <div class="tools-section-header">
         <h2>${t('tools.render.bandi')}</h2>
-        <p class="prenot-subtitle">Bandi e agevolazioni attivi per turismo, vivere e investire in Sardegna. I bandi cambiano nel tempo: verifica sempre stato e scadenze sulla fonte ufficiale prima di presentare domanda.</p>
+        <p class="prenot-subtitle">${t('tools.sub.bandi')}</p>
       </div>
       <div class="tool-filter-pills">
         ${CATS.map(c => `<button class="filter-pill${c.key===cat?' active':''}" data-cat="${c.key}">${c.label}</button>`).join('')}
@@ -1965,9 +1965,9 @@ function renderBandi(container) {
             <div class="bando-ente">${b.ente}</div>
             <p class="bando-desc">${b.desc}</p>
             <div class="bando-meta">
-              <div class="bando-meta-row"><span class="bando-meta-lbl">Chi può</span><span>${b.beneficiari}</span></div>
-              <div class="bando-meta-row"><span class="bando-meta-lbl">Agevolazione</span><span>${b.agevolazione}</span></div>
-              <div class="bando-meta-row"><span class="bando-meta-lbl">Scadenza</span><span>${b.scadenza}</span></div>
+              <div class="bando-meta-row"><span class="bando-meta-lbl">${t('tools.meta.chi_puo')}</span><span>${b.beneficiari}</span></div>
+              <div class="bando-meta-row"><span class="bando-meta-lbl">${t('tools.meta.agevolazione')}</span><span>${b.agevolazione}</span></div>
+              <div class="bando-meta-row"><span class="bando-meta-lbl">${t('tools.meta.scadenza')}</span><span>${b.scadenza}</span></div>
             </div>
             <a href="${b.url}" target="_blank" rel="noopener" class="bando-link">${t('tools.action.bando')} →</a>
           </div>`;
@@ -1975,7 +1975,7 @@ function renderBandi(container) {
         ${list.length===0 ? `<div class="no-events">${t('ui.no_results')}</div>` : ''}
       </div>
       <div class="bandi-portali">
-        <div class="bandi-portali-title">Portali ufficiali — sempre aggiornati</div>
+        <div class="bandi-portali-title">${t('tools.meta.portali_ufficiali')}</div>
         <div class="bandi-portali-links">
           ${BANDI_PORTALI.map(p => `<a href="${p.url}" target="_blank" rel="noopener" class="bandi-portale-chip">${p.label} →</a>`).join('')}
         </div>
@@ -2011,7 +2011,7 @@ function renderVivere(container) {
     container.innerHTML = `
       <div class="tools-section-header">
         <h2>${t('tools.render.vivere')}</h2>
-        <p class="prenot-subtitle">Trasferirsi, lavorare, studiare e vivere la Sardegna tutto l'anno: nomadi digitali, turismo delle radici, volontariato europeo e incentivi per i borghi. Programmi reali con link ufficiali.</p>
+        <p class="prenot-subtitle">${t('tools.sub.vivere')}</p>
       </div>
       <div class="tool-filter-pills">
         ${CATS.map(c => `<button class="filter-pill${c.key===activeCat?' active':''}" data-cat="${c.key}">${c.label}</button>`).join('')}
@@ -2024,7 +2024,7 @@ function renderVivere(container) {
             <div class="bando-ente">${v.ente}</div>
             <p class="bando-desc">${v.desc}</p>
             <div class="bando-meta">
-              <div class="bando-meta-row"><span class="bando-meta-lbl">Per chi</span><span>${v.target}</span></div>
+              <div class="bando-meta-row"><span class="bando-meta-lbl">${t('tools.meta.per_chi')}</span><span>${v.target}</span></div>
             </div>
             <a href="${v.url}" target="_blank" rel="noopener" class="bando-link">${t('tools.action.discover')} →</a>
           </div>`).join('')}
@@ -2058,7 +2058,7 @@ function renderCantine(container) {
     container.innerHTML = `
       <div class="tools-section-header">
         <h2>${t('tools.render.cantine')}</h2>
-        <p class="prenot-subtitle">Cantine sarde aperte al pubblico — degustazioni, visite guidate e acquisto diretto.</p>
+        <p class="prenot-subtitle">${t('tools.sub.cantine')}</p>
       </div>
       <div class="tool-filter-pills">
         ${ZONE.map(z => `<button class="filter-pill${z.key===zona?' active':''}" data-zona="${z.key}">${z.label}</button>`).join('')}
@@ -2110,7 +2110,7 @@ function renderMusei(container) {
     container.innerHTML = `
       <div class="tools-section-header">
         <h2>${t('tools.render.musei')}</h2>
-        <p class="prenot-subtitle">Musei, siti nuragici e collezioni permanenti — orari, biglietti e percorsi tematici in Sardegna.</p>
+        <p class="prenot-subtitle">${t('tools.sub.musei')}</p>
       </div>
       <div class="tool-filter-pills">
         ${TIPI.map(f => `<button class="filter-pill${f.key===tipo?' active':''}" data-tipo="${f.key}">${f.label}</button>`).join('')}
@@ -2233,15 +2233,15 @@ function renderBeaches(container) {
           <div class="beach-condition-label">${cond.label}</div>
           <div class="beach-stats">
             <div class="beach-stat">
-              <div class="stat-label-top">Vento</div>
+              <div class="stat-label-top">${t('tools.beaches.wind')}</div>
               <div class="stat-value">${windTxt}${gustTxt ? `<div class="stat-gusts">${gustTxt}</div>` : ''}</div>
             </div>
             <div class="beach-stat">
-              <div class="stat-label-top">Onde</div>
+              <div class="stat-label-top">${t('tools.meta.onde')}</div>
               <div class="stat-value">${wavTxt}</div>
             </div>
             <div class="beach-stat">
-              <div class="stat-label-top">Mare</div>
+              <div class="stat-label-top">${t('tools.meta.mare')}</div>
               <div class="stat-value">${seaTxt}</div>
             </div>
           </div>
@@ -2249,9 +2249,9 @@ function renderBeaches(container) {
             <div class="wind-bar-fill ${cond.statusClass}" style="width:${barPct}%"></div>
           </div>
           <div class="beach-info">
-            <div class="beach-info-row"><span class="info-label">Accesso</span><span class="info-val">${b.access}</span></div>
-            <div class="beach-info-row"><span class="info-label">Costo</span><span class="info-val">${b.cost}</span></div>
-            ${b.prenotazione ? `<div class="beach-info-row"><span class="info-label">Prenotaz.</span><span class="info-val">${b.prenotazione}</span></div>` : ''}
+            <div class="beach-info-row"><span class="info-label">${t('tools.meta.accesso')}</span><span class="info-val">${b.access}</span></div>
+            <div class="beach-info-row"><span class="info-label">${t('tools.camper.cost')}</span><span class="info-val">${b.cost}</span></div>
+            ${b.prenotazione ? `<div class="beach-info-row"><span class="info-label">${t('tools.meta.prenotazione_abbr')}</span><span class="info-val">${b.prenotazione}</span></div>` : ''}
           </div>
         </div>
       </div>`;
@@ -2284,7 +2284,7 @@ function renderBeaches(container) {
     const allBeaches = _poisCache
       .filter(p => p.cat === 'spiaggia' && p.name.toLowerCase().includes(q))
       .slice(0, 10);
-    if (!allBeaches.length) return '<p class="beach-search-empty">Nessuna spiaggia trovata.</p>';
+    if (!allBeaches.length) return '<p class="beach-search-empty">' + t('tools.empty.beaches') + '</p>';
     return `<div class="beach-search-results">
       ${allBeaches.map(p => `
         <div class="beach-search-item" data-lat="${p.lat}" data-lng="${p.lng}" data-name="${p.name}" data-desc="${p.description || ''}">
@@ -2314,12 +2314,12 @@ function renderBeaches(container) {
         <p class="bsd-desc">${desc || ''}</p>
         <div class="beach-condition-label">${cond.label}</div>
         <div class="beach-stats">
-          <div class="beach-stat"><div class="stat-label-top">Vento</div><div class="stat-value">${windTxt}${gustTxt}</div></div>
-          <div class="beach-stat"><div class="stat-label-top">Onde</div><div class="stat-value">${w && w.wavH !== null ? w.wavH + ' m' : '—'}</div></div>
-          <div class="beach-stat"><div class="stat-label-top">Mare</div><div class="stat-value">${w && w.seaT !== null ? w.seaT + '°C' : '—'}</div></div>
+          <div class="beach-stat"><div class="stat-label-top">${t('tools.beaches.wind')}</div><div class="stat-value">${windTxt}${gustTxt}</div></div>
+          <div class="beach-stat"><div class="stat-label-top">${t('tools.meta.onde')}</div><div class="stat-value">${w && w.wavH !== null ? w.wavH + ' m' : '—'}</div></div>
+          <div class="beach-stat"><div class="stat-label-top">${t('tools.meta.mare')}</div><div class="stat-value">${w && w.seaT !== null ? w.seaT + '°C' : '—'}</div></div>
         </div>
         <div class="wind-bar"><div class="wind-bar-fill ${cond.statusClass}" style="width:${w ? Math.min(100, w.wind/50*100) : 0}%"></div></div>
-        <div class="bsd-coords">Lat ${lat.toFixed(4)}, Lng ${lng.toFixed(4)} · <a href="https://www.windy.com/?${lat},${lng},11" target="_blank" rel="noopener">Apri su Windy</a></div>
+        <div class="bsd-coords">Lat ${lat.toFixed(4)}, Lng ${lng.toFixed(4)} · <a href="https://www.windy.com/?${lat},${lng},11" target="_blank" rel="noopener">${t('tools.meta.apri_windy')}</a></div>
       </div>`;
   }
 
@@ -2342,13 +2342,13 @@ function renderBeaches(container) {
         <h2>${t('tools.render.beaches')}</h2>
         <div class="beaches-meta">
           <span class="update-time" id="beaches-update-time">Aggiornato: ${timeStr}</span>
-          <button id="update-beaches-btn" class="btn-glass">Aggiorna</button>
+          <button id="update-beaches-btn" class="btn-glass">${t('tools.meta.aggiorna')}</button>
         </div>
       </div>
-      <p class="section-subtitle">Dati vento e mare in tempo reale via Open-Meteo. Aggiornati ogni ora dai modelli meteorologici GFS/ECMWF.</p>
+      <p class="section-subtitle">${t('tools.sub.beaches')}</p>
 
       <div class="beach-search-wrap">
-        <input type="text" id="beach-search-input" class="beach-search-input" placeholder="Cerca tra ${_poisCache.filter(p=>p.cat==='spiaggia').length || 107} spiagge in mappa...">
+        <input type="text" id="beach-search-input" class="beach-search-input" placeholder="${t('tools.ph.beaches').replace('{n}', _poisCache.filter(p=>p.cat==='spiaggia').length || 107)}">
         <div id="beach-search-dropdown" class="beach-search-dropdown"></div>
       </div>
       <div id="beach-search-result-area"></div>
@@ -2478,7 +2478,7 @@ function renderSports(container) {
     <div class="tools-section-header">
       <h2>${t('tools.render.sports')}</h2>
     </div>
-    <p class="section-subtitle">Le migliori attività outdoor in Sardegna con operatori certificati e aree selezionate.</p>
+    <p class="section-subtitle">${t('tools.sub.sports')}</p>
     <div class="sports-grid">
       ${SPORTS_DATA.map(sport => {
         const levelColor = levelColors[sport.level] || '#fff';
@@ -2498,20 +2498,20 @@ function renderSports(container) {
           </div>
           <div class="sport-meta">
             <div class="sport-row">
-              <span class="sport-label">Livello</span>
+              <span class="sport-label">${t('tools.sports.level')}</span>
               <span class="sport-level" style="color:${levelColor}">${sport.level}</span>
             </div>
             <div class="sport-row">
-              <span class="sport-label">Stagione</span>
+              <span class="sport-label">${t('tools.meta.stagione')}</span>
               <span>${sport.season}</span>
             </div>
           </div>
           <div class="sport-operators">
-            <div class="sport-label">Operatori</div>
+            <div class="sport-label">${t('tools.sports.operators')}</div>
             ${operatorsHtml}
           </div>
           <div class="sport-areas">
-            <div class="sport-label">Aree migliori</div>
+            <div class="sport-label">${t('tools.sports.areas')}</div>
             <div class="areas-list">${areasHtml}</div>
           </div>
         </div>`;
@@ -2531,15 +2531,15 @@ function renderTransport(container) {
     <div class="tools-section-header">
       <h2>${t('tools.render.transport')}</h2>
     </div>
-    <p class="section-subtitle">Tutto quello che devi sapere su aeroporti, traghetti, bus, treni e noleggi.</p>
+    <p class="section-subtitle">${t('tools.sub.transport')}</p>
 
     <div class="transport-section">
-      <h3 class="transport-title">Aeroporti</h3>
+      <h3 class="transport-title">${t('tools.meta.aeroporti')}</h3>
       <div class="transport-grid">
         <div class="transport-card glass-card">
           <div class="transport-card-header" style="border-left-color:#C8102E">
             <strong>Cagliari–Elmas (CAG)</strong>
-            <span class="transport-badge">Sud</span>
+            <span class="transport-badge">${t('tools.meta.sud')}</span>
           </div>
           <p>Principale aeroporto dell'isola. Compagnie: Ryanair, EasyJet, ITA Airways, Volotea, Aeroitalia, Wizzair. Destinazioni 2026: Milano, Roma, Bologna, Torino, Barcellona, Londra, Parigi, Francoforte e altri. Voli interni Aeroitalia da €29.99.</p>
           <p class="transport-note">Dal centro: Bus ARST / taxi. 7 km.</p>
@@ -2547,7 +2547,7 @@ function renderTransport(container) {
         <div class="transport-card glass-card">
           <div class="transport-card-header" style="border-left-color:#C8102E">
             <strong>Olbia–Costa Smeralda (OLB)</strong>
-            <span class="transport-badge">Nord</span>
+            <span class="transport-badge">${t('tools.meta.nord')}</span>
           </div>
           <p>Porta della Costa Smeralda. Compagnie: Ryanair, EasyJet, ITA, Volotea, Aeroitalia. Novità 2026: Delta Air Lines JFK–Olbia (rotta transatlantica diretta), Siviglia, Lione. Molto trafficato luglio–agosto.</p>
           <p class="transport-note">Dal centro Olbia: 4 km. Bus, taxi, noleggio auto in aeroporto.</p>
@@ -2555,7 +2555,7 @@ function renderTransport(container) {
         <div class="transport-card glass-card">
           <div class="transport-card-header" style="border-left-color:#C8102E">
             <strong>Alghero–Fertilia (AHO)</strong>
-            <span class="transport-badge">Nord-Ovest</span>
+            <span class="transport-badge">${t('tools.meta.nord_ovest')}</span>
           </div>
           <p>Aeroporto del nord-ovest, porta di Alghero e Sassari. Compagnie: Ryanair, Volotea, Aeroitalia. Destinazioni: Milano, Roma, Torino, Londra, Dublino, Manchester, Madrid. Crescita attesa 2026.</p>
           <p class="transport-note">Da Alghero: 12 km. Bus AF (€1), taxi, noleggio auto.</p>
@@ -2564,7 +2564,7 @@ function renderTransport(container) {
     </div>
 
     <div class="transport-section">
-      <h3 class="transport-title">Traghetti</h3>
+      <h3 class="transport-title">${t('tools.meta.traghetti')}</h3>
       <div class="transport-grid">
         <div class="transport-card glass-card">
           <div class="transport-card-header" style="border-left-color:#00BFFF">
@@ -2606,29 +2606,29 @@ function renderTransport(container) {
     </div>
 
     <div class="transport-section">
-      <h3 class="transport-title">In Sardegna</h3>
+      <h3 class="transport-title">${t('tools.meta.in_sardegna')}</h3>
       <div class="transport-grid">
         <div class="transport-card glass-card">
           <div class="transport-card-header" style="border-left-color:#32CD32">
-            <strong>Auto a Noleggio</strong>
+            <strong>${t('tools.meta.auto_noleggio')}</strong>
           </div>
           <p>Consigliato: la Sardegna si vive in auto. Disponibile in tutti e 3 gli aeroporti. Operatori: Hertz, Europcar, Avis, Sixt, Maggiore e locali (Sardauto, Autoeuropa Sardegna). Prezzi: da €25/giorno (compatta) a €80/giorno (SUV) in estate.</p>
         </div>
         <div class="transport-card glass-card">
           <div class="transport-card-header" style="border-left-color:#32CD32">
-            <strong>Moto e Scooter</strong>
+            <strong>${t('tools.meta.moto_scooter')}</strong>
           </div>
           <p>Ideali per le strade panoramiche. Scooter da €35/giorno, moto avventura fino a €150/giorno. Operatori: Sard Bike (Cagliari), Exclusive Moto (Olbia), Bike Sharing (centri urbani).</p>
         </div>
         <div class="transport-card glass-card">
           <div class="transport-card-header" style="border-left-color:#32CD32">
-            <strong>Bus ARST</strong>
+            <strong>${t('tools.meta.bus_arst')}</strong>
           </div>
           <p>350+ linee su tutta la Sardegna. Utile per connettere le città principali. Piano strategico 2026–2028 con nuovi mezzi. Biglietti: da €1,50 urbano. Arst.sardegna.it per orari.</p>
         </div>
         <div class="transport-card glass-card">
           <div class="transport-card-header" style="border-left-color:#32CD32">
-            <strong>Treni</strong>
+            <strong>${t('tools.meta.treni')}</strong>
           </div>
           <p>Trenitalia: 4 linee principali (Cagliari–Sassari, Cagliari–Olbia, Sassari–Olbia, Cagliari–Carbonia). Lenti ma panoramici. ARST ferroviario: scartamento ridotto + Trenino Verde storico (da €10/tratta). Treninoverde.com.</p>
         </div>
@@ -2780,7 +2780,7 @@ function renderItinerari(container) {
       <div class="tools-section-header">
         <h2>${t('tools.render.itinerari')}</h2>
       </div>
-      <p class="section-subtitle">10 percorsi verificati — da 2 a 10 giorni, temi diversi. Clicca per vedere le tappe giorno per giorno.</p>
+      <p class="section-subtitle">${t('tools.sub.itinerari')}</p>
       <div class="itinerari-grid">
         ${ITINERARI_DATA.map(itin => {
           const isOpen = expanded === itin.id;
@@ -3329,8 +3329,8 @@ function renderSocialWall(container) {
   }
 
   function typeBadge(type) {
-    if (type === 'reel') return '<div class="sw-type-badge sw-badge-reel"><svg viewBox="0 0 16 16" fill="currentColor" width="9" height="9"><path d="M3 2.5a.5.5 0 01.765-.424l9 5a.5.5 0 010 .848l-9 5A.5.5 0 013 12.5v-10z"/></svg>REEL</div>';
-    if (type === 'video') return '<div class="sw-type-badge sw-badge-video"><svg viewBox="0 0 16 16" fill="currentColor" width="9" height="9"><path d="M3 2.5a.5.5 0 01.765-.424l9 5a.5.5 0 010 .848l-9 5A.5.5 0 013 12.5v-10z"/></svg>VIDEO</div>';
+    if (type === 'reel') return '<div class="sw-type-badge sw-badge-reel"><svg viewBox="0 0 16 16" fill="currentColor" width="9" height="9"><path d="M3 2.5a.5.5 0 01.765-.424l9 5a.5.5 0 010 .848l-9 5A.5.5 0 013 12.5v-10z"/></svg>' + t('tools.meta.reel') + '</div>';
+    if (type === 'video') return '<div class="sw-type-badge sw-badge-video"><svg viewBox="0 0 16 16" fill="currentColor" width="9" height="9"><path d="M3 2.5a.5.5 0 01.765-.424l9 5a.5.5 0 010 .848l-9 5A.5.5 0 013 12.5v-10z"/></svg>' + t('tools.meta.video') + '</div>';
     return '';
   }
 
@@ -3361,7 +3361,7 @@ function renderSocialWall(container) {
               <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" width="13" height="13"><path d="M18 10c0 4-3.58 7-8 7a8.84 8.84 0 01-4-.95L2 18l1.14-4A6.69 6.69 0 012 10c0-4 3.58-7 8-7s8 3 8 7z"/></svg>
               ${post.comments}
             </span>
-            <span class="sw-ig-cta">Vedi su Instagram →</span>
+            <span class="sw-ig-cta">${t('tools.meta.vedi_instagram')} →</span>
           </div>
         </div>
       </a>`;
@@ -3389,7 +3389,7 @@ function renderSocialWall(container) {
     if (!contentEl) return;
 
     if (posts.length === 0) {
-      contentEl.innerHTML = `<div class="sw-empty">Nessun post trovato${searchQuery ? ` per "<strong>${searchQuery}</strong>"` : ''}.</div>`;
+      contentEl.innerHTML = `<div class="sw-empty">${t('tools.empty.social')}${searchQuery ? ` per "<strong>${searchQuery}</strong>"` : ''}.</div>`;
       return;
     }
 
@@ -3414,12 +3414,12 @@ function renderSocialWall(container) {
   container.innerHTML = `
     <div class="tools-section-header">
       <h2>${t('tools.render.social')}</h2>
-      <p class="section-subtitle">Foto, video e reel dalle migliori pagine Instagram sulla Sardegna. Cerca un argomento o filtra per tema.</p>
+      <p class="section-subtitle">${t('tools.sub.social')}</p>
     </div>
     <div class="sw-controls">
       <div class="sw-search-wrap">
         <svg class="sw-search-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><circle cx="9" cy="9" r="6"/><path stroke-linecap="round" d="m15 15 3 3"/></svg>
-        <input id="sw-search" type="text" placeholder="Cerca: spiagge, trekking, festival, @account..." autocomplete="off" spellcheck="false">
+        <input id="sw-search" type="text" placeholder="${t('tools.ph.social')}" autocomplete="off" spellcheck="false">
         <button class="sw-clear-btn" id="sw-clear" style="display:none"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
       </div>
       <div class="sw-chips">
@@ -3492,7 +3492,7 @@ function renderNordSardegna(container) {
     if (activeSeason === 'inverno') {
       contentHtml = `
         <div class="nord-why-box">
-          <h4>Perché venire in bassa stagione</h4>
+          <h4>${t('tools.meta.perche_bassa_stagione')}</h4>
           <p>${inv.perche}</p>
           <div class="nord-meteo-pills">
             <span>Gen: ${inv.meteo.gen}</span>
@@ -3501,7 +3501,7 @@ function renderNordSardegna(container) {
           </div>
           <p class="nord-meteo-note">${inv.meteo.note}</p>
         </div>
-        <h4 class="nord-section-title">Attività consigliata</h4>
+        <h4 class="nord-section-title">${t('tools.meta.attivita_consigliata')}</h4>
         <div class="nord-activities-grid">
           ${inv.attivita.map(att => `
             <div class="nord-activity-card glass-card">
@@ -3514,7 +3514,7 @@ function renderNordSardegna(container) {
             </div>
           `).join('')}
         </div>
-        <h4 class="nord-section-title">Eventi invernali</h4>
+        <h4 class="nord-section-title">${t('tools.meta.eventi_invernali')}</h4>
         <div class="nord-events-list">
           ${inv.eventi.map(ev => `
             <div class="nord-event-item">
@@ -3566,7 +3566,7 @@ function renderNordSardegna(container) {
       <div class="tools-section-header">
         <h2>${t('tools.render.nord')}</h2>
       </div>
-      <p class="section-subtitle">Guida completa al nord — Gallura, Sassari, Alghero, Logudoro. Con focus su inverno e bassa stagione.</p>
+      <p class="section-subtitle">${t('tools.sub.nord')}</p>
 
       <div class="nord-area-tabs">
         ${NORTH_SARDINIA_DATA.map(a => `
@@ -3654,14 +3654,14 @@ function renderNavigazione(container) {
   container.innerHTML = `
     <div class="tools-section-header">
       <h2>${t('tools.render.navigazione')}</h2>
-      <p class="section-subtitle">Porti, zone protette, aree di navigazione e info pratiche per chi esplora la Sardegna via mare.</p>
+      <p class="section-subtitle">${t('tools.sub.navigazione')}</p>
     </div>
 
     <div class="nav-tabs-wrap">
-      <button class="nav-tab active" data-tab="porti">Porti e Marina</button>
-      <button class="nav-tab" data-tab="protette">Zone Protette</button>
-      <button class="nav-tab" data-tab="consigliate">Rotte Consigliate</button>
-      <button class="nav-tab" data-tab="pratiche">Info Pratiche</button>
+      <button class="nav-tab active" data-tab="porti">${t('tools.meta.porti_marina')}</button>
+      <button class="nav-tab" data-tab="protette">${t('tools.meta.zone_protette')}</button>
+      <button class="nav-tab" data-tab="consigliate">${t('tools.meta.rotte_consigliate')}</button>
+      <button class="nav-tab" data-tab="pratiche">${t('tools.meta.info_pratiche')}</button>
     </div>
 
     <div class="nav-tab-content" data-content="porti">
@@ -3733,7 +3733,7 @@ function renderNavigazione(container) {
     <div class="nav-tab-content hidden" data-content="pratiche">
       <div class="info-pratiche-grid">
         <div class="info-card glass-card">
-          <h3>Documenti obbligatori</h3>
+          <h3>${t('tools.meta.documenti_obbligatori')}</h3>
           <ul>
             <li>Patente nautica (obbligatoria oltre 6 miglia dalla costa o oltre 40 cv senza limite)</li>
             <li>Certificato di abilitazione dell'imbarcazione (CIN)</li>
@@ -3743,7 +3743,7 @@ function renderNavigazione(container) {
           </ul>
         </div>
         <div class="info-card glass-card">
-          <h3>Canali VHF utili</h3>
+          <h3>${t('tools.meta.canali_vhf')}</h3>
           <ul>
             <li><strong>Canal 16</strong> — Emergenza e chiamata internazionale (sempre in ascolto)</li>
             <li><strong>Canal 9</strong> — Marina e porto turistico</li>
@@ -3753,7 +3753,7 @@ function renderNavigazione(container) {
           </ul>
         </div>
         <div class="info-card glass-card">
-          <h3>Numeri di emergenza</h3>
+          <h3>${t('tools.meta.numeri_emergenza')}</h3>
           <ul>
             <li><strong>1530</strong> — Guardia Costiera (emergenze in mare, gratuito)</li>
             <li><strong>118</strong> — Emergenza medica</li>
@@ -3763,7 +3763,7 @@ function renderNavigazione(container) {
           </ul>
         </div>
         <div class="info-card glass-card">
-          <h3>Venti e meteo</h3>
+          <h3>${t('tools.meta.venti_meteo')}</h3>
           <ul>
             <li><strong>Maestrale (NW):</strong> vento dominante, puo alzarsi improvvisamente nel canale di Sardegna</li>
             <li><strong>Libeccio (SW):</strong> pericoloso sulla costa ovest, evitare uscite con previsioni &gt;4 Beaufort</li>
@@ -3772,7 +3772,7 @@ function renderNavigazione(container) {
           </ul>
         </div>
         <div class="info-card glass-card">
-          <h3>Normative e permessi</h3>
+          <h3>${t('tools.meta.normative_permessi')}</h3>
           <ul>
             <li>Navigazione nelle AMP: richiedere autorizzazione preventiva all'ente gestore</li>
             <li>Pesca sportiva: limiti di specie e quantita, vietata nelle zone A delle AMP</li>
@@ -3781,7 +3781,7 @@ function renderNavigazione(container) {
           </ul>
         </div>
         <div class="info-card glass-card">
-          <h3>Noleggio e charter</h3>
+          <h3>${t('tools.meta.noleggio_charter')}</h3>
           <ul>
             <li>Noleggio senza patente entro 6 miglia: gommoni fino a 40 cv in quasi tutti i porti turistici</li>
             <li>Charter con skipper: disponibile da Porto Cervo, Olbia, Cagliari, Alghero</li>
