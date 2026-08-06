@@ -681,7 +681,12 @@ const SAI_ICONS = {
   more: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
   star: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>',
 };
-const saiNormUrl = u => /^https?:\/\//.test(u) ? u : 'https://' + u;
+// Prende il PRIMO url (i dati a volte elencano piu' siti separati da " · ") e lo normalizza
+const saiFirstUrl = w => {
+  const first = String(w || '').split(/\s*[·|,]\s*/)[0].trim();
+  if (!first) return '';
+  return /^https?:\/\//.test(first) ? first : 'https://' + first;
+};
 
 // Indice POI (foto, sito, rating) dai dati verificati, per arricchire le card
 let _saiPoiIndex = null;
@@ -742,7 +747,7 @@ async function renderSardinaiCards(cards) {
     const btns = [];
     let site = '';
     if (a.startsWith('url:')) site = a.slice(4);
-    else if (poi && poi.web) site = saiNormUrl(poi.web);
+    else if (poi && poi.web) site = saiFirstUrl(poi.web);
     if (site) btns.push(`<button type="button" class="sai-card-btn primary" data-act="site" data-url="${escapeHtml(site)}">${SAI_ICONS.site}${escapeHtml(t('sardinai.cta_site'))}</button>`);
     let mapId = '';
     if (a === 'map' || a.startsWith('map:')) mapId = a.startsWith('map:') ? a.slice(4) : (poi ? poi.id : '');
