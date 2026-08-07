@@ -780,6 +780,57 @@ async function renderSardinaiCards(cards) {
   if (typeof gsap !== 'undefined') gsap.fromTo(wrap.querySelectorAll('.sai-card'), { opacity: 0, y: 14 }, { opacity: 1, y: 0, stagger: 0.06, duration: 0.3, ease: 'power2.out' });
 }
 
+// Itinerario completo (lunghezza variabile) come risposta a sé nella chat
+async function renderSardinaiItinerary(it) {
+  const chat = document.getElementById('sardinai-chat');
+  if (!chat || !it || !Array.isArray(it.days) || !it.days.length) return;
+  const idx = await sardinaiPoiIndex();
+  const esc = escapeHtml;
+  const placeChip = (place) => {
+    if (!place) return '';
+    const poi = idx.byId.get(place) || idx.byName.get(idx.norm(place));
+    if (poi) return `<button type="button" class="sai-itin-place" data-id="${esc(poi.id)}" data-title="${esc(poi.name)}">${SAI_ICONS.map}${esc(poi.name)}</button>`;
+    return `<span class="sai-itin-place static">${SAI_ICONS.map}${esc(place)}</span>`;
+  };
+  const daysHtml = it.days.map(d => `
+    <li class="sai-itin-day">
+      <div class="sai-itin-daynum"><span>${esc(String(d.day == null ? '' : d.day))}</span></div>
+      <div class="sai-itin-daybody">
+        <div class="sai-itin-daytitle">${esc(d.title || '')}</div>
+        <ul class="sai-itin-items">
+          ${(Array.isArray(d.items) ? d.items : []).map(item => `
+            <li class="sai-itin-item">
+              <div class="sai-itin-act">${esc(item.activity || '')}</div>
+              ${(item.place || item.transport || item.cost) ? `<div class="sai-itin-tags">
+                ${placeChip(item.place)}
+                ${item.transport ? `<span class="sai-itin-tag t-transport">${esc(item.transport)}</span>` : ''}
+                ${item.cost ? `<span class="sai-itin-tag t-cost">${esc(item.cost)}</span>` : ''}
+              </div>` : ''}
+            </li>`).join('')}
+        </ul>
+        ${d.stay ? `<div class="sai-itin-stay"><strong>${esc(t('sardinai.itin_stay'))}:</strong> ${esc(d.stay)}</div>` : ''}
+      </div>
+    </li>`).join('');
+  const wrap = document.createElement('div');
+  wrap.className = 'sai-itinerary';
+  wrap.innerHTML = `
+    <div class="sai-itin-head">
+      <span class="sai-itin-badge">${esc(t('sardinai.itin_badge'))}</span>
+      <h3 class="sai-itin-title">${esc(it.title || '')}</h3>
+      ${it.summary ? `<p class="sai-itin-summary">${esc(it.summary)}</p>` : ''}
+    </div>
+    <ol class="sai-itin-days">${daysHtml}</ol>
+    ${it.totalCost ? `<div class="sai-itin-total">${esc(t('sardinai.itin_budget'))}: <strong>${esc(it.totalCost)}</strong></div>` : ''}
+    ${Array.isArray(it.tips) && it.tips.length ? `<div class="sai-itin-tips"><div class="sai-itin-tips-h">${esc(t('sardinai.itin_tips'))}</div><ul>${it.tips.map(tp => `<li>${esc(tp)}</li>`).join('')}</ul></div>` : ''}`;
+  chat.appendChild(wrap);
+  wrap.addEventListener('click', e => {
+    const btn = e.target.closest('.sai-itin-place[data-id]');
+    if (btn) sardinaiCardAction('map:' + btn.dataset.id, btn.dataset.title);
+  });
+  chat.scrollTop = chat.scrollHeight;
+  if (typeof gsap !== 'undefined') gsap.fromTo(wrap, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' });
+}
+
 function renderSardinaiChips(chips) {
   const chat = document.getElementById('sardinai-chat');
   if (!chat || !chips.length) return;
@@ -836,10 +887,19 @@ async function handleChatMessage(text) {
     SARDINAI_HISTORY.push({ role: 'model', text: data.reply });
     const cards = Array.isArray(data.cards) ? data.cards : [];
     const chips = Array.isArray(data.chips) ? data.chips : [];
-    // Prima le chip (risposte rapide), poi le card: cosi' lo scroll automatico
-    // si ferma sulle card (contenuto azionabile), che restano visibili e cliccabili.
+    const itinerary = data.itinerary && Array.isArray(data.itinerary.days) && data.itinerary.days.length ? data.itinerary : null;
+    if (itinerary) {
+      await renderSardinaiItinerary(itinerary);
+    } else if (cards.length) {
+      await renderSardinaiCards(cards);
+    }
     if (chips.length) renderSardinaiChips(chips);
-    if (cards.length) await renderSardinaiCards(cards);
+    // Con un itinerario (risposta lunga) porta l'utente all'inizio della proposta,
+    // non in fondo alle chip, cosi' la legge dal Giorno 1.
+    if (itinerary) {
+      const el = document.querySelector('#sardinai-chat .sai-itinerary:last-of-type');
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   } catch (e) {
     removeTypingIndicator();
     addMessage(t('sardinai.error'), 'ai');

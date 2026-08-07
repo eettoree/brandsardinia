@@ -1269,6 +1269,42 @@ body.section-map .app-navbar {
 .sai-card-btn.primary { background: var(--red); color: #fff; border-color: var(--red); }
 .sai-card-btn.primary:hover { background: var(--red-dark); border-color: var(--red-dark); }
 
+/* ── Itinerario generato dall'AI: risposta a sé, larghezza piena, lunghezza variabile ── */
+.sai-itinerary {
+  align-self: stretch; width: 100%;
+  background: var(--card-bg); border: 1px solid var(--border);
+  border-radius: 16px; overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  margin: 6px 0 8px;
+}
+.sai-itin-head { padding: 18px 20px 16px; background: linear-gradient(135deg, rgba(200, 16, 46, 0.06), transparent); border-bottom: 1px solid var(--border); }
+.sai-itin-badge { display: inline-block; font-size: 0.62rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: #fff; background: var(--red); padding: 3px 10px; border-radius: 999px; margin-bottom: 9px; }
+.sai-itin-title { font-size: 1.06rem; font-weight: 800; color: var(--text); margin: 0 0 5px; line-height: 1.25; }
+.sai-itin-summary { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; margin: 0; }
+.sai-itin-days { list-style: none; margin: 0; padding: 4px 20px; }
+.sai-itin-day { display: flex; gap: 14px; padding: 15px 0; }
+.sai-itin-day:not(:last-child) { border-bottom: 1px dashed var(--border); }
+.sai-itin-daynum span { display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: var(--red); color: #fff; font-weight: 800; font-size: 0.9rem; }
+.sai-itin-daybody { flex: 1; min-width: 0; }
+.sai-itin-daytitle { font-weight: 700; font-size: 0.92rem; color: var(--text); margin-bottom: 9px; line-height: 1.3; }
+.sai-itin-items { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 11px; }
+.sai-itin-act { font-size: 0.85rem; color: var(--text); line-height: 1.45; overflow-wrap: anywhere; }
+.sai-itin-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; align-items: center; }
+.sai-itin-place { display: inline-flex; align-items: center; gap: 4px; font-family: inherit; font-size: 0.72rem; font-weight: 700; color: var(--red); background: rgba(200, 16, 46, 0.08); border: 1px solid rgba(200, 16, 46, 0.2); border-radius: 7px; padding: 3px 8px; cursor: pointer; transition: background 0.18s, color 0.18s; }
+.sai-itin-place svg { width: 11px; height: 11px; flex: none; }
+.sai-itin-place.static { cursor: default; color: var(--text-secondary); background: var(--bg2); border-color: var(--border); }
+.sai-itin-place:not(.static):hover { background: var(--red); color: #fff; border-color: var(--red); }
+.sai-itin-tag { font-size: 0.7rem; font-weight: 600; padding: 3px 8px; border-radius: 7px; white-space: nowrap; }
+.sai-itin-tag.t-transport { color: #0369a1; background: rgba(3, 105, 161, 0.09); }
+.sai-itin-tag.t-cost { color: #15803d; background: rgba(21, 128, 61, 0.1); }
+.sai-itin-stay { margin-top: 10px; font-size: 0.78rem; color: var(--text-secondary); background: var(--bg2); border-radius: 8px; padding: 7px 11px; }
+.sai-itin-total { padding: 14px 20px; border-top: 1px solid var(--border); font-size: 0.88rem; color: var(--text); }
+.sai-itin-total strong { color: var(--red); font-weight: 800; }
+.sai-itin-tips { padding: 14px 20px 18px; border-top: 1px solid var(--border); background: var(--bg2); }
+.sai-itin-tips-h { font-size: 0.68rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; color: var(--red); margin-bottom: 7px; }
+.sai-itin-tips ul { margin: 0; padding-left: 18px; }
+.sai-itin-tips li { font-size: 0.8rem; color: var(--text-secondary); line-height: 1.55; margin-bottom: 4px; }
+
 /* Disclaimer trasparenza IA (EU AI Act) */
 .sardinai-disclaimer {
   font-size: 0.68rem;

@@ -67,7 +67,6 @@
     "category": "festival",
     "month": 7,
     "description": "18 luglio – 16 agosto 2026. Festival multidisciplinare: musica world, jazz, teatro e arti visive in siti storico-naturali del territorio oristanese. 2026 con Carmen Consoli, Subsonica, Mario Biondi e altri.",
-    "link": "https://www.dromos.org",
     "season": "estate",
     "igUrl": ""
   },
@@ -79,7 +78,6 @@
     "category": "tradizione",
     "month": 8,
     "description": "Patrimonio UNESCO. 14 agosto. Grandi candelabri di legno portati a spalla attraverso il centro di Sassari dai rappresentanti delle Gremio (corporazioni storiche). Origini medievali (XIV sec.).",
-    "link": "https://www.ilcandeliere.it",
     "season": "estate",
     "igUrl": ""
   },
@@ -115,7 +113,6 @@
     "category": "sagra",
     "month": 9,
     "description": "Da settembre a dicembre, ogni weekend un paese barbaricino apre le porte: cantine, laboratori artigianali, cucine tradizionali. Mamoiada, Oliena, Orgosolo, Dorgali, Tonara... Date 2026 da confermare su autunnoinbarbagia.it.",
-    "link": "https://www.autunnoinbarbagia.it",
     "season": "autunno",
     "igUrl": ""
   },
@@ -295,7 +292,6 @@
     "category": "cultura",
     "month": 9,
     "description": "Da settembre a dicembre, ogni weekend un paese della Barbagia apre porte e cortili: cantine, laboratori artigianali, cucine tradizionali. Mamoiada, Oliena, Orgosolo, Dorgali, Tonara e altri. Gratuito.",
-    "link": "https://www.autunnoinbarbagia.it",
     "season": "autunno",
     "igUrl": ""
   }

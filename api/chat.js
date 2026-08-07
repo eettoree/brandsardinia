@@ -35,7 +35,10 @@ function systemPrompt() {
   const eventsList = _events
     .slice()
     .sort((a, b) => new Date(a.date) - new Date(b.date))
-    .map(e => `- ${e.name} (${e.city}, ${e.date}, ${e.category})`)
+    .map(e => {
+      const link = e.link && /^https?:\/\//.test(e.link) ? ` sito:${e.link}` : '';
+      return `- ${e.name} (${e.city}, ${e.date}, ${e.category})${link}`;
+    })
     .join('\n');
   const catalog = poiCatalog();
 
@@ -72,6 +75,7 @@ BrandSardinia ha: Mappa interattiva 3D con pin filtrabili (spiagge, città, hote
 
 EVENTI NOTI (dal calendario del sito — sono gli UNICI eventi che puoi citare):
 ${eventsList}
+REGOLA LINK EVENTI (rigorosa): per un evento usa una card con action "url:<sito>" SOLO se quell'evento ha un "sito:" qui sopra (copialo esatto). Se l'evento NON ha un "sito:", NON inventare MAI un URL (es. NON dedurre faradda.it o redvalleyfestival.it dal nome): usa invece action "tool:calendar". Vale per qualsiasi link: si usano solo URL presenti in questo prompt, mai inventati.
 
 LUOGHI DEL SITO (fonte di verità per le mete — usa SOLO questi nelle card)
 Ogni voce riporta tra graffe l'azione mappa (es. "La Pelosa {map:la-pelosa}" → action "map:la-pelosa", apre quel pin sulla mappa 3D) e, quando disponibile, il sito ufficiale dopo "sito:". Non inventare id né URL.
@@ -82,6 +86,13 @@ RISPONDI IN JSON STRUTTURATO con questi campi:
 - "reply": la risposta discorsiva, CONCISA e calorosa, nella lingua dell'utente (sintetizza; i dettagli concreti vanno nelle cards, non elencarli nel testo). Puoi usare **grassetto** e *corsivo*. Niente emoji.
 - "chips": SEMPRE 2-4 stringhe brevi (max ~5 parole) — proposte di risposta rapida per facilitare il passo successivo (conversazione guidata). Non citare eventi/luoghi inventati.
 - "cards": quando l'utente chiede mete, idee o "cosa fare/vedere/dove dormire/mangiare", DEVI popolare 2-4 schede prese dai LUOGHI DEL SITO qui sopra (o dagli EVENTI NOTI). Ogni card: "title" (il nome esatto del luogo/evento), "meta" (una riga breve: zona o categoria; aggiungi prezzo/data SOLO se lo conosci con certezza), "desc" (1 frase), "action" (l'azione tra graffe del luogo, es. "map:la-pelosa"; oppure uno strumento del sito: "tool:calendar" | "tool:sentieri" | "tool:cantine" | "tool:musei" | "tool:ristoranti" | "tool:hotel" | "tool:itinerari" | "tool:vivere" | "tool:bandi" | "tool:galleria" | "tool:oggi" | "tool:transport" | "tool:beaches" | "tool:sports" | "tool:prodotti"; oppure "url:https://..."). Metti i luoghi concreti nelle cards, non nel testo. Lascia "cards" vuoto SOLO se la domanda non riguarda affatto mete concrete (es. un saluto o una domanda pratica).
+- "itinerary": OBBLIGATORIO valorizzarlo (oggetto) quando l'utente vuole PIANIFICARE un viaggio/itinerario (es. "organizza un viaggio", "cosa vedo in 5 giorni", "itinerario nord Sardegna con 800€"). Altrimenti "itinerary": null.
+  Costruisci un itinerario COMPLETO e su misura, di lunghezza VARIABILE = numero di giorni richiesto (se non specificato, proponi 5-7 giorni e chiedi conferma nelle chips). Adatta a: durata, budget, punto di arrivo (aeroporto/porto), interessi (mare/cultura/trekking/enogastronomia/famiglia), stagione. Strutturato così:
+  - "title" (es. "Sardegna del Sud in 5 giorni — mare e archeologia"), "summary" (1-2 frasi: taglio del viaggio, stagione, budget indicativo).
+  - "days": un elemento per giorno con "day" (numero), "title" (tema del giorno + zona), "items" (2-4 attività: ognuna "activity" testo concreto; "place" = l'id esatto di un LUOGO DEL SITO quando è un posto reale della lista, es. "la-pelosa"; "transport" = come spostarsi es. "auto ~45 min" o "traghetto"; "cost" = stima realistica es. "ingresso 15€" o "~40€"), e "stay" (dove dormire, zona/tipo). Collega mare+cultura+trekking+cibo+eventi del periodo in modo coerente e geograficamente sensato (evita zigzag).
+  - "totalCost": stima realistica del budget complessivo a persona (es. "circa 450-600€ escluso volo") — solo stime oneste, mai cifre inventate spacciate per certe.
+  - "tips": 2-4 consigli pratici (prenotazioni, stagione, spostamenti).
+  Usa gli id dei luoghi reali dal catalogo per "place" (così diventano cliccabili sulla mappa). Se mancano info chiave (giorni, budget, arrivo, interessi), costruisci comunque una proposta ragionevole e chiedi i dettagli mancanti nelle chips.
 
 ESEMPIO di output corretto (adatta sempre alla domanda reale e alla stagione):
 {"reply":"Ecco tre spiagge iconiche da non perdere. Tocca una scheda per trovarla sulla mappa 3D.","chips":["Spiagge del nord","Spiagge per famiglie","Come arrivarci"],"cards":[{"title":"La Pelosa","meta":"Stintino, nord-ovest","desc":"Sabbia bianchissima e acque bassissime turchesi.","action":"map:la-pelosa"},{"title":"Cala Goloritzé","meta":"Baunei, golfo di Orosei","desc":"Cala di ciottoli con l'iconico pinnacolo calcareo.","action":"map:cala-goloritzé"},{"title":"Is Arutas","meta":"Cabras, penisola del Sinis","desc":"Celebre per i granelli di quarzo bianco e rosa.","action":"map:is-arutas"}]}
@@ -112,9 +123,50 @@ const RESPONSE_SCHEMA = {
         propertyOrdering: ['title', 'meta', 'desc', 'action'],
       },
     },
+    // Itinerario completo (lunghezza variabile): valorizzato SOLO quando si pianifica
+    // un viaggio; altrimenti null. Nullable+required così il modello lo considera sempre.
+    itinerary: {
+      type: 'object',
+      nullable: true,
+      properties: {
+        title: { type: 'string' },
+        summary: { type: 'string' },
+        days: {
+          type: 'array',
+          items: {
+            type: 'object',
+            properties: {
+              day: { type: 'integer' },
+              title: { type: 'string' },
+              items: {
+                type: 'array',
+                items: {
+                  type: 'object',
+                  properties: {
+                    activity: { type: 'string' },
+                    place: { type: 'string' },
+                    transport: { type: 'string' },
+                    cost: { type: 'string' },
+                  },
+                  required: ['activity'],
+                  propertyOrdering: ['activity', 'place', 'transport', 'cost'],
+                },
+              },
+              stay: { type: 'string' },
+            },
+            required: ['day', 'title', 'items'],
+            propertyOrdering: ['day', 'title', 'items', 'stay'],
+          },
+        },
+        totalCost: { type: 'string' },
+        tips: { type: 'array', items: { type: 'string' } },
+      },
+      required: ['title', 'days'],
+      propertyOrdering: ['title', 'summary', 'days', 'totalCost', 'tips'],
+    },
   },
-  required: ['reply', 'chips', 'cards'],
-  propertyOrdering: ['reply', 'chips', 'cards'],
+  required: ['reply', 'chips', 'cards', 'itinerary'],
+  propertyOrdering: ['reply', 'chips', 'cards', 'itinerary'],
 };
 
 module.exports = async (req, res) => {
@@ -140,7 +192,7 @@ module.exports = async (req, res) => {
     if (!contents.length) { res.status(400).json({ error: 'no_message' }); return; }
 
     const sys = { parts: [{ text: systemPrompt() }] };
-    const baseGen = { temperature: 0.7, maxOutputTokens: 3000, thinkingConfig: { thinkingLevel: 'low' } };
+    const baseGen = { temperature: 0.7, maxOutputTokens: 5000, thinkingConfig: { thinkingLevel: 'low' } };
     const url = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${key}`;
 
     const generate = async (gen) => {
@@ -169,18 +221,21 @@ module.exports = async (req, res) => {
 
     // Parsing robusto: se l'output è JSON con "reply" (da schema o da prompt),
     // estrai reply/chips/cards; altrimenti trattalo come testo semplice.
-    let reply = raw, chips = [], cards = [];
+    let reply = raw, chips = [], cards = [], itinerary = null;
     try {
       const obj = JSON.parse(raw);
       if (obj && typeof obj === 'object' && typeof obj.reply === 'string') {
         reply = obj.reply.trim() || raw;
         if (Array.isArray(obj.chips)) chips = obj.chips.filter(c => typeof c === 'string' && c.trim()).slice(0, 4);
         if (Array.isArray(obj.cards)) cards = obj.cards.filter(c => c && c.title).slice(0, 4);
+        if (obj.itinerary && typeof obj.itinerary === 'object' && Array.isArray(obj.itinerary.days) && obj.itinerary.days.length) {
+          itinerary = obj.itinerary;
+        }
       }
     } catch (e) { /* non è JSON: testo semplice */ }
 
     res.setHeader('Content-Type', 'application/json; charset=utf-8');
-    res.status(200).json({ reply, chips, cards });
+    res.status(200).json({ reply, chips, cards, itinerary });
   } catch (err) {
     res.status(500).json({ error: 'chat_unavailable', message: String(err && err.message || err) });
   }
