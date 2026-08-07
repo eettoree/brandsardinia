@@ -3677,13 +3677,18 @@ body.section-map .app-navbar {
     transform: translateY(0);
   }
 
-  /* Reset button: a destra, sopra l'attribuzione e il footer privacy */
+  /* Reset button: icona sola, piccolo, tutto a destra, libero dal footer privacy */
   .map-reset-btn {
-    right: 12px;
-    bottom: calc(env(safe-area-inset-bottom, 0px) + 52px);
-    padding: 7px 14px;
-    font-size: 0.72rem;
+    right: 10px;
+    left: auto;
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 56px);
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    justify-content: center;
+    border-radius: 12px;
   }
+  .map-reset-btn span { display: none; }   /* nasconde il testo: solo icona */
   /* Hint navigazione: si adatta alla larghezza dei controlli su mobile */
   .map-hint { max-width: 200px; font-size: 0.68rem; }
 

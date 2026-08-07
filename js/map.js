@@ -1035,6 +1035,18 @@ document.addEventListener('DOMContentLoaded', () => {
   } catch (e) { /* ignora */ }
 });
 
+// iOS Safari ignora user-scalable=no: blocca lo zoom della PAGINA col pinch e il
+// doppio-tap, così il gesto agisce solo sulla mappa e i controlli non si spostano.
+// (Il canvas MapLibre ha touch-action:none: questi eventi non scattano sopra la mappa.)
+['gesturestart', 'gesturechange', 'gestureend'].forEach(ev =>
+  document.addEventListener(ev, e => e.preventDefault(), { passive: false }));
+let _lastTouchEnd = 0;
+document.addEventListener('touchend', (e) => {
+  const now = Date.now();
+  if (now - _lastTouchEnd < 300) e.preventDefault(); // no doppio-tap zoom
+  _lastTouchEnd = now;
+}, { passive: false });
+
 // ============================================================
 // ROUTE PLANNER
 // ============================================================
