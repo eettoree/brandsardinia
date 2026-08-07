@@ -1031,13 +1031,18 @@ body.section-map .app-navbar {
 /* Chat messages */
 #sardinai-chat {
   flex: 1;
+  min-height: 0;
   overflow-y: auto;
-  padding: 24px 28px;
+  padding: 24px 28px 40px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
   scroll-behavior: smooth;
 }
+/* Ogni blocco (messaggio, chip, carosello, itinerario) è una risposta a sé:
+   mai compresso dal flex column, così resta SEMPRE interamente visibile.
+   (gli elementi con overflow verrebbero altrimenti schiacciati a 0.) */
+#sardinai-chat > * { flex: 0 0 auto; }
 
 .chat-message {
   max-width: 80%;
@@ -1178,13 +1183,14 @@ body.section-map .app-navbar {
   overflow-x: auto;
   overflow-y: visible;
   padding: 4px 2px 14px;
-  margin: 4px 0 6px;
   scroll-snap-type: x proximity;
   scrollbar-width: thin;
   scrollbar-color: var(--border2) transparent;
   -webkit-overflow-scrolling: touch;
   scroll-padding-left: 2px;
   overscroll-behavior-x: contain;
+  margin: 8px 0 14px;          /* spazio sopra e sotto: il carosello è una risposta */
+  flex: 0 0 auto;              /* non comprimibile */
 }
 .sai-cards.is-carousel { cursor: grab; }
 .sai-cards.is-grabbing { cursor: grabbing; user-select: none; }
