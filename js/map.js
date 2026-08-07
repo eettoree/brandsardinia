@@ -1280,6 +1280,22 @@ window.selectSearchResult = selectSearchResult;
 window.showMapSearchResults        = showMapSearchResults;
 window.hideMapSearchResultsDelayed = hideMapSearchResultsDelayed;
 
+// Hint di navigazione: chiudibile e ricordato tra le sessioni
+function dismissMapHint() {
+  const h = document.getElementById('map-hint');
+  if (h) h.classList.add('is-hidden');
+  try { localStorage.setItem('bs_map_hint_dismissed', '1'); } catch (e) { /* ignora */ }
+}
+window.dismissMapHint = dismissMapHint;
+document.addEventListener('DOMContentLoaded', () => {
+  try {
+    if (localStorage.getItem('bs_map_hint_dismissed') === '1') {
+      const h = document.getElementById('map-hint');
+      if (h) h.classList.add('is-hidden');
+    }
+  } catch (e) { /* ignora */ }
+});
+
 // ============================================================
 // ROUTE PLANNER
 // ============================================================

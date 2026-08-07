@@ -296,6 +296,12 @@
               </svg>
               <span data-i18n="map.route.title">Crea Percorso</span>
             </button>
+
+            <!-- Istruzioni di navigazione: popup chiudibile sotto i controlli -->
+            <div class="map-hint" id="map-hint">
+              <button class="map-hint-close" onclick="dismissMapHint()" aria-label="Chiudi" title="Chiudi">&times;</button>
+              <span class="map-hint-text" data-i18n="map.hint">Trascina per ruotare &middot; Zoom con la rotella &middot; Clicca sui pin</span>
+            </div>
           </div>
 
           <!-- Right column: pin toggle + filter -->
@@ -446,11 +452,6 @@
           </svg>
           <span data-i18n="map.reset">Vista Sardegna</span>
         </button>
-
-        <!-- Hint interazione -->
-        <div class="map-hint" data-i18n="map.hint">
-          Trascina per ruotare &middot; Zoom con la rotella &middot; Clicca sui pin
-        </div>
 
       </div>
     </div>
