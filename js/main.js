@@ -397,7 +397,8 @@ function showSection(name) {
           AppState.mapInitialized = true;
           setTimeout(() => { initMap(); initMapFilters(); }, 150);
         }
-        if (name === 'sardinai') {
+        if (name === 'sardinai' && !AppState.sardinaiInitialized) {
+          AppState.sardinaiInitialized = true;
           initSardinAI();
         }
         if (name === 'tools' && !AppState.toolsInitialized) {

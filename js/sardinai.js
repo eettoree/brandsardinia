@@ -932,8 +932,10 @@ function initSardinAI() {
   // Listener cambio lingua registrato una sola volta (evita accumulo)
   if (!_sardinaiLangBound) {
     _sardinaiLangBound = true;
+    // Ricomincia (welcome nella nuova lingua) SOLO se non c'è ancora una
+    // conversazione: se l'utente ha già scritto, la chat resta in memoria.
     document.addEventListener('langChanged', () => {
-      if (AppState && AppState.currentSection === 'sardinai') resetSardinAI();
+      if (AppState && AppState.currentSection === 'sardinai' && SARDINAI_HISTORY.length === 0) resetSardinAI();
     });
   }
 
