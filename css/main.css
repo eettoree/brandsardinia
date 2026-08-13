@@ -741,40 +741,55 @@ body.section-map .app-navbar {
   gap: 20px;
 }
 
-.app-logo {
-  cursor: pointer;
-  display: flex;
+/* Logo → pulsante Home (stile del bottone lingue) sulle schermate diverse dalla home.
+   Animazione a step in ease-out: prima il logo si rimpicciolisce, poi compare il
+   rettangolo col bordo rosso, infine la scritta "Home". */
+.home-btn {
+  display: inline-flex;
   align-items: center;
+  gap: 0;
+  background: transparent;
+  border: 1.5px solid transparent;
+  border-radius: 8px;
+  padding: 4px;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  color: var(--red);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  /* rettangolo (bordo/sfondo/padding/gap): compare DOPO il logo */
+  transition: background 0.3s ease 0.18s, border-color 0.3s ease 0.18s,
+              padding 0.3s ease 0.18s, gap 0.3s ease 0.18s;
 }
-
-.app-logo-svg {
-  width: 28px;
+.home-btn .app-logo-svg {
+  width: 32px;
   height: auto;
   display: block;
-  transition: opacity 0.2s ease;
+  transition: width 0.28s ease 0s;   /* il logo si rimpicciolisce PER PRIMO */
 }
-
-.app-logo:hover .app-logo-svg { opacity: 0.75; }
-
-.btn-back {
-  background: transparent;
-  border: 1px solid var(--border);
-  color: var(--text-muted);
-  padding: 7px 16px;
-  border-radius: 8px;
-  cursor: pointer;
+.home-btn .home-label {
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  white-space: nowrap;
   font-size: 0.82rem;
-  transition: all var(--transition);
-  display: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--red);
+  /* la scritta compare PER ULTIMA */
+  transition: max-width 0.3s ease 0.4s, opacity 0.3s ease 0.4s;
 }
 
-.btn-back:hover {
-  border-color: var(--border2);
-  color: var(--text);
-  background: var(--glass);
+/* Stato "non home": il logo entra nel rettangolo rosso con la scritta Home */
+body:not(.world-active) .home-btn {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: var(--red);
+  padding: 6px 12px 6px 8px;
+  gap: 7px;
 }
-
-.btn-back.visible { display: block; }
+body:not(.world-active) .home-btn .app-logo-svg { width: 22px; }
+body:not(.world-active) .home-btn .home-label { max-width: 90px; opacity: 1; }
+body:not(.world-active) .home-btn:hover { background: rgba(200, 16, 46, 0.08); }
 
 .app-navbar-right {
   display: flex;

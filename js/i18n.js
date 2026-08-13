@@ -14,6 +14,7 @@ const TRANSLATIONS = {
     'nav.map': 'Mappa Interattiva',
     'nav.tools': 'Tools',
     'nav.back': '← Torna al menu',
+    'nav.home': 'Home',
 
     'selector.title': 'Cosa vuoi esplorare?',
     'selector.subtitle': 'Scegli la tua esperienza',
@@ -346,6 +347,7 @@ const TRANSLATIONS = {
     'nav.map': 'Interactive Map',
     'nav.tools': 'Tools',
     'nav.back': '← Back to menu',
+    'nav.home': 'Home',
 
     'selector.title': 'What do you want to explore?',
     'selector.subtitle': 'Choose your experience',
@@ -678,6 +680,7 @@ const TRANSLATIONS = {
     'nav.map': 'Mapa Interactivo',
     'nav.tools': 'Herramientas',
     'nav.back': '← Volver al menú',
+    'nav.home': 'Inicio',
 
     'selector.title': '¿Qué quieres explorar?',
     'selector.subtitle': 'Elige tu experiencia',
@@ -1010,6 +1013,7 @@ const TRANSLATIONS = {
     'nav.map': 'Carte Interactive',
     'nav.tools': 'Outils',
     'nav.back': '← Retour au menu',
+    'nav.home': 'Accueil',
 
     'selector.title': 'Que voulez-vous explorer?',
     'selector.subtitle': 'Choisissez votre expérience',
@@ -1342,6 +1346,7 @@ const TRANSLATIONS = {
     'nav.map': 'Interaktive Karte',
     'nav.tools': 'Tools',
     'nav.back': '← Zurück zum Menü',
+    'nav.home': 'Home',
 
     'selector.title': 'Was möchten Sie erkunden?',
     'selector.subtitle': 'Wählen Sie Ihr Erlebnis',
