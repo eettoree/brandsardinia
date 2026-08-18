@@ -315,7 +315,9 @@ const CAT_COLORS = {
   'sito-archeologico':'#B08D3C',
   parco:       '#32CD32',
   esperienza:  '#B040FF',
-  porto:       '#0066CC'
+  porto:       '#0066CC',
+  cantina:     '#8E2447',
+  museo:       '#17A2B8'
 };
 
 function getCatLabel(cat) {
@@ -329,7 +331,9 @@ function getCatLabel(cat) {
     'sito-archeologico':t('map.cat.archeologia'),
     parco:      t('map.cat.parco'),
     esperienza: t('map.cat.esperienza'),
-    porto:      t('map.cat.porto')
+    porto:      t('map.cat.porto'),
+    cantina:    t('map.cat.cantina'),
+    museo:      t('map.cat.museo')
   };
   return labels[cat] || cat;
 }
@@ -345,7 +349,9 @@ const CAT_ICONS = {
   'sito-archeologico':'archeologia',
   parco:      'parchi',
   esperienza: 'esperienze',
-  porto:      'porti'
+  porto:      'porti',
+  cantina:    'cantine',
+  museo:      'musei'
 };
 
 // â”€â”€â”€ MARKER CON ICONA CATEGORIA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
@@ -874,7 +880,9 @@ const CAT_GRADIENTS = {
   nuraghe:            'linear-gradient(160deg,#241408 0%,#5c3316 50%,#a0522d 100%)',
   'sito-archeologico':'linear-gradient(160deg,#241d0e 0%,#5c4a20 50%,#b08d3c 100%)',
   parco:      'linear-gradient(160deg,#0a1e0a 0%,#1a5c1a 50%,#32cd32 100%)',
-  esperienza: 'linear-gradient(160deg,#1a0a2a 0%,#4a1a6b 50%,#b040ff 100%)'
+  esperienza: 'linear-gradient(160deg,#1a0a2a 0%,#4a1a6b 50%,#b040ff 100%)',
+  cantina:    'linear-gradient(160deg,#2a0a16 0%,#611530 50%,#8e2447 100%)',
+  museo:      'linear-gradient(160deg,#062a2e 0%,#0f6470 50%,#17a2b8 100%)'
 };
 
 function showMapInfoPanel(poi) {

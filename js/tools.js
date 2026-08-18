@@ -2045,106 +2045,99 @@ function renderVivere(container) {
   loadData('vivere').then(data => { items = Array.isArray(data) ? data : []; render(); });
 }
 
-function renderCantine(container) {
+// ─── LOADER POI CONDIVISO PER I TOOL ──────────────────────────
+let _TOOL_POIS = null;
+function toolPois() {
+  if (_TOOL_POIS) return _TOOL_POIS;
+  _TOOL_POIS = (typeof MAP_POI !== 'undefined' && Array.isArray(MAP_POI) && MAP_POI.length)
+    ? Promise.resolve(MAP_POI)
+    : fetch('assets/data/pois.json').then(r => r.json()).catch(() => []);
+  return _TOOL_POIS;
+}
+function _poiZona(lat) { return lat < 39.6 ? 'sud' : lat < 40.5 ? 'centro' : 'nord'; }
+function _poiCity(poi) {
+  if (poi.city) return poi.city;
+  const m = String(poi.come || '').match(/\d{5}\s+(.+?)\s+[A-Z]{2},/);
+  if (m) return m[1].trim();
+  return '';
+}
+function _fmtCount(n) { return n >= 1000 ? (Math.round(n / 100) / 10) + 'k' : '' + n; }
+function _toolUrl(w) { const f = String(w || '').split(/\s*[·|,]\s*/)[0].trim(); return f ? (/^https?:\/\//.test(f) ? f : 'https://' + f) : ''; }
+const _TOOL_GRAD = {
+  cantina: 'linear-gradient(160deg,#2a0a16,#611530,#8e2447)',
+  museo: 'linear-gradient(160deg,#062a2e,#0f6470,#17a2b8)',
+};
+
+// Tool generico su una categoria di POI (schede ricche: foto, rating, orari, sito, mappa)
+async function renderPoiTool(container, opts) {
+  const { cat, titleKey, subKey } = opts;
+  container.innerHTML = `<div class="tools-section-header"><h2>${t(titleKey)}</h2></div><div class="ptool-loading">${t('ui.loading')}</div>`;
+  const all = (await toolPois()).filter(p => p.cat === cat).map(p => Object.assign({}, p, { _zona: _poiZona(p.lat) }));
+  all.sort((a, b) => (b.rating || 0) - (a.rating || 0) || (b.reviews || 0) - (a.reviews || 0));
+  const esc = (typeof escapeHtml === 'function') ? escapeHtml : (s => String(s || ''));
   const ZONE = [
-    { key:'tutte', label:t('ui.all_zones') },
-    { key:'nord',  label:'Nord Sardegna' },
-    { key:'centro',label:'Centro' },
-    { key:'sud',   label:'Sud' },
-    { key:'sulcis',label:'Sulcis' }
+    { key: 'tutte', label: t('ui.all_zones') },
+    { key: 'nord', label: t('ui.zone_nord') },
+    { key: 'centro', label: t('ui.zone_centro') },
+    { key: 'sud', label: t('ui.zone_sud') },
   ];
-  const SERV_LABELS = { visita:'Visita guidata', degustazione:'Degustazione', acquisto:'Acquisto diretto', ristorante:'Ristorante', museo:'Museo interno' };
+
+  function card(p) {
+    const city = _poiCity(p);
+    const web = _toolUrl(p.web);
+    const rating = p.rating ? `<span class="ptool-rating">${TOOL_ICONS.star || '★'} ${p.rating.toFixed(1)}${p.reviews ? ` <i>${_fmtCount(p.reviews)}</i>` : ''}</span>` : '';
+    const img = p.photo
+      ? `<div class="ptool-img"><img src="${esc(p.photo)}" alt="${esc(p.name)}" loading="lazy" onerror="this.closest('.ptool-img').classList.add('ptool-img-fallback');this.remove()">${p.photoCredit ? `<span class="ptool-credit">${esc(p.photoCredit)}</span>` : ''}</div>`
+      : `<div class="ptool-img ptool-img-fallback" style="background:${_TOOL_GRAD[p.cat] || '#333'}"></div>`;
+    const servizi = p.servizi ? `<div class="ptool-tags">${String(p.servizi).split(/[,·]/).map(s => s.trim()).filter(Boolean).slice(0, 5).map(s => `<span class="ptool-tag">${esc(s)}</span>`).join('')}</div>` : '';
+    return `
+      <div class="ptool-card">
+        ${img}
+        <div class="ptool-body">
+          <div class="ptool-titlerow">
+            <h3 class="ptool-name">${esc(p.name)}</h3>
+            ${rating}
+          </div>
+          ${city ? `<div class="ptool-city">${TOOL_ICONS.pin} ${esc(city)}</div>` : ''}
+          ${p.description ? `<p class="ptool-desc">${esc(p.description)}</p>` : ''}
+          ${servizi}
+          <div class="ptool-actions">
+            <button type="button" class="ptool-btn primary" data-mapid="${esc(p.id)}">${TOOL_ICONS.pin} ${t('sardinai.cta_map')}</button>
+            ${web ? `<a class="ptool-btn" href="${esc(web)}" target="_blank" rel="noopener">${t('ui.official_site')}</a>` : ''}
+            ${p.tel ? `<a class="ptool-btn" href="tel:${esc(String(p.tel).replace(/\s/g, ''))}">${TOOL_ICONS.phone} ${t('ui.call')}</a>` : ''}
+          </div>
+        </div>
+      </div>`;
+  }
 
   function render(zona) {
-    const list = zona === 'tutte' ? CANTINE_DATA : CANTINE_DATA.filter(c => c.zona === zona);
+    const list = zona === 'tutte' ? all : all.filter(p => p._zona === zona);
     container.innerHTML = `
       <div class="tools-section-header">
-        <h2>${t('tools.render.cantine')}</h2>
-        <p class="prenot-subtitle">${t('tools.sub.cantine')}</p>
+        <h2>${t(titleKey)}</h2>
+        <p class="prenot-subtitle">${t(subKey)} · ${all.length} ${t('ui.results')}</p>
       </div>
       <div class="tool-filter-pills">
-        ${ZONE.map(z => `<button class="filter-pill${z.key===zona?' active':''}" data-zona="${z.key}">${z.label}</button>`).join('')}
+        ${ZONE.map(z => `<button class="filter-pill${z.key === zona ? ' active' : ''}" data-zona="${z.key}">${z.label}</button>`).join('')}
       </div>
-      <div class="cantine-grid">
-        ${list.map(c => `
-          <div class="cantina-card glass-card">
-            <div>
-              <div class="cantina-name">${c.name}</div>
-              <div class="cantina-city">${TOOL_ICONS.pin} ${c.city}</div>
-            </div>
-            <p class="cantina-desc">${c.desc}</p>
-            <div class="cantina-vitigni">
-              ${c.vitigni.map(v => `<span class="vitigno-tag">${v}</span>`).join('')}
-            </div>
-            <div class="cantina-servizi">
-              ${c.servizi.map(s => `<span class="servizio-tag">${SERV_LABELS[s]||s}</span>`).join('')}
-            </div>
-            <div class="cantina-footer">
-              ${c.tel ? `<span class="cantina-tel">${TOOL_ICONS.phone} ${c.tel}</span>` : ''}
-              <a href="${c.web}" target="_blank" rel="noopener" class="cantina-link">${t('tools.action.website')} →</a>
-            </div>
-          </div>`).join('')}
-        ${list.length===0 ? `<div class="no-events">${t('ui.no_results')}</div>` : ''}
+      <div class="ptool-grid">
+        ${list.map(card).join('')}
+        ${list.length === 0 ? `<div class="no-events">${t('ui.no_results')}</div>` : ''}
       </div>`;
-
-    container.querySelectorAll('.filter-pill[data-zona]').forEach(btn =>
-      btn.addEventListener('click', () => render(btn.dataset.zona))
-    );
-    gsap.fromTo('.cantina-card', { opacity:0, y:18 }, { opacity:1, y:0, stagger:0.07, duration:0.35, ease:'power2.out' });
+    container.querySelectorAll('.filter-pill[data-zona]').forEach(btn => btn.addEventListener('click', () => render(btn.dataset.zona)));
+    container.querySelectorAll('.ptool-btn[data-mapid]').forEach(btn => btn.addEventListener('click', () => { if (typeof openMapAtPoi === 'function') openMapAtPoi(btn.dataset.mapid); }));
+    if (typeof gsap !== 'undefined') gsap.fromTo('.ptool-card', { opacity: 0, y: 18 }, { opacity: 1, y: 0, stagger: 0.05, duration: 0.3, ease: 'power2.out' });
   }
   render('tutte');
 }
 
+function renderCantine(container) {
+  renderPoiTool(container, { cat: 'cantina', titleKey: 'tools.render.cantine', subKey: 'tools.sub.cantine' });
+}
+
 // ─── MUSEI ────────────────────────────────────────────────────
 function renderMusei(container) {
-  const TIPI = [
-    { key:'tutti',      label:t('ui.all') },
-    { key:'archeologia',label:'Archeologia' },
-    { key:'arte',       label:'Arte' },
-    { key:'etnografia', label:'Etnografia' },
-    { key:'storia',     label:'Storia' },
-    { key:'natura',     label:'Natura' }
-  ];
-  const TIPO_COLORS = { archeologia:'#FFD700', arte:'#B040FF', etnografia:'#FF8C00', storia:'#C8102E', natura:'#32CD32' };
-
-  function render(tipo) {
-    const list = tipo === 'tutti' ? MUSEI_DATA : MUSEI_DATA.filter(m => m.tipo === tipo);
-    container.innerHTML = `
-      <div class="tools-section-header">
-        <h2>${t('tools.render.musei')}</h2>
-        <p class="prenot-subtitle">${t('tools.sub.musei')}</p>
-      </div>
-      <div class="tool-filter-pills">
-        ${TIPI.map(f => `<button class="filter-pill${f.key===tipo?' active':''}" data-tipo="${f.key}">${f.label}</button>`).join('')}
-      </div>
-      <div class="musei-grid">
-        ${list.map(m => {
-          const color = TIPO_COLORS[m.tipo] || '#fff';
-          return `
-          <div class="museo-card glass-card">
-            <div class="museo-head">
-              <span class="museo-tipo-badge" style="color:${color};border-color:${color}40;background:${color}14">${m.tipo}</span>
-              <div class="museo-name">${m.name}</div>
-              <div class="museo-city">${TOOL_ICONS.pin} ${m.city}</div>
-            </div>
-            <p class="museo-desc">${m.desc}</p>
-            <div class="museo-info">
-              <span class="museo-info-item">${TOOL_ICONS.clock} ${m.orari}</span>
-              <span class="museo-info-item">${TOOL_ICONS.ticket} ${m.biglietto}</span>
-              <span class="museo-info-item">${TOOL_ICONS.pin} ${m.indirizzo}</span>
-            </div>
-            ${m.web && m.web!=='#' ? `<a href="${m.web}" target="_blank" rel="noopener" class="cantina-link" style="margin-top:10px;display:inline-block">${t('ui.official_site')} →</a>` : ''}
-          </div>`;
-        }).join('')}
-        ${list.length===0 ? `<div class="no-events">${t('ui.no_results')}</div>` : ''}
-      </div>`;
-
-    container.querySelectorAll('.filter-pill[data-tipo]').forEach(btn =>
-      btn.addEventListener('click', () => render(btn.dataset.tipo))
-    );
-    gsap.fromTo('.museo-card', { opacity:0, y:18 }, { opacity:1, y:0, stagger:0.07, duration:0.35, ease:'power2.out' });
-  }
-  render('tutti');
+  renderPoiTool(container, { cat: 'museo', titleKey: 'tools.render.musei', subKey: 'tools.sub.musei' });
 }
 
 // ─── SPIAGGE LIVE ─────────────────────────────────────────────

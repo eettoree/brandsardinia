@@ -12,11 +12,12 @@ try { _pois = require('../assets/data/pois.json'); } catch (e) { _pois = []; }
 
 const CAT_LABEL = {
   spiaggia: 'SPIAGGE', 'città': 'CITTA E PAESI', nuraghe: 'NURAGHI',
-  'sito-archeologico': 'SITI ARCHEOLOGICI', attrazione: 'ATTRAZIONI E MUSEI',
+  'sito-archeologico': 'SITI ARCHEOLOGICI', attrazione: 'ATTRAZIONI',
+  museo: 'MUSEI', cantina: 'CANTINE E VINO',
   parco: 'PARCHI E NATURA', esperienza: 'ESPERIENZE E ATTIVITA',
   ristorante: 'RISTORANTI', hotel: 'DOVE DORMIRE', porto: 'PORTI',
 };
-const CAT_ORDER = ['spiaggia', 'città', 'nuraghe', 'sito-archeologico', 'attrazione', 'parco', 'esperienza', 'ristorante', 'hotel', 'porto'];
+const CAT_ORDER = ['spiaggia', 'città', 'nuraghe', 'sito-archeologico', 'attrazione', 'museo', 'cantina', 'parco', 'esperienza', 'ristorante', 'hotel', 'porto'];
 
 // Catalogo compatto dei luoghi reali del sito: e' la fonte di verita' per le cards.
 // Ogni voce riporta tra graffe l'azione da usare (es. {map:la-pelosa}).
