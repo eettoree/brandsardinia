@@ -2199,6 +2199,7 @@ function renderBeaches(container) {
 
   // Render a single beach card
   function beachCardHTML(b, w) {
+    const poi = b._poi || findBeachPoi(b.name);
     const cond = w
       ? evaluateCondition(w.wind, w.gusts, w.dir, b.badFrom)
       : { status: '—', statusClass: 'status-unknown', label: 'Dati non disponibili.' };
@@ -2219,6 +2220,7 @@ function renderBeaches(container) {
         <div class="beach-body">
           <div class="beach-header">
             <h3 class="beach-name">${b.name}</h3>
+            ${beachRatingBadge(poi)}
           </div>
           <div class="beach-location">
             <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="12" height="12"><circle cx="8" cy="6" r="3"/><path d="M8 2C5.79 2 4 3.79 4 6c0 3.5 4 8 4 8s4-4.5 4-8c0-2.21-1.79-4-4-4z"/></svg>
@@ -2248,6 +2250,7 @@ function renderBeaches(container) {
             <div class="beach-info-row"><span class="info-label">${t('tools.camper.cost')}</span><span class="info-val">${b.cost}</span></div>
             ${b.prenotazione ? `<div class="beach-info-row"><span class="info-label">${t('tools.meta.prenotazione_abbr')}</span><span class="info-val">${b.prenotazione}</span></div>` : ''}
           </div>
+          ${beachMapBtn(poi)}
         </div>
       </div>`;
   }
@@ -2272,6 +2275,23 @@ function renderBeaches(container) {
   // POI cache locale — popolazione da MAP_POI o direttamente da pois.json
   let _poisCache = [];
 
+  // Aggancio spiaggia curata → POI reale (rating, id per link mappa)
+  const _normB = s => (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
+  function findBeachPoi(name) {
+    const n = _normB(name);
+    const beaches = _poisCache.filter(p => p.cat === 'spiaggia');
+    return beaches.find(p => _normB(p.name) === n) || beaches.find(p => { const pn = _normB(p.name); return pn.includes(n) || n.includes(pn); });
+  }
+  function beachRatingBadge(poi) {
+    if (!poi || !poi.rating) return '';
+    const rev = poi.reviews ? ` <i>${poi.reviews >= 1000 ? (Math.round(poi.reviews / 100) / 10) + 'k' : poi.reviews}</i>` : '';
+    return `<span class="beach-rating">${TOOL_ICONS.star || '★'} ${poi.rating.toFixed(1)}${rev}</span>`;
+  }
+  function beachMapBtn(poi) {
+    if (!poi || !poi.id) return '';
+    return `<button type="button" class="beach-map-btn" data-mapid="${poi.id}">${TOOL_ICONS.pin} ${t('sardinai.cta_map')}</button>`;
+  }
+
   // Search among all POI beaches
   function buildSearchResults(query) {
     if (!query || query.length < 2) return '';
@@ -2293,6 +2313,7 @@ function renderBeaches(container) {
   async function showSearchBeach(name, lat, lng, desc) {
     const searchResult = document.getElementById('beach-search-result-area');
     if (!searchResult) return;
+    const poi = findBeachPoi(name);
     searchResult.innerHTML = `<div class="beach-search-detail-loading">Recupero dati meteo per ${name}...</div>`;
     const w = await fetchBeachWeather(lat, lng);
     const cond = w
@@ -2304,7 +2325,7 @@ function renderBeaches(container) {
       <div class="beach-search-detail glass-card">
         <div class="bsd-header">
           <div class="bsd-name">${name}</div>
-          <span class="beach-status ${cond.statusClass}">${cond.status}</span>
+          <div class="bsd-head-right">${beachRatingBadge(poi)}<span class="beach-status ${cond.statusClass}">${cond.status}</span></div>
         </div>
         <p class="bsd-desc">${desc || ''}</p>
         <div class="beach-condition-label">${cond.label}</div>
@@ -2315,6 +2336,7 @@ function renderBeaches(container) {
         </div>
         <div class="wind-bar"><div class="wind-bar-fill ${cond.statusClass}" style="width:${w ? Math.min(100, w.wind/50*100) : 0}%"></div></div>
         <div class="bsd-coords">Lat ${lat.toFixed(4)}, Lng ${lng.toFixed(4)} · <a href="https://www.windy.com/?${lat},${lng},11" target="_blank" rel="noopener">${t('tools.meta.apri_windy')}</a></div>
+        ${beachMapBtn(poi)}
       </div>`;
   }
 
@@ -2328,6 +2350,17 @@ function renderBeaches(container) {
         _poisCache = await r.json();
       } catch { _poisCache = []; }
     }
+
+    // Griglia featured: 22 spiagge curate (con esposizione vento) + top spiagge da pois.json
+    const _curated = BEACHES_DATA.map(b => Object.assign({}, b, { _poi: findBeachPoi(b.name) }));
+    const _curatedNames = new Set(_curated.map(b => _normB(b.name)));
+    const _zonaLbl = lat => lat < 39.6 ? t('ui.zone_sud') : lat < 40.5 ? t('ui.zone_centro') : t('ui.zone_nord');
+    const _extra = _poisCache
+      .filter(p => p.cat === 'spiaggia' && p.rating && p.photo && !_curatedNames.has(_normB(p.name)))
+      .sort((a, b) => (b.rating || 0) - (a.rating || 0) || (b.reviews || 0) - (a.reviews || 0))
+      .slice(0, 10)
+      .map(p => ({ name: p.name, location: _zonaLbl(p.lat) + ' Sardegna', type: ((p.description || '').split('.')[0] || 'Spiaggia').slice(0, 90), access: p.come || '', cost: p.costo || 'Accesso libero', prenotazione: '', photo: p.photo || '', photoCredit: p.photoCredit || '', lat: p.lat, lng: p.lng, badFrom: null, _poi: p }));
+    const featured = _curated.concat(_extra);
 
     const now = new Date();
     const timeStr = `${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}`;
@@ -2349,7 +2382,7 @@ function renderBeaches(container) {
       <div id="beach-search-result-area"></div>
 
       <div class="beaches-grid" id="beaches-main-grid">
-        ${BEACHES_DATA.map(b => beachCardLoading(b)).join('')}
+        ${featured.map(b => beachCardLoading(b)).join('')}
       </div>
     `;
 
@@ -2387,12 +2420,21 @@ function renderBeaches(container) {
       }
     }
 
-    // Fetch weather for all 12 curated beaches in parallel
-    const weatherResults = await Promise.all(BEACHES_DATA.map(b => fetchBeachWeather(b.lat, b.lng)));
+    // Meteo marino per tutte le spiagge featured, in parallelo
+    const weatherResults = await Promise.all(featured.map(b => fetchBeachWeather(b.lat, b.lng)));
     const grid = document.getElementById('beaches-main-grid');
     if (!grid) return;
 
-    grid.innerHTML = BEACHES_DATA.map((b, i) => beachCardHTML(b, weatherResults[i])).join('');
+    grid.innerHTML = featured.map((b, i) => beachCardHTML(b, weatherResults[i])).join('');
+
+    // Delegazione click "Vedi sulla mappa" (griglia + ricerca)
+    if (container.dataset.beachMapBound !== '1') {
+      container.dataset.beachMapBound = '1';
+      container.addEventListener('click', e => {
+        const btn = e.target.closest && e.target.closest('.beach-map-btn[data-mapid]');
+        if (btn && typeof openMapAtPoi === 'function') openMapAtPoi(btn.dataset.mapid);
+      });
+    }
 
     gsap.fromTo('.beach-card',
       { opacity: 0, y: 20, scale: 0.97 },
@@ -2411,9 +2453,9 @@ function renderBeaches(container) {
           onComplete: () => {
             const n = new Date();
             if (timeEl) timeEl.textContent = `Aggiornato: ${n.getHours().toString().padStart(2,'0')}:${n.getMinutes().toString().padStart(2,'0')}`;
-            Promise.all(BEACHES_DATA.map(b => fetchBeachWeather(b.lat, b.lng))).then(results => {
+            Promise.all(featured.map(b => fetchBeachWeather(b.lat, b.lng))).then(results => {
               const g = document.getElementById('beaches-main-grid');
-              if (g) g.innerHTML = BEACHES_DATA.map((b, i) => beachCardHTML(b, results[i])).join('');
+              if (g) g.innerHTML = featured.map((b, i) => beachCardHTML(b, results[i])).join('');
               gsap.fromTo('.beach-card', { opacity: 0, y: 20 }, { opacity: 1, y: 0, stagger: 0.06, duration: 0.3 });
             });
           }
