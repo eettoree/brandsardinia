@@ -10050,5 +10050,38 @@
       "sabato: 08:30–19:30",
       "domenica: 08:30–19:30"
     ]
+  },
+  {
+    "id": "delta-hotels-marriott-olbia",
+    "name": "Delta Hotels by Marriott Olbia Sardinia",
+    "lat": 40.932183,
+    "lng": 9.504176,
+    "cat": "hotel",
+    "description": "Hotel 4★ del gruppo Marriott a Olbia (Via Isarco), moderno e ideale per soggiorni business e vacanza. 124 camere insonorizzate con smart TV e minibar, due aree piscina all'aperto (stagionali, giu-set), vasca idromassaggio, palestra 24h e ristorante Tilibbas con cucina italiana affacciato sul giardino. A pochi minuti dall'aeroporto Olbia-Costa Smeralda.",
+    "come": "Via Isarco 5/7, Olbia. A ~4 km dall'aeroporto Olbia-Costa Smeralda e dal centro/porto.",
+    "servizi": "2 piscine esterne (stagionali), vasca idromassaggio, palestra 24h, ristorante Tilibbas, bar e pool bar, colazione a buffet, WiFi gratuito, concierge, sale meeting, parcheggio",
+    "costo": "Tariffe variabili per stagione (fascia medio-alta)",
+    "tel": "+39 0789 5561",
+    "web": "marriott.com/en-us/hotels/olbde-delta-hotels-olbia-sardinia/overview/",
+    "orari": "Reception aperta 24h, tutto l'anno",
+    "rating": 4.2,
+    "reviews": 297
+  },
+  {
+    "id": "hotel-dp-olbia",
+    "name": "Hotel dP Olbia - Sardinia",
+    "lat": 40.935444,
+    "lng": 9.542679,
+    "cat": "hotel",
+    "description": "Hotel 4★ su una collina immersa nella macchia mediterranea a nord-est di Olbia, con splendida vista sul Golfo. 77 camere in stile mediterraneo (molte panoramiche), piscina scoperta affacciata sul golfo e ristorante con specialità sarde, piatti internazionali e vini locali (anche mezza pensione). A 1 km dalla spiaggia di Pittulongu, 3 km dal centro/porto e 8 km dall'aeroporto.",
+    "come": "Via Sa Testa 1, Olbia (zona Pittulongu). 1 km da Pittulongu, 3 km dal porto, 8 km dall'aeroporto Olbia-Costa Smeralda.",
+    "servizi": "Piscina scoperta panoramica sul golfo, ristorante (cucina sarda e internazionale, mezza pensione), terrazza, staff multilingue, WiFi, parcheggio",
+    "costo": "Tariffe variabili per stagione (fascia media)",
+    "tel": "+39 0789 173 3030",
+    "web": "hotel-dp.it",
+    "orari": "Reception aperta 24h",
+    "rating": 4.1,
+    "reviews": 480,
+    "gsummary": "Hotel informale che offre ristorante con terrazza e piscina scoperta affacciata sul golfo."
   }
 ]
