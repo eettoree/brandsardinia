@@ -449,6 +449,18 @@ const SPORTS_DATA = [
     keywords: ['golf club'],
     operators: [],
     areas: ['Pevero Golf Club (Porto Cervo) — 18 buche firma R.T. Jones', 'Is Molas Golf (Pula)', 'Is Arenas Golf (Narbolia)']
+  },
+  {
+    name: 'Paracadutismo', group: 'aria', level: 'Lanci tandem con istruttore / brevettati', season: 'Anno intero (voli meteo-permettendo)',
+    keywords: ['paracadut', 'skydiv'],
+    operators: [],
+    areas: ['Serdiana — aviosuperficie area Cagliari', 'Lanci tandem sulla costa sud e sull\'entroterra']
+  },
+  {
+    name: 'Quad & Fuoristrada', group: 'terra', level: 'Tutti i livelli (con guida)', season: 'Anno intero',
+    keywords: ['quad', 'buggy', '4x4', 'fuoristrada'],
+    operators: [],
+    areas: ['Costa Smeralda e Gallura (Arzachena)', 'Costa Verde — dune di Piscinas (Arbus)', 'Sinis, Montiferru e Barbagia']
   }
 ];
 
