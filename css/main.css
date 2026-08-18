@@ -3514,6 +3514,49 @@ body:not(.world-active) .home-btn:hover { background: rgba(200, 16, 46, 0.08); }
 .op-tel, .op-web { color: var(--text-muted); font-size: 0.78rem; }
 .op-tel:hover, .op-web:hover { color: var(--red); }
 
+.sport-op-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.sport-op-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  flex-shrink: 0;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #b8860b;
+}
+.sport-op-rating svg { color: #f5b301; }
+.sport-op-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 5px;
+}
+.op-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  background: rgba(0,0,0,0.04);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 3px 9px;
+  cursor: pointer;
+  transition: color .18s ease, border-color .18s ease, background .18s ease;
+}
+.op-link:hover { color: var(--red); border-color: rgba(200,16,46,0.4); }
+.op-map {
+  color: #fff;
+  background: var(--red);
+  border-color: var(--red);
+}
+.op-map:hover { color: #fff; background: #a50d26; border-color: #a50d26; }
+
 .sport-areas { }
 
 .areas-list {

@@ -343,9 +343,8 @@ const CAMPER_DATA = [
 // Operatori verificati da ricerca web giugno 2026
 const SPORTS_DATA = [
   {
-    name: 'Kayak',
-    level: 'Principiante / Avanzato',
-    season: 'Maggio – Ottobre',
+    name: 'Kayak & Canoa', group: 'mare', level: 'Principiante / Avanzato', season: 'Maggio – Ottobre',
+    keywords: ['kayak', 'canoa'],
     operators: [
       { name: 'Blue Dream (Cala Gonone)', tel: 'Vedi sito', web: 'spiaggiapalmasera.com/blue-dream', note: 'Noleggio kayak singoli e doppi + escursioni guidate' },
       { name: 'Prima Sardegna (Cala Gonone)', tel: 'Vedi sito', web: 'primasardegna.com', note: 'Tour guidati Golfo di Orosei' },
@@ -354,59 +353,102 @@ const SPORTS_DATA = [
     areas: ['Golfo di Orosei (Cala Luna, Cala Mariolu)', 'Fiume Coghinas (Valledoria)', 'Laguna di Nora']
   },
   {
-    name: 'Arrampicata',
-    level: 'Intermedio / Esperto',
-    season: 'Settembre – Maggio (evitare luglio-agosto)',
+    name: 'Arrampicata', group: 'terra', level: 'Intermedio / Esperto', season: 'Settembre – Maggio (evitare luglio-agosto)',
+    keywords: ['arrampicat', 'climb', 'boulder', 'granito', 'torri', 'pantaleo'],
     operators: [
-      { name: 'Nannai Climbing Home (Ulassai)', tel: '+39 366 370 7749 / +39 334 770 9038', web: 'climbingulassai.com', note: 'Email: nannaiclimbinghome@gmail.com. WA preferito. Camp da 500€' },
-      { name: 'Fellas Outdoors (Ulassai)', tel: 'Vedi sito', web: 'fellasoutdoors.com', note: 'Guida alpina certificata Mandy, base Ulassai' },
+      { name: 'Nannai Climbing Home (Ulassai)', tel: '+39 366 370 7749', web: 'climbingulassai.com', note: 'WA preferito. Camp da 500€' },
+      { name: 'Fellas Outdoors (Ulassai)', tel: 'Vedi sito', web: 'fellasoutdoors.com', note: 'Guida alpina certificata, base Ulassai' },
       { name: 'Big Alpine Guide (Supramonte)', tel: 'Vedi sito', web: 'bigalpineguide.com', note: 'Guide alpine, Supramonte e Golfo di Orosei' }
     ],
     areas: ['Ulassai / Jerzu / Osini (mecca climbing sardo)', 'Domusnovas (750 vie, ottimale inverno)', 'Supramonte / Pedra Longa']
   },
   {
-    name: 'Surf & Kitesurf',
-    level: 'Principiante / Pro',
-    season: 'Anno intero (maestrale ottimale ottobre-aprile)',
+    name: 'Surf & Kitesurf', group: 'mare', level: 'Principiante / Pro', season: 'Anno intero (maestrale ottimale ottobre-aprile)',
+    keywords: ['kite', 'surf', 'wing', 'trettu'],
     operators: [
       { name: 'ProKite Sardegna (Punta Trettu)', tel: 'Vedi sito', web: 'prokitesardegna.com', note: 'Centro IKO certificato. Corsi da 70€/sessione' },
       { name: 'Kite House Sardinia (Punta Trettu)', tel: 'Vedi sito', web: 'kitehousesardinia.com', note: 'Resort kitesurf completo' },
       { name: 'Capo Mannu Surf Center', tel: 'Vedi sito', web: 'capomannu.it', note: 'Windsurf, kitesurf, wingfoil, SUP. Spot onde leggendario' }
     ],
-    areas: ['Punta Trettu (SU) — hub kite europeo, Italian Big Air 2026', 'Capo Mannu (OR) — surf e windsurf oceanic style', 'Porto Pollo (Palau) — spot kite/wind nord']
+    areas: ['Punta Trettu (SU) — hub kite europeo', 'Capo Mannu (OR) — surf e windsurf oceanic style', 'Porto Pollo (Palau) — spot kite/wind nord']
   },
   {
-    name: 'Diving & Snorkeling',
-    level: 'Tutti i livelli (corsi PADI disponibili)',
-    season: 'Maggio – Ottobre (picco luglio-settembre)',
+    name: 'Windsurf', group: 'mare', level: 'Principiante / Avanzato', season: 'Anno intero (vento migliore in primavera e autunno)',
+    keywords: ['windsurf'],
+    operators: [],
+    areas: ['Porto Pollo (Palau) — la baia dei venti', 'Punta Trettu (SU)', 'Capo Mannu (OR)', 'Poetto (Cagliari) per principianti']
+  },
+  {
+    name: 'Diving & Snorkeling', group: 'mare', level: 'Tutti i livelli (corsi PADI disponibili)', season: 'Maggio – Ottobre (picco luglio-settembre)',
+    keywords: ['diving', 'immersion', 'snorkel', 'sub', 'nautisub'],
     operators: [
-      { name: 'SubAquaDive Service (Villasimius)', tel: 'Vedi sito', web: 'subaquadive.it', note: 'Dal 1974. Snorkeling 40€, singola 60€, doppia 110€ (tutto incluso)' },
-      { name: 'Argonauta Diving (La Maddalena)', tel: 'Vedi sito', web: 'divinglamaddalena.com', note: '30+ anni attività. Mezza giornata 80€, giornata 150€' },
-      { name: 'Nautisub / Capo Galera (Alghero)', tel: 'Vedi sito', web: 'capo-galera.com', note: 'Capo Caccia, grotte subacquee, pareti di posidonia' }
+      { name: 'SubAquaDive Service (Villasimius)', tel: 'Vedi sito', web: 'subaquadive.it', note: 'Dal 1974. Snorkeling 40€, singola 60€' },
+      { name: 'Argonauta Diving (La Maddalena)', tel: 'Vedi sito', web: 'divinglamaddalena.com', note: '30+ anni. Mezza giornata 80€' },
+      { name: 'Capo Galera (Alghero)', tel: 'Vedi sito', web: 'capo-galera.com', note: 'Capo Caccia, grotte subacquee' }
     ],
-    areas: ['AMP Capo Carbonara (Villasimius) — posidonia, relitti WWII', 'Arcipelago La Maddalena — granito, limpidezza 40m', 'Capo Caccia (Alghero) — grotte subacquee spettacolari']
+    areas: ['AMP Capo Carbonara (Villasimius) — posidonia, relitti WWII', 'Arcipelago La Maddalena — granito, limpidezza 40m', 'Capo Caccia (Alghero) — grotte subacquee']
   },
   {
-    name: 'Mountain Bike & E-Bike',
-    level: 'Tutti i livelli',
-    season: 'Primavera / Autunno (evitare luglio-agosto)',
+    name: 'SUP — Stand Up Paddle', group: 'mare', level: 'Tutti i livelli', season: 'Maggio – Ottobre',
+    keywords: ['paddle', 'stand up'],
+    operators: [],
+    areas: ['Golfo di Orosei (calette e grotte)', 'Stagni di Nora e del Sinis', 'Porto Pollo (Palau)', 'Cala Gonone']
+  },
+  {
+    name: 'Vela & Gite in barca', group: 'mare', level: 'Tutti i livelli', season: 'Aprile – Ottobre',
+    keywords: ['barca', 'barche', 'gommon', 'vela', 'nautica', 'tour', 'maddalena', 'grotte', 'gite'],
+    operators: [],
+    areas: ['Arcipelago di La Maddalena (parco nazionale)', 'Golfo di Orosei — calette raggiungibili solo via mare', 'Costa Smeralda / Golfo Aranci', 'Capo Caccia — Grotte di Nettuno (Alghero)']
+  },
+  {
+    name: 'Mountain Bike & E-Bike', group: 'terra', level: 'Tutti i livelli', season: 'Primavera / Autunno (evitare luglio-agosto)',
+    keywords: ['bike', 'mtb', 'bici', 'e-bike', 'ebike', 'ciclo'],
     operators: [
-      { name: 'Sardinia Cycling (Cagliari/Costa Smeralda)', tel: 'Vedi sito', web: 'sardiniacycling.com', note: 'Dal 2008. MTB, gravel, e-bike, bici da strada. 2 sedi' },
-      { name: 'Bike4More', tel: 'Vedi sito', web: 'bike4more.com', note: 'Tour mono e multi-giorno con guida o GPS autonomo' },
-      { name: 'Explora Bike Planet (Siniscola)', tel: 'Vedi sito', web: 'explorabikeplanet.com', note: 'Zona Baronia e Siniscola, area Golfo di Orosei' }
+      { name: 'Sardinia Cycling (Cagliari/Costa Smeralda)', tel: 'Vedi sito', web: 'sardiniacycling.com', note: 'Dal 2008. MTB, gravel, e-bike, strada' },
+      { name: 'Bike4More', tel: 'Vedi sito', web: 'bike4more.com', note: 'Tour mono e multi-giorno, guida o GPS autonomo' },
+      { name: 'Explora Bike Planet (Siniscola)', tel: 'Vedi sito', web: 'explorabikeplanet.com', note: 'Baronia e Golfo di Orosei' }
     ],
-    areas: ['Gennargentu e Supramonte (sentieri panoramici)', 'Gallura (percorsi tra graniti e macchia)', 'Baronia-Siniscola (costa e interno)']
+    areas: ['Gennargentu e Supramonte (sentieri panoramici)', 'Gallura (tra graniti e macchia)', 'Baronia-Siniscola (costa e interno)']
   },
   {
-    name: 'Trekking',
-    level: 'Tutti i livelli (dal facile all\'estremo)',
-    season: 'Marzo – Giugno / Settembre – Novembre',
+    name: 'Trekking & Escursionismo', group: 'terra', level: 'Tutti i livelli (dal facile all\'estremo)', season: 'Marzo – Giugno / Settembre – Novembre',
+    keywords: ['trekking', 'selvaggio blu', 'cammino', 'escursion', 'trenino'],
     operators: [
       { name: 'Orosei AdvenTours (Golfo di Orosei)', tel: 'Vedi sito', web: 'golfodioro.com', note: 'Selvaggio Blu: 800-1200€ tutto incluso. 7gg, 45km' },
-      { name: 'Level24 (Supramonte)', tel: 'Vedi sito', web: 'level24.it', note: 'Guide alpine certificate, trekking Supramonte' },
-      { name: 'Trenino Verde ARST', tel: '+39 070 580246', web: 'treninoverde.com', note: '4 percorsi storici, 10-22€ a tratta, stagionale' }
+      { name: 'Level24 (Supramonte)', tel: 'Vedi sito', web: 'level24.it', note: 'Guide alpine certificate, Supramonte' },
+      { name: 'Trenino Verde ARST', tel: '+39 070 580246', web: 'treninoverde.com', note: '4 percorsi storici, 10-22€ a tratta' }
     ],
-    areas: ['Selvaggio Blu (7gg, difficile, costa Supramonte)', 'Gola di Gorropu (il Grand Canyon sardo)', 'Sentiero Italia Sardegna (percorso completo)', 'Monte Corrasi (Oliena, 1463m, panorama Barbagia)']
+    areas: ['Selvaggio Blu (7gg, difficile, costa Supramonte)', 'Gola di Gorropu (il Grand Canyon sardo)', 'Sentiero Italia Sardegna', 'Monte Corrasi (Oliena, 1463m)']
+  },
+  {
+    name: 'Equitazione', group: 'terra', level: 'Tutti i livelli', season: 'Anno intero (primavera e autunno ideali)',
+    keywords: ['equitazion', 'cavall', 'ippic', 'ranch', 'maneggio'],
+    operators: [],
+    areas: ['Penisola del Sinis (Cabras) — cavallini e spiagge', 'Costa Verde (Arbus) — dune di Piscinas', 'Giara di Gesturi — i cavallini selvatici', 'Supramonte e Barbagia']
+  },
+  {
+    name: 'Canyoning & Torrentismo', group: 'terra', level: 'Intermedio / Esperto', season: 'Aprile – Ottobre',
+    keywords: ['canyon', 'torrentism', 'forra'],
+    operators: [],
+    areas: ['Rio Pitrisconi (San Teodoro)', 'Gola di Gorropu e Riu Flumineddu (Supramonte)', 'Rio Sa Oche (Oliena)', 'Bau Mela (Villagrande)']
+  },
+  {
+    name: 'Speleologia & Grotte', group: 'terra', level: 'Tutti i livelli (visite turistiche e tecniche)', season: 'Anno intero',
+    keywords: ['speleo', 'caving'],
+    operators: [],
+    areas: ['Grotta di Su Marmuri (Ulassai)', 'Grotte Is Zuddas (Santadi)', 'Grotta del Bue Marino (Cala Gonone)', 'Grotta di San Giovanni (Domusnovas)']
+  },
+  {
+    name: 'Parapendio', group: 'aria', level: 'Voli biposto con istruttore / brevettati', season: 'Anno intero (condizioni migliori primavera-autunno)',
+    keywords: ['parapendio', 'paraglid', 'volo'],
+    operators: [],
+    areas: ['Punta Giradili (Baunei) — volo sul mare', 'Capo Caccia (Alghero)', 'Ogliastra e Gennargentu']
+  },
+  {
+    name: 'Golf', group: 'terra', level: 'Tutti i livelli', season: 'Anno intero (clima mite in inverno)',
+    keywords: ['golf club'],
+    operators: [],
+    areas: ['Pevero Golf Club (Porto Cervo) — 18 buche firma R.T. Jones', 'Is Molas Golf (Pula)', 'Is Arenas Golf (Narbolia)']
   }
 ];
 
@@ -2502,64 +2544,81 @@ function renderCamper(container) {
 }
 
 // ─── SPORT & AVVENTURA ────────────────────────────────────────
-function renderSports(container) {
+async function renderSports(container) {
+  const esc = (typeof escapeHtml === 'function') ? escapeHtml : (s => String(s || ''));
   const levelColors = {
-    'Principiante / Avanzato': '#32CD32',
-    'Intermedio / Esperto': '#FF8C00',
-    'Principiante / Pro': '#00BFFF',
-    'Tutti i livelli': '#B040FF',
-    'Intermedio': '#FFD700'
+    'Principiante / Avanzato': '#32CD32', 'Intermedio / Esperto': '#FF8C00',
+    'Principiante / Pro': '#00BFFF', 'Tutti i livelli': '#B040FF', 'Intermedio': '#FFD700',
   };
+  container.innerHTML = `<div class="tools-section-header"><h2>${t('tools.render.sports')}</h2></div><div class="ptool-loading">${t('ui.loading')}</div>`;
+  const esperienza = (await toolPois()).filter(p => p.cat === 'esperienza');
+  const norm = s => (s || '').toLowerCase();
+  const opKey = n => norm(n).replace(/[^a-z0-9]/g, '').slice(0, 12);
 
-  container.innerHTML = `
-    <div class="tools-section-header">
-      <h2>${t('tools.render.sports')}</h2>
-    </div>
-    <p class="section-subtitle">${t('tools.sub.sports')}</p>
-    <div class="sports-grid">
-      ${SPORTS_DATA.map(sport => {
-        const levelColor = levelColors[sport.level] || '#fff';
-        const operatorsHtml = sport.operators.map(op => `
-          <div class="sport-operator">
-            <strong>${op.name}</strong>
-            ${op.tel ? `<a href="tel:${op.tel}" class="op-tel">${op.tel}</a>` : ''}
-            ${op.web ? `<a href="https://${op.web}" target="_blank" class="op-web">${op.web}</a>` : ''}
-            ${op.note ? `<span class="op-note">${op.note}</span>` : ''}
-          </div>
-        `).join('');
-        const areasHtml = sport.areas.map(a => `<span class="area-tag">${a}</span>`).join('');
-        return `
-        <div class="sport-card glass-card">
-          <div class="sport-header">
-            <h3 class="sport-name">${sport.name}</h3>
-          </div>
-          <div class="sport-meta">
-            <div class="sport-row">
-              <span class="sport-label">${t('tools.sports.level')}</span>
-              <span class="sport-level" style="color:${levelColor}">${sport.level}</span>
-            </div>
-            <div class="sport-row">
-              <span class="sport-label">${t('tools.meta.stagione')}</span>
-              <span>${sport.season}</span>
-            </div>
-          </div>
-          <div class="sport-operators">
-            <div class="sport-label">${t('tools.sports.operators')}</div>
-            ${operatorsHtml}
-          </div>
-          <div class="sport-areas">
-            <div class="sport-label">${t('tools.sports.areas')}</div>
-            <div class="areas-list">${areasHtml}</div>
-          </div>
-        </div>`;
-      }).join('')}
-    </div>
-  `;
+  function opsForSport(sport) {
+    const seen = new Set(), out = [];
+    esperienza.filter(p => sport.keywords.some(k => norm(p.name).includes(k)))
+      .forEach(p => { const k = opKey(p.name); if (!seen.has(k)) { seen.add(k); out.push({ name: p.name, rating: p.rating, web: p.web, tel: p.tel, note: p.gsummary || (p.description || '').split('.')[0], mapid: p.id }); } });
+    (sport.operators || []).forEach(o => { const k = opKey(o.name); if (!seen.has(k)) { seen.add(k); out.push(o); } });
+    return out.slice(0, 6);
+  }
+  function opHTML(op) {
+    const web = op.web && op.web !== '#' ? _toolUrl(op.web) : '';
+    const rating = op.rating ? `<span class="sport-op-rating">${TOOL_ICONS.star} ${(typeof op.rating === 'number' ? op.rating.toFixed(1) : op.rating)}</span>` : '';
+    const tel = op.tel && op.tel !== 'Vedi sito' ? `<a href="tel:${esc(String(op.tel).replace(/\s/g, ''))}" class="op-link">${TOOL_ICONS.phone} ${esc(op.tel)}</a>` : '';
+    return `
+      <div class="sport-operator">
+        <div class="sport-op-top"><strong>${esc(op.name)}</strong>${rating}</div>
+        ${op.note ? `<span class="op-note">${esc(op.note)}</span>` : ''}
+        <div class="sport-op-links">
+          ${web ? `<a href="${esc(web)}" target="_blank" rel="noopener" class="op-link">${t('ui.official_site')}</a>` : ''}
+          ${tel}
+          ${op.mapid ? `<button type="button" class="op-link op-map" data-mapid="${esc(op.mapid)}">${TOOL_ICONS.pin} ${t('sardinai.cta_map')}</button>` : ''}
+        </div>
+      </div>`;
+  }
 
-  gsap.fromTo('.sport-card',
-    { opacity: 0, y: 25, scale: 0.96 },
-    { opacity: 1, y: 0, scale: 1, stagger: 0.1, duration: 0.4, ease: 'back.out(1.2)' }
-  );
+  const GROUPS = [
+    { k: 'tutti', l: t('ui.all') }, { k: 'mare', l: t('ui.sport_sea') },
+    { k: 'terra', l: t('ui.sport_land') }, { k: 'aria', l: t('ui.sport_air') },
+  ];
+
+  function render(group) {
+    const list = group === 'tutti' ? SPORTS_DATA : SPORTS_DATA.filter(s => s.group === group);
+    container.innerHTML = `
+      <div class="tools-section-header"><h2>${t('tools.render.sports')}</h2></div>
+      <p class="section-subtitle">${t('tools.sub.sports')} · ${SPORTS_DATA.length} discipline</p>
+      <div class="tool-filter-pills">
+        ${GROUPS.map(g => `<button class="filter-pill${g.k === group ? ' active' : ''}" data-grp="${g.k}">${g.l}</button>`).join('')}
+      </div>
+      <div class="sports-grid">
+        ${list.map(sport => {
+          const levelColor = levelColors[sport.level] || '#B040FF';
+          const ops = opsForSport(sport);
+          return `
+          <div class="sport-card glass-card">
+            <div class="sport-header"><h3 class="sport-name">${esc(sport.name)}</h3></div>
+            <div class="sport-meta">
+              <div class="sport-row"><span class="sport-label">${t('tools.sports.level')}</span><span class="sport-level" style="color:${levelColor}">${esc(sport.level)}</span></div>
+              <div class="sport-row"><span class="sport-label">${t('tools.meta.stagione')}</span><span>${esc(sport.season)}</span></div>
+            </div>
+            ${ops.length ? `<div class="sport-operators"><div class="sport-label">${t('tools.sports.operators')}</div>${ops.map(opHTML).join('')}</div>` : ''}
+            <div class="sport-areas"><div class="sport-label">${t('tools.sports.areas')}</div><div class="areas-list">${sport.areas.map(a => `<span class="area-tag">${esc(a)}</span>`).join('')}</div></div>
+          </div>`;
+        }).join('')}
+      </div>`;
+    container.querySelectorAll('.filter-pill[data-grp]').forEach(btn => btn.addEventListener('click', () => render(btn.dataset.grp)));
+    if (typeof gsap !== 'undefined') gsap.fromTo('.sport-card', { opacity: 0, y: 20, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, stagger: 0.06, duration: 0.35, ease: 'power2.out' });
+  }
+
+  if (container.dataset.sportMapBound !== '1') {
+    container.dataset.sportMapBound = '1';
+    container.addEventListener('click', e => {
+      const btn = e.target.closest && e.target.closest('.op-map[data-mapid]');
+      if (btn && typeof openMapAtPoi === 'function') openMapAtPoi(btn.dataset.mapid);
+    });
+  }
+  render('tutti');
 }
 
 // ─── TRASPORTI ───────────────────────────────────────────────
