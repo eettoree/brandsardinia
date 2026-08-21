@@ -978,6 +978,7 @@ body:not(.world-active) .home-btn:hover { background: rgba(200, 16, 46, 0.08); }
 
 /* ── MAIN SECTIONS ─────────────────────────────────────────── */
 .main-section {
+  display: none; /* mostrate solo via showSection(); evita il "leak" in home al primo load */
   min-height: calc(100vh - 65px);
   padding: 40px 24px 60px;
   max-width: 1100px;
@@ -6234,6 +6235,18 @@ body[data-section="cosa-facciamo"] .nav-btn[data-sec="cosa-facciamo"] {
 .page-tags .ptool-tag { font-size: 0.82rem; padding: 6px 14px; border-radius: 8px; }
 .page-cta { text-align: center; margin-top: 28px; }
 .page-cta .btn { padding: 15px 34px; font-size: 1.3rem; border-radius: 12px; }
+
+/* ═══ RIASSUNTI PAGINE IN HOME (Cosa facciamo / Chi siamo) ═══ */
+.home-pages {
+  max-width: 960px; margin: 10px auto 72px; padding: 0 24px;
+  display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.home-page-card {
+  padding: 32px 30px; display: flex; flex-direction: column; align-items: flex-start; text-align: left;
+}
+.home-page-title { font-size: 1.5rem; font-weight: 700; color: var(--text); margin: 6px 0 12px; }
+.home-page-summary { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px; }
+.home-page-card .btn { margin-top: auto; padding: 12px 24px; font-size: 0.95rem; }
 
 @media (max-width: 640px) {
   .app-navbar { padding: 12px 14px; }
