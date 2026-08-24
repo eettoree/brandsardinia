@@ -165,12 +165,17 @@ textarea:focus-visible,
   border-radius: 42% 42% 0 0;
   transition: transform 0.42s cubic-bezier(0.7, 0, 0.2, 1), border-radius 0.42s cubic-bezier(0.7, 0, 0.2, 1);
 }
-.btn-outline:hover::before,
-.filter-pill:not(.active):hover::before,
-.tools-back-btn:hover::before,
-.lang-btn:hover::before {
-  transform: translateY(0);
-  border-radius: 0;
+/* hover-driven fill/color solo dove l'hover esiste davvero (no sticky su touch) */
+@media (hover: hover) {
+  .btn-outline:hover::before,
+  .filter-pill:not(.active):hover::before,
+  .tools-back-btn:hover::before,
+  .lang-btn:hover::before {
+    transform: translateY(0);
+    border-radius: 0;
+  }
+  .btn-outline:hover { color: var(--white); border-color: var(--red); }
+  .btn-ghost:hover { border-color: var(--red); color: var(--red); }
 }
 
 .btn-outline {
@@ -180,13 +185,11 @@ textarea:focus-visible,
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
-.btn-outline:hover { color: var(--white); border-color: var(--red); }
 
 .btn-primary { background: var(--red); border-color: var(--red); color: var(--white); }
 .btn-primary:hover { background: var(--red-dark); border-color: var(--red-dark); color: var(--white); transform: translateY(-1px); box-shadow: 0 6px 18px var(--red-glow); }
 
 .btn-ghost { background: var(--glass); border-color: var(--border); color: var(--text); }
-.btn-ghost:hover { border-color: var(--red); color: var(--red); }
 
 .btn-sm { padding: 6px 12px; font-size: 0.8rem; }
 
@@ -215,14 +218,16 @@ textarea:focus-visible,
   border-radius: 42% 42% 0 0;
   transition: transform 0.42s cubic-bezier(0.7, 0, 0.2, 1), border-radius 0.42s cubic-bezier(0.7, 0, 0.2, 1);
 }
-#btn-route-planner:hover::before, .pin-toggle-btn:hover::before, .map-filter-toggle:hover::before,
-.map-reset-btn:hover::before, .carousel-btn:hover::before, .rp-gmaps-btn:hover::before {
-  transform: translateY(0);
-  border-radius: 0;
+@media (hover: hover) {
+  #btn-route-planner:hover::before, .pin-toggle-btn:hover::before, .map-filter-toggle:hover::before,
+  .map-reset-btn:hover::before, .carousel-btn:hover::before, .rp-gmaps-btn:hover::before {
+    transform: translateY(0);
+    border-radius: 0;
+  }
+  #btn-route-planner:hover, .pin-toggle-btn:hover, .map-filter-toggle:hover,
+  .map-reset-btn:hover, .carousel-btn:hover, .rp-gmaps-btn:hover { color: #fff !important; }
+  .carousel-btn:hover svg, .map-reset-btn:hover svg { stroke: #fff; }
 }
-#btn-route-planner:hover, .pin-toggle-btn:hover, .map-filter-toggle:hover,
-.map-reset-btn:hover, .carousel-btn:hover, .rp-gmaps-btn:hover { color: #fff !important; }
-.carousel-btn:hover svg, .map-reset-btn:hover svg { stroke: #fff; }
 
 /* CTA piena route planner: lift coerente */
 .rp-calc-btn:hover { background: var(--red-dark); transform: translateY(-1px); box-shadow: 0 6px 18px var(--red-glow); }
@@ -514,8 +519,10 @@ body.world-active .scroll-invite-chevron { stroke: #333; }
   font-family: var(--font-sans);
 }
 .lang-btn.open { background: rgba(200,16,46,0.07); }
-.lang-btn:hover { color: var(--white); }
-.lang-btn:hover .lang-chevron { stroke: var(--white); }
+@media (hover: hover) {
+  .lang-btn:hover { color: var(--white); }
+  .lang-btn:hover .lang-chevron { stroke: var(--white); }
+}
 .lang-btn .lang-code { min-width: 18px; }
 .lang-chevron {
   stroke: var(--red);
@@ -1171,8 +1178,10 @@ body:not(.world-active) .home-btn:hover { background: rgba(200, 16, 46, 0.08); }
   border-radius: 42% 42% 0 0;
   transition: transform 0.42s cubic-bezier(0.7, 0, 0.2, 1), border-radius 0.42s cubic-bezier(0.7, 0, 0.2, 1);
 }
-.sai-starter:hover::before, .sai-chip:hover::before { transform: translateY(0); border-radius: 0; }
-.sai-starter:hover, .sai-chip:hover { color: #fff; }
+@media (hover: hover) {
+  .sai-starter:hover::before, .sai-chip:hover::before { transform: translateY(0); border-radius: 0; }
+  .sai-starter:hover, .sai-chip:hover { color: #fff; }
+}
 .sai-starter { text-align: left; padding: 13px 16px; border-radius: 12px; font-size: 0.85rem; }
 
 /* Chip di follow-up (pill) */
@@ -2381,8 +2390,10 @@ body:not(.world-active) .home-btn:hover { background: rgba(200, 16, 46, 0.08); }
   transition: color 0.3s ease, border-color 0.25s ease, transform 0.2s ease;
 }
 .tools-back-btn svg { transition: transform 0.25s cubic-bezier(0.7, 0, 0.2, 1); }
-.tools-back-btn:hover { color: var(--white); border-color: var(--red); }
-.tools-back-btn:hover svg { transform: translateX(-3px); }
+@media (hover: hover) {
+  .tools-back-btn:hover { color: var(--white); border-color: var(--red); }
+  .tools-back-btn:hover svg { transform: translateX(-3px); }
+}
 
 /* ── EVENTS ────────────────────────────────────────────────── */
 .events-grid {
@@ -2463,12 +2474,12 @@ body:not(.world-active) .home-btn:hover { background: rgba(200, 16, 46, 0.08); }
 /* ── VIEW TOGGLE ────────────────────────────────────────────── */
 .view-toggle {
   position: relative;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* due colonne sempre identiche, a prescindere dal testo */
   background: var(--glass);
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 3px;
-  gap: 0;
 }
 
 .view-toggle-indicator {
@@ -2479,14 +2490,18 @@ body:not(.world-active) .home-btn:hover { background: rgba(200, 16, 46, 0.08); }
   bottom: 3px;
   background: var(--red);
   border-radius: 7px;
-  transition: left 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(0);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   pointer-events: none;
 }
-.view-toggle-indicator.right { left: calc(50%); }
+.view-toggle-indicator.right { transform: translateX(100%); }
 
 .view-toggle-btn {
   position: relative;
   z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: none;
   border: none;
   padding: 6px 14px;
@@ -2497,7 +2512,6 @@ body:not(.world-active) .home-btn:hover { background: rgba(200, 16, 46, 0.08); }
   border-radius: 7px;
   transition: color 0.2s;
   white-space: nowrap;
-  flex: 1;
 }
 .view-toggle-btn.active { color: #fff; }
 
@@ -2691,7 +2705,7 @@ body:not(.world-active) .home-btn:hover { background: rgba(200, 16, 46, 0.08); }
   transition: all 0.2s;
   white-space: nowrap;
 }
-.filter-pill:not(.active):hover { border-color: var(--red); color: #fff; }
+@media (hover: hover) { .filter-pill:not(.active):hover { border-color: var(--red); color: #fff; } }
 .filter-pill.active { background: var(--red); border-color: var(--red); color: #fff; }
 
 /* ── SENTIERI ────────────────────────────────────────────────── */
@@ -3550,7 +3564,7 @@ body:not(.world-active) .home-btn:hover { background: rgba(200, 16, 46, 0.08); }
   cursor: pointer;
   transition: color .18s ease, border-color .18s ease, background .18s ease;
 }
-.op-link:hover { color: var(--red); border-color: rgba(200,16,46,0.4); }
+@media (hover: hover) { .op-link:hover { color: var(--red); border-color: rgba(200,16,46,0.4); } }
 .op-map {
   color: #fff;
   background: var(--red);
@@ -6188,8 +6202,10 @@ body[data-section="sardinai"] .bs-legal-footer { display: none; }
   background: var(--red); transform: translateY(101%); border-radius: 42% 42% 0 0;
   transition: transform 0.42s cubic-bezier(0.7,0,0.2,1), border-radius 0.42s cubic-bezier(0.7,0,0.2,1);
 }
-.nav-btn:hover { color: #fff; border-color: var(--red); }
-.nav-btn:hover::before { transform: translateY(0); border-radius: 0; }
+@media (hover: hover) {
+  .nav-btn:hover { color: #fff; border-color: var(--red); }
+  .nav-btn:hover::before { transform: translateY(0); border-radius: 0; }
+}
 /* stato attivo: la sezione corrente evidenzia il proprio bottone */
 body[data-section="chi-siamo"] .nav-btn[data-sec="chi-siamo"],
 body[data-section="cosa-facciamo"] .nav-btn[data-sec="cosa-facciamo"] {
