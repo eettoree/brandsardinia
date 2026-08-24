@@ -6228,24 +6228,25 @@ body[data-section="cosa-facciamo"] .nav-btn[data-sec="cosa-facciamo"] {
 .vision-card p + p { margin-top: 14px; }
 .vision-card .vision-lead { color: var(--text); font-weight: 600; font-size: 1.02rem; }
 /* ═══ FOUNDER ═══ */
-.founder { display: grid; grid-template-columns: 240px 1fr; gap: 34px; align-items: start; }
+.founder { display: grid; grid-template-columns: 280px 1fr; gap: 38px; align-items: start; }
 .founder-photo {
-  width: 100%; aspect-ratio: 3 / 4; border-radius: 16px; overflow: hidden;
-  border: 1px solid var(--border);
+  width: 100%; border-radius: 16px; overflow: hidden; border: 1px solid var(--border);
+  align-self: start;
 }
 .founder-photo-ph {
-  height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
+  aspect-ratio: 3 / 4; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
   background: linear-gradient(160deg, var(--bg2), var(--bg3));
   color: var(--text-muted);
 }
 .founder-photo-ph span { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.3px; }
-.founder-img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.founder-name { font-size: 1.4rem; font-weight: 700; color: var(--text); margin-bottom: 4px; }
-.founder-role { color: var(--red); font-weight: 600; font-size: 0.85rem; margin-bottom: 16px; }
-.founder-text .info-card-desc { margin-bottom: 12px; }
+.founder-img { width: 100%; height: auto; display: block; }
+.founder-name { font-size: 1.5rem; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+.founder-role { color: var(--red); font-weight: 600; font-size: 0.85rem; margin-bottom: 18px; }
+.founder-text .info-card-desc { margin-bottom: 14px; }
+@media (min-width: 641px) { .founder-photo { position: sticky; top: 88px; } }
 @media (max-width: 640px) {
   .founder { grid-template-columns: 1fr; gap: 22px; }
-  .founder-photo { max-width: 240px; margin: 0 auto; }
+  .founder-photo { max-width: 260px; margin: 0 auto; }
 }
 
 .contact-card { text-align: center; padding: 40px 28px; max-width: 560px; margin: 0 auto; }
