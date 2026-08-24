@@ -343,6 +343,7 @@ function bindLangSelectors() {
 // ─── NAVIGAZIONE SEZIONI ─────────────────────────────────────
 function showSection(name) {
   AppState.currentSection = name;
+  window.scrollTo(0, 0); // ogni sezione si apre sempre dall'inizio pagina
   document.body.dataset.section = name;
   document.body.classList.remove('world-active');
   document.body.classList.toggle('section-map', name === 'map');

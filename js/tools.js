@@ -696,6 +696,8 @@ function dispatchToolRender(name, contentArea) {
 
 function openToolSection(name) {
   activeToolSection = name;
+  // Ogni tool si apre sempre dall'inizio pagina (non eredita lo scroll precedente)
+  window.scrollTo(0, 0);
   const menu = document.getElementById('tools-menu');
   const content = document.getElementById('tools-content');
 
@@ -720,6 +722,7 @@ function openToolSection(name) {
 
 function closeToolSection() {
   activeToolSection = null;
+  window.scrollTo(0, 0);
   const menu = document.getElementById('tools-menu');
   const content = document.getElementById('tools-content');
 
