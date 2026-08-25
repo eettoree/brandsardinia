@@ -1840,7 +1840,8 @@
     "servizi": "Istruttore, kayak singolo o doppio, giubbotto, snorkeling, pranzo al sacco",
     "costo": "Mezza giornata: 50-90€. Giornata intera: 80-140€",
     "tel": "+39 0784 93177",
-    "orari": "Aprile-ottobre: 8:30-17:30."
+    "orari": "Aprile-ottobre: 8:30-17:30.",
+    "web": "www.primasardegna.com"
   },
   {
     "id": "climbing-ulassai",
@@ -2120,7 +2121,8 @@
     ],
     "gsummary": "Sito archeologico con rovine in pietra di insediamento nuragico dell'Età del Bronzo.",
     "photo": "assets/images/poi/nuraghe-palmavera.webp",
-    "photoCredit": "Photo2023 · CC BY 4.0 · Wikimedia"
+    "photoCredit": "Photo2023 · CC BY 4.0 · Wikimedia",
+    "web": "nuraghepalmavera.it"
   },
   {
     "id": "lago-baratz",
@@ -3121,7 +3123,8 @@
       "domenica: 08:30–19:30"
     ],
     "gsummary": "Museo dedicato alla storia antica della Sardegna con vari reperti archeologici, tra cui gioielli punici.",
-    "city": "Cagliari"
+    "city": "Cagliari",
+    "web": "museinazionalicagliari.cultura.gov.it"
   },
   {
     "id": "museo-carnevale-mamoiada",
@@ -3176,7 +3179,8 @@
     ],
     "photo": "assets/images/poi/museo-tonnara-stintino.webp",
     "photoCredit": "Gianni Careddu · CC BY-SA 4.0 · Wikimedia",
-    "city": "Stintino"
+    "city": "Stintino",
+    "web": "www.mutstintino.com"
   },
   {
     "id": "museo-ossidiana",
@@ -3315,7 +3319,8 @@
     ],
     "gsummary": "Santuario che fa parte di un complesso del XIV secolo e custodisce un'antica statua venerata della Madonna.",
     "photo": "assets/images/poi/santuario-bonaria.webp",
-    "photoCredit": "Angelo · CC BY-SA 4.0 · Wikimedia"
+    "photoCredit": "Angelo · CC BY-SA 4.0 · Wikimedia",
+    "web": "www.bonaria.eu"
   },
   {
     "id": "basilica-san-gavino",
@@ -3420,7 +3425,8 @@
       "sabato: 10:00–19:00",
       "domenica: 10:00–13:00"
     ],
-    "gsummary": "Chiesa edificata sopra una grotta nel 430 d.C. e modificata nel '700, con preziosi marmi policromi e dipinti."
+    "gsummary": "Chiesa edificata sopra una grotta nel 430 d.C. e modificata nel '700, con preziosi marmi policromi e dipinti.",
+    "web": "cagliariturismo.comune.cagliari.it/it/vivicagliari/chiesa-di-santefisio-stampace"
   },
   {
     "id": "faradda-candelieri",
@@ -3433,7 +3439,8 @@
     "servizi": "Processione gratuita, tribune a pagamento, concerti serali, mercatino artigianato",
     "costo": "Processione: gratuita. Tribune: 15-25€",
     "tel": "+39 079 200 8072",
-    "orari": "14 agosto: processione ore 17:30. Serata musicale ore 21:00."
+    "orari": "14 agosto: processione ore 17:30. Serata musicale ore 21:00.",
+    "web": "www.sardegnaturismo.it/it/esplora/cattedrale-di-san-nicola"
   },
   {
     "id": "autunno-in-barbagia",
@@ -3470,7 +3477,8 @@
       "venerdì: 09:00–20:00",
       "sabato: 09:00–20:00",
       "domenica: 09:00–17:00"
-    ]
+    ],
+    "web": "www.coltelliartigianalipattada.com"
   },
   {
     "id": "murats-samugheo",
@@ -3595,7 +3603,8 @@
       "venerdì: 08:30–12:30, 16:15–22:30",
       "sabato: 08:30–12:30, 16:15–22:30",
       "domenica: 17:00–22:30"
-    ]
+    ],
+    "web": "www.portodiolbia.it"
   },
   {
     "id": "porto-torres",
@@ -3619,7 +3628,8 @@
       "venerdì: 08:30–13:30, 14:30–20:20",
       "sabato: 08:30–13:30, 14:30–20:20",
       "domenica: 16:45–20:20"
-    ]
+    ],
+    "web": "www.tirrenia.it/porti/porto-torres"
   },
   {
     "id": "porto-golfo-aranci",
@@ -3645,7 +3655,8 @@
       "domenica: 12:00–15:00"
     ],
     "photo": "assets/images/poi/porto-golfo-aranci.webp",
-    "photoCredit": "Gianni Careddu · CC BY-SA 4.0 · Wikimedia"
+    "photoCredit": "Gianni Careddu · CC BY-SA 4.0 · Wikimedia",
+    "web": "www.portodigolfoaranci.it"
   },
   {
     "id": "ospedale-cagliari",
@@ -3693,7 +3704,8 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "web": "www.aousassari.it"
   },
   {
     "id": "ospedale-nuoro",
@@ -3717,7 +3729,8 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "web": "www.aslnuoro.it"
   },
   {
     "id": "ospedale-oristano",
@@ -3861,7 +3874,8 @@
       "venerdì: 09:00–20:00",
       "sabato: 09:00–20:00",
       "domenica: 09:00–20:00"
-    ]
+    ],
+    "web": "www.cagliariturismo.it"
   },
   {
     "id": "cala-di-volpe",
@@ -3978,7 +3992,8 @@
     "orari": "Aperto tutto l'anno.",
     "rating": 4.2,
     "reviews": 1738,
-    "gsummary": "Camere semplici in hotel confortevole con piscina scoperta, ristorante e colazione."
+    "gsummary": "Camere semplici in hotel confortevole con piscina scoperta, ristorante e colazione.",
+    "web": "www.hotelmistral2oristano.it"
   },
   {
     "id": "colonna-beach",
@@ -4090,7 +4105,8 @@
     "orari": "Aperto aprile-ottobre.",
     "rating": 3.6,
     "reviews": 2107,
-    "gsummary": "Vivace resort in stile villaggio con chalet confortevoli, piscine scoperte e ristorante con pizzeria."
+    "gsummary": "Vivace resort in stile villaggio con chalet confortevoli, piscine scoperte e ristorante con pizzeria.",
+    "web": "www.torredelporticciolo.it"
   },
   {
     "id": "camping-la-foce",
@@ -4165,7 +4181,8 @@
       "venerdì: 09:00–19:00",
       "sabato: Chiuso",
       "domenica: Chiuso"
-    ]
+    ],
+    "web": "www.campingsanteodoro.com"
   },
   {
     "id": "locanda-deriu",
@@ -4189,7 +4206,8 @@
       "venerdì: 19:00–22:30",
       "sabato: 19:00–22:30",
       "domenica: Chiuso"
-    ]
+    ],
+    "web": "www.fondazionebosa.it"
   },
   {
     "id": "su-nuraxi-residenza",
@@ -4387,7 +4405,8 @@
       "sabato: Chiuso",
       "domenica: Chiuso"
     ],
-    "city": "Sant'Anna Arresi"
+    "city": "Sant'Anna Arresi",
+    "web": "www.cantinamesa.com/it-IT"
   },
   {
     "id": "cantina-jerzu",
@@ -4452,7 +4471,8 @@
       "venerdì: 09:30–13:00, 16:00–19:00",
       "sabato: 09:30–13:00",
       "domenica: Chiuso"
-    ]
+    ],
+    "web": "www.spanubottarga.com"
   },
   {
     "id": "pecorino-fonni",
@@ -4544,7 +4564,8 @@
     "servizi": "Tour 3 cantine (4h), 6+ vini, abbinamento cibo, transfer da/per Nuoro su richiesta",
     "costo": "Tour completo: 45-65€/persona. Transfer: +15€",
     "tel": "+39 348 123 4567",
-    "orari": "Ven-sab-dom. Prenotazione minimo 48h prima."
+    "orari": "Ven-sab-dom. Prenotazione minimo 48h prima.",
+    "web": "www.cantinamussennore.com"
   },
   {
     "id": "corsi-cucina-sarda",
@@ -4669,7 +4690,8 @@
       "venerdì: 07:00–20:30",
       "sabato: 07:00–20:30",
       "domenica: 07:00–20:30"
-    ]
+    ],
+    "web": "www.peverogolfclub.com"
   },
   {
     "id": "monte-corrasi",
@@ -4708,7 +4730,8 @@
       "venerdì: 08:30–12:30, 14:30–16:30",
       "sabato: Chiuso",
       "domenica: Chiuso"
-    ]
+    ],
+    "web": "www.camminominerariodisantabarbara.org/itinerari-il-cammino"
   },
   {
     "id": "diving-capo-caccia",
@@ -4756,7 +4779,8 @@
       "venerdì: 08:00–19:00",
       "sabato: 08:00–19:00",
       "domenica: 08:00–19:00"
-    ]
+    ],
+    "web": "www.tavolaradiving.it"
   },
   {
     "id": "kayak-alghero-capo",
@@ -4842,7 +4866,8 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "web": "www.turismobaunei.eu/my-product/forrola-e-punta-giradili"
   },
   {
     "id": "mtb-dorgali",
@@ -4873,7 +4898,8 @@
     "orari": "Tutto l'anno: 7:00-20:00.",
     "rating": 4.4,
     "reviews": 223,
-    "gsummary": "Hotel informale con spa, piscine termali coperta e scoperta, ristorante, campo da tennis e palestra."
+    "gsummary": "Hotel informale con spa, piscine termali coperta e scoperta, ristorante, campo da tennis e palestra.",
+    "web": "www.termeaurora.it"
   },
   {
     "id": "terme-sardara",
@@ -5000,7 +5026,8 @@
     ],
     "gsummary": "Paesaggio marino protetto composta da baie e isole con aree attrezzate per nuoto, immersioni e pesca sportiva.",
     "photo": "assets/images/poi/tavolara.webp",
-    "photoCredit": "Mikołaj Kirschke · CC BY-SA 3.0 · Wikimedia"
+    "photoCredit": "Mikołaj Kirschke · CC BY-SA 3.0 · Wikimedia",
+    "web": "www.amptavolara.com/home-page"
   },
   {
     "id": "mal-di-ventre",
@@ -5199,7 +5226,8 @@
     ],
     "gsummary": "Sistema di grotte calcaree con tour guidati tra formazioni uniche, come stalattiti ed elictiti.",
     "photo": "assets/images/poi/grotta-is-zuddas.webp",
-    "photoCredit": "Olaf Tausch · CC BY 3.0 · Wikimedia"
+    "photoCredit": "Olaf Tausch · CC BY 3.0 · Wikimedia",
+    "web": "www.grotteiszuddas.com"
   },
   {
     "id": "grotta-su-marmuri",
@@ -5310,7 +5338,8 @@
       "domenica: 09:30–13:00, 15:30–18:00"
     ],
     "photo": "assets/images/poi/nuraghe-genna-maria.webp",
-    "photoCredit": "Francesco Cubeddu · CC BY-SA 4.0 · Wikimedia"
+    "photoCredit": "Francesco Cubeddu · CC BY-SA 4.0 · Wikimedia",
+    "web": "www.gennamaria.it"
   },
   {
     "id": "santa-cristina",
@@ -5336,7 +5365,8 @@
       "domenica: 08:30–20:30"
     ],
     "photo": "assets/images/poi/santa-cristina.webp",
-    "photoCredit": "Carlo Pelagalli · CC BY-SA 3.0 · Wikimedia"
+    "photoCredit": "Carlo Pelagalli · CC BY-SA 3.0 · Wikimedia",
+    "web": "pozzosantacristina.com"
   },
   {
     "id": "nuraghe-is-paras",
@@ -5362,7 +5392,8 @@
       "domenica: 10:00–13:00, 15:30–18:30"
     ],
     "photo": "assets/images/poi/nuraghe-is-paras.webp",
-    "photoCredit": "Marta Pais · CC BY-SA 4.0 · Wikimedia"
+    "photoCredit": "Marta Pais · CC BY-SA 4.0 · Wikimedia",
+    "web": "www.facebook.com/NuragheIsParasIsili"
   },
   {
     "id": "tiscali",
@@ -5375,7 +5406,8 @@
     "servizi": "Solo sentiero segnato. Guide a Oliena su prenotazione.",
     "costo": "5€ accesso area. Guide: 80-120€/gruppo",
     "tel": "+39 0784 285024",
-    "orari": "Tutto l'anno. Aprile-ottobre preferibile. Non adatto in inverno senza guida."
+    "orari": "Tutto l'anno. Aprile-ottobre preferibile. Non adatto in inverno senza guida.",
+    "web": "www.ghivine.com/tiscali.htm"
   },
   {
     "id": "nuraghe-orolo",
@@ -5428,7 +5460,8 @@
       "domenica: 10:00–20:00"
     ],
     "photo": "assets/images/poi/montessu.webp",
-    "photoCredit": "Cristiano Cani · CC BY-SA 3.0 · Wikimedia"
+    "photoCredit": "Cristiano Cani · CC BY-SA 3.0 · Wikimedia",
+    "web": "www.facebook.com/MontessuAreaArcheologica"
   },
   {
     "id": "sant-andrea-priu",
@@ -5454,7 +5487,8 @@
       "domenica: 10:00–19:00"
     ],
     "photo": "assets/images/poi/sant-andrea-priu.webp",
-    "photoCredit": "Gianni Careddu · CC BY-SA 4.0 · Wikimedia"
+    "photoCredit": "Gianni Careddu · CC BY-SA 4.0 · Wikimedia",
+    "web": "santandreapriu.mystrikingly.com"
   },
   {
     "id": "tombe-giganti-madau",
@@ -5578,7 +5612,8 @@
     ],
     "photo": "assets/images/poi/sulcis-sant-antioco.webp",
     "photoCredit": "Alex10 · CC0 · Wikimedia",
-    "city": "Sant'Antioco"
+    "city": "Sant'Antioco",
+    "web": "parcostoricoarcheologicosantantioco.it"
   },
   {
     "id": "antas",
@@ -5685,7 +5720,8 @@
     "costo": "5€ adulti / gratuito bambini <6",
     "tel": "+39 0782 869007",
     "orari": "Mar-dom 9:00-13:00 / 15:00-19:00 (estate fino 20:00). Lun chiuso.",
-    "city": "Laconi"
+    "city": "Laconi",
+    "web": "www.facebook.com/MenhirMuseum"
   },
   {
     "id": "museo-sanna-sassari",
@@ -5713,7 +5749,8 @@
     "gsummary": "Tessuti, gioielli e opere d'arte di diversi periodi della storia sarda esposti in un edificio in stile neoclassico.",
     "photo": "assets/images/poi/museo-sanna-sassari.webp",
     "photoCredit": "Photo2023 · CC BY 4.0 · Wikimedia",
-    "city": "Sassari"
+    "city": "Sassari",
+    "web": "museosanna.cultura.gov.it"
   },
   {
     "id": "ospedale-olbia",
@@ -5737,7 +5774,8 @@
       "venerdì: Aperto 24 ore su 24",
       "sabato: Aperto 24 ore su 24",
       "domenica: Aperto 24 ore su 24"
-    ]
+    ],
+    "web": "www.aslgallura.it"
   },
   {
     "id": "ospedale-alghero",
@@ -6997,7 +7035,8 @@
     "orari": "",
     "rating": 4.6,
     "reviews": 429,
-    "gsummary": "Laid-back rooms in a family-run hotel close to the beach, plus breakfast & a serene garden."
+    "gsummary": "Laid-back rooms in a family-run hotel close to the beach, plus breakfast & a serene garden.",
+    "web": "www.hotelvecchiamarina.it"
   },
   {
     "id": "villa-barbarina",
@@ -7584,7 +7623,8 @@
     "tel": "+39 347 3091960",
     "orari": "24/7",
     "rating": 4.4,
-    "reviews": 123
+    "reviews": 123,
+    "web": "www.agriturismoiloghe.it"
   },
   {
     "id": "al-906-operaio",
@@ -7828,7 +7868,8 @@
       "venerdì: 18:30–23:00",
       "sabato: 18:30–23:00",
       "domenica: 18:30–23:00"
-    ]
+    ],
+    "web": "www.dafilipposrls.com"
   },
   {
     "id": "hotel-ristorante-su-gologone",
