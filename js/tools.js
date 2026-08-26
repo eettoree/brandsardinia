@@ -1484,9 +1484,9 @@ function renderProdotti(container) {
             <div class="prodotto-zona">${p.zona}</div>
             <p class="prodotto-desc">${p.desc}</p>
             <div class="prodotto-dove"><span class="prodotto-dove-label">${t('tools.meta.dove_acquistare')}</span> ${p.dove}</div>
-            <div class="prodotto-footer">
-              <a href="${p.link}" target="_blank" class="prodotto-link">${t('tools.action.discover')}</a>
-            </div>
+            ${p.link ? `<div class="prodotto-footer">
+              <a href="${_toolUrl(p.link)}" target="_blank" rel="noopener" class="prodotto-link">${t('tools.action.discover')}</a>
+            </div>` : ''}
           </div>`).join('')}
       </div>`;
     container.querySelectorAll('.filter-pill').forEach(btn =>
