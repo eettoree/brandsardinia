@@ -3026,7 +3026,7 @@ const SOCIAL_WALL_DATA = [
     hashtags: ['#CostaSmeralda', '#Sardinia', '#2theisland', '#SardiniaTravel', '#ItalyTravel'],
     likes: 9800, comments: 378, daysAgo: 4, topics: ['spiagge', 'viaggi'],
     gradient: 'linear-gradient(135deg, #003d3d 0%, #006060 50%, #00c0a0 100%)',
-    photo: null,
+    photo: 'assets/images/social/3.webp',
     igLink: 'https://www.instagram.com/2theisland_/'
   },
   {
@@ -3036,7 +3036,7 @@ const SOCIAL_WALL_DATA = [
     hashtags: ['#CapoTesta', '#SantaTeresaGallura', '#Gallura', '#Sardinia', '#Granite'],
     likes: 6340, comments: 212, daysAgo: 9, topics: ['natura', 'viaggi'],
     gradient: 'linear-gradient(135deg, #1a2744 0%, #2d5986 40%, #e8a857 100%)',
-    photo: null,
+    photo: 'assets/images/social/4.webp',
     igLink: 'https://www.instagram.com/2theisland_/'
   },
   // @sardinia_reggae_festival
@@ -3047,7 +3047,7 @@ const SOCIAL_WALL_DATA = [
     hashtags: ['#SardiniaReggaeFestival', '#Reggae', '#Sardinia', '#Festival', '#Summer2026'],
     likes: 7650, comments: 534, daysAgo: 3, topics: ['musica'],
     gradient: 'linear-gradient(135deg, #1a4a00 0%, #2d8000 50%, #ffd700 100%)',
-    photo: null,
+    photo: 'assets/images/social/5.webp',
     igLink: 'https://www.instagram.com/sardinia_reggae_festival/'
   },
   {
@@ -3057,7 +3057,7 @@ const SOCIAL_WALL_DATA = [
     hashtags: ['#SardiniaReggaeFestival', '#Reggae', '#Sardinia', '#Concerts', '#VibesOnly'],
     likes: 4230, comments: 189, daysAgo: 15, topics: ['musica'],
     gradient: 'linear-gradient(135deg, #0d2600 0%, #1a4d00 50%, #ff6600 100%)',
-    photo: null,
+    photo: 'assets/images/social/6.webp',
     igLink: 'https://www.instagram.com/sardinia_reggae_festival/'
   },
   // @coco.sardinia
@@ -3068,7 +3068,7 @@ const SOCIAL_WALL_DATA = [
     hashtags: ['#CucinaSarda', '#Culurgiones', '#Sardinia', '#FoodItaly', '#TraditionalFood'],
     likes: 8920, comments: 341, daysAgo: 5, topics: ['food'],
     gradient: 'linear-gradient(135deg, #3d1400 0%, #8b3010 50%, #e8701a 100%)',
-    photo: null,
+    photo: 'assets/images/social/7.webp',
     igLink: 'https://www.instagram.com/coco.sardinia/'
   },
   {
@@ -3078,7 +3078,7 @@ const SOCIAL_WALL_DATA = [
     hashtags: ['#MercatoSanBenedetto', '#Cagliari', '#Bottarga', '#Sardinia', '#FoodMarket'],
     likes: 5460, comments: 178, daysAgo: 8, topics: ['food', 'borghi'],
     gradient: 'linear-gradient(135deg, #2a1800 0%, #6b4010 50%, #d4870a 100%)',
-    photo: null,
+    photo: 'assets/images/social/8.webp',
     igLink: 'https://www.instagram.com/coco.sardinia/'
   },
   // @sardiniawildadventure
@@ -3089,7 +3089,7 @@ const SOCIAL_WALL_DATA = [
     hashtags: ['#SelvaggioBlù', '#Sardinia', '#Trekking', '#WildAdventure', '#Hiking'],
     likes: 15800, comments: 723, daysAgo: 1, topics: ['sport', 'natura'],
     gradient: 'linear-gradient(135deg, #0a2a20 0%, #1a6040 50%, #3db87e 100%)',
-    photo: null,
+    photo: 'assets/images/social/9.webp',
     igLink: 'https://www.instagram.com/sardiniawildadventure/'
   },
   {
@@ -3099,7 +3099,7 @@ const SOCIAL_WALL_DATA = [
     hashtags: ['#Gorroppu', '#Sardinia', '#Trekking', '#Canyon', '#NatureSardinia'],
     likes: 6720, comments: 284, daysAgo: 11, topics: ['natura', 'sport'],
     gradient: 'linear-gradient(135deg, #1a0a00 0%, #4a2a10 50%, #8b6040 100%)',
-    photo: null,
+    photo: 'assets/images/social/10.webp',
     igLink: 'https://www.instagram.com/sardiniawildadventure/'
   },
   // @sardiniaslackline
@@ -3110,7 +3110,7 @@ const SOCIAL_WALL_DATA = [
     hashtags: ['#Slackline', '#Highline', '#Sardinia', '#Slacklining', '#SardiniaAdventure'],
     likes: 11200, comments: 498, daysAgo: 3, topics: ['sport'],
     gradient: 'linear-gradient(135deg, #001a3d 0%, #0040a0 50%, #00aaff 100%)',
-    photo: null,
+    photo: 'assets/images/social/11.webp',
     igLink: 'https://www.instagram.com/sardiniaslackline/'
   },
   {
@@ -3120,7 +3120,7 @@ const SOCIAL_WALL_DATA = [
     hashtags: ['#Longline', '#Sardinia', '#SardiniaSlackline', '#Balancing', '#Outdoor'],
     likes: 4560, comments: 167, daysAgo: 18, topics: ['sport'],
     gradient: 'linear-gradient(135deg, #002244 0%, #004488 50%, #66aadd 100%)',
-    photo: null,
+    photo: 'assets/images/social/12.webp',
     igLink: 'https://www.instagram.com/sardiniaslackline/'
   },
   // @sardegna_official_
@@ -3131,7 +3131,7 @@ const SOCIAL_WALL_DATA = [
     hashtags: ['#Alghero', '#Sardegna', '#Tramonto', '#Sunset', '#SardegnaOfficial'],
     likes: 9340, comments: 312, daysAgo: 7, topics: ['borghi', 'natura'],
     gradient: 'linear-gradient(135deg, #0a2040 0%, #c04010 60%, #ffa040 100%)',
-    photo: null,
+    photo: 'assets/images/social/13.webp',
     igLink: 'https://www.instagram.com/sardegna_official_/'
   },
   {
@@ -3141,7 +3141,7 @@ const SOCIAL_WALL_DATA = [
     hashtags: ['#Mamoiada', '#Mamuthones', '#CarnevaleSardo', '#Sardegna', '#Tradizioni'],
     likes: 12800, comments: 567, daysAgo: 45, topics: ['cultura'],
     gradient: 'linear-gradient(135deg, #1a0a00 0%, #3a1a00 40%, #8b2000 100%)',
-    photo: null,
+    photo: 'assets/images/social/14.webp',
     igLink: 'https://www.instagram.com/sardegna_official_/'
   },
   // @sardegna_live
@@ -3152,7 +3152,7 @@ const SOCIAL_WALL_DATA = [
     hashtags: ['#AutunnoinBarbagia', '#Barbagia', '#Sardegna', '#Tradizioni', '#CortesApertas'],
     likes: 5670, comments: 198, daysAgo: 60, topics: ['cultura', 'borghi'],
     gradient: 'linear-gradient(135deg, #3d2b00 0%, #7a5c1e 50%, #c4a55a 100%)',
-    photo: null,
+    photo: 'assets/images/social/15.webp',
     igLink: 'https://www.instagram.com/sardegna_live/'
   },
   {
@@ -3162,7 +3162,7 @@ const SOCIAL_WALL_DATA = [
     hashtags: ['#SantEfisio', '#Cagliari', '#FestaSarda', '#Sardegna', '#Tradizioni'],
     likes: 8900, comments: 423, daysAgo: 55, topics: ['cultura'],
     gradient: 'linear-gradient(135deg, #1a0000 0%, #6b0000 50%, #c8102e 100%)',
-    photo: null,
+    photo: 'assets/images/social/16.webp',
     igLink: 'https://www.instagram.com/sardegna_live/'
   },
   // @lanuovasardegna
@@ -3173,7 +3173,7 @@ const SOCIAL_WALL_DATA = [
     hashtags: ['#Barbagia', '#Nuoro', '#Sardegna', '#Autunno', '#NaturaSarda'],
     likes: 3240, comments: 98, daysAgo: 55, topics: ['natura'],
     gradient: 'linear-gradient(135deg, #2d3a1e 0%, #4a6741 50%, #c04010 100%)',
-    photo: null,
+    photo: 'assets/images/social/17.webp',
     igLink: 'https://www.instagram.com/lanuovasardegna/'
   },
   {
@@ -3183,7 +3183,7 @@ const SOCIAL_WALL_DATA = [
     hashtags: ['#CavalcataSarda', '#Sassari', '#Sardegna', '#Folklore', '#CostumiSardi'],
     likes: 5120, comments: 234, daysAgo: 37, topics: ['cultura'],
     gradient: 'linear-gradient(135deg, #1a2744 0%, #c8102e 50%, #ffd700 100%)',
-    photo: null,
+    photo: 'assets/images/social/18.webp',
     igLink: 'https://www.instagram.com/lanuovasardegna/'
   },
   // @saludetrigu
@@ -3194,7 +3194,7 @@ const SOCIAL_WALL_DATA = [
     hashtags: ['#TenoresdiBitti', '#Launeddas', '#MusicaSarda', '#UNESCO', '#Sardegna'],
     likes: 21400, comments: 987, daysAgo: 12, topics: ['musica', 'cultura'],
     gradient: 'linear-gradient(135deg, #1a0a00 0%, #4a2000 50%, #8b4500 100%)',
-    photo: null,
+    photo: 'assets/images/social/19.webp',
     igLink: 'https://www.instagram.com/saludetrigu/'
   },
   {
@@ -3204,7 +3204,7 @@ const SOCIAL_WALL_DATA = [
     hashtags: ['#Launeddas', '#MusicaSarda', '#Sardegna', '#Patrimonio', '#Tradizioni'],
     likes: 7830, comments: 345, daysAgo: 28, topics: ['musica', 'cultura'],
     gradient: 'linear-gradient(135deg, #2a0800 0%, #6b2000 50%, #c04010 100%)',
-    photo: null,
+    photo: 'assets/images/social/20.webp',
     igLink: 'https://www.instagram.com/saludetrigu/'
   },
   // @siviaggiare_sardegna
@@ -3215,7 +3215,7 @@ const SOCIAL_WALL_DATA = [
     hashtags: ['#SiViaggiare', '#Sardegna', '#RoadTrip', '#Sardinia', '#ItalyRoadTrip'],
     likes: 6800, comments: 289, daysAgo: 20, topics: ['viaggi', 'natura'],
     gradient: 'linear-gradient(135deg, #003d6b 0%, #1a6b8a 50%, #3db87e 100%)',
-    photo: null,
+    photo: 'assets/images/social/21.webp',
     igLink: 'https://www.instagram.com/siviaggiare_sardegna/'
   },
   {
@@ -3225,7 +3225,7 @@ const SOCIAL_WALL_DATA = [
     hashtags: ['#Oristano', '#Tharros', '#LagunadiCabras', '#Sardegna', '#Fenicotteri'],
     likes: 4120, comments: 156, daysAgo: 31, topics: ['natura', 'cultura'],
     gradient: 'linear-gradient(135deg, #1a3d4a 0%, #2d7a8a 50%, #f4a261 100%)',
-    photo: null,
+    photo: 'assets/images/social/22.webp',
     igLink: 'https://www.instagram.com/siviaggiare_sardegna/'
   },
   // @redvalleyfestival
@@ -3236,7 +3236,7 @@ const SOCIAL_WALL_DATA = [
     hashtags: ['#RedValleyFestival', '#Olbia', '#Sardinia', '#MusicFestival', '#RVF2026'],
     likes: 28600, comments: 1420, daysAgo: 5, topics: ['musica'],
     gradient: 'linear-gradient(135deg, #1a0000 0%, #4a0000 40%, #c8102e 80%, #ff4040 100%)',
-    photo: null,
+    photo: 'assets/images/social/23.webp',
     igLink: 'https://www.instagram.com/redvalleyfestival/'
   },
   {
@@ -3246,7 +3246,7 @@ const SOCIAL_WALL_DATA = [
     hashtags: ['#RedValleyFestival', '#Olbia', '#Sardinia', '#Festival', '#LiveMusic'],
     likes: 16800, comments: 678, daysAgo: 90, topics: ['musica'],
     gradient: 'linear-gradient(135deg, #200000 0%, #6a0000 50%, #ff2020 100%)',
-    photo: null,
+    photo: 'assets/images/social/24.webp',
     igLink: 'https://www.instagram.com/redvalleyfestival/'
   },
   // @climbing_sardinia
@@ -3257,7 +3257,7 @@ const SOCIAL_WALL_DATA = [
     hashtags: ['#ClimbingSardinia', '#Domusnovas', '#Arrampicata', '#RockClimbing', '#Sardinia'],
     likes: 9230, comments: 387, daysAgo: 14, topics: ['sport'],
     gradient: 'linear-gradient(135deg, #1a1400 0%, #4a3a00 50%, #8b7000 100%)',
-    photo: null,
+    photo: 'assets/images/social/25.webp',
     igLink: 'https://www.instagram.com/climbing_sardinia/'
   },
   {
@@ -3267,7 +3267,7 @@ const SOCIAL_WALL_DATA = [
     hashtags: ['#ClimbingSardinia', '#Ogliastra', '#MultiPitch', '#ClimbingLife', '#Sardinia'],
     likes: 13400, comments: 512, daysAgo: 7, topics: ['sport'],
     gradient: 'linear-gradient(135deg, #0a1a00 0%, #2a4a00 50%, #6a9a20 100%)',
-    photo: null,
+    photo: 'assets/images/social/26.webp',
     igLink: 'https://www.instagram.com/climbing_sardinia/'
   },
   // @enricotravels_insardinia
@@ -3288,7 +3288,7 @@ const SOCIAL_WALL_DATA = [
     hashtags: ['#Orgosolo', '#Murales', '#Barbagia', '#Sardinia', '#StreetArt'],
     likes: 7640, comments: 298, daysAgo: 22, topics: ['cultura', 'borghi'],
     gradient: 'linear-gradient(135deg, #1a0000 0%, #4a1a00 40%, #c8102e 70%, #1a1a1a 100%)',
-    photo: null,
+    photo: 'assets/images/social/28.webp',
     igLink: 'https://www.instagram.com/enricotravels_insardinia/'
   },
   {
@@ -3298,8 +3298,28 @@ const SOCIAL_WALL_DATA = [
     hashtags: ['#instasardegna', '#Sardegna', '#Sardinia', '#igersSardegna'],
     likes: 5200, comments: 138, daysAgo: 1, topics: ['natura', 'spiagge', 'borghi'],
     gradient: 'linear-gradient(135deg, #003d6b 0%, #0a7e8c 55%, #17a2b8 100%)',
-    photo: null,
+    photo: 'assets/images/social/29.webp',
     igLink: 'https://www.instagram.com/instasardegna/'
+  },
+  {
+    id: 30, account: '@alessandrapolo', accountName: 'Alessandra Polo',
+    type: 'reel', location: 'Cala Goloritzé, Baunei (OG)',
+    caption: 'Content creator sarda: racconta la Sardegna autentica tra mare cristallino, borghi dell\'entroterra, cucina e lifestyle, in ogni stagione.',
+    hashtags: ['#alessandrapolo', '#Sardegna', '#Sardinia', '#travelcreator'],
+    likes: 6100, comments: 210, daysAgo: 3, topics: ['spiagge', 'natura', 'borghi'],
+    gradient: 'linear-gradient(135deg, #0a3d2e 0%, #0f7a5a 55%, #17b890 100%)',
+    photo: 'assets/images/social/30.webp',
+    igLink: 'https://www.instagram.com/alessandrapolo/'
+  },
+  {
+    id: 31, account: '@alessandrapolo', accountName: 'Alessandra Polo',
+    type: 'photo', location: 'Bosa (OR)',
+    caption: 'Scorci di Sardegna meno battuta: i colori di Bosa sul fiume Temo, i borghi e i paesaggi che raccontano l\'isola oltre l\'estate.',
+    hashtags: ['#Bosa', '#Sardegna', '#borghi', '#Sardinia'],
+    likes: 4300, comments: 156, daysAgo: 9, topics: ['borghi', 'cultura'],
+    gradient: 'linear-gradient(135deg, #6b1a00 0%, #b83b1a 55%, #e07a3a 100%)',
+    photo: 'assets/images/social/31.webp',
+    igLink: 'https://www.instagram.com/alessandrapolo/'
   }
 ];
 
