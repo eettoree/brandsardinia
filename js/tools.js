@@ -1951,8 +1951,7 @@ const BANDI_DATA = [
     desc: 'Finanzia l\'avvio e lo sviluppo di micro e piccole imprese a prevalenza giovanile o femminile su tutto il territorio nazionale.',
     beneficiari: 'Micro-PMI con compagine a maggioranza under 35 o donne',
     agevolazione: 'Finanziamento a tasso zero fino a 3 mln (copertura fino al 90%). Nota: quota a fondo perduto esaurita dal 01/07/2026',
-    scadenza: 'A sportello, valutazione cronologica fino a esaurimento',
-    url: 'https://www.invitalia.it/incentivi-e-strumenti/nuove-imprese-tasso-zero'
+    scadenza: 'A sportello, valutazione cronologica fino a esaurimento'
   },
   {
     titolo: 'Smart&Start Italia',
@@ -1962,7 +1961,7 @@ const BANDI_DATA = [
     beneficiari: 'Startup innovative iscritte al Registro Imprese e team in costituzione',
     agevolazione: 'Finanziamento a tasso zero (spese 100.000 – 1,5 mln); nel Sud una quota è a fondo perduto',
     scadenza: 'A sportello, senza graduatorie, ordine cronologico',
-    url: 'https://www.invitalia.it/incentivi-e-strumenti/smart-e-start-italia'
+    url: 'https://www.invitalia.it/incentivi-e-strumenti/smartstart-italia'
   },
   {
     titolo: 'Credito d\'imposta ZES Unica Mezzogiorno',
@@ -2002,27 +2001,7 @@ const BANDI_DATA = [
     beneficiari: 'Micro-PMI e persone fisiche in condizione di svantaggio economico',
     agevolazione: 'Finanziamento agevolato fino a 25.000 €',
     scadenza: 'Nuovo avviso atteso nel 2026 — verificare l\'apertura sul sito SFIRS',
-    url: 'https://www.sfirs.it/sostegno-alle-imprese/fondo-microcredito-fse/'
-  },
-  {
-    titolo: 'Contratti di Investimento — Turistico ricettivo',
-    ente: 'Regione Sardegna — PR FESR 2021-2027',
-    cat: 'turismo', stato: 'scaduto',
-    desc: 'Aiuti a investimenti nel turistico-ricettivo: realizzazione e ampliamento strutture, efficientamento energetico, accessibilità, digitalizzazione.',
-    beneficiari: 'Piccole, medie e grandi imprese ricettive (ATECO 55.10, 55.30, 56.11)',
-    agevolazione: 'Mix: fondo perduto 40-60% (PMI) + finanziamenti fino a 10 mln/progetto',
-    scadenza: 'Chiuso (18/07/2025 – 20/10/2025) — probabile riedizione, monitorare il portale',
-    url: 'https://www.sardegnaimpresa.eu/it/agevolazioni/contratti-di-investimento-ci-settore-turistico-ricettivo'
-  },
-  {
-    titolo: 'Contributi per l\'Albergo Diffuso',
-    ente: 'Regione Sardegna — Assessorato Turismo (L.R. 17/2016)',
-    cat: 'turismo', stato: 'scaduto',
-    desc: 'Recupero e riqualificazione del patrimonio immobiliare nei centri storici per realizzare strutture ricettive di tipo "albergo diffuso".',
-    beneficiari: 'Enti locali e micro-piccole imprese turistiche',
-    agevolazione: 'Fondo perduto fino a 300.000 € per beneficiario, fino al 100% delle spese',
-    scadenza: 'Chiuso (16/07/2025 – 17/10/2025) — probabile riedizione',
-    url: 'https://www.regione.sardegna.it/notizie/al-via-il-bando-per-l-albergo-diffuso-la-regione-sostiene-enti-locali-e-imprese-turistiche-con-7-5-milioni-di-euro'
+    url: 'https://www.sfirs.it/'
   },
   {
     titolo: 'Bandi LEADER dei GAL (turismo rurale)',
@@ -2091,7 +2070,7 @@ function renderBandi(container) {
               <div class="bando-meta-row"><span class="bando-meta-lbl">${t('tools.meta.agevolazione')}</span><span>${b.agevolazione}</span></div>
               <div class="bando-meta-row"><span class="bando-meta-lbl">${t('tools.meta.scadenza')}</span><span>${b.scadenza}</span></div>
             </div>
-            <a href="${b.url}" target="_blank" rel="noopener" class="bando-link">${t('tools.action.bando')} →</a>
+            ${b.url ? `<a href="${b.url}" target="_blank" rel="noopener" class="bando-link">${t('tools.action.bando')} →</a>` : ''}
           </div>`;
         }).join('')}
         ${list.length===0 ? `<div class="no-events">${t('ui.no_results')}</div>` : ''}
@@ -2148,7 +2127,7 @@ function renderVivere(container) {
             <div class="bando-meta">
               <div class="bando-meta-row"><span class="bando-meta-lbl">${t('tools.meta.per_chi')}</span><span>${v.target}</span></div>
             </div>
-            <a href="${v.url}" target="_blank" rel="noopener" class="bando-link">${t('tools.action.discover')} →</a>
+            ${v.url ? `<a href="${v.url}" target="_blank" rel="noopener" class="bando-link">${t('tools.action.discover')} →</a>` : ''}
           </div>`).join('')}
         ${list.length===0 ? `<div class="no-events">${t('ui.no_results')}</div>` : ''}
       </div>`;
