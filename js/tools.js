@@ -3286,6 +3286,16 @@ const SOCIAL_WALL_DATA = [
     gradient: 'linear-gradient(135deg, #1a0000 0%, #4a1a00 40%, #c8102e 70%, #1a1a1a 100%)',
     photo: null,
     igLink: 'https://www.instagram.com/enricotravels_insardinia/'
+  },
+  {
+    id: 29, account: '@instasardegna', accountName: 'Insta Sardegna',
+    type: 'photo', location: 'Sardegna',
+    caption: 'Una delle community più grandi dedicate alla Sardegna: paesaggi, borghi, mare e scorci autentici dell\'isola, condivisi ogni giorno dagli appassionati.',
+    hashtags: ['#instasardegna', '#Sardegna', '#Sardinia', '#igersSardegna'],
+    likes: 5200, comments: 138, daysAgo: 1, topics: ['natura', 'spiagge', 'borghi'],
+    gradient: 'linear-gradient(135deg, #003d6b 0%, #0a7e8c 55%, #17a2b8 100%)',
+    photo: null,
+    igLink: 'https://www.instagram.com/instasardegna/'
   }
 ];
 
@@ -3310,7 +3320,6 @@ const NORTH_SARDINIA_DATA = [
       eventi: [
         { nome: 'Carnevale di Tempio Pausania', periodo: 'Gen-Feb', desc: 'Il più antico del nord Sardegna. Carri allegorici, sfilate, 4 weekend di festa nel centro storico.' },
         { nome: 'Fuochi di Sant\'Antonio', periodo: '16-17 gennaio', desc: 'Falò notturni in tutti i paesi della Gallura. Tradizione pagana/cristiana antichissima.' },
-        { nome: 'Sagra delle Fragole', periodo: 'Maggio', desc: 'Sagra a Turri e altri comuni. Fragole, vino bianco, musica folk.' }
       ],
       meteo: { gen: '8-13°C', feb: '9-14°C', mar: '10-16°C', note: 'Maestrale frequente. Piogge concentrate nov-dic. Neve su Monte Limbara (>1000m).' }
     },
@@ -3319,12 +3328,9 @@ const NORTH_SARDINIA_DATA = [
       { nome: 'Basilica San Simplicio', desc: 'V sec. d.C. Romanico gallurese. Tomba del martire. Aperta tutto l\'anno, ingresso libero.', orari: '8-12 / 16-19', costo: 'Gratuita', citta: 'Olbia' },
       { nome: 'Compendio Garibaldino — Caprera', desc: 'Casa dove visse e morì Garibaldi (2 giugno 1882). Letto originale, giardino, tombe. Tel: +39 0789 727162. garibaldicaprera.beniculturali.it — ingressi ogni 15 min max 20 pers.', orari: 'Escluso lun, 9-20 (ult. 19:15). Memoriale: escluso mer, 10:15-19:15', costo: '10€ combinato / under 18 gratuito', citta: 'Caprera (La Maddalena)' },
       { nome: 'Siti Arch. Arzachena — GE.SE.CO.', desc: '7 siti preistorici: Li Muri (3500 a.C.), Li Lolghi, La Prisgiona, Coddu Ecchju, Malchittu, Albucciu, Moru. Prenotare: +39 333 428 2607 — gesecoarzachena.it', orari: 'Apr-Set: 9-19. Ott-Mar ridotti', costo: 'Li Muri area: 10€. Capichera area: 7€', citta: 'Arzachena' },
-      { nome: 'Castello dei Doria + Mus. Intreccio', desc: 'XII sec. Vista 180° sul Tirreno. Museo dell\'Intreccio Mediterraneo (cesteria sarda e mediterranea). Tel: +39 079 601 4769, mimcastelsardo.it', orari: 'Gen-Mar/Nov-Dic: 10-17. Apr-Ott: 9-19:30', costo: '3-5€', citta: 'Castelsardo' }
     ],
     ristoranti: [
-      { nome: 'Ristorante Gallura', tipo: 'Cucina gallurese tradizionale', piatti: 'Minestra di fagioli, agnello, casizolu', zona: 'Olbia centro', prezzo: '€€€' },
       { nome: 'Trattoria L\'Arcipelago', tipo: 'Pesce fresco', piatti: 'Spigola, triglie, bottarga gallurese', zona: 'La Maddalena', prezzo: '€€' },
-      { nome: 'Sa Mandra ★ Guida Michelin 2025', tipo: 'Agriturismo (Miglior agriturismo Italia — Il Golosario)', piatti: 'Porcetto allo spiedo, pasta fatta a mano, formaggi propri, miele, olio bio. 35-45€ menu fisso tutto incluso.', zona: 'SP44 km 14, Alghero — Tel: +39 079 999150 · samandra.it', prezzo: '€€' },
       { nome: 'Lu Rotu', tipo: 'Agriturismo stazzo gallurese', piatti: 'Cucina gallurese tradizionale con prodotti biologici propri, tra olivastri e tafoni', zona: 'Sant\'Antonio di Gallura', prezzo: '€€' },
       { nome: 'Cantina Gallura (Tempio)', tipo: 'Enoteca + degustazione DOCG', piatti: 'Vermentino di Gallura DOCG (unica DOCG sarda), vini, degustazioni guidate. Tel: +39 079 631 241', zona: 'Via Val di Cossu 9, Tempio Pausania · cantinagallura.net', prezzo: '€€' },
       { nome: 'Phi Beach', tipo: 'Club/Ristorante su scogliera (Costa Smeralda)', piatti: 'Cucina mediterranea (Luciano\'s), DJ set tramonto, aperitivo vista mare. Booking: +39 345 288 4254.', zona: 'Baja Sardinia, Arzachena — phibeach.com', prezzo: '€€€€' }
@@ -3341,7 +3347,6 @@ const NORTH_SARDINIA_DATA = [
         { nome: 'Parco Nazionale Asinara', desc: 'L\'isola-carcere. Tour in 4x4 con asini albini endemici, jeep, trenino, barca, diving, kayak. Operatori autorizzati: Futurismo Asinara (futurismoasinara.com), Wild Asinara Park, AsinarAvventura. Sede: +39 079 503 388 — parcoasinara.org', difficolta: 'Facile (tour guidato)', meteo: 'Aperto tutto l\'anno. Apr-Ott tutti i giorni; Nov-Mar weekend.' },
         { nome: 'Trekking Castelsardo e dintorni', desc: 'Sentiero costiero da Castelsardo a Valledoria lungo le falesie. 8 km, vista Corsica e Asinara.', difficolta: 'Facile-Medio', meteo: 'Evitare con vento forte' },
         { nome: 'Surf Platamona', desc: 'Spiaggia lunga 20 km a nord di Sassari. Onda lenta ideale per principianti. Ottobre-marzo.', difficolta: 'Principianti', meteo: 'Tramontana o Libeccio' },
-        { nome: 'Arrampicata Domusnovas', desc: '750 vie su calcare. A 2h da Sassari. Inverno = stagione migliore: temperatura ideale, roccia asciutta.', difficolta: 'Principiante/Pro', meteo: 'Evitare dopo piogge' },
         { nome: 'Equitazione Anglona', desc: 'Agriturismo con percorsi a cavallo tra le colline dell\'Anglona. Settembre-maggio.', difficolta: 'Tutti i livelli', meteo: 'Qualunque tranne pioggia forte' }
       ],
       eventi: [
@@ -3409,7 +3414,6 @@ const NORTH_SARDINIA_DATA = [
         { nome: 'Tour Romanico del Logudoro', desc: 'Cinque chiese in stile romanico-pisano (XII-XIII sec.): Saccargia, San Pietro di Sorres, San Michele di Salvenero, Nostra Signora di Otti.', difficolta: 'Facile (auto)', meteo: 'Tutto l\'anno' },
         { nome: 'Nuraghe Santu Antine e Torralba', desc: 'Il nuraghe più imponente dopo Barumini. Museo di Torralba adiacente.', difficolta: 'Facile', meteo: 'Tutto l\'anno' },
         { nome: 'Trekking Necropoli S\'Antine', desc: 'Necropoli domus de janas (tombe delle fate) nel bosco. Sentiero naturalistico.', difficolta: 'Facile', meteo: 'Preferibilmente asciutto' },
-        { nome: 'Visite cantine del Cannonau e Vermentino', desc: 'Cantine Trexenta, Cantina di Berchidda, Cantina del Vermentino di Monti — tour e degustazioni.', difficolta: 'Facile', meteo: 'Tutto l\'anno' },
         { nome: 'Birdwatching Lago del Coghinas', desc: 'Lago artificiale con anatre, cormorani, aironi cenerini, svassi. Inverno ideale.', difficolta: 'Facile', meteo: 'Tutto l\'anno (alba e tramonto)' }
       ],
       eventi: [
@@ -3421,7 +3425,6 @@ const NORTH_SARDINIA_DATA = [
     musei: [
       { nome: 'San Pietro di Sorres', desc: 'Abbazia benedettina su rocca a picco. XII sec. Monaci ancora presenti. Vista panoramica unica.', orari: '8-12 / 15-18', costo: 'Gratuita', citta: 'Borutta (SS)' },
       { nome: 'Santa Trinità di Saccargia', desc: 'La più bella chiesa romanica di Sardegna. Facciata a strisce bianche e nere. Affreschi bizantini.', orari: '9-19 (inv. 9-17)', costo: '2€', citta: 'Codrongianos (SS)' },
-      { nome: 'Museo Civico G. Marongiu (Cabras area)', desc: 'Giganti di Mont\'e Prama — le statue preistoriche più grandi del Mediterraneo (2 metri, XI sec. a.C.).', orari: 'Mar-Dom 9-20', costo: '7€', citta: 'Cabras (OR) — vicino Logudoro' }
     ],
     ristoranti: [
       { nome: 'Agriturismo Santa Lulla', tipo: 'Cucina logudorese tradizionale', piatti: 'Farrotto, agnello, formaggio fresco', zona: 'Meilogu area', prezzo: '€€' },
