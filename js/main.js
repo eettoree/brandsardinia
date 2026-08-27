@@ -470,12 +470,12 @@ function applyTranslations() {
 
 // ─── LANDING SECTIONS ────────────────────────────────────────
 const BEACH_HIGHLIGHTS = [
-  { name: 'Cala Goloritzé', location: 'Baunei, Ogliastra', desc: 'Patrimonio UNESCO. Arco di roccia calcarea, ghiaione bianco, acque cristalline.', cost: '7€', access: 'A piedi o via mare', gradient: 'linear-gradient(135deg,#0098b4 0%,#00c9b8 50%,#a8e6d8 100%)', poi: 'cala-goloritzé' },
-  { name: 'La Pelosa', location: 'Stintino, Sassari', desc: 'Sabbia bianchissima e acque turchesi con vista sulla Torre Spagnola del 1500.', cost: '3,50€', access: 'Navetta obbligatoria', gradient: 'linear-gradient(135deg,#00b4d8 0%,#90e0ef 50%,#caf0f8 100%)', poi: 'la-pelosa' },
-  { name: 'Spiaggia del Principe', location: 'Arzachena, Costa Smeralda', desc: 'La preferita dell\'Aga Khan. Granito rosa, sabbia fine, acque verde smeraldo.', cost: 'Libera', access: 'Auto + 800m a piedi', gradient: 'linear-gradient(135deg,#48cae4 0%,#90e0ef 50%,#e8f9ff 100%)', poi: 'spiaggia-principe' },
-  { name: 'Cala Mariolu', location: 'Baunei, Ogliastra', desc: 'Ciottoli bianchi levigati e acque azzurro intenso. Votata tra le 10 spiagge più belle d\'Italia.', cost: 'Libera', access: 'Solo via mare', gradient: 'linear-gradient(135deg,#0077b6 0%,#00b4d8 50%,#90e0ef 100%)', poi: 'cala-mariolu' },
-  { name: 'Is Arutas', location: 'Cabras, Oristano', desc: 'Granelli di quarzo bianco e rosa a chicco di riso, unica in Europa. Area protetta.', cost: 'Libera', access: 'Navetta estiva', gradient: 'linear-gradient(135deg,#8ecae6 0%,#219ebc 50%,#023047 100%)', poi: 'is-arutas' },
-  { name: 'Su Giudeu', location: 'Domus de Maria, Cagliari', desc: 'Dune di sabbia bianca, isolotto raggiungibile a nuoto. La Saint-Tropez sarda.', cost: 'Libera', access: 'Auto + 1 km dune', gradient: 'linear-gradient(135deg,#52b788 0%,#74c69d 50%,#b7e4c7 100%)', poi: 'su-giudeu' }
+  { name: 'Cala Goloritzé', location: 'Baunei, Ogliastra', desc: 'Patrimonio UNESCO. Arco di roccia calcarea, ghiaione bianco, acque cristalline.', cost: '7€', access: 'A piedi o via mare', gradient: 'linear-gradient(135deg,#0098b4 0%,#00c9b8 50%,#a8e6d8 100%)', photo: 'assets/images/home/cala-goloritzé.webp', poi: 'cala-goloritzé' },
+  { name: 'La Pelosa', location: 'Stintino, Sassari', desc: 'Sabbia bianchissima e acque turchesi con vista sulla Torre Spagnola del 1500.', cost: '3,50€', access: 'Navetta obbligatoria', gradient: 'linear-gradient(135deg,#00b4d8 0%,#90e0ef 50%,#caf0f8 100%)', photo: 'assets/images/home/la-pelosa.webp', poi: 'la-pelosa' },
+  { name: 'Spiaggia del Principe', location: 'Arzachena, Costa Smeralda', desc: 'La preferita dell\'Aga Khan. Granito rosa, sabbia fine, acque verde smeraldo.', cost: 'Libera', access: 'Auto + 800m a piedi', gradient: 'linear-gradient(135deg,#48cae4 0%,#90e0ef 50%,#e8f9ff 100%)', photo: 'assets/images/home/spiaggia-principe.webp', poi: 'spiaggia-principe' },
+  { name: 'Cala Mariolu', location: 'Baunei, Ogliastra', desc: 'Ciottoli bianchi levigati e acque azzurro intenso. Votata tra le 10 spiagge più belle d\'Italia.', cost: 'Libera', access: 'Solo via mare', gradient: 'linear-gradient(135deg,#0077b6 0%,#00b4d8 50%,#90e0ef 100%)', photo: 'assets/images/home/cala-mariolu.webp', poi: 'cala-mariolu' },
+  { name: 'Is Arutas', location: 'Cabras, Oristano', desc: 'Granelli di quarzo bianco e rosa a chicco di riso, unica in Europa. Area protetta.', cost: 'Libera', access: 'Navetta estiva', gradient: 'linear-gradient(135deg,#8ecae6 0%,#219ebc 50%,#023047 100%)', photo: 'assets/images/home/is-arutas.webp', poi: 'is-arutas' },
+  { name: 'Su Giudeu', location: 'Domus de Maria, Cagliari', desc: 'Dune di sabbia bianca, isolotto raggiungibile a nuoto. La Saint-Tropez sarda.', cost: 'Libera', access: 'Auto + 1 km dune', gradient: 'linear-gradient(135deg,#52b788 0%,#74c69d 50%,#b7e4c7 100%)', photo: 'assets/images/home/su-giudeu.webp', poi: 'su-giudeu' }
 ];
 
 // Il carosello eventi deriva da EVENTS_DATA (single source of truth in tools.js)
@@ -499,7 +499,7 @@ function getEventHighlights(events) {
     const d = new Date(e.date);
     const mAbbr = months ? months[e.month].substring(0, 3).toUpperCase() : '';
     const desc = e.description.length > 120 ? e.description.slice(0, 117) + '…' : e.description;
-    return { name: e.name, location: e.city, date: `${d.getDate()} ${mAbbr}`, month: mAbbr, day: String(d.getDate()), desc, gradient: EVENT_GRADIENTS[e.category] || EVENT_GRADIENTS.cultura, _date: d };
+    return { name: e.name, location: e.city, date: `${d.getDate()} ${mAbbr}`, month: mAbbr, day: String(d.getDate()), desc, image: e.image || '', gradient: EVENT_GRADIENTS[e.category] || EVENT_GRADIENTS.cultura, _date: d };
   });
   const upcoming = mapped.filter(e => e._date >= today).sort((a, b) => a._date - b._date);
   const list = upcoming.length >= 4 ? upcoming : mapped.sort((a, b) => a._date - b._date);
@@ -507,16 +507,17 @@ function getEventHighlights(events) {
 }
 
 const EXPERIENCE_HIGHLIGHTS = [
-  { name: 'Selvaggio Blu', location: 'Supramonte, Ogliastra', desc: 'Il trekking più bello d\'Italia. 7 giorni, 45 km tra pareti e calette inaccessibili.', cost: '800–1200€ tutto incluso', gradient: 'linear-gradient(135deg,#2d6a4f 0%,#52b788 50%,#95d5b2 100%)', poi: 'selvaggio-blu' },
-  { name: 'Kayak Golfo di Orosei', location: 'Cala Gonone, Nuoro', desc: 'Pagaiata da Cala Gonone a Cala Luna. La più bella navigazione costiera con pagaia d\'Italia.', cost: '50–140€/persona', gradient: 'linear-gradient(135deg,#0077b6 0%,#00b4d8 100%)', poi: 'kayak-orosei' },
-  { name: 'Tour Arcipelago Maddalena', location: 'La Maddalena, OT', desc: 'Gozzo tra le 7 isole UNESCO: Caprera, Spargi, Budelli (Spiaggia Rosa), Santa Maria.', cost: '60–120€/persona', gradient: 'linear-gradient(135deg,#48cae4 0%,#ade8f4 100%)', poi: 'giro-maddalena' },
-  { name: 'Kitesurf Porto Pollo', location: 'Palau, Olbia-Tempio', desc: 'Uno dei migliori spot kitesurf d\'Europa. Maestrale costante nello stretto Sardegna-Corsica.', cost: 'Da 120€ corso base', gradient: 'linear-gradient(135deg,#7209b7 0%,#3a0ca3 100%)', poi: 'kitesurf-porto-pollo' }
+  { name: 'Selvaggio Blu', location: 'Supramonte, Ogliastra', desc: 'Il trekking più bello d\'Italia. 7 giorni, 45 km tra pareti e calette inaccessibili.', cost: '800–1200€ tutto incluso', gradient: 'linear-gradient(135deg,#2d6a4f 0%,#52b788 50%,#95d5b2 100%)', photo: 'assets/images/home/selvaggio-blu.webp', poi: 'selvaggio-blu' },
+  { name: 'Kayak Golfo di Orosei', location: 'Cala Gonone, Nuoro', desc: 'Pagaiata da Cala Gonone a Cala Luna. La più bella navigazione costiera con pagaia d\'Italia.', cost: '50–140€/persona', gradient: 'linear-gradient(135deg,#0077b6 0%,#00b4d8 100%)', photo: 'assets/images/home/kayak-orosei.webp', poi: 'kayak-orosei' },
+  { name: 'Tour Arcipelago Maddalena', location: 'La Maddalena, OT', desc: 'Gozzo tra le 7 isole UNESCO: Caprera, Spargi, Budelli (Spiaggia Rosa), Santa Maria.', cost: '60–120€/persona', gradient: 'linear-gradient(135deg,#48cae4 0%,#ade8f4 100%)', photo: 'assets/images/home/giro-maddalena.webp', poi: 'giro-maddalena' },
+  { name: 'Kitesurf Porto Pollo', location: 'Palau, Olbia-Tempio', desc: 'Uno dei migliori spot kitesurf d\'Europa. Maestrale costante nello stretto Sardegna-Corsica.', cost: 'Da 120€ corso base', gradient: 'linear-gradient(135deg,#7209b7 0%,#3a0ca3 100%)', photo: 'assets/images/home/kitesurf-porto-pollo.webp', poi: 'kitesurf-porto-pollo' }
 ];
 
 function buildBeachCard(b) {
   return `
     <div class="preview-card" onclick="openMapAtPoi('${b.poi}')">
       <div class="preview-photo">
+        ${b.photo ? `<img class="preview-photo-img" src="${b.photo}" alt="${b.name}" loading="lazy" onerror="this.remove()">` : ''}
         <div class="preview-photo-gradient" style="background:${b.gradient};width:100%;height:100%;"></div>
         <div class="preview-photo-overlay"></div>
         <div class="preview-photo-caption">
@@ -539,6 +540,7 @@ function buildEventCard(e) {
   return `
     <div class="preview-card" onclick="openToolsDirect('calendar')">
       <div class="preview-photo" style="height:140px;">
+        ${e.image ? `<img class="preview-photo-img" src="${e.image}" alt="${e.name}" loading="lazy" onerror="this.remove()">` : ''}
         <div style="width:100%;height:100%;background:${e.gradient};"></div>
         <div class="preview-photo-overlay"></div>
         <div class="preview-photo-caption">
@@ -568,6 +570,7 @@ function buildExperienceCard(x) {
   return `
     <div class="preview-card" onclick="openMapAtPoi('${x.poi}')">
       <div class="preview-photo">
+        ${x.photo ? `<img class="preview-photo-img" src="${x.photo}" alt="${x.name}" loading="lazy" onerror="this.remove()">` : ''}
         <div class="preview-photo-gradient" style="background:${x.gradient};width:100%;height:100%;"></div>
         <div class="preview-photo-overlay"></div>
         <div class="preview-photo-caption">

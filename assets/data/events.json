@@ -9,7 +9,8 @@
     "description": "I Mamuthones (maschere lignee nere, campanacci) e gli Issohadores sfilano in corteo. Prima uscita: 16-17 gennaio per S.Antonio Abate. Sfilata principale: domenica 15 febbraio. Martedi Grasso: 17 febbraio.",
     "link": "",
     "season": "inverno",
-    "igUrl": ""
+    "igUrl": "",
+    "image": "assets/images/home/ev-1.webp"
   },
   {
     "id": 2,
@@ -21,7 +22,8 @@
     "description": "Giostra equestre medievale (XV sec.). Domenica 15 febbraio (Gremio dei Falegnami) e Martedì 17 febbraio (Gremio dei Contadini). Biglietti 10–55€ su Tick@ da 4 febbraio. Una delle manifestazioni equestri più antiche d'Europa.",
     "link": "https://www.sartiglia.info",
     "season": "inverno",
-    "igUrl": ""
+    "igUrl": "",
+    "image": "assets/images/home/ev-2.webp"
   },
   {
     "id": 3,
@@ -33,7 +35,8 @@
     "description": "370ª edizione. 1–4 maggio. Processione storica dal 1657: statua del santo da Cagliari a Pula e ritorno, su carro trainato da buoi, scortata da migliaia in costume sardo. Ingresso gratuito. La più grande processione d'Italia.",
     "link": "",
     "season": "primavera",
-    "igUrl": ""
+    "igUrl": "",
+    "image": "assets/images/home/ev-3.webp"
   },
   {
     "id": 4,
@@ -45,7 +48,8 @@
     "description": "75ª edizione, 17 maggio 2026. 3.500 figuranti in costume da 100 comuni. Centinaia di cavalieri in sfilata per le vie di Sassari. Una delle manifestazioni folcloristiche più grandi d'Italia.",
     "link": "",
     "season": "primavera",
-    "igUrl": ""
+    "igUrl": "",
+    "image": "assets/images/home/ev-4.webp"
   },
   {
     "id": 5,
@@ -57,7 +61,8 @@
     "description": "Corsa votiva a cavallo intorno al Santuario di San Costantino. 6-7 luglio fissi + ottava il 19 luglio. 2026: capocorsa Danilo Pes. Tra gli spettacoli equestri più adrenalinici e pericolosi del mondo.",
     "link": "",
     "season": "estate",
-    "igUrl": ""
+    "igUrl": "",
+    "image": "assets/images/home/ev-5.webp"
   },
   {
     "id": 6,
@@ -68,7 +73,8 @@
     "month": 7,
     "description": "18 luglio – 16 agosto 2026. Festival multidisciplinare: musica world, jazz, teatro e arti visive in siti storico-naturali del territorio oristanese. 2026 con Carmen Consoli, Subsonica, Mario Biondi e altri.",
     "season": "estate",
-    "igUrl": ""
+    "igUrl": "",
+    "image": "assets/images/home/ev-6.webp"
   },
   {
     "id": 7,
@@ -79,7 +85,8 @@
     "month": 8,
     "description": "Patrimonio UNESCO. 14 agosto. Grandi candelabri di legno portati a spalla attraverso il centro di Sassari dai rappresentanti delle Gremio (corporazioni storiche). Origini medievali (XIV sec.).",
     "season": "estate",
-    "igUrl": ""
+    "igUrl": "",
+    "image": "assets/images/home/ev-7.webp"
   },
   {
     "id": 8,
@@ -91,7 +98,8 @@
     "description": "Edizione 2026 tema \"Kind of Blue\" — Miles Davis. 19-21 giugno (anteprima) + 8-16 agosto (festival principale). Concerti in piazze, cantine, boschi, nuraghi di 15 centri del nord Sardegna. Include workshop \"I Colori della Musica\" per bambini.",
     "link": "https://www.timeinjazz.it",
     "season": "estate",
-    "igUrl": ""
+    "igUrl": "",
+    "image": "assets/images/home/ev-8.webp"
   },
   {
     "id": 9,
@@ -103,7 +111,8 @@
     "description": "125ª edizione, 22-23 e 29 agosto 2026. Processione con la statua del Redentore e sfilata in costumi barbaricini. Festival Tradizioni Popolari annesso. Una delle feste più sentite della Sardegna interna.",
     "link": "",
     "season": "estate",
-    "igUrl": ""
+    "igUrl": "",
+    "image": "assets/images/home/ev-9.webp"
   },
   {
     "id": 10,
@@ -114,7 +123,8 @@
     "month": 9,
     "description": "Da settembre a dicembre, ogni weekend un paese barbaricino apre le porte: cantine, laboratori artigianali, cucine tradizionali. Mamoiada, Oliena, Orgosolo, Dorgali, Tonara... Date 2026 da confermare su autunnoinbarbagia.it.",
     "season": "autunno",
-    "igUrl": ""
+    "igUrl": "",
+    "image": "assets/images/home/ev-10.webp"
   },
   {
     "id": 11,
@@ -126,7 +136,8 @@
     "description": "47ª edizione. Stimato 24-25 ottobre 2026. 50.000 visitatori. Borgo montano (796m). Castagne arrostite, nocciole, pane, salsiccia sarda, vini locali. Costumi tradizionali, musica folk. Uno degli appuntamenti gastronomici autunnali più amati.",
     "link": "",
     "season": "autunno",
-    "igUrl": ""
+    "igUrl": "",
+    "image": "assets/images/home/ev-11.webp"
   },
   {
     "id": 12,
@@ -138,7 +149,8 @@
     "description": "20 giugno 2026. Degustazione formaggi DOP (Pecorino Sardo, Fiore Sardo), ricotta, dolci tradizionali. Produttori locali, musica e costumi. Provincia di Oristano.",
     "link": "",
     "season": "estate",
-    "igUrl": ""
+    "igUrl": "",
+    "image": "assets/images/home/ev-12.webp"
   },
   {
     "id": 13,
@@ -150,7 +162,8 @@
     "description": "Visita notturna al nuraghe UNESCO Su Nuraxi illuminato con spettacolo di luci e suoni. Prenotazione obbligatoria: prenotazioni@fondazionebarumini.it — posti limitati.",
     "link": "https://www.fondazionebarumini.it",
     "season": "estate",
-    "igUrl": ""
+    "igUrl": "",
+    "image": "assets/images/home/ev-13.webp"
   },
   {
     "id": 14,
@@ -162,7 +175,8 @@
     "description": "25 aprile – 1 maggio 2026. Corsa ciclistica a tappe attraverso le strade più belle dell'isola. Tappa finale tradizionalmente a Cagliari. Evento internazionale UCI.",
     "link": "",
     "season": "primavera",
-    "igUrl": ""
+    "igUrl": "",
+    "image": "assets/images/home/ev-14.webp"
   },
   {
     "id": 15,
@@ -174,7 +188,8 @@
     "description": "17 febbraio 2026. Il Gremio dei Contadini e la Sartiglia del Martedì Grasso. Replica con carattere più intimo rispetto alla domenica. Biglietti su Tick@ da 4 febbraio.",
     "link": "https://www.sartiglia.info",
     "season": "inverno",
-    "igUrl": ""
+    "igUrl": "",
+    "image": "assets/images/home/ev-15.webp"
   },
   {
     "id": 16,
@@ -186,7 +201,8 @@
     "description": "Apertura straordinaria e gratuita di monumenti, chiese e siti storici. Visite guidate da studenti. Weekend selezionati da aprile a novembre in 30+ comuni: Cagliari (18-19 apr), Sassari (2-3 mag), Alghero (16-17 mag), Villasimius/Pula (23-31 mag). Si prosegue in autunno.",
     "link": "https://sardegnatuttolanno.net/evento/monumenti-aperti-il-calendario-2026/",
     "season": "primavera",
-    "igUrl": ""
+    "igUrl": "",
+    "image": "assets/images/home/ev-16.webp"
   },
   {
     "id": 17,
@@ -198,7 +214,8 @@
     "description": "13–26 giugno. Proiezioni cinematografiche all'aperto con l'isola di Tavolara come sfondo. Uno degli scenari naturali più spettacolari per un festival di cinema in Italia.",
     "link": "",
     "season": "estate",
-    "igUrl": ""
+    "igUrl": "",
+    "image": "assets/images/home/ev-17.webp"
   },
   {
     "id": 18,
@@ -210,7 +227,8 @@
     "description": "12–13 giugno. Due date del tour di Vasco Rossi all'Olbia Arena. Evento di grande richiamo nazionale. Biglietti su TicketOne.",
     "link": "https://www.ticketone.it",
     "season": "estate",
-    "igUrl": ""
+    "igUrl": "",
+    "image": "assets/images/home/ev-18.webp"
   },
   {
     "id": 19,
@@ -222,7 +240,8 @@
     "description": "20–24 giugno. Festa catalana del fuoco di San Giovanni. Falò, musica, balli tradizionali e fuochi d'artificio nel centro storico catalano di Alghero. Celebrazione dei legami storici catalano-sardi.",
     "link": "",
     "season": "estate",
-    "igUrl": ""
+    "igUrl": "",
+    "image": "assets/images/home/ev-19.webp"
   },
   {
     "id": 20,
@@ -234,7 +253,8 @@
     "description": "13–15 agosto. Festival musicale estivo con artisti nazionali e internazionali. Uno degli eventi musicali più importanti della Sardegna nord-orientale.",
     "link": "",
     "season": "estate",
-    "igUrl": ""
+    "igUrl": "",
+    "image": "assets/images/home/ev-20.webp"
   },
   {
     "id": 21,
@@ -246,7 +266,8 @@
     "description": "27 giugno. Unica tappa sarda del tour dei Negramaro. Concerto in piazza a ingresso gratuito.",
     "link": "",
     "season": "estate",
-    "igUrl": ""
+    "igUrl": "",
+    "image": "assets/images/home/ev-21.webp"
   },
   {
     "id": 22,
@@ -258,7 +279,8 @@
     "description": "24–29 giugno. Festival dedicato all'archeologia mediterranea. Conferenze, visite guidate, mostre. Location strategica vicino al sito di Tharros e al Museo del Mediterraneo.",
     "link": "",
     "season": "estate",
-    "igUrl": ""
+    "igUrl": "",
+    "image": "assets/images/home/ev-22.webp"
   },
   {
     "id": 23,
@@ -270,7 +292,8 @@
     "description": "23–28 giugno. Festival che unisce musica etnica, tradizioni marinare e patrimonio minerario del Sulcis-Iglesiente. Concerti, visite alle ex miniere, gastronomia locale.",
     "link": "",
     "season": "estate",
-    "igUrl": ""
+    "igUrl": "",
+    "image": "assets/images/home/ev-23.webp"
   },
   {
     "id": 24,
@@ -282,7 +305,8 @@
     "description": "22 marzo – 31 luglio. Mostra immersiva sulla scoperta della tomba di Tutankhamon con riproduzioni fedeli al Bastione di Saint Remy. Vista panoramica sul Golfo degli Angeli inclusa.",
     "link": "",
     "season": "primavera",
-    "igUrl": ""
+    "igUrl": "",
+    "image": "assets/images/home/ev-24.webp"
   },
   {
     "id": 25,
@@ -293,6 +317,7 @@
     "month": 9,
     "description": "Da settembre a dicembre, ogni weekend un paese della Barbagia apre porte e cortili: cantine, laboratori artigianali, cucine tradizionali. Mamoiada, Oliena, Orgosolo, Dorgali, Tonara e altri. Gratuito.",
     "season": "autunno",
-    "igUrl": ""
+    "igUrl": "",
+    "image": "assets/images/home/ev-25.webp"
   }
 ]

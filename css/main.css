@@ -4703,6 +4703,9 @@ strong { font-weight: 600; color: var(--text); }
   object-fit: cover;
   transition: transform 0.55s ease;
 }
+/* Foto di anteprima sopra il gradiente-fallback, sotto overlay e testo */
+.preview-photo-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
+.preview-photo-overlay, .preview-photo-caption { z-index: 2; }
 
 .preview-card:hover .preview-photo img {
   transform: scale(1.08);
