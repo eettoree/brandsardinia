@@ -6328,3 +6328,6 @@ body[data-section="cosa-facciamo"] .nav-btn[data-sec="cosa-facciamo"] {
 .lux-link { font-size: 0.78rem; font-weight: 700; color: var(--red); white-space: nowrap; }
 .lux-link:hover { color: var(--red-dark); }
 .lux-disclaimer { margin-top: 22px; font-size: 0.76rem; color: var(--text-muted); line-height: 1.5; }
+
+/* Disclaimer prezzi nei tool */
+.tool-disclaimer { margin: 0 0 18px; padding: 9px 14px; background: rgba(200,16,46,0.06); border: 1px solid rgba(200,16,46,0.2); border-radius: 8px; font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4; }

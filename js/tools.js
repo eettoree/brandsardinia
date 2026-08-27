@@ -1395,7 +1395,7 @@ function renderGuide(container) {
             <div class="guida-lingue">${g.lingue.map(l=>`<span class="guida-lang-tag">${l}</span>`).join('')}</div>
             <div class="guida-footer">
               <span class="guida-tel">${g.tel}</span>
-              <a href="${g.web}" target="_blank" class="guida-link">${t('tools.action.website')}</a>
+              ${g.web ? `<a href="${g.web}" target="_blank" rel="noopener" class="guida-link">${t('tools.action.website')}</a>` : ''}
             </div>
           </div>`).join('')}
       </div>`;
@@ -1440,7 +1440,7 @@ function renderComuni(container) {
               </ul>
             </div>
             <div class="comune-footer">
-              <a href="${c.web}" target="_blank" class="comune-link">${t('tools.meta.sito_comune')}</a>
+              ${c.web ? `<a href="${c.web}" target="_blank" rel="noopener" class="comune-link">${t('tools.meta.sito_comune')}</a>` : ''}
             </div>
           </div>`).join('')}
       </div>`;
@@ -1544,6 +1544,7 @@ function renderLuxury(container) {
     container.innerHTML = `
       <div class="tools-section-header"><h2>${t('tools.luxury.title')}</h2></div>
       <p class="section-subtitle">${t('tools.luxury.sub')}</p>
+      <div class="tool-disclaimer">${t('ui.price_disclaimer')}</div>
       <div class="lux-catbar">
         <span class="lux-cat active">${t('tools.luxury.re_title')}</span>
         <span class="lux-cat soon">${t('tools.luxury.soon')}</span>
@@ -1684,6 +1685,7 @@ function renderHotel(container) {
         <h2>${t('tools.render.hotel')}</h2>
         <p class="prenot-subtitle">${t('tools.sub.hotel')}</p>
       </div>
+      <div class="tool-disclaimer">${t('ui.price_disclaimer')}</div>
       <div class="tool-filter-pills">
         ${TIPI.map(f => `<button class="filter-pill${f.key===tipo?' active':''}" data-tipo="${f.key}">${f.label}</button>`).join('')}
       </div>
@@ -2572,6 +2574,7 @@ function renderCamper(container) {
       <h2>${t('tools.render.camper')}</h2>
     </div>
     <p class="section-subtitle">${CAMPER_DATA.length} aree sosta selezionate in tutta la Sardegna. Verifica disponibilità prima di partire.</p>
+    <div class="tool-disclaimer">${t('ui.price_disclaimer')}</div>
     <div class="camper-grid">
       ${CAMPER_DATA.map(area => {
         const servicesHtml = area.services.map(s => {
@@ -2643,6 +2646,7 @@ async function renderSports(container) {
     container.innerHTML = `
       <div class="tools-section-header"><h2>${t('tools.render.sports')}</h2></div>
       <p class="section-subtitle">${t('tools.sub.sports')} · ${SPORTS_DATA.length} discipline</p>
+      <div class="tool-disclaimer">${t('ui.price_disclaimer')}</div>
       <div class="tool-filter-pills">
         ${GROUPS.map(g => `<button class="filter-pill${g.k === group ? ' active' : ''}" data-grp="${g.k}">${g.l}</button>`).join('')}
       </div>
@@ -3776,6 +3780,7 @@ function renderNordSardegna(container) {
 function renderNavigazione(container) {
   const PORTI = [
     { name: 'Porto Cervo Marina', zona: 'Costa Smeralda', posti: 700, pescaggio: '10m', tel: '+39 0789 905602', web: 'marinadiportocervo.com', vhf: '9/16/11', servizi: ['Carburante', 'Officina', 'WiFi', 'Ristorante', 'Electricity'] },
+    { name: 'Marina di Olbia', zona: 'Olbia', posti: 270, pescaggio: '6m', tel: '', web: 'marinadiolbia.it', vhf: '09', servizi: ['Carburante', 'Acqua', 'Electricity', 'WiFi', 'Charter'] },
     { name: 'Marina Portus Karalis', zona: 'Cagliari', posti: 140, pescaggio: '10m', tel: '+39 070 653535', web: 'portuskaralis.com', vhf: '9', servizi: ['Carburante', 'Acqua', 'Electricity'] },
     { name: 'Marina di Porto Rotondo', zona: 'Costa Smeralda', posti: 350, pescaggio: '8m', tel: '+39 0789 34203', web: 'marinadiportorotondo.it', vhf: '09', servizi: ['Carburante', 'Officina', 'Docce', 'WiFi', 'Charter'] },
     { name: 'Porto Turistico Torre Grande', zona: 'Oristano', posti: 180, pescaggio: '5m', tel: '+39 0783 22189', web: 'marineoristanesi.it', vhf: '', servizi: ['Electricity', 'Acqua', 'Scarico acque'] },
