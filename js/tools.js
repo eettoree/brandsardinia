@@ -680,6 +680,7 @@ function dispatchToolRender(name, contentArea) {
   else if (name === 'sentieri')     renderSentieri(contentArea);
   else if (name === 'cantine')      renderCantine(contentArea);
   else if (name === 'prodotti')     renderProdotti(contentArea);
+  else if (name === 'luxury')       renderLuxury(contentArea);
   else if (name === 'artigiani')    renderArtigiani(contentArea);
   else if (name === 'comuni')       renderComuni(contentArea);
   else if (name === 'guide')        renderGuide(contentArea);
@@ -1494,6 +1495,72 @@ function renderProdotti(container) {
     if (window.gsap) gsap.fromTo('.prodotto-card',{opacity:0,y:18},{opacity:1,y:0,duration:0.4,stagger:0.06});
   }
   draw('tutti');
+}
+
+// ─── SERVIZI A 5 STELLE (LUXURY) ──────────────────────────────
+// Immobili di pregio da 3 agenzie partner. Dati verificati; ogni scheda
+// rimanda all'annuncio ufficiale dell'agenzia (showcase + referral).
+const LUX_AGENCY = {
+  ev: 'Engel & Völkers Porto Cervo',
+  br: 'Immobiliare Brili',
+  sh: 'Sardinia Habitat',
+};
+const LUXURY_RE = [
+  { ag:'sh', title:'Villa di lusso con piscina e vista mare', city:'Porto Rotondo', price:'€ 9.500.000', img:'assets/images/luxury/sh1.webp', url:'https://sardiniahabitat.com/property/villa-lusso-piscina-vista-mare-porto-rotondo/' },
+  { ag:'ev', title:'Majestic contemporary mansion', city:'Porto Cervo', price:null, img:'assets/images/luxury/ev1.webp', url:'https://www.engelvoelkers.com/it/en/exposes/39caa458-8465-5635-a4e5-e955f6c8b039' },
+  { ag:'ev', title:'Villa Ninfa — Waterfront Estate', city:'Baja Sardinia', price:null, img:'assets/images/luxury/ev3.webp', url:'https://www.engelvoelkers.com/it/en/exposes/b83b3ee3-ba64-5f3c-8e64-45fc2fe901e9' },
+  { ag:'br', title:'Prestigioso appartamento a Porto Cervo', city:'Porto Cervo', price:'€ 1.495.000', img:'assets/images/luxury/br1.webp', url:'https://www.immobiliarebrili.it/it/immobile/prestigioso-appartamento-a-porto-cervo' },
+  { ag:'sh', title:'Villa con piscina e vista mare', city:'Golfo Aranci', price:'€ 2.000.000', img:'assets/images/luxury/sh2.webp', url:'https://sardiniahabitat.com/property/villa-piscina-vista-mare-vendita-golfo-aranci-sottomonte/' },
+  { ag:'ev', title:'Unique Villa Couëlle', city:'Porto Cervo', price:null, img:'assets/images/luxury/ev2.webp', url:'https://www.engelvoelkers.com/it/en/exposes/ba503420-68f3-5261-bd66-a416d76bc176' },
+  { ag:'ev', title:'First line: elegant contemporary architecture', city:'Porto Cervo', price:null, img:'assets/images/luxury/ev4.webp', url:'https://www.engelvoelkers.com/it/en/exposes/283f3186-2d51-54e3-8b88-0a1917c94ead' },
+  { ag:'br', title:'Villa vista mare', city:'Loiri Porto San Paolo', price:'€ 820.000', img:'assets/images/luxury/br2.webp', url:'https://www.immobiliarebrili.it/it/immobile/porto-san-paolo-villa-vista-mare' },
+  { ag:'br', title:'Villa bifamiliare con giardino', city:'Olbia', price:'€ 685.000', img:'assets/images/luxury/br3.webp', url:'https://www.immobiliarebrili.it/it/immobile/villa-bifamiliare-con-giardino' },
+  { ag:'sh', title:'Villa indipendente di nuova costruzione', city:'Olbia', price:'€ 580.000', img:'assets/images/luxury/sh3.webp', url:'https://sardiniahabitat.com/property/villa-indipendente-nuova-costruzione-vendita-olbia/' },
+  { ag:'sh', title:'Trilocale con vista mare, piscina e box', city:'Palau', price:'€ 690.000', img:'assets/images/luxury/sh4.webp', url:'https://sardiniahabitat.com/property/trilocale-in-vendita-a-palau-con-vista-mare/' },
+  { ag:'br', title:'Villa singola a Pittulongu', city:'Olbia', price:null, img:'assets/images/luxury/br4.webp', url:'https://www.immobiliarebrili.it/it/immobile/villa-singola-pittulongu' },
+];
+
+function renderLuxury(container) {
+  const esc = (typeof escapeHtml === 'function') ? escapeHtml : (s => String(s || ''));
+  const AG = [{ k:'tutte', l:t('ui.all') }, { k:'ev', l:'Engel & Völkers' }, { k:'br', l:'Immobiliare Brili' }, { k:'sh', l:'Sardinia Habitat' }];
+
+  function card(p) {
+    const price = p.price ? esc(p.price) : t('tools.luxury.on_request');
+    return `
+      <div class="lux-card">
+        <div class="lux-img">
+          <img src="${esc(p.img)}" alt="${esc(p.title)}" loading="lazy" onerror="this.closest('.lux-img').classList.add('lux-img-fallback');this.remove()">
+          <span class="lux-price">${price}</span>
+        </div>
+        <div class="lux-body">
+          <h3 class="lux-title">${esc(p.title)}</h3>
+          <div class="lux-city">${TOOL_ICONS.pin} ${esc(p.city)}</div>
+          <div class="lux-foot">
+            <span class="lux-agency">${esc(LUX_AGENCY[p.ag])}</span>
+            <a class="lux-link" href="${esc(p.url)}" target="_blank" rel="noopener">${t('tools.luxury.view')}</a>
+          </div>
+        </div>
+      </div>`;
+  }
+
+  function draw(ag) {
+    const list = ag === 'tutte' ? LUXURY_RE : LUXURY_RE.filter(p => p.ag === ag);
+    container.innerHTML = `
+      <div class="tools-section-header"><h2>${t('tools.luxury.title')}</h2></div>
+      <p class="section-subtitle">${t('tools.luxury.sub')}</p>
+      <div class="lux-catbar">
+        <span class="lux-cat active">${t('tools.luxury.re_title')}</span>
+        <span class="lux-cat soon">${t('tools.luxury.soon')}</span>
+      </div>
+      <div class="tool-filter-pills">
+        ${AG.map(a => `<button class="filter-pill${a.k === ag ? ' active' : ''}" data-ag="${a.k}">${a.l}</button>`).join('')}
+      </div>
+      <div class="lux-grid">${list.map(card).join('')}</div>
+      <p class="lux-disclaimer">${t('tools.luxury.disclaimer')}</p>`;
+    container.querySelectorAll('.filter-pill[data-ag]').forEach(b => b.addEventListener('click', () => draw(b.dataset.ag)));
+    if (typeof gsap !== 'undefined') gsap.fromTo('.lux-card', { opacity: 0, y: 20 }, { opacity: 1, y: 0, stagger: 0.05, duration: 0.35, ease: 'power2.out' });
+  }
+  draw('tutte');
 }
 
 // ─── SENTIERI ─────────────────────────────────────────────────
