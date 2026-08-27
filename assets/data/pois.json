@@ -1415,7 +1415,6 @@
     "servizi": "Bookshop, caffetteria, visite guidate su prenotazione, mostre temporanee",
     "costo": "5€ adulti / gratuito under 6 e ogni prima domenica del mese",
     "tel": "+39 0784 252110",
-    "web": "museoman.it",
     "orari": "Mar-dom: 10:00-13:00 / 15:00-19:00 (estate 10:00-20:00).",
     "rating": 4.7,
     "reviews": 1145,
@@ -1442,7 +1441,6 @@
     "servizi": "Visite guidate, laboratori artigianato, shop, biblioteca",
     "costo": "5€ adulti / 10€ cumulativo con MAN",
     "tel": "+39 0784 242900",
-    "web": "isresardegna.it",
     "orari": "Mar-dom: 9:00-13:00 / 15:00-19:00.",
     "rating": 4.7,
     "reviews": 2011,
@@ -1468,7 +1466,6 @@
     "servizi": "Guide in italiano, inglese, francese, tedesco. Audioguide disponibili.",
     "costo": "5€ adulti. Cumulativo con Tharros: 13€",
     "tel": "+39 0783 791262",
-    "web": "antiquariumarborense.it",
     "orari": "Mar-dom: 9:00-20:00.",
     "rating": 4.5,
     "reviews": 275,
@@ -2221,7 +2218,6 @@
     "servizi": "Museo, pasticcerie storiche (copulette di mandorla), cattedrale, grotta naturale",
     "costo": "Museo: 2€",
     "tel": "",
-    "web": "www.comune.ozieri.ss.it",
     "orari": "Museo: mar-dom 9:00-13:00 / 15:00-18:00.",
     "city": "Ozieri"
   },
@@ -3123,8 +3119,7 @@
       "domenica: 08:30–19:30"
     ],
     "gsummary": "Museo dedicato alla storia antica della Sardegna con vari reperti archeologici, tra cui gioielli punici.",
-    "city": "Cagliari",
-    "web": "museinazionalicagliari.cultura.gov.it"
+    "city": "Cagliari"
   },
   {
     "id": "museo-carnevale-mamoiada",
@@ -3137,7 +3132,6 @@
     "servizi": "Museo permanente, mostre temporanee, proiezione video riti, bookshop",
     "costo": "5€ adulti. 3€ ridotto. Gratuito under 12",
     "tel": "+39 0784 57153",
-    "web": "museodellemaschere.it",
     "orari": "Mar-dom: 9:00-13:00 / 15:00-19:00 (estate). Chiuso lunedì.",
     "rating": 4.6,
     "reviews": 1973,
@@ -3179,8 +3173,7 @@
     ],
     "photo": "assets/images/poi/museo-tonnara-stintino.webp",
     "photoCredit": "Gianni Careddu · CC BY-SA 4.0 · Wikimedia",
-    "city": "Stintino",
-    "web": "www.mutstintino.com"
+    "city": "Stintino"
   },
   {
     "id": "museo-ossidiana",
@@ -4367,7 +4360,6 @@
     "servizi": "Enoteca, degustazioni guidate (prenotazione), tour vigneti",
     "costo": "Degustazione: 10-20€. Terre Brune: 25-35€/bottiglia",
     "tel": "+39 0781 950127",
-    "web": "cantinasantadi.it",
     "orari": "Lun-ven: 8:00-12:30 / 14:30-18:00. Sab: 9:00-12:00.",
     "rating": 4.6,
     "reviews": 283,
@@ -5612,8 +5604,7 @@
     ],
     "photo": "assets/images/poi/sulcis-sant-antioco.webp",
     "photoCredit": "Alex10 · CC0 · Wikimedia",
-    "city": "Sant'Antioco",
-    "web": "parcostoricoarcheologicosantantioco.it"
+    "city": "Sant'Antioco"
   },
   {
     "id": "antas",
@@ -5720,8 +5711,7 @@
     "costo": "5€ adulti / gratuito bambini <6",
     "tel": "+39 0782 869007",
     "orari": "Mar-dom 9:00-13:00 / 15:00-19:00 (estate fino 20:00). Lun chiuso.",
-    "city": "Laconi",
-    "web": "www.facebook.com/MenhirMuseum"
+    "city": "Laconi"
   },
   {
     "id": "museo-sanna-sassari",
@@ -5749,8 +5739,7 @@
     "gsummary": "Tessuti, gioielli e opere d'arte di diversi periodi della storia sarda esposti in un edificio in stile neoclassico.",
     "photo": "assets/images/poi/museo-sanna-sassari.webp",
     "photoCredit": "Photo2023 · CC BY 4.0 · Wikimedia",
-    "city": "Sassari",
-    "web": "museosanna.cultura.gov.it"
+    "city": "Sassari"
   },
   {
     "id": "ospedale-olbia",
@@ -5941,7 +5930,6 @@
     "servizi": "Esposizione navi romane, reperti punico-romani, pannelli multilingue, accessibilità completa, ingresso gratuito",
     "costo": "Gratuito. Prenotazione per gruppi >30: +39 0789 28290",
     "tel": "+39 0789 28290",
-    "web": "comune.olbia.ot.it",
     "orari": "Mar–Sab: 8:00–13:00 / 16:00–19:00. Chiuso dom e lun.",
     "rating": 4.1,
     "reviews": 1673,
@@ -10306,7 +10294,6 @@
     "servizi": "Visite, degustazioni, vendita vini",
     "costo": "",
     "tel": "+39 0781 689718",
-    "web": "www.cantinagiba.it",
     "orari": "",
     "rating": 5,
     "reviews": 21,
@@ -10650,7 +10637,6 @@
     "servizi": "Visite, degustazioni, vendita vini",
     "costo": "",
     "tel": "+39 079 435067",
-    "web": "www.tenutesoletta.it",
     "orari": "",
     "rating": 4.6,
     "reviews": 27,
@@ -10690,32 +10676,6 @@
       "domenica: Chiuso"
     ],
     "city": "Mogoro"
-  },
-  {
-    "id": "gruppo-edil-piras",
-    "name": "GRUPPO EDIL PIRAS",
-    "lat": 39.932531,
-    "lng": 9.678972,
-    "cat": "cantina",
-    "description": "Cantina vinicola a Tortolì: visite e degustazioni dei vini sardi.",
-    "come": "Via Baccàsara, km 1.500, 08048 Tortolì OG, Italia",
-    "servizi": "Visite, degustazioni, vendita vini",
-    "costo": "",
-    "tel": "+39 0782 622499",
-    "web": "www.edilpiras.com",
-    "orari": "",
-    "rating": 4.5,
-    "reviews": 106,
-    "ghours": [
-      "lunedì: 08:00–12:30, 13:30–18:30",
-      "martedì: 08:00–12:30, 13:30–18:30",
-      "mercoledì: 08:00–12:30, 13:30–18:30",
-      "giovedì: 08:00–12:30, 13:30–18:30",
-      "venerdì: 08:00–12:30, 13:30–18:30",
-      "sabato: 08:00–12:30",
-      "domenica: Chiuso"
-    ],
-    "city": "Girasole"
   },
   {
     "id": "museo-civico-giovanni-marongiu",
@@ -11141,7 +11101,6 @@
     "servizi": "Esposizione, visite guidate",
     "costo": "",
     "tel": "+39 079 208 5100",
-    "web": "esercito.difesa.it",
     "orari": "",
     "rating": 4.9,
     "reviews": 320,
