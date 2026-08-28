@@ -356,8 +356,8 @@ const SPORTS_DATA = [
     name: 'Arrampicata', group: 'terra', level: 'Intermedio / Esperto', season: 'Settembre – Maggio (evitare luglio-agosto)',
     keywords: ['arrampicat', 'climb', 'boulder', 'granito', 'torri', 'pantaleo'],
     operators: [
-      { name: 'Nannai Climbing Home (Ulassai)', tel: '+39 366 370 7749', web: 'climbingulassai.com', note: 'WA preferito. Camp da 500€' },
-      { name: 'Fellas Outdoors (Ulassai)', tel: 'Vedi sito', web: 'fellasoutdoors.com', note: 'Guida alpina certificata, base Ulassai' },
+      { name: 'Nannai Climbing Home (Ulassai)', tel: '+39 366 370 7749', note: 'WA preferito. Camp da 500€' },
+      { name: 'Fellas Outdoors (Ulassai)', tel: 'Vedi sito', note: 'Guida alpina certificata, base Ulassai' },
       { name: 'Big Alpine Guide (Supramonte)', tel: 'Vedi sito', web: 'bigalpineguide.com', note: 'Guide alpine, Supramonte e Golfo di Orosei' }
     ],
     areas: ['Ulassai / Jerzu / Osini (mecca climbing sardo)', 'Domusnovas (750 vie, ottimale inverno)', 'Supramonte / Pedra Longa']
