@@ -6243,7 +6243,7 @@ body[data-section="cosa-facciamo"] .nav-btn[data-sec="cosa-facciamo"] {
   background: var(--red); color: #fff; font-weight: 700; font-size: 1rem;
 }
 .vision-card { padding: 26px 30px; border-left: 3px solid var(--red); }
-.vision-card p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.65; font-weight: 600; }
+.vision-card p { color: var(--text); font-size: 1.02rem; line-height: 1.65; font-weight: 600; }
 .vision-card p + p { margin-top: 14px; }
 .vision-card .vision-lead { color: var(--text); font-weight: 600; font-size: 1.02rem; }
 /* ═══ FOUNDER ═══ */
@@ -6337,9 +6337,6 @@ body[data-section="cosa-facciamo"] .nav-btn[data-sec="cosa-facciamo"] {
 
 /* Bottone "Torna alla chat" sulla mappa (visibile solo se arrivati dalla chat) */
 .map-back-to-chat {
-  position: fixed; top: 80px; left: 50%; transform: translateX(-50%);
-  z-index: 120; white-space: nowrap; box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-}
-@media (max-width: 700px) {
-  .map-back-to-chat { top: 70px; }
+  align-self: flex-start; white-space: nowrap;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
 }
