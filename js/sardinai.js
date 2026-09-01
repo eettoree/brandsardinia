@@ -665,8 +665,13 @@ function sardinaiCardAction(action, title) {
   if (action.startsWith('url:')) { window.open(action.slice(4), '_blank', 'noopener'); return; }
   if (action === 'map' || action.startsWith('map:')) {
     const id = sardinaiResolvePoiId(action.startsWith('map:') ? action.slice(4) : '', title);
-    if (id && typeof openMapAtPoi === 'function') openMapAtPoi(id);
-    else if (typeof showSection === 'function') showSection('map');
+    // fromChat=true: abilita il bottone "Torna alla chat" sulla mappa
+    if (id && typeof openMapAtPoi === 'function') openMapAtPoi(id, true);
+    else if (typeof showSection === 'function') {
+      if (typeof AppState !== 'undefined') AppState.mapFromChat = true;
+      showSection('map');
+      if (typeof updateMapBackToChat === 'function') updateMapBackToChat();
+    }
     return;
   }
   if (action.startsWith('tool:') && typeof openToolsDirect === 'function') {

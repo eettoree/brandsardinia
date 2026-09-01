@@ -251,6 +251,8 @@ function bindSelectorCards() {
 // ─── TRANSIZIONE CINEMATICA → MAPPA ──────────────────────────
 function transitionToMap() {
   AppState.currentSection = 'map';
+  AppState.mapFromChat = false; // apertura diretta della mappa: niente bottone "Torna alla chat"
+  if (typeof updateMapBackToChat === 'function') updateMapBackToChat();
 
   // Fase 1: spariscono le card e il titolo selettore
   gsap.to('.selector-card', { opacity: 0, y: -22, duration: 0.3, stagger: 0.055, ease: 'power2.in' });
@@ -413,6 +415,8 @@ function showSection(name) {
 
 function goBackToSelector() {
   document.body.classList.remove('section-map');
+  AppState.mapFromChat = false;
+  if (typeof updateMapBackToChat === 'function') updateMapBackToChat();
   const selector = document.getElementById('section-selector');
   const allSections = document.querySelectorAll('.main-section');
 
@@ -743,8 +747,12 @@ function renderLandingSections() {
   });
 }
 
-function openMapAtPoi(poiId) {
+function openMapAtPoi(poiId, fromChat) {
+  // fromChat=true SOLO quando invocato da una scheda della chat SardinAI:
+  // abilita il bottone "Torna alla chat" sulla mappa. Ogni altro ingresso lo azzera.
+  AppState.mapFromChat = !!fromChat;
   showSection('map');
+  updateMapBackToChat();
   // Aspetta init mappa poi flyTo sul poi
   const tryFly = () => {
     if (typeof MAP_POI !== 'undefined' && typeof sardMap !== 'undefined' && sardMap) {
@@ -756,6 +764,21 @@ function openMapAtPoi(poiId) {
   };
   setTimeout(tryFly, 600);
 }
+
+// Mostra/nasconde il bottone "Torna alla chat" in base a come si è arrivati sulla mappa
+function updateMapBackToChat() {
+  const btn = document.getElementById('map-back-to-chat');
+  if (btn) btn.style.display = AppState.mapFromChat ? '' : 'none';
+}
+
+// Ritorno diretto alla sessione di chat SardinAI (già aperta e conservata)
+function backToChatFromMap() {
+  AppState.mapFromChat = false;
+  const btn = document.getElementById('map-back-to-chat');
+  if (btn) btn.style.display = 'none';
+  showSection('sardinai');
+}
+window.backToChatFromMap = backToChatFromMap;
 
 function openToolsDirect(toolName) {
   showSection('tools');
